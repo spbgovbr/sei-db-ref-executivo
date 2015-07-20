@@ -1,4 +1,4 @@
--- MySQL dump 10.13  Distrib 5.6.17, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: sip
 -- ------------------------------------------------------
@@ -302,6 +302,7 @@ CREATE TABLE `infra_auditoria` (
 
 LOCK TABLES `infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `infra_auditoria` DISABLE KEYS */;
+INSERT INTO `infra_auditoria` VALUES (1,'login_padrao','2015-07-20 10:39:58','::1',1,'SIP','Sistema de Permissões',0,'ABC',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'localhost (::1)','PHP-SOAP/5.3.3','GET - Array\n(\n)\n\nPOST - Array\n(\n)\n','LoginRN::logarControlado(\n LoginDTO:\nIdLogin = e0dbfba4e61c955eb0a3679feca4be73d44b87a901b710f74bd8b7148bc0f8999e2a5a06dd6930851f989516e3a17d8f075a08934ae79a7ebe39e552cd5ca738\nIdSistema = 100000100\nLogin = 20/07/2015 10:39:57\nIdUsuario = 100000001\nIdContexto = [null]\nIdGrupoRede = [null]\nIdUsuarioEmulador = [null]\nHashInterno = 8fcda6095f700b34f18d4bc30648b3d9095703a327f3e1b65c7db7712f7af665473f1a6e751f3d2bdad48d401e091b59c03bb212b3784e1f4a2a77d5d2b86dc9\nHashUsuario = b8505ec64202d7a759c85b4ab6ab388addea3247aeb8bf1daef2853aed4f25854269c41fdd17dcd86340c08e34be4a7d21ce761de92d389421cd2e10e107a4ef\nHashAgente = d4c843969a3b2d19d88e5a6e83d92011b6b74e5e589321582d4c32aab5a4343f342f6f872b69cf605c7ab3d7ff35125ba5a9a8ee8071741fee3f6bd5c6f7a54f\nDnUsuario = [null]\nSinValidado = N\nSiglaUsuario = teste\nIdOrgaoUsuario = 0\nSiglaOrgaoUsuario = ABC\nDescricaoOrgaoUsuario = ORGAO ABC\nNomeUsuario = Usuário de Testes\nIdPessoaRh = [null]\nSiglaSistema = SEI\nPaginaInicialSistema = http://localhost/sei/inicializar.php\nIdOrgaoSistema = 0\nSiglaOrgaoSistema = ABC\nDescricaoOrgaoSistema = ORGAO ABC\nIdOrgaoContexto = [null]\nSiglaOrgaoContexto = [null]\nDescricaoOrgaoContexto = [null]\nSiglaUsuarioEmulador = [null]\nNomeUsuarioEmulador = [null]\nIdOrgaoUsuarioEmulador = [null]\nSiglaOrgaoUsuarioEmulador = [null]\nDescricaoOrgaoUsuarioEmulador = [null]\nInfraSessaoDTO = InfraSessaoDTO\nHierarquia = [null])'),(2,'login_remover','2015-07-20 11:18:46','::1',1,'SIP','Sistema de Permissões',0,'ABC',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'localhost (::1)','PHP-SOAP/5.3.3','GET - Array\n(\n)\n\nPOST - Array\n(\n)\n','LoginRN::removerLoginControlado(\n LoginDTO:\nIdLogin = e0dbfba4e61c955eb0a3679feca4be73d44b87a901b710f74bd8b7148bc0f8999e2a5a06dd6930851f989516e3a17d8f075a08934ae79a7ebe39e552cd5ca738\nIdUsuario = 100000001\nIdContexto = [null]\nIdSistema = 100000100\nSiglaOrgaoSistema = ABC\nSiglaSistema = SEI\nHashInterno = 8fcda6095f700b34f18d4bc30648b3d9095703a327f3e1b65c7db7712f7af665473f1a6e751f3d2bdad48d401e091b59c03bb212b3784e1f4a2a77d5d2b86dc9\nHashUsuario = b8505ec64202d7a759c85b4ab6ab388addea3247aeb8bf1daef2853aed4f25854269c41fdd17dcd86340c08e34be4a7d21ce761de92d389421cd2e10e107a4ef\nHashAgente = d4c843969a3b2d19d88e5a6e83d92011b6b74e5e589321582d4c32aab5a4343f342f6f872b69cf605c7ab3d7ff35125ba5a9a8ee8071741fee3f6bd5c6f7a54f\nIdOrgaoUsuario = 0\nSiglaUsuario = teste\nNomeUsuario = Usuário de Testes\nIdPessoaRh = [null]\nIdOrgaoContexto = [null]\nSiglaOrgaoContexto = [null]\nDescricaoOrgaoContexto = [null]\nSiglaOrgaoUsuarioEmulador = [null]\nDescricaoOrgaoUsuarioEmulador = [null]\nIdOrgaoUsuarioEmulador = [null]\nIdUsuarioEmulador = [null]\nSiglaUsuarioEmulador = [null]\nNomeUsuarioEmulador = [null])');
 /*!40000 ALTER TABLE `infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -962,7 +963,7 @@ CREATE TABLE `seq_infra_auditoria` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -971,6 +972,7 @@ CREATE TABLE `seq_infra_auditoria` (
 
 LOCK TABLES `seq_infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `seq_infra_auditoria` DISABLE KEYS */;
+INSERT INTO `seq_infra_auditoria` VALUES (1,NULL),(2,NULL);
 /*!40000 ALTER TABLE `seq_infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1165,4 +1167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-04-28 10:32:03
+-- Dump completed on 2015-07-20 11:23:20
