@@ -3787,7 +3787,7 @@ CREATE TABLE `seq_cidade` (
 
 LOCK TABLES `seq_cidade` WRITE;
 /*!40000 ALTER TABLE `seq_cidade` DISABLE KEYS */;
-INSERT INTO `sei.seq_cidade` VALUES (5564, null);
+INSERT INTO `seq_cidade` VALUES (5564, null);
 /*!40000 ALTER TABLE `seq_cidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4115,7 +4115,7 @@ CREATE TABLE `seq_feriado` (
 
 LOCK TABLES `seq_feriado` WRITE;
 /*!40000 ALTER TABLE `seq_feriado` DISABLE KEYS */;
-INSERT INTO `sei.seq_feriado` VALUES (12, null);
+INSERT INTO `seq_feriado` VALUES (12, null);
 /*!40000 ALTER TABLE `seq_feriado` ENABLE KEYS */;
 UNLOCK TABLES;
 
