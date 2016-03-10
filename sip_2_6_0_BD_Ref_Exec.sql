@@ -1,7 +1,7 @@
--- MySQL dump 10.13  Distrib 5.6.23, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: sip
--- -----------------------------------------------------
+-- ------------------------------------------------------
 -- Server version	5.1.73
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -14,14 +14,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
---
--- Current Database: `sip`
---
-
-CREATE DATABASE /*!32312 IF NOT EXISTS*/ `sip` /*!40100 DEFAULT CHARACTER SET latin1 */;
-
-USE `sip`;
 
 --
 -- Table structure for table `administrador_sistema`
@@ -302,7 +294,6 @@ CREATE TABLE `infra_auditoria` (
 
 LOCK TABLES `infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `infra_auditoria` DISABLE KEYS */;
-INSERT INTO `infra_auditoria` VALUES (1,'login_padrao','2015-07-20 10:39:58','::1',1,'SIP','Sistema de Permissões',0,'ABC',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'localhost (::1)','PHP-SOAP/5.3.3','GET - Array\n(\n)\n\nPOST - Array\n(\n)\n','LoginRN::logarControlado(\n LoginDTO:\nIdLogin = e0dbfba4e61c955eb0a3679feca4be73d44b87a901b710f74bd8b7148bc0f8999e2a5a06dd6930851f989516e3a17d8f075a08934ae79a7ebe39e552cd5ca738\nIdSistema = 100000100\nLogin = 20/07/2015 10:39:57\nIdUsuario = 100000001\nIdContexto = [null]\nIdGrupoRede = [null]\nIdUsuarioEmulador = [null]\nHashInterno = 8fcda6095f700b34f18d4bc30648b3d9095703a327f3e1b65c7db7712f7af665473f1a6e751f3d2bdad48d401e091b59c03bb212b3784e1f4a2a77d5d2b86dc9\nHashUsuario = b8505ec64202d7a759c85b4ab6ab388addea3247aeb8bf1daef2853aed4f25854269c41fdd17dcd86340c08e34be4a7d21ce761de92d389421cd2e10e107a4ef\nHashAgente = d4c843969a3b2d19d88e5a6e83d92011b6b74e5e589321582d4c32aab5a4343f342f6f872b69cf605c7ab3d7ff35125ba5a9a8ee8071741fee3f6bd5c6f7a54f\nDnUsuario = [null]\nSinValidado = N\nSiglaUsuario = teste\nIdOrgaoUsuario = 0\nSiglaOrgaoUsuario = ABC\nDescricaoOrgaoUsuario = ORGAO ABC\nNomeUsuario = Usuário de Testes\nIdPessoaRh = [null]\nSiglaSistema = SEI\nPaginaInicialSistema = http://localhost/sei/inicializar.php\nIdOrgaoSistema = 0\nSiglaOrgaoSistema = ABC\nDescricaoOrgaoSistema = ORGAO ABC\nIdOrgaoContexto = [null]\nSiglaOrgaoContexto = [null]\nDescricaoOrgaoContexto = [null]\nSiglaUsuarioEmulador = [null]\nNomeUsuarioEmulador = [null]\nIdOrgaoUsuarioEmulador = [null]\nSiglaOrgaoUsuarioEmulador = [null]\nDescricaoOrgaoUsuarioEmulador = [null]\nInfraSessaoDTO = InfraSessaoDTO\nHierarquia = [null])'),(2,'login_remover','2015-07-20 11:18:46','::1',1,'SIP','Sistema de Permissões',0,'ABC',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'localhost (::1)','PHP-SOAP/5.3.3','GET - Array\n(\n)\n\nPOST - Array\n(\n)\n','LoginRN::removerLoginControlado(\n LoginDTO:\nIdLogin = e0dbfba4e61c955eb0a3679feca4be73d44b87a901b710f74bd8b7148bc0f8999e2a5a06dd6930851f989516e3a17d8f075a08934ae79a7ebe39e552cd5ca738\nIdUsuario = 100000001\nIdContexto = [null]\nIdSistema = 100000100\nSiglaOrgaoSistema = ABC\nSiglaSistema = SEI\nHashInterno = 8fcda6095f700b34f18d4bc30648b3d9095703a327f3e1b65c7db7712f7af665473f1a6e751f3d2bdad48d401e091b59c03bb212b3784e1f4a2a77d5d2b86dc9\nHashUsuario = b8505ec64202d7a759c85b4ab6ab388addea3247aeb8bf1daef2853aed4f25854269c41fdd17dcd86340c08e34be4a7d21ce761de92d389421cd2e10e107a4ef\nHashAgente = d4c843969a3b2d19d88e5a6e83d92011b6b74e5e589321582d4c32aab5a4343f342f6f872b69cf605c7ab3d7ff35125ba5a9a8ee8071741fee3f6bd5c6f7a54f\nIdOrgaoUsuario = 0\nSiglaUsuario = teste\nNomeUsuario = Usuário de Testes\nIdPessoaRh = [null]\nIdOrgaoContexto = [null]\nSiglaOrgaoContexto = [null]\nDescricaoOrgaoContexto = [null]\nSiglaOrgaoUsuarioEmulador = [null]\nDescricaoOrgaoUsuarioEmulador = [null]\nIdOrgaoUsuarioEmulador = [null]\nIdUsuarioEmulador = [null]\nSiglaUsuarioEmulador = [null]\nNomeUsuarioEmulador = [null])');
 /*!40000 ALTER TABLE `infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -515,7 +506,7 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('ab777a16936e064227c5899be338228e79f525567f1e15b013e0852b1f8d6e7410a8f8c878953245715ecdc91e6024916ab59755742060a9a97b841f74e6e8ae',NULL,100000099,100000001,'2015-04-13 23:08:55',NULL,'83e3f99d576e7cc5e15d7384a6fc14be54253e335da208b39714d07a9ca2a6124658c6bd11bb925fefe4d30840a935355565f6943f556b7557b2e9a27a87a3b6','e05b24cb042ee3e347d44d97300268143745de17b3db3dc98a5348179eaab3e5a3eb354d50f99db4693b3fee0c7c7e0ff4e5f2ad14b26fa129a4f0fef9651117','c36f1bf5323f95432a0978f0694b34bbf5c86ca49b65f5c746275fcc2cdf43a827ff92391e7d6396f810265fbc3672deb609621ebc232bada1e6fc8fddda2de9','S',NULL,NULL);
+INSERT INTO `login` VALUES ('584450a4a5bfe9f8fa97bd5fa86718e438c178c0451be8903a1e910ae3ecea6f242ce188dda23f07fde8927fd86e20eb4f8618a5b3564b52eaf6ddd6abb2b3d9',NULL,100000100,100000001,'2016-01-19 07:48:07',NULL,'7c8c7240c1a1edb47dbd71357d131a364f9b648d29e2516ade31084d1eb4e3502b5df91af66eab2c41e4431e5fbaaaf90d1bb0f5f97a880567fac5f29a7890d2','b9ee0e4b9303475040bb3b23ac40b109291503991ef804dc94b72d4f40742eb3eb248d7a90a8c7b1db7cfc08a65774d4d665672e9a053c77cd8d4768c99da4ac','2da0666394d35ff5db214f4ea866d87ac4b70a6f812b9eb4c83a5ba17981cf625dfd1c3a308ddc01c769d74843a319c9068b1ab1c67d97b58beb44d84c43d117','S',NULL,NULL),('ab777a16936e064227c5899be338228e79f525567f1e15b013e0852b1f8d6e7410a8f8c878953245715ecdc91e6024916ab59755742060a9a97b841f74e6e8ae',NULL,100000099,100000001,'2015-04-13 23:08:55',NULL,'83e3f99d576e7cc5e15d7384a6fc14be54253e335da208b39714d07a9ca2a6124658c6bd11bb925fefe4d30840a935355565f6943f556b7557b2e9a27a87a3b6','e05b24cb042ee3e347d44d97300268143745de17b3db3dc98a5348179eaab3e5a3eb354d50f99db4693b3fee0c7c7e0ff4e5f2ad14b26fa129a4f0fef9651117','c36f1bf5323f95432a0978f0694b34bbf5c86ca49b65f5c746275fcc2cdf43a827ff92391e7d6396f810265fbc3672deb609621ebc232bada1e6fc8fddda2de9','S',NULL,NULL);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -963,7 +954,7 @@ CREATE TABLE `seq_infra_auditoria` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -972,7 +963,6 @@ CREATE TABLE `seq_infra_auditoria` (
 
 LOCK TABLES `seq_infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `seq_infra_auditoria` DISABLE KEYS */;
-INSERT INTO `seq_infra_auditoria` VALUES (1,NULL),(2,NULL);
 /*!40000 ALTER TABLE `seq_infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1167,4 +1157,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-07-20 11:23:20
+-- Dump completed on 2016-01-23 18:24:33
