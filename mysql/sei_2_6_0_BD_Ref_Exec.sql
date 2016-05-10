@@ -141,8 +141,11 @@ CREATE TABLE `andamento_situacao` (
   PRIMARY KEY (`id_andamento_situacao`),
   KEY `fk_andam_situacao_procedimento` (`id_procedimento`),
   KEY `fk_andamento_situacao_unidade` (`id_unidade`),
-  KEY `fk_andamento_situacao_usuario` (`id_usuario`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  KEY `fk_andamento_situacao_usuario` (`id_usuario`),
+  CONSTRAINT `fk_andam_situacao_procedimento` FOREIGN KEY (`id_procedimento`) REFERENCES `procedimento` (`id_procedimento`),
+  CONSTRAINT `fk_andamento_situacao_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`),
+  CONSTRAINT `fk_andamento_situacao_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -533,8 +536,9 @@ CREATE TABLE `atributo_andamento_situacao` (
   `valor` varchar(250) DEFAULT NULL,
   `id_origem` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_atributo_andamento_situacao`),
-  KEY `fk_atrib_andam_sit_andam_sit` (`id_andamento_situacao`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  KEY `fk_atrib_andam_sit_andam_sit` (`id_andamento_situacao`),
+  CONSTRAINT `fk_atrib_andam_sit_andam_sit` FOREIGN KEY (`id_andamento_situacao`) REFERENCES `andamento_situacao` (`id_andamento_situacao`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -967,7 +971,7 @@ CREATE TABLE `controle_unidade` (
   `id_procedimento` bigint(20) NOT NULL,
   `id_situacao` int(11) DEFAULT NULL,
   `dth_snapshot` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2877,8 +2881,11 @@ CREATE TABLE `rel_proced_situacao_unidade` (
   `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_procedimento`,`id_situacao`,`id_unidade`),
   KEY `fk_rel_proc_sit_unid_situacao` (`id_situacao`),
-  KEY `fk_rel_proc_sit_unid_unidade` (`id_unidade`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  KEY `fk_rel_proc_sit_unid_unidade` (`id_unidade`),
+  CONSTRAINT `fk_rel_proc_sit_unid_proced` FOREIGN KEY (`id_procedimento`) REFERENCES `procedimento` (`id_procedimento`),
+  CONSTRAINT `fk_rel_proc_sit_unid_situacao` FOREIGN KEY (`id_situacao`) REFERENCES `situacao` (`id_situacao`),
+  CONSTRAINT `fk_rel_proc_sit_unid_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3108,8 +3115,10 @@ CREATE TABLE `rel_situacao_unidade` (
   `id_unidade` int(11) NOT NULL,
   `id_situacao` int(11) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_situacao`),
-  KEY `fk_rel_situacao_unid_situacao` (`id_situacao`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  KEY `fk_rel_situacao_unid_situacao` (`id_situacao`),
+  CONSTRAINT `fk_rel_situacao_unid_situacao` FOREIGN KEY (`id_situacao`) REFERENCES `situacao` (`id_situacao`),
+  CONSTRAINT `fk_rel_situacao_unid_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3400,7 +3409,7 @@ CREATE TABLE `seq_andamento_situacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3655,7 +3664,7 @@ CREATE TABLE `seq_atributo_andamento_situaca` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3890,7 +3899,7 @@ CREATE TABLE `seq_controle_unidade` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4911,7 +4920,7 @@ CREATE TABLE `seq_situacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5409,7 +5418,7 @@ CREATE TABLE `situacao` (
   `descricao` varchar(250) DEFAULT NULL,
   `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_situacao`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
