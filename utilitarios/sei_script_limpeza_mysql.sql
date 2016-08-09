@@ -42,6 +42,8 @@ truncate table seq_grupo_acompanhamento;
 truncate table andamento_situacao;
 truncate table seq_andamento_situacao;
 
+truncate table rel_proced_situacao_unidade;
+
 truncate table anotacao;
 truncate table seq_anotacao;
 
@@ -122,12 +124,6 @@ truncate table auditoria_protocolo;
 truncate table seq_auditoria_protocolo;
 
 truncate table rel_notificacao_documento;
-
-truncate table estatisticas;
-truncate table seq_estatisticas;
-
-truncate table atributo_andamento;
-truncate table seq_atributo_andamento;
 
 truncate table notificacao;
 truncate table seq_notificacao;
