@@ -58,6 +58,8 @@ truncate table indexacao_base_conhecimento;
 truncate table base_conhecimento;
 truncate table seq_base_conhecimento;
 
+truncate table rel_base_conhec_tipo_proced;
+
 truncate table indexacao_protocolo;
 
 truncate table indexacao_publicacao;
@@ -73,9 +75,6 @@ truncate table seq_atributo_andamento;
 
 truncate table retorno_programado;
 truncate table seq_retorno_programado;
-
-truncate table acesso_externo;
-truncate table seq_acesso_externo;
 
 truncate table participante;
 truncate table seq_participante;
@@ -103,6 +102,8 @@ truncate table seq_grupo_protocolo_modelo;
 
 truncate table unidade_publicacao;
 truncate table seq_unidade_publicacao;
+
+truncate table serie_escolha;
 
 truncate table serie_publicacao;
 truncate table seq_serie_publicacao;
@@ -138,6 +139,8 @@ truncate table documento;
 truncate table seq_documento;
 
 truncate table procedimento;
+
+truncate table tipo_procedimento_escolha;
 
 truncate table protocolo;
 truncate table seq_protocolo;
