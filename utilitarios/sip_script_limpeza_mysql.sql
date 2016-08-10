@@ -9,4 +9,6 @@ exec reset_seq('sei.seq_infra_auditoria');
 truncate table infra_log;
 exec reset_seq('sei.seq_infra_log');
 
+truncate table login;
+
 /********************************************************************************************************************************************************/
