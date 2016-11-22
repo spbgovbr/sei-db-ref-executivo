@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.15, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 5.6.34, for Linux (x86_64)
 --
--- Host: 127.0.0.1    Database: sei
+-- Host: localhost    Database: sei
 -- ------------------------------------------------------
--- Server version	5.7.16
+-- Server version	5.6.34
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1649,6 +1649,7 @@ CREATE TABLE `infra_dado_usuario` (
 
 LOCK TABLES `infra_dado_usuario` WRITE;
 /*!40000 ALTER TABLE `infra_dado_usuario` DISABLE KEYS */;
+INSERT INTO `infra_dado_usuario` VALUES (100000001,'INFRA_UNIDADE_ATUAL','110000001');
 /*!40000 ALTER TABLE `infra_dado_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1704,6 +1705,7 @@ CREATE TABLE `infra_navegador` (
 
 LOCK TABLES `infra_navegador` WRITE;
 /*!40000 ALTER TABLE `infra_navegador` DISABLE KEYS */;
+INSERT INTO `infra_navegador` VALUES (1,'Chrome','52.0','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36','10.0.2.2','2016-11-06 00:51:27'),(2,'Chrome','52.0','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.82 Safari/537.36','10.0.2.2','2016-11-22 10:15:38');
 /*!40000 ALTER TABLE `infra_navegador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3475,7 +3477,7 @@ CREATE TABLE `seq_assinante` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=193 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3546,7 +3548,7 @@ CREATE TABLE `seq_assunto_proxy` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=514 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3966,7 +3968,7 @@ CREATE TABLE `seq_email_sistema` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4364,7 +4366,7 @@ CREATE TABLE `seq_infra_navegador` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4373,6 +4375,7 @@ CREATE TABLE `seq_infra_navegador` (
 
 LOCK TABLES `seq_infra_navegador` WRITE;
 /*!40000 ALTER TABLE `seq_infra_navegador` DISABLE KEYS */;
+INSERT INTO `seq_infra_navegador` VALUES (1,NULL),(2,NULL);
 /*!40000 ALTER TABLE `seq_infra_navegador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5038,7 +5041,7 @@ CREATE TABLE `seq_tabela_assuntos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5061,7 +5064,7 @@ CREATE TABLE `seq_tarefa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6316,4 +6319,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-10-20  9:14:08
+-- Dump completed on 2016-11-22 12:22:28
