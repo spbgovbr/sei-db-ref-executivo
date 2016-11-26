@@ -1,5 +1,5 @@
 /*
-SCRIPT DE LIMPEZA DE DADOS DA BASE DE DADOS DO - SEI 2.6.0 (MySQL)
+SCRIPT DE LIMPEZA DE DADOS DE AUDITORIA E LOG DA BASE DE DADOS DO SIP - SEI 2.6.0 (MySQL)
 */
 
 /* Reconstrui as tabelas de log e auditoria e tabelas sequenciais correspondentes */

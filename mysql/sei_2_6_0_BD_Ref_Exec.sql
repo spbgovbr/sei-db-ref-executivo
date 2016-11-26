@@ -23,11 +23,11 @@ DROP TABLE IF EXISTS `acesso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `acesso` (
-  `id_acesso` int(11) NOT NULL COMMENT 'Número que identifica o acesso.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica o tipo de acesso ao processo, se é restrito à unidade, se é restrito a quem possui credencial em processo sigiloso ou se é restrito a quem possui credencial de assinatura de documento em processo sigiloso.',
+  `id_acesso` int(11) NOT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `sta_tipo` char(1) NOT NULL,
   PRIMARY KEY (`id_acesso`),
   KEY `i01_acesso` (`id_unidade`,`id_usuario`,`id_protocolo`),
   KEY `i02_acesso` (`id_protocolo`,`id_usuario`),
@@ -57,17 +57,17 @@ DROP TABLE IF EXISTS `acesso_externo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `acesso_externo` (
-  `id_acesso_externo` int(11) NOT NULL COMMENT 'Variável que identifIca o acesso externo.',
-  `id_atividade` int(11) DEFAULT NULL COMMENT 'Variável que identifica a atividade realizada.',
-  `id_participante` int(11) DEFAULT NULL COMMENT 'Variável que identifica o participante.',
-  `dta_validade` datetime DEFAULT NULL COMMENT 'Data e hora de validade do acesso externo.',
-  `email_unidade` varchar(250) DEFAULT NULL COMMENT 'E-mail da unidade que autorizou o acesso externo.',
-  `hash_interno` varchar(32) DEFAULT NULL COMMENT 'Hash interno.',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o tipo de acesso externo (usuário externo, interessado, destinatário ou assinador).',
-  `id_documento` bigint(20) DEFAULT NULL COMMENT 'Variável que identifica o documento.',
-  `sin_processo` char(1) DEFAULT NULL COMMENT 'Variável  categórica que indica se o usuário com acesso externo poderá abrir processos do SEI ou não.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o acesso externo está ativo ou não.',
-  `email_destinatario` varchar(100) DEFAULT NULL COMMENT 'E-mail destinatário.',
+  `id_acesso_externo` int(11) NOT NULL,
+  `id_atividade` int(11) NOT NULL,
+  `id_participante` int(11) NOT NULL,
+  `dta_validade` datetime DEFAULT NULL,
+  `email_unidade` varchar(250) DEFAULT NULL,
+  `hash_interno` varchar(32) NOT NULL,
+  `sta_tipo` char(1) NOT NULL,
+  `id_documento` bigint(20) DEFAULT NULL,
+  `sin_processo` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `email_destinatario` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_acesso_externo`),
   KEY `i01_acesso_externo` (`id_atividade`),
   KEY `i02_acesso_externo` (`id_participante`),
@@ -96,14 +96,14 @@ DROP TABLE IF EXISTS `acompanhamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `acompanhamento` (
-  `id_acompanhamento` int(11) NOT NULL COMMENT 'Número que identifica o acompanhamento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_grupo_acompanhamento` int(11) DEFAULT NULL COMMENT 'Número que identifica o grupo de acompanhamento.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_usuario_gerador` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário gerador do acompanhamento.',
-  `dth_geracao` datetime DEFAULT NULL COMMENT 'Data e hora de geração do acompanhamento.',
-  `observacao` varchar(250) DEFAULT NULL COMMENT 'Observação do acompanhamento.',
-  `tipo_visualizacao` int(11) DEFAULT NULL COMMENT 'Variável binária que identifica o tipo de visualização (protocolo visualizado ou não visualizado).',
+  `id_acompanhamento` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_grupo_acompanhamento` int(11) DEFAULT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_usuario_gerador` int(11) NOT NULL,
+  `dth_geracao` datetime NOT NULL,
+  `observacao` varchar(250) DEFAULT NULL,
+  `tipo_visualizacao` int(11) NOT NULL,
   PRIMARY KEY (`id_acompanhamento`),
   KEY `if1_acompanhamento` (`id_unidade`),
   KEY `if2_acompanhamento` (`id_protocolo`),
@@ -133,11 +133,11 @@ DROP TABLE IF EXISTS `andamento_situacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `andamento_situacao` (
-  `id_andamento_situacao` int(11) NOT NULL COMMENT 'Número que identifica o andamento da situação.',
-  `dth_execucao` datetime DEFAULT NULL COMMENT 'Data de execução do andamento.',
-  `id_procedimento` bigint(20) DEFAULT NULL COMMENT 'Número de identificação do procedimento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número de identificação da unidade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número de identificação do usuário.',
+  `id_andamento_situacao` int(11) NOT NULL,
+  `dth_execucao` datetime NOT NULL,
+  `id_procedimento` bigint(20) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
   PRIMARY KEY (`id_andamento_situacao`),
   KEY `fk_andam_situacao_procedimento` (`id_procedimento`),
   KEY `fk_andamento_situacao_unidade` (`id_unidade`),
@@ -165,17 +165,17 @@ DROP TABLE IF EXISTS `anexo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `anexo` (
-  `id_anexo` int(11) NOT NULL COMMENT 'Número que identifica o documento externo.',
-  `nome` varchar(255) DEFAULT NULL COMMENT 'Nome do arquivo do documento externo.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo (nesse caso, o número do documento).',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o documento está ativo ou não. S: Sim N: Não',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade que inseriu o documento externo.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário que inseriu o documento externo.',
-  `tamanho` int(11) DEFAULT NULL COMMENT 'Tamanho do documento externo (bytes).',
-  `dth_inclusao` datetime DEFAULT NULL COMMENT 'Data de inclusão do documento externo.',
-  `id_base_conhecimento` int(11) DEFAULT NULL COMMENT 'Número que identifica a base de conhecimento.',
-  `id_projeto` int(11) DEFAULT NULL COMMENT 'Número que identifica o projeto.',
-  `hash` char(32) DEFAULT NULL COMMENT 'Hash do documento.',
+  `id_anexo` int(11) NOT NULL,
+  `nome` varchar(255) NOT NULL,
+  `id_protocolo` bigint(20) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `tamanho` int(11) NOT NULL,
+  `dth_inclusao` datetime NOT NULL,
+  `id_base_conhecimento` int(11) DEFAULT NULL,
+  `id_projeto` int(11) DEFAULT NULL,
+  `hash` char(32) NOT NULL,
   PRIMARY KEY (`id_anexo`),
   UNIQUE KEY `ak1_anexo` (`id_anexo`,`sin_ativo`),
   KEY `i01_anexo` (`id_protocolo`,`sin_ativo`),
@@ -207,14 +207,14 @@ DROP TABLE IF EXISTS `anotacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `anotacao` (
-  `id_anotacao` int(11) NOT NULL COMMENT 'Número que identifica a anotação.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `descricao` longtext COMMENT 'Descrição da anotação.',
-  `dth_anotacao` datetime DEFAULT NULL COMMENT 'Data e hora da anotação.',
-  `sin_prioridade` char(1) DEFAULT NULL COMMENT 'Prioridade da anotação.',
-  `sta_anotacao` char(1) DEFAULT NULL COMMENT 'indica se a anotação é visível por toda a unidade (U) ou apenas pelo usuário que a criou (I).',
+  `id_anotacao` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `descricao` longtext,
+  `dth_anotacao` datetime NOT NULL,
+  `sin_prioridade` char(1) NOT NULL,
+  `sta_anotacao` char(1) NOT NULL,
   PRIMARY KEY (`id_anotacao`),
   KEY `fk_anotacao_protocolo` (`id_protocolo`),
   KEY `fk_anotacao_usuario` (`id_usuario`),
@@ -242,11 +242,11 @@ DROP TABLE IF EXISTS `aplicabilidade_atributo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `aplicabilidade_atributo` (
-  `id_aplicabilidade_atributo` int(11) NOT NULL COMMENT 'Número que identifica a aplicabilidade de atributo.',
-  `id_atributo` int(11) DEFAULT NULL COMMENT 'Número que identifica o atributo.',
-  `id_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_tipo_procedimento` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
+  `id_aplicabilidade_atributo` int(11) NOT NULL,
+  `id_atributo` int(11) NOT NULL,
+  `id_serie` int(11) DEFAULT NULL,
+  `id_tipo_procedimento` int(11) DEFAULT NULL,
+  `id_unidade` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_aplicabilidade_atributo`),
   KEY `i01_aplicabilidade_atributo` (`id_serie`),
   KEY `i02_aplicabilidade_atributo` (`id_unidade`),
@@ -276,10 +276,10 @@ DROP TABLE IF EXISTS `arquivo_extensao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `arquivo_extensao` (
-  `id_arquivo_extensao` int(11) NOT NULL COMMENT 'Número que identifica a extensão do documento.',
-  `extensao` varchar(10) DEFAULT NULL COMMENT 'Extensão do documento.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da extensão do documento.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se a extensão está ativa ou não.',
+  `id_arquivo_extensao` int(11) NOT NULL,
+  `extensao` varchar(10) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_arquivo_extensao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -302,8 +302,8 @@ DROP TABLE IF EXISTS `assinante`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `assinante` (
-  `id_assinante` int(11) NOT NULL COMMENT 'Número que identifica o tipo de assinante.',
-  `cargo_funcao` varchar(100) DEFAULT NULL COMMENT 'Cargo ou função do tipo de assinante.',
+  `id_assinante` int(11) NOT NULL,
+  `cargo_funcao` varchar(100) NOT NULL,
   PRIMARY KEY (`id_assinante`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -326,18 +326,18 @@ DROP TABLE IF EXISTS `assinatura`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `assinatura` (
-  `id_assinatura` int(11) NOT NULL COMMENT 'Número que identifica a assinatura.',
-  `id_documento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário que possui a assinatura.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `nome` varchar(100) DEFAULT NULL COMMENT 'Assinatura (nome do servidor).',
-  `tratamento` varchar(100) DEFAULT NULL COMMENT 'Cargo ou função do servidor.',
-  `cpf` bigint(20) DEFAULT NULL COMMENT 'CPF do servidor.',
-  `id_atividade` int(11) DEFAULT NULL COMMENT 'Número que identifica a atividade realizada.',
-  `sta_forma_autenticacao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica a forma de autenticação, senha ou certificado digital.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a assinatura está ativa. S: Sim N: Não',
-  `numero_serie_certificado` varchar(64) DEFAULT NULL COMMENT 'Certificado.',
-  `p7s_base64` longtext COMMENT 'Texto de uma imagem.',
+  `id_assinatura` int(11) NOT NULL,
+  `id_documento` bigint(20) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `tratamento` varchar(100) NOT NULL,
+  `cpf` bigint(20) DEFAULT NULL,
+  `id_atividade` int(11) DEFAULT NULL,
+  `sta_forma_autenticacao` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `numero_serie_certificado` varchar(64) DEFAULT NULL,
+  `p7s_base64` longtext,
   PRIMARY KEY (`id_assinatura`),
   UNIQUE KEY `ak1_assinatura` (`id_documento`,`id_usuario`),
   KEY `if1_assinatura` (`id_documento`),
@@ -368,24 +368,24 @@ DROP TABLE IF EXISTS `assunto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `assunto` (
-  `id_assunto` int(11) NOT NULL COMMENT 'Número que identifica o assunto.',
-  `codigo_estruturado` varchar(50) DEFAULT NULL COMMENT 'Código estruturado do assunto.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do assunto.',
-  `maior_tempo_corrente` int(11) DEFAULT NULL COMMENT 'Maior tempo corrente (anos).',
-  `menor_tempo_corrente` int(11) DEFAULT NULL COMMENT 'Menor tempo corrente (anos).',
-  `sin_elimina_maior_corrente` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se foi eliminado o maior tempo corrente (S) ou não (N).',
-  `sin_elimina_menor_corrente` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se foi eliminado o menor tempo corrente (S) ou não (N).',
-  `maior_tempo_intermediario` int(11) DEFAULT NULL COMMENT 'Maior tempo intermediário (anos).',
-  `menor_tempo_intermediario` int(11) DEFAULT NULL COMMENT 'Menor tempo intermediário (anos).',
-  `sin_elimina_menor_intermed` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se foi eliminado o menor tempo intermediário (S) ou não (N).',
-  `sin_elimina_maior_intermed` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se foi eliminado o maior tempo intermediário (S) ou não (N).',
-  `sin_suficiente` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o assunto é suficiente para classificar um processo/documento (S) ou não (N).',
-  `observacao` varchar(500) DEFAULT NULL COMMENT 'Observação a respeito do assunto.',
-  `idx_assunto` varchar(1000) DEFAULT NULL COMMENT 'Codificação do assunto.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o assunto está ativo (S) ou não (N).',
+  `id_assunto` int(11) NOT NULL,
+  `codigo_estruturado` varchar(50) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `maior_tempo_corrente` int(11) NOT NULL,
+  `menor_tempo_corrente` int(11) NOT NULL,
+  `sin_elimina_maior_corrente` char(1) NOT NULL,
+  `sin_elimina_menor_corrente` char(1) NOT NULL,
+  `maior_tempo_intermediario` int(11) DEFAULT NULL,
+  `menor_tempo_intermediario` int(11) DEFAULT NULL,
+  `sin_elimina_menor_intermed` char(1) DEFAULT NULL,
+  `sin_elimina_maior_intermed` char(1) DEFAULT NULL,
+  `sin_suficiente` char(1) NOT NULL,
+  `observacao` varchar(500) DEFAULT NULL,
+  `idx_assunto` varchar(1000) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_assunto`),
-  UNIQUE KEY `ak2_assunto` (`id_assunto`,`sin_ativo`),
   UNIQUE KEY `ak1_assunto` (`codigo_estruturado`),
+  UNIQUE KEY `ak2_assunto` (`id_assunto`,`sin_ativo`),
   KEY `i01_assunto` (`codigo_estruturado`,`sin_ativo`),
   KEY `i02_assunto` (`sin_suficiente`,`sin_ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -409,21 +409,21 @@ DROP TABLE IF EXISTS `atividade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `atividade` (
-  `id_atividade` int(11) NOT NULL COMMENT 'Número que identifica a atividade realizada.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Unidade onde o processo se encontra. Normalmente é a unidade onde a atividade foi realizada. Porém, se for uma tramitação, é a unidade para onde o processo foi tramitado. De qualquer forma, é a unidade onde o processo se encontra.',
-  `dth_abertura` datetime DEFAULT NULL COMMENT 'Data e hora de início da atividade.',
-  `dth_conclusao` datetime DEFAULT NULL COMMENT 'Registra a data em que a atividade foi encerrada. Se uma ou mais atividades estiverem com dth_conclusao nula, significa que o processo está aberto na unidade indicada no campo id_unidade. Um processo aberto pode estar ou não sobrestado. Para saber se está sobrestado, é preciso ver a tabela protocolo, campo sta_protocolo. Se todas as dth_conclusao estiver preenchida para todas as atividades de um determinado id_protocolo, o processo está encerrado. Porém, um processo encerrado pode estar anexado em outro e o outro pode estar aberto. Para saber se o processo encerrado está anexado, é preciso verificar a tabela protocolo, campo sta_estado.',
-  `id_tarefa` int(11) DEFAULT NULL COMMENT 'Número que identifica a tarefa realizada (a tabela tarefa fornece a descrição da atividade)',
-  `id_unidade_origem` int(11) DEFAULT NULL COMMENT 'Número que identifica qual unidade iniciou a atividade.',
-  `id_usuario_conclusao` int(11) DEFAULT NULL COMMENT 'Número que identifica qual usuário concluiu a atividade.',
-  `sin_inicial` char(1) DEFAULT NULL COMMENT 'Variável que identifica se a atividade foi iniciada ou não. S: Sim N: Não',
-  `id_usuario_visualizacao` int(11) DEFAULT NULL COMMENT 'Número que identifica qual usuário visualizou a atividade.',
-  `id_usuario_atribuicao` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário ao qual foi atribuída determinada atividade.',
-  `dta_prazo` datetime DEFAULT NULL COMMENT 'Data e hora para finalização da atividade.',
-  `tipo_visualizacao` int(11) DEFAULT NULL COMMENT 'Tipo de visualização da atividade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `id_usuario_origem` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário que iniciou a atividade.',
+  `id_atividade` int(11) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `dth_abertura` datetime NOT NULL,
+  `dth_conclusao` datetime DEFAULT NULL,
+  `id_tarefa` int(11) DEFAULT NULL,
+  `id_unidade_origem` int(11) NOT NULL,
+  `id_usuario_conclusao` int(11) DEFAULT NULL,
+  `sin_inicial` char(1) NOT NULL,
+  `id_usuario_visualizacao` int(11) DEFAULT NULL,
+  `id_usuario_atribuicao` int(11) DEFAULT NULL,
+  `dta_prazo` datetime DEFAULT NULL,
+  `tipo_visualizacao` int(11) NOT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_usuario_origem` int(11) NOT NULL,
   PRIMARY KEY (`id_atividade`),
   KEY `i02_atividade` (`id_unidade`,`dth_conclusao`),
   KEY `i01_atividade` (`id_protocolo`,`id_unidade`,`dth_conclusao`,`id_usuario_atribuicao`,`sin_inicial`),
@@ -469,14 +469,14 @@ DROP TABLE IF EXISTS `atributo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `atributo` (
-  `id_atributo` int(11) NOT NULL COMMENT 'Número que identifica o atributo.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do atributo.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do atributo.',
-  `sin_obrigatorio` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o atributo é obrigatório ou não. S: Sim N: Não',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o atributo está ativo ou não. S: Sim N: Não',
-  `sta_atributo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se é atributo ou não. (?)',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica o tipo de atributo.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
+  `id_atributo` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sin_obrigatorio` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sta_atributo` char(1) NOT NULL,
+  `sta_tipo` char(1) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_atributo`),
   KEY `fk_atributo_unidade` (`id_unidade`),
   CONSTRAINT `fk_atributo_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`)
@@ -500,11 +500,11 @@ DROP TABLE IF EXISTS `atributo_andamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `atributo_andamento` (
-  `id_atributo_andamento` int(11) NOT NULL COMMENT 'Número que identifica o andamento do atributo.',
-  `id_atividade` int(11) DEFAULT NULL COMMENT 'Número que identifica a atividade realizada.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do tipo de atributo.',
-  `valor` varchar(4000) DEFAULT NULL COMMENT 'Valor do atributo.',
-  `id_origem` varchar(50) DEFAULT NULL COMMENT 'Origem do atributo.',
+  `id_atributo_andamento` int(11) NOT NULL,
+  `id_atividade` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `valor` varchar(4000) DEFAULT NULL,
+  `id_origem` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_atributo_andamento`),
   KEY `if1_atributo_andamento` (`id_atividade`),
   KEY `i01_atributo_andamento` (`id_atividade`,`nome`,`id_origem`),
@@ -530,11 +530,11 @@ DROP TABLE IF EXISTS `atributo_andamento_situacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `atributo_andamento_situacao` (
-  `id_atributo_andamento_situacao` int(11) NOT NULL COMMENT 'Número que identifica a situação do atributo.',
-  `id_andamento_situacao` int(11) DEFAULT NULL COMMENT 'Número que identifica o andamento da situação.',
-  `chave` varchar(50) DEFAULT NULL COMMENT 'Chave do atributo.',
-  `valor` varchar(250) DEFAULT NULL COMMENT 'Valor do atributo.',
-  `id_origem` varchar(50) DEFAULT NULL COMMENT 'Número que identifica a origem do atributo.',
+  `id_atributo_andamento_situacao` int(11) NOT NULL,
+  `id_andamento_situacao` int(11) NOT NULL,
+  `chave` varchar(50) NOT NULL,
+  `valor` varchar(250) DEFAULT NULL,
+  `id_origem` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id_atributo_andamento_situacao`),
   KEY `fk_atrib_andam_sit_andam_sit` (`id_andamento_situacao`),
   CONSTRAINT `fk_atrib_andam_sit_andam_sit` FOREIGN KEY (`id_andamento_situacao`) REFERENCES `andamento_situacao` (`id_andamento_situacao`)
@@ -558,12 +558,12 @@ DROP TABLE IF EXISTS `auditoria_protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `auditoria_protocolo` (
-  `id_auditoria_protocolo` bigint(20) NOT NULL COMMENT 'Número que identifica o registro da auditoria (chave primária da tabela).',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `id_anexo` int(11) DEFAULT NULL COMMENT 'Número que identifica o documento anexo.',
-  `versao` int(11) DEFAULT NULL COMMENT 'Número da versão.',
-  `dta_auditoria` datetime DEFAULT NULL COMMENT 'Data e hora da auditoria.',
+  `id_auditoria_protocolo` bigint(20) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_anexo` int(11) DEFAULT NULL,
+  `versao` int(11) DEFAULT NULL,
+  `dta_auditoria` datetime NOT NULL,
   PRIMARY KEY (`id_auditoria_protocolo`),
   KEY `i01_auditoria_protocolo` (`id_usuario`,`id_protocolo`,`versao`,`dta_auditoria`,`id_anexo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -586,20 +586,20 @@ DROP TABLE IF EXISTS `base_conhecimento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `base_conhecimento` (
-  `id_base_conhecimento` int(11) NOT NULL COMMENT 'Número que identifica a base de conhecimento.',
-  `id_base_conhecimento_agrupador` int(11) DEFAULT NULL COMMENT 'Número que identifica o agrupador de base de conhecimento.',
-  `id_base_conhecimento_origem` int(11) DEFAULT NULL COMMENT 'Número que identifica a origem da base de conhecimento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da base de conhecimento.',
-  `conteudo` longtext COMMENT 'Conteúdo HTML da base de conhecimento.',
-  `id_documento_edoc` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento EDOC.',
-  `sta_estado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o estado da base de conhecimento: normal (0), sobrestado (1), cancelado (2) ou anexado (3).',
-  `id_usuario_gerador` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário gerador da base de conhecimento.',
-  `dth_geracao` datetime DEFAULT NULL COMMENT 'Data e hora de geração da base de conhecimento.',
-  `dth_liberacao` datetime DEFAULT NULL COMMENT 'Data e hora de liberação da base de conhecimento.',
-  `id_usuario_liberacao` int(11) DEFAULT NULL COMMENT 'Número que identifica qual usuário liberou a base de conhecimento.',
-  `sta_editor` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o editor de texto foi utilizado para criar a base de conhecimento.',
-  `id_conjunto_estilos` int(11) DEFAULT NULL COMMENT 'Número que identifica o conjunto de estilos.',
+  `id_base_conhecimento` int(11) NOT NULL,
+  `id_base_conhecimento_agrupador` int(11) DEFAULT NULL,
+  `id_base_conhecimento_origem` int(11) DEFAULT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `conteudo` longtext,
+  `id_documento_edoc` bigint(20) DEFAULT NULL,
+  `sta_estado` char(1) NOT NULL,
+  `id_usuario_gerador` int(11) NOT NULL,
+  `dth_geracao` datetime NOT NULL,
+  `dth_liberacao` datetime DEFAULT NULL,
+  `id_usuario_liberacao` int(11) DEFAULT NULL,
+  `sta_editor` char(1) NOT NULL,
+  `id_conjunto_estilos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_base_conhecimento`),
   KEY `fk_base_conhecimento_unidade` (`id_unidade`),
   KEY `fk_base_conhec_usu_gerador` (`id_usuario_gerador`),
@@ -631,13 +631,13 @@ DROP TABLE IF EXISTS `bloco`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `bloco` (
-  `id_bloco` int(11) NOT NULL COMMENT 'Número que identifica o bloco.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Nome do bloco.',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica o tipo de bloco.',
-  `idx_bloco` varchar(500) DEFAULT NULL COMMENT 'Codificação do bloco.',
-  `sta_estado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o estado do bloco.',
+  `id_bloco` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sta_tipo` char(1) NOT NULL,
+  `idx_bloco` varchar(500) DEFAULT NULL,
+  `sta_estado` char(1) NOT NULL,
   PRIMARY KEY (`id_bloco`),
   KEY `if1_bloco` (`id_usuario`),
   KEY `if2_bloco` (`id_unidade`),
@@ -666,9 +666,9 @@ DROP TABLE IF EXISTS `cargo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cargo` (
-  `id_cargo` int(11) NOT NULL COMMENT 'Número que identifica o cargo.',
-  `expressao` varchar(50) DEFAULT NULL COMMENT 'Expressão do cargo.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o cargo está ativo ou não. S: Sim N: Não',
+  `id_cargo` int(11) NOT NULL,
+  `expressao` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_cargo`),
   KEY `ie1_cargo` (`id_cargo`,`sin_ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -691,10 +691,10 @@ DROP TABLE IF EXISTS `cargo_funcao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cargo_funcao` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_cargo_funcao` int(11) NOT NULL COMMENT 'Número que identifica o cargo/função.',
-  `nome` varchar(100) DEFAULT NULL COMMENT 'Nome do cargo/função.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o cargo/função está ativo ou não. S: Sim N: Não',
+  `id_unidade` int(11) NOT NULL,
+  `id_cargo_funcao` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_cargo_funcao`),
   CONSTRAINT `fk_cargo_funcao_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -717,8 +717,8 @@ DROP TABLE IF EXISTS `carreira`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `carreira` (
-  `id_carreira` int(11) NOT NULL COMMENT 'Número que identifica a carreira.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome da carreira.',
+  `id_carreira` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
   PRIMARY KEY (`id_carreira`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -740,14 +740,14 @@ DROP TABLE IF EXISTS `cidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `cidade` (
-  `id_cidade` int(11) NOT NULL COMMENT 'Número que identifica a cidade.',
-  `id_uf` int(11) DEFAULT NULL COMMENT 'Número que identifica a UF.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome da cidade.',
-  `id_pais` int(11) DEFAULT NULL COMMENT 'Número que identifica o país.',
-  `codigo_ibge` int(11) DEFAULT NULL COMMENT 'Código da cidade no IBGE.',
-  `sin_capital` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a cidade é capital ou não.',
-  `latitude` decimal(9,6) DEFAULT NULL COMMENT 'Latitude da cidade.',
-  `longitude` decimal(9,6) DEFAULT NULL COMMENT 'Longitude da cidade.',
+  `id_cidade` int(11) NOT NULL,
+  `id_uf` int(11) DEFAULT NULL,
+  `nome` varchar(50) NOT NULL,
+  `id_pais` int(11) DEFAULT NULL,
+  `codigo_ibge` int(11) DEFAULT NULL,
+  `sin_capital` char(1) NOT NULL,
+  `latitude` decimal(9,6) DEFAULT NULL,
+  `longitude` decimal(9,6) DEFAULT NULL,
   PRIMARY KEY (`id_cidade`),
   UNIQUE KEY `ak1_cidade` (`id_uf`,`nome`),
   KEY `fk_cidade_pais` (`id_pais`),
@@ -775,8 +775,8 @@ DROP TABLE IF EXISTS `conjunto_estilos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `conjunto_estilos` (
-  `id_conjunto_estilos` int(11) NOT NULL COMMENT 'Número que identifica o conjunto de estilos.',
-  `sin_ultimo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o conjunto de estilos é o último instalado.',
+  `id_conjunto_estilos` int(11) NOT NULL,
+  `sin_ultimo` char(1) NOT NULL,
   PRIMARY KEY (`id_conjunto_estilos`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -799,10 +799,10 @@ DROP TABLE IF EXISTS `conjunto_estilos_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `conjunto_estilos_item` (
-  `id_conjunto_estilos_item` int(11) NOT NULL COMMENT 'Número que identifica o item do conjunto de estilos.',
-  `id_conjunto_estilos` int(11) DEFAULT NULL COMMENT 'Número que identifica o conjunto de estilos ao qual pertence o item.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do item do conjunto de estilos.',
-  `formatacao` longtext COMMENT 'Definições de formatação do conjunto de estilos.',
+  `id_conjunto_estilos_item` int(11) NOT NULL,
+  `id_conjunto_estilos` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `formatacao` longtext NOT NULL,
   PRIMARY KEY (`id_conjunto_estilos_item`),
   KEY `fk_conj_est_item_conj_est` (`id_conjunto_estilos`),
   CONSTRAINT `fk_conj_est_item_conj_est` FOREIGN KEY (`id_conjunto_estilos`) REFERENCES `conjunto_estilos` (`id_conjunto_estilos`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -827,46 +827,46 @@ DROP TABLE IF EXISTS `contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contato` (
-  `id_contato` int(11) NOT NULL COMMENT 'Número que identifica o contato.',
-  `id_contexto_contato` int(11) DEFAULT NULL COMMENT 'Número que identifica o contexto.',
-  `id_tratamento` int(11) DEFAULT NULL COMMENT 'Número que identifica o tratamento utilizado para o contato.',
-  `id_vocativo` int(11) DEFAULT NULL COMMENT 'Vocativo do contato.',
-  `id_cargo` int(11) DEFAULT NULL COMMENT 'Cargo do contato.',
-  `id_titulo` int(11) DEFAULT NULL COMMENT 'Título do contato.',
-  `nome` varchar(250) DEFAULT NULL COMMENT 'Nome do contato (pode ser unidade ou usuário).',
-  `palavras_chave` varchar(50) DEFAULT NULL COMMENT 'Palavras-chave para pesquisa do contato.',
-  `matricula_oab` varchar(10) DEFAULT NULL COMMENT 'Matrícula OAB do contato.',
-  `cpf` bigint(20) DEFAULT NULL COMMENT 'CPF do contato (caso seja pessoa física).',
-  `matricula` int(11) DEFAULT NULL COMMENT 'Matrícula do contato.',
-  `telefone` varchar(50) DEFAULT NULL COMMENT 'Telefone do contato.',
-  `fax` varchar(50) DEFAULT NULL COMMENT 'Fax do contato.',
-  `email` varchar(50) DEFAULT NULL COMMENT 'E-mail do contato.',
-  `sitio_internet` varchar(50) DEFAULT NULL COMMENT 'Endereço web do contato.',
-  `endereco` varchar(100) DEFAULT NULL COMMENT 'Endereço do contato.',
-  `bairro` varchar(50) DEFAULT NULL COMMENT 'Bairro do contato.',
-  `sigla_estado` varchar(20) DEFAULT NULL COMMENT 'UF do contato.',
-  `nome_cidade` varchar(50) DEFAULT NULL COMMENT 'Nome da cidade do contato.',
-  `nome_pais` varchar(50) DEFAULT NULL COMMENT 'Nome do país do contato.',
-  `cep` varchar(15) DEFAULT NULL COMMENT 'CEP do contato.',
-  `observacao` varchar(250) DEFAULT NULL COMMENT 'Observação do contato.',
-  `idx_contato` varchar(1000) DEFAULT NULL COMMENT 'Indexação de informações do contato, para facilitar a pesquisa.',
-  `dta_nascimento` datetime DEFAULT NULL COMMENT 'Data de nascimento do contato.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o contato está ativo (S) ou não (N).',
-  `cnpj` bigint(20) DEFAULT NULL COMMENT 'CNPJ do contato (caso seja pessoa jurídica).',
-  `id_tipo_contexto_contato` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de contexto.',
-  `sin_contexto` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o contexto está ativo (S) ou não (N).',
-  `sin_endereco_contexto` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se existe endereço do contexto (S) ou não (N).',
-  `genero` char(1) DEFAULT NULL COMMENT 'Gênero do contato.',
-  `sigla` varchar(100) DEFAULT NULL COMMENT 'Sigla do contato.',
-  `id_unidade_cadastro` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade de cadastro do contato.',
-  `id_usuario_cadastro` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário que cadastrou o contato.',
-  `dth_cadastro` datetime DEFAULT NULL COMMENT 'Data de cadastro do contato.',
-  `id_pessoa_rh` bigint(20) DEFAULT NULL COMMENT 'RF do servidor.',
-  `rg` bigint(20) DEFAULT NULL COMMENT 'RG do contato.',
-  `orgao_expedidor` varchar(50) DEFAULT NULL COMMENT 'Órgão expedidor do RG do contato.',
-  `id_carreira` int(11) DEFAULT NULL COMMENT 'Número que identifica a carreira do contato.',
-  `id_nivel_funcao` int(11) DEFAULT NULL COMMENT 'Número que identifica o nível de função do contato.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão do contato.',
+  `id_contato` int(11) NOT NULL,
+  `id_contexto_contato` int(11) NOT NULL,
+  `id_tratamento` int(11) DEFAULT NULL,
+  `id_vocativo` int(11) DEFAULT NULL,
+  `id_cargo` int(11) DEFAULT NULL,
+  `id_titulo` int(11) DEFAULT NULL,
+  `nome` varchar(250) NOT NULL,
+  `palavras_chave` varchar(50) DEFAULT NULL,
+  `matricula_oab` varchar(10) DEFAULT NULL,
+  `cpf` bigint(20) DEFAULT NULL,
+  `matricula` int(11) DEFAULT NULL,
+  `telefone` varchar(50) DEFAULT NULL,
+  `fax` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `sitio_internet` varchar(50) DEFAULT NULL,
+  `endereco` varchar(100) DEFAULT NULL,
+  `bairro` varchar(50) DEFAULT NULL,
+  `sigla_estado` varchar(20) DEFAULT NULL,
+  `nome_cidade` varchar(50) DEFAULT NULL,
+  `nome_pais` varchar(50) DEFAULT NULL,
+  `cep` varchar(15) DEFAULT NULL,
+  `observacao` varchar(250) DEFAULT NULL,
+  `idx_contato` varchar(1000) DEFAULT NULL,
+  `dta_nascimento` datetime DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `cnpj` bigint(20) DEFAULT NULL,
+  `id_tipo_contexto_contato` int(11) DEFAULT NULL,
+  `sin_contexto` char(1) NOT NULL,
+  `sin_endereco_contexto` char(1) NOT NULL,
+  `genero` char(1) DEFAULT NULL,
+  `sigla` varchar(100) DEFAULT NULL,
+  `id_unidade_cadastro` int(11) DEFAULT NULL,
+  `id_usuario_cadastro` int(11) DEFAULT NULL,
+  `dth_cadastro` datetime DEFAULT NULL,
+  `id_pessoa_rh` bigint(20) DEFAULT NULL,
+  `rg` bigint(20) DEFAULT NULL,
+  `orgao_expedidor` varchar(50) DEFAULT NULL,
+  `id_carreira` int(11) DEFAULT NULL,
+  `id_nivel_funcao` int(11) DEFAULT NULL,
+  `id_orgao` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_contato`),
   KEY `ie1_contato` (`sin_ativo`,`id_contato`),
   KEY `ie2_contato` (`dta_nascimento`),
@@ -903,7 +903,7 @@ CREATE TABLE `contato` (
 
 LOCK TABLES `contato` WRITE;
 /*!40000 ALTER TABLE `contato` DISABLE KEYS */;
-INSERT INTO `contato` VALUES (100000001,100000001,NULL,NULL,NULL,NULL,'Unidade de Teste 1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste unidade de teste 1',NULL,'S',NULL,1,'S','N',NULL,'TESTE',NULL,NULL,'2013-11-08 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000002,100000002,NULL,NULL,NULL,NULL,'Sistema Eletrônico de Informações',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SEI Sistema Eletrônico de Informações',NULL,'S',NULL,2,'S','N',NULL,'SEI',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000003,100000003,NULL,NULL,NULL,NULL,'Sistema de Permissões',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SIP Sistema de Permissões',NULL,'S',NULL,2,'S','N',NULL,'SIP',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000004,100000004,NULL,NULL,NULL,NULL,'INTRANET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTRANET',NULL,'S',NULL,2,'S','N',NULL,'INTRANET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000005,100000005,NULL,NULL,NULL,NULL,'INTERNET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTERNET',NULL,'S',NULL,2,'S','N',NULL,'INTERNET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000006,100000006,NULL,NULL,NULL,NULL,'Usuário de Testes',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste usuario de testes',NULL,'S',NULL,1,'S','N',NULL,'teste',110000001,2,'2016-11-16 15:06:47',NULL,NULL,NULL,NULL,NULL,NULL),(100002291,100002291,NULL,NULL,NULL,NULL,'Unidade de Testes 1.1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste11 unidade de testes 11',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_1',110000001,2,'2014-11-27 20:44:26',NULL,NULL,NULL,NULL,NULL,NULL),(100002292,100002292,NULL,NULL,NULL,NULL,'Unidade de Testes 1.2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste12 unidade de testes 12',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_2',110000001,2,'2014-11-27 20:44:44',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `contato` VALUES (100000001,100000001,NULL,NULL,NULL,NULL,'Unidade de Teste 1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste unidade de teste 1',NULL,'S',NULL,1,'S','N',NULL,'TESTE',NULL,NULL,'2013-11-08 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000002,100000002,NULL,NULL,NULL,NULL,'Sistema Eletrônico de Informações',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SEI Sistema Eletrônico de Informações',NULL,'S',NULL,2,'S','N',NULL,'SEI',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000003,100000003,NULL,NULL,NULL,NULL,'Sistema de Permissões',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SIP Sistema de Permissões',NULL,'S',NULL,2,'S','N',NULL,'SIP',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000004,100000004,NULL,NULL,NULL,NULL,'INTRANET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTRANET',NULL,'S',NULL,2,'S','N',NULL,'INTRANET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000005,100000005,NULL,NULL,NULL,NULL,'INTERNET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTERNET',NULL,'S',NULL,2,'S','N',NULL,'INTERNET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100002291,100002291,NULL,NULL,NULL,NULL,'Unidade de Testes 1.1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste11 unidade de testes 11',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_1',110000001,2,'2014-11-27 20:44:26',NULL,NULL,NULL,NULL,NULL,NULL),(100002292,100002292,NULL,NULL,NULL,NULL,'Unidade de Testes 1.2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste12 unidade de testes 12',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_2',110000001,2,'2014-11-27 20:44:44',NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -915,12 +915,12 @@ DROP TABLE IF EXISTS `contexto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contexto` (
-  `id_contexto` int(11) NOT NULL COMMENT 'Número que identifica o contexto.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão do contexto.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do contexto.',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Descrição do contexto.',
-  `base_dn_ldap` varchar(50) DEFAULT NULL COMMENT 'Base LDAP (para autenticação via AD).',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o contexto está ativo (S) ou não (N).',
+  `id_contexto` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `base_dn_ldap` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_contexto`),
   KEY `fk_contexto_orgao` (`id_orgao`),
   CONSTRAINT `fk_contexto_orgao` FOREIGN KEY (`id_orgao`) REFERENCES `orgao` (`id_orgao`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -944,8 +944,8 @@ DROP TABLE IF EXISTS `controle_interno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `controle_interno` (
-  `id_controle_interno` int(11) NOT NULL COMMENT 'Número que identifica o controle interno.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do controle interno.',
+  `id_controle_interno` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
   PRIMARY KEY (`id_controle_interno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -967,10 +967,10 @@ DROP TABLE IF EXISTS `controle_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `controle_unidade` (
-  `id_controle_unidade` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o controle da unidade.',
-  `id_procedimento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o procedimento controlado.',
-  `id_situacao` int(11) DEFAULT NULL COMMENT 'Número que identifica a situação do procedimento.',
-  `dth_snapshot` datetime DEFAULT NULL COMMENT 'Data e hora do snapshot.'
+  `id_controle_unidade` bigint(20) NOT NULL,
+  `id_procedimento` bigint(20) NOT NULL,
+  `id_situacao` int(11) DEFAULT NULL,
+  `dth_snapshot` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -991,22 +991,22 @@ DROP TABLE IF EXISTS `documento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `documento` (
-  `id_documento` bigint(20) NOT NULL COMMENT 'É chave estrangeira para a tabela protocolo, para o campo id_protocolo.',
-  `numero` varchar(50) DEFAULT NULL COMMENT 'Número do documento.',
-  `versao_lock` int(11) DEFAULT NULL COMMENT 'Contador que acresce uma (1) unidade a cada alteração realizada no nível de acesso do protocolo.',
-  `id_unidade_responsavel` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade responsável pelo documento.',
-  `id_documento_edoc` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento EDOC.',
-  `conteudo` longtext COMMENT 'Conteúdo do documento (apenas para documento interno).',
-  `id_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_procedimento` bigint(20) DEFAULT NULL COMMENT 'Identifica o PROCESSO onde o documento está inserido. É chave estrangeira para a tabela protocolo, para o campo id_protocolo.',
-  `conteudo_assinatura` longtext COMMENT 'Conteúdo da assinatura (apenas para documento interno).',
-  `crc_assinatura` char(8) DEFAULT NULL COMMENT 'Código CRC da assinatura (apenas para documento interno).',
-  `qr_code_assinatura` longtext COMMENT 'Código QR da assinatura (apenas para documento interno).',
-  `sin_formulario` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se existe formulário (S) ou não (N).',
-  `sta_editor` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o documento foi feito no editor (S) ou não (N).',
-  `sin_bloqueado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o documento foi bloqueado para edição/exclusão (S) ou não (N).',
-  `id_conjunto_estilos` int(11) DEFAULT NULL COMMENT 'Número que identifica o conjunto de estilos do documento.',
-  `id_tipo_conferencia` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de conferência do documento.',
+  `id_documento` bigint(20) NOT NULL,
+  `numero` varchar(50) DEFAULT NULL,
+  `versao_lock` int(11) NOT NULL,
+  `id_unidade_responsavel` int(11) NOT NULL,
+  `id_documento_edoc` bigint(20) DEFAULT NULL,
+  `conteudo` longtext,
+  `id_serie` int(11) NOT NULL,
+  `id_procedimento` bigint(20) NOT NULL,
+  `conteudo_assinatura` longtext,
+  `crc_assinatura` char(8) DEFAULT NULL,
+  `qr_code_assinatura` longtext,
+  `sin_formulario` char(1) NOT NULL,
+  `sta_editor` char(1) NOT NULL,
+  `sin_bloqueado` char(1) NOT NULL,
+  `id_conjunto_estilos` int(11) DEFAULT NULL,
+  `id_tipo_conferencia` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_documento`),
   UNIQUE KEY `ak_documento` (`id_documento`,`id_procedimento`),
   KEY `ie1_documento` (`numero`),
@@ -1044,10 +1044,10 @@ DROP TABLE IF EXISTS `dominio`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dominio` (
-  `id_dominio` int(11) NOT NULL COMMENT 'Número que identifica o tipo de domínio.',
-  `id_atributo` int(11) DEFAULT NULL COMMENT 'Número que identifica o atributo do domínio.',
-  `valor` varchar(50) DEFAULT NULL COMMENT 'Valor do domínio.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o domínio está ativo (S) ou não (N).',
+  `id_dominio` int(11) NOT NULL,
+  `id_atributo` int(11) NOT NULL,
+  `valor` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_dominio`),
   KEY `if1_dominio` (`id_atributo`),
   CONSTRAINT `fk_dominio_atributo` FOREIGN KEY (`id_atributo`) REFERENCES `atributo` (`id_atributo`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -1071,11 +1071,11 @@ DROP TABLE IF EXISTS `email_grupo_email`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_grupo_email` (
-  `id_email_grupo_email` int(11) NOT NULL COMMENT 'Número que identifica o e-mail.',
-  `id_grupo_email` int(11) DEFAULT NULL COMMENT 'Número que identifica o grupo do e-mail.',
-  `email` varchar(50) DEFAULT NULL COMMENT 'Endereço de E-mail.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do e-mail.',
-  `idx_email_grupo_email` varchar(500) DEFAULT NULL COMMENT 'Indexação de informações do e-mail (para fins de pesquisa).',
+  `id_email_grupo_email` int(11) NOT NULL,
+  `id_grupo_email` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `idx_email_grupo_email` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id_email_grupo_email`),
   KEY `i01_email_grupo_email` (`id_grupo_email`),
   CONSTRAINT `fk_email_grupo_email_grupo_em` FOREIGN KEY (`id_grupo_email`) REFERENCES `grupo_email` (`id_grupo_email`)
@@ -1099,13 +1099,13 @@ DROP TABLE IF EXISTS `email_sistema`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_sistema` (
-  `id_email_sistema` int(11) NOT NULL COMMENT 'Número que identifica o e-mail do sistema.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da função para envio de e-mail do sistema.',
-  `de` varchar(250) DEFAULT NULL COMMENT 'Remetente (sistema e/ou unidade) parametrizado.',
-  `para` varchar(250) DEFAULT NULL COMMENT 'Destinatário (sistema e/ou unidade) parametrizado.',
-  `assunto` varchar(250) DEFAULT NULL COMMENT 'Assunto do e-mail parametrizado.',
-  `conteudo` longtext COMMENT 'Conteúdo do e-mail parametrizado.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o e-mail está ativo (S) ou não (N).',
+  `id_email_sistema` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `de` varchar(250) NOT NULL,
+  `para` varchar(250) NOT NULL,
+  `assunto` varchar(250) NOT NULL,
+  `conteudo` longtext NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_email_sistema`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1128,10 +1128,10 @@ DROP TABLE IF EXISTS `email_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_unidade` (
-  `id_email_unidade` int(11) NOT NULL COMMENT 'Número que identifica o e-mail da unidade.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `email` varchar(50) DEFAULT NULL COMMENT 'E-mail da unidade.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da unidade.',
+  `id_email_unidade` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
   PRIMARY KEY (`id_email_unidade`),
   KEY `fk_email_unidade_unidade` (`id_unidade`),
   CONSTRAINT `fk_email_unidade_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -1156,9 +1156,9 @@ DROP TABLE IF EXISTS `email_utilizado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `email_utilizado` (
-  `id_email_utilizado` int(11) NOT NULL COMMENT 'Número que identifica o e-mail utilizado da unidade.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade do e-mail utilizado.',
-  `email` varchar(300) DEFAULT NULL COMMENT 'E-mail.',
+  `id_email_utilizado` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `email` varchar(300) NOT NULL,
   PRIMARY KEY (`id_email_utilizado`),
   KEY `i01_email_utilizado` (`id_unidade`),
   CONSTRAINT `fk_email_utilizado_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`)
@@ -1182,19 +1182,19 @@ DROP TABLE IF EXISTS `estatisticas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `estatisticas` (
-  `id_estatisticas` bigint(20) DEFAULT NULL COMMENT 'Número que identifica a estatística.',
-  `id_procedimento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o procedimento.',
-  `id_documento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `ano` int(11) DEFAULT NULL COMMENT 'Ano da estatística.',
-  `mes` int(11) DEFAULT NULL COMMENT 'Mês da estatística.',
-  `tempo_aberto` bigint(20) DEFAULT NULL COMMENT 'Tempo aberto da estatística.',
-  `dth_snapshot` datetime DEFAULT NULL COMMENT 'Data de snapshot da estatística.',
-  `dth_abertura` datetime DEFAULT NULL COMMENT 'Data de abertura da estatística.',
-  `dth_conclusao` datetime DEFAULT NULL COMMENT 'Data de conclusão da estatística.',
-  `id_tipo_procedimento` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `quantidade` bigint(20) DEFAULT NULL COMMENT 'Quantidade de estatísticas.',
+  `id_estatisticas` bigint(20) NOT NULL,
+  `id_procedimento` bigint(20) DEFAULT NULL,
+  `id_documento` bigint(20) DEFAULT NULL,
+  `id_unidade` int(11) DEFAULT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `ano` int(11) DEFAULT NULL,
+  `mes` int(11) DEFAULT NULL,
+  `tempo_aberto` bigint(20) DEFAULT NULL,
+  `dth_snapshot` datetime NOT NULL,
+  `dth_abertura` datetime DEFAULT NULL,
+  `dth_conclusao` datetime DEFAULT NULL,
+  `id_tipo_procedimento` int(11) DEFAULT NULL,
+  `quantidade` bigint(20) DEFAULT NULL,
   KEY `i01_estatisticas` (`id_estatisticas`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1216,9 +1216,9 @@ DROP TABLE IF EXISTS `estilo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `estilo` (
-  `id_estilo` int(11) NOT NULL COMMENT 'Número que identifica o estilo.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do estilo.',
-  `formatacao` longtext COMMENT 'Formatação do estilo em CSS.',
+  `id_estilo` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `formatacao` longtext NOT NULL,
   PRIMARY KEY (`id_estilo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1241,8 +1241,8 @@ DROP TABLE IF EXISTS `feed`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `feed` (
-  `id_feed` int(11) NOT NULL COMMENT 'Número que identifica o feed.',
-  `conteudo` longtext COMMENT 'Conteúdo do feed.',
+  `id_feed` int(11) NOT NULL,
+  `conteudo` longtext,
   PRIMARY KEY (`id_feed`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1264,10 +1264,10 @@ DROP TABLE IF EXISTS `feriado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `feriado` (
-  `id_feriado` int(11) NOT NULL COMMENT 'Número que identifica o feriado.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `descricao` varchar(100) DEFAULT NULL COMMENT 'Descrição do feriado.',
-  `dta_feriado` datetime DEFAULT NULL COMMENT 'Data e hora do feriado.',
+  `id_feriado` int(11) NOT NULL,
+  `id_orgao` int(11) DEFAULT NULL,
+  `descricao` varchar(100) NOT NULL,
+  `dta_feriado` datetime NOT NULL,
   PRIMARY KEY (`id_feriado`),
   KEY `fk_feriado_orgao` (`id_orgao`),
   CONSTRAINT `fk_feriado_orgao` FOREIGN KEY (`id_orgao`) REFERENCES `orgao` (`id_orgao`)
@@ -1292,9 +1292,9 @@ DROP TABLE IF EXISTS `grupo_acompanhamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo_acompanhamento` (
-  `id_grupo_acompanhamento` int(11) NOT NULL COMMENT 'Número que identifica o grupo de acompanhamento.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do grupo de acompanhamento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade do grupo de acompanhamento.',
+  `id_grupo_acompanhamento` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_grupo_acompanhamento`),
   KEY `if1_grupo_acompanhamento` (`id_unidade`),
   CONSTRAINT `fk_grupo_acompanhamento_unidad` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -1318,11 +1318,11 @@ DROP TABLE IF EXISTS `grupo_contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo_contato` (
-  `id_grupo_contato` int(11) NOT NULL COMMENT 'Número que identifica o grupo de contato.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade do grupo de contato.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do grupo de contato.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do grupo de contato.',
-  `sin_publico` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o grupo de contato é público (S) ou (N).',
+  `id_grupo_contato` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `sin_publico` char(1) NOT NULL,
   PRIMARY KEY (`id_grupo_contato`),
   KEY `fk_grupo_contato_unidade` (`id_unidade`),
   CONSTRAINT `fk_grupo_contato_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -1346,12 +1346,12 @@ DROP TABLE IF EXISTS `grupo_email`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo_email` (
-  `id_grupo_email` int(11) NOT NULL COMMENT 'Número que identifica o grupo de e-mail.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do grupo de e-mail.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do grupo de e-mail.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Variável que identifica a unidade do grupo de e-mail.',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o tipo de grupo de e-mail.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o grupo de e-mail está ativo (S) ou não (N).',
+  `id_grupo_email` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `sta_tipo` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_grupo_email`),
   KEY `i01_grupo_email` (`id_unidade`),
   CONSTRAINT `fk_grupo_email_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -1375,9 +1375,9 @@ DROP TABLE IF EXISTS `grupo_protocolo_modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo_protocolo_modelo` (
-  `id_grupo_protocolo_modelo` int(11) NOT NULL COMMENT 'Número que identifica o modelo do grupo de protocolo.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do modelo de grupo de protocolo.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade do modelo do grupo de protocolo.',
+  `id_grupo_protocolo_modelo` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_grupo_protocolo_modelo`),
   KEY `fk_grupo_protocolo_modelo_unid` (`id_unidade`),
   CONSTRAINT `fk_grupo_protocolo_modelo_unid` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`)
@@ -1401,10 +1401,10 @@ DROP TABLE IF EXISTS `grupo_serie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo_serie` (
-  `id_grupo_serie` int(11) NOT NULL COMMENT 'Número que identifica o grupo de tipo de documento.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do grupo de tipo de documento.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o grupo de tipo de documento está ativo (S) ou não (N).',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do grupo de tipo de documento.',
+  `id_grupo_serie` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
   PRIMARY KEY (`id_grupo_serie`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1427,12 +1427,12 @@ DROP TABLE IF EXISTS `grupo_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo_unidade` (
-  `id_grupo_unidade` int(11) NOT NULL COMMENT 'Número que identifica o grupo de envio (grupo de unidades para envio de processos).',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do grupo de envio.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do grupo de envio.',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o tipo de grupo de envio.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o grupo de envio está ativo (S) ou não (N),',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade criadora do grupo de envio.',
+  `id_grupo_unidade` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sta_tipo` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_grupo_unidade`),
   KEY `fk_grupo_unidade_unidade` (`id_unidade`),
   CONSTRAINT `fk_grupo_unidade_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`)
@@ -1456,12 +1456,12 @@ DROP TABLE IF EXISTS `hipotese_legal`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hipotese_legal` (
-  `id_hipotese_legal` int(11) NOT NULL COMMENT 'Número que identifica a hipótese legal.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome da hipótese legal.',
-  `base_legal` varchar(50) DEFAULT NULL COMMENT 'Base legal da hipótese.',
-  `descricao` varchar(500) DEFAULT NULL COMMENT 'Descrição da hipótese legal.',
-  `sta_nivel_acesso` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o nível de acesso.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a hipótese legal está ativa (S) ou não (N).',
+  `id_hipotese_legal` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `base_legal` varchar(50) NOT NULL,
+  `descricao` varchar(500) DEFAULT NULL,
+  `sta_nivel_acesso` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_hipotese_legal`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1472,7 +1472,7 @@ CREATE TABLE `hipotese_legal` (
 
 LOCK TABLES `hipotese_legal` WRITE;
 /*!40000 ALTER TABLE `hipotese_legal` DISABLE KEYS */;
-INSERT INTO `hipotese_legal` VALUES (31,'Investigação de Responsabilidade de Servidor','Art. 150 da Lei nº 8.112/1990','Art. 150. A Comissão exercerá suas atividades com independência e imparcialidade, assegurado o sigilo necessário à elucidação do fato ou exigido pelo interesse da administração.\r\nParágrafo único.  As reuniões e as audiências das comissões terão caráter reservado.','1','S'),(33,'Documento Preparatório','Art. 7º, § 3º, da Lei nº 12.527/2011','Art. 7º O acesso à informação de que trata esta Lei compreende, entre outros, os direitos de obter: [...]\r\n§ 3º  O direito de acesso aos documentos ou às informações neles contidas utilizados como fundamento da tomada de decisão e do ato administrativo será assegurado com a edição do ato decisório respectivo.','1','S'),(34,'Informação Pessoal','Art. 31 da Lei nº 12.527/2011','O tratamento das informações pessoais deve ser feito de forma transparente e com respeito à intimidade, vida privada, honra e imagem das pessoas, bem como às liberdades e garantias individuais.\r\n\r\nAs informações pessoais terão seu acesso restrito, independentemente de classificação de sigilo e pelo prazo máximo de 100 anos a contar da sua data de produção, a agentes públicos legalmente autorizados e à pessoa a que elas se referirem.','1','S'),(40,'Controle Interno','Art. 26, § 3º, da Lei nº 10.180/2001','Nenhum documento ou informação poderá ser sonegado aos servidores dos Sistemas de Contabilidade Federal e de Controle Interno, no exercício das atribuições inerentes às atividades de registros contábeis, de auditoria, fiscalização e avaliação de gestão. - Deverá guardar sigilo sobre dados e informações pertinentes a que tiver acesso em decorrência do exercício de suas funções, utilizando-os, exclusivamente, para a elaboração de pareceres e relatórios destinados à autoridade competente.','1','S'),(41,'Livros e Registros Contábeis Empresariais','Art. 1.190 do Código Civil','Art. 1.190. Ressalvados os casos previstos em lei, nenhuma autoridade, juiz ou tribunal, sob qualquer pretexto, poderá fazer ou ordenar diligência para verificar se o empresário ou a sociedade empresária observam, ou não, em seus livros e fichas, as formalidades prescritas em lei.','1','S'),(42,'Sigilo de Empresa em Situação Falimentar','Art. 169 da Lei nº 11.101/2005','Art. 169. Violar, explorar ou divulgar, sem justa causa, sigilo empresarial ou dados confidenciais sobre operações ou serviços, contribuindo para a condução do devedor a estado de inviabilidade econômica ou financeira: Pena - reclusão, de 2 (dois) a 4 (quatro) anos, e multa.','1','S'),(43,'Situação Econômico-Financeira de Sujeito Passivo','Art. 198, caput, da Lei nº 5.172/1966 - CTN','Art. 198. Sem prejuízo do disposto na legislação criminal, é vedada a divulgação, por parte da Fazenda Pública ou de seus servidores, de informação obtida em razão do ofício sobre a situação econômica ou financeira do sujeito passivo ou de terceiros e sobre a natureza e o estado de seus negócios ou atividades.','1','S'),(44,'Protocolo -Pendente Análise de Restrição de Acesso','Art. 6º, III, da Lei nº 12.527/2011','Art. 6º Cabe aos órgãos e entidades do poder público, observadas as normas e procedimentos específicos aplicáveis, assegurar a: [...]\r\nIII - proteção da informação sigilosa e da informação pessoal, observada a sua disponibilidade, autenticidade, integridade e eventual restrição de acesso.','1','S'),(45,'Direito Autoral','Art. 24, III, da Lei nº 9.610/1998','Art. 24. São direitos morais do autor: (...) III - o de conservar a obra inédita;','1','S'),(46,'Informações Privilegiadas de Sociedades Anônimas','Art. 155, § 2º, da Lei nº 6.404/1976','Art. 155. O administrador deve servir com lealdade à companhia e manter reserva sobre os seus negócios, sendo-lhe vedado: § 2º O administrador deve zelar para  que a violação do disposto no § 1º não possa ocorrer através de subordinados ou terceiros de sua confiança.','1','S'),(47,'Interceptação de Comunicações Telefônicas','Art. 8º, caput, da Lei nº 9.296/1996','Art. 8º A interceptação de comunicação telefônica, de qualquer natureza, ocorrerá em autos apartados, apensados aos autos do inquérito policial ou do processo criminal, preservando-se o sigilo das diligências, gravações e transcrições respectivas.','1','S'),(48,'Operações Bancárias','Art. 1º da Lei Complementar nº 105/2001','Art. 1º As instituições financeiras conservarão sigilo em suas operações ativas e passivas e serviços prestados.','1','S'),(49,'Proteção da Propriedade Intelectual de Software','Art. 2º da Lei nº 9.609/1998','Art. 2º O regime de proteção à propriedade intelectual de programa de computador é o conferido às obras literárias pela legislação de direitos autorais e conexos vigentes no País, observado o disposto nesta Lei.','1','S'),(50,'Segredo de Justiça no Processo Civil','Art. 189 do Código de Processo Civil','Art. 189. ... tramitam em segredo de justiça os processos: em que o exija o interesse público ou social; versem sobre casamento, separação de corpos, divórcio, separação, união estável, filiação, alimentos e guarda de crianças e adolescentes; em que constem dados protegidos pelo direito constitucional à intimidade; que versem sobre arbitragem, inclusive sobre cumprimento de carta arbitral, desde que a confidencialidade estipulada na arbitragem seja comprovada perante o juízo.','1','S'),(51,'Segredo de Justiça no Processo Penal','Art. 201, § 6º, do Código de Processo Penal','Art. 201. ... § 6º O juiz tomará as providências necessárias à preservação da intimidade, vida privada, honra e imagem do ofendido, podendo, inclusive, determinar o segredo de justiça em relação aos dados, depoimentos e outras informações constantes dos autos a seu respeito para evitar sua exposição aos meios de comunicação.','1','S'),(52,'Segredo Industrial','Art. 195, XIV, Lei nº 9.279/1996','Art. 195. Comete crime de concorrência desleal quem: (...) XIV - divulga, explora ou utiliza-se, sem autorização, de resultados de testes ou outros dados não divulgados, cuja elaboração envolva esforço considerável e que tenham sido apresentados a entidades governamentais como condição para aprovar a comercialização de produtos.','1','S'),(53,'Sigilo das Comunicações','Art. 3º, V, da Lei nº 9.472/1997','Art. 3º O usuário de serviços de telecomunicações tem direito: (...) V - à inviolabilidade e ao segredo de sua comunicação, salvo nas hipóteses e condições constitucional e legalmente previstas.','1','S'),(54,'Sigilo do Inquérito Policial','Art. 20 do Código de Processo Penal','Art. 20. A autoridade assegurará no inquérito o sigilo necessário à elucidação do fato ou exigido pelo interesse da sociedade.','1','S');
+INSERT INTO `hipotese_legal` VALUES (1,'Controle Interno','Art. 26, § 3º, da Lei nº 10.180/2001','Nenhum documento ou informação poderá ser sonegado aos servidores dos Sistemas de Contabilidade Federal e de Controle Interno, no exercício das atribuições inerentes às atividades de registros contábeis, de auditoria, fiscalização e avaliação de gestão. - Deverá guardar sigilo sobre dados e informações pertinentes a que tiver acesso em decorrência do exercício de suas funções, utilizando-os, exclusivamente, para a elaboração de pareceres e relatórios destinados à autoridade competente.','1','S'),(2,'Direito Autoral','Art. 24, III, da Lei nº 9.610/1998','Art. 24. São direitos morais do autor: (...) III - o de conservar a obra inédita;','1','S'),(3,'Documento Preparatório','Art. 7º, § 3º, da Lei nº 12.527/2011','Art. 7º O acesso à informação de que trata esta Lei compreende, entre outros, os direitos de obter: [...]\r\n§ 3º  O direito de acesso aos documentos ou às informações neles contidas utilizados como fundamento da tomada de decisão e do ato administrativo será assegurado com a edição do ato decisório respectivo.','1','S'),(4,'Informação Pessoal','Art. 31 da Lei nº 12.527/2011','O tratamento das informações pessoais deve ser feito de forma transparente e com respeito à intimidade, vida privada, honra e imagem das pessoas, bem como às liberdades e garantias individuais.\r\n\r\nAs informações pessoais terão seu acesso restrito, independentemente de classificação de sigilo e pelo prazo máximo de 100 anos a contar da sua data de produção, a agentes públicos legalmente autorizados e à pessoa a que elas se referirem.','1','S'),(5,'Informações Privilegiadas de Sociedades Anônimas','Art. 155, § 2º, da Lei nº 6.404/1976','Art. 155. O administrador deve servir com lealdade à companhia e manter reserva sobre os seus negócios, sendo-lhe vedado: § 2º O administrador deve zelar para  que a violação do disposto no § 1º não possa ocorrer através de subordinados ou terceiros de sua confiança.','1','S'),(6,'Interceptação de Comunicações Telefônicas','Art. 8º, caput, da Lei nº 9.296/1996','Art. 8º A interceptação de comunicação telefônica, de qualquer natureza, ocorrerá em autos apartados, apensados aos autos do inquérito policial ou do processo criminal, preservando-se o sigilo das diligências, gravações e transcrições respectivas.','1','S'),(7,'Investigação de Responsabilidade de Servidor','Art. 150 da Lei nº 8.112/1990','Art. 150. A Comissão exercerá suas atividades com independência e imparcialidade, assegurado o sigilo necessário à elucidação do fato ou exigido pelo interesse da administração.\r\nParágrafo único.  As reuniões e as audiências das comissões terão caráter reservado.','1','S'),(8,'Livros e Registros Contábeis Empresariais','Art. 1.190 do Código Civil','Art. 1.190. Ressalvados os casos previstos em lei, nenhuma autoridade, juiz ou tribunal, sob qualquer pretexto, poderá fazer ou ordenar diligência para verificar se o empresário ou a sociedade empresária observam, ou não, em seus livros e fichas, as formalidades prescritas em lei.','1','S'),(9,'Operações Bancárias','Art. 1º da Lei Complementar nº 105/2001','Art. 1º As instituições financeiras conservarão sigilo em suas operações ativas e passivas e serviços prestados.','1','S'),(10,'Proteção da Propriedade Intelectual de Software','Art. 2º da Lei nº 9.609/1998','Art. 2º O regime de proteção à propriedade intelectual de programa de computador é o conferido às obras literárias pela legislação de direitos autorais e conexos vigentes no País, observado o disposto nesta Lei.','1','S'),(11,'Protocolo -Pendente Análise de Restrição de Acesso','Art. 6º, III, da Lei nº 12.527/2011','Art. 6º Cabe aos órgãos e entidades do poder público, observadas as normas e procedimentos específicos aplicáveis, assegurar a: [...]\r\nIII - proteção da informação sigilosa e da informação pessoal, observada a sua disponibilidade, autenticidade, integridade e eventual restrição de acesso.','1','S'),(12,'Segredo de Justiça no Processo Civil','Art. 189 do Código de Processo Civil','Art. 189. ... tramitam em segredo de justiça os processos: em que o exija o interesse público ou social; versem sobre casamento, separação de corpos, divórcio, separação, união estável, filiação, alimentos e guarda de crianças e adolescentes; em que constem dados protegidos pelo direito constitucional à intimidade; que versem sobre arbitragem, inclusive sobre cumprimento de carta arbitral, desde que a confidencialidade estipulada na arbitragem seja comprovada perante o juízo.','1','S'),(13,'Segredo de Justiça no Processo Penal','Art. 201, § 6º, do Código de Processo Penal','Art. 201. ... § 6º O juiz tomará as providências necessárias à preservação da intimidade, vida privada, honra e imagem do ofendido, podendo, inclusive, determinar o segredo de justiça em relação aos dados, depoimentos e outras informações constantes dos autos a seu respeito para evitar sua exposição aos meios de comunicação.','1','S'),(14,'Segredo Industrial','Art. 195, XIV, Lei nº 9.279/1996','Art. 195. Comete crime de concorrência desleal quem: (...) XIV - divulga, explora ou utiliza-se, sem autorização, de resultados de testes ou outros dados não divulgados, cuja elaboração envolva esforço considerável e que tenham sido apresentados a entidades governamentais como condição para aprovar a comercialização de produtos.','1','S'),(15,'Sigilo das Comunicações','Art. 3º, V, da Lei nº 9.472/1997','Art. 3º O usuário de serviços de telecomunicações tem direito: (...) V - à inviolabilidade e ao segredo de sua comunicação, salvo nas hipóteses e condições constitucional e legalmente previstas.','1','S'),(16,'Sigilo de Empresa em Situação Falimentar','Art. 169 da Lei nº 11.101/2005','Art. 169. Violar, explorar ou divulgar, sem justa causa, sigilo empresarial ou dados confidenciais sobre operações ou serviços, contribuindo para a condução do devedor a estado de inviabilidade econômica ou financeira: Pena - reclusão, de 2 (dois) a 4 (quatro) anos, e multa.','1','S'),(17,'Sigilo do Inquérito Policial','Art. 20 do Código de Processo Penal','Art. 20. A autoridade assegurará no inquérito o sigilo necessário à elucidação do fato ou exigido pelo interesse da sociedade.','1','S'),(18,'Situação Econômico-Financeira de Sujeito Passivo','Art. 198, caput, da Lei nº 5.172/1966 - CTN','Art. 198. Sem prejuízo do disposto na legislação criminal, é vedada a divulgação, por parte da Fazenda Pública ou de seus servidores, de informação obtida em razão do ofício sobre a situação econômica ou financeira do sujeito passivo ou de terceiros e sobre a natureza e o estado de seus negócios ou atividades.','1','S');
 /*!40000 ALTER TABLE `hipotese_legal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1484,10 +1484,10 @@ DROP TABLE IF EXISTS `imagem_formato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `imagem_formato` (
-  `id_imagem_formato` int(11) NOT NULL COMMENT 'Número que identifica o formato da imagem.',
-  `formato` varchar(10) DEFAULT NULL COMMENT 'Formato da imagem.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do formato da imagem.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o formato de imagem está ativo (S) ou não (N).',
+  `id_imagem_formato` int(11) NOT NULL,
+  `formato` varchar(10) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_imagem_formato`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1510,19 +1510,19 @@ DROP TABLE IF EXISTS `indexacao_base_conhecimento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `indexacao_base_conhecimento` (
-  `url` varchar(250) NOT NULL COMMENT 'URL da base de conhecimento.',
-  `id_base_conhecimento` int(11) DEFAULT NULL COMMENT 'Número que identifica a base de conhecimento.',
-  `id_documento_edoc` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da base de conhecimento.',
-  `idx_conteudo` longtext COMMENT 'Codificação do conteúdo da base de conhecimento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Codificação da unidade da base de conhecimento.',
-  `sigla_unidade` varchar(30) DEFAULT NULL COMMENT 'Sigla da unidade da base de conhecimento.',
-  `descricao_unidade` varchar(250) DEFAULT NULL COMMENT 'Descrição da unidade da base de conhecimento.',
-  `link_base_conhecimento` varchar(250) DEFAULT NULL COMMENT 'Hiperlink da base de conhecimento.',
-  `id_anexo` int(11) DEFAULT NULL COMMENT 'Número que identifica a base de conhecimento (se é documento externo).',
-  `nome_anexo` varchar(255) DEFAULT NULL COMMENT 'Nome da base de conhecimento (se é documento externo).',
-  `dta_geracao` datetime DEFAULT NULL COMMENT 'Data de geração da base de conhecimento.',
-  `dth_indexacao` datetime DEFAULT NULL COMMENT 'Data de indexação da base de conhecimento.',
+  `url` varchar(250) NOT NULL,
+  `id_base_conhecimento` int(11) NOT NULL,
+  `id_documento_edoc` bigint(20) DEFAULT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `idx_conteudo` longtext,
+  `id_unidade` int(11) NOT NULL,
+  `sigla_unidade` varchar(30) NOT NULL,
+  `descricao_unidade` varchar(250) NOT NULL,
+  `link_base_conhecimento` varchar(250) DEFAULT NULL,
+  `id_anexo` int(11) DEFAULT NULL,
+  `nome_anexo` varchar(255) DEFAULT NULL,
+  `dta_geracao` datetime NOT NULL,
+  `dth_indexacao` datetime NOT NULL,
   PRIMARY KEY (`url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1544,34 +1544,34 @@ DROP TABLE IF EXISTS `indexacao_protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `indexacao_protocolo` (
-  `url` varchar(250) NOT NULL COMMENT 'URL do protocolo.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_unidade_geradora` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade geradora do protocolo.',
-  `sigla_unidade_geradora` varchar(30) DEFAULT NULL COMMENT 'Sigla da unidade geradora do protocolo.',
-  `descricao_unidade_geradora` varchar(250) DEFAULT NULL COMMENT 'Descrição da unidade geradora do protocolo.',
-  `protocolo_formatado_pesquisa` longtext COMMENT 'Código do protocolo formatado para pesquisa.',
-  `id_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `dta_geracao` datetime DEFAULT NULL COMMENT 'Data de geração do protocolo.',
-  `sigla_usuario_gerador` varchar(100) DEFAULT NULL COMMENT 'Sigla do usuário gerador do protocolo.',
-  `nome_usuario_gerador` varchar(100) DEFAULT NULL COMMENT 'Nome do usuário gerador do protocolo.',
-  `sta_protocolo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica o tipo de protocolo: processo, documento interno ou documento externo.',
-  `numero` varchar(50) DEFAULT NULL COMMENT 'Número de indexação do protocolo.',
-  `identificacao_protocolo` varchar(250) DEFAULT NULL COMMENT 'Codificação de identificação do protocolo.',
-  `id_tipo_procedimento` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `nome_tipo_procedimento` varchar(50) DEFAULT NULL COMMENT 'Tipo de processo.',
-  `protocolo_processo_formatado` varchar(50) DEFAULT NULL COMMENT 'Protocolo formatado, para o caso em que o protocolo é de um processo.',
-  `protocolo_documento_formatado` varchar(20) DEFAULT NULL COMMENT 'Protocolo formatado, para o caso em que o protocolo é de um documento.',
-  `link_arvore` varchar(250) DEFAULT NULL COMMENT 'Hiperlink para a árvore na qual o protocolo se encontra.',
-  `sta_acesso_indexacao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o acesso a indexação.',
-  `idx_conteudo` longtext COMMENT 'Codificação do conteúdo do protocolo.',
-  `idx_descricao` varchar(8000) DEFAULT NULL COMMENT 'Codificação da descrição do conteúdo do protocolo.',
-  `idx_unidade_aberto` varchar(3000) DEFAULT NULL COMMENT 'Codificação da unidade com o protocolo em aberto.',
-  `idx_assinante` varchar(3000) DEFAULT NULL COMMENT 'Codificação do assinante do protocolo.',
-  `idx_assunto` varchar(3000) DEFAULT NULL COMMENT 'Codificação do assunto do protocolo.',
-  `idx_participante` varchar(3000) DEFAULT NULL COMMENT 'Codificação do participante do protocolo.',
-  `idx_unidade_acesso` varchar(3000) DEFAULT NULL COMMENT 'Codificação da unidade que possui acesso ao protocolo.',
-  `idx_observacao` longtext COMMENT 'Codificação da observação do protocolo.',
-  `dth_indexacao` datetime DEFAULT NULL COMMENT 'Data e hora da indexação do protocolo.',
+  `url` varchar(250) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_unidade_geradora` int(11) NOT NULL,
+  `sigla_unidade_geradora` varchar(30) NOT NULL,
+  `descricao_unidade_geradora` varchar(250) NOT NULL,
+  `protocolo_formatado_pesquisa` longtext NOT NULL,
+  `id_serie` int(11) DEFAULT NULL,
+  `dta_geracao` datetime NOT NULL,
+  `sigla_usuario_gerador` varchar(100) NOT NULL,
+  `nome_usuario_gerador` varchar(100) NOT NULL,
+  `sta_protocolo` char(1) NOT NULL,
+  `numero` varchar(50) DEFAULT NULL,
+  `identificacao_protocolo` varchar(250) DEFAULT NULL,
+  `id_tipo_procedimento` int(11) NOT NULL,
+  `nome_tipo_procedimento` varchar(50) NOT NULL,
+  `protocolo_processo_formatado` varchar(50) DEFAULT NULL,
+  `protocolo_documento_formatado` varchar(20) DEFAULT NULL,
+  `link_arvore` varchar(250) NOT NULL,
+  `sta_acesso_indexacao` char(1) NOT NULL,
+  `idx_conteudo` longtext,
+  `idx_descricao` varchar(8000) DEFAULT NULL,
+  `idx_unidade_aberto` varchar(3000) DEFAULT NULL,
+  `idx_assinante` varchar(3000) DEFAULT NULL,
+  `idx_assunto` varchar(3000) DEFAULT NULL,
+  `idx_participante` varchar(3000) DEFAULT NULL,
+  `idx_unidade_acesso` varchar(3000) DEFAULT NULL,
+  `idx_observacao` longtext,
+  `dth_indexacao` datetime NOT NULL,
   PRIMARY KEY (`url`),
   KEY `i01_indexacao_protocolo` (`id_serie`,`sigla_usuario_gerador`,`numero`,`id_tipo_procedimento`,`dta_geracao`,`sta_protocolo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1594,37 +1594,37 @@ DROP TABLE IF EXISTS `indexacao_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `indexacao_publicacao` (
-  `url` varchar(250) NOT NULL COMMENT 'URL da publicação.',
-  `id_publicacao` int(11) DEFAULT NULL COMMENT 'Número que identifica a publicação.',
-  `id_publicacao_legado` int(11) DEFAULT NULL COMMENT 'Número que identifica o legado da publicação.',
-  `id_documento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento da publicação.',
-  `id_protocolo_agrupador` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo agrupador da publicação.',
-  `id_orgao_responsavel` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão responsável da publicação.',
-  `id_unidade_responsavel` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade responsável da publicação.',
-  `id_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de documento da publicação.',
-  `numero` varchar(50) DEFAULT NULL COMMENT 'Número de indexação da publicação.',
-  `protocolo_formatado_pesquisa` varchar(50) DEFAULT NULL COMMENT 'Número do protocolo formatado para pesquisa da publicação.',
-  `protocolo_documento_formatado` varchar(50) DEFAULT NULL COMMENT 'Número do protocolo do documento formatado da publicação.',
-  `dta_documento` datetime DEFAULT NULL COMMENT 'Data do documento de publicação.',
-  `dta_publicacao` datetime DEFAULT NULL COMMENT 'Data de publicação.',
-  `resumo` longtext COMMENT 'Resumo da publicação.',
-  `numero_publicacao` int(11) DEFAULT NULL COMMENT 'Número da publicação.',
-  `nome_veiculo_publicacao` varchar(100) DEFAULT NULL COMMENT 'Nome do veículo de publicação.',
-  `id_veiculo_io` int(11) DEFAULT NULL COMMENT 'Número que identifica o veículo de publicação.',
-  `dta_publicacao_io` datetime DEFAULT NULL COMMENT 'Data de publicação.',
-  `id_secao_io` int(11) DEFAULT NULL COMMENT 'Seção da publicação.',
-  `pagina_io` varchar(50) DEFAULT NULL COMMENT 'Página da publicação.',
-  `idx_resumo` longtext COMMENT 'Resumo de indexação da publicação.',
-  `idx_conteudo` longtext COMMENT 'Conteúdo da publicação.',
-  `sigla_unidade_responsavel` varchar(30) DEFAULT NULL COMMENT 'Sigla da unidade responsável pela publicação.',
-  `descricao_unidade_responsavel` varchar(250) DEFAULT NULL COMMENT 'Descrição da unidade responsável pela publicação.',
-  `nome_serie` varchar(50) DEFAULT NULL COMMENT 'Nome da série de publicação.',
-  `sigla_orgao_responsavel` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão responsável pela publicação.',
-  `descricao_orgao_responsavel` varchar(100) DEFAULT NULL COMMENT 'Descrição do órgão responsável pela publicação.',
-  `id_veiculo_publicacao` int(11) DEFAULT NULL COMMENT 'Número que identifica o veículo de publicação.',
-  `sigla_veiculo_io` varchar(15) DEFAULT NULL COMMENT 'Sigla do veículo de publicação.',
-  `nome_secao_io` varchar(50) DEFAULT NULL COMMENT 'Nome da seção de publicação.',
-  `descricao_veiculo_io` varchar(250) DEFAULT NULL COMMENT 'Descrição do veículo de publicação.',
+  `url` varchar(250) NOT NULL,
+  `id_publicacao` int(11) DEFAULT NULL,
+  `id_publicacao_legado` int(11) DEFAULT NULL,
+  `id_documento` bigint(20) NOT NULL,
+  `id_protocolo_agrupador` bigint(20) DEFAULT NULL,
+  `id_orgao_responsavel` int(11) NOT NULL,
+  `id_unidade_responsavel` int(11) NOT NULL,
+  `id_serie` int(11) NOT NULL,
+  `numero` varchar(50) DEFAULT NULL,
+  `protocolo_formatado_pesquisa` varchar(50) NOT NULL,
+  `protocolo_documento_formatado` varchar(50) NOT NULL,
+  `dta_documento` datetime NOT NULL,
+  `dta_publicacao` datetime NOT NULL,
+  `resumo` longtext,
+  `numero_publicacao` int(11) DEFAULT NULL,
+  `nome_veiculo_publicacao` varchar(100) NOT NULL,
+  `id_veiculo_io` int(11) DEFAULT NULL,
+  `dta_publicacao_io` datetime DEFAULT NULL,
+  `id_secao_io` int(11) DEFAULT NULL,
+  `pagina_io` varchar(50) DEFAULT NULL,
+  `idx_resumo` longtext,
+  `idx_conteudo` longtext NOT NULL,
+  `sigla_unidade_responsavel` varchar(30) NOT NULL,
+  `descricao_unidade_responsavel` varchar(250) NOT NULL,
+  `nome_serie` varchar(50) NOT NULL,
+  `sigla_orgao_responsavel` varchar(30) NOT NULL,
+  `descricao_orgao_responsavel` varchar(100) NOT NULL,
+  `id_veiculo_publicacao` int(11) NOT NULL,
+  `sigla_veiculo_io` varchar(15) DEFAULT NULL,
+  `nome_secao_io` varchar(50) DEFAULT NULL,
+  `descricao_veiculo_io` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1646,17 +1646,17 @@ DROP TABLE IF EXISTS `infra_agendamento_tarefa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_agendamento_tarefa` (
-  `id_infra_agendamento_tarefa` int(11) NOT NULL COMMENT 'Lista o número de identificação da rotina de agendamento. 1) Remove registros temporários de estatísticas; 2) Remove arquivos externos excluídos; 3) Otimização de índices do Solr; 4) Remove registros temporários de auditoria; 5) Confirma publicações internas; 6) Teste de agendamento SEI.',
-  `descricao` varchar(500) DEFAULT NULL COMMENT 'Descrição de cada opção de agendamento (menu Infra).',
-  `comando` varchar(255) DEFAULT NULL COMMENT 'Nome de cada comando no SEI.',
-  `sta_periodicidade_execucao` char(1) DEFAULT NULL COMMENT 'Periodicidade escolhida pelo(s) administrador(es) do sistema. D: Diário; S:Semanal; M: Mensal; A:Anual',
-  `periodicidade_complemento` varchar(100) DEFAULT NULL COMMENT 'Horário no qual cada opção começa, por exemplo, às 0h. Escrever apenas números.',
-  `dth_ultima_execucao` datetime DEFAULT NULL COMMENT 'Data e horário da última execução de cada agendamento.',
-  `dth_ultima_conclusao` datetime DEFAULT NULL COMMENT 'Data e horário da conclusão da última execução de cada agendamento.',
-  `sin_sucesso` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se houve sucesso ou não em cada operação. S: Sim N: Não.',
-  `parametro` varchar(250) DEFAULT NULL COMMENT 'Especificação complementar.',
-  `email_erro` varchar(250) DEFAULT NULL COMMENT 'E-mail de um administrador do sistema, que recebe uma mensagem caso ocorra erro em alguma das rotinas.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a rotina está ativada ou não. S: Sim N:Não.',
+  `id_infra_agendamento_tarefa` int(11) NOT NULL,
+  `descricao` varchar(500) NOT NULL,
+  `comando` varchar(255) NOT NULL,
+  `sta_periodicidade_execucao` char(1) NOT NULL,
+  `periodicidade_complemento` varchar(100) NOT NULL,
+  `dth_ultima_execucao` datetime DEFAULT NULL,
+  `dth_ultima_conclusao` datetime DEFAULT NULL,
+  `sin_sucesso` char(1) NOT NULL,
+  `parametro` varchar(250) DEFAULT NULL,
+  `email_erro` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_infra_agendamento_tarefa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1679,29 +1679,29 @@ DROP TABLE IF EXISTS `infra_auditoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_auditoria` (
-  `id_infra_auditoria` bigint(20) NOT NULL COMMENT 'Número que identifica informação de auditoria.',
-  `recurso` varchar(50) DEFAULT NULL COMMENT 'Recurso do SEI utilizado na ação registrada pela auditoria.',
-  `dth_acesso` datetime DEFAULT NULL COMMENT 'Data de acesso da informação de auditoria.',
-  `ip` varchar(39) DEFAULT NULL COMMENT 'IP.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Usuário que consta na informação de auditoria.',
-  `sigla_usuario` varchar(100) DEFAULT NULL COMMENT 'Sigla do usuário que consta na informação de auditoria.',
-  `nome_usuario` varchar(100) DEFAULT NULL COMMENT 'Nome do usuário que consta na informação de auditoria.',
-  `id_orgao_usuario` int(11) DEFAULT NULL COMMENT 'Órgão do usuário que consta na informação de auditoria.',
-  `sigla_orgao_usuario` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão do usuário que consta na informação de auditoria.',
-  `id_usuario_emulador` int(11) DEFAULT NULL COMMENT 'Usuário emulador que consta na informação de auditoria.',
-  `sigla_usuario_emulador` varchar(100) DEFAULT NULL COMMENT 'Sigla do usuário emulador que consta na informação de auditoria.',
-  `nome_usuario_emulador` varchar(100) DEFAULT NULL COMMENT 'Nome do usuário emulador que consta na informação de auditoria.',
-  `id_orgao_usuario_emulador` int(11) DEFAULT NULL COMMENT 'Órgão do usuário emulador que consta na informação de auditoria.',
-  `sigla_orgao_usuario_emulador` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão do usuário emulador que consta na informação de auditoria.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Unidade que consta na informação de auditoria.',
-  `sigla_unidade` varchar(30) DEFAULT NULL COMMENT 'Sigla da unidade que consta na informação de auditoria.',
-  `descricao_unidade` varchar(250) DEFAULT NULL COMMENT 'Descrição da unidade que consta na informação de auditoria.',
-  `id_orgao_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão da unidade que consta na informação de auditoria.',
-  `sigla_orgao_unidade` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão da unidade que consta na informação de auditoria.',
-  `servidor` varchar(250) DEFAULT NULL COMMENT 'Servidor de aplicação que consta na informação de auditoria.',
-  `user_agent` longtext COMMENT 'Informações do navegador (agent) utilizado na ação regsitrada pela auditoria.',
-  `requisicao` longtext COMMENT 'Requisição que consta na informação de auditoria.',
-  `operacao` longtext COMMENT 'Operação que consta na informação de auditoria.',
+  `id_infra_auditoria` bigint(20) NOT NULL,
+  `recurso` varchar(50) NOT NULL,
+  `dth_acesso` datetime NOT NULL,
+  `ip` varchar(39) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `sigla_usuario` varchar(100) DEFAULT NULL,
+  `nome_usuario` varchar(100) DEFAULT NULL,
+  `id_orgao_usuario` int(11) DEFAULT NULL,
+  `sigla_orgao_usuario` varchar(30) DEFAULT NULL,
+  `id_usuario_emulador` int(11) DEFAULT NULL,
+  `sigla_usuario_emulador` varchar(100) DEFAULT NULL,
+  `nome_usuario_emulador` varchar(100) DEFAULT NULL,
+  `id_orgao_usuario_emulador` int(11) DEFAULT NULL,
+  `sigla_orgao_usuario_emulador` varchar(30) DEFAULT NULL,
+  `id_unidade` int(11) DEFAULT NULL,
+  `sigla_unidade` varchar(30) DEFAULT NULL,
+  `descricao_unidade` varchar(250) DEFAULT NULL,
+  `id_orgao_unidade` int(11) DEFAULT NULL,
+  `sigla_orgao_unidade` varchar(30) DEFAULT NULL,
+  `servidor` varchar(250) DEFAULT NULL,
+  `user_agent` longtext,
+  `requisicao` longtext,
+  `operacao` longtext,
   PRIMARY KEY (`id_infra_auditoria`),
   KEY `i01_infra_auditoria` (`recurso`),
   KEY `i02_infra_auditoria` (`dth_acesso`),
@@ -1728,9 +1728,9 @@ DROP TABLE IF EXISTS `infra_dado_usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_dado_usuario` (
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário.',
-  `nome` varchar(50) NOT NULL COMMENT 'Nome de função definida ao usuário.',
-  `valor` varchar(4000) DEFAULT NULL COMMENT 'Valor retornado a função definida ao usuário.',
+  `id_usuario` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `valor` varchar(4000) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`,`nome`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1752,10 +1752,10 @@ DROP TABLE IF EXISTS `infra_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_log` (
-  `id_infra_log` bigint(20) NOT NULL COMMENT 'Número que identifica o log.',
-  `dth_log` datetime DEFAULT NULL COMMENT 'Data do log.',
-  `texto_log` longtext COMMENT 'Texto do log.',
-  `ip` varchar(39) DEFAULT NULL COMMENT 'IP.',
+  `id_infra_log` bigint(20) NOT NULL,
+  `dth_log` datetime DEFAULT NULL,
+  `texto_log` longtext NOT NULL,
+  `ip` varchar(39) DEFAULT NULL,
   PRIMARY KEY (`id_infra_log`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1777,12 +1777,12 @@ DROP TABLE IF EXISTS `infra_navegador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_navegador` (
-  `id_infra_navegador` bigint(20) NOT NULL COMMENT 'Número que identifica o navegador utilizado.',
-  `identificacao` varchar(50) DEFAULT NULL COMMENT 'Identificação do navegador.',
-  `versao` varchar(20) DEFAULT NULL COMMENT 'Versão do navegador.',
-  `user_agent` varchar(4000) DEFAULT NULL COMMENT 'informações de User agent.',
-  `ip` varchar(39) DEFAULT NULL COMMENT 'IP no qual o navegador foi utilizado.',
-  `dth_acesso` datetime DEFAULT NULL COMMENT 'Data de acesso por meio do navegador.',
+  `id_infra_navegador` bigint(20) NOT NULL,
+  `identificacao` varchar(50) NOT NULL,
+  `versao` varchar(20) DEFAULT NULL,
+  `user_agent` varchar(4000) NOT NULL,
+  `ip` varchar(39) DEFAULT NULL,
+  `dth_acesso` datetime NOT NULL,
   PRIMARY KEY (`id_infra_navegador`),
   KEY `i01_infra_navegador` (`dth_acesso`,`identificacao`,`versao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1805,8 +1805,8 @@ DROP TABLE IF EXISTS `infra_parametro`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_parametro` (
-  `nome` varchar(100) NOT NULL COMMENT 'Nome do parâmetro.',
-  `valor` longtext COMMENT 'Valor do parâmetro.',
+  `nome` varchar(100) NOT NULL,
+  `valor` longtext,
   PRIMARY KEY (`nome`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1829,9 +1829,9 @@ DROP TABLE IF EXISTS `infra_regra_auditoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_regra_auditoria` (
-  `id_infra_regra_auditoria` int(11) NOT NULL COMMENT 'Número que identifica a regra de auditoria.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da regra de auditoria.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a regra de auditoria está ativa (S) ou não (N).',
+  `id_infra_regra_auditoria` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_infra_regra_auditoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1854,8 +1854,8 @@ DROP TABLE IF EXISTS `infra_regra_auditoria_recurso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_regra_auditoria_recurso` (
-  `id_infra_regra_auditoria` int(11) NOT NULL COMMENT 'Número que identifica o recurso da regra de auditoria.',
-  `recurso` varchar(50) NOT NULL COMMENT 'Recurso da regra de auditoria.',
+  `id_infra_regra_auditoria` int(11) NOT NULL,
+  `recurso` varchar(50) NOT NULL,
   PRIMARY KEY (`id_infra_regra_auditoria`,`recurso`),
   CONSTRAINT `fk_inf_reg_aud_rec_inf_reg_aud` FOREIGN KEY (`id_infra_regra_auditoria`) REFERENCES `infra_regra_auditoria` (`id_infra_regra_auditoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1879,10 +1879,10 @@ DROP TABLE IF EXISTS `infra_sequencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_sequencia` (
-  `nome_tabela` varchar(30) NOT NULL COMMENT 'Nome da tabela.',
-  `qtd_incremento` bigint(20) DEFAULT NULL COMMENT 'Quantidade incremental.',
-  `num_atual` bigint(20) DEFAULT NULL COMMENT 'Número atual da sequência.',
-  `num_maximo` bigint(20) DEFAULT NULL COMMENT 'Número máximo da sequência.',
+  `nome_tabela` varchar(30) NOT NULL,
+  `qtd_incremento` bigint(20) NOT NULL,
+  `num_atual` bigint(20) NOT NULL,
+  `num_maximo` bigint(20) NOT NULL,
   PRIMARY KEY (`nome_tabela`),
   KEY `i01_infra_sequencia` (`nome_tabela`,`num_atual`,`qtd_incremento`,`num_maximo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1894,7 +1894,7 @@ CREATE TABLE `infra_sequencia` (
 
 LOCK TABLES `infra_sequencia` WRITE;
 /*!40000 ALTER TABLE `infra_sequencia` DISABLE KEYS */;
-INSERT INTO `infra_sequencia` VALUES ('infra_agendamento_tarefa',1,6,999999999),('usuario_externo',1,1000000,1999999),('usuario_sistema',1,4,999999);
+INSERT INTO `infra_sequencia` VALUES ('infra_agendamento_tarefa',1,6,999999999),('usuario_externo',1,1000000,1999999),('usuario_sistema',1,7,999999);
 /*!40000 ALTER TABLE `infra_sequencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1906,14 +1906,14 @@ DROP TABLE IF EXISTS `localizador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `localizador` (
-  `id_localizador` int(11) NOT NULL COMMENT 'Número que identifica o localizador.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_tipo_suporte` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de suporte.',
-  `complemento` varchar(50) DEFAULT NULL COMMENT 'Complemento do localizador.',
-  `sta_estado` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica o estado do localizador.',
-  `seq_localizador` int(11) DEFAULT NULL COMMENT 'Número que identifica a sequência ? Do localizador.',
-  `id_tipo_localizador` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de localizador.',
-  `id_lugar_localizador` int(11) DEFAULT NULL COMMENT 'Número que identifica o lugar do localizador.',
+  `id_localizador` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_tipo_suporte` int(11) NOT NULL,
+  `complemento` varchar(50) DEFAULT NULL,
+  `sta_estado` char(1) NOT NULL,
+  `seq_localizador` int(11) NOT NULL,
+  `id_tipo_localizador` int(11) NOT NULL,
+  `id_lugar_localizador` int(11) NOT NULL,
   PRIMARY KEY (`id_localizador`),
   UNIQUE KEY `ak1_localizador` (`id_unidade`,`seq_localizador`,`id_tipo_localizador`),
   KEY `if3_localizador` (`id_tipo_localizador`),
@@ -1943,10 +1943,10 @@ DROP TABLE IF EXISTS `lugar_localizador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `lugar_localizador` (
-  `id_lugar_localizador` int(11) NOT NULL COMMENT 'Número que identifica o localizador.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do localizador.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o localizador está ativo (S) ou não (N).',
+  `id_lugar_localizador` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_lugar_localizador`),
   UNIQUE KEY `ak1_lugar_localizador` (`nome`,`id_unidade`),
   KEY `fk_lugar_localizador_unidade` (`id_unidade`),
@@ -1971,9 +1971,9 @@ DROP TABLE IF EXISTS `modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `modelo` (
-  `id_modelo` int(11) NOT NULL COMMENT 'Número que identifica o modelo de documento.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do modelo.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o modelo está ativo (S) ou não (N).',
+  `id_modelo` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_modelo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1996,9 +1996,9 @@ DROP TABLE IF EXISTS `nivel_acesso_permitido`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `nivel_acesso_permitido` (
-  `id_nivel_acesso_permitido` int(11) NOT NULL COMMENT 'Número que identifica o nível de acesso permitido.',
-  `id_tipo_procedimento` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `sta_nivel_acesso` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o nível de acesso: público (0), restrito (1), sigiloso (2).',
+  `id_nivel_acesso_permitido` int(11) NOT NULL,
+  `id_tipo_procedimento` int(11) NOT NULL,
+  `sta_nivel_acesso` char(1) NOT NULL,
   PRIMARY KEY (`id_nivel_acesso_permitido`),
   KEY `if1_nivel_acesso_permitido` (`id_tipo_procedimento`),
   CONSTRAINT `fk_nivel_acesso_perm_tipo_proc` FOREIGN KEY (`id_tipo_procedimento`) REFERENCES `tipo_procedimento` (`id_tipo_procedimento`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -2023,8 +2023,8 @@ DROP TABLE IF EXISTS `nivel_funcao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `nivel_funcao` (
-  `id_nivel_funcao` int(11) NOT NULL COMMENT 'Número que identifica o nível de função.',
-  `nome` varchar(10) DEFAULT NULL COMMENT 'Nome da função.',
+  `id_nivel_funcao` int(11) NOT NULL,
+  `nome` varchar(10) NOT NULL,
   PRIMARY KEY (`id_nivel_funcao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2046,12 +2046,12 @@ DROP TABLE IF EXISTS `notificacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `notificacao` (
-  `id_notificacao` int(11) NOT NULL COMMENT 'Número que identifica a notificação.',
-  `id_procedimento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o procedimento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `dth_geracao` datetime DEFAULT NULL COMMENT 'Data e hora de geração da notificação.',
-  `id_atividade_confirmacao` int(11) DEFAULT NULL COMMENT 'Número que identifica a notificação de confirmação da atividade.',
+  `id_notificacao` int(11) NOT NULL,
+  `id_procedimento` bigint(20) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `dth_geracao` datetime NOT NULL,
+  `id_atividade_confirmacao` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_notificacao`),
   KEY `fk_notificacao_unidade` (`id_unidade`),
   KEY `fk_notificacao_usuario` (`id_usuario`),
@@ -2081,11 +2081,11 @@ DROP TABLE IF EXISTS `novidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `novidade` (
-  `id_novidade` int(11) NOT NULL COMMENT 'Número que identifica a novidade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `titulo` varchar(50) DEFAULT NULL COMMENT 'Título da novidade.',
-  `descricao` longtext COMMENT 'Descrição da novidade (em html).',
-  `dth_liberacao` datetime DEFAULT NULL COMMENT 'Data e hora de liberação da novidade.',
+  `id_novidade` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `titulo` varchar(50) NOT NULL,
+  `descricao` longtext NOT NULL,
+  `dth_liberacao` datetime DEFAULT NULL,
   PRIMARY KEY (`id_novidade`),
   KEY `fk_novidade_usuario` (`id_usuario`),
   CONSTRAINT `fk_novidade_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -2109,12 +2109,12 @@ DROP TABLE IF EXISTS `numeracao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `numeracao` (
-  `id_numeracao` int(11) NOT NULL COMMENT 'Número que identifica a numeração.',
-  `sequencial` int(11) DEFAULT NULL COMMENT 'Contador que marca o número de documentos gerados/recebidos por ano, separado por tipo de documento.',
-  `ano` int(11) DEFAULT NULL COMMENT 'Ano de numeração.',
-  `id_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
+  `id_numeracao` int(11) NOT NULL,
+  `sequencial` int(11) NOT NULL,
+  `ano` int(11) DEFAULT NULL,
+  `id_serie` int(11) NOT NULL,
+  `id_orgao` int(11) DEFAULT NULL,
+  `id_unidade` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_numeracao`),
   KEY `fk_numeracao_serie` (`id_serie`),
   KEY `fk_numeracao_orgao` (`id_orgao`),
@@ -2142,10 +2142,10 @@ DROP TABLE IF EXISTS `observacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `observacao` (
-  `id_observacao` int(11) NOT NULL COMMENT 'Número que identifica a observação.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `descricao` longtext COMMENT 'Descrição da observação.',
+  `id_observacao` int(11) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `descricao` longtext NOT NULL,
   PRIMARY KEY (`id_observacao`),
   UNIQUE KEY `ak1_observacao` (`id_unidade`,`id_protocolo`),
   KEY `if1_observacao` (`id_protocolo`),
@@ -2171,12 +2171,12 @@ DROP TABLE IF EXISTS `operacao_servico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `operacao_servico` (
-  `id_operacao_servico` int(11) NOT NULL COMMENT 'Número que identifica a operação de serviço.',
-  `sta_operacao_servico` int(11) DEFAULT NULL COMMENT 'Variável que indica o tipo de operação de serviço.',
-  `id_tipo_procedimento` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `id_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_servico` int(11) DEFAULT NULL COMMENT 'Número que identifica o serviço.',
+  `id_operacao_servico` int(11) NOT NULL,
+  `sta_operacao_servico` int(11) NOT NULL,
+  `id_tipo_procedimento` int(11) DEFAULT NULL,
+  `id_serie` int(11) DEFAULT NULL,
+  `id_unidade` int(11) DEFAULT NULL,
+  `id_servico` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_operacao_servico`),
   KEY `i01_operacao_servico` (`id_tipo_procedimento`),
   KEY `i02_operacao_servico` (`id_serie`),
@@ -2206,11 +2206,11 @@ DROP TABLE IF EXISTS `ordenador_despesa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ordenador_despesa` (
-  `id_ordenador_despesa` int(11) NOT NULL COMMENT 'Número que identifica o ordenador de despesa.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `sin_padrao` char(1) DEFAULT NULL COMMENT 'Variável que indica se o ordenador de despesa é padrão (S) ou não (N).',
+  `id_ordenador_despesa` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `sin_padrao` char(1) NOT NULL,
   PRIMARY KEY (`id_ordenador_despesa`),
   KEY `i01_ordenador_despesa` (`id_usuario`),
   KEY `i02_ordenador_despesa` (`id_orgao`),
@@ -2238,27 +2238,27 @@ DROP TABLE IF EXISTS `orgao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orgao` (
-  `id_orgao` int(11) NOT NULL COMMENT 'Número que identifica o órgão.',
-  `sigla` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão.',
-  `descricao` varchar(100) DEFAULT NULL COMMENT 'Nome em extenso do órgão.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o órgão está ativado ou não. S:Sim, N:Não.',
-  `telefone` varchar(50) DEFAULT NULL COMMENT 'Telefone do órgão.',
-  `fax` varchar(50) DEFAULT NULL COMMENT 'Fax do órgão.',
-  `email` varchar(50) DEFAULT NULL COMMENT 'E-mail do órgão.',
-  `sitio_internet` varchar(50) DEFAULT NULL COMMENT 'Endereço web do órgão.',
-  `bairro` varchar(50) DEFAULT NULL COMMENT 'Bairro em que se localiza o órgão.',
-  `cep` varchar(15) DEFAULT NULL COMMENT 'CEP do órgão.',
-  `endereco` varchar(130) DEFAULT NULL COMMENT 'Endereço do órgão.',
-  `complemento` varchar(130) DEFAULT NULL COMMENT 'Complemento do endereço do órgão.',
-  `id_cidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a cidade do órgão.',
-  `timbre` longtext COMMENT 'Código que identifica o timbre do órgão.',
-  `sin_envio_processo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o órgão pode enviar processos. S: Sim N: Não',
-  `sin_pagamento_viagens` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o órgão pode realizar o pagamento de viagens. S: Sim N: Não',
-  `numeracao` varchar(250) DEFAULT NULL COMMENT 'Parametrização para inserir o código do órgão no protocolo formatado.',
-  `servidor_corretor_ortografico` varchar(250) DEFAULT NULL COMMENT 'Valor do link quando o corretor ortográfico é licenciado.',
-  `sta_corretor_ortografico` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se não existe corretor ortográfico (N), se o corretor ortográfico é de avaliação gratuita (G) ou se ele é licenciado (L).',
-  `sin_publicacao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o órgão permite publicação (S) ou não (N).',
-  `codigo_sei` varchar(10) DEFAULT NULL COMMENT 'Código SEI que identifica o órgão.',
+  `id_orgao` int(11) NOT NULL,
+  `sigla` varchar(30) NOT NULL,
+  `descricao` varchar(100) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `telefone` varchar(50) DEFAULT NULL,
+  `fax` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `sitio_internet` varchar(50) DEFAULT NULL,
+  `bairro` varchar(50) DEFAULT NULL,
+  `cep` varchar(15) DEFAULT NULL,
+  `endereco` varchar(130) DEFAULT NULL,
+  `complemento` varchar(130) DEFAULT NULL,
+  `id_cidade` int(11) DEFAULT NULL,
+  `timbre` longtext,
+  `sin_envio_processo` char(1) NOT NULL,
+  `sin_pagamento_viagens` char(1) NOT NULL,
+  `numeracao` varchar(250) DEFAULT NULL,
+  `servidor_corretor_ortografico` varchar(250) DEFAULT NULL,
+  `sta_corretor_ortografico` char(1) NOT NULL,
+  `sin_publicacao` char(1) NOT NULL,
+  `codigo_sei` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id_orgao`),
   KEY `xif1orgao` (`id_cidade`),
   CONSTRAINT `fk_orgao_cidade` FOREIGN KEY (`id_cidade`) REFERENCES `cidade` (`id_cidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -2283,8 +2283,8 @@ DROP TABLE IF EXISTS `pais`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `pais` (
-  `id_pais` int(11) NOT NULL COMMENT 'Número que identifica o país.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do país.',
+  `id_pais` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
   PRIMARY KEY (`id_pais`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2307,12 +2307,12 @@ DROP TABLE IF EXISTS `participante`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `participante` (
-  `id_participante` int(11) NOT NULL COMMENT 'Número que identifica o participante.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_contato` int(11) DEFAULT NULL COMMENT 'Número que identifica o contato.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `sta_participacao` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica a participação.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Ordem de exibição do participante nas informações do protocolo.',
+  `id_participante` int(11) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_contato` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `sta_participacao` char(1) NOT NULL,
+  `sequencia` int(11) NOT NULL,
   PRIMARY KEY (`id_participante`),
   UNIQUE KEY `ak1_participante` (`id_contato`,`id_protocolo`,`sta_participacao`),
   KEY `i01_participante` (`id_protocolo`,`sta_participacao`),
@@ -2340,11 +2340,11 @@ DROP TABLE IF EXISTS `procedimento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `procedimento` (
-  `id_procedimento` bigint(20) NOT NULL COMMENT 'Número que identifica o procedimento (processo). Este campo é relacionado ao id_protocolo: procedimento.id_procedimento = protocolo.id_protocolo',
-  `id_tipo_procedimento` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de processo. O nome do Tipo de Processo encontra-se na tabela tipo_procedimento (tipo de processo).',
-  `versao_lock` int(11) DEFAULT NULL COMMENT 'Contador que acresce uma (1) unidade a cada alteração realizada no nível de acesso do protocolo.',
-  `sta_ouvidoria` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o processo é de ouvidoria (S) ou não (N).',
-  `sin_ciencia` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se foi dada ciência no protocolo (S) ou não (N).',
+  `id_procedimento` bigint(20) NOT NULL,
+  `id_tipo_procedimento` int(11) DEFAULT NULL,
+  `versao_lock` int(11) NOT NULL,
+  `sta_ouvidoria` char(1) NOT NULL,
+  `sin_ciencia` char(1) NOT NULL,
   PRIMARY KEY (`id_procedimento`),
   KEY `fk_procedimento_tipo_procedime` (`id_tipo_procedimento`),
   KEY `i01_procedimento` (`id_tipo_procedimento`),
@@ -2370,30 +2370,30 @@ DROP TABLE IF EXISTS `protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `protocolo` (
-  `id_protocolo` bigint(20) NOT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_unidade_geradora` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade geradora do protocolo.',
-  `id_usuario_gerador` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário gerador do protocolo.',
-  `protocolo_formatado` varchar(50) DEFAULT NULL COMMENT 'Código do protocolo formatado.',
-  `sta_protocolo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o protocolo é um processo ("P"), um documento interno ("G") ou um documento externo ("R").',
-  `id_protocolo_agrupador` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o protocolo.',
-  `dta_geracao` datetime DEFAULT NULL COMMENT 'Data e hora de geração do protocolo.',
-  `sta_estado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o estado do processo: normal (0), sobrestado (1), cancelado (2) ou anexado (3).',
-  `id_localizador` int(11) DEFAULT NULL COMMENT 'Número que identifica o localizador.',
-  `sta_arquivamento` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o protocolo está arquivado (R) ou não (N).',
-  `descricao` longtext COMMENT 'Descrição do protocolo.',
-  `sta_nivel_acesso_local` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o nível de acesso local ao protocolo: público (0), restrito (1) ou sigiloso (2).',
-  `sta_nivel_acesso_global` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o nível de acesso global ao protocolo: público (0), restrito (1) ou sigiloso (2).',
-  `protocolo_formatado_pesquisa` varchar(50) DEFAULT NULL COMMENT 'Código do protocolo formatado para pesquisa.',
-  `id_unidade_arquivamento` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade de arquivamento do protocolo.',
-  `id_usuario_arquivamento` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário de arquivamento do protocolo.',
-  `dth_arquivamento` datetime DEFAULT NULL COMMENT 'Data e hora do arquivamento do protocolo.',
-  `codigo_barras` longtext COMMENT 'Código de barras do protocolo.',
-  `id_hipotese_legal` int(11) DEFAULT NULL COMMENT 'Número que identifica a hipótese legal.',
-  `sta_grau_sigilo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o grau de sigilo do protocolo.',
-  `sta_nivel_acesso_original` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o nível de acesso original ao protocolo: público (0), restrito (1) ou sigiloso (2).',
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_unidade_geradora` int(11) NOT NULL,
+  `id_usuario_gerador` int(11) NOT NULL,
+  `protocolo_formatado` varchar(50) NOT NULL,
+  `sta_protocolo` char(1) NOT NULL,
+  `id_protocolo_agrupador` bigint(20) NOT NULL,
+  `dta_geracao` datetime NOT NULL,
+  `sta_estado` char(1) NOT NULL,
+  `id_localizador` int(11) DEFAULT NULL,
+  `sta_arquivamento` char(1) NOT NULL,
+  `descricao` longtext,
+  `sta_nivel_acesso_local` char(1) NOT NULL,
+  `sta_nivel_acesso_global` char(1) NOT NULL,
+  `protocolo_formatado_pesquisa` varchar(50) NOT NULL,
+  `id_unidade_arquivamento` int(11) DEFAULT NULL,
+  `id_usuario_arquivamento` int(11) DEFAULT NULL,
+  `dth_arquivamento` datetime DEFAULT NULL,
+  `codigo_barras` longtext,
+  `id_hipotese_legal` int(11) DEFAULT NULL,
+  `sta_grau_sigilo` char(1) DEFAULT NULL,
+  `sta_nivel_acesso_original` char(1) DEFAULT NULL,
   PRIMARY KEY (`id_protocolo`),
-  UNIQUE KEY `ak3_protocolo` (`protocolo_formatado_pesquisa`),
   UNIQUE KEY `ak1_protocolo` (`id_protocolo`,`sta_protocolo`),
+  UNIQUE KEY `ak3_protocolo` (`protocolo_formatado_pesquisa`),
   UNIQUE KEY `ak2_protocolo` (`protocolo_formatado`),
   KEY `if4_protocolo` (`id_protocolo_agrupador`),
   KEY `if5_protocolo` (`id_localizador`,`sta_arquivamento`),
@@ -2435,13 +2435,13 @@ DROP TABLE IF EXISTS `protocolo_modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `protocolo_modelo` (
-  `id_protocolo_modelo` int(11) NOT NULL COMMENT 'Número que identifica o modelo de protocolo.',
-  `id_grupo_protocolo_modelo` int(11) DEFAULT NULL COMMENT 'Número que identifica o grupo de modelo de protocolo.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `id_protocolo` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o modelo de protocolo.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do modelo de protocolo.',
-  `dth_geracao` datetime DEFAULT NULL COMMENT 'Data e hora de geração do modelo de protocolo.',
+  `id_protocolo_modelo` int(11) NOT NULL,
+  `id_grupo_protocolo_modelo` int(11) DEFAULT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_protocolo` bigint(20) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `dth_geracao` datetime NOT NULL,
   PRIMARY KEY (`id_protocolo_modelo`),
   KEY `fk_prot_mod_grupo_prot_mod` (`id_grupo_protocolo_modelo`),
   KEY `fk_protocolo_modelo_unidade` (`id_unidade`),
@@ -2471,22 +2471,22 @@ DROP TABLE IF EXISTS `publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `publicacao` (
-  `id_publicacao` int(11) NOT NULL COMMENT 'Número que identifica a publicação.',
-  `dth_agendamento` datetime DEFAULT NULL COMMENT 'Data e hora do agendamento da publicação.',
-  `sta_motivo` char(1) DEFAULT NULL COMMENT 'Variável que identifica o motivo da publicação.',
-  `dta_disponibilizacao` datetime DEFAULT NULL COMMENT 'Data e hora de disponibilização da publicação.',
-  `dta_publicacao_io` datetime DEFAULT NULL COMMENT 'Data de publicação.',
-  `pagina_io` varchar(50) DEFAULT NULL COMMENT 'Página da publicação.',
-  `resumo` longtext COMMENT 'Resumo da publicação.',
-  `dta_publicacao` datetime DEFAULT NULL COMMENT 'Data e hora da publicação.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `id_documento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento.',
-  `id_atividade` int(11) DEFAULT NULL COMMENT 'Número que identifica a atividade.',
-  `numero` int(11) DEFAULT NULL COMMENT 'Número da publicação.',
-  `id_veiculo_publicacao` int(11) DEFAULT NULL COMMENT 'Número que identifica o veículo de publicação.',
-  `id_veiculo_io` int(11) DEFAULT NULL COMMENT 'Número que identifica o veículo.',
-  `id_secao_io` int(11) DEFAULT NULL COMMENT 'Número que identifica a seção.',
+  `id_publicacao` int(11) NOT NULL,
+  `dth_agendamento` datetime NOT NULL,
+  `sta_motivo` char(1) NOT NULL,
+  `dta_disponibilizacao` datetime NOT NULL,
+  `dta_publicacao_io` datetime DEFAULT NULL,
+  `pagina_io` varchar(50) DEFAULT NULL,
+  `resumo` longtext,
+  `dta_publicacao` datetime DEFAULT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_documento` bigint(20) DEFAULT NULL,
+  `id_atividade` int(11) NOT NULL,
+  `numero` int(11) DEFAULT NULL,
+  `id_veiculo_publicacao` int(11) NOT NULL,
+  `id_veiculo_io` int(11) DEFAULT NULL,
+  `id_secao_io` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_publicacao`),
   UNIQUE KEY `ak1_publicacao` (`id_documento`),
   KEY `if3_publicacao` (`id_usuario`),
@@ -2524,23 +2524,23 @@ DROP TABLE IF EXISTS `publicacao_legado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `publicacao_legado` (
-  `id_publicacao_legado` int(11) NOT NULL COMMENT '?',
-  `id_publicacao_legado_agrupador` int(11) DEFAULT NULL COMMENT '?',
-  `id_documento` varchar(20) DEFAULT NULL COMMENT '?',
-  `id_serie` int(11) DEFAULT NULL COMMENT '?',
-  `id_unidade` int(11) DEFAULT NULL COMMENT '?',
-  `dta_publicacao_io` datetime DEFAULT NULL COMMENT '?',
-  `pagina_io` varchar(20) DEFAULT NULL COMMENT '?',
+  `id_publicacao_legado` int(11) NOT NULL,
+  `id_publicacao_legado_agrupador` int(11) NOT NULL,
+  `id_documento` varchar(20) NOT NULL,
+  `id_serie` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `dta_publicacao_io` datetime DEFAULT NULL,
+  `pagina_io` varchar(20) DEFAULT NULL,
   `dta_publicacao` datetime NOT NULL,
-  `numero` varchar(30) DEFAULT NULL COMMENT '?',
-  `resumo` longtext COMMENT '?',
-  `conteudo_documento` longtext COMMENT '?',
-  `dta_geracao` datetime DEFAULT NULL COMMENT '?',
-  `id_orgao` int(11) DEFAULT NULL COMMENT '?',
-  `protocolo_formatado` varchar(50) DEFAULT NULL COMMENT '?',
-  `id_secao_io` int(11) DEFAULT NULL COMMENT '?',
-  `id_veiculo_io` int(11) DEFAULT NULL COMMENT '?',
-  `id_veiculo_publicacao` int(11) DEFAULT NULL COMMENT '?',
+  `numero` varchar(30) DEFAULT NULL,
+  `resumo` longtext,
+  `conteudo_documento` longtext NOT NULL,
+  `dta_geracao` datetime NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `protocolo_formatado` varchar(50) NOT NULL,
+  `id_secao_io` int(11) DEFAULT NULL,
+  `id_veiculo_io` int(11) DEFAULT NULL,
+  `id_veiculo_publicacao` int(11) NOT NULL,
   PRIMARY KEY (`id_publicacao_legado`),
   KEY `fk_publicacao_legado_serie` (`id_serie`),
   KEY `fk_publicacao_legado_unidade` (`id_unidade`),
@@ -2575,8 +2575,8 @@ DROP TABLE IF EXISTS `rel_assinante_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_assinante_unidade` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_assinante` int(11) NOT NULL COMMENT 'Número que identifica o assinante.',
+  `id_unidade` int(11) NOT NULL,
+  `id_assinante` int(11) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_assinante`),
   KEY `fk_rel_assinante_uni_assinante` (`id_assinante`),
   CONSTRAINT `fk_rel_assinante_uni_assinante` FOREIGN KEY (`id_assinante`) REFERENCES `assinante` (`id_assinante`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -2602,8 +2602,8 @@ DROP TABLE IF EXISTS `rel_base_conhec_tipo_proced`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_base_conhec_tipo_proced` (
-  `id_tipo_procedimento` int(11) NOT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `id_base_conhecimento` int(11) NOT NULL COMMENT 'Número que identifica a base de conhecimento.',
+  `id_tipo_procedimento` int(11) NOT NULL,
+  `id_base_conhecimento` int(11) NOT NULL,
   PRIMARY KEY (`id_tipo_procedimento`,`id_base_conhecimento`),
   KEY `i01_rel_base_conhec_tipo_proce` (`id_base_conhecimento`),
   KEY `i02_rel_base_conhec_tipo_proce` (`id_tipo_procedimento`),
@@ -2629,10 +2629,10 @@ DROP TABLE IF EXISTS `rel_bloco_protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_bloco_protocolo` (
-  `id_protocolo` bigint(20) NOT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_bloco` int(11) NOT NULL COMMENT 'Número que identifica o bloco.',
-  `anotacao` longtext COMMENT 'Anotação feita no bloco.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Variável categórica que indica em qual ordem o protocolo foi inserido no bloco.',
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_bloco` int(11) NOT NULL,
+  `anotacao` longtext,
+  `sequencia` int(11) NOT NULL,
   PRIMARY KEY (`id_protocolo`,`id_bloco`),
   KEY `if1_rel_bloco_protocolo` (`id_protocolo`),
   KEY `if2_rel_bloco_protocolo` (`id_bloco`),
@@ -2658,9 +2658,9 @@ DROP TABLE IF EXISTS `rel_bloco_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_bloco_unidade` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_bloco` int(11) NOT NULL COMMENT 'Número que identifica o bloco.',
-  `sin_retornado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o bloco foi retornado (S) ou não (N).',
+  `id_unidade` int(11) NOT NULL,
+  `id_bloco` int(11) NOT NULL,
+  `sin_retornado` char(1) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_bloco`),
   KEY `if1_rel_bloco_unidade` (`id_unidade`),
   KEY `if2_rel_bloco_unidade` (`id_bloco`),
@@ -2688,8 +2688,8 @@ DROP TABLE IF EXISTS `rel_controle_interno_orgao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_controle_interno_orgao` (
-  `id_controle_interno` int(11) NOT NULL COMMENT 'Número que identifica o controle interno.',
-  `id_orgao` int(11) NOT NULL COMMENT 'Número que identifica o órgão.',
+  `id_controle_interno` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
   PRIMARY KEY (`id_controle_interno`,`id_orgao`),
   KEY `if2_rel_controle_interno_orgao` (`id_orgao`),
   KEY `if1_rel_controle_interno_orgao` (`id_controle_interno`),
@@ -2715,8 +2715,8 @@ DROP TABLE IF EXISTS `rel_controle_interno_serie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_controle_interno_serie` (
-  `id_serie` int(11) NOT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_controle_interno` int(11) NOT NULL COMMENT 'Número que identifica o controle interno.',
+  `id_serie` int(11) NOT NULL,
+  `id_controle_interno` int(11) NOT NULL,
   PRIMARY KEY (`id_serie`,`id_controle_interno`),
   KEY `if1_rel_controle_interno_serie` (`id_serie`),
   KEY `if2_rel_controle_interno_serie` (`id_controle_interno`),
@@ -2742,8 +2742,8 @@ DROP TABLE IF EXISTS `rel_controle_interno_tipo_proc`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_controle_interno_tipo_proc` (
-  `id_tipo_procedimento` int(11) NOT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `id_controle_interno` int(11) NOT NULL COMMENT 'Número que identifica o controle interno.',
+  `id_tipo_procedimento` int(11) NOT NULL,
+  `id_controle_interno` int(11) NOT NULL,
   PRIMARY KEY (`id_tipo_procedimento`,`id_controle_interno`),
   KEY `fk_rel_contr_int_tipo_proc_ci` (`id_controle_interno`),
   CONSTRAINT `fk_rel_contr_int_t_tipo_proc` FOREIGN KEY (`id_tipo_procedimento`) REFERENCES `tipo_procedimento` (`id_tipo_procedimento`),
@@ -2768,8 +2768,8 @@ DROP TABLE IF EXISTS `rel_controle_interno_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_controle_interno_unidade` (
-  `id_controle_interno` int(11) NOT NULL COMMENT 'Número que identifica o controle interno.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
+  `id_controle_interno` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_controle_interno`,`id_unidade`),
   KEY `if1_rel_controle_interno_unid` (`id_controle_interno`),
   KEY `if2_rel_controle_interno_unid` (`id_unidade`),
@@ -2795,8 +2795,8 @@ DROP TABLE IF EXISTS `rel_grupo_contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_grupo_contato` (
-  `id_contato` int(11) NOT NULL COMMENT 'Número que identifica o contato.',
-  `id_grupo_contato` int(11) NOT NULL COMMENT 'Número que identifica o grupo do contato.',
+  `id_contato` int(11) NOT NULL,
+  `id_grupo_contato` int(11) NOT NULL,
   PRIMARY KEY (`id_contato`,`id_grupo_contato`),
   KEY `fk_rel_grupo_contato_grupo_con` (`id_grupo_contato`),
   CONSTRAINT `fk_rel_grupo_contato_contato` FOREIGN KEY (`id_contato`) REFERENCES `contato` (`id_contato`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -2821,8 +2821,8 @@ DROP TABLE IF EXISTS `rel_grupo_unidade_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_grupo_unidade_unidade` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_grupo_unidade` int(11) NOT NULL COMMENT 'Número que identifica o grupo da unidade.',
+  `id_unidade` int(11) NOT NULL,
+  `id_grupo_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_grupo_unidade`),
   KEY `fk_rel_grupo_unid_grupo_unid` (`id_grupo_unidade`),
   CONSTRAINT `fk_rel_grupo_unid_grupo_unid` FOREIGN KEY (`id_grupo_unidade`) REFERENCES `grupo_unidade` (`id_grupo_unidade`),
@@ -2847,9 +2847,9 @@ DROP TABLE IF EXISTS `rel_notificacao_documento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_notificacao_documento` (
-  `id_documento` bigint(20) NOT NULL COMMENT 'Número que identifica o documento.',
-  `id_notificacao` int(11) NOT NULL COMMENT 'Número que identifica a notificação.',
-  `sin_processada` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a notificação foi processada (S) ou não (N).',
+  `id_documento` bigint(20) NOT NULL,
+  `id_notificacao` int(11) NOT NULL,
+  `sin_processada` char(1) NOT NULL,
   PRIMARY KEY (`id_documento`,`id_notificacao`),
   KEY `i01_rel_notificacao_documento` (`id_documento`),
   KEY `i02_rel_notificacao_documento` (`id_notificacao`),
@@ -2876,9 +2876,9 @@ DROP TABLE IF EXISTS `rel_proced_situacao_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_proced_situacao_unidade` (
-  `id_procedimento` bigint(20) NOT NULL COMMENT 'Número que identifica o procedimento.',
-  `id_situacao` int(11) NOT NULL COMMENT 'Número que identifica a situação.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
+  `id_procedimento` bigint(20) NOT NULL,
+  `id_situacao` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_procedimento`,`id_situacao`,`id_unidade`),
   KEY `fk_rel_proc_sit_unid_situacao` (`id_situacao`),
   KEY `fk_rel_proc_sit_unid_unidade` (`id_unidade`),
@@ -2905,10 +2905,10 @@ DROP TABLE IF EXISTS `rel_protocolo_assunto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_protocolo_assunto` (
-  `id_protocolo` bigint(20) NOT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_assunto` int(11) NOT NULL COMMENT 'Número que identifica o assunto.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Variável numérica que indica a ordem na qual um determinado assunto foi associado a um processo, assim como a ordem na qual o assunto será listado na tela de consultar/alterar processo, caso este tenha mais de um assunto associado.',
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_assunto` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `sequencia` int(11) NOT NULL,
   PRIMARY KEY (`id_protocolo`,`id_assunto`),
   KEY `if3_rel_protocolo_assunto` (`id_unidade`),
   KEY `fk_rel_protocolo_assunto_assun` (`id_assunto`),
@@ -2935,9 +2935,9 @@ DROP TABLE IF EXISTS `rel_protocolo_atributo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_protocolo_atributo` (
-  `id_protocolo` bigint(20) NOT NULL COMMENT 'Número que identifica o protocolo.',
-  `id_atributo` int(11) NOT NULL COMMENT 'Número que identifica o atributo.',
-  `valor` varchar(250) DEFAULT NULL COMMENT 'Valor.',
+  `id_protocolo` bigint(20) NOT NULL,
+  `id_atributo` int(11) NOT NULL,
+  `valor` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id_protocolo`,`id_atributo`),
   KEY `i01_rel_protocolo_atributo` (`id_protocolo`),
   KEY `i02_rel_protocolo_atributo` (`id_atributo`),
@@ -2963,15 +2963,15 @@ DROP TABLE IF EXISTS `rel_protocolo_protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_protocolo_protocolo` (
-  `id_protocolo_1` bigint(20) DEFAULT NULL COMMENT 'Número que identifica um dos protocolos da relação.',
-  `id_protocolo_2` bigint(20) DEFAULT NULL COMMENT 'Número que identifica um dos protocolos da relação.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário que relacionou os dois protocolos.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `sta_associacao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica qual é o tipo de associação entre os protocolos, que pode ser um documento associado a um processo (1) , um processo associado a outro (3), um processo anexado (2) ou um processo desanexado (5).',
-  `dth_associacao` datetime DEFAULT NULL COMMENT 'Data e hora de associação dos protocolos.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Variável numérica que indica em qual ordem na qual um protocolo foi associado a outro.',
-  `sin_ciencia` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se foi dada ciência no relacionamento dos protocolos.',
-  `id_rel_protocolo_protocolo` bigint(20) NOT NULL COMMENT 'Número que identifica o relacionamento entre protocolos.',
+  `id_protocolo_1` bigint(20) NOT NULL,
+  `id_protocolo_2` bigint(20) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `sta_associacao` char(1) NOT NULL,
+  `dth_associacao` datetime NOT NULL,
+  `sequencia` int(11) NOT NULL,
+  `sin_ciencia` char(1) NOT NULL,
+  `id_rel_protocolo_protocolo` bigint(20) NOT NULL,
   PRIMARY KEY (`id_rel_protocolo_protocolo`),
   KEY `if3_rel_protocolo_protocolo` (`id_usuario`),
   KEY `if4_rel_protocolo_protocolo` (`id_unidade`),
@@ -3002,9 +3002,9 @@ DROP TABLE IF EXISTS `rel_secao_mod_cj_estilos_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_secao_mod_cj_estilos_item` (
-  `id_secao_modelo` int(11) NOT NULL COMMENT 'Número que identifica a seção do modelo de documento.',
-  `id_conjunto_estilos_item` int(11) NOT NULL COMMENT 'Número que identifica o item do conjunto de estilos.',
-  `sin_padrao` char(1) DEFAULT NULL COMMENT 'Variável que identifica se o item do conjunto de estilos da seção do modelo de documento é padrão (S) ou não (N).',
+  `id_secao_modelo` int(11) NOT NULL,
+  `id_conjunto_estilos_item` int(11) NOT NULL,
+  `sin_padrao` char(1) NOT NULL,
   PRIMARY KEY (`id_secao_modelo`,`id_conjunto_estilos_item`),
   KEY `fk_re_secmod_cj_est_i_cj_est_i` (`id_conjunto_estilos_item`),
   CONSTRAINT `fk_re_secmod_cj_est_i_cj_est_i` FOREIGN KEY (`id_conjunto_estilos_item`) REFERENCES `conjunto_estilos_item` (`id_conjunto_estilos_item`),
@@ -3030,9 +3030,9 @@ DROP TABLE IF EXISTS `rel_secao_modelo_estilo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_secao_modelo_estilo` (
-  `id_secao_modelo` int(11) NOT NULL COMMENT 'Número que identifica a seção do modelo de documento.',
-  `id_estilo` int(11) NOT NULL COMMENT 'Número que identifica o estilo.',
-  `sin_padrao` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o estilo da seção do modelo é padrão (S) ou não (N).',
+  `id_secao_modelo` int(11) NOT NULL,
+  `id_estilo` int(11) NOT NULL,
+  `sin_padrao` char(1) NOT NULL,
   PRIMARY KEY (`id_secao_modelo`,`id_estilo`),
   KEY `fk_rel_sec_mod_estilo_estilo` (`id_estilo`),
   CONSTRAINT `fk_rel_sec_mod_estilo_estilo` FOREIGN KEY (`id_estilo`) REFERENCES `estilo` (`id_estilo`),
@@ -3058,9 +3058,9 @@ DROP TABLE IF EXISTS `rel_serie_assunto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_serie_assunto` (
-  `id_serie` int(11) NOT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_assunto` int(11) NOT NULL COMMENT 'Número que identifica o assunto.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Variável que indica a ordem na qual um determinado tipo de documento foi associado a um assunto.',
+  `id_serie` int(11) NOT NULL,
+  `id_assunto` int(11) NOT NULL,
+  `sequencia` int(11) NOT NULL,
   PRIMARY KEY (`id_serie`,`id_assunto`),
   KEY `fk_rel_serie_assunto_assunto` (`id_assunto`),
   CONSTRAINT `fk_rel_serie_assunto_assunto` FOREIGN KEY (`id_assunto`) REFERENCES `assunto` (`id_assunto`),
@@ -3085,8 +3085,8 @@ DROP TABLE IF EXISTS `rel_serie_veiculo_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_serie_veiculo_publicacao` (
-  `id_serie` int(11) NOT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_veiculo_publicacao` int(11) NOT NULL COMMENT 'Número que identifica o veículo de publicação.',
+  `id_serie` int(11) NOT NULL,
+  `id_veiculo_publicacao` int(11) NOT NULL,
   PRIMARY KEY (`id_serie`,`id_veiculo_publicacao`),
   KEY `fk_rel_serie_veic_pub_veic_pub` (`id_veiculo_publicacao`),
   CONSTRAINT `fk_rel_serie_veic_pub_serie` FOREIGN KEY (`id_serie`) REFERENCES `serie` (`id_serie`),
@@ -3112,8 +3112,8 @@ DROP TABLE IF EXISTS `rel_situacao_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_situacao_unidade` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_situacao` int(11) NOT NULL COMMENT 'Número que identifica a situação.',
+  `id_unidade` int(11) NOT NULL,
+  `id_situacao` int(11) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_situacao`),
   KEY `fk_rel_situacao_unid_situacao` (`id_situacao`),
   CONSTRAINT `fk_rel_situacao_unid_situacao` FOREIGN KEY (`id_situacao`) REFERENCES `situacao` (`id_situacao`),
@@ -3138,9 +3138,9 @@ DROP TABLE IF EXISTS `rel_tipo_procedimento_assunto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_tipo_procedimento_assunto` (
-  `id_tipo_procedimento` int(11) NOT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `id_assunto` int(11) NOT NULL COMMENT 'Número que identifica o assunto.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Variável que indica a ordem na qual um determinado assunto foi associado a um tipo de processo.',
+  `id_tipo_procedimento` int(11) NOT NULL,
+  `id_assunto` int(11) NOT NULL,
+  `sequencia` int(11) NOT NULL,
   PRIMARY KEY (`id_tipo_procedimento`,`id_assunto`),
   KEY `fk_rel_tipo_procedimento_assun` (`id_assunto`),
   CONSTRAINT `fk_rel_tipo_proc_assun_assunto` FOREIGN KEY (`id_tipo_procedimento`) REFERENCES `tipo_procedimento` (`id_tipo_procedimento`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -3166,8 +3166,8 @@ DROP TABLE IF EXISTS `rel_unidade_tipo_cont_contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_unidade_tipo_cont_contato` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_tipo_contexto_contato` int(11) NOT NULL COMMENT 'Número que identifica o tipo de contexto e contato.',
+  `id_unidade` int(11) NOT NULL,
+  `id_tipo_contexto_contato` int(11) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_tipo_contexto_contato`),
   KEY `if3_rel_unidade_tipo_cont_cont` (`id_tipo_contexto_contato`),
   CONSTRAINT `fk_rel_unidade_tipo_cont_conta` FOREIGN KEY (`id_tipo_contexto_contato`) REFERENCES `tipo_contexto_contato` (`id_tipo_contexto_contato`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -3193,13 +3193,13 @@ DROP TABLE IF EXISTS `retorno_programado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `retorno_programado` (
-  `id_retorno_programado` int(11) NOT NULL COMMENT 'Número que identifica o retorno programado.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_atividade_envio` int(11) DEFAULT NULL COMMENT 'Número que identifica a atividade na qual o retorno programado foi enviado.',
-  `id_atividade_retorno` int(11) DEFAULT NULL COMMENT 'Número que identifica a atividade na qual ocorreu o retorno programado.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `dta_programada` datetime DEFAULT NULL COMMENT 'Data e hora de programação do retorno.',
-  `dth_alteracao` datetime DEFAULT NULL COMMENT 'Data e hora alterada de programação do retorno.',
+  `id_retorno_programado` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_atividade_envio` int(11) NOT NULL,
+  `id_atividade_retorno` int(11) DEFAULT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `dta_programada` datetime NOT NULL,
+  `dth_alteracao` datetime DEFAULT NULL,
   PRIMARY KEY (`id_retorno_programado`),
   KEY `i01_retorno_programado` (`id_atividade_envio`),
   KEY `i02_retorno_programado` (`id_usuario`),
@@ -3230,19 +3230,19 @@ DROP TABLE IF EXISTS `secao_documento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `secao_documento` (
-  `id_secao_documento` int(11) NOT NULL COMMENT 'Número que identifica a seção do documento.',
-  `id_secao_modelo` int(11) DEFAULT NULL COMMENT 'Número que identifica o modelo da seção do documento.',
-  `id_documento` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento.',
-  `id_base_conhecimento` int(11) DEFAULT NULL COMMENT 'Número que identifica a base de conhecimento.',
-  `ordem` int(11) DEFAULT NULL COMMENT 'Número que identifica em que posição a seção se encontra em um documento.',
-  `sin_somente_leitura` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção está bloqueada para somente leitura (S) ou não (N).',
-  `sin_assinatura` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é uma assinatura (S) ou não (N).',
-  `sin_principal` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é corpo de texto (S) ou não (N).',
-  `sin_dinamica` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a opção "Dinâmica" está marcada (S), o que impede a alteração do conteúdo nesta seção.',
-  `sin_cabecalho` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é um cabeçalho (S) ou não (N).',
-  `sin_rodape` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é uma nota de rodapé (S) ou não (N).',
-  `conteudo` longtext COMMENT 'Conteúdo da seção do documento (em html).',
-  `sin_html` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção possui código html (S) ou utiliza parâmetros do sistema (N).',
+  `id_secao_documento` int(11) NOT NULL,
+  `id_secao_modelo` int(11) NOT NULL,
+  `id_documento` bigint(20) DEFAULT NULL,
+  `id_base_conhecimento` int(11) DEFAULT NULL,
+  `ordem` int(11) NOT NULL,
+  `sin_somente_leitura` char(1) NOT NULL,
+  `sin_assinatura` char(1) NOT NULL,
+  `sin_principal` char(1) NOT NULL,
+  `sin_dinamica` char(1) NOT NULL,
+  `sin_cabecalho` char(1) NOT NULL,
+  `sin_rodape` char(1) NOT NULL,
+  `conteudo` longtext,
+  `sin_html` char(1) NOT NULL,
   PRIMARY KEY (`id_secao_documento`),
   KEY `i01_secao_documento` (`id_documento`,`id_base_conhecimento`,`sin_cabecalho`,`sin_rodape`),
   KEY `fk_secao_doc_secao_mod` (`id_secao_modelo`),
@@ -3270,10 +3270,10 @@ DROP TABLE IF EXISTS `secao_imprensa_nacional`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `secao_imprensa_nacional` (
-  `id_secao_imprensa_nacional` int(11) NOT NULL COMMENT 'Número que identifica a seção de imprensa.',
-  `id_veiculo_imprensa_nacional` int(11) DEFAULT NULL COMMENT 'Número que identifica o veículo de imprensa.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome da seção de imprensa.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da seção de imprensa.',
+  `id_secao_imprensa_nacional` int(11) NOT NULL,
+  `id_veiculo_imprensa_nacional` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id_secao_imprensa_nacional`),
   KEY `fk_secao_in_veiculo_in` (`id_veiculo_imprensa_nacional`),
   CONSTRAINT `fk_secao_in_veiculo_in` FOREIGN KEY (`id_veiculo_imprensa_nacional`) REFERENCES `veiculo_imprensa_nacional` (`id_veiculo_imprensa_nacional`)
@@ -3298,19 +3298,19 @@ DROP TABLE IF EXISTS `secao_modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `secao_modelo` (
-  `id_secao_modelo` int(11) NOT NULL COMMENT 'Número que identifica a seção do modelo de documento.',
-  `id_modelo` int(11) DEFAULT NULL COMMENT 'Número que identifica o modelo de documento.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do modelo.',
-  `conteudo` longtext COMMENT 'Conteúdo do modelo (em html).',
-  `ordem` int(11) DEFAULT NULL COMMENT 'Número que identifica em que posição a seção se encontra em um documento.',
-  `sin_somente_leitura` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção está bloqueada para somente leitura (S) ou não (N).',
-  `sin_assinatura` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é uma assinatura (S) ou não (N).',
-  `sin_principal` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é corpo de texto (S) ou não (N).',
-  `sin_dinamica` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a opção "Dinâmica" está marcada (S), o que impede a alteração do conteúdo nesta seção.',
-  `sin_cabecalho` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é um cabeçalho (S) ou não (N).',
-  `sin_rodape` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção é uma nota de rodapé (S) ou não (N).',
-  `sin_html` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção possui código html (S) ou utiliza parâmetros do sistema (N).',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a seção está ativa (S) ou não (N).',
+  `id_secao_modelo` int(11) NOT NULL,
+  `id_modelo` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `conteudo` longtext,
+  `ordem` int(11) NOT NULL,
+  `sin_somente_leitura` char(1) NOT NULL,
+  `sin_assinatura` char(1) NOT NULL,
+  `sin_principal` char(1) NOT NULL,
+  `sin_dinamica` char(1) NOT NULL,
+  `sin_cabecalho` char(1) NOT NULL,
+  `sin_rodape` char(1) NOT NULL,
+  `sin_html` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_secao_modelo`),
   KEY `fk_secao_modelo_modelo` (`id_modelo`),
   KEY `i01_secao_modelo` (`id_modelo`,`ordem`),
@@ -3337,8 +3337,8 @@ DROP TABLE IF EXISTS `seq_acesso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_acesso` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3360,8 +3360,8 @@ DROP TABLE IF EXISTS `seq_acesso_externo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_acesso_externo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3383,8 +3383,8 @@ DROP TABLE IF EXISTS `seq_acompanhamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_acompanhamento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3406,8 +3406,8 @@ DROP TABLE IF EXISTS `seq_andamento_situacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_andamento_situacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3429,8 +3429,8 @@ DROP TABLE IF EXISTS `seq_anexo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_anexo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3452,8 +3452,8 @@ DROP TABLE IF EXISTS `seq_anotacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_anotacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3475,8 +3475,8 @@ DROP TABLE IF EXISTS `seq_aplicabilidade_atributo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_aplicabilidade_atributo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3498,10 +3498,10 @@ DROP TABLE IF EXISTS `seq_arquivo_extensao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_arquivo_extensao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3522,8 +3522,8 @@ DROP TABLE IF EXISTS `seq_assinante`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_assinante` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3545,8 +3545,8 @@ DROP TABLE IF EXISTS `seq_assinatura`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_assinatura` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3568,10 +3568,10 @@ DROP TABLE IF EXISTS `seq_assunto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_assunto` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=701 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3592,8 +3592,8 @@ DROP TABLE IF EXISTS `seq_atividade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_atividade` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3615,8 +3615,8 @@ DROP TABLE IF EXISTS `seq_atributo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_atributo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3638,8 +3638,8 @@ DROP TABLE IF EXISTS `seq_atributo_andamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_atributo_andamento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3661,8 +3661,8 @@ DROP TABLE IF EXISTS `seq_atributo_andamento_situaca`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_atributo_andamento_situaca` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3684,10 +3684,10 @@ DROP TABLE IF EXISTS `seq_auditoria_protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_auditoria_protocolo` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3708,8 +3708,8 @@ DROP TABLE IF EXISTS `seq_base_conhecimento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_base_conhecimento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3731,8 +3731,8 @@ DROP TABLE IF EXISTS `seq_bloco`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_bloco` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3754,8 +3754,8 @@ DROP TABLE IF EXISTS `seq_cargo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_cargo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3777,10 +3777,10 @@ DROP TABLE IF EXISTS `seq_cidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_cidade` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5565 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3801,10 +3801,10 @@ DROP TABLE IF EXISTS `seq_conjunto_estilos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_conjunto_estilos` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3825,10 +3825,10 @@ DROP TABLE IF EXISTS `seq_conjunto_estilos_item`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_conjunto_estilos_item` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1643 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3849,10 +3849,10 @@ DROP TABLE IF EXISTS `seq_contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_contato` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=100002293 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3861,7 +3861,7 @@ CREATE TABLE `seq_contato` (
 
 LOCK TABLES `seq_contato` WRITE;
 /*!40000 ALTER TABLE `seq_contato` DISABLE KEYS */;
-INSERT INTO `seq_contato` VALUES (100000006,NULL);
+INSERT INTO `seq_contato` VALUES (100001767,NULL),(100001768,NULL),(100001769,NULL),(100001770,NULL),(100001771,NULL),(100001772,NULL),(100001773,NULL),(100001774,NULL),(100001775,NULL),(100001776,NULL),(100001777,NULL),(100001778,NULL),(100001779,NULL),(100001780,NULL),(100001781,NULL),(100001782,NULL),(100001783,NULL),(100001784,NULL),(100001785,NULL),(100001786,NULL),(100001787,NULL),(100001788,NULL),(100001789,NULL),(100001790,NULL),(100001791,NULL),(100001792,NULL),(100001793,NULL),(100001794,NULL),(100001795,NULL),(100001796,NULL),(100001797,NULL),(100001798,NULL),(100001799,NULL),(100001800,NULL),(100001801,NULL),(100001802,NULL),(100001803,NULL),(100001804,NULL),(100001805,NULL),(100001806,NULL),(100001807,NULL),(100001808,NULL),(100001809,NULL),(100001810,NULL),(100001811,NULL),(100001812,NULL),(100001813,NULL),(100001814,NULL),(100001815,NULL),(100001816,NULL),(100001817,NULL),(100001818,NULL),(100001819,NULL),(100001820,NULL),(100001821,NULL),(100001822,NULL),(100001823,NULL),(100001824,NULL),(100001825,NULL),(100001826,NULL),(100001827,NULL),(100001828,NULL),(100001829,NULL),(100001830,NULL),(100001831,NULL),(100001832,NULL),(100001833,NULL),(100001834,NULL),(100001835,NULL),(100001836,NULL),(100001837,NULL),(100001838,NULL),(100001839,NULL),(100001840,NULL),(100001841,NULL),(100001842,NULL),(100001843,NULL),(100001844,NULL),(100001845,NULL),(100001846,NULL),(100001847,NULL),(100001848,NULL),(100001849,NULL),(100001850,NULL),(100001851,NULL),(100001852,NULL),(100001853,NULL),(100001854,NULL),(100001855,NULL),(100001856,NULL),(100001857,NULL),(100001858,NULL),(100001859,NULL),(100001860,NULL),(100001861,NULL),(100001862,NULL),(100001863,NULL),(100001864,NULL),(100001865,NULL),(100001866,NULL),(100001867,NULL),(100001868,NULL),(100001869,NULL),(100001870,NULL),(100001871,NULL),(100001872,NULL),(100001873,NULL),(100001874,NULL),(100001875,NULL),(100001876,NULL),(100001877,NULL),(100001878,NULL),(100001879,NULL),(100001880,NULL),(100001881,NULL),(100001882,NULL),(100001883,NULL),(100001884,NULL),(100001885,NULL),(100001886,NULL),(100001887,NULL),(100001888,NULL),(100001889,NULL),(100001890,NULL),(100001891,NULL),(100001892,NULL),(100001893,NULL),(100001894,NULL),(100001895,NULL),(100001896,NULL),(100001897,NULL),(100001898,NULL),(100001899,NULL),(100001900,NULL),(100001901,NULL),(100001902,NULL),(100001903,NULL),(100001904,NULL),(100001905,NULL),(100001906,NULL),(100001907,NULL),(100001908,NULL),(100001909,NULL),(100001910,NULL),(100001911,NULL),(100001912,NULL),(100001913,NULL),(100001914,NULL),(100001915,NULL),(100001916,NULL),(100001917,NULL),(100001918,NULL),(100001919,NULL),(100001920,NULL),(100001921,NULL),(100001922,NULL),(100001923,NULL),(100001924,NULL),(100001925,NULL),(100001926,NULL),(100001927,NULL),(100001928,NULL),(100001929,NULL),(100001930,NULL),(100001931,NULL),(100001932,NULL),(100001933,NULL),(100001934,NULL),(100001935,NULL),(100001936,NULL),(100001937,NULL),(100001938,NULL),(100001939,NULL),(100001940,NULL),(100001941,NULL),(100001942,NULL),(100001943,NULL),(100001944,NULL),(100001945,NULL),(100001946,NULL),(100001947,NULL),(100001948,NULL),(100001949,NULL),(100001950,NULL),(100001951,NULL),(100001952,NULL),(100001953,NULL),(100001954,NULL),(100001955,NULL),(100001956,NULL),(100001957,NULL),(100001958,NULL),(100001959,NULL),(100001960,NULL),(100001961,NULL),(100001962,NULL),(100001963,NULL),(100001964,NULL),(100001965,NULL),(100001966,NULL),(100001967,NULL),(100001968,NULL),(100001969,NULL),(100001970,NULL),(100001971,NULL),(100001972,NULL),(100001973,NULL),(100001974,NULL),(100001975,NULL),(100001976,NULL),(100001977,NULL),(100001978,NULL),(100001979,NULL),(100001980,NULL),(100001981,NULL),(100001982,NULL),(100001983,NULL),(100001984,NULL),(100001985,NULL),(100001986,NULL),(100001987,NULL),(100001988,NULL),(100001989,NULL),(100001990,NULL),(100001991,NULL),(100001992,NULL),(100001993,NULL),(100001994,NULL),(100001995,NULL),(100001996,NULL),(100001997,NULL),(100001998,NULL),(100001999,NULL),(100002000,NULL),(100002001,NULL),(100002002,NULL),(100002003,NULL),(100002004,NULL),(100002005,NULL),(100002006,NULL),(100002007,NULL),(100002008,NULL),(100002009,NULL),(100002010,NULL),(100002011,NULL),(100002012,NULL),(100002013,NULL),(100002014,NULL),(100002015,NULL),(100002016,NULL),(100002017,NULL),(100002018,NULL),(100002019,NULL),(100002020,NULL),(100002021,NULL),(100002022,NULL),(100002023,NULL),(100002024,NULL),(100002025,NULL),(100002026,NULL),(100002027,NULL),(100002028,NULL),(100002029,NULL),(100002030,NULL),(100002031,NULL),(100002032,NULL),(100002033,NULL),(100002034,NULL),(100002035,NULL),(100002036,NULL),(100002037,NULL),(100002038,NULL),(100002039,NULL),(100002040,NULL),(100002041,NULL),(100002042,NULL),(100002043,NULL),(100002044,NULL),(100002045,NULL),(100002046,NULL),(100002047,NULL),(100002048,NULL),(100002049,NULL),(100002050,NULL),(100002051,NULL),(100002052,NULL),(100002053,NULL),(100002054,NULL),(100002055,NULL),(100002056,NULL),(100002057,NULL),(100002058,NULL),(100002059,NULL),(100002060,NULL),(100002061,NULL),(100002062,NULL),(100002063,NULL),(100002064,NULL),(100002065,NULL),(100002066,NULL),(100002067,NULL),(100002068,NULL),(100002069,NULL),(100002070,NULL),(100002071,NULL),(100002072,NULL),(100002073,NULL),(100002074,NULL),(100002075,NULL),(100002076,NULL),(100002077,NULL),(100002078,NULL),(100002079,NULL),(100002080,NULL),(100002081,NULL),(100002082,NULL),(100002083,NULL),(100002084,NULL),(100002085,NULL),(100002086,NULL),(100002087,NULL),(100002088,NULL),(100002089,NULL),(100002090,NULL),(100002091,NULL),(100002092,NULL),(100002093,NULL),(100002094,NULL),(100002095,NULL),(100002096,NULL),(100002097,NULL),(100002098,NULL),(100002099,NULL),(100002100,NULL),(100002101,NULL),(100002102,NULL),(100002103,NULL),(100002104,NULL),(100002105,NULL),(100002106,NULL),(100002107,NULL),(100002108,NULL),(100002109,NULL),(100002110,NULL),(100002111,NULL),(100002112,NULL),(100002113,NULL),(100002114,NULL),(100002115,NULL),(100002116,NULL),(100002117,NULL),(100002118,NULL),(100002119,NULL),(100002120,NULL),(100002121,NULL),(100002122,NULL),(100002123,NULL),(100002124,NULL),(100002125,NULL),(100002126,NULL),(100002127,NULL),(100002128,NULL),(100002129,NULL),(100002130,NULL),(100002131,NULL),(100002132,NULL),(100002133,NULL),(100002134,NULL),(100002135,NULL),(100002136,NULL),(100002137,NULL),(100002138,NULL),(100002139,NULL),(100002140,NULL),(100002141,NULL),(100002142,NULL),(100002143,NULL),(100002144,NULL),(100002145,NULL),(100002146,NULL),(100002147,NULL),(100002148,NULL),(100002149,NULL),(100002150,NULL),(100002151,NULL),(100002152,NULL),(100002153,NULL),(100002154,NULL),(100002155,NULL),(100002156,NULL),(100002157,NULL),(100002158,NULL),(100002159,NULL),(100002160,NULL),(100002161,NULL),(100002162,NULL),(100002163,NULL),(100002164,NULL),(100002165,NULL),(100002166,NULL),(100002167,NULL),(100002168,NULL),(100002169,NULL),(100002170,NULL),(100002171,NULL),(100002172,NULL),(100002173,NULL),(100002174,NULL),(100002175,NULL),(100002176,NULL),(100002177,NULL),(100002178,NULL),(100002179,NULL),(100002180,NULL),(100002181,NULL),(100002182,NULL),(100002183,NULL),(100002184,NULL),(100002185,NULL),(100002186,NULL),(100002187,NULL),(100002188,NULL),(100002189,NULL),(100002190,NULL),(100002191,NULL),(100002192,NULL),(100002193,NULL),(100002194,NULL),(100002195,NULL),(100002196,NULL),(100002197,NULL),(100002198,NULL),(100002199,NULL),(100002200,NULL),(100002201,NULL),(100002202,NULL),(100002203,NULL),(100002204,NULL),(100002205,NULL),(100002206,NULL),(100002207,NULL),(100002208,NULL),(100002209,NULL),(100002210,NULL),(100002211,NULL),(100002212,NULL),(100002213,NULL),(100002214,NULL),(100002215,NULL),(100002216,NULL),(100002217,NULL),(100002218,NULL),(100002219,NULL),(100002220,NULL),(100002221,NULL),(100002222,NULL),(100002223,NULL),(100002224,NULL),(100002225,NULL),(100002226,NULL),(100002227,NULL),(100002228,NULL),(100002229,NULL),(100002230,NULL),(100002231,NULL),(100002232,NULL),(100002233,NULL),(100002234,NULL),(100002235,NULL),(100002236,NULL),(100002237,NULL),(100002238,NULL),(100002239,NULL),(100002240,NULL),(100002241,NULL),(100002242,NULL),(100002243,NULL),(100002244,NULL),(100002245,NULL),(100002246,NULL),(100002247,NULL),(100002248,NULL),(100002249,NULL),(100002250,NULL),(100002251,NULL),(100002252,NULL),(100002253,NULL),(100002254,NULL),(100002255,NULL),(100002256,NULL),(100002257,NULL),(100002258,NULL),(100002259,NULL),(100002260,NULL),(100002261,NULL),(100002262,NULL),(100002263,NULL),(100002264,NULL),(100002265,NULL),(100002266,NULL),(100002267,NULL),(100002268,NULL),(100002269,NULL),(100002270,NULL),(100002271,NULL),(100002272,NULL),(100002273,NULL),(100002274,NULL),(100002275,NULL),(100002276,NULL),(100002277,NULL),(100002278,NULL),(100002279,NULL),(100002280,NULL),(100002281,NULL),(100002282,NULL),(100002283,NULL),(100002284,NULL),(100002285,NULL),(100002286,NULL),(100002287,NULL),(100002288,NULL),(100002289,NULL),(100002290,NULL),(100002291,NULL),(100002292,NULL);
 /*!40000 ALTER TABLE `seq_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3873,8 +3873,8 @@ DROP TABLE IF EXISTS `seq_controle_interno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_controle_interno` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3896,8 +3896,8 @@ DROP TABLE IF EXISTS `seq_controle_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_controle_unidade` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3919,8 +3919,8 @@ DROP TABLE IF EXISTS `seq_documento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_documento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3942,8 +3942,8 @@ DROP TABLE IF EXISTS `seq_dominio`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_dominio` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3965,8 +3965,8 @@ DROP TABLE IF EXISTS `seq_email_grupo_email`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_email_grupo_email` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -3988,10 +3988,10 @@ DROP TABLE IF EXISTS `seq_email_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_email_unidade` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=729 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4012,8 +4012,8 @@ DROP TABLE IF EXISTS `seq_email_utilizado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_email_utilizado` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4035,8 +4035,8 @@ DROP TABLE IF EXISTS `seq_estatisticas`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_estatisticas` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4058,10 +4058,10 @@ DROP TABLE IF EXISTS `seq_estilo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_estilo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4082,8 +4082,8 @@ DROP TABLE IF EXISTS `seq_feed`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_feed` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4105,10 +4105,10 @@ DROP TABLE IF EXISTS `seq_feriado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_feriado` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4129,8 +4129,8 @@ DROP TABLE IF EXISTS `seq_grupo_acompanhamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_grupo_acompanhamento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4152,8 +4152,8 @@ DROP TABLE IF EXISTS `seq_grupo_contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_grupo_contato` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4175,8 +4175,8 @@ DROP TABLE IF EXISTS `seq_grupo_email`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_grupo_email` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4198,8 +4198,8 @@ DROP TABLE IF EXISTS `seq_grupo_protocolo_modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_grupo_protocolo_modelo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4221,10 +4221,10 @@ DROP TABLE IF EXISTS `seq_grupo_serie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_grupo_serie` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4244,8 +4244,8 @@ DROP TABLE IF EXISTS `seq_grupo_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_grupo_unidade` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4267,10 +4267,10 @@ DROP TABLE IF EXISTS `seq_hipotese_legal`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_hipotese_legal` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4279,7 +4279,6 @@ CREATE TABLE `seq_hipotese_legal` (
 
 LOCK TABLES `seq_hipotese_legal` WRITE;
 /*!40000 ALTER TABLE `seq_hipotese_legal` DISABLE KEYS */;
-INSERT INTO `seq_hipotese_legal` VALUES (45,NULL),(46,NULL),(47,NULL),(48,NULL),(49,NULL),(50,NULL),(51,NULL),(52,NULL),(53,NULL),(54,NULL);
 /*!40000 ALTER TABLE `seq_hipotese_legal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4291,10 +4290,10 @@ DROP TABLE IF EXISTS `seq_imagem_formato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_imagem_formato` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4315,8 +4314,8 @@ DROP TABLE IF EXISTS `seq_infra_auditoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_infra_auditoria` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4338,8 +4337,8 @@ DROP TABLE IF EXISTS `seq_infra_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_infra_log` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4361,8 +4360,8 @@ DROP TABLE IF EXISTS `seq_infra_navegador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_infra_navegador` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4384,8 +4383,8 @@ DROP TABLE IF EXISTS `seq_localizador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_localizador` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4407,8 +4406,8 @@ DROP TABLE IF EXISTS `seq_lugar_localizador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_lugar_localizador` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4430,10 +4429,10 @@ DROP TABLE IF EXISTS `seq_modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_modelo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4454,10 +4453,10 @@ DROP TABLE IF EXISTS `seq_nivel_acesso_permitido`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_nivel_acesso_permitido` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3028 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4478,8 +4477,8 @@ DROP TABLE IF EXISTS `seq_notificacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_notificacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4501,8 +4500,8 @@ DROP TABLE IF EXISTS `seq_novidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_novidade` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4524,8 +4523,8 @@ DROP TABLE IF EXISTS `seq_numeracao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_numeracao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4547,8 +4546,8 @@ DROP TABLE IF EXISTS `seq_observacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_observacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4570,8 +4569,8 @@ DROP TABLE IF EXISTS `seq_operacao_servico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_operacao_servico` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4593,8 +4592,8 @@ DROP TABLE IF EXISTS `seq_ordenador_despesa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_ordenador_despesa` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4616,10 +4615,10 @@ DROP TABLE IF EXISTS `seq_pais`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_pais` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=895 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4639,8 +4638,8 @@ DROP TABLE IF EXISTS `seq_participante`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_participante` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4662,8 +4661,8 @@ DROP TABLE IF EXISTS `seq_protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_protocolo` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4685,8 +4684,8 @@ DROP TABLE IF EXISTS `seq_protocolo_modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_protocolo_modelo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4708,8 +4707,8 @@ DROP TABLE IF EXISTS `seq_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_publicacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4731,8 +4730,8 @@ DROP TABLE IF EXISTS `seq_rel_protocolo_protocolo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_rel_protocolo_protocolo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4754,8 +4753,8 @@ DROP TABLE IF EXISTS `seq_retorno_programado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_retorno_programado` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4777,8 +4776,8 @@ DROP TABLE IF EXISTS `seq_secao_documento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_secao_documento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4800,10 +4799,10 @@ DROP TABLE IF EXISTS `seq_secao_imprensa_nacional`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_secao_imprensa_nacional` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4823,10 +4822,10 @@ DROP TABLE IF EXISTS `seq_secao_modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_secao_modelo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=776 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4847,10 +4846,10 @@ DROP TABLE IF EXISTS `seq_serie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_serie` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=275 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4871,8 +4870,8 @@ DROP TABLE IF EXISTS `seq_serie_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_serie_publicacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4894,8 +4893,8 @@ DROP TABLE IF EXISTS `seq_servico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_servico` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4917,8 +4916,8 @@ DROP TABLE IF EXISTS `seq_situacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_situacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4940,8 +4939,8 @@ DROP TABLE IF EXISTS `seq_texto_padrao_interno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_texto_padrao_interno` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -4963,10 +4962,10 @@ DROP TABLE IF EXISTS `seq_tipo_conferencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_tipo_conferencia` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4986,10 +4985,10 @@ DROP TABLE IF EXISTS `seq_tipo_contexto_contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_tipo_contexto_contato` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5010,8 +5009,8 @@ DROP TABLE IF EXISTS `seq_tipo_localizador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_tipo_localizador` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5033,10 +5032,10 @@ DROP TABLE IF EXISTS `seq_tipo_procedimento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_tipo_procedimento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=100000501 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5057,10 +5056,10 @@ DROP TABLE IF EXISTS `seq_tipo_suporte`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_tipo_suporte` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5080,8 +5079,8 @@ DROP TABLE IF EXISTS `seq_titulo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_titulo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5103,8 +5102,8 @@ DROP TABLE IF EXISTS `seq_tratamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_tratamento` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5126,10 +5125,10 @@ DROP TABLE IF EXISTS `seq_uf`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_uf` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5149,8 +5148,8 @@ DROP TABLE IF EXISTS `seq_unidade_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_unidade_publicacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5172,8 +5171,8 @@ DROP TABLE IF EXISTS `seq_upload`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_upload` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5195,10 +5194,10 @@ DROP TABLE IF EXISTS `seq_veiculo_imprensa_nacional`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_veiculo_imprensa_nacional` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5218,10 +5217,10 @@ DROP TABLE IF EXISTS `seq_veiculo_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_veiculo_publicacao` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5241,8 +5240,8 @@ DROP TABLE IF EXISTS `seq_versao_secao_documento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_versao_secao_documento` (
-  `id` bigint(20) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5264,8 +5263,8 @@ DROP TABLE IF EXISTS `seq_vocativo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_vocativo` (
-  `id` int(11) NOT NULL COMMENT 'Identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo.',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5287,19 +5286,19 @@ DROP TABLE IF EXISTS `serie`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `serie` (
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Tipo de documento.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do tipo de documento.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o tipo de documento está ativo ou não. S: Sim N: Não',
-  `id_modelo_edoc` int(11) DEFAULT NULL COMMENT 'Número que identifica o modelo EDOC.',
-  `id_grupo_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o grupo de tipo de documento.',
-  `id_serie` int(11) NOT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `sin_interessado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de documento permite interessados (S) ou não (N).',
-  `sin_destinatario` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de documento permite destinatários (S) ou não (N).',
-  `sta_numeracao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o tipo de numeração.',
-  `sin_assinatura_publicacao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se existe o campo de assinatura no tipo de documento. S: Sim N: Não',
-  `id_modelo` int(11) DEFAULT NULL COMMENT 'Número que identifica o modelo.',
-  `sta_aplicabilidade` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica a aplicabilidade do tipo de documento, ou seja, se o tipo de documento pode ser interno ou externo ("T"), apenas interno ("I") ou externo ("E").',
-  `sin_interno` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de documento é interno. S: Sim N: Não',
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `id_modelo_edoc` int(11) DEFAULT NULL,
+  `id_grupo_serie` int(11) DEFAULT NULL,
+  `id_serie` int(11) NOT NULL,
+  `sin_interessado` char(1) NOT NULL,
+  `sin_destinatario` char(1) NOT NULL,
+  `sta_numeracao` char(1) NOT NULL,
+  `sin_assinatura_publicacao` char(1) NOT NULL,
+  `id_modelo` int(11) DEFAULT NULL,
+  `sta_aplicabilidade` char(1) NOT NULL,
+  `sin_interno` char(1) NOT NULL,
   PRIMARY KEY (`id_serie`),
   UNIQUE KEY `ak1_serie` (`nome`,`sin_ativo`),
   KEY `if2_serie` (`id_grupo_serie`),
@@ -5328,8 +5327,8 @@ DROP TABLE IF EXISTS `serie_escolha`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `serie_escolha` (
-  `id_serie` int(11) NOT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
+  `id_serie` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_serie`,`id_unidade`),
   KEY `if1_serie_escolha` (`id_serie`),
   KEY `if2_serie_escolha` (`id_unidade`),
@@ -5355,9 +5354,9 @@ DROP TABLE IF EXISTS `serie_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `serie_publicacao` (
-  `id_serie_publicacao` int(11) NOT NULL COMMENT 'Número que identifica a publicação (série).',
-  `id_serie` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de documento.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
+  `id_serie_publicacao` int(11) NOT NULL,
+  `id_serie` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
   PRIMARY KEY (`id_serie_publicacao`),
   KEY `fk_serie_publicacao_serie` (`id_serie`),
   KEY `fk_serie_publicacao_orgao` (`id_orgao`),
@@ -5383,13 +5382,13 @@ DROP TABLE IF EXISTS `servico`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `servico` (
-  `id_servico` int(11) NOT NULL COMMENT 'Número que identifica o serviço.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `identificacao` varchar(50) DEFAULT NULL COMMENT 'Identificação do serviço.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do serviço.',
-  `servidor` longtext COMMENT 'Ips e hosts de servidores liberados para acesso ao serviço, separados por vírgula.',
-  `sin_link_externo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se existe link externo para o serviço.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o serviço está ativo ou não. S: Sim N:Não',
+  `id_servico` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `identificacao` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `servidor` longtext NOT NULL,
+  `sin_link_externo` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_servico`),
   KEY `i01_servico` (`id_usuario`),
   CONSTRAINT `fk_servico_usuario` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -5413,10 +5412,10 @@ DROP TABLE IF EXISTS `situacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `situacao` (
-  `id_situacao` int(11) NOT NULL COMMENT 'Número que identifica a situação.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome da situação.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da situação.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a situação está ativa ou não.',
+  `id_situacao` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_situacao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5438,13 +5437,13 @@ DROP TABLE IF EXISTS `tarefa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tarefa` (
-  `id_tarefa` int(11) NOT NULL COMMENT 'Número que identifica a tarefa realizada.',
-  `nome` varchar(250) DEFAULT NULL COMMENT 'Definição da tarefa realizada.',
-  `sin_historico_resumido` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se existe apresentação do histórico resumido.',
-  `sin_historico_completo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se existe apresentação do histórico completo.',
-  `sin_fechar_andamentos_abertos` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a tarefa fecha outras atividades abertas para o mesmo protocolo (S) ou não (N).',
-  `sin_lancar_andamento_fechado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se uma atividade desta tarefa é aberta já como concluída (S) ou não (N).',
-  `sin_permite_processo_fechado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a tarefa pode ser realizada quando o processo está fechado (S) ou não (N).',
+  `id_tarefa` int(11) NOT NULL,
+  `nome` varchar(250) NOT NULL,
+  `sin_historico_resumido` char(1) NOT NULL,
+  `sin_historico_completo` char(1) NOT NULL,
+  `sin_fechar_andamentos_abertos` char(1) NOT NULL,
+  `sin_lancar_andamento_fechado` char(1) NOT NULL,
+  `sin_permite_processo_fechado` char(1) NOT NULL,
   PRIMARY KEY (`id_tarefa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5467,11 +5466,11 @@ DROP TABLE IF EXISTS `tarja_assinatura`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tarja_assinatura` (
-  `id_tarja_assinatura` int(11) NOT NULL COMMENT 'Número que identifica a tarja de assinatura.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da tarja de assinatura.',
-  `sta_forma_autenticacao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica a forma de autenticação.',
-  `texto` longtext COMMENT 'Texto da tarja de assinatura.',
-  `logo` longtext COMMENT 'Logo da tarja de assinatura.',
+  `id_tarja_assinatura` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `sta_forma_autenticacao` char(1) DEFAULT NULL,
+  `texto` longtext NOT NULL,
+  `logo` longtext,
   PRIMARY KEY (`id_tarja_assinatura`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5494,10 +5493,10 @@ DROP TABLE IF EXISTS `texto_padrao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `texto_padrao` (
-  `id_texto_padrao_edoc` bigint(20) NOT NULL COMMENT 'Número que identifica o texto padrão.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `id_documento_edoc` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o documento.',
-  `conteudo` longtext COMMENT 'Conteúdo do texto padrão.',
+  `id_texto_padrao_edoc` bigint(20) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_documento_edoc` bigint(20) NOT NULL,
+  `conteudo` longtext,
   PRIMARY KEY (`id_texto_padrao_edoc`),
   KEY `if1_texto_padrao` (`id_unidade`),
   CONSTRAINT `fk_texto_padrao_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -5521,12 +5520,12 @@ DROP TABLE IF EXISTS `texto_padrao_interno`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `texto_padrao_interno` (
-  `id_texto_padrao_interno` int(11) NOT NULL COMMENT 'Número que identifica o texto padrão interno.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `nome` varchar(30) DEFAULT NULL COMMENT 'Nome do texto padrão interno.',
-  `descricao` varchar(300) DEFAULT NULL COMMENT 'Descrição do texto padrão interno.',
-  `conteudo` longtext COMMENT 'Conteúdo do texto padrão interno (em HTML).',
-  `id_conjunto_estilos` int(11) DEFAULT NULL COMMENT 'Número que identifica o conjunto de estilos.',
+  `id_texto_padrao_interno` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `nome` varchar(30) NOT NULL,
+  `descricao` varchar(300) DEFAULT NULL,
+  `conteudo` longtext NOT NULL,
+  `id_conjunto_estilos` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_texto_padrao_interno`),
   KEY `i01_texto_padrao_interno` (`id_unidade`),
   KEY `fk_texto_padrao_int_conj` (`id_conjunto_estilos`),
@@ -5552,9 +5551,9 @@ DROP TABLE IF EXISTS `tipo_conferencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_conferencia` (
-  `id_tipo_conferencia` int(11) NOT NULL COMMENT 'Número que identifica o tipo de conferência de documento.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do tipo de conferência de documento.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de conferência está ativado (S) ou não (N).',
+  `id_tipo_conferencia` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_tipo_conferencia`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5577,12 +5576,12 @@ DROP TABLE IF EXISTS `tipo_contexto_contato`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_contexto_contato` (
-  `id_tipo_contexto_contato` int(11) NOT NULL COMMENT 'Número que identifica o tipo de contexto e contato.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome que identifica o tipo de contexto e contato.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do tipo de contexto e contato.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o tipo de contexto e contato está ativo.',
-  `sin_contatos` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de contexto aceita contatos ou não.',
-  `sin_liberado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o contexto está liberado ou não para pesquisa em todas as unidades.',
+  `id_tipo_contexto_contato` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sin_contatos` char(1) NOT NULL,
+  `sin_liberado` char(1) NOT NULL,
   PRIMARY KEY (`id_tipo_contexto_contato`),
   UNIQUE KEY `ak1_tipo_contexto_contato` (`nome`),
   KEY `ie1_tipo_contexto_contato` (`id_tipo_contexto_contato`,`sin_ativo`),
@@ -5608,12 +5607,12 @@ DROP TABLE IF EXISTS `tipo_localizador`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_localizador` (
-  `id_tipo_localizador` int(11) NOT NULL COMMENT 'Número que identifica o tipo de localizador.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `sigla` varchar(20) DEFAULT NULL COMMENT 'Sigla da unidade.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome da unidade.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o tipo de localizador está ativo ou não.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do tipo de localizador.',
+  `id_tipo_localizador` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `sigla` varchar(20) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id_tipo_localizador`),
   UNIQUE KEY `ak1_tipo_localizador` (`sigla`,`id_unidade`),
   UNIQUE KEY `ak_tipo_arquivo_nome` (`nome`,`id_unidade`),
@@ -5639,16 +5638,16 @@ DROP TABLE IF EXISTS `tipo_procedimento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_procedimento` (
-  `id_tipo_procedimento` int(11) NOT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `nome` varchar(100) DEFAULT NULL COMMENT 'Tipo de processo.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do tipo de processo.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de processo está ativo ou não.',
-  `sta_nivel_acesso_sugestao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica qual é o nível de acesso sugerido para o tipo de processo. 0:Público 1: Restrito',
-  `sin_interno` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de processo é interno do sistema ou não.',
-  `sin_ouvidoria` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de processo é exclusivo de ouvidoria ou não.',
-  `sin_individual` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o tipo de processo é único no órgão por usuário interessado (S/N).',
-  `id_hipotese_legal_sugestao` int(11) DEFAULT NULL COMMENT 'Número que identifica a hipótese legal sugerida.',
-  `sta_grau_sigilo_sugestao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o grau de sigilo sugerido.',
+  `id_tipo_procedimento` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `descricao` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sta_nivel_acesso_sugestao` char(1) NOT NULL,
+  `sin_interno` char(1) NOT NULL,
+  `sin_ouvidoria` char(1) NOT NULL,
+  `sin_individual` char(1) NOT NULL,
+  `id_hipotese_legal_sugestao` int(11) DEFAULT NULL,
+  `sta_grau_sigilo_sugestao` char(1) DEFAULT NULL,
   PRIMARY KEY (`id_tipo_procedimento`),
   KEY `fk_tipo_proced_hipotese_legal` (`id_hipotese_legal_sugestao`),
   KEY `i01_tipo_procedimento` (`id_tipo_procedimento`,`sin_ativo`),
@@ -5663,7 +5662,7 @@ CREATE TABLE `tipo_procedimento` (
 
 LOCK TABLES `tipo_procedimento` WRITE;
 /*!40000 ALTER TABLE `tipo_procedimento` DISABLE KEYS */;
-INSERT INTO `tipo_procedimento` VALUES (100000101,'Pessoal: Abono Permanência - Concessão',NULL,'S','1','N','N','N',34,NULL),(100000102,'Pessoal: Adicional de Férias (1/3 constitucional)',NULL,'S','1','N','N','N',34,NULL),(100000103,'Pessoal: Adicional de Insalubridade',NULL,'S','0','N','N','N',NULL,NULL),(100000104,'Pessoal: Adicional de Periculosidade',NULL,'S','0','N','N','N',NULL,NULL),(100000105,'Pessoal: Adicional Noturno',NULL,'S','0','N','N','N',NULL,NULL),(100000106,'Pessoal: Adicional por Atividade Penosa',NULL,'S','0','N','N','N',NULL,NULL),(100000107,'Pessoal: Adicional por Serviço Extraordinário',NULL,'S','0','N','N','N',NULL,NULL),(100000108,'Pessoal: Adicional por Tempo de Serviço',NULL,'S','1','N','N','N',34,NULL),(100000109,'Pessoal: Afastamento para Atividade Desportiva','Art. 102, inciso X, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000110,'Pessoal: Afastamento para Curso de Formação',NULL,'S','1','N','N','N',34,NULL),(100000111,'Pessoal: Afastamento para Depor','Art. 102, inciso VI, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000112,'Pessoal: Afastamento para Exercer Mandato Eletivo','Art. 94 Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000113,'Pessoal: Afastamento para Serviço Eleitoral (TRE)','Art. 102, inciso VI, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000114,'Pessoal: Afastamento para Servir como Jurado','Art. 102, inciso VI, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000116,'Pessoal: Afastamento para Pós-Graduação',NULL,'S','1','N','N','N',34,NULL),(100000118,'Pessoal: Afastamento para servir em Organismo Internacional','Art. 102, inciso XI, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000119,'Pessoal: Ajuda de Custo com Mudança de Domicílio','Art. 53 da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000120,'Pessoal: Aposentadoria - Contagem Tempo de Serviço',NULL,'S','1','N','N','N',34,NULL),(100000121,'Pessoal: Aposentadoria - Pensão Temporária',NULL,'S','1','N','N','N',34,NULL),(100000122,'Pessoal: Aposentadoria - Pensão Vitalícia',NULL,'S','1','N','N','N',34,NULL),(100000123,'Pessoal: Assentamento Funcional do Servidor',NULL,'S','1','N','N','N',34,NULL),(100000124,'Pessoal: Saúde - Solicitação de Auxílio-Saúde',NULL,'S','1','N','N','N',34,NULL),(100000125,'Pessoal: Saúde - Plano de Saúde',NULL,'S','1','N','N','N',34,NULL),(100000126,'Pessoal: Saúde - Prontuário Médico',NULL,'S','1','N','N','N',34,NULL),(100000127,'Pessoal: Ausência em razão de Casamento','Art. 97, inciso III, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000128,'Pessoal: Ausência para Alistamento Eleitoral','Art. 97, inciso II, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000129,'Pessoal: Ausência para Doação de Sangue','Art. 97, inciso I, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000130,'Pessoal: Ausência por Falecimento de Familiar','Art. 97, inciso III, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000131,'Pessoal: Auxílio Acidente',NULL,'S','1','N','N','N',34,NULL),(100000132,'Pessoal: Auxílio Alimentação/Refeição',NULL,'S','1','N','N','N',34,NULL),(100000133,'Pessoal: Auxílio Assistência Pré-Escolar/Creche',NULL,'S','1','N','N','N',34,NULL),(100000134,'Pessoal: Auxílio Doença',NULL,'S','1','N','N','N',34,NULL),(100000135,'Pessoal: Auxílio Funeral',NULL,'S','1','N','N','N',34,NULL),(100000136,'Pessoal: Auxílio Moradia','Art. 60-A da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000137,'Pessoal: Auxílio Natalidade',NULL,'S','1','N','N','N',34,NULL),(100000138,'Pessoal: Auxílio Reclusão',NULL,'S','1','N','N','N',34,NULL),(100000139,'Pessoal: Auxílio-Transporte',NULL,'S','1','N','N','N',34,NULL),(100000140,'Pessoal: Avaliação de Desempenho Individual',NULL,'S','1','N','N','N',34,NULL),(100000141,'Pessoal: Avaliação de Desempenho Institucional',NULL,'S','0','N','N','N',NULL,NULL),(100000142,'Pessoal: Avaliação de Estágio Probatório',NULL,'S','1','N','N','N',34,NULL),(100000143,'Pessoal: Averbação de Tempo de Serviço',NULL,'S','1','N','N','N',34,NULL),(100000144,'Pessoal: Bolsa de Estudo de Idioma Estrangeiro',NULL,'S','0','N','N','N',NULL,NULL),(100000145,'Pessoal: Bolsa de Pós-Graduação',NULL,'S','0','N','N','N',NULL,NULL),(100000146,'Pessoal: Cadastro de Dependente no Imposto de Renda',NULL,'S','1','N','N','N',34,NULL),(100000147,'Pessoal: Apresentação de Certificado de Curso',NULL,'S','0','N','N','N',NULL,NULL),(100000148,'Pessoal: Cessão de Servidor para outro Órgão',NULL,'S','0','N','N','N',NULL,NULL),(100000149,'Pessoal: CIPA',NULL,'S','0','N','N','N',NULL,NULL),(100000150,'Pessoal: Coleta de Imagem de Assinatura',NULL,'S','1','N','N','N',34,NULL),(100000151,'Pessoal: Aposentadoria - Concessão',NULL,'S','1','N','N','N',34,NULL),(100000152,'Pessoal: Concurso Público - Exames Admissionais',NULL,'S','1','N','N','N',34,NULL),(100000153,'Pessoal: Concurso Público - Organização',NULL,'S','0','N','N','N',NULL,NULL),(100000154,'Pessoal: Concurso Público - Provas e Títulos',NULL,'S','0','N','N','N',NULL,NULL),(100000155,'Pessoal: Controle de Frequência/Abono de Falta',NULL,'S','1','N','N','N',34,NULL),(100000156,'Pessoal: Controle de Frequência/Cumprir Hora Extra','Cumprimento de Horas Extras','S','1','N','N','N',34,NULL),(100000157,'Pessoal: Controle de Frequência/Folha de Ponto',NULL,'S','1','N','N','N',34,NULL),(100000158,'Pessoal: Curso no Exterior - com ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000159,'Pessoal: Curso Promovido pela própria Instituição',NULL,'S','0','N','N','N',NULL,NULL),(100000160,'Pessoal: Curso Promovido por outra Instituição',NULL,'S','0','N','N','N',NULL,NULL),(100000161,'Pessoal: Curso de Pós-Graduação',NULL,'S','0','N','N','N',NULL,NULL),(100000162,'Pessoal: Delegação de Competência',NULL,'S','0','N','N','N',NULL,NULL),(100000163,'Pessoal: Desconto da Contribuição para o INSS',NULL,'S','1','N','N','N',34,NULL),(100000164,'Pessoal: Desconto de Contribuição Associativa',NULL,'S','1','N','N','N',34,NULL),(100000165,'Pessoal: Desconto de Contribuição Sindical',NULL,'S','1','N','N','N',34,NULL),(100000166,'Pessoal: Desconto de Empréstimo Consignado',NULL,'S','1','N','N','N',34,NULL),(100000167,'Pessoal: Desconto de Pensão Alimentícia',NULL,'S','1','N','N','N',34,NULL),(100000169,'Pessoal: Desconto do IRPF Retido na Fonte',NULL,'S','1','N','N','N',34,NULL),(100000170,'Pessoal: Nomeação/Exoneração de Cargo Comissionado e Designação/Dispensa de Substituto',NULL,'S','0','N','N','N',NULL,NULL),(100000172,'Pessoal: Emissão de Certidões e Declarações',NULL,'S','1','N','N','N',34,NULL),(100000173,'Pessoal: Emissão de Procuração',NULL,'S','1','N','N','N',34,NULL),(100000174,'Pessoal: Encargo Patronal - Contribuição para INSS',NULL,'S','0','N','N','N',NULL,NULL),(100000175,'Pessoal: Estágio - Dossiê do Estagiário',NULL,'S','0','N','N','N',NULL,NULL),(100000176,'Pessoal: Estágio - Planejamento/Organização Geral',NULL,'S','0','N','N','N',NULL,NULL),(100000177,'Pessoal: Estágio de Servidor no Brasil',NULL,'S','0','N','N','N',NULL,NULL),(100000178,'Pessoal: Estágio de Servidor no Exterior',NULL,'S','0','N','N','N',NULL,NULL),(100000179,'Pessoal: Exoneração de Cargo Efetivo',NULL,'S','0','N','N','N',NULL,NULL),(100000181,'Pessoal: Falecimento de Servidor',NULL,'S','0','N','N','N',NULL,NULL),(100000182,'Pessoal: Férias - Alteração',NULL,'S','0','N','N','N',NULL,NULL),(100000183,'Pessoal: Férias - Interrupção',NULL,'S','0','N','N','N',NULL,NULL),(100000184,'Pessoal: Férias - Solicitação',NULL,'S','0','N','N','N',NULL,NULL),(100000185,'Pessoal: Ficha Financeira',NULL,'S','1','N','N','N',34,NULL),(100000186,'Pessoal: Folha de Pagamento',NULL,'S','1','N','N','N',34,NULL),(100000187,'Pessoal: Gratificação de Desempenho',NULL,'S','1','N','N','N',34,NULL),(100000188,'Pessoal: Gratificação Natalina (Décimo Terceiro)',NULL,'S','1','N','N','N',34,NULL),(100000189,'Pessoal: Gratificação por Encargo - Curso/Concurso',NULL,'S','0','N','N','N',NULL,NULL),(100000190,'Pessoal: Horário de Expediente - Definição',NULL,'S','0','N','N','N',NULL,NULL),(100000191,'Pessoal: Horário de Expediente - Escala de Plantão',NULL,'S','0','N','N','N',NULL,NULL),(100000192,'Pessoal: Horário Especial - Familiar Deficiente','Art. 98, § 3º, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000193,'Pessoal: Horário Especial - Instrutor de Curso','Art. 98, § 4º, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000194,'Pessoal: Horário Especial - Servidor Deficiente','Art. 98, § 2º, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000195,'Pessoal: Horário Especial - Servidor Estudante','Art. 98, § 1º, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000196,'Pessoal: Indenização de Transporte (meio próprio)','Art. 60 da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000197,'Pessoal: Saúde - Inspeção Periódica',NULL,'S','1','N','N','N',34,NULL),(100000198,'Pessoal: Licença Adotante','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000199,'Pessoal: Licença Gestante','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000200,'Pessoal: Licença Paternidade','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000201,'Pessoal: Licença para Atividade Política','Art. 81, inciso IV, Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000202,'Pessoal: Licença para Capacitação','Art. 81, inciso V, Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000203,'Pessoal: Licença para Mandato Classista','Art. 81, inciso VII, Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000204,'Pessoal: Licença para Serviço Militar','Art. 81, inciso III, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000205,'Pessoal: Licença para Tratamento da Própria Saúde','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000206,'Pessoal: Licença por Acidente em Serviço','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000207,'Pessoal: Licença por Afastamento do Cônjuge','Art. 84 da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000208,'Pessoal: Licença por Doença em Pessoa da Família','Art. 83 da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000209,'Pessoal: Licença por Doença Profissional','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000210,'Pessoal: Licença Prêmio por Assiduidade','Redação anterior do art. 81, inciso V, Lei nº 8.112/1990. Em razão de possível direito adquirido, muitos servidores ainda usufruem este tipo de licença.','S','1','N','N','N',34,NULL),(100000211,'Pessoal: Licença para Tratar de Interesses Particulares','Art. 81, inciso VI, Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000212,'Pessoal: Licenças por Aborto/Natimorto','Art. 102, inciso VIII, c/c art. 207, § 3º e § 4º, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000213,'Pessoal: Movimentação de Servidor',NULL,'S','1','N','N','N',34,NULL),(100000214,'Pessoal: Movimento Reivindicatório',NULL,'S','0','N','N','N',NULL,NULL),(100000215,'Pessoal: Negociação Sindical e Acordo Coletivo',NULL,'S','0','N','N','N',NULL,NULL),(100000217,'Pessoal: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000218,'Pessoal: Ocupação de Imóvel Funcional',NULL,'S','0','N','N','N',NULL,NULL),(100000219,'Pessoal: Orientações e Diretrizes Gerais',NULL,'S','0','N','N','N',NULL,NULL),(100000220,'Pessoal: Pagamento de Provento',NULL,'S','1','N','N','N',34,NULL),(100000221,'Pessoal: Pagamento de Remuneração',NULL,'S','1','N','N','N',34,NULL),(100000222,'Pessoal: Penalidade Advertência','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',34,NULL),(100000223,'Pessoal: Penalidade Cassação de Aposentadoria','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',34,NULL),(100000224,'Pessoal: Penalidade Demissão de Cargo Efetivo','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',34,NULL),(100000225,'Pessoal: Penalidade Destituição Cargo em Comissão','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',34,NULL),(100000226,'Pessoal: Penalidade Disponibilidade','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',34,NULL),(100000227,'Pessoal: Penalidade Suspensão','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',34,NULL),(100000228,'Pessoal: Pensão por Morte de Servidor',NULL,'S','1','N','N','N',34,NULL),(100000229,'Pessoal: Planejamento da Força de Trabalho',NULL,'S','0','N','N','N',NULL,NULL),(100000230,'Pessoal: Prêmios de Reconhecimento',NULL,'S','0','N','N','N',NULL,NULL),(100000231,'Pessoal: Prevenção de Acidentes no Trabalho',NULL,'S','0','N','N','N',NULL,NULL),(100000232,'Pessoal: Progressão e Promoção (Quadro Efetivo)',NULL,'S','0','N','N','N',NULL,NULL),(100000233,'Pessoal: Progressão e Promoção (Quadro Específico)',NULL,'S','0','N','N','N',NULL,NULL),(100000234,'Pessoal: Provimento - Nomeação para Cargo Efetivo',NULL,'S','0','N','N','N',NULL,NULL),(100000235,'Pessoal: Provimento - Nomeação para Cargo em Comissão',NULL,'S','0','N','N','N',NULL,NULL),(100000236,'Pessoal: Provimento - por Aproveitamento',NULL,'S','0','N','N','N',NULL,NULL),(100000237,'Pessoal: Provimento - por Readaptação',NULL,'S','0','N','N','N',NULL,NULL),(100000238,'Pessoal: Provimento - por Recondução',NULL,'S','0','N','N','N',NULL,NULL),(100000239,'Pessoal: Provimento - por Reintegração',NULL,'S','0','N','N','N',NULL,NULL),(100000240,'Pessoal: Provimento - por Reversão',NULL,'S','0','N','N','N',NULL,NULL),(100000241,'Finanças: Reembolso/Ressarcimento',NULL,'S','0','N','N','N',NULL,NULL),(100000242,'Pessoal: Relação com Conselho Profissional',NULL,'S','0','N','N','N',NULL,NULL),(100000243,'Pessoal: Remoção a Pedido - Concurso Interno','Art. 36, parágrafo único, inciso III, alínea \"c\", da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000244,'Pessoal: Remoção a Pedido com Mudança de Sede','Art. 36, parágrafo único, inciso II, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000245,'Pessoal: Remoção a Pedido para Acompanhar Cônjuge','Art. 36, parágrafo único, inciso III, alínea \"a\", da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000246,'Pessoal: Remoção a Pedido por Motivo de Saúde','Art. 36, parágrafo único, inciso III, alínea \"b\", da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000247,'Pessoal: Remoção a Pedido sem Mudança de Sede','Art. 36, parágrafo único, inciso II, da Lei nº 8.112/1990.','S','1','N','N','N',34,NULL),(100000248,'Pessoal: Remoção de Ofício com Mudança de Sede','Art. 36, parágrafo único, inciso I, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000249,'Pessoal: Remoção de Ofício sem Mudança de Sede','Art. 36, parágrafo único, inciso I, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000250,'Pessoal: Requisição de Servidor Externo',NULL,'S','0','N','N','N',NULL,NULL),(100000251,'Pessoal: Requisição de Servidor Interno',NULL,'S','0','N','N','N',NULL,NULL),(100000252,'Pessoal: Restruturação de Cargos e Funções',NULL,'S','0','N','N','N',NULL,NULL),(100000253,'Pessoal: Retribuição por Cargo em Comissão',NULL,'S','0','N','N','N',NULL,NULL),(100000254,'Pessoal: Salário-Família',NULL,'S','1','N','N','N',34,NULL),(100000255,'Pessoal: Subsidiar Ação Judicial',NULL,'S','0','N','N','N',NULL,NULL),(100000256,'Arrecadação: Cobrança',NULL,'S','0','N','N','N',NULL,NULL),(100000257,'Arrecadação: Cumprimento de Ação Judicial',NULL,'S','0','N','N','N',NULL,NULL),(100000258,'Arrecadação: Encaminhamento para Dívida Ativa',NULL,'S','0','N','N','N',NULL,NULL),(100000259,'Arrecadação: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000260,'Arrecadação: Notificação/Comunicado',NULL,'S','0','N','N','N',NULL,NULL),(100000261,'Arrecadação: Receita',NULL,'S','0','N','N','N',NULL,NULL),(100000262,'Arrecadação: Regularização de Indébitos',NULL,'S','0','N','N','N',NULL,NULL),(100000263,'Arrecadação: Restituição/Compensação',NULL,'S','0','N','N','N',NULL,NULL),(100000264,'Arrecadação: Subsidiar Ação Judicial',NULL,'S','0','N','N','N',NULL,NULL),(100000265,'Contabilidade: Análise Contábil',NULL,'S','0','N','N','N',NULL,NULL),(100000266,'Contabilidade: Conformidade de Gestão',NULL,'S','0','N','N','N',NULL,NULL),(100000267,'Contabilidade: Contratos e Garantias',NULL,'S','0','N','N','N',NULL,NULL),(100000268,'Suprimento de Fundos: Concessão e Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000269,'Contabilidade: DIRF',NULL,'S','0','N','N','N',NULL,NULL),(100000270,'Contabilidade: Encerramento do Exercício',NULL,'S','0','N','N','N',NULL,NULL),(100000271,'Contabilidade: Fechamento Contábil - Estoque',NULL,'S','0','N','N','N',NULL,NULL),(100000272,'Contabilidade: Fechamento Contábil Patrimonial',NULL,'S','0','N','N','N',NULL,NULL),(100000273,'Contabilidade: Manuais',NULL,'S','0','N','N','N',NULL,NULL),(100000274,'Contabilidade: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000275,'Contabilidade: Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000276,'Finanças: Execução Financeira',NULL,'S','0','N','N','N',NULL,NULL),(100000277,'Finanças: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000278,'Gestão da Informação: Arrecadação',NULL,'S','0','N','N','N',NULL,NULL),(100000279,'Orçamento: Acompanhamento de Despesa Mensal',NULL,'S','0','N','N','N',NULL,NULL),(100000280,'Orçamento: Contingenciamento',NULL,'S','0','N','N','N',NULL,NULL),(100000281,'Orçamento: Créditos Adicionais',NULL,'S','0','N','N','N',NULL,NULL),(100000282,'Orçamento: Descentralização de Créditos',NULL,'S','0','N','N','N',NULL,NULL),(100000283,'Orçamento: Manuais',NULL,'S','0','N','N','N',NULL,NULL),(100000284,'Orçamento: Programação Orçamentária',NULL,'S','0','N','N','N',NULL,NULL),(100000285,'Viagem: Exterior - Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000286,'Viagem: Publicação de Boletim',NULL,'S','0','N','N','N',NULL,NULL),(100000287,'Viagem: No País - Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000288,'Infraestrutura: Abastecimento de Água e Esgoto',NULL,'S','0','N','N','N',NULL,NULL),(100000289,'Pessoal: Vacância - Posse em Cargo Inacumulável',NULL,'S','0','N','N','N',NULL,NULL),(100000290,'Infraestrutura: Fornecimento de Energia Elétrica',NULL,'S','0','N','N','N',NULL,NULL),(100000291,'Material: Desfazimento de Material Permanente',NULL,'S','0','N','N','N',NULL,NULL),(100000292,'Material: Desfazimento de Material de Consumo',NULL,'S','0','N','N','N',NULL,NULL),(100000293,'Material: Movimentação de Material de Consumo',NULL,'S','0','N','N','N',NULL,NULL),(100000294,'Material: Inventário de Material de Consumo',NULL,'S','0','N','N','N',NULL,NULL),(100000295,'Material: Inventário de Material Permanente',NULL,'S','0','N','N','N',NULL,NULL),(100000296,'Patrimônio: Gestão de Bens Imóveis',NULL,'S','0','N','N','N',NULL,NULL),(100000297,'Segurança Institucional: Automação e Controle Predial',NULL,'S','0','N','N','N',NULL,NULL),(100000298,'Segurança Institucional: Controle de Acesso/Portaria',NULL,'S','0','N','N','N',NULL,NULL),(100000299,'Segurança Institucional: Controle de Acesso/Garagem',NULL,'S','0','N','N','N',NULL,NULL),(100000300,'Segurança Institucional: Prevenção contra Incêndio',NULL,'S','0','N','N','N',NULL,NULL),(100000301,'Segurança Institucional: Projeto contra Incêndio',NULL,'S','0','N','N','N',NULL,NULL),(100000302,'Segurança Institucional: Serviço de Vigilância',NULL,'S','0','N','N','N',NULL,NULL),(100000303,'Corregedoria: Correição',NULL,'S','1','N','N','N',31,NULL),(100000304,'Licitação: Plano de Aquisições',NULL,'S','0','N','N','N',NULL,NULL),(100000305,'Convênios/Ajustes: Formalização/Alteração com Repasse',NULL,'S','0','N','N','N',NULL,NULL),(100000306,'Convênios/Ajustes: Formalização/Alteração sem Repasse',NULL,'S','0','N','N','N',NULL,NULL),(100000307,'Convênios/Ajustes: Acompanhamento da Execução',NULL,'S','0','N','N','N',NULL,NULL),(100000308,'Gestão de Contrato: Supressão Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000309,'Gestão de Contrato: Aplicação de Sanção Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000310,'Gestão de Contrato: Revisão Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000311,'Gestão de Contrato: Execução de Garantia',NULL,'S','0','N','N','N',NULL,NULL),(100000312,'Gestão de Contrato: Processo de Pagamento',NULL,'S','0','N','N','N',NULL,NULL),(100000313,'Gestão de Contrato: Prorrogação Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000314,'Gestão de Contrato: Reajuste ou Repactuação Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000315,'Gestão de Contrato: Rescisão Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000316,'Gestão de Contrato: Acompanhamento da Execução',NULL,'S','0','N','N','N',NULL,NULL),(100000317,'Licitação: Pregão Eletrônico',NULL,'S','0','N','N','N',NULL,NULL),(100000318,'Licitação: Pregão Eletrônico-Registro de Preço',NULL,'S','0','N','N','N',NULL,NULL),(100000319,'Licitação: Pregão Presencial',NULL,'S','0','N','N','N',NULL,NULL),(100000320,'Licitação: Concorrência',NULL,'S','0','N','N','N',NULL,NULL),(100000321,'Licitação: Concorrência-Registro de Preço',NULL,'S','0','N','N','N',NULL,NULL),(100000322,'Licitação: Tomada de Preços',NULL,'S','0','N','N','N',NULL,NULL),(100000323,'Licitação: Convite',NULL,'S','0','N','N','N',NULL,NULL),(100000324,'Licitação: Regime Diferenciado de Contratação-RDC',NULL,'S','0','N','N','N',NULL,NULL),(100000325,'Licitação: Concurso',NULL,'S','0','N','N','N',NULL,NULL),(100000326,'Licitação: Leilão',NULL,'S','0','N','N','N',NULL,NULL),(100000327,'Corregedoria: Procedimento Geral',NULL,'S','1','N','N','N',31,NULL),(100000328,'Licitação: Adesão a Ata de RP-Participante',NULL,'S','0','N','N','N',NULL,NULL),(100000329,'Licitação: Adesão a Ata de RP-Não Participante',NULL,'S','0','N','N','N',NULL,NULL),(100000330,'Licitação: Dispensa - Até R$ 8 mil',NULL,'S','0','N','N','N',NULL,NULL),(100000331,'Licitação: Dispensa - Acima de R$ 8 mil',NULL,'S','0','N','N','N',NULL,NULL),(100000332,'Licitação: Inexigibilidade',NULL,'S','0','N','N','N',NULL,NULL),(100000333,'Ouvidoria: Elogio à atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000334,'Ouvidoria: Crítica à atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000335,'Ouvidoria: Denúncia contra a atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000336,'Ouvidoria: Reclamação à atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000337,'Ouvidoria: Agradecimento ao Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000338,'Ouvidoria: Pedido de Informação','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000339,'Gestão e Controle: Executar Auditoria Interna','Analisar a fidedignidade das informações que tramitam nos processos do Órgão, identificar necessidade de pontos de controle de não conformidades, suas causas, qualificar e quantificar as perdas e recomendar ações corretivas e preventivas.','S','0','N','N','N',NULL,NULL),(100000340,'Gestão e Controle: Demandas de Órgãos de Controle','Administrar demandas e acompanhar as deliberações dos órgãos de controle do Governo Federal.','S','0','N','N','N',NULL,NULL),(100000341,'Comunicação: Pedido de Apoio Institucional','Pedidos para utilização da logomarca do Órgão em eventos institucionais promovidos por terceiros, sejam públicos ou privados.','S','0','N','N','N',NULL,NULL),(100000342,'Comunicação: Evento Institucional Público Externo','Processo para recebimento de pedidos de apoio para a realização de eventos institucionais direcionados ao público externo, por exemplo, Audiências Públicas e Sessões Públicas.','S','0','N','N','N',NULL,NULL),(100000343,'Comunicação: Publicidade Legal','Demandas para publicação em veículos de comunicação de grande circulação, para fins de publicidade exigida por lei, por exemplo, avisos de realização de pregões e de audiências públicas.','S','0','N','N','N',NULL,NULL),(100000344,'Comunicação: Publicidade Institucional','Demandas para a realização de ações de comunicação para disseminar - para os públicos interno ou externo - informações sobre determinados temas de maior relevância.','S','0','N','N','N',NULL,NULL),(100000345,'Comunicação: Evento Institucional Público Interno','Pedidos de apoio para a realização de eventos institucionais direcionados ao público interno, por exemplo, Aniversário do Órgão ou eventos da Semana do Servidor Público.','S','0','N','N','N',NULL,NULL),(100000346,'Acompanhamento Legislativo: Senado Federal','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000347,'Acompanhamento Legislativo: Câmara dos Deputados','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000348,'Acompanhamento Legislativo: Congresso Nacional','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000349,'Acompanhamento Legislativo: Estadual/Distrital','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000350,'Acompanhamento Legislativo: Municipal','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000351,'Demanda Externa: Senador','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000352,'Demanda Externa: Deputado Federal','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000353,'Demanda Externa: Deputado Estadual/Distrital','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000354,'Demanda Externa: Vereador/Câmara Municipal','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000355,'Demanda Externa: Orgãos Governamentais Federais','Atender solicitações institucionais de órgãos governamentais federais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000356,'Demanda Externa: Orgãos Governamentais Estaduais','Atender solicitações institucionais de órgãos governamentais estaduais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000357,'Demanda Externa: Orgãos Governamentais Municipais','Atender solicitações institucionais de órgãos governamentais municipais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000358,'Demanda Externa: Outros Orgãos Públicos','Atender solicitações institucionais de outros órgãos governamentais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000359,'Arrecadação: Parcelamento Administrativo',NULL,'S','0','N','N','N',NULL,NULL),(100000360,'Corregedoria: Análise Prescricional de Processo',NULL,'S','1','N','N','N',31,NULL),(100000361,'Corregedoria: Investigação Preliminar',NULL,'S','1','N','N','N',31,NULL),(100000362,'Corregedoria: Sindicância Punitiva',NULL,'S','1','N','N','N',31,NULL),(100000363,'Corregedoria: Processo Administrativo Disciplinar',NULL,'S','1','N','N','N',31,NULL),(100000364,'Corregedoria: Avaliação para Estabilidade',NULL,'S','1','N','N','N',31,NULL),(100000365,'Gestão da Informação: Credenciamento de Segurança','Credenciamento para acesso a documentos classificados.','S','0','N','N','N',NULL,NULL),(100000366,'Gestão da Informação: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000367,'Gestão da Informação: Rol Anual de Informações Classificadas','Processo de divulgação anual do rol de informações classificadas.','S','0','N','N','N',NULL,NULL),(100000368,'Gestão da Informação: Avaliação/Destinação de Documentos',NULL,'S','0','N','N','N',NULL,NULL),(100000369,'Gestão da Informação: Reconstituição Documental','Reconstituição de processos ou documentos perdidos ou danificados.','S','0','N','N','N',NULL,NULL),(100000370,'Patrimônio: Cobrança de Acervo Bibliográfico',NULL,'S','0','N','N','N',NULL,NULL),(100000371,'Patrimônio: Gestão de Acervo Bibliográfico',NULL,'S','0','N','N','N',NULL,NULL),(100000372,'Gestão de Projetos: Planejamento e Execução',NULL,'S','0','N','N','N',NULL,NULL),(100000373,'Gestão de Processos: Mapeamento e Modelagem',NULL,'S','0','N','N','N',NULL,NULL),(100000374,'Gestão e Controle: Coordenação - Demandas Internas',NULL,'S','0','N','N','N',NULL,NULL),(100000375,'Gestão e Controle: Coordenação - Demandas Externas',NULL,'S','0','N','N','N',NULL,NULL),(100000376,'Planejamento Estratégico: Gestão do Plano Estratégico','Gestão do plano estratégico do Órgão.','S','0','N','N','N',NULL,NULL),(100000377,'Planejamento Estratégico: Gestão de Risco','Gestão dos riscos e controle de riscos com vista ao alcance dos objetivos estratégicos.','S','0','N','N','N',NULL,NULL),(100000378,'Planejamento Estratégico: Inteligência Estratégica','Monitoramento dos objetivos estratégicos, cenários prospectivos e estratégias dos atores que impactam no alcance do objetivos estratégicos.','S','0','N','N','N',NULL,NULL),(100000379,'Planejamento Estratégico: Elaboração do Plano Estratégico','Elaboração das propostas do plano estratégico do Órgão.','S','0','N','N','N',NULL,NULL),(100000380,'Planejamento Estratégico: Elaboração do Plano Operacional','Consolidação do Plano Operacional do Órgão.','S','0','N','N','N',NULL,NULL),(100000381,'Acesso à Informação: Demanda do e-SIC','Tratamento de demandas e recursos do e-SIC.','S','0','N','N','N',NULL,NULL),(100000382,'Demanda Externa: Cidadão (Pessoa Física)',NULL,'S','0','N','N','N',NULL,NULL),(100000383,'Gestão de Contrato: Pagamento Direto a Terceiros',NULL,'S','0','N','N','N',NULL,NULL),(100000384,'Gestão de TI: CITI',NULL,'S','0','N','N','N',NULL,NULL),(100000385,'Demanda Externa: Judiciário',NULL,'S','0','N','N','N',NULL,NULL),(100000386,'Demanda Externa: Ministério Público Estadual',NULL,'S','0','N','N','N',NULL,NULL),(100000387,'Demanda Externa: Ministério Público Federal',NULL,'S','0','N','N','N',NULL,NULL),(100000388,'Demanda Externa: Outras Entidades Privadas',NULL,'S','0','N','N','N',NULL,NULL),(100000389,'Gestão da Informação: Controle de Malote',NULL,'S','0','N','N','N',NULL,NULL),(100000390,'Suprimento de Fundos: Solicitação de Despesa',NULL,'S','0','N','N','N',NULL,NULL),(100000391,'Material: Movimentação de Material Permanente',NULL,'S','0','N','N','N',NULL,NULL),(100000392,'Pessoal: Saúde - Exclusão de Auxílio-Saúde',NULL,'S','0','N','N','N',NULL,NULL),(100000393,'Pessoal: Saúde - Pagamento de Auxílio-Saúde',NULL,'S','0','N','N','N',NULL,NULL),(100000394,'Pessoal: Saúde - Cadastro de Dependente Estudante no Auxílio-Saúde',NULL,'S','0','N','N','N',NULL,NULL),(100000395,'Pessoal: Saúde - Auxílio-Saúde GEAP',NULL,'S','0','N','N','N',NULL,NULL),(100000396,'Pessoal: Saúde - Atestado de Comparecimento',NULL,'S','0','N','N','N',NULL,NULL),(100000397,'Pessoal: Saúde - Ressarcimento ao Erário',NULL,'S','0','N','N','N',NULL,NULL),(100000398,'Pessoal: Saúde - Pagamento de Retroativo',NULL,'S','0','N','N','N',NULL,NULL),(100000399,'Pessoal: Saúde e Qualidade de Vida no Trabalho',NULL,'S','0','N','N','N',NULL,NULL),(100000400,'Pessoal: Ressarcimento ao Erário',NULL,'S','0','N','N','N',NULL,NULL),(100000401,'Gestão de Contrato: Consulta à Procuradoria/Conjur',NULL,'S','0','N','N','N',NULL,NULL),(100000402,'Gestão de Contrato: Acréscimo Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000403,'Gestão de Contrato: Alterações Contratuais Conjuntas',NULL,'S','0','N','N','N',NULL,NULL),(100000404,'Gestão de Contrato: Outras Alterações Contratuais não Relacionadas',NULL,'S','0','N','N','N',NULL,NULL),(100000405,'Pessoal: Abono Permanência - Revisão',NULL,'S','0','N','N','N',NULL,NULL),(100000406,'Pessoal: Aposentadoria - Revisão',NULL,'S','0','N','N','N',NULL,NULL),(100000407,'Pessoal: Plano de Capacitação',NULL,'S','0','N','N','N',NULL,NULL),(100000408,'Licitação: Aplicação de Sanção decorrente de Procedimento Licitatório',NULL,'S','0','N','N','N',NULL,NULL),(100000409,'Gestão da Informação: Cadastro de Usuário Externo no SEI',NULL,'S','0','N','N','N',NULL,NULL),(100000410,'Pessoal: Saúde - Lançamento Mensal do Auxílio-Saúde no SIAPE',NULL,'S','0','N','N','N',NULL,NULL),(100000411,'Gestão da Informação: Segurança da Informação e Comunicações',NULL,'S','0','N','N','N',NULL,NULL),(100000412,'Ética: Processo de Apuração Ética',NULL,'S','0','N','N','N',NULL,NULL),(100000413,'Ética: Análise de Conflito de Interesse',NULL,'S','0','N','N','N',NULL,NULL),(100000414,'Pessoal: Curso no Exterior - ônus limitado',NULL,'S','0','N','N','N',NULL,NULL),(100000415,'Pessoal: Curso no Exterior - sem ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000416,'Planejamento Estratégico: Acompanhamento do Plano Operacional',NULL,'S','0','N','N','N',NULL,NULL),(100000417,'Licitação: Consulta',NULL,'S','0','N','N','N',NULL,NULL),(100000418,'Infraestrutura: Apoio de Engenharia Civil',NULL,'S','0','N','N','N',NULL,NULL),(100000419,'Gestão da Informação: Gestão Documental',NULL,'S','0','N','N','N',NULL,NULL),(100000420,'Relações Internacionais: Composição de Delegação - com ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000421,'Relações Internacionais: Composição de Delegação - ônus limitado',NULL,'S','0','N','N','N',NULL,NULL),(100000422,'Relações Internacionais: Composição de Delegação - sem ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000423,'Relações Internacionais: Cooperação Internacional',NULL,'S','0','N','N','N',NULL,NULL),(100000424,'Processo Reservado à Área-Meio 318',NULL,'N','0','N','N','N',NULL,NULL),(100000425,'Processo Reservado à Área-Meio 319',NULL,'N','0','N','N','N',NULL,NULL),(100000426,'Processo Reservado à Área-Meio 320',NULL,'N','0','N','N','N',NULL,NULL),(100000427,'Processo Reservado à Área-Meio 321',NULL,'N','0','N','N','N',NULL,NULL),(100000428,'Processo Reservado à Área-Meio 322',NULL,'N','0','N','N','N',NULL,NULL),(100000429,'Processo Reservado à Área-Meio 323',NULL,'N','0','N','N','N',NULL,NULL),(100000430,'Processo Reservado à Área-Meio 324',NULL,'N','0','N','N','N',NULL,NULL),(100000431,'Processo Reservado à Área-Meio 325',NULL,'N','0','N','N','N',NULL,NULL),(100000432,'Processo Reservado à Área-Meio 326',NULL,'N','0','N','N','N',NULL,NULL),(100000433,'Processo Reservado à Área-Meio 327',NULL,'N','0','N','N','N',NULL,NULL),(100000434,'Processo Reservado à Área-Meio 328',NULL,'N','0','N','N','N',NULL,NULL),(100000435,'Processo Reservado à Área-Meio 329',NULL,'N','0','N','N','N',NULL,NULL),(100000436,'Processo Reservado à Área-Meio 330',NULL,'N','0','N','N','N',NULL,NULL),(100000437,'Processo Reservado à Área-Meio 331',NULL,'N','0','N','N','N',NULL,NULL),(100000438,'Processo Reservado à Área-Meio 332',NULL,'N','0','N','N','N',NULL,NULL),(100000439,'Processo Reservado à Área-Meio 333',NULL,'N','0','N','N','N',NULL,NULL),(100000440,'Processo Reservado à Área-Meio 334',NULL,'N','0','N','N','N',NULL,NULL),(100000441,'Processo Reservado à Área-Meio 335',NULL,'N','0','N','N','N',NULL,NULL),(100000442,'Processo Reservado à Área-Meio 336',NULL,'N','0','N','N','N',NULL,NULL),(100000443,'Processo Reservado à Área-Meio 337',NULL,'N','0','N','N','N',NULL,NULL),(100000444,'Processo Reservado à Área-Meio 338',NULL,'N','0','N','N','N',NULL,NULL),(100000445,'Processo Reservado à Área-Meio 339',NULL,'N','0','N','N','N',NULL,NULL),(100000446,'Processo Reservado à Área-Meio 340',NULL,'N','0','N','N','N',NULL,NULL),(100000447,'Processo Reservado à Área-Meio 341',NULL,'N','0','N','N','N',NULL,NULL),(100000448,'Processo Reservado à Área-Meio 342',NULL,'N','0','N','N','N',NULL,NULL),(100000449,'Processo Reservado à Área-Meio 343',NULL,'N','0','N','N','N',NULL,NULL),(100000450,'Processo Reservado à Área-Meio 344',NULL,'N','0','N','N','N',NULL,NULL),(100000451,'Processo Reservado à Área-Meio 345',NULL,'N','0','N','N','N',NULL,NULL),(100000452,'Processo Reservado à Área-Meio 346',NULL,'N','0','N','N','N',NULL,NULL),(100000453,'Processo Reservado à Área-Meio 347',NULL,'N','0','N','N','N',NULL,NULL),(100000454,'Processo Reservado à Área-Meio 348',NULL,'N','0','N','N','N',NULL,NULL),(100000455,'Processo Reservado à Área-Meio 349',NULL,'N','0','N','N','N',NULL,NULL),(100000456,'Processo Reservado à Área-Meio 350',NULL,'N','0','N','N','N',NULL,NULL),(100000457,'Processo Reservado à Área-Meio 351',NULL,'N','0','N','N','N',NULL,NULL),(100000458,'Processo Reservado à Área-Meio 352',NULL,'N','0','N','N','N',NULL,NULL),(100000459,'Processo Reservado à Área-Meio 353',NULL,'N','0','N','N','N',NULL,NULL),(100000460,'Processo Reservado à Área-Meio 354',NULL,'N','0','N','N','N',NULL,NULL),(100000461,'Processo Reservado à Área-Meio 355',NULL,'N','0','N','N','N',NULL,NULL),(100000462,'Processo Reservado à Área-Meio 356',NULL,'N','0','N','N','N',NULL,NULL),(100000463,'Processo Reservado à Área-Meio 357',NULL,'N','0','N','N','N',NULL,NULL),(100000464,'Processo Reservado à Área-Meio 358',NULL,'N','0','N','N','N',NULL,NULL),(100000465,'Processo Reservado à Área-Meio 359',NULL,'N','0','N','N','N',NULL,NULL),(100000466,'Processo Reservado à Área-Meio 360',NULL,'N','0','N','N','N',NULL,NULL),(100000467,'Processo Reservado à Área-Meio 361',NULL,'N','0','N','N','N',NULL,NULL),(100000468,'Processo Reservado à Área-Meio 362',NULL,'N','0','N','N','N',NULL,NULL),(100000469,'Processo Reservado à Área-Meio 363',NULL,'N','0','N','N','N',NULL,NULL),(100000470,'Processo Reservado à Área-Meio 364',NULL,'N','0','N','N','N',NULL,NULL),(100000471,'Processo Reservado à Área-Meio 365',NULL,'N','0','N','N','N',NULL,NULL),(100000472,'Processo Reservado à Área-Meio 366',NULL,'N','0','N','N','N',NULL,NULL),(100000473,'Processo Reservado à Área-Meio 367',NULL,'N','0','N','N','N',NULL,NULL),(100000474,'Processo Reservado à Área-Meio 368',NULL,'N','0','N','N','N',NULL,NULL),(100000475,'Processo Reservado à Área-Meio 369',NULL,'N','0','N','N','N',NULL,NULL),(100000476,'Processo Reservado à Área-Meio 370',NULL,'N','0','N','N','N',NULL,NULL),(100000477,'Processo Reservado à Área-Meio 371',NULL,'N','0','N','N','N',NULL,NULL),(100000478,'Processo Reservado à Área-Meio 372',NULL,'N','0','N','N','N',NULL,NULL),(100000479,'Processo Reservado à Área-Meio 373',NULL,'N','0','N','N','N',NULL,NULL),(100000480,'Processo Reservado à Área-Meio 374',NULL,'N','0','N','N','N',NULL,NULL),(100000481,'Processo Reservado à Área-Meio 375',NULL,'N','0','N','N','N',NULL,NULL),(100000482,'Processo Reservado à Área-Meio 376',NULL,'N','0','N','N','N',NULL,NULL),(100000483,'Processo Reservado à Área-Meio 377',NULL,'N','0','N','N','N',NULL,NULL),(100000484,'Processo Reservado à Área-Meio 378',NULL,'N','0','N','N','N',NULL,NULL),(100000485,'Processo Reservado à Área-Meio 379',NULL,'N','0','N','N','N',NULL,NULL),(100000486,'Processo Reservado à Área-Meio 380',NULL,'N','0','N','N','N',NULL,NULL),(100000487,'Processo Reservado à Área-Meio 381',NULL,'N','0','N','N','N',NULL,NULL),(100000488,'Processo Reservado à Área-Meio 382',NULL,'N','0','N','N','N',NULL,NULL),(100000489,'Processo Reservado à Área-Meio 383',NULL,'N','0','N','N','N',NULL,NULL),(100000490,'Processo Reservado à Área-Meio 384',NULL,'N','0','N','N','N',NULL,NULL),(100000491,'Processo Reservado à Área-Meio 385',NULL,'N','0','N','N','N',NULL,NULL),(100000492,'Processo Reservado à Área-Meio 386',NULL,'N','0','N','N','N',NULL,NULL),(100000493,'Processo Reservado à Área-Meio 387',NULL,'N','0','N','N','N',NULL,NULL),(100000494,'Processo Reservado à Área-Meio 388',NULL,'N','0','N','N','N',NULL,NULL),(100000495,'Processo Reservado à Área-Meio 389',NULL,'N','0','N','N','N',NULL,NULL),(100000496,'Processo Reservado à Área-Meio 390',NULL,'N','0','N','N','N',NULL,NULL),(100000497,'Processo Reservado à Área-Meio 391',NULL,'N','0','N','N','N',NULL,NULL),(100000498,'Processo Reservado à Área-Meio 392',NULL,'N','0','N','N','N',NULL,NULL),(100000499,'Processo Reservado à Área-Meio 393',NULL,'N','0','N','N','N',NULL,NULL),(100000500,'Processo Reservado à Área-Meio 394',NULL,'N','0','N','N','N',NULL,NULL);
+INSERT INTO `tipo_procedimento` VALUES (100000101,'Pessoal: Abono Permanência - Concessão',NULL,'S','1','N','N','N',4,NULL),(100000102,'Pessoal: Adicional de Férias (1/3 constitucional)',NULL,'S','1','N','N','N',4,NULL),(100000103,'Pessoal: Adicional de Insalubridade',NULL,'S','0','N','N','N',NULL,NULL),(100000104,'Pessoal: Adicional de Periculosidade',NULL,'S','0','N','N','N',NULL,NULL),(100000105,'Pessoal: Adicional Noturno',NULL,'S','0','N','N','N',NULL,NULL),(100000106,'Pessoal: Adicional por Atividade Penosa',NULL,'S','0','N','N','N',NULL,NULL),(100000107,'Pessoal: Adicional por Serviço Extraordinário',NULL,'S','0','N','N','N',NULL,NULL),(100000108,'Pessoal: Adicional por Tempo de Serviço',NULL,'S','1','N','N','N',4,NULL),(100000109,'Pessoal: Afastamento para Atividade Desportiva','Art. 102, inciso X, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000110,'Pessoal: Afastamento para Curso de Formação',NULL,'S','1','N','N','N',4,NULL),(100000111,'Pessoal: Afastamento para Depor','Art. 102, inciso VI, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000112,'Pessoal: Afastamento para Exercer Mandato Eletivo','Art. 94 Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000113,'Pessoal: Afastamento para Serviço Eleitoral (TRE)','Art. 102, inciso VI, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000114,'Pessoal: Afastamento para Servir como Jurado','Art. 102, inciso VI, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000116,'Pessoal: Afastamento para Pós-Graduação',NULL,'S','1','N','N','N',4,NULL),(100000118,'Pessoal: Afastamento para servir em Organismo Internacional','Art. 102, inciso XI, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000119,'Pessoal: Ajuda de Custo com Mudança de Domicílio','Art. 53 da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000120,'Pessoal: Aposentadoria - Contagem Tempo de Serviço',NULL,'S','1','N','N','N',4,NULL),(100000121,'Pessoal: Aposentadoria - Pensão Temporária',NULL,'S','1','N','N','N',4,NULL),(100000122,'Pessoal: Aposentadoria - Pensão Vitalícia',NULL,'S','1','N','N','N',4,NULL),(100000123,'Pessoal: Assentamento Funcional do Servidor',NULL,'S','1','N','N','N',4,NULL),(100000124,'Pessoal: Saúde - Solicitação de Auxílio-Saúde',NULL,'S','1','N','N','N',4,NULL),(100000125,'Pessoal: Saúde - Plano de Saúde',NULL,'S','1','N','N','N',4,NULL),(100000126,'Pessoal: Saúde - Prontuário Médico',NULL,'S','1','N','N','N',4,NULL),(100000127,'Pessoal: Ausência em razão de Casamento','Art. 97, inciso III, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000128,'Pessoal: Ausência para Alistamento Eleitoral','Art. 97, inciso II, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000129,'Pessoal: Ausência para Doação de Sangue','Art. 97, inciso I, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000130,'Pessoal: Ausência por Falecimento de Familiar','Art. 97, inciso III, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000131,'Pessoal: Auxílio Acidente',NULL,'S','1','N','N','N',4,NULL),(100000132,'Pessoal: Auxílio Alimentação/Refeição',NULL,'S','1','N','N','N',4,NULL),(100000133,'Pessoal: Auxílio Assistência Pré-Escolar/Creche',NULL,'S','1','N','N','N',4,NULL),(100000134,'Pessoal: Auxílio Doença',NULL,'S','1','N','N','N',4,NULL),(100000135,'Pessoal: Auxílio Funeral',NULL,'S','1','N','N','N',4,NULL),(100000136,'Pessoal: Auxílio Moradia','Art. 60-A da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000137,'Pessoal: Auxílio Natalidade',NULL,'S','1','N','N','N',4,NULL),(100000138,'Pessoal: Auxílio Reclusão',NULL,'S','1','N','N','N',4,NULL),(100000139,'Pessoal: Auxílio-Transporte',NULL,'S','1','N','N','N',4,NULL),(100000140,'Pessoal: Avaliação de Desempenho Individual',NULL,'S','1','N','N','N',4,NULL),(100000141,'Pessoal: Avaliação de Desempenho Institucional',NULL,'S','0','N','N','N',NULL,NULL),(100000142,'Pessoal: Avaliação de Estágio Probatório',NULL,'S','1','N','N','N',4,NULL),(100000143,'Pessoal: Averbação de Tempo de Serviço',NULL,'S','1','N','N','N',4,NULL),(100000144,'Pessoal: Bolsa de Estudo de Idioma Estrangeiro',NULL,'S','0','N','N','N',NULL,NULL),(100000145,'Pessoal: Bolsa de Pós-Graduação',NULL,'S','0','N','N','N',NULL,NULL),(100000146,'Pessoal: Cadastro de Dependente no Imposto de Renda',NULL,'S','1','N','N','N',4,NULL),(100000147,'Pessoal: Apresentação de Certificado de Curso',NULL,'S','0','N','N','N',NULL,NULL),(100000148,'Pessoal: Cessão de Servidor para outro Órgão',NULL,'S','0','N','N','N',NULL,NULL),(100000149,'Pessoal: CIPA',NULL,'S','0','N','N','N',NULL,NULL),(100000150,'Pessoal: Coleta de Imagem de Assinatura',NULL,'S','1','N','N','N',4,NULL),(100000151,'Pessoal: Aposentadoria - Concessão',NULL,'S','1','N','N','N',4,NULL),(100000152,'Pessoal: Concurso Público - Exames Admissionais',NULL,'S','1','N','N','N',4,NULL),(100000153,'Pessoal: Concurso Público - Organização',NULL,'S','0','N','N','N',NULL,NULL),(100000154,'Pessoal: Concurso Público - Provas e Títulos',NULL,'S','0','N','N','N',NULL,NULL),(100000155,'Pessoal: Controle de Frequência/Abono de Falta',NULL,'S','1','N','N','N',4,NULL),(100000156,'Pessoal: Controle de Frequência/Cumprir Hora Extra','Cumprimento de Horas Extras','S','1','N','N','N',4,NULL),(100000157,'Pessoal: Controle de Frequência/Folha de Ponto',NULL,'S','1','N','N','N',4,NULL),(100000158,'Pessoal: Curso no Exterior - com ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000159,'Pessoal: Curso Promovido pela própria Instituição',NULL,'S','0','N','N','N',NULL,NULL),(100000160,'Pessoal: Curso Promovido por outra Instituição',NULL,'S','0','N','N','N',NULL,NULL),(100000161,'Pessoal: Curso de Pós-Graduação',NULL,'S','0','N','N','N',NULL,NULL),(100000162,'Pessoal: Delegação de Competência',NULL,'S','0','N','N','N',NULL,NULL),(100000163,'Pessoal: Desconto da Contribuição para o INSS',NULL,'S','1','N','N','N',4,NULL),(100000164,'Pessoal: Desconto de Contribuição Associativa',NULL,'S','1','N','N','N',4,NULL),(100000165,'Pessoal: Desconto de Contribuição Sindical',NULL,'S','1','N','N','N',4,NULL),(100000166,'Pessoal: Desconto de Empréstimo Consignado',NULL,'S','1','N','N','N',4,NULL),(100000167,'Pessoal: Desconto de Pensão Alimentícia',NULL,'S','1','N','N','N',4,NULL),(100000169,'Pessoal: Desconto do IRPF Retido na Fonte',NULL,'S','1','N','N','N',4,NULL),(100000170,'Pessoal: Nomeação/Exoneração de Cargo Comissionado e Designação/Dispensa de Substituto',NULL,'S','0','N','N','N',NULL,NULL),(100000172,'Pessoal: Emissão de Certidões e Declarações',NULL,'S','1','N','N','N',4,NULL),(100000173,'Pessoal: Emissão de Procuração',NULL,'S','1','N','N','N',4,NULL),(100000174,'Pessoal: Encargo Patronal - Contribuição para INSS',NULL,'S','0','N','N','N',NULL,NULL),(100000175,'Pessoal: Estágio - Dossiê do Estagiário',NULL,'S','0','N','N','N',NULL,NULL),(100000176,'Pessoal: Estágio - Planejamento/Organização Geral',NULL,'S','0','N','N','N',NULL,NULL),(100000177,'Pessoal: Estágio de Servidor no Brasil',NULL,'S','0','N','N','N',NULL,NULL),(100000178,'Pessoal: Estágio de Servidor no Exterior',NULL,'S','0','N','N','N',NULL,NULL),(100000179,'Pessoal: Exoneração de Cargo Efetivo',NULL,'S','0','N','N','N',NULL,NULL),(100000181,'Pessoal: Falecimento de Servidor',NULL,'S','0','N','N','N',NULL,NULL),(100000182,'Pessoal: Férias - Alteração',NULL,'S','0','N','N','N',NULL,NULL),(100000183,'Pessoal: Férias - Interrupção',NULL,'S','0','N','N','N',NULL,NULL),(100000184,'Pessoal: Férias - Solicitação',NULL,'S','0','N','N','N',NULL,NULL),(100000185,'Pessoal: Ficha Financeira',NULL,'S','1','N','N','N',4,NULL),(100000186,'Pessoal: Folha de Pagamento',NULL,'S','1','N','N','N',4,NULL),(100000187,'Pessoal: Gratificação de Desempenho',NULL,'S','1','N','N','N',4,NULL),(100000188,'Pessoal: Gratificação Natalina (Décimo Terceiro)',NULL,'S','1','N','N','N',4,NULL),(100000189,'Pessoal: Gratificação por Encargo - Curso/Concurso',NULL,'S','0','N','N','N',NULL,NULL),(100000190,'Pessoal: Horário de Expediente - Definição',NULL,'S','0','N','N','N',NULL,NULL),(100000191,'Pessoal: Horário de Expediente - Escala de Plantão',NULL,'S','0','N','N','N',NULL,NULL),(100000192,'Pessoal: Horário Especial - Familiar Deficiente','Art. 98, § 3º, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000193,'Pessoal: Horário Especial - Instrutor de Curso','Art. 98, § 4º, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000194,'Pessoal: Horário Especial - Servidor Deficiente','Art. 98, § 2º, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000195,'Pessoal: Horário Especial - Servidor Estudante','Art. 98, § 1º, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000196,'Pessoal: Indenização de Transporte (meio próprio)','Art. 60 da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000197,'Pessoal: Saúde - Inspeção Periódica',NULL,'S','1','N','N','N',4,NULL),(100000198,'Pessoal: Licença Adotante','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000199,'Pessoal: Licença Gestante','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000200,'Pessoal: Licença Paternidade','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000201,'Pessoal: Licença para Atividade Política','Art. 81, inciso IV, Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000202,'Pessoal: Licença para Capacitação','Art. 81, inciso V, Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000203,'Pessoal: Licença para Mandato Classista','Art. 81, inciso VII, Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000204,'Pessoal: Licença para Serviço Militar','Art. 81, inciso III, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000205,'Pessoal: Licença para Tratamento da Própria Saúde','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000206,'Pessoal: Licença por Acidente em Serviço','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000207,'Pessoal: Licença por Afastamento do Cônjuge','Art. 84 da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000208,'Pessoal: Licença por Doença em Pessoa da Família','Art. 83 da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000209,'Pessoal: Licença por Doença Profissional','Art. 102, inciso VIII, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000210,'Pessoal: Licença Prêmio por Assiduidade','Redação anterior do art. 81, inciso V, Lei nº 8.112/1990. Em razão de possível direito adquirido, muitos servidores ainda usufruem este tipo de licença.','S','1','N','N','N',4,NULL),(100000211,'Pessoal: Licença para Tratar de Interesses Particulares','Art. 81, inciso VI, Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000212,'Pessoal: Licenças por Aborto/Natimorto','Art. 102, inciso VIII, c/c art. 207, § 3º e § 4º, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000213,'Pessoal: Movimentação de Servidor',NULL,'S','1','N','N','N',4,NULL),(100000214,'Pessoal: Movimento Reivindicatório',NULL,'S','0','N','N','N',NULL,NULL),(100000215,'Pessoal: Negociação Sindical e Acordo Coletivo',NULL,'S','0','N','N','N',NULL,NULL),(100000217,'Pessoal: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000218,'Pessoal: Ocupação de Imóvel Funcional',NULL,'S','0','N','N','N',NULL,NULL),(100000219,'Pessoal: Orientações e Diretrizes Gerais',NULL,'S','0','N','N','N',NULL,NULL),(100000220,'Pessoal: Pagamento de Provento',NULL,'S','1','N','N','N',4,NULL),(100000221,'Pessoal: Pagamento de Remuneração',NULL,'S','1','N','N','N',4,NULL),(100000222,'Pessoal: Penalidade Advertência','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',4,NULL),(100000223,'Pessoal: Penalidade Cassação de Aposentadoria','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',4,NULL),(100000224,'Pessoal: Penalidade Demissão de Cargo Efetivo','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',4,NULL),(100000225,'Pessoal: Penalidade Destituição Cargo em Comissão','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',4,NULL),(100000226,'Pessoal: Penalidade Disponibilidade','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',4,NULL),(100000227,'Pessoal: Penalidade Suspensão','Aplicação de penalidade. O registro das penalidades disciplinares deverá ser feito na pasta de assentamento individual do servidor.','S','1','N','N','N',4,NULL),(100000228,'Pessoal: Pensão por Morte de Servidor',NULL,'S','1','N','N','N',4,NULL),(100000229,'Pessoal: Planejamento da Força de Trabalho',NULL,'S','0','N','N','N',NULL,NULL),(100000230,'Pessoal: Prêmios de Reconhecimento',NULL,'S','0','N','N','N',NULL,NULL),(100000231,'Pessoal: Prevenção de Acidentes no Trabalho',NULL,'S','0','N','N','N',NULL,NULL),(100000232,'Pessoal: Progressão e Promoção (Quadro Efetivo)',NULL,'S','0','N','N','N',NULL,NULL),(100000233,'Pessoal: Progressão e Promoção (Quadro Específico)',NULL,'S','0','N','N','N',NULL,NULL),(100000234,'Pessoal: Provimento - Nomeação para Cargo Efetivo',NULL,'S','0','N','N','N',NULL,NULL),(100000235,'Pessoal: Provimento - Nomeação para Cargo em Comissão',NULL,'S','0','N','N','N',NULL,NULL),(100000236,'Pessoal: Provimento - por Aproveitamento',NULL,'S','0','N','N','N',NULL,NULL),(100000237,'Pessoal: Provimento - por Readaptação',NULL,'S','0','N','N','N',NULL,NULL),(100000238,'Pessoal: Provimento - por Recondução',NULL,'S','0','N','N','N',NULL,NULL),(100000239,'Pessoal: Provimento - por Reintegração',NULL,'S','0','N','N','N',NULL,NULL),(100000240,'Pessoal: Provimento - por Reversão',NULL,'S','0','N','N','N',NULL,NULL),(100000241,'Finanças: Reembolso/Ressarcimento',NULL,'S','0','N','N','N',NULL,NULL),(100000242,'Pessoal: Relação com Conselho Profissional',NULL,'S','0','N','N','N',NULL,NULL),(100000243,'Pessoal: Remoção a Pedido - Concurso Interno','Art. 36, parágrafo único, inciso III, alínea \"c\", da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000244,'Pessoal: Remoção a Pedido com Mudança de Sede','Art. 36, parágrafo único, inciso II, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000245,'Pessoal: Remoção a Pedido para Acompanhar Cônjuge','Art. 36, parágrafo único, inciso III, alínea \"a\", da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000246,'Pessoal: Remoção a Pedido por Motivo de Saúde','Art. 36, parágrafo único, inciso III, alínea \"b\", da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000247,'Pessoal: Remoção a Pedido sem Mudança de Sede','Art. 36, parágrafo único, inciso II, da Lei nº 8.112/1990.','S','1','N','N','N',4,NULL),(100000248,'Pessoal: Remoção de Ofício com Mudança de Sede','Art. 36, parágrafo único, inciso I, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000249,'Pessoal: Remoção de Ofício sem Mudança de Sede','Art. 36, parágrafo único, inciso I, da Lei nº 8.112/1990.','S','0','N','N','N',NULL,NULL),(100000250,'Pessoal: Requisição de Servidor Externo',NULL,'S','0','N','N','N',NULL,NULL),(100000251,'Pessoal: Requisição de Servidor Interno',NULL,'S','0','N','N','N',NULL,NULL),(100000252,'Pessoal: Restruturação de Cargos e Funções',NULL,'S','0','N','N','N',NULL,NULL),(100000253,'Pessoal: Retribuição por Cargo em Comissão',NULL,'S','0','N','N','N',NULL,NULL),(100000254,'Pessoal: Salário-Família',NULL,'S','1','N','N','N',4,NULL),(100000255,'Pessoal: Subsidiar Ação Judicial',NULL,'S','0','N','N','N',NULL,NULL),(100000256,'Arrecadação: Cobrança',NULL,'S','0','N','N','N',NULL,NULL),(100000257,'Arrecadação: Cumprimento de Ação Judicial',NULL,'S','0','N','N','N',NULL,NULL),(100000258,'Arrecadação: Encaminhamento para Dívida Ativa',NULL,'S','0','N','N','N',NULL,NULL),(100000259,'Arrecadação: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000260,'Arrecadação: Notificação/Comunicado',NULL,'S','0','N','N','N',NULL,NULL),(100000261,'Arrecadação: Receita',NULL,'S','0','N','N','N',NULL,NULL),(100000262,'Arrecadação: Regularização de Indébitos',NULL,'S','0','N','N','N',NULL,NULL),(100000263,'Arrecadação: Restituição/Compensação',NULL,'S','0','N','N','N',NULL,NULL),(100000264,'Arrecadação: Subsidiar Ação Judicial',NULL,'S','0','N','N','N',NULL,NULL),(100000265,'Contabilidade: Análise Contábil',NULL,'S','0','N','N','N',NULL,NULL),(100000266,'Contabilidade: Conformidade de Gestão',NULL,'S','0','N','N','N',NULL,NULL),(100000267,'Contabilidade: Contratos e Garantias',NULL,'S','0','N','N','N',NULL,NULL),(100000268,'Suprimento de Fundos: Concessão e Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000269,'Contabilidade: DIRF',NULL,'S','0','N','N','N',NULL,NULL),(100000270,'Contabilidade: Encerramento do Exercício',NULL,'S','0','N','N','N',NULL,NULL),(100000271,'Contabilidade: Fechamento Contábil - Estoque',NULL,'S','0','N','N','N',NULL,NULL),(100000272,'Contabilidade: Fechamento Contábil Patrimonial',NULL,'S','0','N','N','N',NULL,NULL),(100000273,'Contabilidade: Manuais',NULL,'S','0','N','N','N',NULL,NULL),(100000274,'Contabilidade: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000275,'Contabilidade: Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000276,'Finanças: Execução Financeira',NULL,'S','0','N','N','N',NULL,NULL),(100000277,'Finanças: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000278,'Gestão da Informação: Arrecadação',NULL,'S','0','N','N','N',NULL,NULL),(100000279,'Orçamento: Acompanhamento de Despesa Mensal',NULL,'S','0','N','N','N',NULL,NULL),(100000280,'Orçamento: Contingenciamento',NULL,'S','0','N','N','N',NULL,NULL),(100000281,'Orçamento: Créditos Adicionais',NULL,'S','0','N','N','N',NULL,NULL),(100000282,'Orçamento: Descentralização de Créditos',NULL,'S','0','N','N','N',NULL,NULL),(100000283,'Orçamento: Manuais',NULL,'S','0','N','N','N',NULL,NULL),(100000284,'Orçamento: Programação Orçamentária',NULL,'S','0','N','N','N',NULL,NULL),(100000285,'Viagem: Exterior - Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000286,'Viagem: Publicação de Boletim',NULL,'S','0','N','N','N',NULL,NULL),(100000287,'Viagem: No País - Prestação de Contas',NULL,'S','0','N','N','N',NULL,NULL),(100000288,'Infraestrutura: Abastecimento de Água e Esgoto',NULL,'S','0','N','N','N',NULL,NULL),(100000289,'Pessoal: Vacância - Posse em Cargo Inacumulável',NULL,'S','0','N','N','N',NULL,NULL),(100000290,'Infraestrutura: Fornecimento de Energia Elétrica',NULL,'S','0','N','N','N',NULL,NULL),(100000291,'Material: Desfazimento de Material Permanente',NULL,'S','0','N','N','N',NULL,NULL),(100000292,'Material: Desfazimento de Material de Consumo',NULL,'S','0','N','N','N',NULL,NULL),(100000293,'Material: Movimentação de Material de Consumo',NULL,'S','0','N','N','N',NULL,NULL),(100000294,'Material: Inventário de Material de Consumo',NULL,'S','0','N','N','N',NULL,NULL),(100000295,'Material: Inventário de Material Permanente',NULL,'S','0','N','N','N',NULL,NULL),(100000296,'Patrimônio: Gestão de Bens Imóveis',NULL,'S','0','N','N','N',NULL,NULL),(100000297,'Segurança Institucional: Automação e Controle Predial',NULL,'S','0','N','N','N',NULL,NULL),(100000298,'Segurança Institucional: Controle de Acesso/Portaria',NULL,'S','0','N','N','N',NULL,NULL),(100000299,'Segurança Institucional: Controle de Acesso/Garagem',NULL,'S','0','N','N','N',NULL,NULL),(100000300,'Segurança Institucional: Prevenção contra Incêndio',NULL,'S','0','N','N','N',NULL,NULL),(100000301,'Segurança Institucional: Projeto contra Incêndio',NULL,'S','0','N','N','N',NULL,NULL),(100000302,'Segurança Institucional: Serviço de Vigilância',NULL,'S','0','N','N','N',NULL,NULL),(100000303,'Corregedoria: Correição',NULL,'S','1','N','N','N',7,NULL),(100000304,'Licitação: Plano de Aquisições',NULL,'S','0','N','N','N',NULL,NULL),(100000305,'Convênios/Ajustes: Formalização/Alteração com Repasse',NULL,'S','0','N','N','N',NULL,NULL),(100000306,'Convênios/Ajustes: Formalização/Alteração sem Repasse',NULL,'S','0','N','N','N',NULL,NULL),(100000307,'Convênios/Ajustes: Acompanhamento da Execução',NULL,'S','0','N','N','N',NULL,NULL),(100000308,'Gestão de Contrato: Supressão Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000309,'Gestão de Contrato: Aplicação de Sanção Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000310,'Gestão de Contrato: Revisão Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000311,'Gestão de Contrato: Execução de Garantia',NULL,'S','0','N','N','N',NULL,NULL),(100000312,'Gestão de Contrato: Processo de Pagamento',NULL,'S','0','N','N','N',NULL,NULL),(100000313,'Gestão de Contrato: Prorrogação Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000314,'Gestão de Contrato: Reajuste ou Repactuação Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000315,'Gestão de Contrato: Rescisão Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000316,'Gestão de Contrato: Acompanhamento da Execução',NULL,'S','0','N','N','N',NULL,NULL),(100000317,'Licitação: Pregão Eletrônico',NULL,'S','0','N','N','N',NULL,NULL),(100000318,'Licitação: Pregão Eletrônico-Registro de Preço',NULL,'S','0','N','N','N',NULL,NULL),(100000319,'Licitação: Pregão Presencial',NULL,'S','0','N','N','N',NULL,NULL),(100000320,'Licitação: Concorrência',NULL,'S','0','N','N','N',NULL,NULL),(100000321,'Licitação: Concorrência-Registro de Preço',NULL,'S','0','N','N','N',NULL,NULL),(100000322,'Licitação: Tomada de Preços',NULL,'S','0','N','N','N',NULL,NULL),(100000323,'Licitação: Convite',NULL,'S','0','N','N','N',NULL,NULL),(100000324,'Licitação: Regime Diferenciado de Contratação-RDC',NULL,'S','0','N','N','N',NULL,NULL),(100000325,'Licitação: Concurso',NULL,'S','0','N','N','N',NULL,NULL),(100000326,'Licitação: Leilão',NULL,'S','0','N','N','N',NULL,NULL),(100000327,'Corregedoria: Procedimento Geral',NULL,'S','1','N','N','N',7,NULL),(100000328,'Licitação: Adesão a Ata de RP-Participante',NULL,'S','0','N','N','N',NULL,NULL),(100000329,'Licitação: Adesão a Ata de RP-Não Participante',NULL,'S','0','N','N','N',NULL,NULL),(100000330,'Licitação: Dispensa - Até R$ 8 mil',NULL,'S','0','N','N','N',NULL,NULL),(100000331,'Licitação: Dispensa - Acima de R$ 8 mil',NULL,'S','0','N','N','N',NULL,NULL),(100000332,'Licitação: Inexigibilidade',NULL,'S','0','N','N','N',NULL,NULL),(100000333,'Ouvidoria: Elogio à atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000334,'Ouvidoria: Crítica à atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000335,'Ouvidoria: Denúncia contra a atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000336,'Ouvidoria: Reclamação à atuação do Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000337,'Ouvidoria: Agradecimento ao Órgão','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000338,'Ouvidoria: Pedido de Informação','Tipo de processo utilizado pelo formulário de peticionamento da Ouvidoria. - Exclusivo da ouvidoria','S','0','N','S','N',NULL,NULL),(100000339,'Gestão e Controle: Executar Auditoria Interna','Analisar a fidedignidade das informações que tramitam nos processos do Órgão, identificar necessidade de pontos de controle de não conformidades, suas causas, qualificar e quantificar as perdas e recomendar ações corretivas e preventivas.','S','0','N','N','N',NULL,NULL),(100000340,'Gestão e Controle: Demandas de Órgãos de Controle','Administrar demandas e acompanhar as deliberações dos órgãos de controle do Governo Federal.','S','0','N','N','N',NULL,NULL),(100000341,'Comunicação: Pedido de Apoio Institucional','Pedidos para utilização da logomarca do Órgão em eventos institucionais promovidos por terceiros, sejam públicos ou privados.','S','0','N','N','N',NULL,NULL),(100000342,'Comunicação: Evento Institucional Público Externo','Processo para recebimento de pedidos de apoio para a realização de eventos institucionais direcionados ao público externo, por exemplo, Audiências Públicas e Sessões Públicas.','S','0','N','N','N',NULL,NULL),(100000343,'Comunicação: Publicidade Legal','Demandas para publicação em veículos de comunicação de grande circulação, para fins de publicidade exigida por lei, por exemplo, avisos de realização de pregões e de audiências públicas.','S','0','N','N','N',NULL,NULL),(100000344,'Comunicação: Publicidade Institucional','Demandas para a realização de ações de comunicação para disseminar - para os públicos interno ou externo - informações sobre determinados temas de maior relevância.','S','0','N','N','N',NULL,NULL),(100000345,'Comunicação: Evento Institucional Público Interno','Pedidos de apoio para a realização de eventos institucionais direcionados ao público interno, por exemplo, Aniversário do Órgão ou eventos da Semana do Servidor Público.','S','0','N','N','N',NULL,NULL),(100000346,'Acompanhamento Legislativo: Senado Federal','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000347,'Acompanhamento Legislativo: Câmara dos Deputados','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000348,'Acompanhamento Legislativo: Congresso Nacional','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000349,'Acompanhamento Legislativo: Estadual/Distrital','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000350,'Acompanhamento Legislativo: Municipal','Acompanhar processo legislativo a fim de promover os interesses do Órgão, incluindo encaminhamento de pareceres sobre projetos de lei, interação presencial com parlamentares e participação em audiências públicas.','S','0','N','N','N',NULL,NULL),(100000351,'Demanda Externa: Senador','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000352,'Demanda Externa: Deputado Federal','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000353,'Demanda Externa: Deputado Estadual/Distrital','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000354,'Demanda Externa: Vereador/Câmara Municipal','Atender solicitações parlamentares, como pedidos de informação, consulta a processos, agenda com presidente ou demais gestores do Órgão e visita técnica.','S','0','N','N','N',NULL,NULL),(100000355,'Demanda Externa: Orgãos Governamentais Federais','Atender solicitações institucionais de órgãos governamentais federais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000356,'Demanda Externa: Orgãos Governamentais Estaduais','Atender solicitações institucionais de órgãos governamentais estaduais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000357,'Demanda Externa: Orgãos Governamentais Municipais','Atender solicitações institucionais de órgãos governamentais municipais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000358,'Demanda Externa: Outros Orgãos Públicos','Atender solicitações institucionais de outros órgãos governamentais, como pedidos de informação, agenda com presidente ou demais gestores do Órgão, visita técnica, reuniões, esclarecimento de dúvidas ou outros questionamentos.','S','0','N','N','N',NULL,NULL),(100000359,'Arrecadação: Parcelamento Administrativo',NULL,'S','0','N','N','N',NULL,NULL),(100000360,'Corregedoria: Análise Prescricional de Processo',NULL,'S','1','N','N','N',7,NULL),(100000361,'Corregedoria: Investigação Preliminar',NULL,'S','1','N','N','N',7,NULL),(100000362,'Corregedoria: Sindicância Punitiva',NULL,'S','1','N','N','N',7,NULL),(100000363,'Corregedoria: Processo Administrativo Disciplinar',NULL,'S','1','N','N','N',7,NULL),(100000364,'Corregedoria: Avaliação para Estabilidade',NULL,'S','1','N','N','N',7,NULL),(100000365,'Gestão da Informação: Credenciamento de Segurança','Credenciamento para acesso a documentos classificados.','S','0','N','N','N',NULL,NULL),(100000366,'Gestão da Informação: Normatização Interna',NULL,'S','0','N','N','N',NULL,NULL),(100000367,'Gestão da Informação: Rol Anual de Informações Classificadas','Processo de divulgação anual do rol de informações classificadas.','S','0','N','N','N',NULL,NULL),(100000368,'Gestão da Informação: Avaliação/Destinação de Documentos',NULL,'S','0','N','N','N',NULL,NULL),(100000369,'Gestão da Informação: Reconstituição Documental','Reconstituição de processos ou documentos perdidos ou danificados.','S','0','N','N','N',NULL,NULL),(100000370,'Patrimônio: Cobrança de Acervo Bibliográfico',NULL,'S','0','N','N','N',NULL,NULL),(100000371,'Patrimônio: Gestão de Acervo Bibliográfico',NULL,'S','0','N','N','N',NULL,NULL),(100000372,'Gestão de Projetos: Planejamento e Execução',NULL,'S','0','N','N','N',NULL,NULL),(100000373,'Gestão de Processos: Mapeamento e Modelagem',NULL,'S','0','N','N','N',NULL,NULL),(100000374,'Gestão e Controle: Coordenação - Demandas Internas',NULL,'S','0','N','N','N',NULL,NULL),(100000375,'Gestão e Controle: Coordenação - Demandas Externas',NULL,'S','0','N','N','N',NULL,NULL),(100000376,'Planejamento Estratégico: Gestão do Plano Estratégico','Gestão do plano estratégico do Órgão.','S','0','N','N','N',NULL,NULL),(100000377,'Planejamento Estratégico: Gestão de Risco','Gestão dos riscos e controle de riscos com vista ao alcance dos objetivos estratégicos.','S','0','N','N','N',NULL,NULL),(100000378,'Planejamento Estratégico: Inteligência Estratégica','Monitoramento dos objetivos estratégicos, cenários prospectivos e estratégias dos atores que impactam no alcance do objetivos estratégicos.','S','0','N','N','N',NULL,NULL),(100000379,'Planejamento Estratégico: Elaboração do Plano Estratégico','Elaboração das propostas do plano estratégico do Órgão.','S','0','N','N','N',NULL,NULL),(100000380,'Planejamento Estratégico: Elaboração do Plano Operacional','Consolidação do Plano Operacional do Órgão.','S','0','N','N','N',NULL,NULL),(100000381,'Acesso à Informação: Demanda do e-SIC','Tratamento de demandas e recursos do e-SIC.','S','0','N','N','N',NULL,NULL),(100000382,'Demanda Externa: Cidadão (Pessoa Física)',NULL,'S','0','N','N','N',NULL,NULL),(100000383,'Gestão de Contrato: Pagamento Direto a Terceiros',NULL,'S','0','N','N','N',NULL,NULL),(100000384,'Gestão de TI: CITI',NULL,'S','0','N','N','N',NULL,NULL),(100000385,'Demanda Externa: Judiciário',NULL,'S','0','N','N','N',NULL,NULL),(100000386,'Demanda Externa: Ministério Público Estadual',NULL,'S','0','N','N','N',NULL,NULL),(100000387,'Demanda Externa: Ministério Público Federal',NULL,'S','0','N','N','N',NULL,NULL),(100000388,'Demanda Externa: Outras Entidades Privadas',NULL,'S','0','N','N','N',NULL,NULL),(100000389,'Gestão da Informação: Controle de Malote',NULL,'S','0','N','N','N',NULL,NULL),(100000390,'Suprimento de Fundos: Solicitação de Despesa',NULL,'S','0','N','N','N',NULL,NULL),(100000391,'Material: Movimentação de Material Permanente',NULL,'S','0','N','N','N',NULL,NULL),(100000392,'Pessoal: Saúde - Exclusão de Auxílio-Saúde',NULL,'S','0','N','N','N',NULL,NULL),(100000393,'Pessoal: Saúde - Pagamento de Auxílio-Saúde',NULL,'S','0','N','N','N',NULL,NULL),(100000394,'Pessoal: Saúde - Cadastro de Dependente Estudante no Auxílio-Saúde',NULL,'S','0','N','N','N',NULL,NULL),(100000395,'Pessoal: Saúde - Auxílio-Saúde GEAP',NULL,'S','0','N','N','N',NULL,NULL),(100000396,'Pessoal: Saúde - Atestado de Comparecimento',NULL,'S','0','N','N','N',NULL,NULL),(100000397,'Pessoal: Saúde - Ressarcimento ao Erário',NULL,'S','0','N','N','N',NULL,NULL),(100000398,'Pessoal: Saúde - Pagamento de Retroativo',NULL,'S','0','N','N','N',NULL,NULL),(100000399,'Pessoal: Saúde e Qualidade de Vida no Trabalho',NULL,'S','0','N','N','N',NULL,NULL),(100000400,'Pessoal: Ressarcimento ao Erário',NULL,'S','0','N','N','N',NULL,NULL),(100000401,'Gestão de Contrato: Consulta à Procuradoria/Conjur',NULL,'S','0','N','N','N',NULL,NULL),(100000402,'Gestão de Contrato: Acréscimo Contratual',NULL,'S','0','N','N','N',NULL,NULL),(100000403,'Gestão de Contrato: Alterações Contratuais Conjuntas',NULL,'S','0','N','N','N',NULL,NULL),(100000404,'Gestão de Contrato: Outras Alterações Contratuais não Relacionadas',NULL,'S','0','N','N','N',NULL,NULL),(100000405,'Pessoal: Abono Permanência - Revisão',NULL,'S','0','N','N','N',NULL,NULL),(100000406,'Pessoal: Aposentadoria - Revisão',NULL,'S','0','N','N','N',NULL,NULL),(100000407,'Pessoal: Plano de Capacitação',NULL,'S','0','N','N','N',NULL,NULL),(100000408,'Licitação: Aplicação de Sanção decorrente de Procedimento Licitatório',NULL,'S','0','N','N','N',NULL,NULL),(100000409,'Gestão da Informação: Cadastro de Usuário Externo no SEI',NULL,'S','0','N','N','N',NULL,NULL),(100000410,'Pessoal: Saúde - Lançamento Mensal do Auxílio-Saúde no SIAPE',NULL,'S','0','N','N','N',NULL,NULL),(100000411,'Gestão da Informação: Segurança da Informação e Comunicações',NULL,'S','0','N','N','N',NULL,NULL),(100000412,'Ética: Processo de Apuração Ética',NULL,'S','0','N','N','N',NULL,NULL),(100000413,'Ética: Análise de Conflito de Interesse',NULL,'S','0','N','N','N',NULL,NULL),(100000414,'Pessoal: Curso no Exterior - ônus limitado',NULL,'S','0','N','N','N',NULL,NULL),(100000415,'Pessoal: Curso no Exterior - sem ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000416,'Planejamento Estratégico: Acompanhamento do Plano Operacional',NULL,'S','0','N','N','N',NULL,NULL),(100000417,'Licitação: Consulta',NULL,'S','0','N','N','N',NULL,NULL),(100000418,'Infraestrutura: Apoio de Engenharia Civil',NULL,'S','0','N','N','N',NULL,NULL),(100000419,'Gestão da Informação: Gestão Documental',NULL,'S','0','N','N','N',NULL,NULL),(100000420,'Relações Internacionais: Composição de Delegação - com ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000421,'Relações Internacionais: Composição de Delegação - ônus limitado',NULL,'S','0','N','N','N',NULL,NULL),(100000422,'Relações Internacionais: Composição de Delegação - sem ônus',NULL,'S','0','N','N','N',NULL,NULL),(100000423,'Relações Internacionais: Cooperação Internacional',NULL,'S','0','N','N','N',NULL,NULL),(100000424,'Processo Reservado à Área-Meio 318',NULL,'N','0','N','N','N',NULL,NULL),(100000425,'Processo Reservado à Área-Meio 319',NULL,'N','0','N','N','N',NULL,NULL),(100000426,'Processo Reservado à Área-Meio 320',NULL,'N','0','N','N','N',NULL,NULL),(100000427,'Processo Reservado à Área-Meio 321',NULL,'N','0','N','N','N',NULL,NULL),(100000428,'Processo Reservado à Área-Meio 322',NULL,'N','0','N','N','N',NULL,NULL),(100000429,'Processo Reservado à Área-Meio 323',NULL,'N','0','N','N','N',NULL,NULL),(100000430,'Processo Reservado à Área-Meio 324',NULL,'N','0','N','N','N',NULL,NULL),(100000431,'Processo Reservado à Área-Meio 325',NULL,'N','0','N','N','N',NULL,NULL),(100000432,'Processo Reservado à Área-Meio 326',NULL,'N','0','N','N','N',NULL,NULL),(100000433,'Processo Reservado à Área-Meio 327',NULL,'N','0','N','N','N',NULL,NULL),(100000434,'Processo Reservado à Área-Meio 328',NULL,'N','0','N','N','N',NULL,NULL),(100000435,'Processo Reservado à Área-Meio 329',NULL,'N','0','N','N','N',NULL,NULL),(100000436,'Processo Reservado à Área-Meio 330',NULL,'N','0','N','N','N',NULL,NULL),(100000437,'Processo Reservado à Área-Meio 331',NULL,'N','0','N','N','N',NULL,NULL),(100000438,'Processo Reservado à Área-Meio 332',NULL,'N','0','N','N','N',NULL,NULL),(100000439,'Processo Reservado à Área-Meio 333',NULL,'N','0','N','N','N',NULL,NULL),(100000440,'Processo Reservado à Área-Meio 334',NULL,'N','0','N','N','N',NULL,NULL),(100000441,'Processo Reservado à Área-Meio 335',NULL,'N','0','N','N','N',NULL,NULL),(100000442,'Processo Reservado à Área-Meio 336',NULL,'N','0','N','N','N',NULL,NULL),(100000443,'Processo Reservado à Área-Meio 337',NULL,'N','0','N','N','N',NULL,NULL),(100000444,'Processo Reservado à Área-Meio 338',NULL,'N','0','N','N','N',NULL,NULL),(100000445,'Processo Reservado à Área-Meio 339',NULL,'N','0','N','N','N',NULL,NULL),(100000446,'Processo Reservado à Área-Meio 340',NULL,'N','0','N','N','N',NULL,NULL),(100000447,'Processo Reservado à Área-Meio 341',NULL,'N','0','N','N','N',NULL,NULL),(100000448,'Processo Reservado à Área-Meio 342',NULL,'N','0','N','N','N',NULL,NULL),(100000449,'Processo Reservado à Área-Meio 343',NULL,'N','0','N','N','N',NULL,NULL),(100000450,'Processo Reservado à Área-Meio 344',NULL,'N','0','N','N','N',NULL,NULL),(100000451,'Processo Reservado à Área-Meio 345',NULL,'N','0','N','N','N',NULL,NULL),(100000452,'Processo Reservado à Área-Meio 346',NULL,'N','0','N','N','N',NULL,NULL),(100000453,'Processo Reservado à Área-Meio 347',NULL,'N','0','N','N','N',NULL,NULL),(100000454,'Processo Reservado à Área-Meio 348',NULL,'N','0','N','N','N',NULL,NULL),(100000455,'Processo Reservado à Área-Meio 349',NULL,'N','0','N','N','N',NULL,NULL),(100000456,'Processo Reservado à Área-Meio 350',NULL,'N','0','N','N','N',NULL,NULL),(100000457,'Processo Reservado à Área-Meio 351',NULL,'N','0','N','N','N',NULL,NULL),(100000458,'Processo Reservado à Área-Meio 352',NULL,'N','0','N','N','N',NULL,NULL),(100000459,'Processo Reservado à Área-Meio 353',NULL,'N','0','N','N','N',NULL,NULL),(100000460,'Processo Reservado à Área-Meio 354',NULL,'N','0','N','N','N',NULL,NULL),(100000461,'Processo Reservado à Área-Meio 355',NULL,'N','0','N','N','N',NULL,NULL),(100000462,'Processo Reservado à Área-Meio 356',NULL,'N','0','N','N','N',NULL,NULL),(100000463,'Processo Reservado à Área-Meio 357',NULL,'N','0','N','N','N',NULL,NULL),(100000464,'Processo Reservado à Área-Meio 358',NULL,'N','0','N','N','N',NULL,NULL),(100000465,'Processo Reservado à Área-Meio 359',NULL,'N','0','N','N','N',NULL,NULL),(100000466,'Processo Reservado à Área-Meio 360',NULL,'N','0','N','N','N',NULL,NULL),(100000467,'Processo Reservado à Área-Meio 361',NULL,'N','0','N','N','N',NULL,NULL),(100000468,'Processo Reservado à Área-Meio 362',NULL,'N','0','N','N','N',NULL,NULL),(100000469,'Processo Reservado à Área-Meio 363',NULL,'N','0','N','N','N',NULL,NULL),(100000470,'Processo Reservado à Área-Meio 364',NULL,'N','0','N','N','N',NULL,NULL),(100000471,'Processo Reservado à Área-Meio 365',NULL,'N','0','N','N','N',NULL,NULL),(100000472,'Processo Reservado à Área-Meio 366',NULL,'N','0','N','N','N',NULL,NULL),(100000473,'Processo Reservado à Área-Meio 367',NULL,'N','0','N','N','N',NULL,NULL),(100000474,'Processo Reservado à Área-Meio 368',NULL,'N','0','N','N','N',NULL,NULL),(100000475,'Processo Reservado à Área-Meio 369',NULL,'N','0','N','N','N',NULL,NULL),(100000476,'Processo Reservado à Área-Meio 370',NULL,'N','0','N','N','N',NULL,NULL),(100000477,'Processo Reservado à Área-Meio 371',NULL,'N','0','N','N','N',NULL,NULL),(100000478,'Processo Reservado à Área-Meio 372',NULL,'N','0','N','N','N',NULL,NULL),(100000479,'Processo Reservado à Área-Meio 373',NULL,'N','0','N','N','N',NULL,NULL),(100000480,'Processo Reservado à Área-Meio 374',NULL,'N','0','N','N','N',NULL,NULL),(100000481,'Processo Reservado à Área-Meio 375',NULL,'N','0','N','N','N',NULL,NULL),(100000482,'Processo Reservado à Área-Meio 376',NULL,'N','0','N','N','N',NULL,NULL),(100000483,'Processo Reservado à Área-Meio 377',NULL,'N','0','N','N','N',NULL,NULL),(100000484,'Processo Reservado à Área-Meio 378',NULL,'N','0','N','N','N',NULL,NULL),(100000485,'Processo Reservado à Área-Meio 379',NULL,'N','0','N','N','N',NULL,NULL),(100000486,'Processo Reservado à Área-Meio 380',NULL,'N','0','N','N','N',NULL,NULL),(100000487,'Processo Reservado à Área-Meio 381',NULL,'N','0','N','N','N',NULL,NULL),(100000488,'Processo Reservado à Área-Meio 382',NULL,'N','0','N','N','N',NULL,NULL),(100000489,'Processo Reservado à Área-Meio 383',NULL,'N','0','N','N','N',NULL,NULL),(100000490,'Processo Reservado à Área-Meio 384',NULL,'N','0','N','N','N',NULL,NULL),(100000491,'Processo Reservado à Área-Meio 385',NULL,'N','0','N','N','N',NULL,NULL),(100000492,'Processo Reservado à Área-Meio 386',NULL,'N','0','N','N','N',NULL,NULL),(100000493,'Processo Reservado à Área-Meio 387',NULL,'N','0','N','N','N',NULL,NULL),(100000494,'Processo Reservado à Área-Meio 388',NULL,'N','0','N','N','N',NULL,NULL),(100000495,'Processo Reservado à Área-Meio 389',NULL,'N','0','N','N','N',NULL,NULL),(100000496,'Processo Reservado à Área-Meio 390',NULL,'N','0','N','N','N',NULL,NULL),(100000497,'Processo Reservado à Área-Meio 391',NULL,'N','0','N','N','N',NULL,NULL),(100000498,'Processo Reservado à Área-Meio 392',NULL,'N','0','N','N','N',NULL,NULL),(100000499,'Processo Reservado à Área-Meio 393',NULL,'N','0','N','N','N',NULL,NULL),(100000500,'Processo Reservado à Área-Meio 394',NULL,'N','0','N','N','N',NULL,NULL);
 /*!40000 ALTER TABLE `tipo_procedimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5675,8 +5674,8 @@ DROP TABLE IF EXISTS `tipo_procedimento_escolha`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_procedimento_escolha` (
-  `id_tipo_procedimento` int(11) NOT NULL COMMENT 'Número que identifica o tipo de processo.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
+  `id_tipo_procedimento` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_tipo_procedimento`,`id_unidade`),
   KEY `if1_tipo_procedimento_escolha` (`id_tipo_procedimento`),
   KEY `if2_tipo_procedimento_escolha` (`id_unidade`),
@@ -5702,9 +5701,9 @@ DROP TABLE IF EXISTS `tipo_suporte`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_suporte` (
-  `id_tipo_suporte` int(11) NOT NULL COMMENT 'Número que identifica o tipo de suiporte (para documento externo).',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do tipo de suporte.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o tipo de suporte está ativo ou não. S: Sim N: Não',
+  `id_tipo_suporte` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_tipo_suporte`),
   UNIQUE KEY `ak1_tipo_suporte` (`nome`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -5728,9 +5727,9 @@ DROP TABLE IF EXISTS `titulo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `titulo` (
-  `id_titulo` int(11) NOT NULL COMMENT 'Número que identifica o título.',
-  `expressao` varchar(50) DEFAULT NULL COMMENT 'Expressão do título.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o título está ativo ou não. S: Sim N: Não',
+  `id_titulo` int(11) NOT NULL,
+  `expressao` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_titulo`),
   KEY `ie1_titulo` (`id_titulo`,`sin_ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -5753,9 +5752,9 @@ DROP TABLE IF EXISTS `tratamento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tratamento` (
-  `id_tratamento` int(11) NOT NULL COMMENT 'Número que identifica o tratamento.',
-  `expressao` varchar(50) DEFAULT NULL COMMENT 'Expressão do tratamento.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o tratamento está ativo ou não. S: Sim N: Não',
+  `id_tratamento` int(11) NOT NULL,
+  `expressao` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_tratamento`),
   KEY `ie1_tratamento` (`id_tratamento`,`sin_ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -5778,14 +5777,14 @@ DROP TABLE IF EXISTS `uf`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `uf` (
-  `id_uf` int(11) NOT NULL COMMENT 'Número que identifica a UF. Varia de 1 a 27.',
-  `sigla` char(2) DEFAULT NULL COMMENT 'Sigla da UF.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome da UF.',
-  `id_pais` int(11) DEFAULT NULL COMMENT 'Número que identifica o país. Brasil: 76.',
-  `codigo_ibge` int(11) DEFAULT NULL COMMENT 'Código do IBGE correspondente a cada UF.',
+  `id_uf` int(11) NOT NULL,
+  `sigla` char(2) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `id_pais` int(11) NOT NULL,
+  `codigo_ibge` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_uf`),
-  UNIQUE KEY `ak2_uf` (`nome`),
   UNIQUE KEY `ak1_uf` (`sigla`),
+  UNIQUE KEY `ak2_uf` (`nome`),
   KEY `fk_uf_pais` (`id_pais`),
   CONSTRAINT `fk_uf_pais` FOREIGN KEY (`id_pais`) REFERENCES `pais` (`id_pais`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -5809,29 +5808,29 @@ DROP TABLE IF EXISTS `unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `unidade` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a unidade está ativa ou não.',
-  `sigla` varchar(30) DEFAULT NULL COMMENT 'Sigla da unidade.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da unidade.',
-  `sin_mail_pendencia` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se um e-mail de aviso deve ser enviado caso um processo seja remetido para a unidade (S/N).',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `id_cidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a cidade.',
-  `id_uf` int(11) DEFAULT NULL COMMENT 'Número que identifica a UF.',
-  `telefone` varchar(50) DEFAULT NULL COMMENT 'Telefone da unidade.',
-  `fax` varchar(50) DEFAULT NULL COMMENT 'Fax da unidade.',
-  `sitio_internet` varchar(50) DEFAULT NULL COMMENT 'Endereço web da unidade.',
-  `bairro` varchar(50) DEFAULT NULL COMMENT 'Bairro em que a unidade está.',
-  `cep` varchar(15) DEFAULT NULL COMMENT 'CEP.',
-  `observacao` varchar(250) DEFAULT NULL COMMENT 'Observação da unidade.',
-  `endereco` varchar(130) DEFAULT NULL COMMENT 'Endereço da unidade.',
-  `complemento` varchar(130) DEFAULT NULL COMMENT 'Complemento do endereço da unidade.',
-  `sin_envio_processo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se um processo pode ser enviado para a unidade.',
-  `sin_arquivamento` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a unidade permite arquivamento ou não.',
-  `sin_ouvidoria` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se existe ouvidoria na unidade.',
-  `sin_protocolo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a unidade é de protocolo ou não.',
-  `codigo_sei` varchar(10) DEFAULT NULL COMMENT 'Código SEI.',
-  `id_contato` int(11) DEFAULT NULL COMMENT 'Número que identifica o contato.',
-  `idx_unidade` varchar(500) DEFAULT NULL COMMENT 'Indexação da unidade para fins de pesquisa.',
+  `id_unidade` int(11) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sigla` varchar(30) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `sin_mail_pendencia` char(1) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `id_cidade` int(11) DEFAULT NULL,
+  `id_uf` int(11) DEFAULT NULL,
+  `telefone` varchar(50) DEFAULT NULL,
+  `fax` varchar(50) DEFAULT NULL,
+  `sitio_internet` varchar(50) DEFAULT NULL,
+  `bairro` varchar(50) DEFAULT NULL,
+  `cep` varchar(15) DEFAULT NULL,
+  `observacao` varchar(250) DEFAULT NULL,
+  `endereco` varchar(130) DEFAULT NULL,
+  `complemento` varchar(130) DEFAULT NULL,
+  `sin_envio_processo` char(1) NOT NULL,
+  `sin_arquivamento` char(1) NOT NULL,
+  `sin_ouvidoria` char(1) NOT NULL,
+  `sin_protocolo` char(1) NOT NULL,
+  `codigo_sei` varchar(10) DEFAULT NULL,
+  `id_contato` int(11) NOT NULL,
+  `idx_unidade` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id_unidade`),
   KEY `fk_unidade_orgao` (`id_orgao`),
   KEY `fk_unidade_cidade` (`id_cidade`),
@@ -5864,8 +5863,8 @@ DROP TABLE IF EXISTS `unidade_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `unidade_publicacao` (
-  `id_unidade_publicacao` int(11) NOT NULL COMMENT 'Número que identifica a unidade de publicação.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
+  `id_unidade_publicacao` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_unidade_publicacao`),
   KEY `fk_unidade_publicacao_unidade` (`id_unidade`),
   CONSTRAINT `fk_unidade_publicacao_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`)
@@ -5889,18 +5888,18 @@ DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario` (
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o usuário está ativo ou não. S: Sim N: Não',
-  `sigla` varchar(100) DEFAULT NULL COMMENT 'Sigla/Login do usuário no SEI.',
-  `nome` varchar(100) DEFAULT NULL COMMENT 'Nome do usuário.',
-  `id_contato` int(11) DEFAULT NULL COMMENT 'Número que identifica o contato.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `id_pessoa_rh` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o RF.',
-  `idx_usuario` varchar(500) DEFAULT NULL COMMENT 'Indexação do usuário para fins de pesquisa.',
-  `cpf` bigint(20) DEFAULT NULL COMMENT 'CPF do usuário.',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica o tipo de usuário.',
-  `senha` char(32) DEFAULT NULL COMMENT 'Senha do usuário.',
-  `sin_acessibilidade` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a opção de acessibilidade está ativada (S) ou não (N).',
+  `id_usuario` int(11) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sigla` varchar(100) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `id_contato` int(11) DEFAULT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `id_pessoa_rh` bigint(20) DEFAULT NULL,
+  `idx_usuario` varchar(500) DEFAULT NULL,
+  `cpf` bigint(20) DEFAULT NULL,
+  `sta_tipo` char(1) NOT NULL,
+  `senha` char(32) DEFAULT NULL,
+  `sin_acessibilidade` char(1) NOT NULL,
   PRIMARY KEY (`id_usuario`),
   KEY `if1_usuario` (`id_contato`),
   KEY `if2_usuario` (`id_orgao`),
@@ -5919,7 +5918,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'S','SEI','Sistema Eletrônico de Informações',100000002,0,NULL,'sei sistema eletronico de informacoes',NULL,'1',NULL,'N'),(2,'S','SIP','Sistema de Permissões',100000003,0,NULL,'sip sistema de permissoes',NULL,'1',NULL,'N'),(3,'S','INTRANET','INTRANET',100000004,0,NULL,'intranet',NULL,'1',NULL,'N'),(4,'S','INTERNET','INTERNET',100000005,0,NULL,'internet',NULL,'1',NULL,'N'),(100000002,'S','teste','Usuário de Testes',100000006,0,NULL,'teste usuario de testes',NULL,'0',NULL,'N');
+INSERT INTO `usuario` VALUES (1,'S','SEI','Sistema Eletrônico de Informações',100000002,0,NULL,'sei sistema eletronico de informacoes',NULL,'1',NULL,'N'),(2,'S','SIP','Sistema de Permissões',100000003,0,NULL,'sip sistema de permissoes',NULL,'1',NULL,'N'),(3,'S','INTRANET','INTRANET',100000004,0,NULL,'intranet',NULL,'1',NULL,'N'),(4,'S','INTERNET','INTERNET',100000005,0,NULL,'internet',NULL,'1',NULL,'N'),(100000001,'S','teste','Usuário de Testes',100000001,0,NULL,'teste usuario de testes',NULL,'0',NULL,'N');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5931,9 +5930,9 @@ DROP TABLE IF EXISTS `veiculo_imprensa_nacional`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `veiculo_imprensa_nacional` (
-  `id_veiculo_imprensa_nacional` int(11) NOT NULL COMMENT 'Número que identifica o veículo de imprensa nacional.',
-  `sigla` varchar(15) DEFAULT NULL COMMENT 'Sigla do veículo de imprensa nacional.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição do veículo de imprensa nacional.',
+  `id_veiculo_imprensa_nacional` int(11) NOT NULL,
+  `sigla` varchar(15) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
   PRIMARY KEY (`id_veiculo_imprensa_nacional`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5956,15 +5955,15 @@ DROP TABLE IF EXISTS `veiculo_publicacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `veiculo_publicacao` (
-  `id_veiculo_publicacao` int(11) NOT NULL COMMENT 'Número que identifica o veículo de publicação.',
-  `nome` varchar(100) DEFAULT NULL COMMENT 'Nome do veículo de publicação.',
-  `descricao` varchar(500) DEFAULT NULL COMMENT 'Descrição do veículo de publicação.',
-  `sta_tipo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica o tipo de veículo de publicação (Interno ou externo).',
-  `sin_fonte_feriados` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se os feriados cadastrados no veículo devem ser utilizados como padrão para o sistema (S/N).',
-  `sin_permite_extraordinaria` char(1) DEFAULT NULL,
-  `web_service` varchar(250) DEFAULT NULL COMMENT 'Endereço do webservice.',
-  `sin_exibir_pesquisa_interna` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o veículo de publicação exibe suas publicações enviadas na pesquisa de publicações interna.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o veículo de publicação está ativado (S) ou não (N).',
+  `id_veiculo_publicacao` int(11) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `descricao` varchar(500) DEFAULT NULL,
+  `sta_tipo` char(1) NOT NULL,
+  `sin_fonte_feriados` char(1) NOT NULL,
+  `sin_permite_extraordinaria` char(1) NOT NULL,
+  `web_service` varchar(250) DEFAULT NULL,
+  `sin_exibir_pesquisa_interna` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_veiculo_publicacao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -5987,9 +5986,9 @@ DROP TABLE IF EXISTS `velocidade_transferencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `velocidade_transferencia` (
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `velocidade` bigint(20) DEFAULT NULL COMMENT 'Velocidade de transferência (kb/s).',
+  `id_usuario` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `velocidade` bigint(20) NOT NULL,
   PRIMARY KEY (`id_usuario`),
   KEY `fk_velocidade_transf_unidade` (`id_unidade`),
   CONSTRAINT `fk_velocidade_transf_unidade` FOREIGN KEY (`id_unidade`) REFERENCES `unidade` (`id_unidade`),
@@ -6014,14 +6013,14 @@ DROP TABLE IF EXISTS `versao_secao_documento`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `versao_secao_documento` (
-  `id_versao_secao_documento` bigint(20) NOT NULL COMMENT 'Número que identifica a versão de seção do documento.',
-  `id_secao_documento` int(11) DEFAULT NULL COMMENT 'Número que identifica a seção do documento.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `conteudo` longtext COMMENT 'Conteúdo da versão.',
-  `dth_atualizacao` datetime DEFAULT NULL COMMENT 'Data de atualização da versão do documento.',
-  `versao` int(11) DEFAULT NULL COMMENT 'Número da versão de seção do documento.',
-  `sin_ultima` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se é a última versão de seção do documento.',
+  `id_versao_secao_documento` bigint(20) NOT NULL,
+  `id_secao_documento` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `conteudo` longtext,
+  `dth_atualizacao` datetime NOT NULL,
+  `versao` int(11) DEFAULT NULL,
+  `sin_ultima` char(1) NOT NULL,
   PRIMARY KEY (`id_versao_secao_documento`),
   KEY `i01_versao_secao_documento` (`id_secao_documento`,`versao`),
   KEY `fk_versao_secao_doc_usuario` (`id_usuario`),
@@ -6049,9 +6048,9 @@ DROP TABLE IF EXISTS `vocativo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `vocativo` (
-  `id_vocativo` int(11) NOT NULL COMMENT 'Número que identifica o vocativo a ser utilizado.',
-  `expressao` varchar(50) DEFAULT NULL COMMENT 'Vocativo a ser utilizado.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o vocativo está ativo ou não. S:Sim, N:Não.',
+  `id_vocativo` int(11) NOT NULL,
+  `expressao` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_vocativo`),
   KEY `ie1_vocativo` (`id_vocativo`,`sin_ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -6065,10 +6064,6 @@ LOCK TABLES `vocativo` WRITE;
 /*!40000 ALTER TABLE `vocativo` DISABLE KEYS */;
 /*!40000 ALTER TABLE `vocativo` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'sei'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -6079,4 +6074,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-17 10:37:11
+-- Dump completed on 2016-11-26  9:51:57

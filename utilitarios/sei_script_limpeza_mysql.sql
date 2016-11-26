@@ -15,8 +15,6 @@ SCRIPT DE LIMPEZA DE PROCESSOS, DOCUMENTOS E OPERAÇÕES DE USUÁRIOS DA BASE DE
 		4) Colocar o sistema de volta ao "AR".
 */
 
-use sei;
-
 /* Limpeza de tabelas afetas a Protocolo de Processos, de Documentos Gerados e Externos e de Operações dos Usuários */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -175,7 +173,7 @@ truncate table infra_dado_usuario;
 SET FOREIGN_KEY_CHECKS=1;
 
 
-/* Sobre a última linha abaixo, de acordo com a configuração da fórmula de numeração de protocolo de processo, a tabela de sequência anual de processos pode ser qualquer um dos formatos abaixo:
+/* Sobre os últimos comandos abaixo, de acordo com a configuração da fórmula de numeração de protocolo de processo no SEI em Administração > Órgãos, a tabela de sequência anual de processos pode ser qualquer um dos formatos abaixo:
 	seq_[ano]_org_sip_[id sip]
 	seq_[ano]_org_sei_[cod sei]
 	seq_[ano]_uni_sip_[id sip]

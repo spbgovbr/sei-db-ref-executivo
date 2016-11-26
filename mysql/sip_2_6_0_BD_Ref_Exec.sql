@@ -23,8 +23,8 @@ DROP TABLE IF EXISTS `administrador_sistema`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `administrador_sistema` (
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema. 100000099: SIP; 100000100: SEI',
+  `id_usuario` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
   PRIMARY KEY (`id_usuario`,`id_sistema`),
   KEY `i01_administrador_sistema` (`id_usuario`),
   KEY `i02_administrador_sistema` (`id_sistema`),
@@ -39,7 +39,7 @@ CREATE TABLE `administrador_sistema` (
 
 LOCK TABLES `administrador_sistema` WRITE;
 /*!40000 ALTER TABLE `administrador_sistema` DISABLE KEYS */;
-INSERT INTO `administrador_sistema` VALUES (100000002,100000099),(100000002,100000100);
+INSERT INTO `administrador_sistema` VALUES (100000001,100000099),(100000001,100000100);
 /*!40000 ALTER TABLE `administrador_sistema` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -51,12 +51,12 @@ DROP TABLE IF EXISTS `contexto`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `contexto` (
-  `id_contexto` int(11) NOT NULL COMMENT 'Número que identifica o contexto.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do contexto para efetuar o login.',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Descrição do contexto.',
-  `base_dn_ldap` varchar(50) DEFAULT NULL COMMENT 'Identifica em qual base está.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o contexto está ativo ou não. S: Sim N: Não',
+  `id_contexto` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `base_dn_ldap` varchar(50) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_contexto`),
   UNIQUE KEY `i02_contexto` (`id_contexto`,`sin_ativo`),
   KEY `i01_contexto` (`id_orgao`),
@@ -81,9 +81,9 @@ DROP TABLE IF EXISTS `coordenador_perfil`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `coordenador_perfil` (
-  `id_perfil` int(11) NOT NULL COMMENT 'Número que identifica o tipo de perfil do coordenador.',
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário coordenador.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema. ',
+  `id_perfil` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
   PRIMARY KEY (`id_perfil`,`id_usuario`,`id_sistema`),
   KEY `i01_coordenador_perfil` (`id_perfil`,`id_sistema`),
   KEY `i02_coordenador_perfil` (`id_usuario`),
@@ -109,9 +109,9 @@ DROP TABLE IF EXISTS `coordenador_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `coordenador_unidade` (
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário coordenador da unidade.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
+  `id_sistema` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_sistema`,`id_usuario`,`id_unidade`),
   KEY `i01_coordenador_unidade` (`id_usuario`),
   KEY `i02_coordenador_unidade` (`id_sistema`),
@@ -167,11 +167,11 @@ DROP TABLE IF EXISTS `grupo_rede`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `grupo_rede` (
-  `id_grupo_rede` int(11) NOT NULL COMMENT 'Número que identifica o grupo de rede.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `ou_ldap` varchar(256) DEFAULT NULL COMMENT 'Unidade Organizacional LDAP.',
-  `sin_excecao` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o grupo de rede é exceção.',
-  `descricao` longtext COMMENT 'Descrição do grupo de rede.',
+  `id_grupo_rede` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `ou_ldap` varchar(256) NOT NULL,
+  `sin_excecao` char(1) NOT NULL,
+  `descricao` longtext,
   PRIMARY KEY (`id_grupo_rede`),
   KEY `ie1_grupo_rede` (`id_orgao`,`ou_ldap`,`sin_excecao`),
   CONSTRAINT `fk_grupo_rede_orgao` FOREIGN KEY (`id_orgao`) REFERENCES `orgao` (`id_orgao`) ON DELETE NO ACTION ON UPDATE NO ACTION
@@ -195,12 +195,12 @@ DROP TABLE IF EXISTS `hierarquia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `hierarquia` (
-  `id_hierarquia` int(11) NOT NULL COMMENT 'Número que identifica a hierarquia.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do sistema.',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Descrição da hierarquia criada.',
-  `dta_inicio` datetime DEFAULT NULL COMMENT 'Data de início da hierarquia.',
-  `dta_fim` datetime DEFAULT NULL COMMENT 'Data de fim da hierarquia.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se a hierarquia está ativa ou não. S: Sim N: Não',
+  `id_hierarquia` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `dta_inicio` datetime NOT NULL,
+  `dta_fim` datetime DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_hierarquia`),
   UNIQUE KEY `i01_hierarquia` (`id_hierarquia`,`sin_ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -224,17 +224,17 @@ DROP TABLE IF EXISTS `infra_agendamento_tarefa`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_agendamento_tarefa` (
-  `id_infra_agendamento_tarefa` int(11) NOT NULL COMMENT 'Número que identifica a tarefa de agendamento.',
-  `descricao` varchar(500) DEFAULT NULL COMMENT 'Descrição da tarefa de agendamento.',
-  `comando` varchar(255) DEFAULT NULL COMMENT 'Comando da tarefa de agendamento.',
-  `sta_periodicidade_execucao` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica a periodicidade de execução da tarefa. D: Diário S: Semanal M: Mensal A: Anual',
-  `periodicidade_complemento` varchar(100) DEFAULT NULL COMMENT 'Hora na qual a tarefa irá iniciar. Apenas números.',
-  `dth_ultima_execucao` datetime DEFAULT NULL COMMENT 'Data e horário da última execução da tarefa.',
-  `dth_ultima_conclusao` datetime DEFAULT NULL COMMENT 'Data e horário da conclusão da última execução da tarefa.',
-  `sin_sucesso` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se a tarefa foi concluída com sucesso ou não. S: Sim N: Não',
-  `parametro` varchar(250) DEFAULT NULL COMMENT 'Indica se existem condicionalidades para a tarefa.',
-  `email_erro` varchar(250) DEFAULT NULL COMMENT 'Endereço de e-mail do servidor responsável em verificar se a tarefa foi concluída com sucesso.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a tarefa está ativa ou não. S: Sim N: Não',
+  `id_infra_agendamento_tarefa` int(11) NOT NULL,
+  `descricao` varchar(500) NOT NULL,
+  `comando` varchar(255) NOT NULL,
+  `sta_periodicidade_execucao` char(1) NOT NULL,
+  `periodicidade_complemento` varchar(100) NOT NULL,
+  `dth_ultima_execucao` datetime DEFAULT NULL,
+  `dth_ultima_conclusao` datetime DEFAULT NULL,
+  `sin_sucesso` char(1) NOT NULL,
+  `parametro` varchar(250) DEFAULT NULL,
+  `email_erro` varchar(250) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_infra_agendamento_tarefa`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -257,29 +257,29 @@ DROP TABLE IF EXISTS `infra_auditoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_auditoria` (
-  `id_infra_auditoria` bigint(20) NOT NULL COMMENT 'Número que identifica a auditoria.',
-  `recurso` varchar(50) DEFAULT NULL COMMENT 'Nome do recurso (nome da função no código).',
-  `dth_acesso` datetime DEFAULT NULL COMMENT 'Data de acesso.',
-  `ip` varchar(39) DEFAULT NULL COMMENT 'IP.',
-  `id_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `sigla_usuario` varchar(100) DEFAULT NULL COMMENT 'Sistema/Login de rede.',
-  `nome_usuario` varchar(100) DEFAULT NULL COMMENT 'Nome do usuário.',
-  `id_orgao_usuario` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão do usuário.',
-  `sigla_orgao_usuario` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão do usuário.',
-  `id_usuario_emulador` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário emulador.',
-  `sigla_usuario_emulador` varchar(100) DEFAULT NULL COMMENT 'Sistema/Login de rede.',
-  `nome_usuario_emulador` varchar(100) DEFAULT NULL COMMENT 'Nome do usuário emulador.',
-  `id_orgao_usuario_emulador` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão do usuário emulador.',
-  `sigla_orgao_usuario_emulador` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão do usuário emulador.',
-  `id_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade.',
-  `sigla_unidade` varchar(30) DEFAULT NULL COMMENT 'Sigla da unidade.',
-  `descricao_unidade` varchar(250) DEFAULT NULL COMMENT 'Descrição da unidade.',
-  `id_orgao_unidade` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `sigla_orgao_unidade` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão.',
-  `servidor` varchar(250) DEFAULT NULL COMMENT 'Nome do servidor.',
-  `user_agent` longtext COMMENT 'Tipo de user agent.',
-  `requisicao` longtext COMMENT 'Requisição (código).',
-  `operacao` longtext COMMENT 'Operação (código).',
+  `id_infra_auditoria` bigint(20) NOT NULL,
+  `recurso` varchar(50) NOT NULL,
+  `dth_acesso` datetime NOT NULL,
+  `ip` varchar(39) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `sigla_usuario` varchar(100) DEFAULT NULL,
+  `nome_usuario` varchar(100) DEFAULT NULL,
+  `id_orgao_usuario` int(11) DEFAULT NULL,
+  `sigla_orgao_usuario` varchar(30) DEFAULT NULL,
+  `id_usuario_emulador` int(11) DEFAULT NULL,
+  `sigla_usuario_emulador` varchar(100) DEFAULT NULL,
+  `nome_usuario_emulador` varchar(100) DEFAULT NULL,
+  `id_orgao_usuario_emulador` int(11) DEFAULT NULL,
+  `sigla_orgao_usuario_emulador` varchar(30) DEFAULT NULL,
+  `id_unidade` int(11) DEFAULT NULL,
+  `sigla_unidade` varchar(30) DEFAULT NULL,
+  `descricao_unidade` varchar(250) DEFAULT NULL,
+  `id_orgao_unidade` int(11) DEFAULT NULL,
+  `sigla_orgao_unidade` varchar(30) DEFAULT NULL,
+  `servidor` varchar(250) DEFAULT NULL,
+  `user_agent` longtext,
+  `requisicao` longtext,
+  `operacao` longtext,
   PRIMARY KEY (`id_infra_auditoria`),
   KEY `i01_infra_auditoria` (`recurso`),
   KEY `i02_infra_auditoria` (`dth_acesso`),
@@ -294,7 +294,6 @@ CREATE TABLE `infra_auditoria` (
 
 LOCK TABLES `infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `infra_auditoria` DISABLE KEYS */;
-INSERT INTO `infra_auditoria` VALUES (1,'login_padrao','2016-11-17 09:56:43','::1',1,'SIP','Sistema de Permissões',0,'ABC',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'localhost (::1)','PHP-SOAP/5.3.3','GET - Array\n(\n)\n\nPOST - Array\n(\n)\n','LoginRN::logarControlado(\n LoginDTO:\nIdLogin = 47c8791f74a3f526793d133bd6a135f0be1676719cae6b8c0b9144df78e210b8eadd8db8691edb908529e703a3d5c2f9ce9e6d2f6215e433559c8e7d78a28b40\nIdSistema = 100000099\nLogin = 17/11/2016 09:56:42\nIdUsuario = 100000002\nIdContexto = [null]\nIdGrupoRede = [null]\nIdUsuarioEmulador = [null]\nHashInterno = 9bda235e0af9eee9061c95b30806bd91b5dd54d40e234658fc8f3eb64a24936f2c6b73077c0789f9f34e0ccdb3ea9739274d1c6eaa3d9e2c4e4c41e54edcf471\nHashUsuario = 188b7a9664e93773bcfbfda114716d8328421671c5aa68833ea7aa9e38bb6228e656450d7a1279640acaa938138f68bf10d037fab5f61d98f47529ef8f2cf8db\nHashAgente = 87a04520a55531424a6b4e984e186f4a593dd448f3dbcbdac8e3767d5f78fee7a3cbddaaebf564f0f0aff836bc6dfe40c0ec16b6b1c257beaa538abdf20dae08\nDnUsuario = [null]\nSinValidado = N\nSiglaUsuario = teste\nIdOrgaoUsuario = 0\nSiglaOrgaoUsuario = ABC\nDescricaoOrgaoUsuario = ORGAO ABC\nNomeUsuario = Usuário de Testes\nIdPessoaRh = [null]\nSiglaSistema = SIP\nPaginaInicialSistema = http://localhost/sip\nIdOrgaoSistema = 0\nSiglaOrgaoSistema = ABC\nDescricaoOrgaoSistema = ORGAO ABC\nIdOrgaoContexto = [null]\nSiglaOrgaoContexto = [null]\nDescricaoOrgaoContexto = [null]\nSiglaUsuarioEmulador = [null]\nNomeUsuarioEmulador = [null]\nIdOrgaoUsuarioEmulador = [null]\nSiglaOrgaoUsuarioEmulador = [null]\nDescricaoOrgaoUsuarioEmulador = [null]\nInfraSessaoDTO = InfraSessaoDTO\nHierarquia = [null])');
 /*!40000 ALTER TABLE `infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -306,10 +305,10 @@ DROP TABLE IF EXISTS `infra_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_log` (
-  `id_infra_log` bigint(20) NOT NULL COMMENT 'Número que identifica o log.',
-  `dth_log` datetime DEFAULT NULL COMMENT 'Data e hora do log.',
-  `texto_log` longtext COMMENT 'Texto do log.',
-  `ip` varchar(39) DEFAULT NULL COMMENT 'IP.',
+  `id_infra_log` bigint(20) NOT NULL,
+  `dth_log` datetime DEFAULT NULL,
+  `texto_log` longtext NOT NULL,
+  `ip` varchar(39) DEFAULT NULL,
   PRIMARY KEY (`id_infra_log`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -331,8 +330,8 @@ DROP TABLE IF EXISTS `infra_parametro`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_parametro` (
-  `nome` varchar(50) NOT NULL COMMENT 'Nome do parâmetro.',
-  `valor` varchar(1024) DEFAULT NULL COMMENT 'Código ou e-mail ',
+  `nome` varchar(50) NOT NULL,
+  `valor` varchar(1024) DEFAULT NULL,
   PRIMARY KEY (`nome`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -355,9 +354,9 @@ DROP TABLE IF EXISTS `infra_regra_auditoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_regra_auditoria` (
-  `id_infra_regra_auditoria` int(11) NOT NULL COMMENT 'Número que identifica a regra de auditoria.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da regra de auditoria.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a regra de auditoria está ativa ou não. S: Sim N: Não',
+  `id_infra_regra_auditoria` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_infra_regra_auditoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -380,8 +379,8 @@ DROP TABLE IF EXISTS `infra_regra_auditoria_recurso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_regra_auditoria_recurso` (
-  `id_infra_regra_auditoria` int(11) NOT NULL COMMENT 'Número que identifica a regra de auditoria do recurso.',
-  `recurso` varchar(50) NOT NULL COMMENT 'Nome do recurso (nome da função no código).',
+  `id_infra_regra_auditoria` int(11) NOT NULL,
+  `recurso` varchar(50) NOT NULL,
   PRIMARY KEY (`id_infra_regra_auditoria`,`recurso`),
   CONSTRAINT `fk_inf_reg_aud_rec_inf_reg_aud` FOREIGN KEY (`id_infra_regra_auditoria`) REFERENCES `infra_regra_auditoria` (`id_infra_regra_auditoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -405,10 +404,10 @@ DROP TABLE IF EXISTS `infra_sequencia`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `infra_sequencia` (
-  `nome_tabela` varchar(30) NOT NULL COMMENT 'Nome da tabela.',
-  `qtd_incremento` int(11) DEFAULT NULL COMMENT 'Quantidade que será incrementada ao contador.',
-  `num_atual` int(11) DEFAULT NULL COMMENT 'Número atual do contador.',
-  `num_maximo` int(11) DEFAULT NULL COMMENT 'Limite do contador.',
+  `nome_tabela` varchar(30) NOT NULL,
+  `qtd_incremento` int(11) NOT NULL,
+  `num_atual` int(11) NOT NULL,
+  `num_maximo` int(11) NOT NULL,
   PRIMARY KEY (`nome_tabela`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -419,7 +418,7 @@ CREATE TABLE `infra_sequencia` (
 
 LOCK TABLES `infra_sequencia` WRITE;
 /*!40000 ALTER TABLE `infra_sequencia` DISABLE KEYS */;
-INSERT INTO `infra_sequencia` VALUES ('contexto',1,0,999999999),('grupo_rede',1,0,999999999),('hierarquia',1,100000018,199999999),('infra_agendamento_tarefa',1,4,999999999),('item_menu',1,100005649,199999999),('menu',1,100000079,199999999),('orgao',1,0,999999999),('perfil',1,100000948,199999999),('recurso',1,100015450,199999999),('regra_auditoria',1,5,999999999),('servidor_autenticacao',1,2,999999999),('sistema',1,100000100,199999999),('tipo_permissao',1,3,999999999),('unidade',1,110000003,199999999),('usuario',1,100000002,199999999);
+INSERT INTO `infra_sequencia` VALUES ('contexto',1,71,999999999),('grupo_rede',1,360,999999999),('hierarquia',1,100000018,199999999),('infra_agendamento_tarefa',1,4,999999999),('item_menu',1,100005649,199999999),('menu',1,100000079,199999999),('orgao',1,0,999999999),('perfil',1,100000948,199999999),('recurso',1,100015450,199999999),('regra_auditoria',1,5,999999999),('servidor_autenticacao',1,2,999999999),('sistema',1,100000100,199999999),('tipo_permissao',1,3,999999999),('unidade',1,110000003,199999999),('usuario',1,100001579,199999999);
 /*!40000 ALTER TABLE `infra_sequencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -431,17 +430,17 @@ DROP TABLE IF EXISTS `item_menu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `item_menu` (
-  `id_menu` int(11) NOT NULL COMMENT 'Número que identifica o menu.',
-  `id_item_menu` int(11) NOT NULL COMMENT 'Número que identifica o item do menu.',
-  `id_sistema` int(11) DEFAULT NULL COMMENT 'Número que identifica o sistema.',
-  `id_menu_pai` int(11) DEFAULT NULL COMMENT 'Número que identifica o menu superior.',
-  `id_item_menu_pai` int(11) DEFAULT NULL COMMENT 'Número que identifica o item do menu superior.',
-  `id_recurso` int(11) DEFAULT NULL COMMENT 'Número que identifica o recurso.',
-  `rotulo` varchar(50) DEFAULT NULL COMMENT 'Nome do item do menu.',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Descrição do item do menu.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Referente ao posicionamento do item no menu vertical.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o item do menu está ativo ou não. S: Sim N: Não',
-  `sin_nova_janela` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se, ao clicar no item, uma nova janela será aberta. S: Sim N: Não',
+  `id_menu` int(11) NOT NULL,
+  `id_item_menu` int(11) NOT NULL,
+  `id_sistema` int(11) DEFAULT NULL,
+  `id_menu_pai` int(11) DEFAULT NULL,
+  `id_item_menu_pai` int(11) DEFAULT NULL,
+  `id_recurso` int(11) DEFAULT NULL,
+  `rotulo` varchar(50) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `sequencia` int(11) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sin_nova_janela` char(1) NOT NULL,
   PRIMARY KEY (`id_menu`,`id_item_menu`),
   UNIQUE KEY `i04_item_menu` (`id_menu`,`id_item_menu`,`sin_ativo`),
   KEY `i01_item_menu` (`id_item_menu_pai`,`id_menu_pai`),
@@ -473,18 +472,18 @@ DROP TABLE IF EXISTS `login`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `login` (
-  `id_login` char(128) NOT NULL COMMENT 'Identificador de login.',
-  `id_contexto` int(11) DEFAULT NULL COMMENT 'Número que identifica o contexto.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário.',
-  `dth_login` datetime DEFAULT NULL COMMENT 'Data de login.',
-  `id_grupo_rede` int(11) DEFAULT NULL COMMENT 'Número que identifica o grupo de rede.',
-  `hash_interno` char(128) DEFAULT NULL COMMENT 'Identificador do hash interno.',
-  `hash_usuario` char(128) DEFAULT NULL COMMENT 'Identificador do hash do usuário.',
-  `hash_agente` char(128) DEFAULT NULL COMMENT 'Identificador do hash do agente.',
-  `sin_validado` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o login foi validado ou não. S: Sim N: Não',
-  `id_usuario_emulador` int(11) DEFAULT NULL COMMENT 'Número que identifica o usuário.',
-  `dn_usuario` varchar(255) DEFAULT NULL COMMENT 'Parâmetros do login.',
+  `id_login` char(128) NOT NULL,
+  `id_contexto` int(11) DEFAULT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `dth_login` datetime NOT NULL,
+  `id_grupo_rede` int(11) DEFAULT NULL,
+  `hash_interno` char(128) NOT NULL,
+  `hash_usuario` char(128) NOT NULL,
+  `hash_agente` char(128) NOT NULL,
+  `sin_validado` char(1) NOT NULL,
+  `id_usuario_emulador` int(11) DEFAULT NULL,
+  `dn_usuario` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_login`,`id_usuario`,`id_sistema`),
   KEY `i01_login` (`id_sistema`),
   KEY `i02_login` (`id_usuario`),
@@ -507,7 +506,6 @@ CREATE TABLE `login` (
 
 LOCK TABLES `login` WRITE;
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
-INSERT INTO `login` VALUES ('47c8791f74a3f526793d133bd6a135f0be1676719cae6b8c0b9144df78e210b8eadd8db8691edb908529e703a3d5c2f9ce9e6d2f6215e433559c8e7d78a28b40',NULL,100000099,100000002,'2016-11-17 09:56:42',NULL,'9bda235e0af9eee9061c95b30806bd91b5dd54d40e234658fc8f3eb64a24936f2c6b73077c0789f9f34e0ccdb3ea9739274d1c6eaa3d9e2c4e4c41e54edcf471','188b7a9664e93773bcfbfda114716d8328421671c5aa68833ea7aa9e38bb6228e656450d7a1279640acaa938138f68bf10d037fab5f61d98f47529ef8f2cf8db','87a04520a55531424a6b4e984e186f4a593dd448f3dbcbdac8e3767d5f78fee7a3cbddaaebf564f0f0aff836bc6dfe40c0ec16b6b1c257beaa538abdf20dae08','S',NULL,NULL);
 /*!40000 ALTER TABLE `login` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -519,9 +517,9 @@ DROP TABLE IF EXISTS `mapeamento_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `mapeamento_unidade` (
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_origem` varchar(30) DEFAULT NULL COMMENT 'Número que identifica a origem da unidade.',
+  `id_sistema` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_origem` varchar(30) NOT NULL,
   PRIMARY KEY (`id_sistema`,`id_unidade`),
   UNIQUE KEY `ak_mapeamento_unidade` (`id_sistema`,`id_origem`),
   KEY `i01_mapeamento_unidade` (`id_sistema`),
@@ -549,11 +547,11 @@ DROP TABLE IF EXISTS `menu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `menu` (
-  `id_menu` int(11) NOT NULL COMMENT 'Número que identifica o menu.',
-  `id_sistema` int(11) DEFAULT NULL COMMENT 'Número que identifica o sistema.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do menu.',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Descrição do menu.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o menu está ativo ou não. S: Sim N: Não',
+  `id_menu` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_menu`),
   UNIQUE KEY `i02_menu` (`id_menu`,`sin_ativo`),
   KEY `i01_menu` (`id_sistema`),
@@ -579,14 +577,14 @@ DROP TABLE IF EXISTS `orgao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `orgao` (
-  `id_orgao` int(11) NOT NULL COMMENT 'Número que identifica o órgão.',
-  `sigla` varchar(30) DEFAULT NULL COMMENT 'Sigla do órgão.',
-  `descricao` varchar(100) DEFAULT NULL COMMENT 'Descrição do órgão.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o órgão está ativo ou não. S: Sim N: Não',
-  `sin_autenticar` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o órgão se autentica ou não. (Treinamento não é autenticado)',
+  `id_orgao` int(11) NOT NULL,
+  `sigla` varchar(30) NOT NULL,
+  `descricao` varchar(100) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sin_autenticar` char(1) NOT NULL,
   PRIMARY KEY (`id_orgao`),
-  UNIQUE KEY `i01_orgao` (`id_orgao`,`sin_ativo`),
-  UNIQUE KEY `ak_orgao_sigla` (`sigla`)
+  UNIQUE KEY `ak_orgao_sigla` (`sigla`),
+  UNIQUE KEY `i01_orgao` (`id_orgao`,`sin_ativo`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -608,13 +606,13 @@ DROP TABLE IF EXISTS `perfil`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `perfil` (
-  `id_perfil` int(11) NOT NULL COMMENT 'Número que identifica o perfil.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do perfil.',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Descrição do perfil.',
-  `sin_coordenado` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o perfil está coordenado ou não. S: Sim N: Não',
-  `sin_avulso` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o perfil está avulso ou não. S: Sim N: Não',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o perfil está ativo ou não. S: Sim N: Não',
+  `id_perfil` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `sin_coordenado` char(1) NOT NULL,
+  `sin_avulso` char(1) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_perfil`,`id_sistema`),
   UNIQUE KEY `i02_perfil` (`id_perfil`,`id_sistema`,`sin_ativo`,`sin_avulso`),
   UNIQUE KEY `ak_perfil_nome` (`nome`,`id_sistema`),
@@ -641,14 +639,14 @@ DROP TABLE IF EXISTS `permissao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `permissao` (
-  `id_perfil` int(11) NOT NULL COMMENT 'Número que identifica o perfil.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_tipo_permissao` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de permissão.',
-  `dta_inicio` datetime DEFAULT NULL COMMENT 'Data e hora de início da permissão.',
-  `dta_fim` datetime DEFAULT NULL COMMENT 'Data e hora de conclusão da permissão.',
-  `sin_subunidades` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a permissão para o usuário se estende às subunidades da unidade a qual foi concedida.',
+  `id_perfil` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
+  `id_tipo_permissao` int(11) NOT NULL,
+  `dta_inicio` datetime NOT NULL,
+  `dta_fim` datetime DEFAULT NULL,
+  `sin_subunidades` char(1) NOT NULL DEFAULT 'N',
   PRIMARY KEY (`id_perfil`,`id_sistema`,`id_usuario`,`id_unidade`),
   KEY `i01_permissao` (`id_perfil`,`id_sistema`),
   KEY `i02_permissao` (`id_tipo_permissao`),
@@ -667,7 +665,7 @@ CREATE TABLE `permissao` (
 
 LOCK TABLES `permissao` WRITE;
 /*!40000 ALTER TABLE `permissao` DISABLE KEYS */;
-INSERT INTO `permissao` VALUES (100000931,100000099,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N'),(100000932,100000099,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N'),(100000933,100000099,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N'),(100000938,100000100,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N'),(100000939,100000100,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N'),(100000940,100000100,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N'),(100000941,100000100,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N'),(100000945,100000100,100000002,110000000,1,'2016-11-16 00:00:00',NULL,'N');
+INSERT INTO `permissao` VALUES (100000931,100000099,100000001,110000000,1,'2013-11-06 00:00:00',NULL,'N'),(100000932,100000099,100000001,110000000,1,'2013-11-06 00:00:00',NULL,'N'),(100000933,100000099,100000001,110000000,1,'2013-11-06 00:00:00',NULL,'N'),(100000938,100000100,100000001,110000000,1,'2014-01-06 00:00:00',NULL,'S'),(100000938,100000100,100000001,110000001,1,'2013-11-06 00:00:00',NULL,'N'),(100000939,100000100,100000001,110000000,1,'2014-01-06 00:00:00',NULL,'S'),(100000940,100000100,100000001,110000000,1,'2014-01-06 00:00:00',NULL,'S'),(100000941,100000100,100000001,110000000,1,'2014-01-06 00:00:00',NULL,'S'),(100000945,100000100,100000001,110000000,1,'2014-01-06 00:00:00',NULL,'S');
 /*!40000 ALTER TABLE `permissao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -679,15 +677,15 @@ DROP TABLE IF EXISTS `recurso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `recurso` (
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `id_recurso` int(11) NOT NULL COMMENT 'Número que identifica o recurso.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do recurso (nome da função no código).',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Descrição do recurso.',
-  `caminho` varchar(255) DEFAULT NULL COMMENT 'Caminho para o recurso.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o recurso está ativo ou não. S: Sim N: Não',
+  `id_sistema` int(11) NOT NULL,
+  `id_recurso` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `caminho` varchar(255) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_sistema`,`id_recurso`),
-  UNIQUE KEY `i02_recurso` (`id_sistema`,`id_recurso`,`sin_ativo`),
   UNIQUE KEY `ak_recurso_nome` (`nome`,`id_sistema`),
+  UNIQUE KEY `i02_recurso` (`id_sistema`,`id_recurso`,`sin_ativo`),
   KEY `i01_recurso` (`id_sistema`),
   KEY `i03_recurso` (`id_sistema`,`sin_ativo`,`id_recurso`,`nome`),
   KEY `i04_recurso` (`id_recurso`,`sin_ativo`),
@@ -713,11 +711,11 @@ DROP TABLE IF EXISTS `recurso_vinculado`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `recurso_vinculado` (
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `id_recurso` int(11) NOT NULL COMMENT 'Número que identifica o recurso.',
-  `id_sistema_vinculado` int(11) NOT NULL COMMENT 'Número que identifica o sistema vinculado.',
-  `id_recurso_vinculado` int(11) NOT NULL COMMENT 'Número que identifica o recurso vinculado.',
-  `tipo_vinculo` int(11) DEFAULT NULL COMMENT 'Número que identifica o tipo de vínculo do recurso.',
+  `id_sistema` int(11) NOT NULL,
+  `id_recurso` int(11) NOT NULL,
+  `id_sistema_vinculado` int(11) NOT NULL,
+  `id_recurso_vinculado` int(11) NOT NULL,
+  `tipo_vinculo` int(11) NOT NULL,
   PRIMARY KEY (`id_sistema`,`id_recurso`,`id_sistema_vinculado`,`id_recurso_vinculado`),
   KEY `if1_recurso_vinculado` (`id_recurso_vinculado`,`id_sistema_vinculado`),
   KEY `if2_recurso_vinculado` (`id_sistema`,`id_recurso`),
@@ -744,10 +742,10 @@ DROP TABLE IF EXISTS `regra_auditoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `regra_auditoria` (
-  `id_regra_auditoria` int(11) NOT NULL COMMENT 'Número que identifica a regra de auditoria.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Descrição da regra de auditoria.',
-  `id_sistema` int(11) DEFAULT NULL COMMENT 'Número que identifica o sistema.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se a regra de auditoria está ativa ou não. S: Sim N: Não',
+  `id_regra_auditoria` int(11) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_regra_auditoria`),
   KEY `i01_regra_auditoria` (`id_sistema`),
   CONSTRAINT `fk_auditoria_sistema` FOREIGN KEY (`id_sistema`) REFERENCES `sistema` (`id_sistema`)
@@ -772,8 +770,8 @@ DROP TABLE IF EXISTS `rel_grupo_rede_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_grupo_rede_unidade` (
-  `id_grupo_rede` int(11) NOT NULL COMMENT 'Número que identifica o grupo de rede.',
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
+  `id_grupo_rede` int(11) NOT NULL,
+  `id_unidade` int(11) NOT NULL,
   PRIMARY KEY (`id_grupo_rede`,`id_unidade`),
   KEY `fk_rel_grp_rede_uni_unidade` (`id_unidade`),
   CONSTRAINT `fk_rel_grp_rede_uni_grp_rede` FOREIGN KEY (`id_grupo_rede`) REFERENCES `grupo_rede` (`id_grupo_rede`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -798,13 +796,13 @@ DROP TABLE IF EXISTS `rel_hierarquia_unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_hierarquia_unidade` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_hierarquia` int(11) NOT NULL COMMENT 'Número que identifica a hierarquia.',
-  `id_hierarquia_pai` int(11) DEFAULT NULL COMMENT 'Número que identifica a hierarquia.',
-  `id_unidade_pai` int(11) DEFAULT NULL COMMENT 'Número que identifica a unidade superior na hierarquia.',
-  `dta_inicio` datetime DEFAULT NULL COMMENT 'Data de início da hierarquia.',
-  `dta_fim` datetime DEFAULT NULL COMMENT 'Data de conclusão da hierarquia.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se a hierarquia está ativa ou não. S: Sim N: Não',
+  `id_unidade` int(11) NOT NULL,
+  `id_hierarquia` int(11) NOT NULL,
+  `id_hierarquia_pai` int(11) DEFAULT NULL,
+  `id_unidade_pai` int(11) DEFAULT NULL,
+  `dta_inicio` datetime NOT NULL,
+  `dta_fim` datetime DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
   PRIMARY KEY (`id_unidade`,`id_hierarquia`),
   UNIQUE KEY `i04_rel_hierarquia_unidade` (`id_unidade`,`id_hierarquia`,`sin_ativo`),
   KEY `i01_rel_hierarquia_unidade` (`id_unidade`),
@@ -834,9 +832,9 @@ DROP TABLE IF EXISTS `rel_orgao_autenticacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_orgao_autenticacao` (
-  `id_orgao` int(11) NOT NULL COMMENT 'Número que identifica o órgão.',
-  `id_servidor_autenticacao` int(11) NOT NULL COMMENT 'Número que identifica o servidor de autenticação.',
-  `sequencia` int(11) DEFAULT NULL COMMENT 'Ordem de prioridade para autenticação.',
+  `id_orgao` int(11) NOT NULL,
+  `id_servidor_autenticacao` int(11) NOT NULL,
+  `sequencia` int(11) NOT NULL,
   PRIMARY KEY (`id_orgao`,`id_servidor_autenticacao`),
   KEY `fk_rel_orgao_aut_autenticacao` (`id_servidor_autenticacao`),
   CONSTRAINT `fk_rel_orgao_aut_autenticacao` FOREIGN KEY (`id_servidor_autenticacao`) REFERENCES `servidor_autenticacao` (`id_servidor_autenticacao`),
@@ -862,11 +860,11 @@ DROP TABLE IF EXISTS `rel_perfil_item_menu`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_perfil_item_menu` (
-  `id_perfil` int(11) NOT NULL COMMENT 'Número de identificação do perfil.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número de identificação do sistema.',
-  `id_menu` int(11) NOT NULL COMMENT 'Número de identificação do menu.',
-  `id_item_menu` int(11) NOT NULL COMMENT 'Número de identificação do item do menu.',
-  `id_recurso` int(11) NOT NULL COMMENT 'Número de identificação do recurso.',
+  `id_perfil` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `id_menu` int(11) NOT NULL,
+  `id_item_menu` int(11) NOT NULL,
+  `id_recurso` int(11) NOT NULL,
   PRIMARY KEY (`id_menu`,`id_item_menu`,`id_perfil`,`id_sistema`,`id_recurso`),
   KEY `i01_rel_perfil_item_menu` (`id_perfil`,`id_sistema`),
   KEY `i02_rel_perfil_item_menu` (`id_menu`,`id_item_menu`),
@@ -894,9 +892,9 @@ DROP TABLE IF EXISTS `rel_perfil_recurso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_perfil_recurso` (
-  `id_perfil` int(11) NOT NULL COMMENT 'Número de identificação do perfil.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número de identificação do sistema.',
-  `id_recurso` int(11) NOT NULL COMMENT 'Número de identificação do recurso.',
+  `id_perfil` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `id_recurso` int(11) NOT NULL,
   PRIMARY KEY (`id_perfil`,`id_sistema`,`id_recurso`),
   KEY `i01_rel_perfil_recurso` (`id_perfil`,`id_sistema`),
   KEY `i02_rel_perfil_recurso` (`id_sistema`,`id_recurso`),
@@ -923,9 +921,9 @@ DROP TABLE IF EXISTS `rel_regra_auditoria_recurso`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `rel_regra_auditoria_recurso` (
-  `id_recurso` int(11) NOT NULL COMMENT 'Número de identificação do recurso.',
-  `id_sistema` int(11) NOT NULL COMMENT 'Número de identificação do sistema.',
-  `id_regra_auditoria` int(11) NOT NULL COMMENT 'Número de identificação da regra de auditoria.',
+  `id_recurso` int(11) NOT NULL,
+  `id_sistema` int(11) NOT NULL,
+  `id_regra_auditoria` int(11) NOT NULL,
   PRIMARY KEY (`id_sistema`,`id_recurso`,`id_regra_auditoria`),
   KEY `if1_rel_regra_auditoria_recurs` (`id_sistema`,`id_recurso`),
   KEY `if2_rel_regra_auditoria_recurs` (`id_regra_auditoria`),
@@ -952,8 +950,8 @@ DROP TABLE IF EXISTS `seq_infra_auditoria`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_infra_auditoria` (
-  `id` bigint(20) NOT NULL COMMENT 'Número de identificação.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -964,7 +962,6 @@ CREATE TABLE `seq_infra_auditoria` (
 
 LOCK TABLES `seq_infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `seq_infra_auditoria` DISABLE KEYS */;
-INSERT INTO `seq_infra_auditoria` VALUES (1,NULL);
 /*!40000 ALTER TABLE `seq_infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -976,8 +973,8 @@ DROP TABLE IF EXISTS `seq_infra_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `seq_infra_log` (
-  `id` bigint(20) NOT NULL COMMENT 'Número de identificação do log.',
-  `campo` char(1) DEFAULT NULL COMMENT 'Campo',
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -999,18 +996,18 @@ DROP TABLE IF EXISTS `servidor_autenticacao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `servidor_autenticacao` (
-  `id_servidor_autenticacao` int(11) NOT NULL COMMENT 'Número que identifica o servidor de autenticação.',
-  `nome` varchar(50) DEFAULT NULL COMMENT 'Nome do servidor de autenticação.',
-  `sta_tipo` varchar(10) DEFAULT NULL COMMENT 'Tipo de servidor de autenticação.',
-  `endereco` varchar(100) DEFAULT NULL COMMENT 'Endereço do servidor de autenticação.',
-  `porta` int(11) DEFAULT NULL COMMENT 'Número da porta do servidor de autenticação.',
-  `sufixo` varchar(50) DEFAULT NULL COMMENT 'Sufixo do servidor de autenticação.',
-  `usuario_pesquisa` varchar(100) DEFAULT NULL COMMENT 'Nome de usuário.',
-  `senha_pesquisa` varchar(100) DEFAULT NULL COMMENT 'Senha.',
-  `contexto_pesquisa` varchar(100) DEFAULT NULL COMMENT 'Identifica qual contexto foi feito o login do usuario.',
-  `atributo_filtro_pesquisa` varchar(100) DEFAULT NULL COMMENT 'Complemento ao filtro de pesquisa.',
-  `atributo_retorno_pesquisa` varchar(100) DEFAULT NULL COMMENT 'Complemento ao retorno de pesquisa.',
-  `versao` int(11) DEFAULT NULL COMMENT 'Versão do servidor de autenticação.',
+  `id_servidor_autenticacao` int(11) NOT NULL,
+  `nome` varchar(50) NOT NULL,
+  `sta_tipo` varchar(10) NOT NULL,
+  `endereco` varchar(100) NOT NULL,
+  `porta` int(11) NOT NULL,
+  `sufixo` varchar(50) DEFAULT NULL,
+  `usuario_pesquisa` varchar(100) DEFAULT NULL,
+  `senha_pesquisa` varchar(100) DEFAULT NULL,
+  `contexto_pesquisa` varchar(100) DEFAULT NULL,
+  `atributo_filtro_pesquisa` varchar(100) DEFAULT NULL,
+  `atributo_retorno_pesquisa` varchar(100) DEFAULT NULL,
+  `versao` int(11) NOT NULL,
   PRIMARY KEY (`id_servidor_autenticacao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1033,18 +1030,18 @@ DROP TABLE IF EXISTS `sistema`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `sistema` (
-  `id_sistema` int(11) NOT NULL COMMENT 'Número que identifica o sistema.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `id_hierarquia` int(11) DEFAULT NULL COMMENT 'Número que identifica a hierarquia.',
-  `sigla` varchar(15) DEFAULT NULL COMMENT 'Sigla do sistema.',
-  `descricao` varchar(200) DEFAULT NULL COMMENT 'Nome do sistema.',
-  `pagina_inicial` varchar(255) DEFAULT NULL COMMENT 'Endereço web do sistema.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que indica se o sistema está ativo ou não. S: Sim N: Não',
-  `web_service` varchar(255) DEFAULT NULL COMMENT 'Endereço web do webservice.',
-  `logo` longtext COMMENT 'Código de identificação do logo',
+  `id_sistema` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `id_hierarquia` int(11) NOT NULL,
+  `sigla` varchar(15) NOT NULL,
+  `descricao` varchar(200) DEFAULT NULL,
+  `pagina_inicial` varchar(255) DEFAULT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `web_service` varchar(255) DEFAULT NULL,
+  `logo` longtext,
   PRIMARY KEY (`id_sistema`),
-  UNIQUE KEY `i03_sistema` (`id_sistema`,`sin_ativo`),
   UNIQUE KEY `ak_sistema_sigla_orgao` (`sigla`,`id_orgao`),
+  UNIQUE KEY `i03_sistema` (`id_sistema`,`sin_ativo`),
   KEY `i01_sistema` (`id_hierarquia`),
   KEY `i02_sistema` (`id_orgao`),
   CONSTRAINT `fk_sistema_hierarquia` FOREIGN KEY (`id_hierarquia`) REFERENCES `hierarquia` (`id_hierarquia`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -1070,8 +1067,8 @@ DROP TABLE IF EXISTS `tipo_permissao`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `tipo_permissao` (
-  `id_tipo_permissao` int(11) NOT NULL COMMENT 'Número que identifica o tipo de permissão.',
-  `descricao` varchar(50) DEFAULT NULL COMMENT 'Descrição do tipo de permissão.',
+  `id_tipo_permissao` int(11) NOT NULL,
+  `descricao` varchar(50) NOT NULL,
   PRIMARY KEY (`id_tipo_permissao`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -1094,15 +1091,15 @@ DROP TABLE IF EXISTS `unidade`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `unidade` (
-  `id_unidade` int(11) NOT NULL COMMENT 'Número que identifica a unidade.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão.',
-  `sigla` varchar(30) DEFAULT NULL COMMENT 'Sigla da unidade.',
-  `descricao` varchar(250) DEFAULT NULL COMMENT 'Nome da unidade.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se a unidade está ativa ou não. S: Sim N: Não',
-  `sin_global` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se a unidade é global ou não. S: Sim N: Não',
+  `id_unidade` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `sigla` varchar(30) NOT NULL,
+  `descricao` varchar(250) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `sin_global` char(1) NOT NULL,
   PRIMARY KEY (`id_unidade`),
-  UNIQUE KEY `i02_unidade` (`id_unidade`,`sin_ativo`),
   UNIQUE KEY `ak_unidade_sigla_orgao` (`sigla`,`id_orgao`,`sin_ativo`),
+  UNIQUE KEY `i02_unidade` (`id_unidade`,`sin_ativo`),
   KEY `i01_unidade` (`id_orgao`),
   CONSTRAINT `fk_unidade_orgao` FOREIGN KEY (`id_orgao`) REFERENCES `orgao` (`id_orgao`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1126,15 +1123,15 @@ DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `usuario` (
-  `id_usuario` int(11) NOT NULL COMMENT 'Número que identifica o usuário.',
-  `id_orgao` int(11) DEFAULT NULL COMMENT 'Número que identifica o órgão do usuário.',
-  `sigla` varchar(100) DEFAULT NULL COMMENT 'Sigla ou login de rede do usuário.',
-  `nome` varchar(100) DEFAULT NULL COMMENT 'Nome do usuário.',
-  `sin_ativo` char(1) DEFAULT NULL COMMENT 'Variável categórica que identifica se o usuário está ativo ou não. S: Sim N: Não',
-  `id_pessoa_rh` bigint(20) DEFAULT NULL COMMENT 'Número que identifica o cadastro do usuário em algum sistema de origem da instituição.',
+  `id_usuario` int(11) NOT NULL,
+  `id_orgao` int(11) NOT NULL,
+  `sigla` varchar(100) NOT NULL,
+  `nome` varchar(100) NOT NULL,
+  `sin_ativo` char(1) NOT NULL,
+  `id_pessoa_rh` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id_usuario`),
-  UNIQUE KEY `i02_usuario` (`id_usuario`,`sin_ativo`),
   UNIQUE KEY `ak_usuario_sigla_orgao` (`sigla`,`id_orgao`,`sin_ativo`),
+  UNIQUE KEY `i02_usuario` (`id_usuario`,`sin_ativo`),
   KEY `i01_usuario` (`id_orgao`),
   CONSTRAINT `fk_usuario_orgao` FOREIGN KEY (`id_orgao`) REFERENCES `orgao` (`id_orgao`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1146,13 +1143,9 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,0,'SIP','Sistema de Permissões','S',NULL),(100000002,0,'teste','Usuário de Testes','S',NULL);
+INSERT INTO `usuario` VALUES (1,0,'SIP','Sistema de Permissões','S',NULL),(100000001,0,'teste','Usuário de Testes','S',NULL);
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping routines for database 'sip'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -1163,4 +1156,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-17 10:37:30
+-- Dump completed on 2016-11-26  9:54:32
