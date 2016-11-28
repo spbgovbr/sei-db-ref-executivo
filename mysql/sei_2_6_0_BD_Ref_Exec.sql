@@ -903,7 +903,7 @@ CREATE TABLE `contato` (
 
 LOCK TABLES `contato` WRITE;
 /*!40000 ALTER TABLE `contato` DISABLE KEYS */;
-INSERT INTO `contato` VALUES (100000001,100000001,NULL,NULL,NULL,NULL,'Unidade de Teste 1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste unidade de teste 1',NULL,'S',NULL,1,'S','N',NULL,'TESTE',NULL,NULL,'2013-11-08 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000002,100000002,NULL,NULL,NULL,NULL,'Sistema Eletrônico de Informações',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SEI Sistema Eletrônico de Informações',NULL,'S',NULL,2,'S','N',NULL,'SEI',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000003,100000003,NULL,NULL,NULL,NULL,'Sistema de Permissões',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SIP Sistema de Permissões',NULL,'S',NULL,2,'S','N',NULL,'SIP',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000004,100000004,NULL,NULL,NULL,NULL,'INTRANET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTRANET',NULL,'S',NULL,2,'S','N',NULL,'INTRANET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000005,100000005,NULL,NULL,NULL,NULL,'INTERNET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTERNET',NULL,'S',NULL,2,'S','N',NULL,'INTERNET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100002291,100002291,NULL,NULL,NULL,NULL,'Unidade de Testes 1.1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste11 unidade de testes 11',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_1',110000001,2,'2014-11-27 20:44:26',NULL,NULL,NULL,NULL,NULL,NULL),(100002292,100002292,NULL,NULL,NULL,NULL,'Unidade de Testes 1.2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste12 unidade de testes 12',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_2',110000001,2,'2014-11-27 20:44:44',NULL,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `contato` VALUES (1,1,NULL,NULL,NULL,NULL,'Usuário de Testes',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste usuario de testes',NULL,'S',NULL,1,'S','N',NULL,'teste',110000001,2,'2016-11-28 08:27:37',NULL,NULL,NULL,NULL,NULL,NULL),(100000001,100000001,NULL,NULL,NULL,NULL,'Usuário de Testes ERRADO',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'testeerrado usuario de testes errado',NULL,'S',NULL,1,'S','N',NULL,'teste_errado',NULL,NULL,'2013-11-08 00:00:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000002,100000002,NULL,NULL,NULL,NULL,'Sistema Eletrônico de Informações',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SEI Sistema Eletrônico de Informações',NULL,'S',NULL,2,'S','N',NULL,'SEI',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000003,100000003,NULL,NULL,NULL,NULL,'Sistema de Permissões',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'SIP Sistema de Permissões',NULL,'S',NULL,2,'S','N',NULL,'SIP',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000004,100000004,NULL,NULL,NULL,NULL,'INTRANET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTRANET',NULL,'S',NULL,2,'S','N',NULL,'INTRANET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100000005,100000005,NULL,NULL,NULL,NULL,'INTERNET',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'INTERNET',NULL,'S',NULL,2,'S','N',NULL,'INTERNET',NULL,NULL,'2013-11-08 17:20:00',NULL,NULL,NULL,NULL,NULL,NULL),(100002291,100002291,NULL,NULL,NULL,NULL,'Unidade de Testes 1.1',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste11 unidade de testes 11',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_1',110000001,2,'2014-11-27 20:44:26',NULL,NULL,NULL,NULL,NULL,NULL),(100002292,100002292,NULL,NULL,NULL,NULL,'Unidade de Testes 1.2',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'teste12 unidade de testes 12',NULL,'S',NULL,5,'S','N',NULL,'TESTE_1_2',110000001,2,'2014-11-27 20:44:44',NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1280,7 +1280,7 @@ CREATE TABLE `feriado` (
 
 LOCK TABLES `feriado` WRITE;
 /*!40000 ALTER TABLE `feriado` DISABLE KEYS */;
-INSERT INTO `feriado` VALUES (1,NULL,'Confraternização Universal','2016-01-01 00:00:00'),(2,NULL,'Segunda-feira de Carnaval','2016-02-08 00:00:00'),(3,NULL,'Terça-feira de Carnaval','2016-02-09 00:00:00'),(4,NULL,'Sexta-Feira da Paixão','2016-03-25 00:00:00'),(5,NULL,'Tiradentes','2016-04-21 00:00:00'),(6,NULL,'Dia Mundial do Trabalho','2016-05-01 00:00:00'),(7,NULL,'Corpus Christi','2016-05-26 00:00:00'),(8,NULL,'Independência do Brasil','2016-09-07 00:00:00'),(9,NULL,'Nossa Senhora Aparecida, Padroeira do Brasil','2016-10-12 00:00:00'),(10,NULL,'Finados','2016-11-02 00:00:00'),(11,NULL,'Proclamação da República','2016-11-15 00:00:00'),(12,NULL,'Natal','2016-12-25 00:00:00');
+INSERT INTO `feriado` VALUES (1,NULL,'Confraternização Universal','2017-01-01 00:00:00'),(2,NULL,'Segunda-feira de Carnaval','2017-02-27 00:00:00'),(3,NULL,'Terça-feira de Carnaval','2017-02-28 00:00:00'),(4,NULL,'Sexta-Feira da Paixão','2017-04-14 00:00:00'),(5,NULL,'Tiradentes','2017-04-21 00:00:00'),(6,NULL,'Dia Mundial do Trabalho','2017-05-01 00:00:00'),(7,NULL,'Corpus Christi','2017-06-15 00:00:00'),(8,NULL,'Independência do Brasil','2017-09-07 00:00:00'),(9,NULL,'Nossa Senhora Aparecida, Padroeira do Brasil','2017-10-12 00:00:00'),(10,NULL,'Finados','2017-11-02 00:00:00'),(11,NULL,'Proclamação da República','2017-11-15 00:00:00'),(12,NULL,'Natal','2017-12-25 00:00:00');
 /*!40000 ALTER TABLE `feriado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3501,7 +3501,7 @@ CREATE TABLE `seq_arquivo_extensao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3570,7 +3570,7 @@ CREATE TABLE `seq_assunto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=701 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3777,7 +3777,7 @@ CREATE TABLE `seq_cidade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5565 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3800,7 +3800,7 @@ CREATE TABLE `seq_conjunto_estilos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3823,7 +3823,7 @@ CREATE TABLE `seq_conjunto_estilos_item` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1643 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3846,7 +3846,7 @@ CREATE TABLE `seq_contato` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100002293 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3855,6 +3855,7 @@ CREATE TABLE `seq_contato` (
 
 LOCK TABLES `seq_contato` WRITE;
 /*!40000 ALTER TABLE `seq_contato` DISABLE KEYS */;
+INSERT INTO `seq_contato` VALUES (1,NULL);
 /*!40000 ALTER TABLE `seq_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3984,7 +3985,7 @@ CREATE TABLE `seq_email_unidade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=729 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4053,7 +4054,7 @@ CREATE TABLE `seq_estilo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4099,7 +4100,7 @@ CREATE TABLE `seq_feriado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4214,7 +4215,7 @@ CREATE TABLE `seq_grupo_serie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4260,7 +4261,7 @@ CREATE TABLE `seq_hipotese_legal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4283,7 +4284,7 @@ CREATE TABLE `seq_imagem_formato` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4421,7 +4422,7 @@ CREATE TABLE `seq_modelo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4444,7 +4445,7 @@ CREATE TABLE `seq_nivel_acesso_permitido` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3028 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4605,7 +4606,7 @@ CREATE TABLE `seq_pais` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=895 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4789,7 +4790,7 @@ CREATE TABLE `seq_secao_imprensa_nacional` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4812,7 +4813,7 @@ CREATE TABLE `seq_secao_modelo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=776 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4835,7 +4836,7 @@ CREATE TABLE `seq_serie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=283 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4950,7 +4951,7 @@ CREATE TABLE `seq_tipo_conferencia` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4973,7 +4974,7 @@ CREATE TABLE `seq_tipo_contexto_contato` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5019,7 +5020,7 @@ CREATE TABLE `seq_tipo_procedimento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100000501 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5042,7 +5043,7 @@ CREATE TABLE `seq_tipo_suporte` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5111,7 +5112,7 @@ CREATE TABLE `seq_uf` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5180,7 +5181,7 @@ CREATE TABLE `seq_veiculo_imprensa_nacional` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5203,7 +5204,7 @@ CREATE TABLE `seq_veiculo_publicacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5901,7 +5902,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'S','SEI','Sistema Eletrônico de Informações',100000002,0,NULL,'sei sistema eletronico de informacoes',NULL,'1',NULL,'N'),(2,'S','SIP','Sistema de Permissões',100000003,0,NULL,'sip sistema de permissoes',NULL,'1',NULL,'N'),(3,'S','INTRANET','INTRANET',100000004,0,NULL,'intranet',NULL,'1',NULL,'N'),(4,'S','INTERNET','INTERNET',100000005,0,NULL,'internet',NULL,'1',NULL,'N'),(100000001,'S','teste','Usuário de Testes',100000001,0,NULL,'teste usuario de testes',NULL,'0',NULL,'N');
+INSERT INTO `usuario` VALUES (1,'S','SEI','Sistema Eletrônico de Informações',100000002,0,NULL,'sei sistema eletronico de informacoes',NULL,'1',NULL,'N'),(2,'S','SIP','Sistema de Permissões',100000003,0,NULL,'sip sistema de permissoes',NULL,'1',NULL,'N'),(3,'S','INTRANET','INTRANET',100000004,0,NULL,'intranet',NULL,'1',NULL,'N'),(4,'S','INTERNET','INTERNET',100000005,0,NULL,'internet',NULL,'1',NULL,'N'),(100000001,'N','teste_errado','Usuário de Testes ERRADO',100000001,0,NULL,'testeerrado usuario de testes errado',NULL,'0',NULL,'N'),(100000002,'S','teste','Usuário de Testes',1,0,NULL,'teste usuario de testes',NULL,'0',NULL,'N');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6057,4 +6058,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-26 12:16:17
+-- Dump completed on 2016-11-28  8:43:51
