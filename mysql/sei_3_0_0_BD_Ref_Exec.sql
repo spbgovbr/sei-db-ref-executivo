@@ -3454,7 +3454,7 @@ CREATE TABLE `seq_arquivo_extensao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3463,7 +3463,6 @@ CREATE TABLE `seq_arquivo_extensao` (
 
 LOCK TABLES `seq_arquivo_extensao` WRITE;
 /*!40000 ALTER TABLE `seq_arquivo_extensao` DISABLE KEYS */;
-INSERT INTO `seq_arquivo_extensao` VALUES (42,NULL);
 /*!40000 ALTER TABLE `seq_arquivo_extensao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3478,7 +3477,7 @@ CREATE TABLE `seq_assinante` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=194 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=193 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3487,7 +3486,6 @@ CREATE TABLE `seq_assinante` (
 
 LOCK TABLES `seq_assinante` WRITE;
 /*!40000 ALTER TABLE `seq_assinante` DISABLE KEYS */;
-INSERT INTO `seq_assinante` VALUES (193,NULL);
 /*!40000 ALTER TABLE `seq_assinante` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3525,7 +3523,7 @@ CREATE TABLE `seq_assunto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=702 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=701 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3534,7 +3532,6 @@ CREATE TABLE `seq_assunto` (
 
 LOCK TABLES `seq_assunto` WRITE;
 /*!40000 ALTER TABLE `seq_assunto` DISABLE KEYS */;
-INSERT INTO `seq_assunto` VALUES (701,NULL);
 /*!40000 ALTER TABLE `seq_assunto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3742,7 +3739,6 @@ CREATE TABLE `seq_cargo` (
 
 LOCK TABLES `seq_cargo` WRITE;
 /*!40000 ALTER TABLE `seq_cargo` DISABLE KEYS */;
-INSERT INTO `seq_cargo` VALUES (1,NULL),(2,NULL),(3,NULL),(4,NULL),(5,NULL),(6,NULL),(7,NULL),(8,NULL),(9,NULL),(10,NULL),(11,NULL),(12,NULL),(13,NULL),(14,NULL),(15,NULL),(16,NULL),(17,NULL),(18,NULL),(19,NULL),(20,NULL),(21,NULL),(22,NULL),(23,NULL),(24,NULL),(25,NULL),(26,NULL),(27,NULL),(28,NULL),(29,NULL),(30,NULL),(31,NULL),(32,NULL),(33,NULL),(34,NULL),(35,NULL),(36,NULL),(37,NULL),(38,NULL),(39,NULL),(40,NULL),(41,NULL),(42,NULL),(43,NULL),(44,NULL),(45,NULL),(46,NULL),(47,NULL),(48,NULL),(49,NULL),(50,NULL),(51,NULL),(52,NULL),(53,NULL),(54,NULL),(55,NULL),(56,NULL),(57,NULL),(58,NULL),(59,NULL),(60,NULL),(61,NULL),(62,NULL),(63,NULL),(64,NULL),(65,NULL),(66,NULL),(67,NULL),(68,NULL),(69,NULL),(70,NULL),(71,NULL),(72,NULL),(73,NULL),(74,NULL),(75,NULL),(76,NULL),(77,NULL),(78,NULL),(79,NULL),(80,NULL),(81,NULL);
 /*!40000 ALTER TABLE `seq_cargo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3757,7 +3753,7 @@ CREATE TABLE `seq_cidade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5566 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5565 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3766,7 +3762,6 @@ CREATE TABLE `seq_cidade` (
 
 LOCK TABLES `seq_cidade` WRITE;
 /*!40000 ALTER TABLE `seq_cidade` DISABLE KEYS */;
-INSERT INTO `seq_cidade` VALUES (5565,NULL);
 /*!40000 ALTER TABLE `seq_cidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3781,7 +3776,7 @@ CREATE TABLE `seq_conjunto_estilos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=83 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3790,7 +3785,6 @@ CREATE TABLE `seq_conjunto_estilos` (
 
 LOCK TABLES `seq_conjunto_estilos` WRITE;
 /*!40000 ALTER TABLE `seq_conjunto_estilos` DISABLE KEYS */;
-INSERT INTO `seq_conjunto_estilos` VALUES (82,NULL);
 /*!40000 ALTER TABLE `seq_conjunto_estilos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3805,7 +3799,7 @@ CREATE TABLE `seq_conjunto_estilos_item` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1644 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1643 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3814,7 +3808,6 @@ CREATE TABLE `seq_conjunto_estilos_item` (
 
 LOCK TABLES `seq_conjunto_estilos_item` WRITE;
 /*!40000 ALTER TABLE `seq_conjunto_estilos_item` DISABLE KEYS */;
-INSERT INTO `seq_conjunto_estilos_item` VALUES (1643,NULL);
 /*!40000 ALTER TABLE `seq_conjunto_estilos_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3838,7 +3831,6 @@ CREATE TABLE `seq_contato` (
 
 LOCK TABLES `seq_contato` WRITE;
 /*!40000 ALTER TABLE `seq_contato` DISABLE KEYS */;
-INSERT INTO `seq_contato` VALUES (1,NULL),(100000010,NULL);
 /*!40000 ALTER TABLE `seq_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3968,7 +3960,7 @@ CREATE TABLE `seq_email_sistema` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3991,7 +3983,7 @@ CREATE TABLE `seq_email_unidade` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=730 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=729 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4000,7 +3992,6 @@ CREATE TABLE `seq_email_unidade` (
 
 LOCK TABLES `seq_email_unidade` WRITE;
 /*!40000 ALTER TABLE `seq_email_unidade` DISABLE KEYS */;
-INSERT INTO `seq_email_unidade` VALUES (729,NULL);
 /*!40000 ALTER TABLE `seq_email_unidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4061,7 +4052,7 @@ CREATE TABLE `seq_estilo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4070,7 +4061,6 @@ CREATE TABLE `seq_estilo` (
 
 LOCK TABLES `seq_estilo` WRITE;
 /*!40000 ALTER TABLE `seq_estilo` DISABLE KEYS */;
-INSERT INTO `seq_estilo` VALUES (60,NULL);
 /*!40000 ALTER TABLE `seq_estilo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4108,7 +4098,7 @@ CREATE TABLE `seq_feriado` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4117,7 +4107,6 @@ CREATE TABLE `seq_feriado` (
 
 LOCK TABLES `seq_feriado` WRITE;
 /*!40000 ALTER TABLE `seq_feriado` DISABLE KEYS */;
-INSERT INTO `seq_feriado` VALUES (13,NULL);
 /*!40000 ALTER TABLE `seq_feriado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4224,7 +4213,7 @@ CREATE TABLE `seq_grupo_serie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4233,7 +4222,6 @@ CREATE TABLE `seq_grupo_serie` (
 
 LOCK TABLES `seq_grupo_serie` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_serie` DISABLE KEYS */;
-INSERT INTO `seq_grupo_serie` VALUES (3,NULL);
 /*!40000 ALTER TABLE `seq_grupo_serie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4271,7 +4259,7 @@ CREATE TABLE `seq_hipotese_legal` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4280,7 +4268,6 @@ CREATE TABLE `seq_hipotese_legal` (
 
 LOCK TABLES `seq_hipotese_legal` WRITE;
 /*!40000 ALTER TABLE `seq_hipotese_legal` DISABLE KEYS */;
-INSERT INTO `seq_hipotese_legal` VALUES (19,NULL);
 /*!40000 ALTER TABLE `seq_hipotese_legal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4295,7 +4282,7 @@ CREATE TABLE `seq_imagem_formato` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4304,7 +4291,6 @@ CREATE TABLE `seq_imagem_formato` (
 
 LOCK TABLES `seq_imagem_formato` WRITE;
 /*!40000 ALTER TABLE `seq_imagem_formato` DISABLE KEYS */;
-INSERT INTO `seq_imagem_formato` VALUES (4,NULL);
 /*!40000 ALTER TABLE `seq_imagem_formato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4328,7 +4314,6 @@ CREATE TABLE `seq_infra_auditoria` (
 
 LOCK TABLES `seq_infra_auditoria` WRITE;
 /*!40000 ALTER TABLE `seq_infra_auditoria` DISABLE KEYS */;
-INSERT INTO `seq_infra_auditoria` VALUES (1,NULL),(2,NULL),(3,NULL),(4,NULL),(5,NULL),(6,NULL),(7,NULL),(8,NULL),(9,NULL),(10,NULL),(11,NULL),(12,NULL),(13,NULL),(14,NULL),(15,NULL),(16,NULL),(17,NULL),(18,NULL),(19,NULL),(20,NULL),(21,NULL),(22,NULL),(23,NULL),(24,NULL),(25,NULL),(26,NULL),(27,NULL),(28,NULL),(29,NULL),(30,NULL),(31,NULL),(32,NULL),(33,NULL),(34,NULL),(35,NULL),(36,NULL),(37,NULL),(38,NULL),(39,NULL),(40,NULL),(41,NULL),(42,NULL),(43,NULL),(44,NULL),(45,NULL),(46,NULL),(47,NULL),(48,NULL),(49,NULL),(50,NULL),(51,NULL),(52,NULL),(53,NULL),(54,NULL),(55,NULL),(56,NULL),(57,NULL),(58,NULL),(59,NULL),(60,NULL),(61,NULL),(62,NULL),(63,NULL),(64,NULL),(65,NULL),(66,NULL),(67,NULL),(68,NULL),(69,NULL),(70,NULL),(71,NULL),(72,NULL),(73,NULL),(74,NULL),(75,NULL),(76,NULL),(77,NULL),(78,NULL),(79,NULL),(80,NULL),(81,NULL),(82,NULL),(83,NULL),(84,NULL),(85,NULL),(86,NULL),(87,NULL),(88,NULL),(89,NULL),(90,NULL),(91,NULL),(92,NULL),(93,NULL),(94,NULL),(95,NULL),(96,NULL),(97,NULL),(98,NULL),(99,NULL),(100,NULL),(101,NULL),(102,NULL),(103,NULL),(104,NULL),(105,NULL),(106,NULL),(107,NULL),(108,NULL),(109,NULL),(110,NULL),(111,NULL),(112,NULL),(113,NULL),(114,NULL),(115,NULL),(116,NULL),(117,NULL),(118,NULL),(119,NULL),(120,NULL),(121,NULL),(122,NULL),(123,NULL),(124,NULL),(125,NULL),(126,NULL),(127,NULL),(128,NULL),(129,NULL),(130,NULL),(131,NULL),(132,NULL),(133,NULL),(134,NULL),(135,NULL),(136,NULL),(137,NULL),(138,NULL),(139,NULL),(140,NULL),(141,NULL),(142,NULL),(143,NULL),(144,NULL),(145,NULL),(146,NULL),(147,NULL),(148,NULL),(149,NULL);
 /*!40000 ALTER TABLE `seq_infra_auditoria` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4458,7 +4443,7 @@ CREATE TABLE `seq_modelo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=120 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4467,7 +4452,6 @@ CREATE TABLE `seq_modelo` (
 
 LOCK TABLES `seq_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_modelo` DISABLE KEYS */;
-INSERT INTO `seq_modelo` VALUES (119,NULL);
 /*!40000 ALTER TABLE `seq_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4505,7 +4489,7 @@ CREATE TABLE `seq_nivel_acesso_permitido` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3029 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3028 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4514,7 +4498,6 @@ CREATE TABLE `seq_nivel_acesso_permitido` (
 
 LOCK TABLES `seq_nivel_acesso_permitido` WRITE;
 /*!40000 ALTER TABLE `seq_nivel_acesso_permitido` DISABLE KEYS */;
-INSERT INTO `seq_nivel_acesso_permitido` VALUES (3028,NULL);
 /*!40000 ALTER TABLE `seq_nivel_acesso_permitido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4667,7 +4650,7 @@ CREATE TABLE `seq_pais` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=896 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=895 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4676,7 +4659,6 @@ CREATE TABLE `seq_pais` (
 
 LOCK TABLES `seq_pais` WRITE;
 /*!40000 ALTER TABLE `seq_pais` DISABLE KEYS */;
-INSERT INTO `seq_pais` VALUES (895,NULL);
 /*!40000 ALTER TABLE `seq_pais` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4815,7 +4797,6 @@ CREATE TABLE `seq_rel_unidade_tipo_contato` (
 
 LOCK TABLES `seq_rel_unidade_tipo_contato` WRITE;
 /*!40000 ALTER TABLE `seq_rel_unidade_tipo_contato` DISABLE KEYS */;
-INSERT INTO `seq_rel_unidade_tipo_contato` VALUES (7,NULL);
 /*!40000 ALTER TABLE `seq_rel_unidade_tipo_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4876,7 +4857,7 @@ CREATE TABLE `seq_secao_imprensa_nacional` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4885,7 +4866,6 @@ CREATE TABLE `seq_secao_imprensa_nacional` (
 
 LOCK TABLES `seq_secao_imprensa_nacional` WRITE;
 /*!40000 ALTER TABLE `seq_secao_imprensa_nacional` DISABLE KEYS */;
-INSERT INTO `seq_secao_imprensa_nacional` VALUES (4,NULL);
 /*!40000 ALTER TABLE `seq_secao_imprensa_nacional` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4900,7 +4880,7 @@ CREATE TABLE `seq_secao_modelo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=777 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=776 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4909,7 +4889,6 @@ CREATE TABLE `seq_secao_modelo` (
 
 LOCK TABLES `seq_secao_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_secao_modelo` DISABLE KEYS */;
-INSERT INTO `seq_secao_modelo` VALUES (776,NULL);
 /*!40000 ALTER TABLE `seq_secao_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4924,7 +4903,7 @@ CREATE TABLE `seq_serie` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=284 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=283 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4933,7 +4912,6 @@ CREATE TABLE `seq_serie` (
 
 LOCK TABLES `seq_serie` WRITE;
 /*!40000 ALTER TABLE `seq_serie` DISABLE KEYS */;
-INSERT INTO `seq_serie` VALUES (283,NULL);
 /*!40000 ALTER TABLE `seq_serie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5063,7 +5041,7 @@ CREATE TABLE `seq_tarefa` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1001 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5095,7 +5073,6 @@ CREATE TABLE `seq_tarja_assinatura` (
 
 LOCK TABLES `seq_tarja_assinatura` WRITE;
 /*!40000 ALTER TABLE `seq_tarja_assinatura` DISABLE KEYS */;
-INSERT INTO `seq_tarja_assinatura` VALUES (4,NULL),(5,NULL);
 /*!40000 ALTER TABLE `seq_tarja_assinatura` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5133,7 +5110,7 @@ CREATE TABLE `seq_tipo_conferencia` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5142,7 +5119,6 @@ CREATE TABLE `seq_tipo_conferencia` (
 
 LOCK TABLES `seq_tipo_conferencia` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_conferencia` DISABLE KEYS */;
-INSERT INTO `seq_tipo_conferencia` VALUES (5,NULL);
 /*!40000 ALTER TABLE `seq_tipo_conferencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5166,7 +5142,6 @@ CREATE TABLE `seq_tipo_contato` (
 
 LOCK TABLES `seq_tipo_contato` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_contato` DISABLE KEYS */;
-INSERT INTO `seq_tipo_contato` VALUES (6,NULL);
 /*!40000 ALTER TABLE `seq_tipo_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5250,7 +5225,7 @@ CREATE TABLE `seq_tipo_procedimento` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=100000502 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=100000501 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5259,7 +5234,6 @@ CREATE TABLE `seq_tipo_procedimento` (
 
 LOCK TABLES `seq_tipo_procedimento` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_procedimento` DISABLE KEYS */;
-INSERT INTO `seq_tipo_procedimento` VALUES (100000501,NULL);
 /*!40000 ALTER TABLE `seq_tipo_procedimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5274,7 +5248,7 @@ CREATE TABLE `seq_tipo_suporte` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5283,7 +5257,6 @@ CREATE TABLE `seq_tipo_suporte` (
 
 LOCK TABLES `seq_tipo_suporte` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_suporte` DISABLE KEYS */;
-INSERT INTO `seq_tipo_suporte` VALUES (9,NULL);
 /*!40000 ALTER TABLE `seq_tipo_suporte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5307,7 +5280,6 @@ CREATE TABLE `seq_tratamento` (
 
 LOCK TABLES `seq_tratamento` WRITE;
 /*!40000 ALTER TABLE `seq_tratamento` DISABLE KEYS */;
-INSERT INTO `seq_tratamento` VALUES (1,NULL),(2,NULL),(3,NULL),(4,NULL);
 /*!40000 ALTER TABLE `seq_tratamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5322,7 +5294,7 @@ CREATE TABLE `seq_uf` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5331,7 +5303,6 @@ CREATE TABLE `seq_uf` (
 
 LOCK TABLES `seq_uf` WRITE;
 /*!40000 ALTER TABLE `seq_uf` DISABLE KEYS */;
-INSERT INTO `seq_uf` VALUES (28,NULL);
 /*!40000 ALTER TABLE `seq_uf` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5392,7 +5363,7 @@ CREATE TABLE `seq_veiculo_imprensa_nacional` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5401,7 +5372,6 @@ CREATE TABLE `seq_veiculo_imprensa_nacional` (
 
 LOCK TABLES `seq_veiculo_imprensa_nacional` WRITE;
 /*!40000 ALTER TABLE `seq_veiculo_imprensa_nacional` DISABLE KEYS */;
-INSERT INTO `seq_veiculo_imprensa_nacional` VALUES (2,NULL);
 /*!40000 ALTER TABLE `seq_veiculo_imprensa_nacional` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5416,7 +5386,7 @@ CREATE TABLE `seq_veiculo_publicacao` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -5425,7 +5395,6 @@ CREATE TABLE `seq_veiculo_publicacao` (
 
 LOCK TABLES `seq_veiculo_publicacao` WRITE;
 /*!40000 ALTER TABLE `seq_veiculo_publicacao` DISABLE KEYS */;
-INSERT INTO `seq_veiculo_publicacao` VALUES (2,NULL);
 /*!40000 ALTER TABLE `seq_veiculo_publicacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5472,7 +5441,6 @@ CREATE TABLE `seq_vocativo` (
 
 LOCK TABLES `seq_vocativo` WRITE;
 /*!40000 ALTER TABLE `seq_vocativo` DISABLE KEYS */;
-INSERT INTO `seq_vocativo` VALUES (1,NULL),(2,NULL),(3,NULL),(4,NULL),(5,NULL),(6,NULL),(7,NULL),(8,NULL),(9,NULL),(10,NULL),(11,NULL),(12,NULL),(13,NULL),(14,NULL),(15,NULL),(16,NULL),(17,NULL),(18,NULL),(19,NULL),(20,NULL),(21,NULL),(22,NULL),(23,NULL),(24,NULL),(25,NULL),(26,NULL),(27,NULL),(28,NULL),(29,NULL),(30,NULL),(31,NULL),(32,NULL),(33,NULL),(34,NULL),(35,NULL),(36,NULL),(37,NULL),(38,NULL),(39,NULL),(40,NULL),(41,NULL),(42,NULL),(43,NULL),(44,NULL),(45,NULL),(46,NULL),(47,NULL),(48,NULL),(49,NULL),(50,NULL),(51,NULL),(52,NULL),(53,NULL),(54,NULL),(55,NULL),(56,NULL),(57,NULL),(58,NULL),(59,NULL),(60,NULL),(61,NULL),(62,NULL),(63,NULL);
 /*!40000 ALTER TABLE `seq_vocativo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6318,4 +6286,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-30 14:17:13
+-- Dump completed on 2016-11-30 16:29:30
