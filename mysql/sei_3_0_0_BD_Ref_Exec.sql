@@ -3462,6 +3462,7 @@ CREATE TABLE `seq_arquivo_extensao` (
 
 LOCK TABLES `seq_arquivo_extensao` WRITE;
 /*!40000 ALTER TABLE `seq_arquivo_extensao` DISABLE KEYS */;
+INSERT INTO `seq_arquivo_extensao` VALUES (41, NULL);
 /*!40000 ALTER TABLE `seq_arquivo_extensao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3485,6 +3486,7 @@ CREATE TABLE `seq_assinante` (
 
 LOCK TABLES `seq_assinante` WRITE;
 /*!40000 ALTER TABLE `seq_assinante` DISABLE KEYS */;
+INSERT INTO `seq_assinante` VALUES (192, NULL);
 /*!40000 ALTER TABLE `seq_assinante` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3531,6 +3533,7 @@ CREATE TABLE `seq_assunto` (
 
 LOCK TABLES `seq_assunto` WRITE;
 /*!40000 ALTER TABLE `seq_assunto` DISABLE KEYS */;
+INSERT INTO `seq_assunto` VALUES (700, NULL);
 /*!40000 ALTER TABLE `seq_assunto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3554,6 +3557,7 @@ CREATE TABLE `seq_assunto_proxy` (
 
 LOCK TABLES `seq_assunto_proxy` WRITE;
 /*!40000 ALTER TABLE `seq_assunto_proxy` DISABLE KEYS */;
+INSERT INTO `seq_assunto_proxy` VALUES (513, NULL);
 /*!40000 ALTER TABLE `seq_assunto_proxy` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3738,6 +3742,7 @@ CREATE TABLE `seq_cargo` (
 
 LOCK TABLES `seq_cargo` WRITE;
 /*!40000 ALTER TABLE `seq_cargo` DISABLE KEYS */;
+INSERT INTO `seq_cargo` VALUES (81, NULL);
 /*!40000 ALTER TABLE `seq_cargo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3761,6 +3766,7 @@ CREATE TABLE `seq_cidade` (
 
 LOCK TABLES `seq_cidade` WRITE;
 /*!40000 ALTER TABLE `seq_cidade` DISABLE KEYS */;
+INSERT INTO `seq_cidade` VALUES (5564, NULL);
 /*!40000 ALTER TABLE `seq_cidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3784,6 +3790,7 @@ CREATE TABLE `seq_conjunto_estilos` (
 
 LOCK TABLES `seq_conjunto_estilos` WRITE;
 /*!40000 ALTER TABLE `seq_conjunto_estilos` DISABLE KEYS */;
+INSERT INTO `seq_conjunto_estilos` VALUES (81, NULL);
 /*!40000 ALTER TABLE `seq_conjunto_estilos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3807,6 +3814,7 @@ CREATE TABLE `seq_conjunto_estilos_item` (
 
 LOCK TABLES `seq_conjunto_estilos_item` WRITE;
 /*!40000 ALTER TABLE `seq_conjunto_estilos_item` DISABLE KEYS */;
+INSERT INTO `seq_conjunto_estilos_item` VALUES (1642, NULL);
 /*!40000 ALTER TABLE `seq_conjunto_estilos_item` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3830,6 +3838,7 @@ CREATE TABLE `seq_contato` (
 
 LOCK TABLES `seq_contato` WRITE;
 /*!40000 ALTER TABLE `seq_contato` DISABLE KEYS */;
+INSERT INTO `seq_contato` VALUES (100000010, NULL);
 /*!40000 ALTER TABLE `seq_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3968,6 +3977,7 @@ CREATE TABLE `seq_email_sistema` (
 
 LOCK TABLES `seq_email_sistema` WRITE;
 /*!40000 ALTER TABLE `seq_email_sistema` DISABLE KEYS */;
+INSERT INTO `seq_email_sistema` VALUES (9, NULL);
 /*!40000 ALTER TABLE `seq_email_sistema` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3991,6 +4001,7 @@ CREATE TABLE `seq_email_unidade` (
 
 LOCK TABLES `seq_email_unidade` WRITE;
 /*!40000 ALTER TABLE `seq_email_unidade` DISABLE KEYS */;
+INSERT INTO `seq_email_unidade` VALUES (728, NULL);
 /*!40000 ALTER TABLE `seq_email_unidade` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4060,6 +4071,7 @@ CREATE TABLE `seq_estilo` (
 
 LOCK TABLES `seq_estilo` WRITE;
 /*!40000 ALTER TABLE `seq_estilo` DISABLE KEYS */;
+INSERT INTO `seq_estilo` VALUES (59, NULL);
 /*!40000 ALTER TABLE `seq_estilo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4106,6 +4118,7 @@ CREATE TABLE `seq_feriado` (
 
 LOCK TABLES `seq_feriado` WRITE;
 /*!40000 ALTER TABLE `seq_feriado` DISABLE KEYS */;
+INSERT INTO `seq_feriado` VALUES (12, NULL);
 /*!40000 ALTER TABLE `seq_feriado` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4221,6 +4234,7 @@ CREATE TABLE `seq_grupo_serie` (
 
 LOCK TABLES `seq_grupo_serie` WRITE;
 /*!40000 ALTER TABLE `seq_grupo_serie` DISABLE KEYS */;
+INSERT INTO `seq_grupo_serie` VALUES (2, NULL);
 /*!40000 ALTER TABLE `seq_grupo_serie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4267,6 +4281,7 @@ CREATE TABLE `seq_hipotese_legal` (
 
 LOCK TABLES `seq_hipotese_legal` WRITE;
 /*!40000 ALTER TABLE `seq_hipotese_legal` DISABLE KEYS */;
+INSERT INTO `seq_hipotese_legal` VALUES (18, NULL);
 /*!40000 ALTER TABLE `seq_hipotese_legal` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4290,6 +4305,7 @@ CREATE TABLE `seq_imagem_formato` (
 
 LOCK TABLES `seq_imagem_formato` WRITE;
 /*!40000 ALTER TABLE `seq_imagem_formato` DISABLE KEYS */;
+INSERT INTO `seq_imagem_formato` VALUES (3, NULL);
 /*!40000 ALTER TABLE `seq_imagem_formato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4304,7 +4320,7 @@ CREATE TABLE `seq_infra_auditoria` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `campo` char(1) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=150 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -4451,6 +4467,7 @@ CREATE TABLE `seq_modelo` (
 
 LOCK TABLES `seq_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_modelo` DISABLE KEYS */;
+INSERT INTO `seq_modelo` VALUES (118, NULL);
 /*!40000 ALTER TABLE `seq_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4497,6 +4514,7 @@ CREATE TABLE `seq_nivel_acesso_permitido` (
 
 LOCK TABLES `seq_nivel_acesso_permitido` WRITE;
 /*!40000 ALTER TABLE `seq_nivel_acesso_permitido` DISABLE KEYS */;
+INSERT INTO `seq_nivel_acesso_permitido` VALUES (3027, NULL);
 /*!40000 ALTER TABLE `seq_nivel_acesso_permitido` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4658,6 +4676,7 @@ CREATE TABLE `seq_pais` (
 
 LOCK TABLES `seq_pais` WRITE;
 /*!40000 ALTER TABLE `seq_pais` DISABLE KEYS */;
+INSERT INTO `seq_pais` VALUES (894, NULL);
 /*!40000 ALTER TABLE `seq_pais` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4796,6 +4815,7 @@ CREATE TABLE `seq_rel_unidade_tipo_contato` (
 
 LOCK TABLES `seq_rel_unidade_tipo_contato` WRITE;
 /*!40000 ALTER TABLE `seq_rel_unidade_tipo_contato` DISABLE KEYS */;
+INSERT INTO `seq_rel_unidade_tipo_contato` VALUES (7, NULL);
 /*!40000 ALTER TABLE `seq_rel_unidade_tipo_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4865,6 +4885,7 @@ CREATE TABLE `seq_secao_imprensa_nacional` (
 
 LOCK TABLES `seq_secao_imprensa_nacional` WRITE;
 /*!40000 ALTER TABLE `seq_secao_imprensa_nacional` DISABLE KEYS */;
+INSERT INTO `seq_secao_imprensa_nacional` VALUES (3, NULL);
 /*!40000 ALTER TABLE `seq_secao_imprensa_nacional` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4888,6 +4909,7 @@ CREATE TABLE `seq_secao_modelo` (
 
 LOCK TABLES `seq_secao_modelo` WRITE;
 /*!40000 ALTER TABLE `seq_secao_modelo` DISABLE KEYS */;
+INSERT INTO `seq_secao_modelo` VALUES (775, NULL);
 /*!40000 ALTER TABLE `seq_secao_modelo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -4911,6 +4933,7 @@ CREATE TABLE `seq_serie` (
 
 LOCK TABLES `seq_serie` WRITE;
 /*!40000 ALTER TABLE `seq_serie` DISABLE KEYS */;
+INSERT INTO `seq_serie` VALUES (282, NULL);
 /*!40000 ALTER TABLE `seq_serie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5026,6 +5049,7 @@ CREATE TABLE `seq_tabela_assuntos` (
 
 LOCK TABLES `seq_tabela_assuntos` WRITE;
 /*!40000 ALTER TABLE `seq_tabela_assuntos` DISABLE KEYS */;
+INSERT INTO `seq_tabela_assuntos` VALUES (1, NULL);
 /*!40000 ALTER TABLE `seq_tabela_assuntos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5049,6 +5073,7 @@ CREATE TABLE `seq_tarefa` (
 
 LOCK TABLES `seq_tarefa` WRITE;
 /*!40000 ALTER TABLE `seq_tarefa` DISABLE KEYS */;
+INSERT INTO `seq_tarefa` VALUES (123, NULL);
 /*!40000 ALTER TABLE `seq_tarefa` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5072,6 +5097,7 @@ CREATE TABLE `seq_tarja_assinatura` (
 
 LOCK TABLES `seq_tarja_assinatura` WRITE;
 /*!40000 ALTER TABLE `seq_tarja_assinatura` DISABLE KEYS */;
+INSERT INTO `seq_tarja_assinatura` VALUES (5, NULL);
 /*!40000 ALTER TABLE `seq_tarja_assinatura` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5118,6 +5144,7 @@ CREATE TABLE `seq_tipo_conferencia` (
 
 LOCK TABLES `seq_tipo_conferencia` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_conferencia` DISABLE KEYS */;
+INSERT INTO `seq_tipo_conferencia` VALUES (4, NULL);
 /*!40000 ALTER TABLE `seq_tipo_conferencia` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5141,6 +5168,7 @@ CREATE TABLE `seq_tipo_contato` (
 
 LOCK TABLES `seq_tipo_contato` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_contato` DISABLE KEYS */;
+INSERT INTO `seq_tipo_contato` VALUES (6, NULL);
 /*!40000 ALTER TABLE `seq_tipo_contato` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5233,6 +5261,7 @@ CREATE TABLE `seq_tipo_procedimento` (
 
 LOCK TABLES `seq_tipo_procedimento` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_procedimento` DISABLE KEYS */;
+INSERT INTO `seq_tipo_procedimento` VALUES (100000500, NULL);
 /*!40000 ALTER TABLE `seq_tipo_procedimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5256,6 +5285,7 @@ CREATE TABLE `seq_tipo_suporte` (
 
 LOCK TABLES `seq_tipo_suporte` WRITE;
 /*!40000 ALTER TABLE `seq_tipo_suporte` DISABLE KEYS */;
+INSERT INTO `seq_tipo_suporte` VALUES (8, NULL);
 /*!40000 ALTER TABLE `seq_tipo_suporte` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5279,6 +5309,7 @@ CREATE TABLE `seq_tratamento` (
 
 LOCK TABLES `seq_tratamento` WRITE;
 /*!40000 ALTER TABLE `seq_tratamento` DISABLE KEYS */;
+INSERT INTO `seq_tratamento` VALUES (4, NULL);
 /*!40000 ALTER TABLE `seq_tratamento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5302,6 +5333,7 @@ CREATE TABLE `seq_uf` (
 
 LOCK TABLES `seq_uf` WRITE;
 /*!40000 ALTER TABLE `seq_uf` DISABLE KEYS */;
+INSERT INTO `seq_uf` VALUES (27, NULL);
 /*!40000 ALTER TABLE `seq_uf` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5371,6 +5403,7 @@ CREATE TABLE `seq_veiculo_imprensa_nacional` (
 
 LOCK TABLES `seq_veiculo_imprensa_nacional` WRITE;
 /*!40000 ALTER TABLE `seq_veiculo_imprensa_nacional` DISABLE KEYS */;
+INSERT INTO `seq_veiculo_imprensa_nacional` VALUES (1, NULL);
 /*!40000 ALTER TABLE `seq_veiculo_imprensa_nacional` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5394,6 +5427,7 @@ CREATE TABLE `seq_veiculo_publicacao` (
 
 LOCK TABLES `seq_veiculo_publicacao` WRITE;
 /*!40000 ALTER TABLE `seq_veiculo_publicacao` DISABLE KEYS */;
+INSERT INTO `seq_veiculo_publicacao` VALUES (1, NULL);
 /*!40000 ALTER TABLE `seq_veiculo_publicacao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5440,6 +5474,7 @@ CREATE TABLE `seq_vocativo` (
 
 LOCK TABLES `seq_vocativo` WRITE;
 /*!40000 ALTER TABLE `seq_vocativo` DISABLE KEYS */;
+INSERT INTO `seq_vocativo` VALUES (63, NULL);
 /*!40000 ALTER TABLE `seq_vocativo` ENABLE KEYS */;
 UNLOCK TABLES;
 
