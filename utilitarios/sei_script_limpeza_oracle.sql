@@ -1,14 +1,14 @@
 /*
 SCRIPT DE LIMPEZA DE PROCESSOS E DOCUMENTOS DA BASE DE DADOS DO SEI 2.6.0 (ORACLE)
   Antes de executar o script:
-    1) Retirar o sistema do "AR" (derrubar todas sessıµes).
-    2) Fazer uma cÛpia da base imediatamente antes de executar o script.
-    3) Executar o script de limpeza. Se der erro, restaurar a base com a cÛpia feita no passo 2.
+    1) Retirar o sistema do "AR" (derrubar todas sess√µ¬µes).
+    2) Fazer uma c√≥pia da base imediatamente antes de executar o script.
+    3) Executar o script de limpeza. Se der erro, restaurar a base com a c√≥pia feita no passo 2.
 
-  Depois de executar o script com sucesso, sendo aconselh·vel conferir algumas tabelas abaixo e sequenciais de protocolo de processo na tabela "infra_sequencia":
+  Depois de executar o script com sucesso, sendo aconselh√°vel conferir algumas tabelas abaixo e sequenciais de protocolo de processo na tabela "infra_sequencia":
     1) Apagar todos os arquivos e estrutura de pastas no Filesystem do sei_esquema.
-    2) Excluir os Õndices do Solr, conforme orientado no final do capÌtulo do Solr no Manual de InstalaÁ„o do SEI:
-      18 - Caso,  no  futuro,  seja  preciso  reindexar  todos  os  dados  È  aconselh·vel  limpar  antes  os  Õndices usando os comandos abaixo:
+    2) Excluir os √çndices do Solr, conforme orientado no final do cap√≠tulo do Solr no Manual de Instala√ß√£o do SEI:
+      18 - Caso,  no  futuro,  seja  preciso  reindexar  todos  os  dados  √©  aconselh√°vel  limpar  antes  os  √çndices usando os comandos abaixo:
         http://[servidor_solr]:8080/solr/sei-protocolos/update?stream.body=<delete><query>*:*</query></delete>&commit=true
 				http://[servidor_solr]:8080/solr/sei-bases-conhecimento/update?stream.body=<delete><query>*:*</query></delete>&commit=true
 				http://[servidor_solr]:8080/solr/sei-publicacoes/update?stream.body=<delete><query>*:*</query></delete>&commit=true
@@ -19,7 +19,7 @@ connect sei_esquema/sei_esquema@teste
  
 /* Limpeza de tabelas afetas a Protocolo de Processos, de Documentos Gerados e Externos */
 
---Procedure para reiniciar sequence de acordo com o valor m·ximo da tabela correspondente
+--Procedure para reiniciar sequence de acordo com o valor m√°ximo da tabela correspondente
 create or replace procedure reset_seq( p_seq_name in varchar2 )
 is
 l_val number;
@@ -34,7 +34,7 @@ execute immediate 'alter sequence ' || p_seq_name || ' increment by 1 minvalue 0
 end;
 /
 
---InÌcio - Desabilitando as FKs
+--In√≠cio - Desabilitando as FKs
 set echo off 
 set feedback off 
 set verify off 
@@ -184,17 +184,20 @@ truncate table tipo_procedimento_escolha;
 truncate table protocolo;
 exec reset_seq('sei_esquema.seq_protocolo');
 
+truncate table email_grupo_email;
+exec reset_seq('sei_esquema.seq_email_grupo_email');
+
 truncate table grupo_email;
 exec reset_seq('sei_esquema.seq_grupo_email');
 
-/* Se no banco a ser limpo tenha Grupos de E-mail Institucionais configurados na AdministraÁ„£o do SEI, verifique a possibilidade de reconfigur·-los manualmente pela aplicaÁ„o. Caso tenha necessidade de mantÍ-los no banco, em vez de executar os dois comandos acima, deve executar o comando abaixo para deletar apenas os Grupos de E-mail dos Usu·rios, n„o sendo possÌvel o realinhamento dos IDs:
+/* Se no banco a ser limpo tenha Grupos de E-mail Institucionais configurados na Administra√ß√£¬£o do SEI, verifique a possibilidade de reconfigur√°-los manualmente pela aplica√ß√£o. Caso tenha necessidade de mant√™-los no banco, em vez de executar os dois comandos acima, deve executar o comando abaixo para deletar apenas os Grupos de E-mail dos Usu√°rios, n√£o sendo poss√≠vel o realinhamento dos IDs:
 	delete from grupo_email where sta_tipo='U';
 */
 
 truncate table grupo_unidade;
 exec reset_seq('sei_esquema.seq_grupo_unidade');
 
-/* Se no banco a ser limpo tenha Grupos de Envio Institucionais configurados na AdministraÁ„o do SEI, verifique a possibilidade de reconfigur·-los manualmente pela aplicaÁ„o. Caso tenha necessidade de mantÍ-los no banco, em vez de executar os dois comandos acima, deve executar o comando abaixo para deletar apenas os Grupos de Envio dos Usu·rios, n„o sendo possÌvel o realinhamento dos IDs:
+/* Se no banco a ser limpo tenha Grupos de Envio Institucionais configurados na Administra√ß√£o do SEI, verifique a possibilidade de reconfigur√°-los manualmente pela aplica√ß√£o. Caso tenha necessidade de mant√™-los no banco, em vez de executar os dois comandos acima, deve executar o comando abaixo para deletar apenas os Grupos de Envio dos Usu√°rios, n√£o sendo poss√≠vel o realinhamento dos IDs:
 	delete from grupo_unidade where sta_tipo='U';
 */
 
@@ -211,7 +214,7 @@ exec reset_seq('sei_esquema.seq_infra_navegador');
 
 truncate table infra_dado_usuario;
 
---InÌcio - Habilitando as FKs
+--In√≠cio - Habilitando as FKs
 set echo off 
 set feedback off 
 set verify off 
@@ -231,7 +234,7 @@ spool off
 --Fim - Habilitando as FKs
 
 /*
-Sobre a ˙ltima linha abaixo, a tabela de sequÍncia anual de protocolo de processos pode ser qualquer um dos formatos abaixo (de acordo com a configuraÁ„o da numeraÁ„o de protocolo):
+Sobre a √∫ltima linha abaixo, a tabela de sequ√™ncia anual de protocolo de processos pode ser qualquer um dos formatos abaixo (de acordo com a configura√ß√£o da numera√ß√£o de protocolo):
 seq_[ano]_org_sip_[id sip]
 seq_[ano]_org_sei_[cod sei]
 seq_[ano]_uni_sip_[id sip]
