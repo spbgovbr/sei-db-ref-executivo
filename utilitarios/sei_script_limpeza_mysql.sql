@@ -145,8 +145,8 @@ truncate table tipo_procedimento_escolha;
 truncate table protocolo;
 truncate table seq_protocolo;
 
-delete from email_grupo_email;
-delete from seq_email_grupo_email;
+truncate table email_grupo_email;
+truncate table seq_email_grupo_email;
 
 truncate table grupo_email;
 truncate table seq_grupo_email;
