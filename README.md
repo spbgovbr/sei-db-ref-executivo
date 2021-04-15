@@ -20,6 +20,7 @@ Entre as configurações presentes nesta base, estão:
 
 A partir da versão 4.0.0, é necessária o ajuste nos arquivos de configuração do SEI com as chaves de conexão para a base. Cada base de dados tem a sua própria chave de acesso.
 As chaves para a base liberada aqui são:
+
 **Mysql**:
 - SIP: d27791b8b33226ca19662539e9eb77edf604bd61d7f51c28f1f6387bb8413d1d9f0960d5
 - SEI: 7babf862dd3c172174e8e81ae7559e81a11ba933a3ddbb979eb9e56bc7d424603179ff17
