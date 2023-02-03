@@ -11,8 +11,6 @@ select setval ('seq_infra_log', 1);
 
 delete from login;
 
-delete from recurso_vinculado;
-
 delete from codigo_bloqueio;
 
 delete from dispositivo_acesso;

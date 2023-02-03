@@ -53,11 +53,12 @@ delete from seq_assinatura;
 delete from estatisticas;
 delete from seq_estatisticas;
 
+/*Caso o órgão queira apagasr a base de conhecimento, deve descomentar as linhas abaixo. */
 
-delete from base_conhecimento;
+/*delete from base_conhecimento;
 delete from seq_base_conhecimento;
 
-delete from rel_base_conhec_tipo_proced;
+delete from rel_base_conhec_tipo_proced;*/
 
 
 delete from versao_secao_documento;
@@ -222,15 +223,7 @@ delete from rel_usuario_usuario_unidade;
 
 delete from replicacao_federacao;
 
-delete from serie_restricao;
-delete from seq_serie_restricao;
-
 delete from sinalizacao_federacao;
-
-delete from tipo_formulario;
-delete from seq_tipo_formulario;
-
-delete from tipo_localizador;
 
 delete from tipo_proced_restricao;
 delete from seq_tipo_proced_restricao;

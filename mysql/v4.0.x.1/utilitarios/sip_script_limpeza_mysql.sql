@@ -13,8 +13,6 @@ delete from seq_infra_log;
 
 delete from login;
 
-delete from recurso_vinculado;
-
 delete from codigo_bloqueio;
 
 delete from dispositivo_acesso;

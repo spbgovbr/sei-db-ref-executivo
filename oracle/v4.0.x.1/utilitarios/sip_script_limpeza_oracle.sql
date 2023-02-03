@@ -25,7 +25,6 @@ delete from dispositivo_acesso;
 
 delete from codigo_acesso;
 
-delete from recurso_vinculado;
 
 
 

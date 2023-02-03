@@ -83,10 +83,12 @@ exec reset_seq('sei_esquema.seq_assinatura');
 truncate table estatisticas;
 exec reset_seq('sei_esquema.seq_estatisticas');
 
-truncate table base_conhecimento;
+/*Caso o órgão queira apagasr a base de conhecimento, deve descomentar as linhas abaixo. */
+
+/*truncate table base_conhecimento;
 exec reset_seq('seq_base_conhecimento');
 
-truncate table rel_base_conhec_tipo_proced;
+truncate table rel_base_conhec_tipo_proced;*/
 
 truncate table versao_secao_documento;
 exec reset_seq('sei_esquema.seq_versao_secao_documento');
@@ -256,15 +258,7 @@ truncate table rel_usuario_usuario_unidade;
 
 truncate table replicacao_federacao;
 
-truncate table serie_restricao;
-exec reset_seq('sei_esquema.seq_serie_restricao');
-
 truncate table sinalizacao_federacao;
-
-truncate table tipo_formulario;
-exec reset_seq('sei_esquema.seq_tipo_formulario');
-
-truncate table tipo_localizador;
 
 truncate table tipo_proced_restricao;
 exec reset_seq('sei_esquema.seq_tipo_proced_restricao');

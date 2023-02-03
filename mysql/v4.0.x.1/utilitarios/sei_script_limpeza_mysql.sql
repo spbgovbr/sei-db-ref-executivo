@@ -51,10 +51,12 @@ truncate table seq_assinatura;
 truncate table estatisticas;
 truncate table seq_estatisticas;
 
-truncate table base_conhecimento;
+/*Caso o órgão queira apagasr a base de conhecimento, deve descomentar as linhas abaixo. */
+
+/*truncate table base_conhecimento;
 truncate table seq_base_conhecimento;
 
-truncate table rel_base_conhec_tipo_proced;
+truncate table rel_base_conhec_tipo_proced;*/
 
 truncate table versao_secao_documento;
 truncate table seq_versao_secao_documento;
@@ -218,17 +220,10 @@ truncate table rel_usuario_usuario_unidade;
 
 truncate table replicacao_federacao;
 
-truncate table serie_restricao;
-truncate table seq_serie_restricao;
-
 truncate table sinalizacao_federacao;
 
-truncate table tipo_formulario;
-truncate table seq_tipo_formulario;
-
-truncate table tipo_localizador;
-
 truncate table tipo_proced_restricao;
+
 truncate table seq_tipo_proced_restricao;
 
 truncate table unidade_federacao;
