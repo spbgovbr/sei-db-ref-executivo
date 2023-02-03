@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: administrador_sistema; Type: TABLE; Schema: public; Owner: postgres
+-- Name: administrador_sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.administrador_sistema (
@@ -33,7 +33,7 @@ CREATE TABLE public.administrador_sistema (
 ALTER TABLE public.administrador_sistema OWNER TO sip_user;
 
 --
--- Name: codigo_acesso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: codigo_acesso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.codigo_acesso (
@@ -58,7 +58,7 @@ CREATE TABLE public.codigo_acesso (
 ALTER TABLE public.codigo_acesso OWNER TO sip_user;
 
 --
--- Name: codigo_bloqueio; Type: TABLE; Schema: public; Owner: postgres
+-- Name: codigo_bloqueio; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.codigo_bloqueio (
@@ -74,7 +74,7 @@ CREATE TABLE public.codigo_bloqueio (
 ALTER TABLE public.codigo_bloqueio OWNER TO sip_user;
 
 --
--- Name: coordenador_perfil; Type: TABLE; Schema: public; Owner: postgres
+-- Name: coordenador_perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.coordenador_perfil (
@@ -87,7 +87,7 @@ CREATE TABLE public.coordenador_perfil (
 ALTER TABLE public.coordenador_perfil OWNER TO sip_user;
 
 --
--- Name: coordenador_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: coordenador_unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.coordenador_unidade (
@@ -100,7 +100,7 @@ CREATE TABLE public.coordenador_unidade (
 ALTER TABLE public.coordenador_unidade OWNER TO sip_user;
 
 --
--- Name: dispositivo_acesso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: dispositivo_acesso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.dispositivo_acesso (
@@ -119,7 +119,7 @@ CREATE TABLE public.dispositivo_acesso (
 ALTER TABLE public.dispositivo_acesso OWNER TO sip_user;
 
 --
--- Name: email_sistema; Type: TABLE; Schema: public; Owner: postgres
+-- Name: email_sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.email_sistema (
@@ -137,7 +137,7 @@ CREATE TABLE public.email_sistema (
 ALTER TABLE public.email_sistema OWNER TO sip_user;
 
 --
--- Name: hierarquia; Type: TABLE; Schema: public; Owner: postgres
+-- Name: hierarquia; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.hierarquia (
@@ -153,7 +153,7 @@ CREATE TABLE public.hierarquia (
 ALTER TABLE public.hierarquia OWNER TO sip_user;
 
 --
--- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_agendamento_tarefa (
@@ -174,7 +174,7 @@ CREATE TABLE public.infra_agendamento_tarefa (
 ALTER TABLE public.infra_agendamento_tarefa OWNER TO sip_user;
 
 --
--- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_auditoria (
@@ -207,7 +207,7 @@ CREATE TABLE public.infra_auditoria (
 ALTER TABLE public.infra_auditoria OWNER TO sip_user;
 
 --
--- Name: infra_log; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_log; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_log (
@@ -222,7 +222,7 @@ CREATE TABLE public.infra_log (
 ALTER TABLE public.infra_log OWNER TO sip_user;
 
 --
--- Name: infra_parametro; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_parametro; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_parametro (
@@ -234,7 +234,7 @@ CREATE TABLE public.infra_parametro (
 ALTER TABLE public.infra_parametro OWNER TO sip_user;
 
 --
--- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_regra_auditoria (
@@ -247,7 +247,7 @@ CREATE TABLE public.infra_regra_auditoria (
 ALTER TABLE public.infra_regra_auditoria OWNER TO sip_user;
 
 --
--- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_regra_auditoria_recurso (
@@ -259,7 +259,7 @@ CREATE TABLE public.infra_regra_auditoria_recurso (
 ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO sip_user;
 
 --
--- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_sequencia (
@@ -273,7 +273,7 @@ CREATE TABLE public.infra_sequencia (
 ALTER TABLE public.infra_sequencia OWNER TO sip_user;
 
 --
--- Name: item_menu; Type: TABLE; Schema: public; Owner: postgres
+-- Name: item_menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.item_menu (
@@ -295,7 +295,7 @@ CREATE TABLE public.item_menu (
 ALTER TABLE public.item_menu OWNER TO sip_user;
 
 --
--- Name: login; Type: TABLE; Schema: public; Owner: postgres
+-- Name: login; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.login (
@@ -320,7 +320,7 @@ CREATE TABLE public.login (
 ALTER TABLE public.login OWNER TO sip_user;
 
 --
--- Name: menu; Type: TABLE; Schema: public; Owner: postgres
+-- Name: menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.menu (
@@ -335,7 +335,7 @@ CREATE TABLE public.menu (
 ALTER TABLE public.menu OWNER TO sip_user;
 
 --
--- Name: orgao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orgao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.orgao (
@@ -351,7 +351,7 @@ CREATE TABLE public.orgao (
 ALTER TABLE public.orgao OWNER TO sip_user;
 
 --
--- Name: perfil; Type: TABLE; Schema: public; Owner: postgres
+-- Name: perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.perfil (
@@ -367,7 +367,7 @@ CREATE TABLE public.perfil (
 ALTER TABLE public.perfil OWNER TO sip_user;
 
 --
--- Name: permissao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: permissao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.permissao (
@@ -385,7 +385,7 @@ CREATE TABLE public.permissao (
 ALTER TABLE public.permissao OWNER TO sip_user;
 
 --
--- Name: recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.recurso (
@@ -401,7 +401,7 @@ CREATE TABLE public.recurso (
 ALTER TABLE public.recurso OWNER TO sip_user;
 
 --
--- Name: recurso_vinculado; Type: TABLE; Schema: public; Owner: postgres
+-- Name: recurso_vinculado; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.recurso_vinculado (
@@ -416,7 +416,7 @@ CREATE TABLE public.recurso_vinculado (
 ALTER TABLE public.recurso_vinculado OWNER TO sip_user;
 
 --
--- Name: regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: regra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.regra_auditoria (
@@ -430,7 +430,7 @@ CREATE TABLE public.regra_auditoria (
 ALTER TABLE public.regra_auditoria OWNER TO sip_user;
 
 --
--- Name: rel_hierarquia_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_hierarquia_unidade (
@@ -447,7 +447,7 @@ CREATE TABLE public.rel_hierarquia_unidade (
 ALTER TABLE public.rel_hierarquia_unidade OWNER TO sip_user;
 
 --
--- Name: rel_orgao_autenticacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_orgao_autenticacao (
@@ -460,7 +460,7 @@ CREATE TABLE public.rel_orgao_autenticacao (
 ALTER TABLE public.rel_orgao_autenticacao OWNER TO sip_user;
 
 --
--- Name: rel_perfil_item_menu; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_perfil_item_menu (
@@ -475,7 +475,7 @@ CREATE TABLE public.rel_perfil_item_menu (
 ALTER TABLE public.rel_perfil_item_menu OWNER TO sip_user;
 
 --
--- Name: rel_perfil_recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_perfil_recurso (
@@ -488,7 +488,7 @@ CREATE TABLE public.rel_perfil_recurso (
 ALTER TABLE public.rel_perfil_recurso OWNER TO sip_user;
 
 --
--- Name: rel_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_regra_auditoria_recurso (
@@ -501,7 +501,7 @@ CREATE TABLE public.rel_regra_auditoria_recurso (
 ALTER TABLE public.rel_regra_auditoria_recurso OWNER TO sip_user;
 
 --
--- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: sip_user
 --
 
 CREATE SEQUENCE public.seq_infra_auditoria
@@ -515,7 +515,7 @@ CREATE SEQUENCE public.seq_infra_auditoria
 ALTER TABLE public.seq_infra_auditoria OWNER TO sip_user;
 
 --
--- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: sip_user
 --
 
 CREATE SEQUENCE public.seq_infra_log
@@ -529,7 +529,7 @@ CREATE SEQUENCE public.seq_infra_log
 ALTER TABLE public.seq_infra_log OWNER TO sip_user;
 
 --
--- Name: seq_usuario_historico; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_usuario_historico; Type: SEQUENCE; Schema: public; Owner: sip_user
 --
 
 CREATE SEQUENCE public.seq_usuario_historico
@@ -543,7 +543,7 @@ CREATE SEQUENCE public.seq_usuario_historico
 ALTER TABLE public.seq_usuario_historico OWNER TO sip_user;
 
 --
--- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.servidor_autenticacao (
@@ -565,7 +565,7 @@ CREATE TABLE public.servidor_autenticacao (
 ALTER TABLE public.servidor_autenticacao OWNER TO sip_user;
 
 --
--- Name: sistema; Type: TABLE; Schema: public; Owner: postgres
+-- Name: sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.sistema (
@@ -589,7 +589,7 @@ CREATE TABLE public.sistema (
 ALTER TABLE public.sistema OWNER TO sip_user;
 
 --
--- Name: tipo_permissao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_permissao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.tipo_permissao (
@@ -601,7 +601,7 @@ CREATE TABLE public.tipo_permissao (
 ALTER TABLE public.tipo_permissao OWNER TO sip_user;
 
 --
--- Name: unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.unidade (
@@ -618,7 +618,7 @@ CREATE TABLE public.unidade (
 ALTER TABLE public.unidade OWNER TO sip_user;
 
 --
--- Name: usuario; Type: TABLE; Schema: public; Owner: postgres
+-- Name: usuario; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.usuario (
@@ -639,7 +639,7 @@ CREATE TABLE public.usuario (
 ALTER TABLE public.usuario OWNER TO sip_user;
 
 --
--- Name: usuario_historico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: usuario_historico; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.usuario_historico (
@@ -656,7 +656,7 @@ CREATE TABLE public.usuario_historico (
 ALTER TABLE public.usuario_historico OWNER TO sip_user;
 
 --
--- Data for Name: administrador_sistema; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: administrador_sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.administrador_sistema (id_usuario, id_sistema) FROM stdin;
@@ -666,7 +666,7 @@ COPY public.administrador_sistema (id_usuario, id_sistema) FROM stdin;
 
 
 --
--- Data for Name: codigo_acesso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: codigo_acesso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.codigo_acesso (id_codigo_acesso, id_usuario, id_usuario_desativacao, id_sistema, chave_geracao, dth_geracao, chave_ativacao, dth_envio_ativacao, dth_ativacao, chave_desativacao, dth_envio_desativacao, dth_desativacao, dth_acesso, email, sin_ativo) FROM stdin;
@@ -674,7 +674,7 @@ COPY public.codigo_acesso (id_codigo_acesso, id_usuario, id_usuario_desativacao,
 
 
 --
--- Data for Name: codigo_bloqueio; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: codigo_bloqueio; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.codigo_bloqueio (id_codigo_bloqueio, id_codigo_acesso, chave_bloqueio, dth_envio, dth_bloqueio, sin_ativo) FROM stdin;
@@ -682,7 +682,7 @@ COPY public.codigo_bloqueio (id_codigo_bloqueio, id_codigo_acesso, chave_bloquei
 
 
 --
--- Data for Name: coordenador_perfil; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: coordenador_perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.coordenador_perfil (id_perfil, id_usuario, id_sistema) FROM stdin;
@@ -690,7 +690,7 @@ COPY public.coordenador_perfil (id_perfil, id_usuario, id_sistema) FROM stdin;
 
 
 --
--- Data for Name: coordenador_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: coordenador_unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.coordenador_unidade (id_sistema, id_usuario, id_unidade) FROM stdin;
@@ -698,7 +698,7 @@ COPY public.coordenador_unidade (id_sistema, id_usuario, id_unidade) FROM stdin;
 
 
 --
--- Data for Name: dispositivo_acesso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: dispositivo_acesso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.dispositivo_acesso (id_dispositivo_acesso, id_codigo_acesso, chave_dispositivo, chave_acesso, dth_liberacao, user_agent, dth_acesso, ip_acesso, sin_ativo) FROM stdin;
@@ -706,7 +706,7 @@ COPY public.dispositivo_acesso (id_dispositivo_acesso, id_codigo_acesso, chave_d
 
 
 --
--- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, de, para, assunto, conteudo, descricao, sin_ativo) FROM stdin;
@@ -718,7 +718,7 @@ COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, de, para, 
 
 
 --
--- Data for Name: hierarquia; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: hierarquia; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.hierarquia (id_hierarquia, nome, descricao, dta_inicio, dta_fim, sin_ativo) FROM stdin;
@@ -727,7 +727,7 @@ COPY public.hierarquia (id_hierarquia, nome, descricao, dta_inicio, dta_fim, sin
 
 
 --
--- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_agendamento_tarefa (id_infra_agendamento_tarefa, descricao, comando, sta_periodicidade_execucao, periodicidade_complemento, dth_ultima_execucao, dth_ultima_conclusao, sin_sucesso, parametro, email_erro, sin_ativo) FROM stdin;
@@ -740,7 +740,7 @@ COPY public.infra_agendamento_tarefa (id_infra_agendamento_tarefa, descricao, co
 
 
 --
--- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, id_usuario_emulador, id_orgao_usuario_emulador, id_unidade, id_orgao_unidade, recurso, dth_acesso, ip, sigla_usuario, nome_usuario, sigla_orgao_usuario, sigla_usuario_emulador, nome_usuario_emulador, sigla_orgao_usuario_emulador, sigla_unidade, descricao_unidade, sigla_orgao_unidade, servidor, user_agent, requisicao, operacao) FROM stdin;
@@ -748,7 +748,7 @@ COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, i
 
 
 --
--- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdin;
@@ -756,7 +756,7 @@ COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdi
 
 
 --
--- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_parametro (nome, valor) FROM stdin;
@@ -770,7 +770,6 @@ ID_PERFIL_SIP_COORDENADOR_UNIDADE	100000946
 ID_SISTEMA_SEI	100000100
 ID_SISTEMA_SIP	100000099
 ID_USUARIO_SIP	1
-SEI_VERSAO	4.0.0.1
 SIP_2_FATORES_SUFIXOS_EMAIL_NAO_PERMTIDOS	.jus.br, .gov.br
 SIP_2_FATORES_TEMPO_DIAS_LINK_BLOQUEIO	10
 SIP_2_FATORES_TEMPO_DIAS_VALIDADE_DISPOSITIVO	45
@@ -779,12 +778,13 @@ SIP_EMAIL_SISTEMA	naoresponda@dominio.gov.br
 SIP_MSG_USUARIO_BLOQUEADO	Usuário bloqueado.
 SIP_NUM_HISTORICO_ULTIMOS_ACESSOS	10
 SIP_TEMPO_DIAS_HISTORICO_ACESSOS	90
-SIP_VERSAO	3.0.0.1
+SIP_VERSAO	3.0.9.12
+SEI_VERSAO	4.0.3.2
 \.
 
 
 --
--- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativo) FROM stdin;
@@ -793,7 +793,7 @@ COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativ
 
 
 --
--- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FROM stdin;
@@ -882,7 +882,7 @@ COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FR
 
 
 --
--- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_sequencia (nome_tabela, qtd_incremento, num_atual, num_maximo) FROM stdin;
@@ -905,7 +905,7 @@ usuario	1	100000001	199999999
 
 
 --
--- Data for Name: item_menu; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: item_menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.item_menu (id_menu, id_item_menu, id_sistema, id_menu_pai, id_item_menu_pai, id_recurso, rotulo, descricao, sequencia, sin_ativo, sin_nova_janela, icone) FROM stdin;
@@ -1173,7 +1173,7 @@ COPY public.item_menu (id_menu, id_item_menu, id_sistema, id_menu_pai, id_item_m
 
 
 --
--- Data for Name: login; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: login; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.login (id_login, id_sistema, id_usuario, id_usuario_emulador, dth_login, hash_interno, hash_usuario, hash_agente, http_client_ip, remote_addr, http_x_forwarded_for, sta_login, user_agent, id_dispositivo_acesso, id_codigo_acesso) FROM stdin;
@@ -1183,7 +1183,7 @@ COPY public.login (id_login, id_sistema, id_usuario, id_usuario_emulador, dth_lo
 
 
 --
--- Data for Name: menu; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.menu (id_menu, id_sistema, nome, descricao, sin_ativo) FROM stdin;
@@ -1193,7 +1193,7 @@ COPY public.menu (id_menu, id_sistema, nome, descricao, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.orgao (id_orgao, sigla, descricao, sin_ativo, sin_autenticar, ordem) FROM stdin;
@@ -1202,7 +1202,7 @@ COPY public.orgao (id_orgao, sigla, descricao, sin_ativo, sin_autenticar, ordem)
 
 
 --
--- Data for Name: perfil; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.perfil (id_perfil, id_sistema, nome, descricao, sin_coordenado, sin_ativo) FROM stdin;
@@ -1225,7 +1225,7 @@ COPY public.perfil (id_perfil, id_sistema, nome, descricao, sin_coordenado, sin_
 
 
 --
--- Data for Name: permissao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: permissao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.permissao (id_perfil, id_sistema, id_usuario, id_unidade, id_tipo_permissao, dta_inicio, dta_fim, sin_subunidades) FROM stdin;
@@ -1241,7 +1241,7 @@ COPY public.permissao (id_perfil, id_sistema, id_usuario, id_unidade, id_tipo_pe
 
 
 --
--- Data for Name: recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo) FROM stdin;
@@ -2611,7 +2611,7 @@ COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo
 
 
 --
--- Data for Name: recurso_vinculado; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: recurso_vinculado; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.recurso_vinculado (id_sistema, id_recurso, id_sistema_vinculado, id_recurso_vinculado, tipo_vinculo) FROM stdin;
@@ -2619,7 +2619,7 @@ COPY public.recurso_vinculado (id_sistema, id_recurso, id_sistema_vinculado, id_
 
 
 --
--- Data for Name: regra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: regra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.regra_auditoria (id_regra_auditoria, id_sistema, descricao, sin_ativo) FROM stdin;
@@ -2632,7 +2632,7 @@ COPY public.regra_auditoria (id_regra_auditoria, id_sistema, descricao, sin_ativ
 
 
 --
--- Data for Name: rel_hierarquia_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_hierarquia_unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_hierarquia_unidade (id_unidade, id_hierarquia, id_hierarquia_pai, id_unidade_pai, dta_inicio, dta_fim, sin_ativo) FROM stdin;
@@ -2643,7 +2643,7 @@ COPY public.rel_hierarquia_unidade (id_unidade, id_hierarquia, id_hierarquia_pai
 
 
 --
--- Data for Name: rel_orgao_autenticacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_orgao_autenticacao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_orgao_autenticacao (id_orgao, id_servidor_autenticacao, sequencia) FROM stdin;
@@ -2652,7 +2652,7 @@ COPY public.rel_orgao_autenticacao (id_orgao, id_servidor_autenticacao, sequenci
 
 
 --
--- Data for Name: rel_perfil_item_menu; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_perfil_item_menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, id_recurso) FROM stdin;
@@ -2927,7 +2927,7 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 
 
 --
--- Data for Name: rel_perfil_recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_perfil_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
@@ -5398,7 +5398,7 @@ COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
 
 
 --
--- Data for Name: rel_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_regra_auditoria_recurso (id_recurso, id_sistema, id_regra_auditoria) FROM stdin;
@@ -5845,7 +5845,7 @@ COPY public.rel_regra_auditoria_recurso (id_recurso, id_sistema, id_regra_audito
 
 
 --
--- Data for Name: servidor_autenticacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: servidor_autenticacao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.servidor_autenticacao (id_servidor_autenticacao, nome, sta_tipo, endereco, porta, sufixo, usuario_pesquisa, senha_pesquisa, contexto_pesquisa, atributo_filtro_pesquisa, atributo_retorno_pesquisa, versao) FROM stdin;
@@ -5855,17 +5855,17 @@ COPY public.servidor_autenticacao (id_servidor_autenticacao, nome, sta_tipo, end
 
 
 --
--- Data for Name: sistema; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.sistema (id_sistema, id_orgao, id_hierarquia, sigla, descricao, pagina_inicial, sin_ativo, web_service, logo, sta_2_fatores, esquema_login, servicos_liberados, chave_acesso, crc) FROM stdin;
-100000100	0	100000018	SEI	Sistema Eletrônico de Informações	http://localhost:8000/sei/inicializar.php	S	http://localhost:8000/sei/controlador_ws.php?servico=sip	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	P	dsgov	1,2,3,4,5,6	$2a$12$U1UYoWD3Yer2fedJEGOti.YN.cCBByAqI21tsrQ5Qi9.VcTfn4thS	7babf862
 100000099	0	100000018	SIP	Sistema de Permissões	http://localhost:8000/sip	S	\N	iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAYAAAAKhRhlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MkNDRTkzMEY0RjJFMjExOEZDREM0OEY5REVERTIyMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozOTM0MUE4N0YzMTExMUUyODIyNUE2M0UxNkU5MEY4MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozOTM0MUE4NkYzMTExMUUyODIyNUE2M0UxNkU5MEY4MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJGM0EzNkE5RkNGMkUyMTE5MzEwQzJEQTM3N0RGMkFCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjYyQ0NFOTMwRjRGMkUyMTE4RkNEQzQ4RjlERURFMjIyIi8+IDwvcmRmOkRlc2NyaXB0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	P	dsgov	\N	$2a$12$VGlzUNkiuuSRRarooGKzzOOvZnMKz/bNIz.721dwe/dq75CGyfj6S	d27791b8
+100000100	0	100000018	SEI	Sistema Eletrônico de Informações	http://localhost:8000/sei/inicializar.php	S	http://localhost:8000/sei/controlador_ws.php?servico=sip	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	P	dsgov	1,2,3,4,5,6	$2a$12$U1UYoWD3Yer2fedJEGOti.YN.cCBByAqI21tsrQ5Qi9.VcTfn4thS	7babf862
 \.
 
 
 --
--- Data for Name: tipo_permissao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_permissao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.tipo_permissao (id_tipo_permissao, descricao) FROM stdin;
@@ -5876,7 +5876,7 @@ COPY public.tipo_permissao (id_tipo_permissao, descricao) FROM stdin;
 
 
 --
--- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.unidade (id_unidade, id_orgao, id_origem, sigla, descricao, sin_ativo, sin_global) FROM stdin;
@@ -5888,7 +5888,7 @@ COPY public.unidade (id_unidade, id_orgao, id_origem, sigla, descricao, sin_ativ
 
 
 --
--- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.usuario (id_usuario, id_orgao, id_origem, sigla, nome, sin_ativo, cpf, nome_registro_civil, nome_social, email, sin_bloqueado) FROM stdin;
@@ -5898,7 +5898,7 @@ COPY public.usuario (id_usuario, id_orgao, id_origem, sigla, nome, sin_ativo, cp
 
 
 --
--- Data for Name: usuario_historico; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: usuario_historico; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.usuario_historico (id_usuario_historico, id_codigo_acesso, id_usuario, id_usuario_operacao, dth_operacao, sta_operacao, motivo) FROM stdin;
@@ -5906,28 +5906,28 @@ COPY public.usuario_historico (id_usuario_historico, id_codigo_acesso, id_usuari
 
 
 --
--- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
 SELECT pg_catalog.setval('public.seq_infra_auditoria', 6, true);
 
 
 --
--- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
 SELECT pg_catalog.setval('public.seq_infra_log', 1, false);
 
 
 --
--- Name: seq_usuario_historico; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_usuario_historico; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
 SELECT pg_catalog.setval('public.seq_usuario_historico', 1, false);
 
 
 --
--- Name: administrador_sistema pk_administrador_sistema; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: administrador_sistema pk_administrador_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -5935,7 +5935,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: codigo_acesso pk_codigo_acesso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso pk_codigo_acesso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -5943,7 +5943,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_bloqueio pk_codigo_bloqueio; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_bloqueio pk_codigo_bloqueio; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_bloqueio
@@ -5951,7 +5951,7 @@ ALTER TABLE ONLY public.codigo_bloqueio
 
 
 --
--- Name: coordenador_perfil pk_coordenador_perfil; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_perfil pk_coordenador_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -5959,7 +5959,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_unidade pk_coordenador_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade pk_coordenador_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -5967,7 +5967,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: dispositivo_acesso pk_dispositivo_acesso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: dispositivo_acesso pk_dispositivo_acesso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.dispositivo_acesso
@@ -5975,7 +5975,7 @@ ALTER TABLE ONLY public.dispositivo_acesso
 
 
 --
--- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.email_sistema
@@ -5983,7 +5983,7 @@ ALTER TABLE ONLY public.email_sistema
 
 
 --
--- Name: hierarquia pk_hierarquia; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: hierarquia pk_hierarquia; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.hierarquia
@@ -5991,7 +5991,7 @@ ALTER TABLE ONLY public.hierarquia
 
 
 --
--- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_agendamento_tarefa
@@ -5999,7 +5999,7 @@ ALTER TABLE ONLY public.infra_agendamento_tarefa
 
 
 --
--- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_auditoria
@@ -6007,7 +6007,7 @@ ALTER TABLE ONLY public.infra_auditoria
 
 
 --
--- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_log
@@ -6015,7 +6015,7 @@ ALTER TABLE ONLY public.infra_log
 
 
 --
--- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_parametro
@@ -6023,7 +6023,7 @@ ALTER TABLE ONLY public.infra_parametro
 
 
 --
--- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria
@@ -6031,7 +6031,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria
 
 
 --
--- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -6039,7 +6039,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_sequencia
@@ -6047,7 +6047,7 @@ ALTER TABLE ONLY public.infra_sequencia
 
 
 --
--- Name: item_menu pk_item_menu; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu pk_item_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6055,7 +6055,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: login pk_login; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login pk_login; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6063,7 +6063,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: menu pk_menu; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: menu pk_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.menu
@@ -6071,7 +6071,7 @@ ALTER TABLE ONLY public.menu
 
 
 --
--- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.orgao
@@ -6079,7 +6079,7 @@ ALTER TABLE ONLY public.orgao
 
 
 --
--- Name: perfil pk_perfil; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: perfil pk_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.perfil
@@ -6087,7 +6087,7 @@ ALTER TABLE ONLY public.perfil
 
 
 --
--- Name: permissao pk_permissao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao pk_permissao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -6095,7 +6095,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: recurso pk_recurso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso pk_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso
@@ -6103,7 +6103,7 @@ ALTER TABLE ONLY public.recurso
 
 
 --
--- Name: recurso_vinculado pk_recurso_vinculado; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso_vinculado pk_recurso_vinculado; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -6111,7 +6111,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: regra_auditoria pk_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: regra_auditoria pk_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.regra_auditoria
@@ -6119,7 +6119,7 @@ ALTER TABLE ONLY public.regra_auditoria
 
 
 --
--- Name: rel_hierarquia_unidade pk_rel_hierarquia_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade pk_rel_hierarquia_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -6127,7 +6127,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_orgao_autenticacao pk_rel_orgao_autenticacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao pk_rel_orgao_autenticacao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -6135,7 +6135,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_perfil_item_menu pk_rel_perfil_item_menu; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu pk_rel_perfil_item_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -6143,7 +6143,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_recurso pk_rel_perfil_recurso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso pk_rel_perfil_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -6151,7 +6151,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: rel_regra_auditoria_recurso pk_rel_regra_auditoria_recurso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso pk_rel_regra_auditoria_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -6159,7 +6159,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: servidor_autenticacao pk_servidor_autenticacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: servidor_autenticacao pk_servidor_autenticacao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.servidor_autenticacao
@@ -6167,7 +6167,7 @@ ALTER TABLE ONLY public.servidor_autenticacao
 
 
 --
--- Name: sistema pk_sistema; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sistema pk_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -6175,7 +6175,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: tipo_permissao pk_tipo_permissao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_permissao pk_tipo_permissao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.tipo_permissao
@@ -6183,7 +6183,7 @@ ALTER TABLE ONLY public.tipo_permissao
 
 
 --
--- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -6191,7 +6191,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -6199,7 +6199,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- Name: usuario_historico pk_usuario_historico; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico pk_usuario_historico; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -6207,602 +6207,602 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: ak_orgao_sigla; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_orgao_sigla; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_orgao_sigla ON public.orgao USING btree (sigla);
 
 
 --
--- Name: ak_perfil_nome; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_perfil_nome; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_perfil_nome ON public.perfil USING btree (id_sistema, nome);
 
 
 --
--- Name: ak_recurso_nome; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_recurso_nome; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_recurso_nome ON public.recurso USING btree (id_sistema, nome);
 
 
 --
--- Name: ak_sistema_sigla_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_sistema_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_sistema_sigla_orgao ON public.sistema USING btree (id_orgao, sigla);
 
 
 --
--- Name: ak_unidade_sigla_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_unidade_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_unidade_sigla_orgao ON public.unidade USING btree (id_orgao, sigla, sin_ativo);
 
 
 --
--- Name: ak_usuario_sigla_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_usuario_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_usuario_sigla_orgao ON public.usuario USING btree (id_orgao, sigla, sin_ativo);
 
 
 --
--- Name: fk_admin_sistema_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_admin_sistema_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_admin_sistema_sistema ON public.administrador_sistema USING btree (id_sistema);
 
 
 --
--- Name: fk_admin_sistema_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_admin_sistema_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_admin_sistema_usuario ON public.administrador_sistema USING btree (id_usuario);
 
 
 --
--- Name: fk_auditoria_recurso_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_auditoria_recurso_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_auditoria_recurso_recurso ON public.rel_regra_auditoria_recurso USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_auditoria_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_auditoria_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_auditoria_sistema ON public.regra_auditoria USING btree (id_sistema);
 
 
 --
--- Name: fk_cod_acesso_usu_desativacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cod_acesso_usu_desativacao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_cod_acesso_usu_desativacao ON public.codigo_acesso USING btree (id_usuario_desativacao);
 
 
 --
--- Name: fk_cod_bloqueio_cod_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cod_bloqueio_cod_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_cod_bloqueio_cod_acesso ON public.codigo_bloqueio USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_codigo_acesso_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_codigo_acesso_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_codigo_acesso_sistema ON public.codigo_acesso USING btree (id_sistema);
 
 
 --
--- Name: fk_codigo_acesso_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_codigo_acesso_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_codigo_acesso_usuario ON public.codigo_acesso USING btree (id_usuario);
 
 
 --
--- Name: fk_coordenador_perfil_perfil; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_perfil_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_perfil_perfil ON public.coordenador_perfil USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_coordenador_perfil_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_perfil_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_perfil_usuario ON public.coordenador_perfil USING btree (id_usuario);
 
 
 --
--- Name: fk_coordenador_unidade_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_unidade_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_sistema ON public.coordenador_unidade USING btree (id_sistema);
 
 
 --
--- Name: fk_coordenador_unidade_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_unidade_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_unidade ON public.coordenador_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_coordenador_unidade_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_unidade_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_usuario ON public.coordenador_unidade USING btree (id_usuario);
 
 
 --
--- Name: fk_disp_acesso_cod_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_disp_acesso_cod_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_disp_acesso_cod_acesso ON public.dispositivo_acesso USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_inf_reg_aud_rec_inf_reg_aud ON public.infra_regra_auditoria_recurso USING btree (id_infra_regra_auditoria);
 
 
 --
--- Name: fk_item_menu_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_item_menu_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_item_menu ON public.item_menu USING btree (id_item_menu_pai, id_menu_pai);
 
 
 --
--- Name: fk_item_menu_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_item_menu_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_menu ON public.item_menu USING btree (id_menu);
 
 
 --
--- Name: fk_item_menu_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_item_menu_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_recurso ON public.item_menu USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_login_codigo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_codigo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_codigo_acesso ON public.login USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_login_dispositivo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_dispositivo_acesso ON public.login USING btree (id_dispositivo_acesso);
 
 
 --
--- Name: fk_login_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_sistema ON public.login USING btree (id_sistema);
 
 
 --
--- Name: fk_login_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_usuario ON public.login USING btree (id_usuario);
 
 
 --
--- Name: fk_login_usuario_emulador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_usuario_emulador; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_usuario_emulador ON public.login USING btree (id_usuario_emulador);
 
 
 --
--- Name: fk_menu_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_menu_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_menu_sistema ON public.menu USING btree (id_sistema);
 
 
 --
--- Name: fk_perfil_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_perfil_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_perfil_sistema ON public.perfil USING btree (id_sistema);
 
 
 --
--- Name: fk_permissao_perfil; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_perfil ON public.permissao USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_permissao_tipo_permissao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_tipo_permissao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_tipo_permissao ON public.permissao USING btree (id_tipo_permissao);
 
 
 --
--- Name: fk_permissao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_unidade ON public.permissao USING btree (id_unidade);
 
 
 --
--- Name: fk_permissao_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_usuario ON public.permissao USING btree (id_usuario);
 
 
 --
--- Name: fk_recurso_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_recurso_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_sistema ON public.recurso USING btree (id_sistema);
 
 
 --
--- Name: fk_recurso_vinculado_recurso_1; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_recurso_vinculado_recurso_1; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_vinculado_recurso_1 ON public.recurso_vinculado USING btree (id_recurso_vinculado, id_sistema_vinculado);
 
 
 --
--- Name: fk_recurso_vinculado_recurso_2; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_recurso_vinculado_recurso_2; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_vinculado_recurso_2 ON public.recurso_vinculado USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_rel_auditoria_recurso_audit; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_auditoria_recurso_audit; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_auditoria_recurso_audit ON public.rel_regra_auditoria_recurso USING btree (id_regra_auditoria);
 
 
 --
--- Name: fk_rel_hie_uni_hierarquia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_hie_uni_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_hierarquia ON public.rel_hierarquia_unidade USING btree (id_hierarquia);
 
 
 --
--- Name: fk_rel_hie_uni_rel_hie_uni; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_hie_uni_rel_hie_uni; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_rel_hie_uni ON public.rel_hierarquia_unidade USING btree (id_hierarquia_pai, id_unidade_pai);
 
 
 --
--- Name: fk_rel_hie_uni_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_hie_uni_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_unidade ON public.rel_hierarquia_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_orgao_aut_autenticacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_orgao_aut_autenticacao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_orgao_aut_autenticacao ON public.rel_orgao_autenticacao USING btree (id_servidor_autenticacao);
 
 
 --
--- Name: fk_rel_orgao_aut_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_orgao_aut_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_orgao_aut_orgao ON public.rel_orgao_autenticacao USING btree (id_orgao);
 
 
 --
--- Name: fk_rel_per_ite_men_rel_per_rec; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_per_ite_men_rel_per_rec; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_per_ite_men_rel_per_rec ON public.rel_perfil_item_menu USING btree (id_perfil, id_recurso, id_sistema);
 
 
 --
--- Name: fk_rel_perfil_item_menu_it_men; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_perfil_item_menu_it_men; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_item_menu_it_men ON public.rel_perfil_item_menu USING btree (id_item_menu, id_menu);
 
 
 --
--- Name: fk_rel_perfil_recurso_perfil; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_perfil_recurso_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_recurso_perfil ON public.rel_perfil_recurso USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_rel_perfil_recurso_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_perfil_recurso_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_recurso_recurso ON public.rel_perfil_recurso USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_sistema_hierarquia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_sistema_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_sistema_hierarquia ON public.sistema USING btree (id_hierarquia);
 
 
 --
--- Name: fk_sistema_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_sistema_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_sistema_orgao ON public.sistema USING btree (id_orgao);
 
 
 --
--- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_unidade_orgao ON public.unidade USING btree (id_orgao);
 
 
 --
--- Name: fk_usuario_historico_cod_acess; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_historico_cod_acess; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_cod_acess ON public.usuario_historico USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_usuario_historico_usu_oper; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_historico_usu_oper; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_usu_oper ON public.usuario_historico USING btree (id_usuario_operacao);
 
 
 --
--- Name: fk_usuario_historico_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_historico_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_usuario ON public.usuario_historico USING btree (id_usuario);
 
 
 --
--- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_orgao ON public.usuario USING btree (id_orgao);
 
 
 --
--- Name: i01_codigo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_codigo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_codigo_acesso ON public.codigo_acesso USING btree (dth_ativacao);
 
 
 --
--- Name: i01_codigo_bloqueio; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_codigo_bloqueio; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_codigo_bloqueio ON public.codigo_bloqueio USING btree (dth_envio);
 
 
 --
--- Name: i01_dispositivo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_dispositivo_acesso ON public.dispositivo_acesso USING btree (dth_acesso);
 
 
 --
--- Name: i01_hierarquia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i01_hierarquia ON public.hierarquia USING btree (id_hierarquia, sin_ativo);
 
 
 --
--- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_infra_auditoria ON public.infra_auditoria USING btree (recurso);
 
 
 --
--- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_infra_log ON public.infra_log USING btree (dth_log, sta_tipo);
 
 
 --
--- Name: i01_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i01_orgao ON public.orgao USING btree (id_orgao, sin_ativo);
 
 
 --
--- Name: i01_rel_perfil_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_rel_perfil_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_rel_perfil_item_menu ON public.rel_perfil_item_menu USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: i02_dispositivo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i02_dispositivo_acesso ON public.dispositivo_acesso USING btree (dth_liberacao);
 
 
 --
--- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i02_infra_auditoria ON public.infra_auditoria USING btree (dth_acesso);
 
 
 --
--- Name: i02_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_menu ON public.menu USING btree (id_menu, sin_ativo);
 
 
 --
--- Name: i02_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_recurso ON public.recurso USING btree (id_recurso, id_sistema, sin_ativo);
 
 
 --
--- Name: i02_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_unidade ON public.unidade USING btree (id_unidade, sin_ativo);
 
 
 --
--- Name: i02_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_usuario ON public.usuario USING btree (id_usuario, sin_ativo);
 
 
 --
--- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_infra_auditoria ON public.infra_auditoria USING btree (sigla_usuario);
 
 
 --
--- Name: i03_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_recurso ON public.recurso USING btree (id_recurso, id_sistema, nome, sin_ativo);
 
 
 --
--- Name: i03_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i03_sistema ON public.sistema USING btree (id_sistema, sin_ativo);
 
 
 --
--- Name: i03_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_usuario ON public.usuario USING btree (id_origem);
 
 
 --
--- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_infra_auditoria ON public.infra_auditoria USING btree (sigla_unidade);
 
 
 --
--- Name: i04_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i04_item_menu ON public.item_menu USING btree (id_item_menu, id_menu, sin_ativo);
 
 
 --
--- Name: i04_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_login ON public.login USING btree (id_login, id_sistema, id_usuario, sta_login);
 
 
 --
--- Name: i04_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_recurso ON public.recurso USING btree (id_recurso, sin_ativo);
 
 
 --
--- Name: i04_rel_hierarquia_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_rel_hierarquia_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i04_rel_hierarquia_unidade ON public.rel_hierarquia_unidade USING btree (id_hierarquia, id_unidade, sin_ativo);
 
 
 --
--- Name: i04_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_usuario ON public.usuario USING btree (cpf);
 
 
 --
--- Name: i05_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_item_menu ON public.item_menu USING btree (id_recurso);
 
 
 --
--- Name: i05_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_login ON public.login USING btree (id_login, id_sistema, id_usuario, dth_login);
 
 
 --
--- Name: i05_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_usuario ON public.usuario USING btree (id_usuario, id_orgao, id_origem);
 
 
 --
--- Name: i06_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i06_login ON public.login USING btree (hash_usuario, dth_login, sta_login);
 
 
 --
--- Name: i06_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i06_usuario ON public.usuario USING btree (id_usuario, id_orgao, cpf);
 
 
 --
--- Name: i07_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i07_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i07_login ON public.login USING btree (dth_login);
 
 
 --
--- Name: administrador_sistema fk_admin_sistema_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: administrador_sistema fk_admin_sistema_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -6810,7 +6810,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: administrador_sistema fk_admin_sistema_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: administrador_sistema fk_admin_sistema_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -6818,7 +6818,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: rel_regra_auditoria_recurso fk_auditoria_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso fk_auditoria_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -6826,7 +6826,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: regra_auditoria fk_auditoria_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: regra_auditoria fk_auditoria_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.regra_auditoria
@@ -6834,7 +6834,7 @@ ALTER TABLE ONLY public.regra_auditoria
 
 
 --
--- Name: codigo_acesso fk_cod_acesso_usu_desativacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso fk_cod_acesso_usu_desativacao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -6842,7 +6842,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_bloqueio fk_cod_bloqueio_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_bloqueio fk_cod_bloqueio_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_bloqueio
@@ -6850,7 +6850,7 @@ ALTER TABLE ONLY public.codigo_bloqueio
 
 
 --
--- Name: codigo_acesso fk_codigo_acesso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso fk_codigo_acesso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -6858,7 +6858,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_acesso fk_codigo_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso fk_codigo_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -6866,7 +6866,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: coordenador_perfil fk_coordenador_perfil_perfil; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_perfil fk_coordenador_perfil_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -6874,7 +6874,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_perfil fk_coordenador_perfil_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_perfil fk_coordenador_perfil_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -6882,7 +6882,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade fk_coordenador_unidade_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -6890,7 +6890,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade fk_coordenador_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -6898,7 +6898,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade fk_coordenador_unidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -6906,7 +6906,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: dispositivo_acesso fk_disp_acesso_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: dispositivo_acesso fk_disp_acesso_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.dispositivo_acesso
@@ -6914,7 +6914,7 @@ ALTER TABLE ONLY public.dispositivo_acesso
 
 
 --
--- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -6922,7 +6922,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: item_menu fk_item_menu_item_menu; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu fk_item_menu_item_menu; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6930,7 +6930,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: item_menu fk_item_menu_menu; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu fk_item_menu_menu; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6938,7 +6938,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: item_menu fk_item_menu_recurso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu fk_item_menu_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6946,7 +6946,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: login fk_login_codigo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_codigo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6954,7 +6954,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_dispositivo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_dispositivo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6962,7 +6962,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6970,7 +6970,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6978,7 +6978,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_usuario_emulador; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_usuario_emulador; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6986,7 +6986,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: menu fk_menu_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: menu fk_menu_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.menu
@@ -6994,7 +6994,7 @@ ALTER TABLE ONLY public.menu
 
 
 --
--- Name: perfil fk_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: perfil fk_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.perfil
@@ -7002,7 +7002,7 @@ ALTER TABLE ONLY public.perfil
 
 
 --
--- Name: permissao fk_permissao_perfil; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7010,7 +7010,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_tipo_permissao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_tipo_permissao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7018,7 +7018,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7026,7 +7026,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7034,7 +7034,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: recurso fk_recurso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso fk_recurso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso
@@ -7042,7 +7042,7 @@ ALTER TABLE ONLY public.recurso
 
 
 --
--- Name: recurso_vinculado fk_recurso_vinculado_recurso_1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso_vinculado fk_recurso_vinculado_recurso_1; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -7050,7 +7050,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: recurso_vinculado fk_recurso_vinculado_recurso_2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso_vinculado fk_recurso_vinculado_recurso_2; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -7058,7 +7058,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: rel_regra_auditoria_recurso fk_rel_auditoria_recurso_audit; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso fk_rel_auditoria_recurso_audit; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -7066,7 +7066,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7074,7 +7074,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_rel_hie_uni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_rel_hie_uni; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7082,7 +7082,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7090,7 +7090,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_orgao_autenticacao fk_rel_orgao_aut_autenticacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao fk_rel_orgao_aut_autenticacao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -7098,7 +7098,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_orgao_autenticacao fk_rel_orgao_aut_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao fk_rel_orgao_aut_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -7106,7 +7106,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_perfil_item_menu fk_rel_per_ite_men_rel_per_rec; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu fk_rel_per_ite_men_rel_per_rec; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -7114,7 +7114,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_item_menu fk_rel_perfil_item_menu_it_men; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu fk_rel_perfil_item_menu_it_men; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -7122,7 +7122,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_recurso fk_rel_perfil_recurso_perfil; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso fk_rel_perfil_recurso_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -7130,7 +7130,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: rel_perfil_recurso fk_rel_perfil_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso fk_rel_perfil_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -7138,7 +7138,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: sistema fk_sistema_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sistema fk_sistema_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -7146,7 +7146,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: sistema fk_sistema_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sistema fk_sistema_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -7154,7 +7154,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -7162,7 +7162,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: usuario_historico fk_usuario_historico_cod_acess; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico fk_usuario_historico_cod_acess; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7170,7 +7170,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario_historico fk_usuario_historico_usu_oper; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico fk_usuario_historico_usu_oper; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7178,7 +7178,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario_historico fk_usuario_historico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico fk_usuario_historico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7186,7 +7186,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -7198,272 +7198,6 @@ ALTER TABLE ONLY public.usuario
 --
 
 GRANT ALL ON SCHEMA public TO sip_user;
-
-
---
--- Name: TABLE administrador_sistema; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.administrador_sistema TO sip_user;
-
-
---
--- Name: TABLE codigo_acesso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.codigo_acesso TO sip_user;
-
-
---
--- Name: TABLE codigo_bloqueio; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.codigo_bloqueio TO sip_user;
-
-
---
--- Name: TABLE coordenador_perfil; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.coordenador_perfil TO sip_user;
-
-
---
--- Name: TABLE coordenador_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.coordenador_unidade TO sip_user;
-
-
---
--- Name: TABLE dispositivo_acesso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.dispositivo_acesso TO sip_user;
-
-
---
--- Name: TABLE email_sistema; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.email_sistema TO sip_user;
-
-
---
--- Name: TABLE hierarquia; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.hierarquia TO sip_user;
-
-
---
--- Name: TABLE infra_agendamento_tarefa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_agendamento_tarefa TO sip_user;
-
-
---
--- Name: TABLE infra_auditoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_auditoria TO sip_user;
-
-
---
--- Name: TABLE infra_log; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_log TO sip_user;
-
-
---
--- Name: TABLE infra_parametro; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_parametro TO sip_user;
-
-
---
--- Name: TABLE infra_regra_auditoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_regra_auditoria TO sip_user;
-
-
---
--- Name: TABLE infra_regra_auditoria_recurso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_regra_auditoria_recurso TO sip_user;
-
-
---
--- Name: TABLE infra_sequencia; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_sequencia TO sip_user;
-
-
---
--- Name: TABLE item_menu; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.item_menu TO sip_user;
-
-
---
--- Name: TABLE login; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.login TO sip_user;
-
-
---
--- Name: TABLE menu; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.menu TO sip_user;
-
-
---
--- Name: TABLE orgao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.orgao TO sip_user;
-
-
---
--- Name: TABLE perfil; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.perfil TO sip_user;
-
-
---
--- Name: TABLE permissao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.permissao TO sip_user;
-
-
---
--- Name: TABLE recurso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.recurso TO sip_user;
-
-
---
--- Name: TABLE recurso_vinculado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.recurso_vinculado TO sip_user;
-
-
---
--- Name: TABLE regra_auditoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.regra_auditoria TO sip_user;
-
-
---
--- Name: TABLE rel_hierarquia_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_hierarquia_unidade TO sip_user;
-
-
---
--- Name: TABLE rel_orgao_autenticacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_orgao_autenticacao TO sip_user;
-
-
---
--- Name: TABLE rel_perfil_item_menu; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_perfil_item_menu TO sip_user;
-
-
---
--- Name: TABLE rel_perfil_recurso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_perfil_recurso TO sip_user;
-
-
---
--- Name: TABLE rel_regra_auditoria_recurso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_regra_auditoria_recurso TO sip_user;
-
-
---
--- Name: SEQUENCE seq_infra_auditoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_infra_auditoria TO sip_user;
-
-
---
--- Name: SEQUENCE seq_infra_log; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_infra_log TO sip_user;
-
-
---
--- Name: SEQUENCE seq_usuario_historico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_usuario_historico TO sip_user;
-
-
---
--- Name: TABLE servidor_autenticacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.servidor_autenticacao TO sip_user;
-
-
---
--- Name: TABLE sistema; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.sistema TO sip_user;
-
-
---
--- Name: TABLE tipo_permissao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_permissao TO sip_user;
-
-
---
--- Name: TABLE unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.unidade TO sip_user;
-
-
---
--- Name: TABLE usuario; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.usuario TO sip_user;
-
-
---
--- Name: TABLE usuario_historico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.usuario_historico TO sip_user;
 
 
 --

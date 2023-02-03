@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: acao_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: acao_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.acao_federacao (
@@ -42,7 +42,7 @@ CREATE TABLE public.acao_federacao (
 ALTER TABLE public.acao_federacao OWNER TO sei_user;
 
 --
--- Name: acesso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: acesso; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.acesso (
@@ -58,7 +58,7 @@ CREATE TABLE public.acesso (
 ALTER TABLE public.acesso OWNER TO sei_user;
 
 --
--- Name: acesso_externo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: acesso_externo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.acesso_externo (
@@ -81,7 +81,7 @@ CREATE TABLE public.acesso_externo (
 ALTER TABLE public.acesso_externo OWNER TO sei_user;
 
 --
--- Name: acesso_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: acesso_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.acesso_federacao (
@@ -108,7 +108,7 @@ CREATE TABLE public.acesso_federacao (
 ALTER TABLE public.acesso_federacao OWNER TO sei_user;
 
 --
--- Name: acompanhamento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: acompanhamento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.acompanhamento (
@@ -127,7 +127,7 @@ CREATE TABLE public.acompanhamento (
 ALTER TABLE public.acompanhamento OWNER TO sei_user;
 
 --
--- Name: andamento_instalacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: andamento_instalacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.andamento_instalacao (
@@ -144,7 +144,7 @@ CREATE TABLE public.andamento_instalacao (
 ALTER TABLE public.andamento_instalacao OWNER TO sei_user;
 
 --
--- Name: andamento_marcador; Type: TABLE; Schema: public; Owner: postgres
+-- Name: andamento_marcador; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.andamento_marcador (
@@ -164,7 +164,7 @@ CREATE TABLE public.andamento_marcador (
 ALTER TABLE public.andamento_marcador OWNER TO sei_user;
 
 --
--- Name: andamento_situacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: andamento_situacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.andamento_situacao (
@@ -181,7 +181,7 @@ CREATE TABLE public.andamento_situacao (
 ALTER TABLE public.andamento_situacao OWNER TO sei_user;
 
 --
--- Name: anexo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: anexo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.anexo (
@@ -202,7 +202,7 @@ CREATE TABLE public.anexo (
 ALTER TABLE public.anexo OWNER TO sei_user;
 
 --
--- Name: anotacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: anotacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.anotacao (
@@ -220,7 +220,7 @@ CREATE TABLE public.anotacao (
 ALTER TABLE public.anotacao OWNER TO sei_user;
 
 --
--- Name: arquivamento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: arquivamento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.arquivamento (
@@ -238,7 +238,7 @@ CREATE TABLE public.arquivamento (
 ALTER TABLE public.arquivamento OWNER TO sei_user;
 
 --
--- Name: arquivo_extensao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: arquivo_extensao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.arquivo_extensao (
@@ -255,7 +255,7 @@ CREATE TABLE public.arquivo_extensao (
 ALTER TABLE public.arquivo_extensao OWNER TO sei_user;
 
 --
--- Name: assinante; Type: TABLE; Schema: public; Owner: postgres
+-- Name: assinante; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.assinante (
@@ -268,7 +268,7 @@ CREATE TABLE public.assinante (
 ALTER TABLE public.assinante OWNER TO sei_user;
 
 --
--- Name: assinatura; Type: TABLE; Schema: public; Owner: postgres
+-- Name: assinatura; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.assinatura (
@@ -285,14 +285,15 @@ CREATE TABLE public.assinatura (
     sin_ativo character(1) NOT NULL,
     numero_serie_certificado character varying(64),
     p7s_base64 text,
-    agrupador character varying(36)
+    agrupador character varying(36),
+    modulo_origem character varying(50)
 );
 
 
 ALTER TABLE public.assinatura OWNER TO sei_user;
 
 --
--- Name: assunto; Type: TABLE; Schema: public; Owner: postgres
+-- Name: assunto; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.assunto (
@@ -313,7 +314,7 @@ CREATE TABLE public.assunto (
 ALTER TABLE public.assunto OWNER TO sei_user;
 
 --
--- Name: assunto_proxy; Type: TABLE; Schema: public; Owner: postgres
+-- Name: assunto_proxy; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.assunto_proxy (
@@ -325,7 +326,7 @@ CREATE TABLE public.assunto_proxy (
 ALTER TABLE public.assunto_proxy OWNER TO sei_user;
 
 --
--- Name: atividade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: atividade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.atividade (
@@ -350,7 +351,7 @@ CREATE TABLE public.atividade (
 ALTER TABLE public.atividade OWNER TO sei_user;
 
 --
--- Name: atributo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: atributo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.atributo (
@@ -375,7 +376,7 @@ CREATE TABLE public.atributo (
 ALTER TABLE public.atributo OWNER TO sei_user;
 
 --
--- Name: atributo_andamento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: atributo_andamento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.atributo_andamento (
@@ -390,7 +391,7 @@ CREATE TABLE public.atributo_andamento (
 ALTER TABLE public.atributo_andamento OWNER TO sei_user;
 
 --
--- Name: atributo_instalacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: atributo_instalacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.atributo_instalacao (
@@ -405,7 +406,7 @@ CREATE TABLE public.atributo_instalacao (
 ALTER TABLE public.atributo_instalacao OWNER TO sei_user;
 
 --
--- Name: auditoria_protocolo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: auditoria_protocolo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.auditoria_protocolo (
@@ -421,7 +422,7 @@ CREATE TABLE public.auditoria_protocolo (
 ALTER TABLE public.auditoria_protocolo OWNER TO sei_user;
 
 --
--- Name: base_conhecimento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: base_conhecimento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.base_conhecimento (
@@ -445,7 +446,7 @@ CREATE TABLE public.base_conhecimento (
 ALTER TABLE public.base_conhecimento OWNER TO sei_user;
 
 --
--- Name: bloco; Type: TABLE; Schema: public; Owner: postgres
+-- Name: bloco; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.bloco (
@@ -462,7 +463,7 @@ CREATE TABLE public.bloco (
 ALTER TABLE public.bloco OWNER TO sei_user;
 
 --
--- Name: campo_pesquisa; Type: TABLE; Schema: public; Owner: postgres
+-- Name: campo_pesquisa; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.campo_pesquisa (
@@ -476,7 +477,7 @@ CREATE TABLE public.campo_pesquisa (
 ALTER TABLE public.campo_pesquisa OWNER TO sei_user;
 
 --
--- Name: cargo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: cargo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.cargo (
@@ -493,7 +494,7 @@ CREATE TABLE public.cargo (
 ALTER TABLE public.cargo OWNER TO sei_user;
 
 --
--- Name: cargo_funcao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: cargo_funcao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.cargo_funcao (
@@ -507,7 +508,7 @@ CREATE TABLE public.cargo_funcao (
 ALTER TABLE public.cargo_funcao OWNER TO sei_user;
 
 --
--- Name: categoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: categoria; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.categoria (
@@ -520,7 +521,7 @@ CREATE TABLE public.categoria (
 ALTER TABLE public.categoria OWNER TO sei_user;
 
 --
--- Name: cidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: cidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.cidade (
@@ -538,7 +539,7 @@ CREATE TABLE public.cidade (
 ALTER TABLE public.cidade OWNER TO sei_user;
 
 --
--- Name: comentario; Type: TABLE; Schema: public; Owner: postgres
+-- Name: comentario; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.comentario (
@@ -555,7 +556,7 @@ CREATE TABLE public.comentario (
 ALTER TABLE public.comentario OWNER TO sei_user;
 
 --
--- Name: conjunto_estilos; Type: TABLE; Schema: public; Owner: postgres
+-- Name: conjunto_estilos; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.conjunto_estilos (
@@ -567,7 +568,7 @@ CREATE TABLE public.conjunto_estilos (
 ALTER TABLE public.conjunto_estilos OWNER TO sei_user;
 
 --
--- Name: conjunto_estilos_item; Type: TABLE; Schema: public; Owner: postgres
+-- Name: conjunto_estilos_item; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.conjunto_estilos_item (
@@ -581,7 +582,7 @@ CREATE TABLE public.conjunto_estilos_item (
 ALTER TABLE public.conjunto_estilos_item OWNER TO sei_user;
 
 --
--- Name: contato; Type: TABLE; Schema: public; Owner: postgres
+-- Name: contato; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.contato (
@@ -633,7 +634,7 @@ CREATE TABLE public.contato (
 ALTER TABLE public.contato OWNER TO sei_user;
 
 --
--- Name: controle_interno; Type: TABLE; Schema: public; Owner: postgres
+-- Name: controle_interno; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.controle_interno (
@@ -645,7 +646,7 @@ CREATE TABLE public.controle_interno (
 ALTER TABLE public.controle_interno OWNER TO sei_user;
 
 --
--- Name: controle_prazo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: controle_prazo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.controle_prazo (
@@ -661,7 +662,7 @@ CREATE TABLE public.controle_prazo (
 ALTER TABLE public.controle_prazo OWNER TO sei_user;
 
 --
--- Name: controle_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: controle_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.controle_unidade (
@@ -677,7 +678,7 @@ CREATE TABLE public.controle_unidade (
 ALTER TABLE public.controle_unidade OWNER TO sei_user;
 
 --
--- Name: documento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: documento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.documento (
@@ -700,7 +701,7 @@ CREATE TABLE public.documento (
 ALTER TABLE public.documento OWNER TO sei_user;
 
 --
--- Name: documento_conteudo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: documento_conteudo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.documento_conteudo (
@@ -715,7 +716,7 @@ CREATE TABLE public.documento_conteudo (
 ALTER TABLE public.documento_conteudo OWNER TO sei_user;
 
 --
--- Name: dominio; Type: TABLE; Schema: public; Owner: postgres
+-- Name: dominio; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.dominio (
@@ -732,7 +733,7 @@ CREATE TABLE public.dominio (
 ALTER TABLE public.dominio OWNER TO sei_user;
 
 --
--- Name: email_grupo_email; Type: TABLE; Schema: public; Owner: postgres
+-- Name: email_grupo_email; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.email_grupo_email (
@@ -747,7 +748,7 @@ CREATE TABLE public.email_grupo_email (
 ALTER TABLE public.email_grupo_email OWNER TO sei_user;
 
 --
--- Name: email_sistema; Type: TABLE; Schema: public; Owner: postgres
+-- Name: email_sistema; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.email_sistema (
@@ -765,7 +766,7 @@ CREATE TABLE public.email_sistema (
 ALTER TABLE public.email_sistema OWNER TO sei_user;
 
 --
--- Name: email_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: email_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.email_unidade (
@@ -779,7 +780,7 @@ CREATE TABLE public.email_unidade (
 ALTER TABLE public.email_unidade OWNER TO sei_user;
 
 --
--- Name: email_utilizado; Type: TABLE; Schema: public; Owner: postgres
+-- Name: email_utilizado; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.email_utilizado (
@@ -792,7 +793,7 @@ CREATE TABLE public.email_utilizado (
 ALTER TABLE public.email_utilizado OWNER TO sei_user;
 
 --
--- Name: estatisticas; Type: TABLE; Schema: public; Owner: postgres
+-- Name: estatisticas; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.estatisticas (
@@ -815,7 +816,7 @@ CREATE TABLE public.estatisticas (
 ALTER TABLE public.estatisticas OWNER TO sei_user;
 
 --
--- Name: estilo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: estilo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.estilo (
@@ -828,7 +829,7 @@ CREATE TABLE public.estilo (
 ALTER TABLE public.estilo OWNER TO sei_user;
 
 --
--- Name: feed; Type: TABLE; Schema: public; Owner: postgres
+-- Name: feed; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.feed (
@@ -840,7 +841,7 @@ CREATE TABLE public.feed (
 ALTER TABLE public.feed OWNER TO sei_user;
 
 --
--- Name: feriado; Type: TABLE; Schema: public; Owner: postgres
+-- Name: feriado; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.feriado (
@@ -854,7 +855,7 @@ CREATE TABLE public.feriado (
 ALTER TABLE public.feriado OWNER TO sei_user;
 
 --
--- Name: grupo_acompanhamento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_acompanhamento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_acompanhamento (
@@ -867,7 +868,7 @@ CREATE TABLE public.grupo_acompanhamento (
 ALTER TABLE public.grupo_acompanhamento OWNER TO sei_user;
 
 --
--- Name: grupo_bloco; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_bloco; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_bloco (
@@ -881,7 +882,7 @@ CREATE TABLE public.grupo_bloco (
 ALTER TABLE public.grupo_bloco OWNER TO sei_user;
 
 --
--- Name: grupo_contato; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_contato; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_contato (
@@ -897,7 +898,7 @@ CREATE TABLE public.grupo_contato (
 ALTER TABLE public.grupo_contato OWNER TO sei_user;
 
 --
--- Name: grupo_email; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_email; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_email (
@@ -913,7 +914,7 @@ CREATE TABLE public.grupo_email (
 ALTER TABLE public.grupo_email OWNER TO sei_user;
 
 --
--- Name: grupo_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_federacao (
@@ -929,7 +930,7 @@ CREATE TABLE public.grupo_federacao (
 ALTER TABLE public.grupo_federacao OWNER TO sei_user;
 
 --
--- Name: grupo_protocolo_modelo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_protocolo_modelo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_protocolo_modelo (
@@ -942,7 +943,7 @@ CREATE TABLE public.grupo_protocolo_modelo (
 ALTER TABLE public.grupo_protocolo_modelo OWNER TO sei_user;
 
 --
--- Name: grupo_serie; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_serie; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_serie (
@@ -956,7 +957,7 @@ CREATE TABLE public.grupo_serie (
 ALTER TABLE public.grupo_serie OWNER TO sei_user;
 
 --
--- Name: grupo_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: grupo_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.grupo_unidade (
@@ -972,7 +973,7 @@ CREATE TABLE public.grupo_unidade (
 ALTER TABLE public.grupo_unidade OWNER TO sei_user;
 
 --
--- Name: hipotese_legal; Type: TABLE; Schema: public; Owner: postgres
+-- Name: hipotese_legal; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.hipotese_legal (
@@ -988,7 +989,7 @@ CREATE TABLE public.hipotese_legal (
 ALTER TABLE public.hipotese_legal OWNER TO sei_user;
 
 --
--- Name: imagem_formato; Type: TABLE; Schema: public; Owner: postgres
+-- Name: imagem_formato; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.imagem_formato (
@@ -1002,7 +1003,7 @@ CREATE TABLE public.imagem_formato (
 ALTER TABLE public.imagem_formato OWNER TO sei_user;
 
 --
--- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_agendamento_tarefa (
@@ -1023,7 +1024,7 @@ CREATE TABLE public.infra_agendamento_tarefa (
 ALTER TABLE public.infra_agendamento_tarefa OWNER TO sei_user;
 
 --
--- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_auditoria (
@@ -1056,7 +1057,7 @@ CREATE TABLE public.infra_auditoria (
 ALTER TABLE public.infra_auditoria OWNER TO sei_user;
 
 --
--- Name: infra_dado_usuario; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_dado_usuario; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_dado_usuario (
@@ -1069,7 +1070,7 @@ CREATE TABLE public.infra_dado_usuario (
 ALTER TABLE public.infra_dado_usuario OWNER TO sei_user;
 
 --
--- Name: infra_log; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_log; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_log (
@@ -1084,7 +1085,7 @@ CREATE TABLE public.infra_log (
 ALTER TABLE public.infra_log OWNER TO sei_user;
 
 --
--- Name: infra_navegador; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_navegador; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_navegador (
@@ -1100,7 +1101,7 @@ CREATE TABLE public.infra_navegador (
 ALTER TABLE public.infra_navegador OWNER TO sei_user;
 
 --
--- Name: infra_parametro; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_parametro; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_parametro (
@@ -1112,7 +1113,7 @@ CREATE TABLE public.infra_parametro (
 ALTER TABLE public.infra_parametro OWNER TO sei_user;
 
 --
--- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_regra_auditoria (
@@ -1125,7 +1126,7 @@ CREATE TABLE public.infra_regra_auditoria (
 ALTER TABLE public.infra_regra_auditoria OWNER TO sei_user;
 
 --
--- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_regra_auditoria_recurso (
@@ -1137,7 +1138,7 @@ CREATE TABLE public.infra_regra_auditoria_recurso (
 ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO sei_user;
 
 --
--- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.infra_sequencia (
@@ -1151,7 +1152,7 @@ CREATE TABLE public.infra_sequencia (
 ALTER TABLE public.infra_sequencia OWNER TO sei_user;
 
 --
--- Name: instalacao_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: instalacao_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.instalacao_federacao (
@@ -1173,7 +1174,7 @@ CREATE TABLE public.instalacao_federacao (
 ALTER TABLE public.instalacao_federacao OWNER TO sei_user;
 
 --
--- Name: lembrete; Type: TABLE; Schema: public; Owner: postgres
+-- Name: lembrete; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.lembrete (
@@ -1194,7 +1195,7 @@ CREATE TABLE public.lembrete (
 ALTER TABLE public.lembrete OWNER TO sei_user;
 
 --
--- Name: localizador; Type: TABLE; Schema: public; Owner: postgres
+-- Name: localizador; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.localizador (
@@ -1212,7 +1213,7 @@ CREATE TABLE public.localizador (
 ALTER TABLE public.localizador OWNER TO sei_user;
 
 --
--- Name: lugar_localizador; Type: TABLE; Schema: public; Owner: postgres
+-- Name: lugar_localizador; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.lugar_localizador (
@@ -1226,7 +1227,7 @@ CREATE TABLE public.lugar_localizador (
 ALTER TABLE public.lugar_localizador OWNER TO sei_user;
 
 --
--- Name: mapeamento_assunto; Type: TABLE; Schema: public; Owner: postgres
+-- Name: mapeamento_assunto; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.mapeamento_assunto (
@@ -1238,7 +1239,7 @@ CREATE TABLE public.mapeamento_assunto (
 ALTER TABLE public.mapeamento_assunto OWNER TO sei_user;
 
 --
--- Name: marcador; Type: TABLE; Schema: public; Owner: postgres
+-- Name: marcador; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.marcador (
@@ -1254,7 +1255,7 @@ CREATE TABLE public.marcador (
 ALTER TABLE public.marcador OWNER TO sei_user;
 
 --
--- Name: modelo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: modelo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.modelo (
@@ -1267,7 +1268,7 @@ CREATE TABLE public.modelo (
 ALTER TABLE public.modelo OWNER TO sei_user;
 
 --
--- Name: monitoramento_servico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: monitoramento_servico; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.monitoramento_servico (
@@ -1285,7 +1286,7 @@ CREATE TABLE public.monitoramento_servico (
 ALTER TABLE public.monitoramento_servico OWNER TO sei_user;
 
 --
--- Name: nivel_acesso_permitido; Type: TABLE; Schema: public; Owner: postgres
+-- Name: nivel_acesso_permitido; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.nivel_acesso_permitido (
@@ -1298,7 +1299,7 @@ CREATE TABLE public.nivel_acesso_permitido (
 ALTER TABLE public.nivel_acesso_permitido OWNER TO sei_user;
 
 --
--- Name: notificacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: notificacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.notificacao (
@@ -1314,7 +1315,7 @@ CREATE TABLE public.notificacao (
 ALTER TABLE public.notificacao OWNER TO sei_user;
 
 --
--- Name: novidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: novidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.novidade (
@@ -1329,7 +1330,7 @@ CREATE TABLE public.novidade (
 ALTER TABLE public.novidade OWNER TO sei_user;
 
 --
--- Name: numeracao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: numeracao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.numeracao (
@@ -1345,7 +1346,7 @@ CREATE TABLE public.numeracao (
 ALTER TABLE public.numeracao OWNER TO sei_user;
 
 --
--- Name: observacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: observacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.observacao (
@@ -1360,7 +1361,7 @@ CREATE TABLE public.observacao (
 ALTER TABLE public.observacao OWNER TO sei_user;
 
 --
--- Name: operacao_servico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: operacao_servico; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.operacao_servico (
@@ -1376,7 +1377,7 @@ CREATE TABLE public.operacao_servico (
 ALTER TABLE public.operacao_servico OWNER TO sei_user;
 
 --
--- Name: ordenador_despesa; Type: TABLE; Schema: public; Owner: postgres
+-- Name: ordenador_despesa; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.ordenador_despesa (
@@ -1391,7 +1392,7 @@ CREATE TABLE public.ordenador_despesa (
 ALTER TABLE public.ordenador_despesa OWNER TO sei_user;
 
 --
--- Name: orgao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orgao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.orgao (
@@ -1418,7 +1419,7 @@ CREATE TABLE public.orgao (
 ALTER TABLE public.orgao OWNER TO sei_user;
 
 --
--- Name: orgao_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orgao_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.orgao_federacao (
@@ -1432,7 +1433,7 @@ CREATE TABLE public.orgao_federacao (
 ALTER TABLE public.orgao_federacao OWNER TO sei_user;
 
 --
--- Name: orgao_historico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orgao_historico; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.orgao_historico (
@@ -1448,7 +1449,7 @@ CREATE TABLE public.orgao_historico (
 ALTER TABLE public.orgao_historico OWNER TO sei_user;
 
 --
--- Name: pais; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pais; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.pais (
@@ -1460,7 +1461,7 @@ CREATE TABLE public.pais (
 ALTER TABLE public.pais OWNER TO sei_user;
 
 --
--- Name: parametro_acao_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: parametro_acao_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.parametro_acao_federacao (
@@ -1473,7 +1474,7 @@ CREATE TABLE public.parametro_acao_federacao (
 ALTER TABLE public.parametro_acao_federacao OWNER TO sei_user;
 
 --
--- Name: participante; Type: TABLE; Schema: public; Owner: postgres
+-- Name: participante; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.participante (
@@ -1489,7 +1490,7 @@ CREATE TABLE public.participante (
 ALTER TABLE public.participante OWNER TO sei_user;
 
 --
--- Name: pesquisa; Type: TABLE; Schema: public; Owner: postgres
+-- Name: pesquisa; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.pesquisa (
@@ -1503,7 +1504,7 @@ CREATE TABLE public.pesquisa (
 ALTER TABLE public.pesquisa OWNER TO sei_user;
 
 --
--- Name: procedimento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: procedimento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.procedimento (
@@ -1517,7 +1518,7 @@ CREATE TABLE public.procedimento (
 ALTER TABLE public.procedimento OWNER TO sei_user;
 
 --
--- Name: protocolo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: protocolo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.protocolo (
@@ -1546,7 +1547,7 @@ CREATE TABLE public.protocolo (
 ALTER TABLE public.protocolo OWNER TO sei_user;
 
 --
--- Name: protocolo_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: protocolo_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.protocolo_federacao (
@@ -1561,7 +1562,7 @@ CREATE TABLE public.protocolo_federacao (
 ALTER TABLE public.protocolo_federacao OWNER TO sei_user;
 
 --
--- Name: protocolo_modelo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: protocolo_modelo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.protocolo_modelo (
@@ -1579,7 +1580,7 @@ CREATE TABLE public.protocolo_modelo (
 ALTER TABLE public.protocolo_modelo OWNER TO sei_user;
 
 --
--- Name: publicacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: publicacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.publicacao (
@@ -1605,7 +1606,7 @@ CREATE TABLE public.publicacao (
 ALTER TABLE public.publicacao OWNER TO sei_user;
 
 --
--- Name: publicacao_legado; Type: TABLE; Schema: public; Owner: postgres
+-- Name: publicacao_legado; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.publicacao_legado (
@@ -1632,7 +1633,7 @@ CREATE TABLE public.publicacao_legado (
 ALTER TABLE public.publicacao_legado OWNER TO sei_user;
 
 --
--- Name: rel_acesso_ext_protocolo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_protocolo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_acesso_ext_protocolo (
@@ -1644,7 +1645,7 @@ CREATE TABLE public.rel_acesso_ext_protocolo (
 ALTER TABLE public.rel_acesso_ext_protocolo OWNER TO sei_user;
 
 --
--- Name: rel_acesso_ext_serie; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_serie; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_acesso_ext_serie (
@@ -1656,7 +1657,7 @@ CREATE TABLE public.rel_acesso_ext_serie (
 ALTER TABLE public.rel_acesso_ext_serie OWNER TO sei_user;
 
 --
--- Name: rel_assinante_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_assinante_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_assinante_unidade (
@@ -1668,7 +1669,7 @@ CREATE TABLE public.rel_assinante_unidade (
 ALTER TABLE public.rel_assinante_unidade OWNER TO sei_user;
 
 --
--- Name: rel_base_conhec_tipo_proced; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_base_conhec_tipo_proced; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_base_conhec_tipo_proced (
@@ -1680,7 +1681,7 @@ CREATE TABLE public.rel_base_conhec_tipo_proced (
 ALTER TABLE public.rel_base_conhec_tipo_proced OWNER TO sei_user;
 
 --
--- Name: rel_bloco_protocolo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_bloco_protocolo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_bloco_protocolo (
@@ -1695,7 +1696,7 @@ CREATE TABLE public.rel_bloco_protocolo (
 ALTER TABLE public.rel_bloco_protocolo OWNER TO sei_user;
 
 --
--- Name: rel_bloco_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_bloco_unidade (
@@ -1720,7 +1721,7 @@ CREATE TABLE public.rel_bloco_unidade (
 ALTER TABLE public.rel_bloco_unidade OWNER TO sei_user;
 
 --
--- Name: rel_controle_interno_orgao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_orgao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_controle_interno_orgao (
@@ -1732,7 +1733,7 @@ CREATE TABLE public.rel_controle_interno_orgao (
 ALTER TABLE public.rel_controle_interno_orgao OWNER TO sei_user;
 
 --
--- Name: rel_controle_interno_serie; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_serie; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_controle_interno_serie (
@@ -1744,7 +1745,7 @@ CREATE TABLE public.rel_controle_interno_serie (
 ALTER TABLE public.rel_controle_interno_serie OWNER TO sei_user;
 
 --
--- Name: rel_controle_interno_tipo_proc; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_tipo_proc; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_controle_interno_tipo_proc (
@@ -1756,7 +1757,7 @@ CREATE TABLE public.rel_controle_interno_tipo_proc (
 ALTER TABLE public.rel_controle_interno_tipo_proc OWNER TO sei_user;
 
 --
--- Name: rel_controle_interno_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_controle_interno_unidade (
@@ -1768,7 +1769,7 @@ CREATE TABLE public.rel_controle_interno_unidade (
 ALTER TABLE public.rel_controle_interno_unidade OWNER TO sei_user;
 
 --
--- Name: rel_grupo_contato; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_grupo_contato; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_grupo_contato (
@@ -1780,7 +1781,7 @@ CREATE TABLE public.rel_grupo_contato (
 ALTER TABLE public.rel_grupo_contato OWNER TO sei_user;
 
 --
--- Name: rel_grupo_fed_orgao_fed; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_grupo_fed_orgao_fed; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_grupo_fed_orgao_fed (
@@ -1792,7 +1793,7 @@ CREATE TABLE public.rel_grupo_fed_orgao_fed (
 ALTER TABLE public.rel_grupo_fed_orgao_fed OWNER TO sei_user;
 
 --
--- Name: rel_grupo_unidade_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_grupo_unidade_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_grupo_unidade_unidade (
@@ -1804,7 +1805,7 @@ CREATE TABLE public.rel_grupo_unidade_unidade (
 ALTER TABLE public.rel_grupo_unidade_unidade OWNER TO sei_user;
 
 --
--- Name: rel_notificacao_documento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_notificacao_documento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_notificacao_documento (
@@ -1817,7 +1818,7 @@ CREATE TABLE public.rel_notificacao_documento (
 ALTER TABLE public.rel_notificacao_documento OWNER TO sei_user;
 
 --
--- Name: rel_protocolo_assunto; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_protocolo_assunto; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_protocolo_assunto (
@@ -1831,7 +1832,7 @@ CREATE TABLE public.rel_protocolo_assunto (
 ALTER TABLE public.rel_protocolo_assunto OWNER TO sei_user;
 
 --
--- Name: rel_protocolo_atributo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_protocolo_atributo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_protocolo_atributo (
@@ -1844,7 +1845,7 @@ CREATE TABLE public.rel_protocolo_atributo (
 ALTER TABLE public.rel_protocolo_atributo OWNER TO sei_user;
 
 --
--- Name: rel_protocolo_protocolo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_protocolo_protocolo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_protocolo_protocolo (
@@ -1863,7 +1864,7 @@ CREATE TABLE public.rel_protocolo_protocolo (
 ALTER TABLE public.rel_protocolo_protocolo OWNER TO sei_user;
 
 --
--- Name: rel_secao_mod_cj_estilos_item; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_secao_mod_cj_estilos_item; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_secao_mod_cj_estilos_item (
@@ -1876,7 +1877,7 @@ CREATE TABLE public.rel_secao_mod_cj_estilos_item (
 ALTER TABLE public.rel_secao_mod_cj_estilos_item OWNER TO sei_user;
 
 --
--- Name: rel_secao_modelo_estilo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_secao_modelo_estilo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_secao_modelo_estilo (
@@ -1889,7 +1890,7 @@ CREATE TABLE public.rel_secao_modelo_estilo (
 ALTER TABLE public.rel_secao_modelo_estilo OWNER TO sei_user;
 
 --
--- Name: rel_serie_assunto; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_serie_assunto; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_serie_assunto (
@@ -1902,7 +1903,7 @@ CREATE TABLE public.rel_serie_assunto (
 ALTER TABLE public.rel_serie_assunto OWNER TO sei_user;
 
 --
--- Name: rel_serie_veiculo_publicacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_serie_veiculo_publicacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_serie_veiculo_publicacao (
@@ -1914,7 +1915,7 @@ CREATE TABLE public.rel_serie_veiculo_publicacao (
 ALTER TABLE public.rel_serie_veiculo_publicacao OWNER TO sei_user;
 
 --
--- Name: rel_situacao_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_situacao_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_situacao_unidade (
@@ -1926,7 +1927,7 @@ CREATE TABLE public.rel_situacao_unidade (
 ALTER TABLE public.rel_situacao_unidade OWNER TO sei_user;
 
 --
--- Name: rel_tipo_procedimento_assunto; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_tipo_procedimento_assunto; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_tipo_procedimento_assunto (
@@ -1939,7 +1940,7 @@ CREATE TABLE public.rel_tipo_procedimento_assunto (
 ALTER TABLE public.rel_tipo_procedimento_assunto OWNER TO sei_user;
 
 --
--- Name: rel_unidade_tipo_contato; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_unidade_tipo_contato; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_unidade_tipo_contato (
@@ -1953,7 +1954,7 @@ CREATE TABLE public.rel_unidade_tipo_contato (
 ALTER TABLE public.rel_unidade_tipo_contato OWNER TO sei_user;
 
 --
--- Name: rel_usuario_grupo_acomp; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_acomp; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_usuario_grupo_acomp (
@@ -1965,7 +1966,7 @@ CREATE TABLE public.rel_usuario_grupo_acomp (
 ALTER TABLE public.rel_usuario_grupo_acomp OWNER TO sei_user;
 
 --
--- Name: rel_usuario_grupo_bloco; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_bloco; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_usuario_grupo_bloco (
@@ -1977,7 +1978,7 @@ CREATE TABLE public.rel_usuario_grupo_bloco (
 ALTER TABLE public.rel_usuario_grupo_bloco OWNER TO sei_user;
 
 --
--- Name: rel_usuario_marcador; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_usuario_marcador; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_usuario_marcador (
@@ -1989,7 +1990,7 @@ CREATE TABLE public.rel_usuario_marcador (
 ALTER TABLE public.rel_usuario_marcador OWNER TO sei_user;
 
 --
--- Name: rel_usuario_tipo_proced; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_usuario_tipo_proced; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_usuario_tipo_proced (
@@ -2002,7 +2003,7 @@ CREATE TABLE public.rel_usuario_tipo_proced (
 ALTER TABLE public.rel_usuario_tipo_proced OWNER TO sei_user;
 
 --
--- Name: rel_usuario_usuario_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_usuario_usuario_unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.rel_usuario_usuario_unidade (
@@ -2015,7 +2016,7 @@ CREATE TABLE public.rel_usuario_usuario_unidade (
 ALTER TABLE public.rel_usuario_usuario_unidade OWNER TO sei_user;
 
 --
--- Name: replicacao_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: replicacao_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.replicacao_federacao (
@@ -2034,7 +2035,7 @@ CREATE TABLE public.replicacao_federacao (
 ALTER TABLE public.replicacao_federacao OWNER TO sei_user;
 
 --
--- Name: retorno_programado; Type: TABLE; Schema: public; Owner: postgres
+-- Name: retorno_programado; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.retorno_programado (
@@ -2053,7 +2054,7 @@ CREATE TABLE public.retorno_programado (
 ALTER TABLE public.retorno_programado OWNER TO sei_user;
 
 --
--- Name: secao_documento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: secao_documento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.secao_documento (
@@ -2076,7 +2077,7 @@ CREATE TABLE public.secao_documento (
 ALTER TABLE public.secao_documento OWNER TO sei_user;
 
 --
--- Name: secao_imprensa_nacional; Type: TABLE; Schema: public; Owner: postgres
+-- Name: secao_imprensa_nacional; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.secao_imprensa_nacional (
@@ -2090,7 +2091,7 @@ CREATE TABLE public.secao_imprensa_nacional (
 ALTER TABLE public.secao_imprensa_nacional OWNER TO sei_user;
 
 --
--- Name: secao_modelo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: secao_modelo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.secao_modelo (
@@ -2113,7 +2114,7 @@ CREATE TABLE public.secao_modelo (
 ALTER TABLE public.secao_modelo OWNER TO sei_user;
 
 --
--- Name: seq_acesso; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_acesso; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_acesso
@@ -2127,7 +2128,7 @@ CREATE SEQUENCE public.seq_acesso
 ALTER TABLE public.seq_acesso OWNER TO sei_user;
 
 --
--- Name: seq_acesso_externo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_acesso_externo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_acesso_externo
@@ -2141,7 +2142,7 @@ CREATE SEQUENCE public.seq_acesso_externo
 ALTER TABLE public.seq_acesso_externo OWNER TO sei_user;
 
 --
--- Name: seq_acompanhamento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_acompanhamento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_acompanhamento
@@ -2155,7 +2156,7 @@ CREATE SEQUENCE public.seq_acompanhamento
 ALTER TABLE public.seq_acompanhamento OWNER TO sei_user;
 
 --
--- Name: seq_andamento_instalacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_andamento_instalacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_andamento_instalacao
@@ -2169,7 +2170,7 @@ CREATE SEQUENCE public.seq_andamento_instalacao
 ALTER TABLE public.seq_andamento_instalacao OWNER TO sei_user;
 
 --
--- Name: seq_andamento_marcador; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_andamento_marcador; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_andamento_marcador
@@ -2183,7 +2184,7 @@ CREATE SEQUENCE public.seq_andamento_marcador
 ALTER TABLE public.seq_andamento_marcador OWNER TO sei_user;
 
 --
--- Name: seq_andamento_situacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_andamento_situacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_andamento_situacao
@@ -2197,7 +2198,7 @@ CREATE SEQUENCE public.seq_andamento_situacao
 ALTER TABLE public.seq_andamento_situacao OWNER TO sei_user;
 
 --
--- Name: seq_anexo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_anexo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_anexo
@@ -2211,7 +2212,7 @@ CREATE SEQUENCE public.seq_anexo
 ALTER TABLE public.seq_anexo OWNER TO sei_user;
 
 --
--- Name: seq_anotacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_anotacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_anotacao
@@ -2225,7 +2226,7 @@ CREATE SEQUENCE public.seq_anotacao
 ALTER TABLE public.seq_anotacao OWNER TO sei_user;
 
 --
--- Name: seq_arquivo_extensao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_arquivo_extensao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_arquivo_extensao
@@ -2239,7 +2240,7 @@ CREATE SEQUENCE public.seq_arquivo_extensao
 ALTER TABLE public.seq_arquivo_extensao OWNER TO sei_user;
 
 --
--- Name: seq_assinante; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_assinante; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_assinante
@@ -2253,7 +2254,7 @@ CREATE SEQUENCE public.seq_assinante
 ALTER TABLE public.seq_assinante OWNER TO sei_user;
 
 --
--- Name: seq_assinatura; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_assinatura; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_assinatura
@@ -2267,7 +2268,7 @@ CREATE SEQUENCE public.seq_assinatura
 ALTER TABLE public.seq_assinatura OWNER TO sei_user;
 
 --
--- Name: seq_assunto; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_assunto; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_assunto
@@ -2281,7 +2282,7 @@ CREATE SEQUENCE public.seq_assunto
 ALTER TABLE public.seq_assunto OWNER TO sei_user;
 
 --
--- Name: seq_assunto_proxy; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_assunto_proxy; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_assunto_proxy
@@ -2295,7 +2296,7 @@ CREATE SEQUENCE public.seq_assunto_proxy
 ALTER TABLE public.seq_assunto_proxy OWNER TO sei_user;
 
 --
--- Name: seq_atividade; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_atividade; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_atividade
@@ -2309,7 +2310,7 @@ CREATE SEQUENCE public.seq_atividade
 ALTER TABLE public.seq_atividade OWNER TO sei_user;
 
 --
--- Name: seq_atributo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_atributo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_atributo
@@ -2323,7 +2324,7 @@ CREATE SEQUENCE public.seq_atributo
 ALTER TABLE public.seq_atributo OWNER TO sei_user;
 
 --
--- Name: seq_atributo_andamento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_atributo_andamento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_atributo_andamento
@@ -2337,7 +2338,7 @@ CREATE SEQUENCE public.seq_atributo_andamento
 ALTER TABLE public.seq_atributo_andamento OWNER TO sei_user;
 
 --
--- Name: seq_atributo_andamento_situaca; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_atributo_andamento_situaca; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_atributo_andamento_situaca
@@ -2351,7 +2352,7 @@ CREATE SEQUENCE public.seq_atributo_andamento_situaca
 ALTER TABLE public.seq_atributo_andamento_situaca OWNER TO sei_user;
 
 --
--- Name: seq_atributo_instalacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_atributo_instalacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_atributo_instalacao
@@ -2365,7 +2366,7 @@ CREATE SEQUENCE public.seq_atributo_instalacao
 ALTER TABLE public.seq_atributo_instalacao OWNER TO sei_user;
 
 --
--- Name: seq_auditoria_protocolo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_auditoria_protocolo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_auditoria_protocolo
@@ -2379,7 +2380,7 @@ CREATE SEQUENCE public.seq_auditoria_protocolo
 ALTER TABLE public.seq_auditoria_protocolo OWNER TO sei_user;
 
 --
--- Name: seq_base_conhecimento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_base_conhecimento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_base_conhecimento
@@ -2393,7 +2394,7 @@ CREATE SEQUENCE public.seq_base_conhecimento
 ALTER TABLE public.seq_base_conhecimento OWNER TO sei_user;
 
 --
--- Name: seq_bloco; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_bloco; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_bloco
@@ -2407,7 +2408,7 @@ CREATE SEQUENCE public.seq_bloco
 ALTER TABLE public.seq_bloco OWNER TO sei_user;
 
 --
--- Name: seq_campo_pesquisa; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_campo_pesquisa; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_campo_pesquisa
@@ -2421,7 +2422,7 @@ CREATE SEQUENCE public.seq_campo_pesquisa
 ALTER TABLE public.seq_campo_pesquisa OWNER TO sei_user;
 
 --
--- Name: seq_cargo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_cargo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_cargo
@@ -2435,7 +2436,7 @@ CREATE SEQUENCE public.seq_cargo
 ALTER TABLE public.seq_cargo OWNER TO sei_user;
 
 --
--- Name: seq_categoria; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_categoria; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_categoria
@@ -2449,7 +2450,7 @@ CREATE SEQUENCE public.seq_categoria
 ALTER TABLE public.seq_categoria OWNER TO sei_user;
 
 --
--- Name: seq_cidade; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_cidade; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_cidade
@@ -2463,7 +2464,7 @@ CREATE SEQUENCE public.seq_cidade
 ALTER TABLE public.seq_cidade OWNER TO sei_user;
 
 --
--- Name: seq_comentario; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_comentario; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_comentario
@@ -2477,7 +2478,7 @@ CREATE SEQUENCE public.seq_comentario
 ALTER TABLE public.seq_comentario OWNER TO sei_user;
 
 --
--- Name: seq_conjunto_estilos; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_conjunto_estilos; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_conjunto_estilos
@@ -2491,7 +2492,7 @@ CREATE SEQUENCE public.seq_conjunto_estilos
 ALTER TABLE public.seq_conjunto_estilos OWNER TO sei_user;
 
 --
--- Name: seq_conjunto_estilos_item; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_conjunto_estilos_item; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_conjunto_estilos_item
@@ -2505,7 +2506,7 @@ CREATE SEQUENCE public.seq_conjunto_estilos_item
 ALTER TABLE public.seq_conjunto_estilos_item OWNER TO sei_user;
 
 --
--- Name: seq_contato; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_contato; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_contato
@@ -2519,7 +2520,7 @@ CREATE SEQUENCE public.seq_contato
 ALTER TABLE public.seq_contato OWNER TO sei_user;
 
 --
--- Name: seq_controle_interno; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_controle_interno; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_controle_interno
@@ -2533,7 +2534,7 @@ CREATE SEQUENCE public.seq_controle_interno
 ALTER TABLE public.seq_controle_interno OWNER TO sei_user;
 
 --
--- Name: seq_controle_prazo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_controle_prazo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_controle_prazo
@@ -2547,7 +2548,7 @@ CREATE SEQUENCE public.seq_controle_prazo
 ALTER TABLE public.seq_controle_prazo OWNER TO sei_user;
 
 --
--- Name: seq_controle_unidade; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_controle_unidade; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_controle_unidade
@@ -2561,7 +2562,7 @@ CREATE SEQUENCE public.seq_controle_unidade
 ALTER TABLE public.seq_controle_unidade OWNER TO sei_user;
 
 --
--- Name: seq_documento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_documento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_documento
@@ -2575,7 +2576,7 @@ CREATE SEQUENCE public.seq_documento
 ALTER TABLE public.seq_documento OWNER TO sei_user;
 
 --
--- Name: seq_dominio; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_dominio; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_dominio
@@ -2589,7 +2590,7 @@ CREATE SEQUENCE public.seq_dominio
 ALTER TABLE public.seq_dominio OWNER TO sei_user;
 
 --
--- Name: seq_email_grupo_email; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_email_grupo_email; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_email_grupo_email
@@ -2603,7 +2604,7 @@ CREATE SEQUENCE public.seq_email_grupo_email
 ALTER TABLE public.seq_email_grupo_email OWNER TO sei_user;
 
 --
--- Name: seq_email_sistema; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_email_sistema; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_email_sistema
@@ -2617,7 +2618,7 @@ CREATE SEQUENCE public.seq_email_sistema
 ALTER TABLE public.seq_email_sistema OWNER TO sei_user;
 
 --
--- Name: seq_email_unidade; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_email_unidade; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_email_unidade
@@ -2631,7 +2632,7 @@ CREATE SEQUENCE public.seq_email_unidade
 ALTER TABLE public.seq_email_unidade OWNER TO sei_user;
 
 --
--- Name: seq_email_utilizado; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_email_utilizado; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_email_utilizado
@@ -2645,7 +2646,7 @@ CREATE SEQUENCE public.seq_email_utilizado
 ALTER TABLE public.seq_email_utilizado OWNER TO sei_user;
 
 --
--- Name: seq_estatisticas; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_estatisticas; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_estatisticas
@@ -2659,7 +2660,7 @@ CREATE SEQUENCE public.seq_estatisticas
 ALTER TABLE public.seq_estatisticas OWNER TO sei_user;
 
 --
--- Name: seq_estilo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_estilo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_estilo
@@ -2673,7 +2674,7 @@ CREATE SEQUENCE public.seq_estilo
 ALTER TABLE public.seq_estilo OWNER TO sei_user;
 
 --
--- Name: seq_feed; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_feed; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_feed
@@ -2687,7 +2688,7 @@ CREATE SEQUENCE public.seq_feed
 ALTER TABLE public.seq_feed OWNER TO sei_user;
 
 --
--- Name: seq_feriado; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_feriado; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_feriado
@@ -2701,7 +2702,7 @@ CREATE SEQUENCE public.seq_feriado
 ALTER TABLE public.seq_feriado OWNER TO sei_user;
 
 --
--- Name: seq_grupo_acompanhamento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_acompanhamento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_acompanhamento
@@ -2715,7 +2716,7 @@ CREATE SEQUENCE public.seq_grupo_acompanhamento
 ALTER TABLE public.seq_grupo_acompanhamento OWNER TO sei_user;
 
 --
--- Name: seq_grupo_bloco; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_bloco; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_bloco
@@ -2729,7 +2730,7 @@ CREATE SEQUENCE public.seq_grupo_bloco
 ALTER TABLE public.seq_grupo_bloco OWNER TO sei_user;
 
 --
--- Name: seq_grupo_contato; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_contato; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_contato
@@ -2743,7 +2744,7 @@ CREATE SEQUENCE public.seq_grupo_contato
 ALTER TABLE public.seq_grupo_contato OWNER TO sei_user;
 
 --
--- Name: seq_grupo_email; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_email; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_email
@@ -2757,7 +2758,7 @@ CREATE SEQUENCE public.seq_grupo_email
 ALTER TABLE public.seq_grupo_email OWNER TO sei_user;
 
 --
--- Name: seq_grupo_federacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_federacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_federacao
@@ -2771,7 +2772,7 @@ CREATE SEQUENCE public.seq_grupo_federacao
 ALTER TABLE public.seq_grupo_federacao OWNER TO sei_user;
 
 --
--- Name: seq_grupo_protocolo_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_protocolo_modelo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_protocolo_modelo
@@ -2785,7 +2786,7 @@ CREATE SEQUENCE public.seq_grupo_protocolo_modelo
 ALTER TABLE public.seq_grupo_protocolo_modelo OWNER TO sei_user;
 
 --
--- Name: seq_grupo_serie; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_serie; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_serie
@@ -2799,7 +2800,7 @@ CREATE SEQUENCE public.seq_grupo_serie
 ALTER TABLE public.seq_grupo_serie OWNER TO sei_user;
 
 --
--- Name: seq_grupo_unidade; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_grupo_unidade; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_grupo_unidade
@@ -2813,7 +2814,7 @@ CREATE SEQUENCE public.seq_grupo_unidade
 ALTER TABLE public.seq_grupo_unidade OWNER TO sei_user;
 
 --
--- Name: seq_hipotese_legal; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_hipotese_legal; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_hipotese_legal
@@ -2827,7 +2828,7 @@ CREATE SEQUENCE public.seq_hipotese_legal
 ALTER TABLE public.seq_hipotese_legal OWNER TO sei_user;
 
 --
--- Name: seq_imagem_formato; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_imagem_formato; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_imagem_formato
@@ -2841,7 +2842,7 @@ CREATE SEQUENCE public.seq_imagem_formato
 ALTER TABLE public.seq_imagem_formato OWNER TO sei_user;
 
 --
--- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_infra_auditoria
@@ -2855,7 +2856,7 @@ CREATE SEQUENCE public.seq_infra_auditoria
 ALTER TABLE public.seq_infra_auditoria OWNER TO sei_user;
 
 --
--- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_infra_log
@@ -2869,7 +2870,7 @@ CREATE SEQUENCE public.seq_infra_log
 ALTER TABLE public.seq_infra_log OWNER TO sei_user;
 
 --
--- Name: seq_infra_navegador; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_infra_navegador; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_infra_navegador
@@ -2883,7 +2884,7 @@ CREATE SEQUENCE public.seq_infra_navegador
 ALTER TABLE public.seq_infra_navegador OWNER TO sei_user;
 
 --
--- Name: seq_lembrete; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_lembrete; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_lembrete
@@ -2897,7 +2898,7 @@ CREATE SEQUENCE public.seq_lembrete
 ALTER TABLE public.seq_lembrete OWNER TO sei_user;
 
 --
--- Name: seq_localizador; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_localizador; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_localizador
@@ -2911,7 +2912,7 @@ CREATE SEQUENCE public.seq_localizador
 ALTER TABLE public.seq_localizador OWNER TO sei_user;
 
 --
--- Name: seq_lugar_localizador; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_lugar_localizador; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_lugar_localizador
@@ -2925,7 +2926,7 @@ CREATE SEQUENCE public.seq_lugar_localizador
 ALTER TABLE public.seq_lugar_localizador OWNER TO sei_user;
 
 --
--- Name: seq_marcador; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_marcador; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_marcador
@@ -2939,7 +2940,7 @@ CREATE SEQUENCE public.seq_marcador
 ALTER TABLE public.seq_marcador OWNER TO sei_user;
 
 --
--- Name: seq_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_modelo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_modelo
@@ -2953,7 +2954,7 @@ CREATE SEQUENCE public.seq_modelo
 ALTER TABLE public.seq_modelo OWNER TO sei_user;
 
 --
--- Name: seq_monitoramento_servico; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_monitoramento_servico; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_monitoramento_servico
@@ -2967,7 +2968,7 @@ CREATE SEQUENCE public.seq_monitoramento_servico
 ALTER TABLE public.seq_monitoramento_servico OWNER TO sei_user;
 
 --
--- Name: seq_nivel_acesso_permitido; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_nivel_acesso_permitido; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_nivel_acesso_permitido
@@ -2981,7 +2982,7 @@ CREATE SEQUENCE public.seq_nivel_acesso_permitido
 ALTER TABLE public.seq_nivel_acesso_permitido OWNER TO sei_user;
 
 --
--- Name: seq_novidade; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_novidade; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_novidade
@@ -2995,7 +2996,7 @@ CREATE SEQUENCE public.seq_novidade
 ALTER TABLE public.seq_novidade OWNER TO sei_user;
 
 --
--- Name: seq_numeracao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_numeracao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_numeracao
@@ -3009,7 +3010,7 @@ CREATE SEQUENCE public.seq_numeracao
 ALTER TABLE public.seq_numeracao OWNER TO sei_user;
 
 --
--- Name: seq_observacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_observacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_observacao
@@ -3023,7 +3024,7 @@ CREATE SEQUENCE public.seq_observacao
 ALTER TABLE public.seq_observacao OWNER TO sei_user;
 
 --
--- Name: seq_operacao_servico; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_operacao_servico; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_operacao_servico
@@ -3037,7 +3038,7 @@ CREATE SEQUENCE public.seq_operacao_servico
 ALTER TABLE public.seq_operacao_servico OWNER TO sei_user;
 
 --
--- Name: seq_ordenador_despesa; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_ordenador_despesa; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_ordenador_despesa
@@ -3051,7 +3052,7 @@ CREATE SEQUENCE public.seq_ordenador_despesa
 ALTER TABLE public.seq_ordenador_despesa OWNER TO sei_user;
 
 --
--- Name: seq_orgao_historico; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_orgao_historico; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_orgao_historico
@@ -3065,7 +3066,7 @@ CREATE SEQUENCE public.seq_orgao_historico
 ALTER TABLE public.seq_orgao_historico OWNER TO sei_user;
 
 --
--- Name: seq_pais; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_pais; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_pais
@@ -3079,7 +3080,7 @@ CREATE SEQUENCE public.seq_pais
 ALTER TABLE public.seq_pais OWNER TO sei_user;
 
 --
--- Name: seq_participante; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_participante; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_participante
@@ -3093,7 +3094,7 @@ CREATE SEQUENCE public.seq_participante
 ALTER TABLE public.seq_participante OWNER TO sei_user;
 
 --
--- Name: seq_pesquisa; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_pesquisa; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_pesquisa
@@ -3107,7 +3108,7 @@ CREATE SEQUENCE public.seq_pesquisa
 ALTER TABLE public.seq_pesquisa OWNER TO sei_user;
 
 --
--- Name: seq_protocolo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_protocolo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_protocolo
@@ -3121,7 +3122,7 @@ CREATE SEQUENCE public.seq_protocolo
 ALTER TABLE public.seq_protocolo OWNER TO sei_user;
 
 --
--- Name: seq_protocolo_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_protocolo_modelo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_protocolo_modelo
@@ -3135,7 +3136,7 @@ CREATE SEQUENCE public.seq_protocolo_modelo
 ALTER TABLE public.seq_protocolo_modelo OWNER TO sei_user;
 
 --
--- Name: seq_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_publicacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_publicacao
@@ -3149,7 +3150,7 @@ CREATE SEQUENCE public.seq_publicacao
 ALTER TABLE public.seq_publicacao OWNER TO sei_user;
 
 --
--- Name: seq_rel_protocolo_protocolo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_rel_protocolo_protocolo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_rel_protocolo_protocolo
@@ -3163,7 +3164,7 @@ CREATE SEQUENCE public.seq_rel_protocolo_protocolo
 ALTER TABLE public.seq_rel_protocolo_protocolo OWNER TO sei_user;
 
 --
--- Name: seq_rel_unidade_tipo_contato; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_rel_unidade_tipo_contato; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_rel_unidade_tipo_contato
@@ -3177,7 +3178,7 @@ CREATE SEQUENCE public.seq_rel_unidade_tipo_contato
 ALTER TABLE public.seq_rel_unidade_tipo_contato OWNER TO sei_user;
 
 --
--- Name: seq_retorno_programado; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_retorno_programado; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_retorno_programado
@@ -3191,7 +3192,7 @@ CREATE SEQUENCE public.seq_retorno_programado
 ALTER TABLE public.seq_retorno_programado OWNER TO sei_user;
 
 --
--- Name: seq_secao_documento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_secao_documento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_secao_documento
@@ -3205,7 +3206,7 @@ CREATE SEQUENCE public.seq_secao_documento
 ALTER TABLE public.seq_secao_documento OWNER TO sei_user;
 
 --
--- Name: seq_secao_imprensa_nacional; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_secao_imprensa_nacional; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_secao_imprensa_nacional
@@ -3219,7 +3220,7 @@ CREATE SEQUENCE public.seq_secao_imprensa_nacional
 ALTER TABLE public.seq_secao_imprensa_nacional OWNER TO sei_user;
 
 --
--- Name: seq_secao_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_secao_modelo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_secao_modelo
@@ -3233,7 +3234,7 @@ CREATE SEQUENCE public.seq_secao_modelo
 ALTER TABLE public.seq_secao_modelo OWNER TO sei_user;
 
 --
--- Name: seq_serie; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_serie; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_serie
@@ -3247,7 +3248,7 @@ CREATE SEQUENCE public.seq_serie
 ALTER TABLE public.seq_serie OWNER TO sei_user;
 
 --
--- Name: seq_serie_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_serie_publicacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_serie_publicacao
@@ -3261,7 +3262,7 @@ CREATE SEQUENCE public.seq_serie_publicacao
 ALTER TABLE public.seq_serie_publicacao OWNER TO sei_user;
 
 --
--- Name: seq_serie_restricao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_serie_restricao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_serie_restricao
@@ -3275,7 +3276,7 @@ CREATE SEQUENCE public.seq_serie_restricao
 ALTER TABLE public.seq_serie_restricao OWNER TO sei_user;
 
 --
--- Name: seq_servico; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_servico; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_servico
@@ -3289,7 +3290,7 @@ CREATE SEQUENCE public.seq_servico
 ALTER TABLE public.seq_servico OWNER TO sei_user;
 
 --
--- Name: seq_situacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_situacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_situacao
@@ -3303,7 +3304,7 @@ CREATE SEQUENCE public.seq_situacao
 ALTER TABLE public.seq_situacao OWNER TO sei_user;
 
 --
--- Name: seq_tabela_assuntos; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tabela_assuntos; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tabela_assuntos
@@ -3317,7 +3318,7 @@ CREATE SEQUENCE public.seq_tabela_assuntos
 ALTER TABLE public.seq_tabela_assuntos OWNER TO sei_user;
 
 --
--- Name: seq_tarefa; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tarefa; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tarefa
@@ -3331,7 +3332,7 @@ CREATE SEQUENCE public.seq_tarefa
 ALTER TABLE public.seq_tarefa OWNER TO sei_user;
 
 --
--- Name: seq_tarja_assinatura; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tarja_assinatura; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tarja_assinatura
@@ -3345,7 +3346,7 @@ CREATE SEQUENCE public.seq_tarja_assinatura
 ALTER TABLE public.seq_tarja_assinatura OWNER TO sei_user;
 
 --
--- Name: seq_texto_padrao_interno; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_texto_padrao_interno; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_texto_padrao_interno
@@ -3359,7 +3360,7 @@ CREATE SEQUENCE public.seq_texto_padrao_interno
 ALTER TABLE public.seq_texto_padrao_interno OWNER TO sei_user;
 
 --
--- Name: seq_tipo_conferencia; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tipo_conferencia; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tipo_conferencia
@@ -3373,7 +3374,7 @@ CREATE SEQUENCE public.seq_tipo_conferencia
 ALTER TABLE public.seq_tipo_conferencia OWNER TO sei_user;
 
 --
--- Name: seq_tipo_contato; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tipo_contato; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tipo_contato
@@ -3387,7 +3388,7 @@ CREATE SEQUENCE public.seq_tipo_contato
 ALTER TABLE public.seq_tipo_contato OWNER TO sei_user;
 
 --
--- Name: seq_tipo_formulario; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tipo_formulario; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tipo_formulario
@@ -3401,7 +3402,7 @@ CREATE SEQUENCE public.seq_tipo_formulario
 ALTER TABLE public.seq_tipo_formulario OWNER TO sei_user;
 
 --
--- Name: seq_tipo_localizador; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tipo_localizador; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tipo_localizador
@@ -3415,7 +3416,7 @@ CREATE SEQUENCE public.seq_tipo_localizador
 ALTER TABLE public.seq_tipo_localizador OWNER TO sei_user;
 
 --
--- Name: seq_tipo_proced_restricao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tipo_proced_restricao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tipo_proced_restricao
@@ -3429,7 +3430,7 @@ CREATE SEQUENCE public.seq_tipo_proced_restricao
 ALTER TABLE public.seq_tipo_proced_restricao OWNER TO sei_user;
 
 --
--- Name: seq_tipo_procedimento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tipo_procedimento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tipo_procedimento
@@ -3443,7 +3444,7 @@ CREATE SEQUENCE public.seq_tipo_procedimento
 ALTER TABLE public.seq_tipo_procedimento OWNER TO sei_user;
 
 --
--- Name: seq_tipo_suporte; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tipo_suporte; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tipo_suporte
@@ -3457,7 +3458,7 @@ CREATE SEQUENCE public.seq_tipo_suporte
 ALTER TABLE public.seq_tipo_suporte OWNER TO sei_user;
 
 --
--- Name: seq_titulo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_titulo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_titulo
@@ -3471,7 +3472,7 @@ CREATE SEQUENCE public.seq_titulo
 ALTER TABLE public.seq_titulo OWNER TO sei_user;
 
 --
--- Name: seq_tratamento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_tratamento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_tratamento
@@ -3485,7 +3486,7 @@ CREATE SEQUENCE public.seq_tratamento
 ALTER TABLE public.seq_tratamento OWNER TO sei_user;
 
 --
--- Name: seq_uf; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_uf; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_uf
@@ -3499,7 +3500,7 @@ CREATE SEQUENCE public.seq_uf
 ALTER TABLE public.seq_uf OWNER TO sei_user;
 
 --
--- Name: seq_unidade_historico; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_unidade_historico; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_unidade_historico
@@ -3513,7 +3514,7 @@ CREATE SEQUENCE public.seq_unidade_historico
 ALTER TABLE public.seq_unidade_historico OWNER TO sei_user;
 
 --
--- Name: seq_unidade_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_unidade_publicacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_unidade_publicacao
@@ -3527,7 +3528,7 @@ CREATE SEQUENCE public.seq_unidade_publicacao
 ALTER TABLE public.seq_unidade_publicacao OWNER TO sei_user;
 
 --
--- Name: seq_upload; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_upload; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_upload
@@ -3541,7 +3542,7 @@ CREATE SEQUENCE public.seq_upload
 ALTER TABLE public.seq_upload OWNER TO sei_user;
 
 --
--- Name: seq_veiculo_imprensa_nacional; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_veiculo_imprensa_nacional; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_veiculo_imprensa_nacional
@@ -3555,7 +3556,7 @@ CREATE SEQUENCE public.seq_veiculo_imprensa_nacional
 ALTER TABLE public.seq_veiculo_imprensa_nacional OWNER TO sei_user;
 
 --
--- Name: seq_veiculo_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_veiculo_publicacao; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_veiculo_publicacao
@@ -3569,7 +3570,7 @@ CREATE SEQUENCE public.seq_veiculo_publicacao
 ALTER TABLE public.seq_veiculo_publicacao OWNER TO sei_user;
 
 --
--- Name: seq_versao_secao_documento; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_versao_secao_documento; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_versao_secao_documento
@@ -3583,7 +3584,7 @@ CREATE SEQUENCE public.seq_versao_secao_documento
 ALTER TABLE public.seq_versao_secao_documento OWNER TO sei_user;
 
 --
--- Name: seq_vocativo; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_vocativo; Type: SEQUENCE; Schema: public; Owner: sei_user
 --
 
 CREATE SEQUENCE public.seq_vocativo
@@ -3597,7 +3598,7 @@ CREATE SEQUENCE public.seq_vocativo
 ALTER TABLE public.seq_vocativo OWNER TO sei_user;
 
 --
--- Name: serie; Type: TABLE; Schema: public; Owner: postgres
+-- Name: serie; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.serie (
@@ -3622,7 +3623,7 @@ CREATE TABLE public.serie (
 ALTER TABLE public.serie OWNER TO sei_user;
 
 --
--- Name: serie_escolha; Type: TABLE; Schema: public; Owner: postgres
+-- Name: serie_escolha; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.serie_escolha (
@@ -3634,7 +3635,7 @@ CREATE TABLE public.serie_escolha (
 ALTER TABLE public.serie_escolha OWNER TO sei_user;
 
 --
--- Name: serie_publicacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: serie_publicacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.serie_publicacao (
@@ -3647,7 +3648,7 @@ CREATE TABLE public.serie_publicacao (
 ALTER TABLE public.serie_publicacao OWNER TO sei_user;
 
 --
--- Name: serie_restricao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: serie_restricao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.serie_restricao (
@@ -3661,7 +3662,7 @@ CREATE TABLE public.serie_restricao (
 ALTER TABLE public.serie_restricao OWNER TO sei_user;
 
 --
--- Name: servico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: servico; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.servico (
@@ -3682,7 +3683,7 @@ CREATE TABLE public.servico (
 ALTER TABLE public.servico OWNER TO sei_user;
 
 --
--- Name: sinalizacao_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: sinalizacao_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.sinalizacao_federacao (
@@ -3697,7 +3698,7 @@ CREATE TABLE public.sinalizacao_federacao (
 ALTER TABLE public.sinalizacao_federacao OWNER TO sei_user;
 
 --
--- Name: situacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: situacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.situacao (
@@ -3711,7 +3712,7 @@ CREATE TABLE public.situacao (
 ALTER TABLE public.situacao OWNER TO sei_user;
 
 --
--- Name: tabela_assuntos; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tabela_assuntos; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tabela_assuntos (
@@ -3725,7 +3726,7 @@ CREATE TABLE public.tabela_assuntos (
 ALTER TABLE public.tabela_assuntos OWNER TO sei_user;
 
 --
--- Name: tarefa; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tarefa; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tarefa (
@@ -3743,7 +3744,7 @@ CREATE TABLE public.tarefa (
 ALTER TABLE public.tarefa OWNER TO sei_user;
 
 --
--- Name: tarefa_instalacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tarefa_instalacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tarefa_instalacao (
@@ -3755,7 +3756,7 @@ CREATE TABLE public.tarefa_instalacao (
 ALTER TABLE public.tarefa_instalacao OWNER TO sei_user;
 
 --
--- Name: tarja_assinatura; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tarja_assinatura; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tarja_assinatura (
@@ -3770,7 +3771,7 @@ CREATE TABLE public.tarja_assinatura (
 ALTER TABLE public.tarja_assinatura OWNER TO sei_user;
 
 --
--- Name: texto_padrao_interno; Type: TABLE; Schema: public; Owner: postgres
+-- Name: texto_padrao_interno; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.texto_padrao_interno (
@@ -3786,7 +3787,7 @@ CREATE TABLE public.texto_padrao_interno (
 ALTER TABLE public.texto_padrao_interno OWNER TO sei_user;
 
 --
--- Name: tipo_conferencia; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_conferencia; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_conferencia (
@@ -3799,7 +3800,7 @@ CREATE TABLE public.tipo_conferencia (
 ALTER TABLE public.tipo_conferencia OWNER TO sei_user;
 
 --
--- Name: tipo_contato; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_contato; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_contato (
@@ -3815,7 +3816,7 @@ CREATE TABLE public.tipo_contato (
 ALTER TABLE public.tipo_contato OWNER TO sei_user;
 
 --
--- Name: tipo_formulario; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_formulario; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_formulario (
@@ -3829,7 +3830,7 @@ CREATE TABLE public.tipo_formulario (
 ALTER TABLE public.tipo_formulario OWNER TO sei_user;
 
 --
--- Name: tipo_localizador; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_localizador; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_localizador (
@@ -3845,7 +3846,7 @@ CREATE TABLE public.tipo_localizador (
 ALTER TABLE public.tipo_localizador OWNER TO sei_user;
 
 --
--- Name: tipo_proced_restricao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_proced_restricao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_proced_restricao (
@@ -3859,7 +3860,7 @@ CREATE TABLE public.tipo_proced_restricao (
 ALTER TABLE public.tipo_proced_restricao OWNER TO sei_user;
 
 --
--- Name: tipo_procedimento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_procedimento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_procedimento (
@@ -3879,7 +3880,7 @@ CREATE TABLE public.tipo_procedimento (
 ALTER TABLE public.tipo_procedimento OWNER TO sei_user;
 
 --
--- Name: tipo_procedimento_escolha; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_procedimento_escolha; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_procedimento_escolha (
@@ -3891,7 +3892,7 @@ CREATE TABLE public.tipo_procedimento_escolha (
 ALTER TABLE public.tipo_procedimento_escolha OWNER TO sei_user;
 
 --
--- Name: tipo_suporte; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_suporte; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tipo_suporte (
@@ -3904,7 +3905,7 @@ CREATE TABLE public.tipo_suporte (
 ALTER TABLE public.tipo_suporte OWNER TO sei_user;
 
 --
--- Name: titulo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: titulo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.titulo (
@@ -3918,7 +3919,7 @@ CREATE TABLE public.titulo (
 ALTER TABLE public.titulo OWNER TO sei_user;
 
 --
--- Name: tratamento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tratamento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.tratamento (
@@ -3931,7 +3932,7 @@ CREATE TABLE public.tratamento (
 ALTER TABLE public.tratamento OWNER TO sei_user;
 
 --
--- Name: uf; Type: TABLE; Schema: public; Owner: postgres
+-- Name: uf; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.uf (
@@ -3946,7 +3947,7 @@ CREATE TABLE public.uf (
 ALTER TABLE public.uf OWNER TO sei_user;
 
 --
--- Name: unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: unidade; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.unidade (
@@ -3971,7 +3972,7 @@ CREATE TABLE public.unidade (
 ALTER TABLE public.unidade OWNER TO sei_user;
 
 --
--- Name: unidade_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: unidade_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.unidade_federacao (
@@ -3985,7 +3986,7 @@ CREATE TABLE public.unidade_federacao (
 ALTER TABLE public.unidade_federacao OWNER TO sei_user;
 
 --
--- Name: unidade_historico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: unidade_historico; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.unidade_historico (
@@ -4002,7 +4003,7 @@ CREATE TABLE public.unidade_historico (
 ALTER TABLE public.unidade_historico OWNER TO sei_user;
 
 --
--- Name: unidade_publicacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: unidade_publicacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.unidade_publicacao (
@@ -4014,7 +4015,7 @@ CREATE TABLE public.unidade_publicacao (
 ALTER TABLE public.unidade_publicacao OWNER TO sei_user;
 
 --
--- Name: usuario; Type: TABLE; Schema: public; Owner: postgres
+-- Name: usuario; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.usuario (
@@ -4038,7 +4039,7 @@ CREATE TABLE public.usuario (
 ALTER TABLE public.usuario OWNER TO sei_user;
 
 --
--- Name: usuario_federacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: usuario_federacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.usuario_federacao (
@@ -4052,7 +4053,7 @@ CREATE TABLE public.usuario_federacao (
 ALTER TABLE public.usuario_federacao OWNER TO sei_user;
 
 --
--- Name: veiculo_imprensa_nacional; Type: TABLE; Schema: public; Owner: postgres
+-- Name: veiculo_imprensa_nacional; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.veiculo_imprensa_nacional (
@@ -4065,7 +4066,7 @@ CREATE TABLE public.veiculo_imprensa_nacional (
 ALTER TABLE public.veiculo_imprensa_nacional OWNER TO sei_user;
 
 --
--- Name: veiculo_publicacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: veiculo_publicacao; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.veiculo_publicacao (
@@ -4084,7 +4085,7 @@ CREATE TABLE public.veiculo_publicacao (
 ALTER TABLE public.veiculo_publicacao OWNER TO sei_user;
 
 --
--- Name: velocidade_transferencia; Type: TABLE; Schema: public; Owner: postgres
+-- Name: velocidade_transferencia; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.velocidade_transferencia (
@@ -4097,7 +4098,7 @@ CREATE TABLE public.velocidade_transferencia (
 ALTER TABLE public.velocidade_transferencia OWNER TO sei_user;
 
 --
--- Name: versao_secao_documento; Type: TABLE; Schema: public; Owner: postgres
+-- Name: versao_secao_documento; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.versao_secao_documento (
@@ -4115,7 +4116,7 @@ CREATE TABLE public.versao_secao_documento (
 ALTER TABLE public.versao_secao_documento OWNER TO sei_user;
 
 --
--- Name: vocativo; Type: TABLE; Schema: public; Owner: postgres
+-- Name: vocativo; Type: TABLE; Schema: public; Owner: sei_user
 --
 
 CREATE TABLE public.vocativo (
@@ -4128,7 +4129,7 @@ CREATE TABLE public.vocativo (
 ALTER TABLE public.vocativo OWNER TO sei_user;
 
 --
--- Data for Name: acao_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: acao_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.acao_federacao (id_acao_federacao, id_instalacao_federacao, id_orgao_federacao, id_unidade_federacao, id_usuario_federacao, id_procedimento_federacao, id_documento_federacao, dth_geracao, dth_acesso, sta_tipo, sin_ativo) FROM stdin;
@@ -4136,7 +4137,7 @@ COPY public.acao_federacao (id_acao_federacao, id_instalacao_federacao, id_orgao
 
 
 --
--- Data for Name: acesso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: acesso; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.acesso (id_acesso, id_usuario, id_unidade, id_protocolo, id_controle_interno, sta_tipo) FROM stdin;
@@ -4144,7 +4145,7 @@ COPY public.acesso (id_acesso, id_usuario, id_unidade, id_protocolo, id_controle
 
 
 --
--- Data for Name: acesso_externo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: acesso_externo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.acesso_externo (id_acesso_externo, id_atividade, id_participante, id_documento, dta_validade, email_unidade, hash_interno, sta_tipo, sin_processo, sin_ativo, email_destinatario, sin_inclusao, dth_visualizacao) FROM stdin;
@@ -4152,7 +4153,7 @@ COPY public.acesso_externo (id_acesso_externo, id_atividade, id_participante, id
 
 
 --
--- Data for Name: acesso_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: acesso_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.acesso_federacao (id_acesso_federacao, id_instalacao_federacao_rem, id_orgao_federacao_rem, id_unidade_federacao_rem, id_usuario_federacao_rem, id_instalacao_federacao_dest, id_orgao_federacao_dest, id_unidade_federacao_dest, id_usuario_federacao_dest, id_procedimento_federacao, id_documento_federacao, dth_liberacao, motivo_liberacao, dth_cancelamento, motivo_cancelamento, sta_tipo, sin_ativo) FROM stdin;
@@ -4160,7 +4161,7 @@ COPY public.acesso_federacao (id_acesso_federacao, id_instalacao_federacao_rem, 
 
 
 --
--- Data for Name: acompanhamento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: acompanhamento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.acompanhamento (id_acompanhamento, id_unidade, id_grupo_acompanhamento, id_protocolo, observacao, tipo_visualizacao, id_usuario, dth_alteracao, idx_acompanhamento) FROM stdin;
@@ -4168,7 +4169,7 @@ COPY public.acompanhamento (id_acompanhamento, id_unidade, id_grupo_acompanhamen
 
 
 --
--- Data for Name: andamento_instalacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: andamento_instalacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.andamento_instalacao (id_andamento_instalacao, id_instalacao_federacao, id_tarefa_instalacao, id_unidade, id_usuario, sta_estado, dth_estado) FROM stdin;
@@ -4176,7 +4177,7 @@ COPY public.andamento_instalacao (id_andamento_instalacao, id_instalacao_federac
 
 
 --
--- Data for Name: andamento_marcador; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: andamento_marcador; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.andamento_marcador (id_andamento_marcador, id_marcador, id_unidade, id_usuario, id_procedimento, dth_execucao, sin_ultimo, texto, sta_operacao, sin_ativo) FROM stdin;
@@ -4184,7 +4185,7 @@ COPY public.andamento_marcador (id_andamento_marcador, id_marcador, id_unidade, 
 
 
 --
--- Data for Name: andamento_situacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: andamento_situacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.andamento_situacao (id_andamento_situacao, id_procedimento, id_unidade, id_usuario, id_situacao, dth_execucao, sin_ultimo) FROM stdin;
@@ -4192,7 +4193,7 @@ COPY public.andamento_situacao (id_andamento_situacao, id_procedimento, id_unida
 
 
 --
--- Data for Name: anexo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: anexo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.anexo (id_anexo, id_protocolo, id_unidade, id_usuario, id_base_conhecimento, id_projeto, nome, sin_ativo, tamanho, dth_inclusao, hash) FROM stdin;
@@ -4200,7 +4201,7 @@ COPY public.anexo (id_anexo, id_protocolo, id_unidade, id_usuario, id_base_conhe
 
 
 --
--- Data for Name: anotacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: anotacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.anotacao (id_anotacao, id_unidade, id_protocolo, id_usuario, descricao, dth_anotacao, sin_prioridade, sta_anotacao) FROM stdin;
@@ -4208,7 +4209,7 @@ COPY public.anotacao (id_anotacao, id_unidade, id_protocolo, id_usuario, descric
 
 
 --
--- Data for Name: arquivamento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: arquivamento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.arquivamento (id_protocolo, id_localizador, id_atividade_arquivamento, id_atividade_desarquivamento, id_atividade_recebimento, id_atividade_solicitacao, sta_arquivamento, id_atividade_cancelamento) FROM stdin;
@@ -4216,7 +4217,7 @@ COPY public.arquivamento (id_protocolo, id_localizador, id_atividade_arquivament
 
 
 --
--- Data for Name: arquivo_extensao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: arquivo_extensao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.arquivo_extensao (id_arquivo_extensao, extensao, descricao, sin_ativo, tamanho_maximo, sin_interface, sin_servico) FROM stdin;
@@ -4265,7 +4266,7 @@ COPY public.arquivo_extensao (id_arquivo_extensao, extensao, descricao, sin_ativ
 
 
 --
--- Data for Name: assinante; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: assinante; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.assinante (id_assinante, cargo_funcao, id_orgao) FROM stdin;
@@ -4294,15 +4295,15 @@ COPY public.assinante (id_assinante, cargo_funcao, id_orgao) FROM stdin;
 
 
 --
--- Data for Name: assinatura; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: assinatura; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
-COPY public.assinatura (id_assinatura, id_documento, id_usuario, id_unidade, id_atividade, id_tarja_assinatura, nome, tratamento, cpf, sta_forma_autenticacao, sin_ativo, numero_serie_certificado, p7s_base64, agrupador) FROM stdin;
+COPY public.assinatura (id_assinatura, id_documento, id_usuario, id_unidade, id_atividade, id_tarja_assinatura, nome, tratamento, cpf, sta_forma_autenticacao, sin_ativo, numero_serie_certificado, p7s_base64, agrupador, modulo_origem) FROM stdin;
 \.
 
 
 --
--- Data for Name: assunto; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: assunto; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.assunto (id_assunto, id_tabela_assuntos, codigo_estruturado, descricao, observacao, idx_assunto, sin_ativo, prazo_intermediario, prazo_corrente, sta_destinacao, sin_estrutural) FROM stdin;
@@ -4978,7 +4979,7 @@ COPY public.assunto (id_assunto, id_tabela_assuntos, codigo_estruturado, descric
 
 
 --
--- Data for Name: assunto_proxy; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: assunto_proxy; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.assunto_proxy (id_assunto_proxy, id_assunto) FROM stdin;
@@ -5495,7 +5496,7 @@ COPY public.assunto_proxy (id_assunto_proxy, id_assunto) FROM stdin;
 
 
 --
--- Data for Name: atividade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: atividade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.atividade (id_atividade, id_protocolo, id_unidade, id_tarefa, id_unidade_origem, id_usuario_conclusao, id_usuario_visualizacao, id_usuario_atribuicao, id_usuario, id_usuario_origem, dth_abertura, dth_conclusao, sin_inicial, dta_prazo, tipo_visualizacao) FROM stdin;
@@ -5503,7 +5504,7 @@ COPY public.atividade (id_atividade, id_protocolo, id_unidade, id_tarefa, id_uni
 
 
 --
--- Data for Name: atributo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: atributo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.atributo (id_atributo, id_tipo_formulario, nome, rotulo, ordem, sta_tipo, tamanho, linhas, decimais, mascara, valor_minimo, valor_maximo, valor_padrao, sin_obrigatorio, sin_ativo) FROM stdin;
@@ -5511,7 +5512,7 @@ COPY public.atributo (id_atributo, id_tipo_formulario, nome, rotulo, ordem, sta_
 
 
 --
--- Data for Name: atributo_andamento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: atributo_andamento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.atributo_andamento (id_atributo_andamento, id_atividade, id_origem, nome, valor) FROM stdin;
@@ -5519,7 +5520,7 @@ COPY public.atributo_andamento (id_atributo_andamento, id_atividade, id_origem, 
 
 
 --
--- Data for Name: atributo_instalacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: atributo_instalacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.atributo_instalacao (id_atributo_instalacao, id_andamento_instalacao, nome, valor, id_origem) FROM stdin;
@@ -5527,7 +5528,7 @@ COPY public.atributo_instalacao (id_atributo_instalacao, id_andamento_instalacao
 
 
 --
--- Data for Name: auditoria_protocolo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: auditoria_protocolo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.auditoria_protocolo (id_auditoria_protocolo, id_protocolo, id_usuario, id_anexo, versao, dta_auditoria) FROM stdin;
@@ -5535,7 +5536,7 @@ COPY public.auditoria_protocolo (id_auditoria_protocolo, id_protocolo, id_usuari
 
 
 --
--- Data for Name: base_conhecimento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: base_conhecimento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.base_conhecimento (id_base_conhecimento, id_base_conhecimento_agrupador, id_base_conhecimento_origem, id_unidade, id_documento_edoc, id_usuario_gerador, id_usuario_liberacao, id_conjunto_estilos, descricao, conteudo, sta_estado, dth_geracao, dth_liberacao, sta_documento) FROM stdin;
@@ -5543,7 +5544,7 @@ COPY public.base_conhecimento (id_base_conhecimento, id_base_conhecimento_agrupa
 
 
 --
--- Data for Name: bloco; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: bloco; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.bloco (id_bloco, id_unidade, id_usuario, descricao, sta_tipo, idx_bloco, sta_estado) FROM stdin;
@@ -5551,7 +5552,7 @@ COPY public.bloco (id_bloco, id_unidade, id_usuario, descricao, sta_tipo, idx_bl
 
 
 --
--- Data for Name: campo_pesquisa; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: campo_pesquisa; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.campo_pesquisa (id_campo_pesquisa, chave, valor, id_pesquisa) FROM stdin;
@@ -5559,7 +5560,7 @@ COPY public.campo_pesquisa (id_campo_pesquisa, chave, valor, id_pesquisa) FROM s
 
 
 --
--- Data for Name: cargo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: cargo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.cargo (id_cargo, id_tratamento, id_vocativo, expressao, sin_ativo, sta_genero, id_titulo) FROM stdin;
@@ -5648,7 +5649,7 @@ COPY public.cargo (id_cargo, id_tratamento, id_vocativo, expressao, sin_ativo, s
 
 
 --
--- Data for Name: cargo_funcao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: cargo_funcao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.cargo_funcao (id_unidade, id_cargo_funcao, nome, sin_ativo) FROM stdin;
@@ -5656,7 +5657,7 @@ COPY public.cargo_funcao (id_unidade, id_cargo_funcao, nome, sin_ativo) FROM std
 
 
 --
--- Data for Name: categoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: categoria; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.categoria (id_categoria, nome, sin_ativo) FROM stdin;
@@ -5664,7 +5665,7 @@ COPY public.categoria (id_categoria, nome, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: cidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: cidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.cidade (id_cidade, id_uf, id_pais, nome, codigo_ibge, sin_capital, latitude, longitude) FROM stdin;
@@ -11236,7 +11237,7 @@ COPY public.cidade (id_cidade, id_uf, id_pais, nome, codigo_ibge, sin_capital, l
 
 
 --
--- Data for Name: comentario; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: comentario; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.comentario (id_comentario, id_procedimento, id_rel_protocolo_protocolo, id_unidade, id_usuario, descricao, dth_comentario) FROM stdin;
@@ -11244,7 +11245,7 @@ COPY public.comentario (id_comentario, id_procedimento, id_rel_protocolo_protoco
 
 
 --
--- Data for Name: conjunto_estilos; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: conjunto_estilos; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.conjunto_estilos (id_conjunto_estilos, sin_ultimo) FROM stdin;
@@ -11318,7 +11319,7 @@ COPY public.conjunto_estilos (id_conjunto_estilos, sin_ultimo) FROM stdin;
 
 
 --
--- Data for Name: conjunto_estilos_item; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: conjunto_estilos_item; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.conjunto_estilos_item (id_conjunto_estilos_item, id_conjunto_estilos, nome, formatacao) FROM stdin;
@@ -12968,7 +12969,7 @@ COPY public.conjunto_estilos_item (id_conjunto_estilos_item, id_conjunto_estilos
 
 
 --
--- Data for Name: contato; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: contato; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.contato (id_contato, id_cargo, id_unidade_cadastro, id_usuario_cadastro, id_cidade, id_uf, id_pais, id_contato_associado, id_tipo_contato, id_pais_passaporte, nome, matricula_oab, cpf, matricula, email, sitio_internet, endereco, bairro, cep, observacao, idx_contato, dta_nascimento, sin_ativo, cnpj, sigla, dth_cadastro, rg, orgao_expedidor, complemento, sta_natureza, sin_endereco_associado, telefone_celular, sta_genero, numero_passaporte, id_titulo, telefone_comercial, telefone_residencial, conjuge, funcao, nome_registro_civil, nome_social, id_categoria) FROM stdin;
@@ -12986,7 +12987,7 @@ COPY public.contato (id_contato, id_cargo, id_unidade_cadastro, id_usuario_cadas
 
 
 --
--- Data for Name: controle_interno; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: controle_interno; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.controle_interno (id_controle_interno, descricao) FROM stdin;
@@ -12994,7 +12995,7 @@ COPY public.controle_interno (id_controle_interno, descricao) FROM stdin;
 
 
 --
--- Data for Name: controle_prazo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: controle_prazo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.controle_prazo (id_controle_prazo, id_protocolo, id_unidade, id_usuario, dta_prazo, dta_conclusao) FROM stdin;
@@ -13002,7 +13003,7 @@ COPY public.controle_prazo (id_controle_prazo, id_protocolo, id_unidade, id_usua
 
 
 --
--- Data for Name: controle_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: controle_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.controle_unidade (id_controle_unidade, id_procedimento, id_situacao, id_usuario, dth_snapshot, dth_execucao) FROM stdin;
@@ -13010,7 +13011,7 @@ COPY public.controle_unidade (id_controle_unidade, id_procedimento, id_situacao,
 
 
 --
--- Data for Name: documento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: documento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.documento (id_documento, id_unidade_responsavel, id_documento_edoc, id_serie, id_procedimento, id_conjunto_estilos, id_tipo_conferencia, id_tipo_formulario, numero, sin_bloqueado, sta_documento, nome_arvore, sin_arquivamento) FROM stdin;
@@ -13018,7 +13019,7 @@ COPY public.documento (id_documento, id_unidade_responsavel, id_documento_edoc, 
 
 
 --
--- Data for Name: documento_conteudo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: documento_conteudo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.documento_conteudo (id_documento, conteudo, conteudo_assinatura, crc_assinatura, qr_code_assinatura) FROM stdin;
@@ -13026,7 +13027,7 @@ COPY public.documento_conteudo (id_documento, conteudo, conteudo_assinatura, crc
 
 
 --
--- Data for Name: dominio; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: dominio; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.dominio (id_dominio, id_atributo, valor, rotulo, ordem, sin_padrao, sin_ativo) FROM stdin;
@@ -13034,7 +13035,7 @@ COPY public.dominio (id_dominio, id_atributo, valor, rotulo, ordem, sin_padrao, 
 
 
 --
--- Data for Name: email_grupo_email; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: email_grupo_email; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.email_grupo_email (id_email_grupo_email, id_grupo_email, email, descricao, idx_email_grupo_email) FROM stdin;
@@ -13042,7 +13043,7 @@ COPY public.email_grupo_email (id_email_grupo_email, id_grupo_email, email, desc
 
 
 --
--- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, descricao, de, para, assunto, conteudo, sin_ativo) FROM stdin;
@@ -13060,7 +13061,7 @@ COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, descricao,
 
 
 --
--- Data for Name: email_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: email_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.email_unidade (id_email_unidade, id_unidade, email, descricao) FROM stdin;
@@ -13071,7 +13072,7 @@ COPY public.email_unidade (id_email_unidade, id_unidade, email, descricao) FROM 
 
 
 --
--- Data for Name: email_utilizado; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: email_utilizado; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.email_utilizado (id_email_utilizado, id_unidade, email) FROM stdin;
@@ -13079,7 +13080,7 @@ COPY public.email_utilizado (id_email_utilizado, id_unidade, email) FROM stdin;
 
 
 --
--- Data for Name: estatisticas; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: estatisticas; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.estatisticas (id_estatisticas, id_procedimento, id_documento, id_unidade, id_usuario, id_tipo_procedimento, ano, mes, tempo_aberto, dth_snapshot, dth_abertura, dth_conclusao, quantidade) FROM stdin;
@@ -13087,7 +13088,7 @@ COPY public.estatisticas (id_estatisticas, id_procedimento, id_documento, id_uni
 
 
 --
--- Data for Name: estilo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: estilo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.estilo (id_estilo, nome, formatacao) FROM stdin;
@@ -13134,7 +13135,7 @@ COPY public.estilo (id_estilo, nome, formatacao) FROM stdin;
 
 
 --
--- Data for Name: feed; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: feed; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.feed (id_feed, conteudo) FROM stdin;
@@ -13142,7 +13143,7 @@ COPY public.feed (id_feed, conteudo) FROM stdin;
 
 
 --
--- Data for Name: feriado; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: feriado; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.feriado (id_feriado, id_orgao, descricao, dta_feriado) FROM stdin;
@@ -13162,7 +13163,7 @@ COPY public.feriado (id_feriado, id_orgao, descricao, dta_feriado) FROM stdin;
 
 
 --
--- Data for Name: grupo_acompanhamento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_acompanhamento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_acompanhamento (id_grupo_acompanhamento, id_unidade, nome) FROM stdin;
@@ -13170,7 +13171,7 @@ COPY public.grupo_acompanhamento (id_grupo_acompanhamento, id_unidade, nome) FRO
 
 
 --
--- Data for Name: grupo_bloco; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_bloco; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_bloco (id_grupo_bloco, id_unidade, nome, sin_ativo) FROM stdin;
@@ -13178,7 +13179,7 @@ COPY public.grupo_bloco (id_grupo_bloco, id_unidade, nome, sin_ativo) FROM stdin
 
 
 --
--- Data for Name: grupo_contato; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_contato; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_contato (id_grupo_contato, id_unidade, nome, descricao, sin_ativo, sta_tipo) FROM stdin;
@@ -13186,7 +13187,7 @@ COPY public.grupo_contato (id_grupo_contato, id_unidade, nome, descricao, sin_at
 
 
 --
--- Data for Name: grupo_email; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_email; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_email (id_grupo_email, id_unidade, nome, descricao, sta_tipo, sin_ativo) FROM stdin;
@@ -13194,7 +13195,7 @@ COPY public.grupo_email (id_grupo_email, id_unidade, nome, descricao, sta_tipo, 
 
 
 --
--- Data for Name: grupo_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_federacao (id_grupo_federacao, id_unidade, nome, descricao, sta_tipo, sin_ativo) FROM stdin;
@@ -13202,7 +13203,7 @@ COPY public.grupo_federacao (id_grupo_federacao, id_unidade, nome, descricao, st
 
 
 --
--- Data for Name: grupo_protocolo_modelo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_protocolo_modelo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_protocolo_modelo (id_grupo_protocolo_modelo, id_unidade, nome) FROM stdin;
@@ -13210,7 +13211,7 @@ COPY public.grupo_protocolo_modelo (id_grupo_protocolo_modelo, id_unidade, nome)
 
 
 --
--- Data for Name: grupo_serie; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_serie; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_serie (id_grupo_serie, nome, sin_ativo, descricao) FROM stdin;
@@ -13220,7 +13221,7 @@ COPY public.grupo_serie (id_grupo_serie, nome, sin_ativo, descricao) FROM stdin;
 
 
 --
--- Data for Name: grupo_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: grupo_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.grupo_unidade (id_grupo_unidade, id_unidade, nome, descricao, sta_tipo, sin_ativo) FROM stdin;
@@ -13228,7 +13229,7 @@ COPY public.grupo_unidade (id_grupo_unidade, id_unidade, nome, descricao, sta_ti
 
 
 --
--- Data for Name: hipotese_legal; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: hipotese_legal; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.hipotese_legal (id_hipotese_legal, nome, base_legal, descricao, sta_nivel_acesso, sin_ativo) FROM stdin;
@@ -13259,7 +13260,7 @@ COPY public.hipotese_legal (id_hipotese_legal, nome, base_legal, descricao, sta_
 
 
 --
--- Data for Name: imagem_formato; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: imagem_formato; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.imagem_formato (id_imagem_formato, formato, descricao, sin_ativo) FROM stdin;
@@ -13270,7 +13271,7 @@ COPY public.imagem_formato (id_imagem_formato, formato, descricao, sin_ativo) FR
 
 
 --
--- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_agendamento_tarefa (id_infra_agendamento_tarefa, descricao, comando, sta_periodicidade_execucao, periodicidade_complemento, dth_ultima_execucao, dth_ultima_conclusao, sin_sucesso, parametro, email_erro, sin_ativo) FROM stdin;
@@ -13286,7 +13287,7 @@ COPY public.infra_agendamento_tarefa (id_infra_agendamento_tarefa, descricao, co
 
 
 --
--- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, id_usuario_emulador, id_orgao_usuario_emulador, id_unidade, id_orgao_unidade, recurso, dth_acesso, ip, sigla_usuario, nome_usuario, sigla_orgao_usuario, sigla_usuario_emulador, nome_usuario_emulador, sigla_orgao_usuario_emulador, sigla_unidade, descricao_unidade, sigla_orgao_unidade, servidor, user_agent, requisicao, operacao) FROM stdin;
@@ -13294,7 +13295,7 @@ COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, i
 
 
 --
--- Data for Name: infra_dado_usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_dado_usuario; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_dado_usuario (id_usuario, nome, valor) FROM stdin;
@@ -13303,7 +13304,7 @@ COPY public.infra_dado_usuario (id_usuario, nome, valor) FROM stdin;
 
 
 --
--- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdin;
@@ -13311,7 +13312,7 @@ COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdi
 
 
 --
--- Data for Name: infra_navegador; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_navegador; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_navegador (id_infra_navegador, identificacao, versao, user_agent, ip, dth_acesso) FROM stdin;
@@ -13320,7 +13321,7 @@ COPY public.infra_navegador (id_infra_navegador, identificacao, versao, user_age
 
 
 --
--- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_parametro (nome, valor) FROM stdin;
@@ -13370,13 +13371,13 @@ SEI_TAM_MB_CORRETOR_DESABILITADO	2
 SEI_TAM_MB_DOC_EXTERNO	200
 SEI_TIPO_ASSINATURA_INTERNA	1
 SEI_TIPO_AUTENTICACAO_INTERNA	1
-SEI_VERSAO	4.0.3.5
 SEI_WS_NUM_MAX_DOCS	5
+SEI_VERSAO	4.0.9.12
 \.
 
 
 --
--- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativo) FROM stdin;
@@ -13388,7 +13389,7 @@ COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativ
 
 
 --
--- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FROM stdin;
@@ -13717,7 +13718,7 @@ COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FR
 
 
 --
--- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.infra_sequencia (nome_tabela, qtd_incremento, num_atual, num_maximo) FROM stdin;
@@ -13728,7 +13729,7 @@ usuario_sistema	1	7	999999
 
 
 --
--- Data for Name: instalacao_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: instalacao_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.instalacao_federacao (id_instalacao_federacao, cnpj, sigla, descricao, endereco, chave_publica_local, chave_publica_remota, chave_privada, sta_tipo, sta_estado, sta_agendamento, sin_ativo) FROM stdin;
@@ -13736,7 +13737,7 @@ COPY public.instalacao_federacao (id_instalacao_federacao, cnpj, sigla, descrica
 
 
 --
--- Data for Name: lembrete; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: lembrete; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.lembrete (id_lembrete, id_usuario, posicao_x, posicao_y, largura, altura, cor, cor_texto, dth_lembrete, conteudo, sin_ativo) FROM stdin;
@@ -13744,7 +13745,7 @@ COPY public.lembrete (id_lembrete, id_usuario, posicao_x, posicao_y, largura, al
 
 
 --
--- Data for Name: localizador; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: localizador; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.localizador (id_localizador, id_unidade, id_tipo_suporte, id_tipo_localizador, id_lugar_localizador, complemento, sta_estado, seq_localizador) FROM stdin;
@@ -13752,7 +13753,7 @@ COPY public.localizador (id_localizador, id_unidade, id_tipo_suporte, id_tipo_lo
 
 
 --
--- Data for Name: lugar_localizador; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: lugar_localizador; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.lugar_localizador (id_lugar_localizador, id_unidade, nome, sin_ativo) FROM stdin;
@@ -13760,7 +13761,7 @@ COPY public.lugar_localizador (id_lugar_localizador, id_unidade, nome, sin_ativo
 
 
 --
--- Data for Name: mapeamento_assunto; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: mapeamento_assunto; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.mapeamento_assunto (id_assunto_origem, id_assunto_destino) FROM stdin;
@@ -13768,7 +13769,7 @@ COPY public.mapeamento_assunto (id_assunto_origem, id_assunto_destino) FROM stdi
 
 
 --
--- Data for Name: marcador; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: marcador; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.marcador (id_marcador, id_unidade, nome, descricao, sin_ativo, sta_icone) FROM stdin;
@@ -13776,7 +13777,7 @@ COPY public.marcador (id_marcador, id_unidade, nome, descricao, sin_ativo, sta_i
 
 
 --
--- Data for Name: modelo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: modelo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.modelo (id_modelo, nome, sin_ativo) FROM stdin;
@@ -13853,7 +13854,7 @@ COPY public.modelo (id_modelo, nome, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: monitoramento_servico; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: monitoramento_servico; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.monitoramento_servico (id_monitoramento_servico, id_servico, operacao, tempo_execucao, ip_acesso, dth_acesso, servidor, user_agent) FROM stdin;
@@ -13861,7 +13862,7 @@ COPY public.monitoramento_servico (id_monitoramento_servico, id_servico, operaca
 
 
 --
--- Data for Name: nivel_acesso_permitido; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: nivel_acesso_permitido; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.nivel_acesso_permitido (id_nivel_acesso_permitido, id_tipo_procedimento, sta_nivel_acesso) FROM stdin;
@@ -14505,7 +14506,7 @@ COPY public.nivel_acesso_permitido (id_nivel_acesso_permitido, id_tipo_procedime
 
 
 --
--- Data for Name: notificacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: notificacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.notificacao (id_notificacao, id_procedimento, id_unidade, id_usuario, id_atividade_confirmacao, dth_geracao) FROM stdin;
@@ -14513,7 +14514,7 @@ COPY public.notificacao (id_notificacao, id_procedimento, id_unidade, id_usuario
 
 
 --
--- Data for Name: novidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: novidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.novidade (id_novidade, id_usuario, titulo, descricao, dth_liberacao) FROM stdin;
@@ -14521,7 +14522,7 @@ COPY public.novidade (id_novidade, id_usuario, titulo, descricao, dth_liberacao)
 
 
 --
--- Data for Name: numeracao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: numeracao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.numeracao (id_numeracao, id_serie, id_orgao, id_unidade, sequencial, ano) FROM stdin;
@@ -14529,7 +14530,7 @@ COPY public.numeracao (id_numeracao, id_serie, id_orgao, id_unidade, sequencial,
 
 
 --
--- Data for Name: observacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: observacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.observacao (id_observacao, id_protocolo, id_unidade, descricao, idx_observacao) FROM stdin;
@@ -14537,7 +14538,7 @@ COPY public.observacao (id_observacao, id_protocolo, id_unidade, descricao, idx_
 
 
 --
--- Data for Name: operacao_servico; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: operacao_servico; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.operacao_servico (id_operacao_servico, id_tipo_procedimento, id_serie, id_unidade, id_servico, sta_operacao_servico) FROM stdin;
@@ -14545,7 +14546,7 @@ COPY public.operacao_servico (id_operacao_servico, id_tipo_procedimento, id_seri
 
 
 --
--- Data for Name: ordenador_despesa; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: ordenador_despesa; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.ordenador_despesa (id_ordenador_despesa, id_usuario, id_orgao, id_unidade, sin_padrao) FROM stdin;
@@ -14553,7 +14554,7 @@ COPY public.ordenador_despesa (id_ordenador_despesa, id_usuario, id_orgao, id_un
 
 
 --
--- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.orgao (id_orgao, id_contato, sigla, descricao, sin_ativo, timbre, sin_envio_processo, numeracao, servidor_corretor_ortografico, sta_corretor_ortografico, sin_publicacao, codigo_sei, idx_orgao, sin_federacao_envio, sin_federacao_recebimento, id_unidade, id_orgao_federacao) FROM stdin;
@@ -14562,7 +14563,7 @@ COPY public.orgao (id_orgao, id_contato, sigla, descricao, sin_ativo, timbre, si
 
 
 --
--- Data for Name: orgao_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: orgao_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.orgao_federacao (id_orgao_federacao, id_instalacao_federacao, sigla, descricao) FROM stdin;
@@ -14570,7 +14571,7 @@ COPY public.orgao_federacao (id_orgao_federacao, id_instalacao_federacao, sigla,
 
 
 --
--- Data for Name: orgao_historico; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: orgao_historico; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.orgao_historico (id_orgao_historico, id_orgao, sigla, descricao, dta_inicio, dta_fim) FROM stdin;
@@ -14579,7 +14580,7 @@ COPY public.orgao_historico (id_orgao_historico, id_orgao, sigla, descricao, dta
 
 
 --
--- Data for Name: pais; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: pais; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.pais (id_pais, nome) FROM stdin;
@@ -14791,7 +14792,7 @@ COPY public.pais (id_pais, nome) FROM stdin;
 
 
 --
--- Data for Name: parametro_acao_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: parametro_acao_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.parametro_acao_federacao (id_acao_federacao, nome, valor) FROM stdin;
@@ -14799,7 +14800,7 @@ COPY public.parametro_acao_federacao (id_acao_federacao, nome, valor) FROM stdin
 
 
 --
--- Data for Name: participante; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: participante; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.participante (id_participante, id_protocolo, id_contato, id_unidade, sta_participacao, sequencia) FROM stdin;
@@ -14807,7 +14808,7 @@ COPY public.participante (id_participante, id_protocolo, id_contato, id_unidade,
 
 
 --
--- Data for Name: pesquisa; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: pesquisa; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.pesquisa (id_pesquisa, nome, id_usuario, id_unidade) FROM stdin;
@@ -14815,7 +14816,7 @@ COPY public.pesquisa (id_pesquisa, nome, id_usuario, id_unidade) FROM stdin;
 
 
 --
--- Data for Name: procedimento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: procedimento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.procedimento (id_procedimento, id_tipo_procedimento, sta_ouvidoria, sin_ciencia) FROM stdin;
@@ -14823,7 +14824,7 @@ COPY public.procedimento (id_procedimento, id_tipo_procedimento, sta_ouvidoria, 
 
 
 --
--- Data for Name: protocolo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: protocolo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.protocolo (id_protocolo, id_unidade_geradora, id_usuario_gerador, id_protocolo_agrupador, id_hipotese_legal, protocolo_formatado, sta_protocolo, dta_geracao, sta_estado, descricao, sta_nivel_acesso_local, sta_nivel_acesso_global, protocolo_formatado_pesquisa, codigo_barras, sta_grau_sigilo, sta_nivel_acesso_original, protocolo_formatado_pesq_inv, dta_inclusao, id_protocolo_federacao) FROM stdin;
@@ -14831,7 +14832,7 @@ COPY public.protocolo (id_protocolo, id_unidade_geradora, id_usuario_gerador, id
 
 
 --
--- Data for Name: protocolo_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: protocolo_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.protocolo_federacao (id_protocolo_federacao, id_instalacao_federacao, protocolo_formatado, protocolo_formatado_pesquisa, protocolo_formatado_pesq_inv) FROM stdin;
@@ -14839,7 +14840,7 @@ COPY public.protocolo_federacao (id_protocolo_federacao, id_instalacao_federacao
 
 
 --
--- Data for Name: protocolo_modelo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: protocolo_modelo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.protocolo_modelo (id_protocolo_modelo, id_grupo_protocolo_modelo, id_unidade, id_usuario, id_protocolo, descricao, dth_alteracao, idx_protocolo_modelo) FROM stdin;
@@ -14847,7 +14848,7 @@ COPY public.protocolo_modelo (id_protocolo_modelo, id_grupo_protocolo_modelo, id
 
 
 --
--- Data for Name: publicacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: publicacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.publicacao (id_publicacao, id_unidade, id_usuario, id_documento, id_atividade, id_veiculo_publicacao, id_veiculo_io, id_secao_io, dth_agendamento, sta_motivo, dta_disponibilizacao, dta_publicacao_io, pagina_io, resumo, dta_publicacao, numero) FROM stdin;
@@ -14855,7 +14856,7 @@ COPY public.publicacao (id_publicacao, id_unidade, id_usuario, id_documento, id_
 
 
 --
--- Data for Name: publicacao_legado; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: publicacao_legado; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.publicacao_legado (id_publicacao_legado, id_publicacao_legado_agrupador, id_documento, id_serie, id_unidade, id_orgao, id_secao_io, id_veiculo_io, id_veiculo_publicacao, dta_publicacao_io, pagina_io, dta_publicacao, numero, resumo, conteudo_documento, dta_geracao, protocolo_formatado) FROM stdin;
@@ -14863,7 +14864,7 @@ COPY public.publicacao_legado (id_publicacao_legado, id_publicacao_legado_agrupa
 
 
 --
--- Data for Name: rel_acesso_ext_protocolo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_acesso_ext_protocolo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_acesso_ext_protocolo (id_acesso_externo, id_protocolo) FROM stdin;
@@ -14871,7 +14872,7 @@ COPY public.rel_acesso_ext_protocolo (id_acesso_externo, id_protocolo) FROM stdi
 
 
 --
--- Data for Name: rel_acesso_ext_serie; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_acesso_ext_serie; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_acesso_ext_serie (id_acesso_externo, id_serie) FROM stdin;
@@ -14879,7 +14880,7 @@ COPY public.rel_acesso_ext_serie (id_acesso_externo, id_serie) FROM stdin;
 
 
 --
--- Data for Name: rel_assinante_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_assinante_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_assinante_unidade (id_unidade, id_assinante) FROM stdin;
@@ -14950,7 +14951,7 @@ COPY public.rel_assinante_unidade (id_unidade, id_assinante) FROM stdin;
 
 
 --
--- Data for Name: rel_base_conhec_tipo_proced; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_base_conhec_tipo_proced; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_base_conhec_tipo_proced (id_tipo_procedimento, id_base_conhecimento) FROM stdin;
@@ -14958,7 +14959,7 @@ COPY public.rel_base_conhec_tipo_proced (id_tipo_procedimento, id_base_conhecime
 
 
 --
--- Data for Name: rel_bloco_protocolo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_bloco_protocolo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_bloco_protocolo (id_protocolo, id_bloco, anotacao, sequencia, idx_rel_bloco_protocolo) FROM stdin;
@@ -14966,7 +14967,7 @@ COPY public.rel_bloco_protocolo (id_protocolo, id_bloco, anotacao, sequencia, id
 
 
 --
--- Data for Name: rel_bloco_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_bloco_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_bloco_unidade (id_unidade, id_bloco, sin_retornado, id_usuario_atribuicao, id_usuario_revisao, id_usuario_prioridade, id_usuario_comentario, sin_revisao, sin_prioridade, sin_comentario, texto_comentario, dth_revisao, dth_prioridade, dth_comentario, id_grupo_bloco) FROM stdin;
@@ -14974,7 +14975,7 @@ COPY public.rel_bloco_unidade (id_unidade, id_bloco, sin_retornado, id_usuario_a
 
 
 --
--- Data for Name: rel_controle_interno_orgao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_controle_interno_orgao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_controle_interno_orgao (id_controle_interno, id_orgao) FROM stdin;
@@ -14982,7 +14983,7 @@ COPY public.rel_controle_interno_orgao (id_controle_interno, id_orgao) FROM stdi
 
 
 --
--- Data for Name: rel_controle_interno_serie; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_controle_interno_serie; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_controle_interno_serie (id_serie, id_controle_interno) FROM stdin;
@@ -14990,7 +14991,7 @@ COPY public.rel_controle_interno_serie (id_serie, id_controle_interno) FROM stdi
 
 
 --
--- Data for Name: rel_controle_interno_tipo_proc; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_controle_interno_tipo_proc; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_controle_interno_tipo_proc (id_tipo_procedimento, id_controle_interno) FROM stdin;
@@ -14998,7 +14999,7 @@ COPY public.rel_controle_interno_tipo_proc (id_tipo_procedimento, id_controle_in
 
 
 --
--- Data for Name: rel_controle_interno_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_controle_interno_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_controle_interno_unidade (id_controle_interno, id_unidade) FROM stdin;
@@ -15006,7 +15007,7 @@ COPY public.rel_controle_interno_unidade (id_controle_interno, id_unidade) FROM 
 
 
 --
--- Data for Name: rel_grupo_contato; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_grupo_contato; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_grupo_contato (id_contato, id_grupo_contato) FROM stdin;
@@ -15014,7 +15015,7 @@ COPY public.rel_grupo_contato (id_contato, id_grupo_contato) FROM stdin;
 
 
 --
--- Data for Name: rel_grupo_fed_orgao_fed; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_grupo_fed_orgao_fed; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_grupo_fed_orgao_fed (id_grupo_federacao, id_orgao_federacao) FROM stdin;
@@ -15022,7 +15023,7 @@ COPY public.rel_grupo_fed_orgao_fed (id_grupo_federacao, id_orgao_federacao) FRO
 
 
 --
--- Data for Name: rel_grupo_unidade_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_grupo_unidade_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_grupo_unidade_unidade (id_unidade, id_grupo_unidade) FROM stdin;
@@ -15030,7 +15031,7 @@ COPY public.rel_grupo_unidade_unidade (id_unidade, id_grupo_unidade) FROM stdin;
 
 
 --
--- Data for Name: rel_notificacao_documento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_notificacao_documento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_notificacao_documento (id_documento, id_notificacao, sin_processada) FROM stdin;
@@ -15038,7 +15039,7 @@ COPY public.rel_notificacao_documento (id_documento, id_notificacao, sin_process
 
 
 --
--- Data for Name: rel_protocolo_assunto; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_protocolo_assunto; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_protocolo_assunto (id_protocolo, id_unidade, id_assunto_proxy, sequencia) FROM stdin;
@@ -15046,7 +15047,7 @@ COPY public.rel_protocolo_assunto (id_protocolo, id_unidade, id_assunto_proxy, s
 
 
 --
--- Data for Name: rel_protocolo_atributo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_protocolo_atributo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_protocolo_atributo (id_protocolo, id_atributo, valor) FROM stdin;
@@ -15054,7 +15055,7 @@ COPY public.rel_protocolo_atributo (id_protocolo, id_atributo, valor) FROM stdin
 
 
 --
--- Data for Name: rel_protocolo_protocolo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_protocolo_protocolo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_protocolo_protocolo (id_protocolo_1, id_protocolo_2, id_usuario, id_unidade, id_rel_protocolo_protocolo, sta_associacao, dth_associacao, sequencia, sin_ciencia) FROM stdin;
@@ -15062,7 +15063,7 @@ COPY public.rel_protocolo_protocolo (id_protocolo_1, id_protocolo_2, id_usuario,
 
 
 --
--- Data for Name: rel_secao_mod_cj_estilos_item; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_secao_mod_cj_estilos_item; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_secao_mod_cj_estilos_item (id_secao_modelo, id_conjunto_estilos_item, sin_padrao) FROM stdin;
@@ -55762,7 +55763,7 @@ COPY public.rel_secao_mod_cj_estilos_item (id_secao_modelo, id_conjunto_estilos_
 
 
 --
--- Data for Name: rel_secao_modelo_estilo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_secao_modelo_estilo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_secao_modelo_estilo (id_secao_modelo, id_estilo, sin_padrao) FROM stdin;
@@ -57921,7 +57922,7 @@ COPY public.rel_secao_modelo_estilo (id_secao_modelo, id_estilo, sin_padrao) FRO
 
 
 --
--- Data for Name: rel_serie_assunto; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_serie_assunto; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_serie_assunto (id_serie, id_assunto_proxy, sequencia) FROM stdin;
@@ -57929,7 +57930,7 @@ COPY public.rel_serie_assunto (id_serie, id_assunto_proxy, sequencia) FROM stdin
 
 
 --
--- Data for Name: rel_serie_veiculo_publicacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_serie_veiculo_publicacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_serie_veiculo_publicacao (id_serie, id_veiculo_publicacao) FROM stdin;
@@ -57960,7 +57961,7 @@ COPY public.rel_serie_veiculo_publicacao (id_serie, id_veiculo_publicacao) FROM 
 
 
 --
--- Data for Name: rel_situacao_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_situacao_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_situacao_unidade (id_unidade, id_situacao) FROM stdin;
@@ -57968,7 +57969,7 @@ COPY public.rel_situacao_unidade (id_unidade, id_situacao) FROM stdin;
 
 
 --
--- Data for Name: rel_tipo_procedimento_assunto; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_tipo_procedimento_assunto; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_tipo_procedimento_assunto (id_tipo_procedimento, id_assunto_proxy, sequencia) FROM stdin;
@@ -58308,7 +58309,7 @@ COPY public.rel_tipo_procedimento_assunto (id_tipo_procedimento, id_assunto_prox
 
 
 --
--- Data for Name: rel_unidade_tipo_contato; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_unidade_tipo_contato; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_unidade_tipo_contato (id_rel_unidade_tipo_contato, id_unidade, id_tipo_contato, sta_acesso) FROM stdin;
@@ -58322,7 +58323,7 @@ COPY public.rel_unidade_tipo_contato (id_rel_unidade_tipo_contato, id_unidade, i
 
 
 --
--- Data for Name: rel_usuario_grupo_acomp; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_usuario_grupo_acomp; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_usuario_grupo_acomp (id_usuario, id_grupo_acompanhamento) FROM stdin;
@@ -58330,7 +58331,7 @@ COPY public.rel_usuario_grupo_acomp (id_usuario, id_grupo_acompanhamento) FROM s
 
 
 --
--- Data for Name: rel_usuario_grupo_bloco; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_usuario_grupo_bloco; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_usuario_grupo_bloco (id_grupo_bloco, id_usuario) FROM stdin;
@@ -58338,7 +58339,7 @@ COPY public.rel_usuario_grupo_bloco (id_grupo_bloco, id_usuario) FROM stdin;
 
 
 --
--- Data for Name: rel_usuario_marcador; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_usuario_marcador; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_usuario_marcador (id_marcador, id_usuario) FROM stdin;
@@ -58346,7 +58347,7 @@ COPY public.rel_usuario_marcador (id_marcador, id_usuario) FROM stdin;
 
 
 --
--- Data for Name: rel_usuario_tipo_proced; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_usuario_tipo_proced; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_usuario_tipo_proced (id_usuario, id_tipo_procedimento, id_unidade) FROM stdin;
@@ -58354,7 +58355,7 @@ COPY public.rel_usuario_tipo_proced (id_usuario, id_tipo_procedimento, id_unidad
 
 
 --
--- Data for Name: rel_usuario_usuario_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_usuario_usuario_unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.rel_usuario_usuario_unidade (id_usuario, id_usuario_atribuicao, id_unidade) FROM stdin;
@@ -58362,7 +58363,7 @@ COPY public.rel_usuario_usuario_unidade (id_usuario, id_usuario_atribuicao, id_u
 
 
 --
--- Data for Name: replicacao_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: replicacao_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.replicacao_federacao (id_replicacao_federacao, id_instalacao_federacao, id_protocolo_federacao, sta_tipo, dth_cadastro, dth_replicacao, tentativa, erro, sin_ativo) FROM stdin;
@@ -58370,7 +58371,7 @@ COPY public.replicacao_federacao (id_replicacao_federacao, id_instalacao_federac
 
 
 --
--- Data for Name: retorno_programado; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: retorno_programado; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.retorno_programado (id_retorno_programado, id_atividade_envio, id_atividade_retorno, id_usuario, dta_programada, dth_alteracao, id_unidade_envio, id_unidade_retorno, id_protocolo) FROM stdin;
@@ -58378,7 +58379,7 @@ COPY public.retorno_programado (id_retorno_programado, id_atividade_envio, id_at
 
 
 --
--- Data for Name: secao_documento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: secao_documento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.secao_documento (id_secao_documento, id_secao_modelo, id_documento, id_base_conhecimento, ordem, sin_somente_leitura, sin_assinatura, sin_principal, sin_dinamica, sin_cabecalho, sin_rodape, conteudo, sin_html) FROM stdin;
@@ -58386,7 +58387,7 @@ COPY public.secao_documento (id_secao_documento, id_secao_modelo, id_documento, 
 
 
 --
--- Data for Name: secao_imprensa_nacional; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: secao_imprensa_nacional; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.secao_imprensa_nacional (id_secao_imprensa_nacional, id_veiculo_imprensa_nacional, nome, descricao) FROM stdin;
@@ -58397,7 +58398,7 @@ COPY public.secao_imprensa_nacional (id_secao_imprensa_nacional, id_veiculo_impr
 
 
 --
--- Data for Name: secao_modelo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: secao_modelo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.secao_modelo (id_secao_modelo, id_modelo, nome, conteudo, ordem, sin_somente_leitura, sin_assinatura, sin_principal, sin_dinamica, sin_cabecalho, sin_rodape, sin_html, sin_ativo) FROM stdin;
@@ -58825,7 +58826,7 @@ COPY public.secao_modelo (id_secao_modelo, id_modelo, nome, conteudo, ordem, sin
 
 
 --
--- Data for Name: serie; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: serie; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.serie (id_modelo_edoc, id_grupo_serie, id_serie, id_modelo, id_tipo_formulario, nome, descricao, sin_ativo, sin_interessado, sin_destinatario, sta_numeracao, sin_assinatura_publicacao, sta_aplicabilidade, sin_interno, sin_usuario_externo) FROM stdin;
@@ -59087,7 +59088,7 @@ COPY public.serie (id_modelo_edoc, id_grupo_serie, id_serie, id_modelo, id_tipo_
 
 
 --
--- Data for Name: serie_escolha; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: serie_escolha; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.serie_escolha (id_serie, id_unidade) FROM stdin;
@@ -59095,7 +59096,7 @@ COPY public.serie_escolha (id_serie, id_unidade) FROM stdin;
 
 
 --
--- Data for Name: serie_publicacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: serie_publicacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.serie_publicacao (id_serie_publicacao, id_serie, id_orgao) FROM stdin;
@@ -59103,7 +59104,7 @@ COPY public.serie_publicacao (id_serie_publicacao, id_serie, id_orgao) FROM stdi
 
 
 --
--- Data for Name: serie_restricao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: serie_restricao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.serie_restricao (id_serie_restricao, id_serie, id_orgao, id_unidade) FROM stdin;
@@ -59111,7 +59112,7 @@ COPY public.serie_restricao (id_serie_restricao, id_serie, id_orgao, id_unidade)
 
 
 --
--- Data for Name: servico; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: servico; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.servico (id_servico, id_usuario, identificacao, descricao, servidor, sin_link_externo, sin_ativo, sin_chave_acesso, sin_servidor, crc, chave_acesso) FROM stdin;
@@ -59119,7 +59120,7 @@ COPY public.servico (id_servico, id_usuario, identificacao, descricao, servidor,
 
 
 --
--- Data for Name: sinalizacao_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: sinalizacao_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.sinalizacao_federacao (id_instalacao_federacao, id_protocolo_federacao, id_unidade, dth_sinalizacao, sta_sinalizacao) FROM stdin;
@@ -59127,7 +59128,7 @@ COPY public.sinalizacao_federacao (id_instalacao_federacao, id_protocolo_federac
 
 
 --
--- Data for Name: situacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: situacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.situacao (id_situacao, nome, descricao, sin_ativo) FROM stdin;
@@ -59135,7 +59136,7 @@ COPY public.situacao (id_situacao, nome, descricao, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: tabela_assuntos; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tabela_assuntos; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tabela_assuntos (id_tabela_assuntos, nome, descricao, sin_atual) FROM stdin;
@@ -59144,7 +59145,7 @@ COPY public.tabela_assuntos (id_tabela_assuntos, nome, descricao, sin_atual) FRO
 
 
 --
--- Data for Name: tarefa; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tarefa; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tarefa (id_tarefa, id_tarefa_modulo, nome, sin_historico_resumido, sin_historico_completo, sin_fechar_andamentos_abertos, sin_lancar_andamento_fechado, sin_permite_processo_fechado) FROM stdin;
@@ -59265,7 +59266,7 @@ COPY public.tarefa (id_tarefa, id_tarefa_modulo, nome, sin_historico_resumido, s
 
 
 --
--- Data for Name: tarefa_instalacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tarefa_instalacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tarefa_instalacao (id_tarefa_instalacao, nome) FROM stdin;
@@ -59284,24 +59285,24 @@ COPY public.tarefa_instalacao (id_tarefa_instalacao, nome) FROM stdin;
 
 
 --
--- Data for Name: tarja_assinatura; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tarja_assinatura; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tarja_assinatura (id_tarja_assinatura, texto, logo, sin_ativo, sta_tarja_assinatura) FROM stdin;
 3	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>       @qr_code@      </td>      <td>       <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">A autenticidade deste documento pode ser conferida no site <a title="Página de Autenticidade de Documentos" href="http://[servidor_php]/sei/controlador_externo.php?acao=documento_conferir&id_orgao_acesso_externo=0" target="_blank">http://[servidor_php]/sei/controlador_externo.php?acao=documento_conferir&id_orgao_acesso_externo=0</a>, informando o código verificador <b>@codigo_verificador@</b> e o código CRC <b>@crc_assinatura@</b>.</p>      </td>    </tr>  </table>  <hr style="margin:1px;" />  <br />	\N	S	V
 4	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 3º, caput, da <a title="Acesse a Lei" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12682.htm" target="_blank">Lei nº 12.682, de 9 de julho de 2012</a>, a partir de @tipo_conferencia@.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p></td></tr></table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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	N	A
-6	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 3º, caput, da <a title="Acesse a Lei" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12682.htm" target="_blank">Lei nº 12.682, de 9 de julho de 2012</a>, a partir de @tipo_conferencia@.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p></td></tr></table>	iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJi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	S	A
 1	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 6º, caput, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p>      </td>    </tr>  </table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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	N	C
-7	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 6º, caput, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p>      </td>    </tr>  </table>	iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJihYaIjY6RnZ2ejpGSra+xeHl7lZWVmJiYgoKFpKaptre5vb7Aurq8oaGikpSWmJufh4iKkZKVysrMtrq7ioyOdXZ4fn+ArrGywcLEzc7QiYqMt7W1/v/8mZqcxsbIpqqrZGFhztDSeXp7iIWGnJqalJKSf4CCg4B/amZmoaSm5+fmvLy6ys3OzMzL2tze3dzaa2hny8nH0M7NiYiGbG5v19jYWFVVcG5s2drcxMTD0dPUx8jJ/P79sbO1j46OmZWU1dfXhIKC1NLTd3h68fL0wsTGb3By+vf3YV1d2NjW7u7u6Ojpe3x9fHp54eLkxMLAvLq5/f39+vr63t7fXFtamZiW6urqzMnKwL+98PHvrKytq6qq7evpr62toKKkvr/BOzk42dvad3V06OjmpaSj5efnnZyblpWT/fz6ZWZo9/f3jYyKqquteXd47u3rhYSC5eTisbCueXh2qaimWlhXjImIY2Bfc3Bw////UFBP/v7+/v////7///3+g4SHaGlpYmNj8vPzZ2dn/vz9WFhYtbO0ztDPWltbbW9u/v7/xcPEiouLrayq4+Tms7S2VldX7/DyqKel+/z++Pj4+ff4cXBuuru7u7y+7+/vx8fH8/HysK+wXFxc/fv8s7OztrWzZWRio6Ohl5eZ1NTUZGRkraus2NbX4N/d0dDP3dzc9ff14ODg9/n4oaCg4eHf+/v76+vrQD4+7Ozs/f3/7evsRUJCvLy87vDtysvLXl9fzczNwsPDYGBgw7+/ysjJgH19gH9/29rbwMC/Tk1MlJCPoaCeX1tb6ufo4uPjx8fF5OPht7e3X15cuLe4tLKzn56f09TW1dXTYWJkh4eHZGJj3+Diq6urXLJJJAAAC8BJREFUeNqsmAtYE1cWgAcmJLwSwjMJAYxiQhIeITyEgCGiAioCaiqWaoCiFQVKtgWsJFRapEpFatuodetKHYaQkIiipZVWqqBQ64OqrduGuquVR1sDu62u69JdW/fOZCCJovjttyffl9yZ3PvfM2fOOffcC6UgJ1a5R1GeJI6OjvHx8TQgTCYzLiEsTCgU8qRSQcaN4VNsWWpsndep7u7u2NhY9+7UkpKSJFnqkApBIOTrufFgJDb2MUIQ4xLYAMnjSRf4+koEAoGupLcMdQtVRBs0JA3JImovpVKpUED6SAMCnZhLo1Dmrlzp8hhJxCQkJGRdGhA6nV5aWjrs7T08nJw8Ono6hD7aXZd2ml5ALygoGAb33QPvBs68ACsZIjXkAcBLmpH/RVC7H7xlaZ86qmTcgY47UsKbEW3LU4Mmx9tTJwWYGJFAeh4URXGc2/yUCqJTaGrLRlFi3khIAUMUCxl9Kjj4qFQo1WYeC27ie6KjSK+AMHIsuDu92qpq8wCK+P+6cdasGvRRM6G21yI9hJPdn+Z1vTCfJvZlNccIgQt6IIj2iZ0zjY+Q0SnfGvZ921EiMC645kKjxNOen06NTMaTdH5oklwhl8OHdyyhUWgJudOS+yG9HRl9RGWrzm/FKfRNHYZEWnyCdON0ZHa/Xv8kO9u9FJSlY3DNzclMmtD34rTkVr1xajKKpFgaVIcu9URkkKq7EFW3MEEiZk1L5hsfJqtfrP74lXK3LhTDqQy/r+uOTX7egIUVKbhKvmOGQ7dEKpaxpvN/Np/BsLdzWeJWkDMpi+reAv5NNftIsjjpEekXLgJ0bgUDapf2JIsFnIgj0+o8YkMGuQMtX8SkgbTpyGTSEcTkIuX6CsTcLJkyAlzmRvD1nR1lXhXcJNjl4fTxsBSO9Pfb6IwaFjG3UxxXrKDQHF9B0F+lAp5AOH5BnM5RyF5Gnk9vVbR3lMUmVcBHb05lDXwm4nbhYH/rJBmY1QWAKe65q+avX09CB1LFPMF4VZchWQxH6MdR834+1OZbFg0nKfQhdo5Dch0YcHYu7zFZ/Yk3yG+10blrHo3iGK4G/1JdUWoal6eLm4Hli25FEsSZcTVp0Nh5v+w4BBtbT9u4peFITF1dTMyN7ple8kkD8YL4fCv5mGZRPIWynhjRM0cs0bljHY9VySDo6OmP69sZTvfLZr6raA2iW5+/pjSKsvb34FWrqrZXsM0TobY7iD9iq3N4PLDyuhfxQTMWSHSSdSiJZHCokjIUrXdvw56tTX6uvXx9X9vwpM7Hopes2h7uHh14/LhIEiF0Jf7Y3TcyaGNndSITXDAD1oL/UVaWRCcIDZ8d1eATWgFBg1uD4c4RcpHrg3Z+Z97w5Bv7mFI3b3ag+73AwMAGXwFcSrWQO9oHrWTQ75M9NEdHmlAYdaRLlVYh0GUlgVXY2M+Ajur7onJhp0FA9ukMcsLJ+HM3r3WUht0mgixUnBTVRZA9bcmgc3k4M4FJCxNIujXrSnRiTokSLA16Bn8waGzcA27qI+9znUNuc3LyBp0t4b8yXrjiE2L4VhkcqrE0fduCgmysAeQT+oowaUKYQJecXcLlyETbx0NDIyNFIrZvmhkCZL9rqdedxsijk2QXmnROGUHew1FSSBPkwT47ncHK4UwPFUil4oQbHE4JJw3RdHVpcEGK9WN9ZG519vjs83OCJ1VxuSChlFmax/ZUKLdP6NzZ5/lIrnvh9rhOIpb0LigpgWfa+G0xoymILCt/KO7qhIK4UtYQVuzMT4AhHuEckjxPTxtrEM5IXVKhyxK4z1FEKGWzrOVAsbGpncypPrG2O61nYj6VSxxPKJX4+XFlsor0iJIkRUbPo2SAHPDH0qU6OV3HEbMS34WVUBa9vMvk0ONxcwC5aAR25pYvYQqSomoIdHXc9vmzWNnZiUNHbp6mh4TcPB9UgPvdfSc7skN0agzL7FEnzBKXSNxqeIPw0X6935ZQkS/EGEZYmM5+ueESiQJiEY/isSARxZ8UdbCULLf7A9TYtZ892ZCqE0jZPLFMXAIHHkNyZUFGqLU9z8mpiUz2QS7qgZ0lG1ekVwwGzSfywyrpOrwhj5L0GrCGf384npcIcny05dleEesEYhmHE6FMegC8R2Vm97e1tXViYPIu5Erbd+Q395bHQJ1kdg9R+ezwpWP2+0sql62IVYPprvID1FayI0FGetzHpTpAFqSmGfBnqykY58IKCL7FPvsVMkPkx/ZrMJBOZdZWEzlNtUNQipEN6RdmKSOBMujVwQdWMohnQmeE6hzMCkk8Eoy7vhYb3SU35+Z+Jce81ERyc6shqRCVxpqHPcSlKqwRKhNCoyYsjwXZkwMfrYhQrdam4kBtVyfU2jtXh+mMojWi/4Tj0VfVNwV5wp/BF6CabhSqrfUm+tln9lMT9Fxusgq/2Ws047/BbbU25HjacaK/CWO3oGhKi4n64zcqAnZIiw5EHp7QFEsXVCoB3wjiH7ea+0l/vK+8rcFhkhwfz7SsI2UiTuOlzxcWRbpd2VcYXDx+5nDGT2zDQObezKob3x34MGSraX7tzoLdmffG6wu/smi9sWS9BqWaTIj/SoMJ+50/5mOa9Od4moWM9Cz02r9JPpZhvpoPm3cG5LgeXJzh+aXmVOXBwtU/wzPG8x1q859dQ/7mtTs/LM50sEQAO4nH5nV0SDo6/Li3blVwRposRQ5OTqXFncW7/Xlh5smcr/curjS8nfcnUu1yZ/jtmk085HDm4qVvbArVhsLUXtjMLULdvsjIW2qw2OZqQ0eH732/fUXcW6Dk2Qune1mmtCNTh/NW716c0rOtafM7r3+w695y5/pxTdHu0Zw7t5a9AW/R7jK+tyUneFkm4nPyuYNFZyYqgoGBakxAVVBeLpdfI14HTqbR4nBrqH68viY/p3rpTwfunN/00vszR+T5W7r276aP7ftg2R8av/sh22nxq3Dwpkbko7w1efvcpq7iJ27h5AvMhHmW6V9beKRYQ194STMUkK3xH3JgVakuehxaXfmcBzJj5iztjwuHzGcumRFSQWVBlRqx2wXZxYKVHEYk+BbcFVuaX9CasLSAZ4bmQ+oW0L25GbW6MVX1GE2tgpNFcWHzrNO5iR5YulJVzRjboXd5LbEJHe2oslHv2BRA1J4cFxcWbg2sayd5WLPlzDe7QEy0IN9v/sKbZFG/+MtyEJ1EtKOP6os+rPMEGVF/eHDT6jP1mSnPHFz2cvb1po8ub2k8//Xfzq35x19rRQc3vDOU8d7Oxg+e8WjMKfRHp96IoXZ2jgsThuO9nv353vv/lHM2fPuS16fL/52zfEfBdU7Blpy6+qWXc/K3BHlXnnyZnV97h5V959zfU560H8QiBVsHE9jScGwuauX1xv2d5qK3R683wucuFxaleB0I/jZnA7ItZ3P9pzvza73g1+HzKSnv1S4dy6BOs43G10FA3ooZjup1/crOPzrvFXmTL/3yS/WyZSleL8nlOY0p53Oy92/7Hv7Iq35zfkbKO0s3FednTkO2WCNMKN2Kvxb5b78tTehRFrr+zCjaRY18s+HGgatow1iO57bL/bU9xk8rzz3bQH61IXPxMvIG6jRnCvcJ8h7LPed7hz3QWVVa/38trEJcn2H1DGkQUvb7qxFSsVx90f8ai6ShH/Ynfeh95bZqmvMK3M5Coe8eyyvVfq5WYYs8SlXjDo2AK0SlPgS8D7QRVIVlZrSZapr+xMLiG1LJnscnAIsrt9itUehjDmNsROLUxod8BJJQ1HYQShx1aK1orR1IO/2RRX2nUwW0VrxAQkf+vxLQ6Tl2AzoxO0si8ekG26OYmG7sQK/S3f3evbt3o6MDwebj7NmzMzHpBRIQELAVyIPa2trZPk+SfZ6eZD8HCCHNlnFBLSnjVIByEtSTQGAYVlqO9EDJrzcaGYz+Vj6fPzIY1Nfe7gnqpk5Qkz1WmpyamvxqECgFURX78HQ6MdgHZ+F8vF618MEER5VHIWwCI5igH5tgEEhfu+cTpN/PGzj8fwUYAEHf/4ET3ikCAAAAAElFTkSuQmCC	S	C
 5	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>, a partir de @tipo_conferencia@.</p></td></tr></table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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	N	H
 2	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>.</p>      </td>    </tr>  </table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78DAEL4/YgxjgnCTmNEwCVEGHNh5ZFHw3QBR4CMMSIoG2r5j9Z5aYbGfrh1yQ2bX2guGZqxs7VoxrSaxT9YNGhAw8eMPQfRGnq2sUoDjhcFgQKtgXWs2VI/jRLl0cjKfwxarp40PLmiaNe9tWj40xtnTi8N0Z7evuLQ3//L116cY67CPHHUoT4zO3R07d0QknTy8QDaibO8U8sl581PC0Yzrxc15F3SVH2/devPIfyhaqCs6NRPvli3bN+TtQaAc01F3dJlixb8YMLIpKE+ereBMC7qXPf1a8GBXGLS5IKa0dPup+MduAJINePGjxtfA1nrRobNqoV4YoA+8NaWT/rtm0tqDXy2XfetD341qe45i3RMUHR+eaJPIXLgRwWWArAkimSNZ0lAslJQz+hkgfCSZgpt2+7rfW5etUOSIAyrvvLi2XvfP+2/k/RtnnVkt+8YNn5ilVGyLiQKhQwI9e0FlBcGyNWvg3oApKwXP7LLEtcN2GlPXq57J2dKCql4Y8XWv/aOVSQc52NWNr5KQE1Naxr/IQOwqSwkKOx9BkcOOJ6pi8DCnGqCNFOwOLW4/UMR5uagYIvikeE5O+sLUpfIGrtz1pjjk9M55MyPvmwF0G7IngsIpJhS+HnqFGHkeJ9yQIoSQQKI7YZk3K+V24QydbnIvXR7atMQr3m7t/Aj/zKJicyHZu5/c7cH6qXpMAhqfn8QzSApoPk3AoTJjFLWhYw8gLi3sVwmCITEC2Gdz03rVMq9qPwPk5x0FVCotHTK2Z+/Dqg19wwQBwR8RCACAHIcy4q6CaMpWdov3A7AvA+pMnc/7fniZPMQAetSSClL8H2Smp8SgHPRHMOhMze6lqzaJ26c7AKXtkEYCsB4n54POoYEQMINidYAQvbcxyy3jpyVCuF3sfQKLP9F31IDkvKe/+c9Xere4cBg8DUi9q9p6TyzskvAdQAsnXAk7CQqplqbTjedaQEIW/s3An+2j0kKJTCUgApMhd/jAg4JPPia+WZu5flzBqorqg/FiZ/+KtxjDW19je8yMrGCwFWrDDR9METgvndOwT7xZElAoAELg7xO3hCJ7mwIIL6GUMfeZlo4c8zQzwpirMuDNGRBKNhhIqH9W+slKnH2fEDtT/YAAKxg5bPTKt5zuauruzdm4Y9ESljqCrRm2tkmGg+Ol7mwlprp/KyHIj0z6pHSpH1pAbLyyW2husYNwHtrP+MAYF+8u6tLu3q3N3V1dHd2dsQKhkRzo4Vt3q6zOp6VYyIAwLVVNwi4cmD3nktOWcP4UhlB59/7w4lYdv2NY6Kg3j0lDr01wNTL3f5/UxY+bpTV6OjiRiPgjkIQeHGFB4WyI6Fwbl5+QUGYfRdbupo7e7zeDo/irC9xR+s01y/pgxrGWgvHAAYEhpY0eqDjP2u4KXUunDYwR471m86Q2clgK166ICccccIZblhBAEX098bjsb6e3lX9qTUBMAzS2m+cdIJZQvQHpgEJsp+AkSgyoAYBInts0PARJCwghEIQIa5N5EqCF/57iRQk/K4A0qQGk6TkNxUSNABAQz/7IIowAJPrQH2rT0BigrgpmIFSMoeChf9YCPriazGNWlTgZUkIVPrfePwsCdIv4gOYKewMsAIz/dQaSE7J/zMwSqTvSAiW9/us+h7f+62+5TFQA+eShJ2yAGR7e5KpKIt4T5+1slYJsZJkLSgf19eTtanYTKoC3Sbzu+0L3n0LApMjdMAhUfDa39l+QcU33VIoUvA+3HyoI1J5xycyzNZdxbNoAPHcGs3Ljv84bnJqanOA5pfEQeWjS510c3X2EoXBxV7HgtmfP7dy6c3/OTGcQv0Eb4X+3/yiD4and/3489NCQsuzmxwYHd84/B9rS/7L3lYCANr08m1ZxKt9lipcXK2e39FSZvY8k1bTefSwUd21zZHcO5YP++zCnX/1zZM1KY+TmPEV63nPxCFo3bTxh61z3ZZvnxj0herM+EcvHfr6d+pu3frKXBHqXKc7CcDOK3nnjSXLswEtwvHVa4Y2pocVxr2trCXTdR849OtFJQfuD58clbKp5Li1eX3oiYfGlJXXP/oVhBVfdbL2mbuqyyrGf3d2/5ILd2FTNwEeujx8DCHp+tsfGXbhvAiNvXXOo/a3V00zyJlReCH81uw9kYm7MaU5q7A5NcNNANm9kl++wWf3nT96IHTsNWdBqSFpBs0Ze3nTqLwLH0BW63F3GD6PM0rlUaIFx8fO9F0V0LBjrXrVT5F9BrSpiWeCnR3tCo9HUHKuITY5Myr80gD3Pm2IPGh+HQc/2OU2ECREXGlyMwP6fxgaEkpDBNvWdZXEp65q6N5ys7elqKe5IPV5EE+eNNOzKPpprfgJjUpWvJHe+bb6jN1nKrVLM/JFCTx4/tULD5YRYHv43EozNXSVndZuaKhtH+S9cGTp/ub6k7Gq1EN3gkOXmW0Ead9aAhrVhbxEABgybKu9/fc7Kjt/6U11BEBmBYnDzSUQvmh77M33ppUjakSRqM7i+MUND5d/o/6TT4yoSo1nAjOiuIURurcRxowchM6klmRzNWPDi4274zdV+rO9/dyw/q1vHF0Go4yOIY/URdO6gFDu34UKn48uO/3ve9/+akaqFxJ1qExb4hRU8/RTTxVo+FCdTu76ODMKTMWY7n1v2rucoFTX3zpp4bjm3TRaEu2IRVNsTF4QoMm1LQuzn2yYlPY9I5Er1c7pfZBM/ujagk5nxGRvXZssJMl7xb0ngtB077ltg2+k4JdxMTwOV2RZ9pj93skUEyGQxm9wJKPfb/ieeTgiSkqkaMLOwplmVTMAMLY6fkteXf2llV0ECe/3r9jJAMYVnjH3R0FJJAl5e/wjUMOM2PLuRDciki0paAwOxy0uS+9Rib7CWWXH/untNq/74NKX8z/nRL48eMvi7W3xrsM/WoZHhxOIzjB2EhXftkMQju1799nNtlIePDOncu8vEgdloT/ZgCRQUPTvquW3q7hN4xCZt+Tfji0BAVU8UkxV/OvT+w6IgM14aCopcNKzdxeDxx53nimWeVoGePATZxwY5nxp4brrGwK/vf+3+UOjBfnZWcwcFIkw1OPFLseu9F652N58saV5ZtpsIpUtfX3TyVjo2slTMglgxNK3Nh/uccon3FkAgFDptAlGKKoI5XB0PzS48pYquqNBaPTDW38zIh8ANObbvZfaLx5qPxuzjuNkifFYnydF84rzikZGc4IpeG3V9YmpQvG+uJPhJj+HeX39ToabJOPhES6gXkZklRhLPDgUrPwJxp9BZAXb0xW/0ttxKRTNjYYzI1kkjREA7Gyb5tIfhQiCodAA3wm4yQENADQSABhFAJcMDeGkJoj/ODJYQY8emOB8ggXnsvTzzJ+U4Ez45xWTwj+6QLAFF2vf+J8uIOrP6aUvftW3TQDAhQliSxevPrj9f4qQk0dPyXPhXwQSwH8DH5ucvWVovJsAAAAASUVORK5CYII=	N	S
-8	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>, a partir de @tipo_conferencia@.</p></td></tr></table>	iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJi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	S	H
-9	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>.</p>      </td>    </tr>  </table>	iVBORw0KGgoAAAANSUhEUgAAAFkAAAA8CAMAAAA67OZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAADTtpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDQuMi4yLWMwNjMgNTMuMzUyNjI0LCAyMDA4LzA3LzMwLTE4OjEyOjE4ICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICAgeG1sbnM6eG1wUmlnaHRzPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvcmlnaHRzLyIKICAgIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIKICAgIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIKICAgeG1wUmlnaHRzOldlYlN0YXRlbWVudD0iIgogICBwaG90b3Nob3A6QXV0aG9yc1Bvc2l0aW9uPSIiPgogICA8ZGM6cmlnaHRzPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6cmlnaHRzPgogICA8ZGM6Y3JlYXRvcj4KICAgIDxyZGY6U2VxPgogICAgIDxyZGY6bGk+QWxiZXJ0byBCaWdhdHRpPC9yZGY6bGk+CiAgICA8L3JkZjpTZXE+CiAgIDwvZGM6Y3JlYXRvcj4KICAgPGRjOnRpdGxlPgogICAgPHJkZjpBbHQ+CiAgICAgPHJkZjpsaSB4bWw6bGFuZz0ieC1kZWZhdWx0Ii8+CiAgICA8L3JkZjpBbHQ+CiAgIDwvZGM6dGl0bGU+CiAgIDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4KICAgIDxyZGY6QWx0PgogICAgIDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPgogICAgPC9yZGY6QWx0PgogICA8L3htcFJpZ2h0czpVc2FnZVRlcm1zPgogICA8SXB0YzR4bXBDb3JlOkNyZWF0b3JDb250YWN0SW5mbwogICAgSXB0YzR4bXBDb3JlOkNpQWRyRXh0YWRyPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDaXR5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJSZWdpb249IiIKICAgIElwdGM0eG1wQ29yZTpDaUFkclBjb2RlPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lBZHJDdHJ5PSIiCiAgICBJcHRjNHhtcENvcmU6Q2lUZWxXb3JrPSIiCiAgICBJcHRjNHhtcENvcmU6Q2lFbWFpbFdvcms9IiIKICAgIElwdGM0eG1wQ29yZTpDaVVybFdvcms9IiIvPgogIDwvcmRmOkRlc2NyaXB0aW9uPgogPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8P3hwYWNrZXQgZW5kPSJ3Ij8+RO84nQAAAwBQTFRFamts+fn5mp6hc3Nz9fX1U1NTS0tKnaGk6unqzM3P7e3u8fHxuLm7/Pz8lZmc2dnZxcXGWlpavr29wsLCp6eniYmKhYaGZWZmkpaZ0dHS5eXlkZGSrq2utbW2XV1d4uHhfX1+sbGy1dXW3d3dqampgYGCjY2OyMnKYWJi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	S	S
+6	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 3º, caput, da <a title="Acesse a Lei" href="https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12682.htm" target="_blank">Lei nº 12.682, de 9 de julho de 2012</a>, a partir de @tipo_conferencia@.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p></td></tr></table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78DAEL4/YgxjgnCTmNEwCVEGHNh5ZFHw3QBR4CMMSIoG2r5j9Z5aYbGfrh1yQ2bX2guGZqxs7VoxrSaxT9YNGhAw8eMPQfRGnq2sUoDjhcFgQKtgXWs2VI/jRLl0cjKfwxarp40PLmiaNe9tWj40xtnTi8N0Z7evuLQ3//L116cY67CPHHUoT4zO3R07d0QknTy8QDaibO8U8sl581PC0Yzrxc15F3SVH2/devPIfyhaqCs6NRPvli3bN+TtQaAc01F3dJlixb8YMLIpKE+ereBMC7qXPf1a8GBXGLS5IKa0dPup+MduAJINePGjxtfA1nrRobNqoV4YoA+8NaWT/rtm0tqDXy2XfetD341qe45i3RMUHR+eaJPIXLgRwWWArAkimSNZ0lAslJQz+hkgfCSZgpt2+7rfW5etUOSIAyrvvLi2XvfP+2/k/RtnnVkt+8YNn5ilVGyLiQKhQwI9e0FlBcGyNWvg3oApKwXP7LLEtcN2GlPXq57J2dKCql4Y8XWv/aOVSQc52NWNr5KQE1Naxr/IQOwqSwkKOx9BkcOOJ6pi8DCnGqCNFOwOLW4/UMR5uagYIvikeE5O+sLUpfIGrtz1pjjk9M55MyPvmwF0G7IngsIpJhS+HnqFGHkeJ9yQIoSQQKI7YZk3K+V24QydbnIvXR7atMQr3m7t/Aj/zKJicyHZu5/c7cH6qXpMAhqfn8QzSApoPk3AoTJjFLWhYw8gLi3sVwmCITEC2Gdz03rVMq9qPwPk5x0FVCotHTK2Z+/Dqg19wwQBwR8RCACAHIcy4q6CaMpWdov3A7AvA+pMnc/7fniZPMQAetSSClL8H2Smp8SgHPRHMOhMze6lqzaJ26c7AKXtkEYCsB4n54POoYEQMINidYAQvbcxyy3jpyVCuF3sfQKLP9F31IDkvKe/+c9Xere4cBg8DUi9q9p6TyzskvAdQAsnXAk7CQqplqbTjedaQEIW/s3An+2j0kKJTCUgApMhd/jAg4JPPia+WZu5flzBqorqg/FiZ/+KtxjDW19je8yMrGCwFWrDDR9METgvndOwT7xZElAoAELg7xO3hCJ7mwIIL6GUMfeZlo4c8zQzwpirMuDNGRBKNhhIqH9W+slKnH2fEDtT/YAAKxg5bPTKt5zuauruzdm4Y9ESljqCrRm2tkmGg+Ol7mwlprp/KyHIj0z6pHSpH1pAbLyyW2husYNwHtrP+MAYF+8u6tLu3q3N3V1dHd2dsQKhkRzo4Vt3q6zOp6VYyIAwLVVNwi4cmD3nktOWcP4UhlB59/7w4lYdv2NY6Kg3j0lDr01wNTL3f5/UxY+bpTV6OjiRiPgjkIQeHGFB4WyI6Fwbl5+QUGYfRdbupo7e7zeDo/irC9xR+s01y/pgxrGWgvHAAYEhpY0eqDjP2u4KXUunDYwR471m86Q2clgK166ICccccIZblhBAEX098bjsb6e3lX9qTUBMAzS2m+cdIJZQvQHpgEJsp+AkSgyoAYBInts0PARJCwghEIQIa5N5EqCF/57iRQk/K4A0qQGk6TkNxUSNABAQz/7IIowAJPrQH2rT0BigrgpmIFSMoeChf9YCPriazGNWlTgZUkIVPrfePwsCdIv4gOYKewMsAIz/dQaSE7J/zMwSqTvSAiW9/us+h7f+62+5TFQA+eShJ2yAGR7e5KpKIt4T5+1slYJsZJkLSgf19eTtanYTKoC3Sbzu+0L3n0LApMjdMAhUfDa39l+QcU33VIoUvA+3HyoI1J5xycyzNZdxbNoAPHcGs3Ljv84bnJqanOA5pfEQeWjS510c3X2EoXBxV7HgtmfP7dy6c3/OTGcQv0Eb4X+3/yiD4and/3489NCQsuzmxwYHd84/B9rS/7L3lYCANr08m1ZxKt9lipcXK2e39FSZvY8k1bTefSwUd21zZHcO5YP++zCnX/1zZM1KY+TmPEV63nPxCFo3bTxh61z3ZZvnxj0herM+EcvHfr6d+pu3frKXBHqXKc7CcDOK3nnjSXLswEtwvHVa4Y2pocVxr2trCXTdR849OtFJQfuD58clbKp5Li1eX3oiYfGlJXXP/oVhBVfdbL2mbuqyyrGf3d2/5ILd2FTNwEeujx8DCHp+tsfGXbhvAiNvXXOo/a3V00zyJlReCH81uw9kYm7MaU5q7A5NcNNANm9kl++wWf3nT96IHTsNWdBqSFpBs0Ze3nTqLwLH0BW63F3GD6PM0rlUaIFx8fO9F0V0LBjrXrVT5F9BrSpiWeCnR3tCo9HUHKuITY5Myr80gD3Pm2IPGh+HQc/2OU2ECREXGlyMwP6fxgaEkpDBNvWdZXEp65q6N5ys7elqKe5IPV5EE+eNNOzKPpprfgJjUpWvJHe+bb6jN1nKrVLM/JFCTx4/tULD5YRYHv43EozNXSVndZuaKhtH+S9cGTp/ub6k7Gq1EN3gkOXmW0Ead9aAhrVhbxEABgybKu9/fc7Kjt/6U11BEBmBYnDzSUQvmh77M33ppUjakSRqM7i+MUND5d/o/6TT4yoSo1nAjOiuIURurcRxowchM6klmRzNWPDi4274zdV+rO9/dyw/q1vHF0Go4yOIY/URdO6gFDu34UKn48uO/3ve9/+akaqFxJ1qExb4hRU8/RTTxVo+FCdTu76ODMKTMWY7n1v2rucoFTX3zpp4bjm3TRaEu2IRVNsTF4QoMm1LQuzn2yYlPY9I5Er1c7pfZBM/ujagk5nxGRvXZssJMl7xb0ngtB077ltg2+k4JdxMTwOV2RZ9pj93skUEyGQxm9wJKPfb/ieeTgiSkqkaMLOwplmVTMAMLY6fkteXf2llV0ECe/3r9jJAMYVnjH3R0FJJAl5e/wjUMOM2PLuRDciki0paAwOxy0uS+9Rib7CWWXH/untNq/74NKX8z/nRL48eMvi7W3xrsM/WoZHhxOIzjB2EhXftkMQju1799nNtlIePDOncu8vEgdloT/ZgCRQUPTvquW3q7hN4xCZt+Tfji0BAVU8UkxV/OvT+w6IgM14aCopcNKzdxeDxx53nimWeVoGePATZxwY5nxp4brrGwK/vf+3+UOjBfnZWcwcFIkw1OPFLseu9F652N58saV5ZtpsIpUtfX3TyVjo2slTMglgxNK3Nh/uccon3FkAgFDptAlGKKoI5XB0PzS48pYquqNBaPTDW38zIh8ANObbvZfaLx5qPxuzjuNkifFYnydF84rzikZGc4IpeG3V9YmpQvG+uJPhJj+HeX39ToabJOPhES6gXkZklRhLPDgUrPwJxp9BZAXb0xW/0ttxKRTNjYYzI1kkjREA7Gyb5tIfhQiCodAA3wm4yQENADQSABhFAJcMDeGkJoj/ODJYQY8emOB8ggXnsvTzzJ+U4Ez45xWTwj+6QLAFF2vf+J8uIOrP6aUvftW3TQDAhQliSxevPrj9f4qQk0dPyXPhXwQSwH8DH5ucvWVovJsAAAAASUVORK5CYII=	S	A
+7	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com o emprego de certificado digital emitido no âmbito da ICP-Brasil, com fundamento no art. 6º, caput, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>.<br />Nº de Série do Certificado: @numero_serie_certificado_digital@</p>      </td>    </tr>  </table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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	S	C
+8	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento autenticado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>, a partir de @tipo_conferencia@.</p></td></tr></table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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	S	H
+9	<hr style="margin: 0 0 4px 0;" />  <table>    <tr>      <td>  @logo_assinatura@      </td>      <td>  <p style="margin:0;text-align: left; font-size:11pt;font-family: Calibri;">Documento assinado eletronicamente por <b>@nome_assinante@</b>, <b>@tratamento_assinante@</b>, em @data_assinatura@, às @hora_assinatura@, conforme horário oficial de Brasília, com fundamento no art. 6º, § 1º, do <a title="Acesse o Decreto" href="http://www.planalto.gov.br/ccivil_03/_Ato2015-2018/2015/Decreto/D8539.htm" target="_blank">Decreto nº 8.539, de 8 de outubro de 2015</a>.</p>      </td>    </tr>  </table>	iVBORw0KGgoAAAANSUhEUgAAAHMAAAAyCAAAAABKLLvzAAAAx3pUWHRSYXcgcHJvZmlsZSB0eXBlIGV4aWYAAHjabVBbDsMwCPvnFDtCAiSB46QvaTfY8QcJndpqluJSjBxi2D/vA14OzAxcmlStNRlYWbFbIWmiD86JBw80Ci3f+0AYAlrLh2JQasyf/fwzmJ9uVbkYyRrCcheUw18eRnER+Ua+xBZGGkaEU8hh0OezUlVp1ycse7pD5gGnY0X1Xlmm9vznZultxe4hxJ0yJWMkmQuQHwTqVvBgi2M0OxWqxkRnJhbIv5xOwBeE+1pOMY3hGAAADuBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+Cjx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDQuNC4wLUV4aXYyIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIgogICAgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIKICAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgIHhtbG5zOkdJTVA9Imh0dHA6Ly93d3cuZ2ltcC5vcmcveG1wLyIKICAgIHhtbG5zOnRpZmY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vdGlmZi8xLjAvIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXBNTTpEb2N1bWVudElEPSJnaW1wOmRvY2lkOmdpbXA6MmExNWUxMmQtNGNkNC00ZDljLTlmOGQtYmMyNWIxZjNiOWQ3IgogICB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOmNlMGJlYjc3LWU5ZmQtNDYyYi05ZWY2LWU3NjVmMjBkMDI1MyIKICAgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmZmOGE0M2ZjLWRiODEtNDNhYi05OWY5LTViMTNkNTQ3ZWI0NCIKICAgZGM6Rm9ybWF0PSJpbWFnZS9wbmciCiAgIEdJTVA6QVBJPSIyLjAiCiAgIEdJTVA6UGxhdGZvcm09IkxpbnV4IgogICBHSU1QOlRpbWVTdGFtcD0iMTY0ODc5MjU5MTU1Njk5NCIKICAgR0lNUDpWZXJzaW9uPSIyLjEwLjI4IgogICB0aWZmOk9yaWVudGF0aW9uPSIxIgogICB4bXA6Q3JlYXRvclRvb2w9IkdJTVAgMi4xMCI+CiAgIDx4bXBNTTpIaXN0b3J5PgogICAgPHJkZjpCYWc+CiAgICAgPHJkZjpsaQogICAgICBzdEV2dDphY3Rpb249InNhdmVkIgogICAgICBzdEV2dDpjaGFuZ2VkPSIvIgogICAgICBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOmRiYTllZmU2LWM4NjMtNDk1Ny05OWI1LTQyMTFiNGJjMjg3MSIKICAgICAgc3RFdnQ6c29mdHdhcmVBZ2VudD0iR2ltcCAyLjEwIChMaW51eCkiCiAgICAgIHN0RXZ0OndoZW49IjIwMjItMDMtMzFUMjI6NDg6NTAtMDM6MDAiLz4KICAgICA8cmRmOmxpCiAgICAgIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiCiAgICAgIHN0RXZ0OmNoYW5nZWQ9Ii8iCiAgICAgIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6YWM4ZjgyN2QtMmE3NC00N2JiLTg5ODUtNzhiNjM4ZTZmOTNjIgogICAgICBzdEV2dDpzb2Z0d2FyZUFnZW50PSJHaW1wIDIuMTAgKExpbnV4KSIKICAgICAgc3RFdnQ6d2hlbj0iMjAyMi0wMy0zMVQyMzowNTozNi0wMzowMCIvPgogICAgIDxyZGY6bGkKICAgICAgc3RFdnQ6YWN0aW9uPSJzYXZlZCIKICAgICAgc3RFdnQ6Y2hhbmdlZD0iLyIKICAgICAgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDoxYjgwNWFjYS04MjgyLTRlN2YtODkyNS00MThmZmNlODU1YWUiCiAgICAgIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkdpbXAgMi4xMCAoTGludXgpIgogICAgICBzdEV2dDp3aGVuPSIyMDIyLTA0LTAxVDAyOjU2OjMxLTAzOjAwIi8+CiAgICA8L3JkZjpCYWc+CiAgIDwveG1wTU06SGlzdG9yeT4KICA8L3JkZjpEZXNjcmlwdGlvbj4KIDwvcmRmOlJERj4KPC94OnhtcG1ldGE+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAKPD94cGFja2V0IGVuZD0idyI/Ph6i+O0AAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfmBAEFOB/dqeB/AAALnElEQVRYhb1Ya3RV5Zl+nm/vc04OuRFyJyHRQAiGkmglCgqoFGxkEAcVZmbVBcXptGjXtFipbaedgsx0aktnoa4pYCu21V5QaOmaIlMFBRUUsCDIXW4SkEsuJCGEJCdnf8/82PucnEO7VmfNOH1/JHuf/e7v+d73fd7Lt7n7JCDCFwFIXP/vRclFBFBgyi9ATa17or+aKagfo1B/4kaHT9W6rP4kGFgo+Hv6WNBEUAIDexILx9vgwgDyLReSl/8nkQCB3ec6OuL5Q4qyRBGBdy1AF6LAj8e+QCgR5zZtPhYenHG+v3L8/QUm6WcCcEWBAjr27OuJjq4udbU/DpQVAsCZViCnqumir505LALgYCzwXa5p93/PKg9f7Rz2b3g2OuOrhY6Jt723bv3cezJ8L/pRdAkC8N5+6pIR18dvmjNyWZPFN6aA0I4VwNTHNj9vBMLayrsbo1h50MAC4D25LwAS6JXNvjMiM4Bo2fnT382bnHHovVbkDZ8y5bWfHJlfKDIB6vpqu78D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	S	S
 \.
 
 
 --
--- Data for Name: texto_padrao_interno; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: texto_padrao_interno; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.texto_padrao_interno (id_texto_padrao_interno, id_unidade, id_conjunto_estilos, nome, descricao, conteudo) FROM stdin;
@@ -59309,7 +59310,7 @@ COPY public.texto_padrao_interno (id_texto_padrao_interno, id_unidade, id_conjun
 
 
 --
--- Data for Name: tipo_conferencia; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_conferencia; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_conferencia (id_tipo_conferencia, descricao, sin_ativo) FROM stdin;
@@ -59321,7 +59322,7 @@ COPY public.tipo_conferencia (id_tipo_conferencia, descricao, sin_ativo) FROM st
 
 
 --
--- Data for Name: tipo_contato; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_contato; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_contato (id_tipo_contato, nome, descricao, sin_ativo, sin_sistema, sta_acesso) FROM stdin;
@@ -59335,7 +59336,7 @@ COPY public.tipo_contato (id_tipo_contato, nome, descricao, sin_ativo, sin_siste
 
 
 --
--- Data for Name: tipo_formulario; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_formulario; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_formulario (id_tipo_formulario, nome, descricao, sin_ativo) FROM stdin;
@@ -59343,7 +59344,7 @@ COPY public.tipo_formulario (id_tipo_formulario, nome, descricao, sin_ativo) FRO
 
 
 --
--- Data for Name: tipo_localizador; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_localizador; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_localizador (id_tipo_localizador, id_unidade, sigla, nome, sin_ativo, descricao) FROM stdin;
@@ -59351,7 +59352,7 @@ COPY public.tipo_localizador (id_tipo_localizador, id_unidade, sigla, nome, sin_
 
 
 --
--- Data for Name: tipo_proced_restricao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_proced_restricao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_proced_restricao (id_tipo_proced_restricao, id_tipo_procedimento, id_orgao, id_unidade) FROM stdin;
@@ -59359,7 +59360,7 @@ COPY public.tipo_proced_restricao (id_tipo_proced_restricao, id_tipo_procediment
 
 
 --
--- Data for Name: tipo_procedimento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_procedimento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_procedimento (id_tipo_procedimento, id_hipotese_legal_sugestao, nome, descricao, sin_ativo, sta_nivel_acesso_sugestao, sin_interno, sin_ouvidoria, sin_individual, sta_grau_sigilo_sugestao) FROM stdin;
@@ -59685,7 +59686,7 @@ COPY public.tipo_procedimento (id_tipo_procedimento, id_hipotese_legal_sugestao,
 
 
 --
--- Data for Name: tipo_procedimento_escolha; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_procedimento_escolha; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_procedimento_escolha (id_tipo_procedimento, id_unidade) FROM stdin;
@@ -59693,7 +59694,7 @@ COPY public.tipo_procedimento_escolha (id_tipo_procedimento, id_unidade) FROM st
 
 
 --
--- Data for Name: tipo_suporte; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_suporte; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tipo_suporte (id_tipo_suporte, nome, sin_ativo) FROM stdin;
@@ -59709,7 +59710,7 @@ COPY public.tipo_suporte (id_tipo_suporte, nome, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: titulo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: titulo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.titulo (id_titulo, expressao, abreviatura, sin_ativo) FROM stdin;
@@ -59717,7 +59718,7 @@ COPY public.titulo (id_titulo, expressao, abreviatura, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: tratamento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tratamento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.tratamento (id_tratamento, expressao, sin_ativo) FROM stdin;
@@ -59729,7 +59730,7 @@ COPY public.tratamento (id_tratamento, expressao, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: uf; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: uf; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.uf (id_uf, id_pais, sigla, nome, codigo_ibge) FROM stdin;
@@ -59764,7 +59765,7 @@ COPY public.uf (id_uf, id_pais, sigla, nome, codigo_ibge) FROM stdin;
 
 
 --
--- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.unidade (id_unidade, id_orgao, id_contato, id_origem, sin_ativo, sigla, descricao, sin_mail_pendencia, sin_envio_processo, sin_arquivamento, sin_ouvidoria, sin_protocolo, codigo_sei, idx_unidade, id_unidade_federacao) FROM stdin;
@@ -59775,7 +59776,7 @@ COPY public.unidade (id_unidade, id_orgao, id_contato, id_origem, sin_ativo, sig
 
 
 --
--- Data for Name: unidade_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: unidade_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.unidade_federacao (id_unidade_federacao, id_instalacao_federacao, sigla, descricao) FROM stdin;
@@ -59783,7 +59784,7 @@ COPY public.unidade_federacao (id_unidade_federacao, id_instalacao_federacao, si
 
 
 --
--- Data for Name: unidade_historico; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: unidade_historico; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.unidade_historico (id_unidade_historico, id_unidade, id_orgao, sigla, descricao, dta_inicio, dta_fim) FROM stdin;
@@ -59794,7 +59795,7 @@ COPY public.unidade_historico (id_unidade_historico, id_unidade, id_orgao, sigla
 
 
 --
--- Data for Name: unidade_publicacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: unidade_publicacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.unidade_publicacao (id_unidade_publicacao, id_unidade) FROM stdin;
@@ -59802,7 +59803,7 @@ COPY public.unidade_publicacao (id_unidade_publicacao, id_unidade) FROM stdin;
 
 
 --
--- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.usuario (id_usuario, id_contato, id_orgao, id_origem, sin_ativo, sigla, nome, idx_usuario, sta_tipo, senha, sin_acessibilidade, nome_registro_civil, nome_social, id_usuario_federacao) FROM stdin;
@@ -59815,7 +59816,7 @@ COPY public.usuario (id_usuario, id_contato, id_orgao, id_origem, sin_ativo, sig
 
 
 --
--- Data for Name: usuario_federacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: usuario_federacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.usuario_federacao (id_usuario_federacao, id_instalacao_federacao, sigla, nome) FROM stdin;
@@ -59823,7 +59824,7 @@ COPY public.usuario_federacao (id_usuario_federacao, id_instalacao_federacao, si
 
 
 --
--- Data for Name: veiculo_imprensa_nacional; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: veiculo_imprensa_nacional; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.veiculo_imprensa_nacional (id_veiculo_imprensa_nacional, sigla, descricao) FROM stdin;
@@ -59832,7 +59833,7 @@ COPY public.veiculo_imprensa_nacional (id_veiculo_imprensa_nacional, sigla, desc
 
 
 --
--- Data for Name: veiculo_publicacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: veiculo_publicacao; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.veiculo_publicacao (id_veiculo_publicacao, nome, descricao, sta_tipo, sin_fonte_feriados, sin_permite_extraordinaria, web_service, sin_exibir_pesquisa_interna, sin_ativo) FROM stdin;
@@ -59841,7 +59842,7 @@ COPY public.veiculo_publicacao (id_veiculo_publicacao, nome, descricao, sta_tipo
 
 
 --
--- Data for Name: velocidade_transferencia; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: velocidade_transferencia; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.velocidade_transferencia (id_usuario, id_unidade, velocidade) FROM stdin;
@@ -59849,7 +59850,7 @@ COPY public.velocidade_transferencia (id_usuario, id_unidade, velocidade) FROM s
 
 
 --
--- Data for Name: versao_secao_documento; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: versao_secao_documento; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.versao_secao_documento (id_versao_secao_documento, id_secao_documento, id_usuario, id_unidade, conteudo, dth_atualizacao, versao, sin_ultima) FROM stdin;
@@ -59857,7 +59858,7 @@ COPY public.versao_secao_documento (id_versao_secao_documento, id_secao_document
 
 
 --
--- Data for Name: vocativo; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: vocativo; Type: TABLE DATA; Schema: public; Owner: sei_user
 --
 
 COPY public.vocativo (id_vocativo, expressao, sin_ativo) FROM stdin;
@@ -59928,749 +59929,749 @@ COPY public.vocativo (id_vocativo, expressao, sin_ativo) FROM stdin;
 
 
 --
--- Name: seq_acesso; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_acesso; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_acesso', 1, false);
 
 
 --
--- Name: seq_acesso_externo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_acesso_externo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_acesso_externo', 1, false);
 
 
 --
--- Name: seq_acompanhamento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_acompanhamento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_acompanhamento', 1, false);
 
 
 --
--- Name: seq_andamento_instalacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_andamento_instalacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_andamento_instalacao', 1, false);
 
 
 --
--- Name: seq_andamento_marcador; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_andamento_marcador; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_andamento_marcador', 1, false);
 
 
 --
--- Name: seq_andamento_situacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_andamento_situacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_andamento_situacao', 1, false);
 
 
 --
--- Name: seq_anexo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_anexo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_anexo', 1, false);
 
 
 --
--- Name: seq_anotacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_anotacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_anotacao', 1, false);
 
 
 --
--- Name: seq_arquivo_extensao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_arquivo_extensao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_arquivo_extensao', 41, true);
 
 
 --
--- Name: seq_assinante; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_assinante; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_assinante', 21, true);
 
 
 --
--- Name: seq_assinatura; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_assinatura; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_assinatura', 1, false);
 
 
 --
--- Name: seq_assunto; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_assunto; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_assunto', 668, true);
 
 
 --
--- Name: seq_assunto_proxy; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_assunto_proxy; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_assunto_proxy', 668, true);
 
 
 --
--- Name: seq_atividade; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_atividade; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_atividade', 1, false);
 
 
 --
--- Name: seq_atributo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_atributo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_atributo', 1, false);
 
 
 --
--- Name: seq_atributo_andamento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_atributo_andamento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_atributo_andamento', 1, false);
 
 
 --
--- Name: seq_atributo_andamento_situaca; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_atributo_andamento_situaca; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_atributo_andamento_situaca', 1, false);
 
 
 --
--- Name: seq_atributo_instalacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_atributo_instalacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_atributo_instalacao', 1, false);
 
 
 --
--- Name: seq_auditoria_protocolo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_auditoria_protocolo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_auditoria_protocolo', 1, false);
 
 
 --
--- Name: seq_base_conhecimento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_base_conhecimento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_base_conhecimento', 1, false);
 
 
 --
--- Name: seq_bloco; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_bloco; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_bloco', 1, false);
 
 
 --
--- Name: seq_campo_pesquisa; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_campo_pesquisa; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_campo_pesquisa', 1, false);
 
 
 --
--- Name: seq_cargo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_cargo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_cargo', 81, true);
 
 
 --
--- Name: seq_categoria; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_categoria; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_categoria', 1, false);
 
 
 --
--- Name: seq_cidade; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_cidade; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_cidade', 5564, true);
 
 
 --
--- Name: seq_comentario; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_comentario; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_comentario', 1, false);
 
 
 --
--- Name: seq_conjunto_estilos; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_conjunto_estilos; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_conjunto_estilos', 81, true);
 
 
 --
--- Name: seq_conjunto_estilos_item; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_conjunto_estilos_item; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_conjunto_estilos_item', 1642, true);
 
 
 --
--- Name: seq_contato; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_contato; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_contato', 100000011, true);
 
 
 --
--- Name: seq_controle_interno; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_controle_interno; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_controle_interno', 1, false);
 
 
 --
--- Name: seq_controle_prazo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_controle_prazo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_controle_prazo', 1, false);
 
 
 --
--- Name: seq_controle_unidade; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_controle_unidade; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_controle_unidade', 1, false);
 
 
 --
--- Name: seq_documento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_documento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_documento', 1, false);
 
 
 --
--- Name: seq_dominio; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_dominio; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_dominio', 1, false);
 
 
 --
--- Name: seq_email_grupo_email; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_email_grupo_email; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_email_grupo_email', 1, false);
 
 
 --
--- Name: seq_email_sistema; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_email_sistema; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_email_sistema', 10, true);
 
 
 --
--- Name: seq_email_unidade; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_email_unidade; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_email_unidade', 728, true);
 
 
 --
--- Name: seq_email_utilizado; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_email_utilizado; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_email_utilizado', 1, false);
 
 
 --
--- Name: seq_estatisticas; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_estatisticas; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_estatisticas', 1, false);
 
 
 --
--- Name: seq_estilo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_estilo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_estilo', 59, true);
 
 
 --
--- Name: seq_feed; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_feed; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_feed', 1, false);
 
 
 --
--- Name: seq_feriado; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_feriado; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_feriado', 12, true);
 
 
 --
--- Name: seq_grupo_acompanhamento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_acompanhamento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_acompanhamento', 1, false);
 
 
 --
--- Name: seq_grupo_bloco; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_bloco; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_bloco', 1, false);
 
 
 --
--- Name: seq_grupo_contato; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_contato; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_contato', 1, false);
 
 
 --
--- Name: seq_grupo_email; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_email; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_email', 1, false);
 
 
 --
--- Name: seq_grupo_federacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_federacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_federacao', 1, false);
 
 
 --
--- Name: seq_grupo_protocolo_modelo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_protocolo_modelo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_protocolo_modelo', 1, false);
 
 
 --
--- Name: seq_grupo_serie; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_serie; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_serie', 2, true);
 
 
 --
--- Name: seq_grupo_unidade; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_grupo_unidade; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_grupo_unidade', 1, false);
 
 
 --
--- Name: seq_hipotese_legal; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_hipotese_legal; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_hipotese_legal', 23, true);
 
 
 --
--- Name: seq_imagem_formato; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_imagem_formato; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_imagem_formato', 3, true);
 
 
 --
--- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_infra_auditoria', 4, true);
 
 
 --
--- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_infra_log', 1, false);
 
 
 --
--- Name: seq_infra_navegador; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_infra_navegador; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_infra_navegador', 1, true);
 
 
 --
--- Name: seq_lembrete; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_lembrete; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_lembrete', 1, false);
 
 
 --
--- Name: seq_localizador; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_localizador; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_localizador', 1, false);
 
 
 --
--- Name: seq_lugar_localizador; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_lugar_localizador; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_lugar_localizador', 1, false);
 
 
 --
--- Name: seq_marcador; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_marcador; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_marcador', 1, false);
 
 
 --
--- Name: seq_modelo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_modelo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_modelo', 118, true);
 
 
 --
--- Name: seq_monitoramento_servico; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_monitoramento_servico; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_monitoramento_servico', 1, false);
 
 
 --
--- Name: seq_nivel_acesso_permitido; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_nivel_acesso_permitido; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_nivel_acesso_permitido', 3029, true);
 
 
 --
--- Name: seq_novidade; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_novidade; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_novidade', 1, false);
 
 
 --
--- Name: seq_numeracao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_numeracao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_numeracao', 1, false);
 
 
 --
--- Name: seq_observacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_observacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_observacao', 1, false);
 
 
 --
--- Name: seq_operacao_servico; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_operacao_servico; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_operacao_servico', 1, false);
 
 
 --
--- Name: seq_ordenador_despesa; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_ordenador_despesa; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_ordenador_despesa', 1, false);
 
 
 --
--- Name: seq_orgao_historico; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_orgao_historico; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_orgao_historico', 1, false);
 
 
 --
--- Name: seq_pais; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_pais; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_pais', 894, true);
 
 
 --
--- Name: seq_participante; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_participante; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_participante', 1, false);
 
 
 --
--- Name: seq_pesquisa; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_pesquisa; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_pesquisa', 1, false);
 
 
 --
--- Name: seq_protocolo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_protocolo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_protocolo', 1, false);
 
 
 --
--- Name: seq_protocolo_modelo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_protocolo_modelo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_protocolo_modelo', 1, false);
 
 
 --
--- Name: seq_publicacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_publicacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_publicacao', 1, false);
 
 
 --
--- Name: seq_rel_protocolo_protocolo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_rel_protocolo_protocolo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_rel_protocolo_protocolo', 1, false);
 
 
 --
--- Name: seq_rel_unidade_tipo_contato; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_rel_unidade_tipo_contato; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_rel_unidade_tipo_contato', 8, false);
 
 
 --
--- Name: seq_retorno_programado; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_retorno_programado; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_retorno_programado', 1, false);
 
 
 --
--- Name: seq_secao_documento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_secao_documento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_secao_documento', 1, false);
 
 
 --
--- Name: seq_secao_imprensa_nacional; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_secao_imprensa_nacional; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_secao_imprensa_nacional', 3, true);
 
 
 --
--- Name: seq_secao_modelo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_secao_modelo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_secao_modelo', 775, true);
 
 
 --
--- Name: seq_serie; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_serie; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_serie', 282, true);
 
 
 --
--- Name: seq_serie_publicacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_serie_publicacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_serie_publicacao', 1, false);
 
 
 --
--- Name: seq_serie_restricao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_serie_restricao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_serie_restricao', 1, false);
 
 
 --
--- Name: seq_servico; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_servico; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_servico', 1, false);
 
 
 --
--- Name: seq_situacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_situacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_situacao', 1, false);
 
 
 --
--- Name: seq_tabela_assuntos; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tabela_assuntos; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tabela_assuntos', 1, true);
 
 
 --
--- Name: seq_tarefa; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tarefa; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tarefa', 136, true);
 
 
 --
--- Name: seq_tarja_assinatura; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tarja_assinatura; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tarja_assinatura', 9, true);
 
 
 --
--- Name: seq_texto_padrao_interno; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_texto_padrao_interno; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_texto_padrao_interno', 1, false);
 
 
 --
--- Name: seq_tipo_conferencia; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tipo_conferencia; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tipo_conferencia', 4, true);
 
 
 --
--- Name: seq_tipo_contato; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tipo_contato; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tipo_contato', 6, true);
 
 
 --
--- Name: seq_tipo_formulario; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tipo_formulario; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tipo_formulario', 1, false);
 
 
 --
--- Name: seq_tipo_localizador; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tipo_localizador; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tipo_localizador', 1, false);
 
 
 --
--- Name: seq_tipo_proced_restricao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tipo_proced_restricao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tipo_proced_restricao', 1, false);
 
 
 --
--- Name: seq_tipo_procedimento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tipo_procedimento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tipo_procedimento', 100000424, true);
 
 
 --
--- Name: seq_tipo_suporte; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tipo_suporte; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tipo_suporte', 8, true);
 
 
 --
--- Name: seq_titulo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_titulo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_titulo', 1, false);
 
 
 --
--- Name: seq_tratamento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_tratamento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_tratamento', 4, true);
 
 
 --
--- Name: seq_uf; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_uf; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_uf', 27, true);
 
 
 --
--- Name: seq_unidade_historico; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_unidade_historico; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_unidade_historico', 3, true);
 
 
 --
--- Name: seq_unidade_publicacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_unidade_publicacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_unidade_publicacao', 1, false);
 
 
 --
--- Name: seq_upload; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_upload; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_upload', 1, false);
 
 
 --
--- Name: seq_veiculo_imprensa_nacional; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_veiculo_imprensa_nacional; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_veiculo_imprensa_nacional', 1, true);
 
 
 --
--- Name: seq_veiculo_publicacao; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_veiculo_publicacao; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_veiculo_publicacao', 1, true);
 
 
 --
--- Name: seq_versao_secao_documento; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_versao_secao_documento; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_versao_secao_documento', 1, false);
 
 
 --
--- Name: seq_vocativo; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_vocativo; Type: SEQUENCE SET; Schema: public; Owner: sei_user
 --
 
 SELECT pg_catalog.setval('public.seq_vocativo', 63, true);
 
 
 --
--- Name: acao_federacao pk_acao_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acao_federacao pk_acao_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acao_federacao
@@ -60678,7 +60679,7 @@ ALTER TABLE ONLY public.acao_federacao
 
 
 --
--- Name: acesso pk_acesso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso pk_acesso; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso
@@ -60686,7 +60687,7 @@ ALTER TABLE ONLY public.acesso
 
 
 --
--- Name: acesso_externo pk_acesso_externo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_externo pk_acesso_externo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_externo
@@ -60694,7 +60695,7 @@ ALTER TABLE ONLY public.acesso_externo
 
 
 --
--- Name: acesso_federacao pk_acesso_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao pk_acesso_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -60702,7 +60703,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acompanhamento pk_acompanhamento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acompanhamento pk_acompanhamento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acompanhamento
@@ -60710,7 +60711,7 @@ ALTER TABLE ONLY public.acompanhamento
 
 
 --
--- Name: andamento_instalacao pk_andamento_instalacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_instalacao pk_andamento_instalacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_instalacao
@@ -60718,7 +60719,7 @@ ALTER TABLE ONLY public.andamento_instalacao
 
 
 --
--- Name: andamento_marcador pk_andamento_marcador; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_marcador pk_andamento_marcador; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_marcador
@@ -60726,7 +60727,7 @@ ALTER TABLE ONLY public.andamento_marcador
 
 
 --
--- Name: andamento_situacao pk_andamento_situacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_situacao pk_andamento_situacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_situacao
@@ -60734,7 +60735,7 @@ ALTER TABLE ONLY public.andamento_situacao
 
 
 --
--- Name: anexo pk_anexo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anexo pk_anexo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anexo
@@ -60742,7 +60743,7 @@ ALTER TABLE ONLY public.anexo
 
 
 --
--- Name: anotacao pk_anotacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anotacao pk_anotacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anotacao
@@ -60750,7 +60751,7 @@ ALTER TABLE ONLY public.anotacao
 
 
 --
--- Name: arquivamento pk_arquivamento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento pk_arquivamento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -60758,7 +60759,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: arquivo_extensao pk_arquivo_extensao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivo_extensao pk_arquivo_extensao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivo_extensao
@@ -60766,7 +60767,7 @@ ALTER TABLE ONLY public.arquivo_extensao
 
 
 --
--- Name: assinante pk_assinante; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinante pk_assinante; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinante
@@ -60774,7 +60775,7 @@ ALTER TABLE ONLY public.assinante
 
 
 --
--- Name: assinatura pk_assinatura; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinatura pk_assinatura; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinatura
@@ -60782,7 +60783,7 @@ ALTER TABLE ONLY public.assinatura
 
 
 --
--- Name: assunto pk_assunto; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assunto pk_assunto; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assunto
@@ -60790,7 +60791,7 @@ ALTER TABLE ONLY public.assunto
 
 
 --
--- Name: assunto_proxy pk_assunto_proxy; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assunto_proxy pk_assunto_proxy; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assunto_proxy
@@ -60798,7 +60799,7 @@ ALTER TABLE ONLY public.assunto_proxy
 
 
 --
--- Name: atividade pk_atividade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade pk_atividade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -60806,7 +60807,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atributo pk_atributo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atributo pk_atributo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atributo
@@ -60814,7 +60815,7 @@ ALTER TABLE ONLY public.atributo
 
 
 --
--- Name: atributo_andamento pk_atributo_andamento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atributo_andamento pk_atributo_andamento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atributo_andamento
@@ -60822,7 +60823,7 @@ ALTER TABLE ONLY public.atributo_andamento
 
 
 --
--- Name: atributo_instalacao pk_atributo_instalacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atributo_instalacao pk_atributo_instalacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atributo_instalacao
@@ -60830,7 +60831,7 @@ ALTER TABLE ONLY public.atributo_instalacao
 
 
 --
--- Name: auditoria_protocolo pk_auditoria_protocolo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: auditoria_protocolo pk_auditoria_protocolo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.auditoria_protocolo
@@ -60838,7 +60839,7 @@ ALTER TABLE ONLY public.auditoria_protocolo
 
 
 --
--- Name: base_conhecimento pk_base_conhecimento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: base_conhecimento pk_base_conhecimento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.base_conhecimento
@@ -60846,7 +60847,7 @@ ALTER TABLE ONLY public.base_conhecimento
 
 
 --
--- Name: bloco pk_bloco; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: bloco pk_bloco; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.bloco
@@ -60854,7 +60855,7 @@ ALTER TABLE ONLY public.bloco
 
 
 --
--- Name: campo_pesquisa pk_campo_pesquisa; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: campo_pesquisa pk_campo_pesquisa; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.campo_pesquisa
@@ -60862,7 +60863,7 @@ ALTER TABLE ONLY public.campo_pesquisa
 
 
 --
--- Name: cargo pk_cargo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cargo pk_cargo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cargo
@@ -60870,7 +60871,7 @@ ALTER TABLE ONLY public.cargo
 
 
 --
--- Name: cargo_funcao pk_cargo_funcao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cargo_funcao pk_cargo_funcao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cargo_funcao
@@ -60878,7 +60879,7 @@ ALTER TABLE ONLY public.cargo_funcao
 
 
 --
--- Name: categoria pk_categoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: categoria pk_categoria; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.categoria
@@ -60886,7 +60887,7 @@ ALTER TABLE ONLY public.categoria
 
 
 --
--- Name: cidade pk_cidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cidade pk_cidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cidade
@@ -60894,7 +60895,7 @@ ALTER TABLE ONLY public.cidade
 
 
 --
--- Name: comentario pk_comentario; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: comentario pk_comentario; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.comentario
@@ -60902,7 +60903,7 @@ ALTER TABLE ONLY public.comentario
 
 
 --
--- Name: conjunto_estilos pk_conjunto_estilos; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: conjunto_estilos pk_conjunto_estilos; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.conjunto_estilos
@@ -60910,7 +60911,7 @@ ALTER TABLE ONLY public.conjunto_estilos
 
 
 --
--- Name: conjunto_estilos_item pk_conjunto_estilos_item; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: conjunto_estilos_item pk_conjunto_estilos_item; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.conjunto_estilos_item
@@ -60918,7 +60919,7 @@ ALTER TABLE ONLY public.conjunto_estilos_item
 
 
 --
--- Name: contato pk_contato; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato pk_contato; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -60926,7 +60927,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: controle_interno pk_controle_interno; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: controle_interno pk_controle_interno; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.controle_interno
@@ -60934,7 +60935,7 @@ ALTER TABLE ONLY public.controle_interno
 
 
 --
--- Name: controle_unidade pk_controle_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: controle_unidade pk_controle_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.controle_unidade
@@ -60942,7 +60943,7 @@ ALTER TABLE ONLY public.controle_unidade
 
 
 --
--- Name: documento pk_documento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento pk_documento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -60950,7 +60951,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: documento_conteudo pk_documento_conteudo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento_conteudo pk_documento_conteudo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento_conteudo
@@ -60958,7 +60959,7 @@ ALTER TABLE ONLY public.documento_conteudo
 
 
 --
--- Name: dominio pk_dominio; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: dominio pk_dominio; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.dominio
@@ -60966,7 +60967,7 @@ ALTER TABLE ONLY public.dominio
 
 
 --
--- Name: email_grupo_email pk_email_grupo_email; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_grupo_email pk_email_grupo_email; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.email_grupo_email
@@ -60974,7 +60975,7 @@ ALTER TABLE ONLY public.email_grupo_email
 
 
 --
--- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.email_sistema
@@ -60982,7 +60983,7 @@ ALTER TABLE ONLY public.email_sistema
 
 
 --
--- Name: email_unidade pk_email_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_unidade pk_email_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.email_unidade
@@ -60990,7 +60991,7 @@ ALTER TABLE ONLY public.email_unidade
 
 
 --
--- Name: email_utilizado pk_email_utilizado; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_utilizado pk_email_utilizado; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.email_utilizado
@@ -60998,7 +60999,7 @@ ALTER TABLE ONLY public.email_utilizado
 
 
 --
--- Name: estilo pk_estilo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: estilo pk_estilo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.estilo
@@ -61006,7 +61007,7 @@ ALTER TABLE ONLY public.estilo
 
 
 --
--- Name: feed pk_feed; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: feed pk_feed; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.feed
@@ -61014,7 +61015,7 @@ ALTER TABLE ONLY public.feed
 
 
 --
--- Name: feriado pk_feriado; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: feriado pk_feriado; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.feriado
@@ -61022,7 +61023,7 @@ ALTER TABLE ONLY public.feriado
 
 
 --
--- Name: grupo_acompanhamento pk_grupo_acompanhamento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_acompanhamento pk_grupo_acompanhamento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_acompanhamento
@@ -61030,7 +61031,7 @@ ALTER TABLE ONLY public.grupo_acompanhamento
 
 
 --
--- Name: grupo_bloco pk_grupo_bloco; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_bloco pk_grupo_bloco; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_bloco
@@ -61038,7 +61039,7 @@ ALTER TABLE ONLY public.grupo_bloco
 
 
 --
--- Name: grupo_contato pk_grupo_contato; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_contato pk_grupo_contato; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_contato
@@ -61046,7 +61047,7 @@ ALTER TABLE ONLY public.grupo_contato
 
 
 --
--- Name: grupo_email pk_grupo_email; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_email pk_grupo_email; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_email
@@ -61054,7 +61055,7 @@ ALTER TABLE ONLY public.grupo_email
 
 
 --
--- Name: grupo_federacao pk_grupo_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_federacao pk_grupo_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_federacao
@@ -61062,7 +61063,7 @@ ALTER TABLE ONLY public.grupo_federacao
 
 
 --
--- Name: grupo_protocolo_modelo pk_grupo_protocolo_modelo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_protocolo_modelo pk_grupo_protocolo_modelo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_protocolo_modelo
@@ -61070,7 +61071,7 @@ ALTER TABLE ONLY public.grupo_protocolo_modelo
 
 
 --
--- Name: grupo_serie pk_grupo_serie; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_serie pk_grupo_serie; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_serie
@@ -61078,7 +61079,7 @@ ALTER TABLE ONLY public.grupo_serie
 
 
 --
--- Name: grupo_unidade pk_grupo_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_unidade pk_grupo_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_unidade
@@ -61086,7 +61087,7 @@ ALTER TABLE ONLY public.grupo_unidade
 
 
 --
--- Name: hipotese_legal pk_hipotese_legal; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: hipotese_legal pk_hipotese_legal; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.hipotese_legal
@@ -61094,7 +61095,7 @@ ALTER TABLE ONLY public.hipotese_legal
 
 
 --
--- Name: imagem_formato pk_imagem_formato; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: imagem_formato pk_imagem_formato; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.imagem_formato
@@ -61102,7 +61103,7 @@ ALTER TABLE ONLY public.imagem_formato
 
 
 --
--- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_agendamento_tarefa
@@ -61110,7 +61111,7 @@ ALTER TABLE ONLY public.infra_agendamento_tarefa
 
 
 --
--- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_auditoria
@@ -61118,7 +61119,7 @@ ALTER TABLE ONLY public.infra_auditoria
 
 
 --
--- Name: infra_dado_usuario pk_infra_dado_usuario; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_dado_usuario pk_infra_dado_usuario; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_dado_usuario
@@ -61126,7 +61127,7 @@ ALTER TABLE ONLY public.infra_dado_usuario
 
 
 --
--- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_log
@@ -61134,7 +61135,7 @@ ALTER TABLE ONLY public.infra_log
 
 
 --
--- Name: infra_navegador pk_infra_navegador; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_navegador pk_infra_navegador; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_navegador
@@ -61142,7 +61143,7 @@ ALTER TABLE ONLY public.infra_navegador
 
 
 --
--- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_parametro
@@ -61150,7 +61151,7 @@ ALTER TABLE ONLY public.infra_parametro
 
 
 --
--- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria
@@ -61158,7 +61159,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria
 
 
 --
--- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -61166,7 +61167,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_sequencia
@@ -61174,7 +61175,7 @@ ALTER TABLE ONLY public.infra_sequencia
 
 
 --
--- Name: instalacao_federacao pk_instalacao_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: instalacao_federacao pk_instalacao_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.instalacao_federacao
@@ -61182,7 +61183,7 @@ ALTER TABLE ONLY public.instalacao_federacao
 
 
 --
--- Name: lembrete pk_lembrete; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lembrete pk_lembrete; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.lembrete
@@ -61190,7 +61191,7 @@ ALTER TABLE ONLY public.lembrete
 
 
 --
--- Name: localizador pk_localizador; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: localizador pk_localizador; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.localizador
@@ -61198,7 +61199,7 @@ ALTER TABLE ONLY public.localizador
 
 
 --
--- Name: lugar_localizador pk_lugar_localizador; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lugar_localizador pk_lugar_localizador; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.lugar_localizador
@@ -61206,7 +61207,7 @@ ALTER TABLE ONLY public.lugar_localizador
 
 
 --
--- Name: mapeamento_assunto pk_mapeamento_assunto; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mapeamento_assunto pk_mapeamento_assunto; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.mapeamento_assunto
@@ -61214,7 +61215,7 @@ ALTER TABLE ONLY public.mapeamento_assunto
 
 
 --
--- Name: marcador pk_marcador; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: marcador pk_marcador; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.marcador
@@ -61222,7 +61223,7 @@ ALTER TABLE ONLY public.marcador
 
 
 --
--- Name: modelo pk_modelo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: modelo pk_modelo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.modelo
@@ -61230,7 +61231,7 @@ ALTER TABLE ONLY public.modelo
 
 
 --
--- Name: monitoramento_servico pk_monitoramento_servico; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: monitoramento_servico pk_monitoramento_servico; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.monitoramento_servico
@@ -61238,7 +61239,7 @@ ALTER TABLE ONLY public.monitoramento_servico
 
 
 --
--- Name: nivel_acesso_permitido pk_nivel_acesso_permitido; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: nivel_acesso_permitido pk_nivel_acesso_permitido; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.nivel_acesso_permitido
@@ -61246,7 +61247,7 @@ ALTER TABLE ONLY public.nivel_acesso_permitido
 
 
 --
--- Name: notificacao pk_notificacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: notificacao pk_notificacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.notificacao
@@ -61254,7 +61255,7 @@ ALTER TABLE ONLY public.notificacao
 
 
 --
--- Name: novidade pk_novidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: novidade pk_novidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.novidade
@@ -61262,7 +61263,7 @@ ALTER TABLE ONLY public.novidade
 
 
 --
--- Name: numeracao pk_numeracao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: numeracao pk_numeracao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.numeracao
@@ -61270,7 +61271,7 @@ ALTER TABLE ONLY public.numeracao
 
 
 --
--- Name: observacao pk_observacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: observacao pk_observacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.observacao
@@ -61278,7 +61279,7 @@ ALTER TABLE ONLY public.observacao
 
 
 --
--- Name: operacao_servico pk_operacao_servico; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: operacao_servico pk_operacao_servico; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.operacao_servico
@@ -61286,7 +61287,7 @@ ALTER TABLE ONLY public.operacao_servico
 
 
 --
--- Name: ordenador_despesa pk_ordenador_despesa; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ordenador_despesa pk_ordenador_despesa; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.ordenador_despesa
@@ -61294,7 +61295,7 @@ ALTER TABLE ONLY public.ordenador_despesa
 
 
 --
--- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao
@@ -61302,7 +61303,7 @@ ALTER TABLE ONLY public.orgao
 
 
 --
--- Name: orgao_federacao pk_orgao_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao_federacao pk_orgao_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao_federacao
@@ -61310,7 +61311,7 @@ ALTER TABLE ONLY public.orgao_federacao
 
 
 --
--- Name: orgao_historico pk_orgao_historico; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao_historico pk_orgao_historico; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao_historico
@@ -61318,7 +61319,7 @@ ALTER TABLE ONLY public.orgao_historico
 
 
 --
--- Name: pais pk_pais; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pais pk_pais; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.pais
@@ -61326,7 +61327,7 @@ ALTER TABLE ONLY public.pais
 
 
 --
--- Name: parametro_acao_federacao pk_parametro_acao_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: parametro_acao_federacao pk_parametro_acao_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.parametro_acao_federacao
@@ -61334,7 +61335,7 @@ ALTER TABLE ONLY public.parametro_acao_federacao
 
 
 --
--- Name: participante pk_participante; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: participante pk_participante; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.participante
@@ -61342,7 +61343,7 @@ ALTER TABLE ONLY public.participante
 
 
 --
--- Name: pesquisa pk_pesquisa; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pesquisa pk_pesquisa; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.pesquisa
@@ -61350,7 +61351,7 @@ ALTER TABLE ONLY public.pesquisa
 
 
 --
--- Name: procedimento pk_procedimento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: procedimento pk_procedimento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.procedimento
@@ -61358,7 +61359,7 @@ ALTER TABLE ONLY public.procedimento
 
 
 --
--- Name: protocolo pk_protocolo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo pk_protocolo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo
@@ -61366,7 +61367,7 @@ ALTER TABLE ONLY public.protocolo
 
 
 --
--- Name: protocolo_federacao pk_protocolo_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo_federacao pk_protocolo_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo_federacao
@@ -61374,7 +61375,7 @@ ALTER TABLE ONLY public.protocolo_federacao
 
 
 --
--- Name: protocolo_modelo pk_protocolo_modelo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo_modelo pk_protocolo_modelo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo_modelo
@@ -61382,7 +61383,7 @@ ALTER TABLE ONLY public.protocolo_modelo
 
 
 --
--- Name: publicacao pk_publicacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao pk_publicacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -61390,7 +61391,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: publicacao_legado pk_publicacao_legado; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao_legado pk_publicacao_legado; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao_legado
@@ -61398,7 +61399,7 @@ ALTER TABLE ONLY public.publicacao_legado
 
 
 --
--- Name: rel_acesso_ext_protocolo pk_rel_acesso_ext_protocolo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_protocolo pk_rel_acesso_ext_protocolo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_acesso_ext_protocolo
@@ -61406,7 +61407,7 @@ ALTER TABLE ONLY public.rel_acesso_ext_protocolo
 
 
 --
--- Name: rel_acesso_ext_serie pk_rel_acesso_ext_serie; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_serie pk_rel_acesso_ext_serie; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_acesso_ext_serie
@@ -61414,7 +61415,7 @@ ALTER TABLE ONLY public.rel_acesso_ext_serie
 
 
 --
--- Name: rel_assinante_unidade pk_rel_assinante_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_assinante_unidade pk_rel_assinante_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_assinante_unidade
@@ -61422,7 +61423,7 @@ ALTER TABLE ONLY public.rel_assinante_unidade
 
 
 --
--- Name: rel_base_conhec_tipo_proced pk_rel_base_conhec_tipo_proced; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_base_conhec_tipo_proced pk_rel_base_conhec_tipo_proced; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_base_conhec_tipo_proced
@@ -61430,7 +61431,7 @@ ALTER TABLE ONLY public.rel_base_conhec_tipo_proced
 
 
 --
--- Name: rel_bloco_protocolo pk_rel_bloco_protocolo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_protocolo pk_rel_bloco_protocolo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_protocolo
@@ -61438,7 +61439,7 @@ ALTER TABLE ONLY public.rel_bloco_protocolo
 
 
 --
--- Name: rel_bloco_unidade pk_rel_bloco_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade pk_rel_bloco_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -61446,7 +61447,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_controle_interno_tipo_proc pk_rel_controle_inter_tp_proc; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_tipo_proc pk_rel_controle_inter_tp_proc; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_tipo_proc
@@ -61454,7 +61455,7 @@ ALTER TABLE ONLY public.rel_controle_interno_tipo_proc
 
 
 --
--- Name: rel_controle_interno_orgao pk_rel_controle_interno_orgao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_orgao pk_rel_controle_interno_orgao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_orgao
@@ -61462,7 +61463,7 @@ ALTER TABLE ONLY public.rel_controle_interno_orgao
 
 
 --
--- Name: rel_controle_interno_serie pk_rel_controle_interno_serie; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_serie pk_rel_controle_interno_serie; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_serie
@@ -61470,7 +61471,7 @@ ALTER TABLE ONLY public.rel_controle_interno_serie
 
 
 --
--- Name: rel_controle_interno_unidade pk_rel_controle_interno_unid; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_unidade pk_rel_controle_interno_unid; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_unidade
@@ -61478,7 +61479,7 @@ ALTER TABLE ONLY public.rel_controle_interno_unidade
 
 
 --
--- Name: rel_grupo_contato pk_rel_grupo_contato; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_contato pk_rel_grupo_contato; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_contato
@@ -61486,7 +61487,7 @@ ALTER TABLE ONLY public.rel_grupo_contato
 
 
 --
--- Name: rel_grupo_fed_orgao_fed pk_rel_grupo_fed_orgao_fed; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_fed_orgao_fed pk_rel_grupo_fed_orgao_fed; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_fed_orgao_fed
@@ -61494,7 +61495,7 @@ ALTER TABLE ONLY public.rel_grupo_fed_orgao_fed
 
 
 --
--- Name: rel_grupo_unidade_unidade pk_rel_grupo_unidade_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_unidade_unidade pk_rel_grupo_unidade_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_unidade_unidade
@@ -61502,7 +61503,7 @@ ALTER TABLE ONLY public.rel_grupo_unidade_unidade
 
 
 --
--- Name: rel_notificacao_documento pk_rel_notificacao_documento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_notificacao_documento pk_rel_notificacao_documento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_notificacao_documento
@@ -61510,7 +61511,7 @@ ALTER TABLE ONLY public.rel_notificacao_documento
 
 
 --
--- Name: rel_protocolo_assunto pk_rel_protocolo_assunto; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_assunto pk_rel_protocolo_assunto; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_assunto
@@ -61518,7 +61519,7 @@ ALTER TABLE ONLY public.rel_protocolo_assunto
 
 
 --
--- Name: rel_protocolo_atributo pk_rel_protocolo_atributo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_atributo pk_rel_protocolo_atributo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_atributo
@@ -61526,7 +61527,7 @@ ALTER TABLE ONLY public.rel_protocolo_atributo
 
 
 --
--- Name: rel_protocolo_protocolo pk_rel_protocolo_protocolo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_protocolo pk_rel_protocolo_protocolo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_protocolo
@@ -61534,7 +61535,7 @@ ALTER TABLE ONLY public.rel_protocolo_protocolo
 
 
 --
--- Name: rel_secao_mod_cj_estilos_item pk_rel_secao_mod_cj_estilos_it; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_secao_mod_cj_estilos_item pk_rel_secao_mod_cj_estilos_it; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_secao_mod_cj_estilos_item
@@ -61542,7 +61543,7 @@ ALTER TABLE ONLY public.rel_secao_mod_cj_estilos_item
 
 
 --
--- Name: rel_secao_modelo_estilo pk_rel_secao_modelo_estilo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_secao_modelo_estilo pk_rel_secao_modelo_estilo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_secao_modelo_estilo
@@ -61550,7 +61551,7 @@ ALTER TABLE ONLY public.rel_secao_modelo_estilo
 
 
 --
--- Name: rel_serie_assunto pk_rel_serie_assunto; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_serie_assunto pk_rel_serie_assunto; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_serie_assunto
@@ -61558,7 +61559,7 @@ ALTER TABLE ONLY public.rel_serie_assunto
 
 
 --
--- Name: rel_serie_veiculo_publicacao pk_rel_serie_veiculo_pub; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_serie_veiculo_publicacao pk_rel_serie_veiculo_pub; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_serie_veiculo_publicacao
@@ -61566,7 +61567,7 @@ ALTER TABLE ONLY public.rel_serie_veiculo_publicacao
 
 
 --
--- Name: rel_situacao_unidade pk_rel_situacao_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_situacao_unidade pk_rel_situacao_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_situacao_unidade
@@ -61574,7 +61575,7 @@ ALTER TABLE ONLY public.rel_situacao_unidade
 
 
 --
--- Name: rel_tipo_procedimento_assunto pk_rel_tipo_proced_assunto; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_tipo_procedimento_assunto pk_rel_tipo_proced_assunto; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_tipo_procedimento_assunto
@@ -61582,7 +61583,7 @@ ALTER TABLE ONLY public.rel_tipo_procedimento_assunto
 
 
 --
--- Name: rel_unidade_tipo_contato pk_rel_unidade_tipo_contato; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_unidade_tipo_contato pk_rel_unidade_tipo_contato; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_unidade_tipo_contato
@@ -61590,7 +61591,7 @@ ALTER TABLE ONLY public.rel_unidade_tipo_contato
 
 
 --
--- Name: rel_usuario_grupo_acomp pk_rel_usuario_grupo_acomp; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_acomp pk_rel_usuario_grupo_acomp; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_grupo_acomp
@@ -61598,7 +61599,7 @@ ALTER TABLE ONLY public.rel_usuario_grupo_acomp
 
 
 --
--- Name: rel_usuario_grupo_bloco pk_rel_usuario_grupo_bloco; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_bloco pk_rel_usuario_grupo_bloco; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_grupo_bloco
@@ -61606,7 +61607,7 @@ ALTER TABLE ONLY public.rel_usuario_grupo_bloco
 
 
 --
--- Name: rel_usuario_marcador pk_rel_usuario_marcad_usuario; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_marcador pk_rel_usuario_marcad_usuario; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_marcador
@@ -61614,7 +61615,7 @@ ALTER TABLE ONLY public.rel_usuario_marcador
 
 
 --
--- Name: rel_usuario_tipo_proced pk_rel_usuario_tipo_proced; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_tipo_proced pk_rel_usuario_tipo_proced; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_tipo_proced
@@ -61622,7 +61623,7 @@ ALTER TABLE ONLY public.rel_usuario_tipo_proced
 
 
 --
--- Name: rel_usuario_usuario_unidade pk_rel_usuario_usuario_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_usuario_unidade pk_rel_usuario_usuario_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_usuario_unidade
@@ -61630,7 +61631,7 @@ ALTER TABLE ONLY public.rel_usuario_usuario_unidade
 
 
 --
--- Name: replicacao_federacao pk_replicacao_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: replicacao_federacao pk_replicacao_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.replicacao_federacao
@@ -61638,7 +61639,7 @@ ALTER TABLE ONLY public.replicacao_federacao
 
 
 --
--- Name: retorno_programado pk_retorno_programado; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: retorno_programado pk_retorno_programado; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.retorno_programado
@@ -61646,7 +61647,7 @@ ALTER TABLE ONLY public.retorno_programado
 
 
 --
--- Name: secao_documento pk_secao_documento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_documento pk_secao_documento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_documento
@@ -61654,7 +61655,7 @@ ALTER TABLE ONLY public.secao_documento
 
 
 --
--- Name: secao_imprensa_nacional pk_secao_imprensa_nacional; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_imprensa_nacional pk_secao_imprensa_nacional; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_imprensa_nacional
@@ -61662,7 +61663,7 @@ ALTER TABLE ONLY public.secao_imprensa_nacional
 
 
 --
--- Name: secao_modelo pk_secao_modelo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_modelo pk_secao_modelo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_modelo
@@ -61670,7 +61671,7 @@ ALTER TABLE ONLY public.secao_modelo
 
 
 --
--- Name: serie pk_serie; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie pk_serie; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie
@@ -61678,7 +61679,7 @@ ALTER TABLE ONLY public.serie
 
 
 --
--- Name: serie_escolha pk_serie_escolha; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_escolha pk_serie_escolha; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_escolha
@@ -61686,7 +61687,7 @@ ALTER TABLE ONLY public.serie_escolha
 
 
 --
--- Name: serie_publicacao pk_serie_publicacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_publicacao pk_serie_publicacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_publicacao
@@ -61694,7 +61695,7 @@ ALTER TABLE ONLY public.serie_publicacao
 
 
 --
--- Name: serie_restricao pk_serie_restricao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_restricao pk_serie_restricao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_restricao
@@ -61702,7 +61703,7 @@ ALTER TABLE ONLY public.serie_restricao
 
 
 --
--- Name: servico pk_servico; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: servico pk_servico; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.servico
@@ -61710,7 +61711,7 @@ ALTER TABLE ONLY public.servico
 
 
 --
--- Name: sinalizacao_federacao pk_sinalizacao_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sinalizacao_federacao pk_sinalizacao_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.sinalizacao_federacao
@@ -61718,7 +61719,7 @@ ALTER TABLE ONLY public.sinalizacao_federacao
 
 
 --
--- Name: situacao pk_situacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: situacao pk_situacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.situacao
@@ -61726,7 +61727,7 @@ ALTER TABLE ONLY public.situacao
 
 
 --
--- Name: tabela_assuntos pk_tabela_assuntos; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tabela_assuntos pk_tabela_assuntos; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tabela_assuntos
@@ -61734,7 +61735,7 @@ ALTER TABLE ONLY public.tabela_assuntos
 
 
 --
--- Name: tarefa pk_tarefa; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tarefa pk_tarefa; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tarefa
@@ -61742,7 +61743,7 @@ ALTER TABLE ONLY public.tarefa
 
 
 --
--- Name: tarefa_instalacao pk_tarefa_instalacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tarefa_instalacao pk_tarefa_instalacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tarefa_instalacao
@@ -61750,7 +61751,7 @@ ALTER TABLE ONLY public.tarefa_instalacao
 
 
 --
--- Name: tarja_assinatura pk_tarja_assinatura; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tarja_assinatura pk_tarja_assinatura; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tarja_assinatura
@@ -61758,7 +61759,7 @@ ALTER TABLE ONLY public.tarja_assinatura
 
 
 --
--- Name: texto_padrao_interno pk_texto_padrao_interno; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: texto_padrao_interno pk_texto_padrao_interno; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.texto_padrao_interno
@@ -61766,7 +61767,7 @@ ALTER TABLE ONLY public.texto_padrao_interno
 
 
 --
--- Name: tipo_conferencia pk_tipo_conferencia; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_conferencia pk_tipo_conferencia; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_conferencia
@@ -61774,7 +61775,7 @@ ALTER TABLE ONLY public.tipo_conferencia
 
 
 --
--- Name: tipo_contato pk_tipo_contato; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_contato pk_tipo_contato; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_contato
@@ -61782,7 +61783,7 @@ ALTER TABLE ONLY public.tipo_contato
 
 
 --
--- Name: tipo_formulario pk_tipo_formulario; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_formulario pk_tipo_formulario; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_formulario
@@ -61790,7 +61791,7 @@ ALTER TABLE ONLY public.tipo_formulario
 
 
 --
--- Name: tipo_localizador pk_tipo_localizador; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_localizador pk_tipo_localizador; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_localizador
@@ -61798,7 +61799,7 @@ ALTER TABLE ONLY public.tipo_localizador
 
 
 --
--- Name: tipo_proced_restricao pk_tipo_proced_restricao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_proced_restricao pk_tipo_proced_restricao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_proced_restricao
@@ -61806,7 +61807,7 @@ ALTER TABLE ONLY public.tipo_proced_restricao
 
 
 --
--- Name: tipo_procedimento pk_tipo_procedimento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_procedimento pk_tipo_procedimento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_procedimento
@@ -61814,7 +61815,7 @@ ALTER TABLE ONLY public.tipo_procedimento
 
 
 --
--- Name: tipo_procedimento_escolha pk_tipo_procedimento_escolha; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_procedimento_escolha pk_tipo_procedimento_escolha; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_procedimento_escolha
@@ -61822,7 +61823,7 @@ ALTER TABLE ONLY public.tipo_procedimento_escolha
 
 
 --
--- Name: tipo_suporte pk_tipo_suporte; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_suporte pk_tipo_suporte; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_suporte
@@ -61830,7 +61831,7 @@ ALTER TABLE ONLY public.tipo_suporte
 
 
 --
--- Name: titulo pk_titulo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: titulo pk_titulo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.titulo
@@ -61838,7 +61839,7 @@ ALTER TABLE ONLY public.titulo
 
 
 --
--- Name: tratamento pk_tratamento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tratamento pk_tratamento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tratamento
@@ -61846,7 +61847,7 @@ ALTER TABLE ONLY public.tratamento
 
 
 --
--- Name: uf pk_uf; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: uf pk_uf; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.uf
@@ -61854,7 +61855,7 @@ ALTER TABLE ONLY public.uf
 
 
 --
--- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -61862,7 +61863,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: unidade_federacao pk_unidade_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade_federacao pk_unidade_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade_federacao
@@ -61870,7 +61871,7 @@ ALTER TABLE ONLY public.unidade_federacao
 
 
 --
--- Name: unidade_historico pk_unidade_historico; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade_historico pk_unidade_historico; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade_historico
@@ -61878,7 +61879,7 @@ ALTER TABLE ONLY public.unidade_historico
 
 
 --
--- Name: unidade_publicacao pk_unidade_publicacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade_publicacao pk_unidade_publicacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade_publicacao
@@ -61886,7 +61887,7 @@ ALTER TABLE ONLY public.unidade_publicacao
 
 
 --
--- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -61894,7 +61895,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- Name: usuario_federacao pk_usuario_federacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_federacao pk_usuario_federacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.usuario_federacao
@@ -61902,7 +61903,7 @@ ALTER TABLE ONLY public.usuario_federacao
 
 
 --
--- Name: veiculo_imprensa_nacional pk_veiculo_imprensa_nacional; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: veiculo_imprensa_nacional pk_veiculo_imprensa_nacional; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.veiculo_imprensa_nacional
@@ -61910,7 +61911,7 @@ ALTER TABLE ONLY public.veiculo_imprensa_nacional
 
 
 --
--- Name: veiculo_publicacao pk_veiculo_publicacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: veiculo_publicacao pk_veiculo_publicacao; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.veiculo_publicacao
@@ -61918,7 +61919,7 @@ ALTER TABLE ONLY public.veiculo_publicacao
 
 
 --
--- Name: velocidade_transferencia pk_velocidade_transferencia; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: velocidade_transferencia pk_velocidade_transferencia; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.velocidade_transferencia
@@ -61926,7 +61927,7 @@ ALTER TABLE ONLY public.velocidade_transferencia
 
 
 --
--- Name: versao_secao_documento pk_versao_secao_documento; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: versao_secao_documento pk_versao_secao_documento; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.versao_secao_documento
@@ -61934,7 +61935,7 @@ ALTER TABLE ONLY public.versao_secao_documento
 
 
 --
--- Name: vocativo pk_vocativo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: vocativo pk_vocativo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.vocativo
@@ -61942,7 +61943,7 @@ ALTER TABLE ONLY public.vocativo
 
 
 --
--- Name: controle_prazo pkcontrole_prazo; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: controle_prazo pkcontrole_prazo; Type: CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.controle_prazo
@@ -61950,2989 +61951,2989 @@ ALTER TABLE ONLY public.controle_prazo
 
 
 --
--- Name: ak1_anexo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_anexo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_anexo ON public.anexo USING btree (id_anexo, sin_ativo);
 
 
 --
--- Name: ak1_assinatura; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_assinatura; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_assinatura ON public.assinatura USING btree (id_documento, id_usuario);
 
 
 --
--- Name: ak1_cidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_cidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_cidade ON public.cidade USING btree (id_uf, nome);
 
 
 --
--- Name: ak1_localizador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_localizador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_localizador ON public.localizador USING btree (id_tipo_localizador, id_unidade, seq_localizador);
 
 
 --
--- Name: ak1_lugar_localizador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_lugar_localizador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_lugar_localizador ON public.lugar_localizador USING btree (id_unidade, nome);
 
 
 --
--- Name: ak1_observacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_observacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_observacao ON public.observacao USING btree (id_protocolo, id_unidade);
 
 
 --
--- Name: ak1_participante; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_participante; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_participante ON public.participante USING btree (id_contato, id_protocolo, sta_participacao);
 
 
 --
--- Name: ak1_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_protocolo ON public.protocolo USING btree (id_protocolo, sta_protocolo);
 
 
 --
--- Name: ak1_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_serie ON public.serie USING btree (nome, sin_ativo);
 
 
 --
--- Name: ak1_tipo_localizador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_tipo_localizador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_tipo_localizador ON public.tipo_localizador USING btree (id_unidade, sigla);
 
 
 --
--- Name: ak1_tipo_suporte; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak1_tipo_suporte; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak1_tipo_suporte ON public.tipo_suporte USING btree (nome);
 
 
 --
--- Name: ak2_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak2_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak2_protocolo ON public.protocolo USING btree (protocolo_formatado);
 
 
 --
--- Name: ak_cnjp; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_cnjp; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak_cnjp ON public.instalacao_federacao USING btree (cnpj);
 
 
 --
--- Name: ak_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak_documento ON public.documento USING btree (id_documento, id_procedimento);
 
 
 --
--- Name: ak_numeracao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_numeracao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak_numeracao ON public.numeracao USING btree (ano, id_orgao, id_serie, id_unidade);
 
 
 --
--- Name: ak_tipo_arquivo_nome; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_tipo_arquivo_nome; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX ak_tipo_arquivo_nome ON public.tipo_localizador USING btree (id_unidade, nome);
 
 
 --
--- Name: fk_acesso_controle_interno; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_controle_interno; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_controle_interno ON public.acesso USING btree (id_controle_interno);
 
 
 --
--- Name: fk_acesso_externo_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_externo_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_externo_atividade ON public.acesso_externo USING btree (id_atividade);
 
 
 --
--- Name: fk_acesso_externo_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_externo_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_externo_documento ON public.acesso_externo USING btree (id_documento);
 
 
 --
--- Name: fk_acesso_externo_participante; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_externo_participante; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_externo_participante ON public.acesso_externo USING btree (id_participante);
 
 
 --
--- Name: fk_acesso_fed_documento_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_documento_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_documento_fed ON public.acesso_federacao USING btree (id_documento_federacao);
 
 
 --
--- Name: fk_acesso_fed_instal_fed_dest; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_instal_fed_dest; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_instal_fed_dest ON public.acesso_federacao USING btree (id_instalacao_federacao_dest);
 
 
 --
--- Name: fk_acesso_fed_instal_fed_rem; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_instal_fed_rem; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_instal_fed_rem ON public.acesso_federacao USING btree (id_instalacao_federacao_rem);
 
 
 --
--- Name: fk_acesso_fed_orgao_fed_dest; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_orgao_fed_dest; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_orgao_fed_dest ON public.acesso_federacao USING btree (id_orgao_federacao_dest);
 
 
 --
--- Name: fk_acesso_fed_orgao_fed_rem; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_orgao_fed_rem; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_orgao_fed_rem ON public.acesso_federacao USING btree (id_orgao_federacao_rem);
 
 
 --
--- Name: fk_acesso_fed_procedimento_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_procedimento_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_procedimento_fed ON public.acesso_federacao USING btree (id_procedimento_federacao);
 
 
 --
--- Name: fk_acesso_fed_unidade_fed_dest; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_unidade_fed_dest; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_unidade_fed_dest ON public.acesso_federacao USING btree (id_unidade_federacao_dest);
 
 
 --
--- Name: fk_acesso_fed_unidade_fed_rem; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_unidade_fed_rem; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_unidade_fed_rem ON public.acesso_federacao USING btree (id_unidade_federacao_rem);
 
 
 --
--- Name: fk_acesso_fed_usuario_fed_dest; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_usuario_fed_dest; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_usuario_fed_dest ON public.acesso_federacao USING btree (id_usuario_federacao_dest);
 
 
 --
--- Name: fk_acesso_fed_usuario_fed_rem; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_fed_usuario_fed_rem; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_fed_usuario_fed_rem ON public.acesso_federacao USING btree (id_usuario_federacao_rem);
 
 
 --
--- Name: fk_acesso_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_protocolo ON public.acesso USING btree (id_protocolo);
 
 
 --
--- Name: fk_acesso_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_unidade ON public.acesso USING btree (id_unidade);
 
 
 --
--- Name: fk_acesso_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acesso_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acesso_usuario ON public.acesso USING btree (id_usuario);
 
 
 --
--- Name: fk_acompanhamento_grupo_acompa; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acompanhamento_grupo_acompa; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acompanhamento_grupo_acompa ON public.acompanhamento USING btree (id_grupo_acompanhamento);
 
 
 --
--- Name: fk_acompanhamento_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acompanhamento_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acompanhamento_protocolo ON public.acompanhamento USING btree (id_protocolo);
 
 
 --
--- Name: fk_acompanhamento_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acompanhamento_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acompanhamento_unidade ON public.acompanhamento USING btree (id_unidade);
 
 
 --
--- Name: fk_acompanhamento_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_acompanhamento_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_acompanhamento_usuario ON public.acompanhamento USING btree (id_usuario);
 
 
 --
--- Name: fk_and_inst_tarefa_inst; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_and_inst_tarefa_inst; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_and_inst_tarefa_inst ON public.andamento_instalacao USING btree (id_tarefa_instalacao);
 
 
 --
--- Name: fk_andam_situacao_procedimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andam_situacao_procedimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andam_situacao_procedimento ON public.andamento_situacao USING btree (id_procedimento);
 
 
 --
--- Name: fk_andam_situacao_situacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andam_situacao_situacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andam_situacao_situacao ON public.andamento_situacao USING btree (id_situacao);
 
 
 --
--- Name: fk_andamento_inst_inst_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_inst_inst_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_inst_inst_fed ON public.andamento_instalacao USING btree (id_instalacao_federacao);
 
 
 --
--- Name: fk_andamento_inst_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_inst_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_inst_unidade ON public.andamento_instalacao USING btree (id_unidade);
 
 
 --
--- Name: fk_andamento_inst_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_inst_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_inst_usuario ON public.andamento_instalacao USING btree (id_usuario);
 
 
 --
--- Name: fk_andamento_marcador_marcador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_marcador_marcador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_marcador_marcador ON public.andamento_marcador USING btree (id_marcador);
 
 
 --
--- Name: fk_andamento_marcador_proced; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_marcador_proced; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_marcador_proced ON public.andamento_marcador USING btree (id_procedimento);
 
 
 --
--- Name: fk_andamento_marcador_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_marcador_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_marcador_unidade ON public.andamento_marcador USING btree (id_unidade);
 
 
 --
--- Name: fk_andamento_marcador_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_marcador_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_marcador_usuario ON public.andamento_marcador USING btree (id_usuario);
 
 
 --
--- Name: fk_andamento_situacao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_situacao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_situacao_unidade ON public.andamento_situacao USING btree (id_unidade);
 
 
 --
--- Name: fk_andamento_situacao_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_andamento_situacao_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_andamento_situacao_usuario ON public.andamento_situacao USING btree (id_usuario);
 
 
 --
--- Name: fk_anexo_base_conhecimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_anexo_base_conhecimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_anexo_base_conhecimento ON public.anexo USING btree (id_base_conhecimento);
 
 
 --
--- Name: fk_anexo_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_anexo_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_anexo_protocolo ON public.anexo USING btree (id_protocolo);
 
 
 --
--- Name: fk_anexo_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_anexo_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_anexo_unidade ON public.anexo USING btree (id_unidade);
 
 
 --
--- Name: fk_anexo_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_anexo_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_anexo_usuario ON public.anexo USING btree (id_usuario);
 
 
 --
--- Name: fk_anotacao_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_anotacao_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_anotacao_protocolo ON public.anotacao USING btree (id_protocolo);
 
 
 --
--- Name: fk_anotacao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_anotacao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_anotacao_unidade ON public.anotacao USING btree (id_unidade);
 
 
 --
--- Name: fk_anotacao_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_anotacao_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_anotacao_usuario ON public.anotacao USING btree (id_usuario);
 
 
 --
--- Name: fk_arquiv_ativ_arquiv; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_arquiv_ativ_arquiv; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_arquiv_ativ_arquiv ON public.arquivamento USING btree (id_atividade_arquivamento);
 
 
 --
--- Name: fk_arquiv_ativ_canc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_arquiv_ativ_canc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_arquiv_ativ_canc ON public.arquivamento USING btree (id_atividade_cancelamento);
 
 
 --
--- Name: fk_arquiv_ativ_desarquiv; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_arquiv_ativ_desarquiv; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_arquiv_ativ_desarquiv ON public.arquivamento USING btree (id_atividade_desarquivamento);
 
 
 --
--- Name: fk_arquiv_ativ_receb; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_arquiv_ativ_receb; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_arquiv_ativ_receb ON public.arquivamento USING btree (id_atividade_recebimento);
 
 
 --
--- Name: fk_arquiv_ativ_solic_desarq; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_arquiv_ativ_solic_desarq; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_arquiv_ativ_solic_desarq ON public.arquivamento USING btree (id_atividade_solicitacao);
 
 
 --
--- Name: fk_arquivamento_localizador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_arquivamento_localizador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_arquivamento_localizador ON public.arquivamento USING btree (id_localizador);
 
 
 --
--- Name: fk_assinante_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assinante_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assinante_orgao ON public.assinante USING btree (id_orgao);
 
 
 --
--- Name: fk_assinatura_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assinatura_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assinatura_atividade ON public.assinatura USING btree (id_atividade);
 
 
 --
--- Name: fk_assinatura_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assinatura_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assinatura_documento ON public.assinatura USING btree (id_documento);
 
 
 --
--- Name: fk_assinatura_tarja_assinatura; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assinatura_tarja_assinatura; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assinatura_tarja_assinatura ON public.assinatura USING btree (id_tarja_assinatura);
 
 
 --
--- Name: fk_assinatura_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assinatura_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assinatura_unidade ON public.assinatura USING btree (id_unidade);
 
 
 --
--- Name: fk_assinatura_usuario_autentic; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assinatura_usuario_autentic; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assinatura_usuario_autentic ON public.assinatura USING btree (id_usuario);
 
 
 --
--- Name: fk_assunto_map_assunto_destino; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assunto_map_assunto_destino; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assunto_map_assunto_destino ON public.mapeamento_assunto USING btree (id_assunto_destino);
 
 
 --
--- Name: fk_assunto_map_assunto_origem; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assunto_map_assunto_origem; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assunto_map_assunto_origem ON public.mapeamento_assunto USING btree (id_assunto_origem);
 
 
 --
--- Name: fk_assunto_proxy_assunto; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assunto_proxy_assunto; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assunto_proxy_assunto ON public.assunto_proxy USING btree (id_assunto);
 
 
 --
--- Name: fk_assunto_tabela_assuntos; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_assunto_tabela_assuntos; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_assunto_tabela_assuntos ON public.assunto USING btree (id_tabela_assuntos);
 
 
 --
--- Name: fk_atividade_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_protocolo ON public.atividade USING btree (id_protocolo);
 
 
 --
--- Name: fk_atividade_tarefa; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_tarefa; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_tarefa ON public.atividade USING btree (id_tarefa);
 
 
 --
--- Name: fk_atividade_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_unidade ON public.atividade USING btree (id_unidade);
 
 
 --
--- Name: fk_atividade_unidade_origem; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_unidade_origem; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_unidade_origem ON public.atividade USING btree (id_unidade_origem);
 
 
 --
--- Name: fk_atividade_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_usuario ON public.atividade USING btree (id_usuario);
 
 
 --
--- Name: fk_atividade_usuario_atribuica; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_usuario_atribuica; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_usuario_atribuica ON public.atividade USING btree (id_usuario_atribuicao);
 
 
 --
--- Name: fk_atividade_usuario_conclusao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_usuario_conclusao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_usuario_conclusao ON public.atividade USING btree (id_usuario_conclusao);
 
 
 --
--- Name: fk_atividade_usuario_origem; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_usuario_origem; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_usuario_origem ON public.atividade USING btree (id_usuario_origem);
 
 
 --
--- Name: fk_atividade_usuario_visualiza; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atividade_usuario_visualiza; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atividade_usuario_visualiza ON public.atividade USING btree (id_usuario_visualizacao);
 
 
 --
--- Name: fk_atributo_andamento_atividad; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atributo_andamento_atividad; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atributo_andamento_atividad ON public.atributo_andamento USING btree (id_atividade);
 
 
 --
--- Name: fk_atributo_inst_andam_inst; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atributo_inst_andam_inst; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atributo_inst_andam_inst ON public.atributo_instalacao USING btree (id_andamento_instalacao);
 
 
 --
--- Name: fk_atributo_tipo_formulario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_atributo_tipo_formulario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_atributo_tipo_formulario ON public.atributo USING btree (id_tipo_formulario);
 
 
 --
--- Name: fk_base_conhec_conj_estilos; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_base_conhec_conj_estilos; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_base_conhec_conj_estilos ON public.base_conhecimento USING btree (id_conjunto_estilos);
 
 
 --
--- Name: fk_base_conhec_usu_gerador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_base_conhec_usu_gerador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_base_conhec_usu_gerador ON public.base_conhecimento USING btree (id_usuario_gerador);
 
 
 --
--- Name: fk_base_conhec_usu_liberacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_base_conhec_usu_liberacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_base_conhec_usu_liberacao ON public.base_conhecimento USING btree (id_usuario_liberacao);
 
 
 --
--- Name: fk_base_conhecimento_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_base_conhecimento_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_base_conhecimento_unidade ON public.base_conhecimento USING btree (id_unidade);
 
 
 --
--- Name: fk_bloco_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_bloco_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_bloco_unidade ON public.bloco USING btree (id_unidade);
 
 
 --
--- Name: fk_bloco_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_bloco_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_bloco_usuario ON public.bloco USING btree (id_usuario);
 
 
 --
--- Name: fk_campo_pesquisa_pesquisa; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_campo_pesquisa_pesquisa; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_campo_pesquisa_pesquisa ON public.campo_pesquisa USING btree (id_pesquisa);
 
 
 --
--- Name: fk_cargo_funcao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cargo_funcao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_cargo_funcao_unidade ON public.cargo_funcao USING btree (id_unidade);
 
 
 --
--- Name: fk_cargo_titulo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cargo_titulo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_cargo_titulo ON public.cargo USING btree (id_titulo);
 
 
 --
--- Name: fk_cargo_tratamento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cargo_tratamento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_cargo_tratamento ON public.cargo USING btree (id_tratamento);
 
 
 --
--- Name: fk_cargo_vocativo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cargo_vocativo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_cargo_vocativo ON public.cargo USING btree (id_vocativo);
 
 
 --
--- Name: fk_cidade_pais; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cidade_pais; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_cidade_pais ON public.cidade USING btree (id_pais);
 
 
 --
--- Name: fk_cidade_uf; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cidade_uf; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_cidade_uf ON public.cidade USING btree (id_uf);
 
 
 --
--- Name: fk_comentario_procedimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_comentario_procedimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_comentario_procedimento ON public.comentario USING btree (id_procedimento);
 
 
 --
--- Name: fk_comentario_rel_prot_prot; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_comentario_rel_prot_prot; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_comentario_rel_prot_prot ON public.comentario USING btree (id_rel_protocolo_protocolo);
 
 
 --
--- Name: fk_comentario_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_comentario_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_comentario_unidade ON public.comentario USING btree (id_unidade);
 
 
 --
--- Name: fk_comentario_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_comentario_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_comentario_usuario ON public.comentario USING btree (id_usuario);
 
 
 --
--- Name: fk_conj_est_item_conj_est; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_conj_est_item_conj_est; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_conj_est_item_conj_est ON public.conjunto_estilos_item USING btree (id_conjunto_estilos);
 
 
 --
--- Name: fk_contato_cargo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_cargo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_cargo ON public.contato USING btree (id_cargo);
 
 
 --
--- Name: fk_contato_categoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_categoria; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_categoria ON public.contato USING btree (id_categoria);
 
 
 --
--- Name: fk_contato_cidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_cidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_cidade ON public.contato USING btree (id_cidade);
 
 
 --
--- Name: fk_contato_pais; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_pais; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_pais ON public.contato USING btree (id_pais);
 
 
 --
--- Name: fk_contato_pais_passaporte; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_pais_passaporte; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_pais_passaporte ON public.contato USING btree (id_pais_passaporte);
 
 
 --
--- Name: fk_contato_tipo_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_tipo_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_tipo_contato ON public.contato USING btree (id_tipo_contato);
 
 
 --
--- Name: fk_contato_titulo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_titulo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_titulo ON public.contato USING btree (id_titulo);
 
 
 --
--- Name: fk_contato_uf; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_uf; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_uf ON public.contato USING btree (id_uf);
 
 
 --
--- Name: fk_contato_unidade_cadastro; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_unidade_cadastro; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_unidade_cadastro ON public.contato USING btree (id_unidade_cadastro);
 
 
 --
--- Name: fk_contato_usuario_cadastro; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_contato_usuario_cadastro; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_contato_usuario_cadastro ON public.contato USING btree (id_usuario_cadastro);
 
 
 --
--- Name: fk_controle_prazo_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_controle_prazo_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_controle_prazo_protocolo ON public.controle_prazo USING btree (id_protocolo);
 
 
 --
--- Name: fk_controle_prazo_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_controle_prazo_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_controle_prazo_unidade ON public.controle_prazo USING btree (id_unidade);
 
 
 --
--- Name: fk_controle_prazo_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_controle_prazo_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_controle_prazo_usuario ON public.controle_prazo USING btree (id_usuario);
 
 
 --
--- Name: fk_documento_conjunto_estilos; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_documento_conjunto_estilos; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_documento_conjunto_estilos ON public.documento USING btree (id_conjunto_estilos);
 
 
 --
--- Name: fk_documento_procedimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_documento_procedimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_documento_procedimento ON public.documento USING btree (id_procedimento);
 
 
 --
--- Name: fk_documento_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_documento_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_documento_serie ON public.documento USING btree (id_serie);
 
 
 --
--- Name: fk_documento_tipo_conferencia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_documento_tipo_conferencia; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_documento_tipo_conferencia ON public.documento USING btree (id_tipo_conferencia);
 
 
 --
--- Name: fk_documento_tipo_formulario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_documento_tipo_formulario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_documento_tipo_formulario ON public.documento USING btree (id_tipo_formulario);
 
 
 --
--- Name: fk_documento_unidade_responsav; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_documento_unidade_responsav; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_documento_unidade_responsav ON public.documento USING btree (id_unidade_responsavel);
 
 
 --
--- Name: fk_dominio_atributo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_dominio_atributo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_dominio_atributo ON public.dominio USING btree (id_atributo);
 
 
 --
--- Name: fk_email_grupo_email_grupo_em; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_email_grupo_email_grupo_em; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_email_grupo_email_grupo_em ON public.email_grupo_email USING btree (id_grupo_email);
 
 
 --
--- Name: fk_email_unidade_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_email_unidade_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_email_unidade_unidade ON public.email_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_email_utilizado_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_email_utilizado_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_email_utilizado_unidade ON public.email_utilizado USING btree (id_unidade);
 
 
 --
--- Name: fk_feriado_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_feriado_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_feriado_orgao ON public.feriado USING btree (id_orgao);
 
 
 --
--- Name: fk_grupo_acompanhamento_unidad; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_grupo_acompanhamento_unidad; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_grupo_acompanhamento_unidad ON public.grupo_acompanhamento USING btree (id_unidade);
 
 
 --
--- Name: fk_grupo_bloco_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_grupo_bloco_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_grupo_bloco_unidade ON public.grupo_bloco USING btree (id_unidade);
 
 
 --
--- Name: fk_grupo_contato_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_grupo_contato_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_grupo_contato_unidade ON public.grupo_contato USING btree (id_unidade);
 
 
 --
--- Name: fk_grupo_email_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_grupo_email_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_grupo_email_unidade ON public.grupo_email USING btree (id_unidade);
 
 
 --
--- Name: fk_grupo_federacao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_grupo_federacao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_grupo_federacao_unidade ON public.grupo_federacao USING btree (id_unidade);
 
 
 --
--- Name: fk_grupo_protocolo_modelo_unid; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_grupo_protocolo_modelo_unid; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_grupo_protocolo_modelo_unid ON public.grupo_protocolo_modelo USING btree (id_unidade);
 
 
 --
--- Name: fk_grupo_unidade_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_grupo_unidade_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_grupo_unidade_unidade ON public.grupo_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_inf_reg_aud_rec_inf_reg_aud ON public.infra_regra_auditoria_recurso USING btree (id_infra_regra_auditoria);
 
 
 --
--- Name: fk_localizador_lugar_localizad; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_localizador_lugar_localizad; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_localizador_lugar_localizad ON public.localizador USING btree (id_lugar_localizador);
 
 
 --
--- Name: fk_localizador_tipo_localizado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_localizador_tipo_localizado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_localizador_tipo_localizado ON public.localizador USING btree (id_tipo_localizador);
 
 
 --
--- Name: fk_localizador_tipo_suporte; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_localizador_tipo_suporte; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_localizador_tipo_suporte ON public.localizador USING btree (id_tipo_suporte);
 
 
 --
--- Name: fk_localizador_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_localizador_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_localizador_unidade ON public.localizador USING btree (id_unidade);
 
 
 --
--- Name: fk_lugar_localizador_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_lugar_localizador_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_lugar_localizador_unidade ON public.lugar_localizador USING btree (id_unidade);
 
 
 --
--- Name: fk_marcador_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_marcador_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_marcador_unidade ON public.marcador USING btree (id_unidade);
 
 
 --
--- Name: fk_monitoram_servico_servico; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_monitoram_servico_servico; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_monitoram_servico_servico ON public.monitoramento_servico USING btree (id_servico);
 
 
 --
--- Name: fk_nivel_acesso_perm_tipo_proc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_nivel_acesso_perm_tipo_proc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_nivel_acesso_perm_tipo_proc ON public.nivel_acesso_permitido USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_notificacao_atividade_confi; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_notificacao_atividade_confi; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_notificacao_atividade_confi ON public.notificacao USING btree (id_atividade_confirmacao);
 
 
 --
--- Name: fk_notificacao_procedimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_notificacao_procedimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_notificacao_procedimento ON public.notificacao USING btree (id_procedimento);
 
 
 --
--- Name: fk_notificacao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_notificacao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_notificacao_unidade ON public.notificacao USING btree (id_unidade);
 
 
 --
--- Name: fk_notificacao_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_notificacao_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_notificacao_usuario ON public.notificacao USING btree (id_usuario);
 
 
 --
--- Name: fk_novidade_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_novidade_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_novidade_usuario ON public.novidade USING btree (id_usuario);
 
 
 --
--- Name: fk_numeracao_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_numeracao_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_numeracao_orgao ON public.numeracao USING btree (id_orgao);
 
 
 --
--- Name: fk_numeracao_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_numeracao_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_numeracao_serie ON public.numeracao USING btree (id_serie);
 
 
 --
--- Name: fk_numeracao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_numeracao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_numeracao_unidade ON public.numeracao USING btree (id_unidade);
 
 
 --
--- Name: fk_observacao_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_observacao_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_observacao_protocolo ON public.observacao USING btree (id_protocolo);
 
 
 --
--- Name: fk_observacao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_observacao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_observacao_unidade ON public.observacao USING btree (id_unidade);
 
 
 --
--- Name: fk_oper_serv_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_oper_serv_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_oper_serv_serie ON public.operacao_servico USING btree (id_serie);
 
 
 --
--- Name: fk_oper_serv_servico; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_oper_serv_servico; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_oper_serv_servico ON public.operacao_servico USING btree (id_servico);
 
 
 --
--- Name: fk_oper_serv_tipo_proc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_oper_serv_tipo_proc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_oper_serv_tipo_proc ON public.operacao_servico USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_oper_serv_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_oper_serv_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_oper_serv_unidade ON public.operacao_servico USING btree (id_unidade);
 
 
 --
--- Name: fk_ordenador_despesa_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ordenador_despesa_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ordenador_despesa_orgao ON public.ordenador_despesa USING btree (id_orgao);
 
 
 --
--- Name: fk_ordenador_despesa_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ordenador_despesa_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ordenador_despesa_unidade ON public.ordenador_despesa USING btree (id_unidade);
 
 
 --
--- Name: fk_ordenador_despesa_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ordenador_despesa_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ordenador_despesa_usuario ON public.ordenador_despesa USING btree (id_usuario);
 
 
 --
--- Name: fk_orgao_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_orgao_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_orgao_contato ON public.orgao USING btree (id_contato);
 
 
 --
--- Name: fk_orgao_fed_instalacao_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_orgao_fed_instalacao_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_orgao_fed_instalacao_fed ON public.orgao_federacao USING btree (id_instalacao_federacao);
 
 
 --
--- Name: fk_orgao_historico_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_orgao_historico_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_orgao_historico_orgao ON public.orgao_historico USING btree (id_orgao);
 
 
 --
--- Name: fk_orgao_orgao_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_orgao_orgao_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_orgao_orgao_federacao ON public.orgao USING btree (id_orgao_federacao);
 
 
 --
--- Name: fk_orgao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_orgao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_orgao_unidade ON public.orgao USING btree (id_unidade);
 
 
 --
--- Name: fk_param_acao_fed_acao_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_param_acao_fed_acao_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_param_acao_fed_acao_fed ON public.parametro_acao_federacao USING btree (id_acao_federacao);
 
 
 --
--- Name: fk_participante_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_participante_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_participante_contato ON public.participante USING btree (id_contato);
 
 
 --
--- Name: fk_participante_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_participante_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_participante_protocolo ON public.participante USING btree (id_protocolo);
 
 
 --
--- Name: fk_participante_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_participante_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_participante_unidade ON public.participante USING btree (id_unidade);
 
 
 --
--- Name: fk_pesquisa_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_pesquisa_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_pesquisa_unidade ON public.pesquisa USING btree (id_unidade);
 
 
 --
--- Name: fk_pesquisa_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_pesquisa_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_pesquisa_usuario ON public.pesquisa USING btree (id_usuario);
 
 
 --
--- Name: fk_procedimento_tipo_procedime; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_procedimento_tipo_procedime; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_procedimento_tipo_procedime ON public.procedimento USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_prot_mod_grupo_prot_mod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_prot_mod_grupo_prot_mod; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_prot_mod_grupo_prot_mod ON public.protocolo_modelo USING btree (id_grupo_protocolo_modelo);
 
 
 --
--- Name: fk_protocolo_fed_inst_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_fed_inst_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_fed_inst_fed ON public.protocolo_federacao USING btree (id_instalacao_federacao);
 
 
 --
--- Name: fk_protocolo_hipotese_legal; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_hipotese_legal; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_hipotese_legal ON public.protocolo USING btree (id_hipotese_legal);
 
 
 --
--- Name: fk_protocolo_modelo_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_modelo_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_modelo_protocolo ON public.protocolo_modelo USING btree (id_protocolo);
 
 
 --
--- Name: fk_protocolo_modelo_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_modelo_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_modelo_unidade ON public.protocolo_modelo USING btree (id_unidade);
 
 
 --
--- Name: fk_protocolo_modelo_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_modelo_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_modelo_usuario ON public.protocolo_modelo USING btree (id_usuario);
 
 
 --
--- Name: fk_protocolo_protocolo_1; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_protocolo_1; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_protocolo_1 ON public.rel_protocolo_protocolo USING btree (id_protocolo_1);
 
 
 --
--- Name: fk_protocolo_protocolo_2; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_protocolo_2; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_protocolo_2 ON public.rel_protocolo_protocolo USING btree (id_protocolo_2);
 
 
 --
--- Name: fk_protocolo_protocolo_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_protocolo_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_protocolo_fed ON public.protocolo USING btree (id_protocolo_federacao);
 
 
 --
--- Name: fk_protocolo_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_unidade ON public.protocolo USING btree (id_unidade_geradora);
 
 
 --
--- Name: fk_protocolo_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_protocolo_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_protocolo_usuario ON public.protocolo USING btree (id_usuario_gerador);
 
 
 --
--- Name: fk_public_legado_secao_imp_nac; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_public_legado_secao_imp_nac; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_public_legado_secao_imp_nac ON public.publicacao_legado USING btree (id_secao_io);
 
 
 --
--- Name: fk_public_legado_veic_public; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_public_legado_veic_public; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_public_legado_veic_public ON public.publicacao_legado USING btree (id_veiculo_publicacao);
 
 
 --
--- Name: fk_public_legado_veicu_imp_nac; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_public_legado_veicu_imp_nac; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_public_legado_veicu_imp_nac ON public.publicacao_legado USING btree (id_veiculo_io);
 
 
 --
--- Name: fk_publicacao_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_atividade ON public.publicacao USING btree (id_atividade);
 
 
 --
--- Name: fk_publicacao_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX fk_publicacao_documento ON public.publicacao USING btree (id_documento);
 
 
 --
--- Name: fk_publicacao_legado_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_legado_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_legado_serie ON public.publicacao_legado USING btree (id_serie);
 
 
 --
--- Name: fk_publicacao_legado_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_legado_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_legado_unidade ON public.publicacao_legado USING btree (id_unidade);
 
 
 --
--- Name: fk_publicacao_secao_in; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_secao_in; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_secao_in ON public.publicacao USING btree (id_secao_io);
 
 
 --
--- Name: fk_publicacao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_unidade ON public.publicacao USING btree (id_unidade);
 
 
 --
--- Name: fk_publicacao_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_usuario ON public.publicacao USING btree (id_usuario);
 
 
 --
--- Name: fk_publicacao_veiculo_in; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_veiculo_in; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_veiculo_in ON public.publicacao USING btree (id_veiculo_io);
 
 
 --
--- Name: fk_publicacao_veiculo_public; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_publicacao_veiculo_public; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_publicacao_veiculo_public ON public.publicacao USING btree (id_veiculo_publicacao);
 
 
 --
--- Name: fk_re_secmod_cj_est_i_cj_est_i; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_re_secmod_cj_est_i_cj_est_i; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_re_secmod_cj_est_i_cj_est_i ON public.rel_secao_mod_cj_estilos_item USING btree (id_conjunto_estilos_item);
 
 
 --
--- Name: fk_rel_aces_ext_prot_aces_ext; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_aces_ext_prot_aces_ext; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_aces_ext_prot_aces_ext ON public.rel_acesso_ext_protocolo USING btree (id_acesso_externo);
 
 
 --
--- Name: fk_rel_aces_ext_prot_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_aces_ext_prot_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_aces_ext_prot_protocolo ON public.rel_acesso_ext_protocolo USING btree (id_protocolo);
 
 
 --
--- Name: fk_rel_aces_ext_serie_aces_ext; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_aces_ext_serie_aces_ext; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_aces_ext_serie_aces_ext ON public.rel_acesso_ext_serie USING btree (id_acesso_externo);
 
 
 --
--- Name: fk_rel_aces_ext_serie_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_aces_ext_serie_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_aces_ext_serie_serie ON public.rel_acesso_ext_serie USING btree (id_serie);
 
 
 --
--- Name: fk_rel_assinante_uni_assinante; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_assinante_uni_assinante; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_assinante_uni_assinante ON public.rel_assinante_unidade USING btree (id_assinante);
 
 
 --
--- Name: fk_rel_assinante_uni_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_assinante_uni_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_assinante_uni_unidade ON public.rel_assinante_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_bc_tp_base_conhecimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_bc_tp_base_conhecimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_bc_tp_base_conhecimento ON public.rel_base_conhec_tipo_proced USING btree (id_base_conhecimento);
 
 
 --
--- Name: fk_rel_bc_tp_tipo_procedimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_bc_tp_tipo_procedimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_bc_tp_tipo_procedimento ON public.rel_base_conhec_tipo_proced USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_rel_blo_uni_grupo_bloco; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_blo_uni_grupo_bloco; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_blo_uni_grupo_bloco ON public.rel_bloco_unidade USING btree (id_grupo_bloco);
 
 
 --
--- Name: fk_rel_blo_uni_usu_atribuicao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_blo_uni_usu_atribuicao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_blo_uni_usu_atribuicao ON public.rel_bloco_unidade USING btree (id_usuario_atribuicao);
 
 
 --
--- Name: fk_rel_blo_uni_usu_comentario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_blo_uni_usu_comentario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_blo_uni_usu_comentario ON public.rel_bloco_unidade USING btree (id_usuario_comentario);
 
 
 --
--- Name: fk_rel_blo_uni_usu_prioridade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_blo_uni_usu_prioridade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_blo_uni_usu_prioridade ON public.rel_bloco_unidade USING btree (id_usuario_prioridade);
 
 
 --
--- Name: fk_rel_blo_uni_usu_revisao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_blo_uni_usu_revisao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_blo_uni_usu_revisao ON public.rel_bloco_unidade USING btree (id_usuario_revisao);
 
 
 --
--- Name: fk_rel_bloco_protocolo_bloco; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_bloco_protocolo_bloco; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_bloco_protocolo_bloco ON public.rel_bloco_protocolo USING btree (id_bloco);
 
 
 --
--- Name: fk_rel_bloco_protocolo_protoco; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_bloco_protocolo_protoco; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_bloco_protocolo_protoco ON public.rel_bloco_protocolo USING btree (id_protocolo);
 
 
 --
--- Name: fk_rel_bloco_unidade_bloco; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_bloco_unidade_bloco; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_bloco_unidade_bloco ON public.rel_bloco_unidade USING btree (id_bloco);
 
 
 --
--- Name: fk_rel_bloco_unidade_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_bloco_unidade_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_bloco_unidade_unidade ON public.rel_bloco_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_contr_int_t_tipo_proc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_contr_int_t_tipo_proc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_contr_int_t_tipo_proc ON public.rel_controle_interno_tipo_proc USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_rel_contr_int_tipo_proc_ci; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_contr_int_tipo_proc_ci; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_contr_int_tipo_proc_ci ON public.rel_controle_interno_tipo_proc USING btree (id_controle_interno);
 
 
 --
--- Name: fk_rel_controle_int_unid_ci; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_controle_int_unid_ci; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_controle_int_unid_ci ON public.rel_controle_interno_unidade USING btree (id_controle_interno);
 
 
 --
--- Name: fk_rel_controle_int_unid_unid; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_controle_int_unid_unid; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_controle_int_unid_unid ON public.rel_controle_interno_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_controle_interno_org_id; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_controle_interno_org_id; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_controle_interno_org_id ON public.rel_controle_interno_orgao USING btree (id_controle_interno);
 
 
 --
--- Name: fk_rel_controle_interno_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_controle_interno_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_controle_interno_orgao ON public.rel_controle_interno_orgao USING btree (id_orgao);
 
 
 --
--- Name: fk_rel_controle_interno_se_ci; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_controle_interno_se_ci; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_controle_interno_se_ci ON public.rel_controle_interno_serie USING btree (id_controle_interno);
 
 
 --
--- Name: fk_rel_controle_interno_se_se; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_controle_interno_se_se; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_controle_interno_se_se ON public.rel_controle_interno_serie USING btree (id_serie);
 
 
 --
--- Name: fk_rel_grp_fed_org_fed_grp_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_grp_fed_org_fed_grp_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_grp_fed_org_fed_grp_fed ON public.rel_grupo_fed_orgao_fed USING btree (id_grupo_federacao);
 
 
 --
--- Name: fk_rel_grp_fed_org_fed_org_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_grp_fed_org_fed_org_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_grp_fed_org_fed_org_fed ON public.rel_grupo_fed_orgao_fed USING btree (id_orgao_federacao);
 
 
 --
--- Name: fk_rel_grupo_contato_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_grupo_contato_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_grupo_contato_contato ON public.rel_grupo_contato USING btree (id_contato);
 
 
 --
--- Name: fk_rel_grupo_contato_grupo_con; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_grupo_contato_grupo_con; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_grupo_contato_grupo_con ON public.rel_grupo_contato USING btree (id_grupo_contato);
 
 
 --
--- Name: fk_rel_grupo_unid_grupo_unid; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_grupo_unid_grupo_unid; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_grupo_unid_grupo_unid ON public.rel_grupo_unidade_unidade USING btree (id_grupo_unidade);
 
 
 --
--- Name: fk_rel_grupo_unid_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_grupo_unid_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_grupo_unid_unidade ON public.rel_grupo_unidade_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_notif_doc_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_notif_doc_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_notif_doc_documento ON public.rel_notificacao_documento USING btree (id_notificacao);
 
 
 --
--- Name: fk_rel_notif_doc_notificacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_notif_doc_notificacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_notif_doc_notificacao ON public.rel_notificacao_documento USING btree (id_documento);
 
 
 --
--- Name: fk_rel_proc_doc_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_proc_doc_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_proc_doc_usuario ON public.rel_protocolo_protocolo USING btree (id_usuario);
 
 
 --
--- Name: fk_rel_prot_assunto_assunto; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_prot_assunto_assunto; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_prot_assunto_assunto ON public.rel_protocolo_assunto USING btree (id_assunto_proxy);
 
 
 --
--- Name: fk_rel_prot_assunto_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_prot_assunto_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_prot_assunto_protocolo ON public.rel_protocolo_assunto USING btree (id_protocolo);
 
 
 --
--- Name: fk_rel_prot_atributo_atributo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_prot_atributo_atributo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_prot_atributo_atributo ON public.rel_protocolo_atributo USING btree (id_atributo);
 
 
 --
--- Name: fk_rel_prot_atributo_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_prot_atributo_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_prot_atributo_protocolo ON public.rel_protocolo_atributo USING btree (id_protocolo);
 
 
 --
--- Name: fk_rel_protocolo_assunto_uni; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_protocolo_assunto_uni; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_protocolo_assunto_uni ON public.rel_protocolo_assunto USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_protocolo_protocolo_uni; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_protocolo_protocolo_uni; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_protocolo_protocolo_uni ON public.rel_protocolo_protocolo USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_sec_mod_estilo_estilo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_sec_mod_estilo_estilo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_sec_mod_estilo_estilo ON public.rel_secao_modelo_estilo USING btree (id_estilo);
 
 
 --
--- Name: fk_rel_sec_mod_estilo_sec_mod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_sec_mod_estilo_sec_mod; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_sec_mod_estilo_sec_mod ON public.rel_secao_modelo_estilo USING btree (id_secao_modelo);
 
 
 --
--- Name: fk_rel_secmod_cj_est_it_secmod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_secmod_cj_est_it_secmod; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_secmod_cj_est_it_secmod ON public.rel_secao_mod_cj_estilos_item USING btree (id_secao_modelo);
 
 
 --
--- Name: fk_rel_serie_assunto_assunto; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_serie_assunto_assunto; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_serie_assunto_assunto ON public.rel_serie_assunto USING btree (id_assunto_proxy);
 
 
 --
--- Name: fk_rel_serie_assunto_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_serie_assunto_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_serie_assunto_serie ON public.rel_serie_assunto USING btree (id_serie);
 
 
 --
--- Name: fk_rel_serie_veic_pub_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_serie_veic_pub_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_serie_veic_pub_serie ON public.rel_serie_veiculo_publicacao USING btree (id_serie);
 
 
 --
--- Name: fk_rel_serie_veic_pub_veic_pub; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_serie_veic_pub_veic_pub; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_serie_veic_pub_veic_pub ON public.rel_serie_veiculo_publicacao USING btree (id_veiculo_publicacao);
 
 
 --
--- Name: fk_rel_situacao_unid_situacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_situacao_unid_situacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_situacao_unid_situacao ON public.rel_situacao_unidade USING btree (id_situacao);
 
 
 --
--- Name: fk_rel_situacao_unid_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_situacao_unid_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_situacao_unid_unidade ON public.rel_situacao_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_tipo_proc_assu_assunto; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_tipo_proc_assu_assunto; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_tipo_proc_assu_assunto ON public.rel_tipo_procedimento_assunto USING btree (id_assunto_proxy);
 
 
 --
--- Name: fk_rel_tipo_proc_assu_tip_proc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_tipo_proc_assu_tip_proc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_tipo_proc_assu_tip_proc ON public.rel_tipo_procedimento_assunto USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_rel_unid_tip_cont_tip_cont; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_unid_tip_cont_tip_cont; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_unid_tip_cont_tip_cont ON public.rel_unidade_tipo_contato USING btree (id_tipo_contato);
 
 
 --
--- Name: fk_rel_unid_tip_cont_unid; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_unid_tip_cont_unid; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_unid_tip_cont_unid ON public.rel_unidade_tipo_contato USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_usu_grp_acomp_grp_acomp; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_grp_acomp_grp_acomp; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_grp_acomp_grp_acomp ON public.rel_usuario_grupo_acomp USING btree (id_grupo_acompanhamento);
 
 
 --
--- Name: fk_rel_usu_grp_acomp_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_grp_acomp_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_grp_acomp_usuario ON public.rel_usuario_grupo_acomp USING btree (id_usuario);
 
 
 --
--- Name: fk_rel_usu_grupo_bloco_grp_blo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_grupo_bloco_grp_blo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_grupo_bloco_grp_blo ON public.rel_usuario_grupo_bloco USING btree (id_grupo_bloco);
 
 
 --
--- Name: fk_rel_usu_grupo_bloco_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_grupo_bloco_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_grupo_bloco_usuario ON public.rel_usuario_grupo_bloco USING btree (id_usuario);
 
 
 --
--- Name: fk_rel_usu_tipo_proced_tipo_pr; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_tipo_proced_tipo_pr; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_tipo_proced_tipo_pr ON public.rel_usuario_tipo_proced USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_rel_usu_tipo_proced_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_tipo_proced_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_tipo_proced_unidade ON public.rel_usuario_tipo_proced USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_usu_tipo_proced_usu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_tipo_proced_usu; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_tipo_proced_usu ON public.rel_usuario_tipo_proced USING btree (id_usuario);
 
 
 --
--- Name: fk_rel_usu_usu_uni_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_usu_uni_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_usu_uni_unidade ON public.rel_usuario_usuario_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_usu_usu_uni_usu_atrib; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_usu_uni_usu_atrib; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_usu_uni_usu_atrib ON public.rel_usuario_usuario_unidade USING btree (id_usuario_atribuicao);
 
 
 --
--- Name: fk_rel_usu_usu_uni_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usu_usu_uni_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usu_usu_uni_usuario ON public.rel_usuario_usuario_unidade USING btree (id_usuario);
 
 
 --
--- Name: fk_rel_usuario_marcad_marcad; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usuario_marcad_marcad; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usuario_marcad_marcad ON public.rel_usuario_marcador USING btree (id_marcador);
 
 
 --
--- Name: fk_rel_usuario_marcad_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_usuario_marcad_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_rel_usuario_marcad_usuario ON public.rel_usuario_marcador USING btree (id_usuario);
 
 
 --
--- Name: fk_replicacao_fed_inst_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_replicacao_fed_inst_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_replicacao_fed_inst_fed ON public.replicacao_federacao USING btree (id_instalacao_federacao);
 
 
 --
--- Name: fk_replicacao_fed_prot_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_replicacao_fed_prot_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_replicacao_fed_prot_fed ON public.replicacao_federacao USING btree (id_protocolo_federacao);
 
 
 --
--- Name: fk_ret_prog_ativ_envio; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ret_prog_ativ_envio; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ret_prog_ativ_envio ON public.retorno_programado USING btree (id_atividade_envio);
 
 
 --
--- Name: fk_ret_prog_ativ_retorno; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ret_prog_ativ_retorno; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ret_prog_ativ_retorno ON public.retorno_programado USING btree (id_atividade_retorno);
 
 
 --
--- Name: fk_ret_programado_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ret_programado_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ret_programado_protocolo ON public.retorno_programado USING btree (id_protocolo);
 
 
 --
--- Name: fk_ret_programado_uni_envio; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ret_programado_uni_envio; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ret_programado_uni_envio ON public.retorno_programado USING btree (id_unidade_envio);
 
 
 --
--- Name: fk_ret_programado_uni_retorno; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_ret_programado_uni_retorno; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_ret_programado_uni_retorno ON public.retorno_programado USING btree (id_unidade_retorno);
 
 
 --
--- Name: fk_retorno_programado_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_retorno_programado_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_retorno_programado_usuario ON public.retorno_programado USING btree (id_usuario);
 
 
 --
--- Name: fk_secao_doc_base_conhecimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_secao_doc_base_conhecimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_secao_doc_base_conhecimento ON public.secao_documento USING btree (id_base_conhecimento);
 
 
 --
--- Name: fk_secao_doc_secao_mod; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_secao_doc_secao_mod; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_secao_doc_secao_mod ON public.secao_documento USING btree (id_secao_modelo);
 
 
 --
--- Name: fk_secao_documento_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_secao_documento_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_secao_documento_documento ON public.secao_documento USING btree (id_documento);
 
 
 --
--- Name: fk_secao_in_veiculo_in; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_secao_in_veiculo_in; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_secao_in_veiculo_in ON public.secao_imprensa_nacional USING btree (id_veiculo_imprensa_nacional);
 
 
 --
--- Name: fk_secao_modelo_modelo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_secao_modelo_modelo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_secao_modelo_modelo ON public.secao_modelo USING btree (id_modelo);
 
 
 --
--- Name: fk_serie_escolha_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_escolha_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_escolha_serie ON public.serie_escolha USING btree (id_serie);
 
 
 --
--- Name: fk_serie_escolha_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_escolha_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_escolha_unidade ON public.serie_escolha USING btree (id_unidade);
 
 
 --
--- Name: fk_serie_grupo_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_grupo_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_grupo_serie ON public.serie USING btree (id_grupo_serie);
 
 
 --
--- Name: fk_serie_modelo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_modelo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_modelo ON public.serie USING btree (id_modelo);
 
 
 --
--- Name: fk_serie_publicacao_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_publicacao_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_publicacao_orgao ON public.serie_publicacao USING btree (id_orgao);
 
 
 --
--- Name: fk_serie_publicacao_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_publicacao_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_publicacao_serie ON public.serie_publicacao USING btree (id_serie);
 
 
 --
--- Name: fk_serie_restricao_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_restricao_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_restricao_orgao ON public.serie_restricao USING btree (id_orgao);
 
 
 --
--- Name: fk_serie_restricao_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_restricao_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_restricao_serie ON public.serie_restricao USING btree (id_serie);
 
 
 --
--- Name: fk_serie_restricao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_restricao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_restricao_unidade ON public.serie_restricao USING btree (id_unidade);
 
 
 --
--- Name: fk_serie_tipo_formulario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_serie_tipo_formulario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_serie_tipo_formulario ON public.serie USING btree (id_tipo_formulario);
 
 
 --
--- Name: fk_servico_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_servico_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_servico_usuario ON public.servico USING btree (id_usuario);
 
 
 --
--- Name: fk_sinalizacao_fed_inst_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_sinalizacao_fed_inst_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_sinalizacao_fed_inst_fed ON public.sinalizacao_federacao USING btree (id_instalacao_federacao);
 
 
 --
--- Name: fk_sinalizacao_fed_prot_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_sinalizacao_fed_prot_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_sinalizacao_fed_prot_fed ON public.sinalizacao_federacao USING btree (id_protocolo_federacao);
 
 
 --
--- Name: fk_sinalizacao_fed_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_sinalizacao_fed_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_sinalizacao_fed_unidade ON public.sinalizacao_federacao USING btree (id_unidade);
 
 
 --
--- Name: fk_texto_padrao_int_conj; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_texto_padrao_int_conj; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_texto_padrao_int_conj ON public.texto_padrao_interno USING btree (id_conjunto_estilos);
 
 
 --
--- Name: fk_texto_padrao_int_unid; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_texto_padrao_int_unid; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_texto_padrao_int_unid ON public.texto_padrao_interno USING btree (id_unidade);
 
 
 --
--- Name: fk_tipo_localizador_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_tipo_localizador_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_tipo_localizador_unidade ON public.tipo_localizador USING btree (id_unidade);
 
 
 --
--- Name: fk_tipo_proc_escolha_tipo_proc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_tipo_proc_escolha_tipo_proc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_tipo_proc_escolha_tipo_proc ON public.tipo_procedimento_escolha USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_tipo_proc_escolha_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_tipo_proc_escolha_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_tipo_proc_escolha_unidade ON public.tipo_procedimento_escolha USING btree (id_unidade);
 
 
 --
--- Name: fk_tipo_proced_hipotese_legal; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_tipo_proced_hipotese_legal; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_tipo_proced_hipotese_legal ON public.tipo_procedimento USING btree (id_hipotese_legal_sugestao);
 
 
 --
--- Name: fk_tipo_proced_restr_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_tipo_proced_restr_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_tipo_proced_restr_orgao ON public.tipo_proced_restricao USING btree (id_orgao);
 
 
 --
--- Name: fk_tipo_proced_restr_tipo_proc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_tipo_proced_restr_tipo_proc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_tipo_proced_restr_tipo_proc ON public.tipo_proced_restricao USING btree (id_tipo_procedimento);
 
 
 --
--- Name: fk_tipo_proced_restr_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_tipo_proced_restr_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_tipo_proced_restr_unidade ON public.tipo_proced_restricao USING btree (id_unidade);
 
 
 --
--- Name: fk_uf_pais; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_uf_pais; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_uf_pais ON public.uf USING btree (id_pais);
 
 
 --
--- Name: fk_unidade_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_unidade_contato ON public.unidade USING btree (id_contato);
 
 
 --
--- Name: fk_unidade_fed_instalacao_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_fed_instalacao_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_unidade_fed_instalacao_fed ON public.unidade_federacao USING btree (id_instalacao_federacao);
 
 
 --
--- Name: fk_unidade_historico_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_historico_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_unidade_historico_orgao ON public.unidade_historico USING btree (id_orgao);
 
 
 --
--- Name: fk_unidade_historico_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_historico_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_unidade_historico_unidade ON public.unidade_historico USING btree (id_unidade);
 
 
 --
--- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_unidade_orgao ON public.unidade USING btree (id_orgao);
 
 
 --
--- Name: fk_unidade_publicacao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_publicacao_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_unidade_publicacao_unidade ON public.unidade_publicacao USING btree (id_unidade);
 
 
 --
--- Name: fk_unidade_unidade_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_unidade_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_unidade_unidade_federacao ON public.unidade USING btree (id_unidade_federacao);
 
 
 --
--- Name: fk_usuario_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_usuario_contato ON public.usuario USING btree (id_contato);
 
 
 --
--- Name: fk_usuario_fed_instalacao_fed; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_fed_instalacao_fed; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_usuario_fed_instalacao_fed ON public.usuario_federacao USING btree (id_instalacao_federacao);
 
 
 --
--- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_usuario_orgao ON public.usuario USING btree (id_orgao);
 
 
 --
--- Name: fk_usuario_usuario_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_usuario_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_usuario_usuario_federacao ON public.usuario USING btree (id_usuario_federacao);
 
 
 --
--- Name: fk_velocidade_transf_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_velocidade_transf_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_velocidade_transf_unidade ON public.velocidade_transferencia USING btree (id_unidade);
 
 
 --
--- Name: fk_versao_sec_doc_sec_doc; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_versao_sec_doc_sec_doc; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_versao_sec_doc_sec_doc ON public.versao_secao_documento USING btree (id_secao_documento);
 
 
 --
--- Name: fk_versao_secao_doc_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_versao_secao_doc_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_versao_secao_doc_unidade ON public.versao_secao_documento USING btree (id_unidade);
 
 
 --
--- Name: fk_versao_secao_doc_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_versao_secao_doc_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX fk_versao_secao_doc_usuario ON public.versao_secao_documento USING btree (id_usuario);
 
 
 --
--- Name: i01_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_acesso; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_acesso ON public.acesso USING btree (id_protocolo, id_unidade, id_usuario, sta_tipo);
 
 
 --
--- Name: i01_andamento_marcador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_andamento_marcador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_andamento_marcador ON public.andamento_marcador USING btree (id_marcador, id_procedimento, id_unidade, sin_ultimo);
 
 
 --
--- Name: i01_andamento_situacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_andamento_situacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_andamento_situacao ON public.andamento_situacao USING btree (id_procedimento, id_situacao, id_unidade, sin_ultimo);
 
 
 --
--- Name: i01_anexo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_anexo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_anexo ON public.anexo USING btree (id_protocolo, sin_ativo);
 
 
 --
--- Name: i01_anotacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_anotacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_anotacao ON public.anotacao USING btree (id_protocolo, id_unidade, id_usuario, sin_prioridade, sta_anotacao);
 
 
 --
--- Name: i01_assinatura; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_assinatura; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_assinatura ON public.assinatura USING btree (agrupador);
 
 
 --
--- Name: i01_assunto; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_assunto; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_assunto ON public.assunto USING btree (codigo_estruturado, id_tabela_assuntos, sin_ativo, sin_estrutural);
 
 
 --
--- Name: i01_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_atividade ON public.atividade USING btree (dth_conclusao, id_atividade, id_protocolo, id_unidade, id_usuario, id_usuario_atribuicao, sin_inicial);
 
 
 --
--- Name: i01_atributo_andamento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_atributo_andamento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_atributo_andamento ON public.atributo_andamento USING btree (id_atividade, id_origem, nome);
 
 
 --
--- Name: i01_auditoria_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_auditoria_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_auditoria_protocolo ON public.auditoria_protocolo USING btree (dta_auditoria, id_anexo, id_protocolo, id_usuario, versao);
 
 
 --
--- Name: i01_base_conhecimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_base_conhecimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_base_conhecimento ON public.base_conhecimento USING btree (id_base_conhecimento_agrupador);
 
 
 --
--- Name: i01_bloco; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_bloco; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_bloco ON public.bloco USING btree (id_bloco, sta_estado, sta_tipo);
 
 
 --
--- Name: i01_cidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_cidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_cidade ON public.cidade USING btree (codigo_ibge, id_pais, id_uf, sin_capital);
 
 
 --
--- Name: i01_comentario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_comentario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_comentario ON public.comentario USING btree (id_procedimento, id_rel_protocolo_protocolo);
 
 
 --
--- Name: i01_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_contato ON public.contato USING btree (id_tipo_contato, nome, sigla, sin_ativo);
 
 
 --
--- Name: i01_controle_prazo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_controle_prazo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_controle_prazo ON public.controle_prazo USING btree (id_unidade, dta_prazo, dta_conclusao);
 
 
 --
--- Name: i01_email_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_email_sistema; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX i01_email_sistema ON public.email_sistema USING btree (id_email_sistema_modulo);
 
 
 --
--- Name: i01_estatisticas; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_estatisticas; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_estatisticas ON public.estatisticas USING btree (id_estatisticas);
 
 
 --
--- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_infra_auditoria ON public.infra_auditoria USING btree (recurso);
 
 
 --
--- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_infra_log ON public.infra_log USING btree (dth_log, sta_tipo);
 
 
 --
--- Name: i01_infra_navegador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_navegador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_infra_navegador ON public.infra_navegador USING btree (dth_acesso, identificacao, versao);
 
 
 --
--- Name: i01_infra_sequencia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_sequencia; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_infra_sequencia ON public.infra_sequencia USING btree (nome_tabela, num_atual, num_maximo, qtd_incremento);
 
 
 --
--- Name: i01_lembrete; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_lembrete; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_lembrete ON public.lembrete USING btree (id_usuario);
 
 
 --
--- Name: i01_monitoramento_servico; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_monitoramento_servico; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_monitoramento_servico ON public.monitoramento_servico USING btree (dth_acesso);
 
 
 --
--- Name: i01_participante; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_participante; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_participante ON public.participante USING btree (id_protocolo, sta_participacao);
 
 
 --
--- Name: i01_protocolo_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_protocolo_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_protocolo_federacao ON public.protocolo_federacao USING btree (protocolo_formatado);
 
 
 --
--- Name: i01_publicacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_publicacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_publicacao ON public.publicacao USING btree (dta_publicacao);
 
 
 --
--- Name: i01_publicacao_legado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_publicacao_legado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_publicacao_legado ON public.publicacao_legado USING btree (id_publicacao_legado_agrupador);
 
 
 --
--- Name: i01_rel_protocolo_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_rel_protocolo_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_rel_protocolo_protocolo ON public.rel_protocolo_protocolo USING btree (id_protocolo_1, id_protocolo_2, sta_associacao);
 
 
 --
--- Name: i01_rel_unidade_tipo_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_rel_unidade_tipo_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_rel_unidade_tipo_contato ON public.rel_unidade_tipo_contato USING btree (id_tipo_contato, id_unidade, sta_acesso);
 
 
 --
--- Name: i01_secao_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_secao_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_secao_documento ON public.secao_documento USING btree (id_base_conhecimento, id_documento, sin_cabecalho, sin_rodape);
 
 
 --
--- Name: i01_secao_modelo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_secao_modelo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_secao_modelo ON public.secao_modelo USING btree (id_modelo, ordem);
 
 
 --
--- Name: i01_serie; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_serie; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_serie ON public.serie USING btree (sin_ativo, sin_interno, sta_aplicabilidade);
 
 
 --
--- Name: i01_sinalizacao_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_sinalizacao_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_sinalizacao_federacao ON public.sinalizacao_federacao USING btree (id_protocolo_federacao, id_unidade, sta_sinalizacao);
 
 
 --
--- Name: i01_tarefa; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_tarefa; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX i01_tarefa ON public.tarefa USING btree (id_tarefa_modulo);
 
 
 --
--- Name: i01_tipo_procedimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_tipo_procedimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_tipo_procedimento ON public.tipo_procedimento USING btree (id_tipo_procedimento, sin_ativo);
 
 
 --
--- Name: i01_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_unidade ON public.unidade USING btree (id_orgao, sin_ativo, sin_envio_processo, sin_ouvidoria, sin_protocolo);
 
 
 --
--- Name: i01_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_usuario ON public.usuario USING btree (id_orgao, idx_usuario, sigla, sin_ativo, sta_tipo);
 
 
 --
--- Name: i01_versao_secao_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_versao_secao_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i01_versao_secao_documento ON public.versao_secao_documento USING btree (id_secao_documento, versao);
 
 
 --
--- Name: i02_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_acesso; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_acesso ON public.acesso USING btree (id_protocolo, sta_tipo);
 
 
 --
--- Name: i02_acesso_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_acesso_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_acesso_federacao ON public.acesso_federacao USING btree (id_procedimento_federacao, id_instalacao_federacao_rem, id_instalacao_federacao_dest);
 
 
 --
--- Name: i02_andamento_marcador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_andamento_marcador; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_andamento_marcador ON public.andamento_marcador USING btree (id_procedimento, id_unidade, sin_ultimo);
 
 
 --
--- Name: i02_anexo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_anexo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_anexo ON public.anexo USING btree (dth_inclusao, id_anexo);
 
 
 --
--- Name: i02_assinatura; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_assinatura; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_assinatura ON public.assinatura USING btree (id_documento, id_atividade);
 
 
 --
--- Name: i02_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_atividade ON public.atividade USING btree (id_atividade, id_protocolo, id_tarefa, id_unidade, id_usuario);
 
 
 --
--- Name: i02_atributo_andamento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_atributo_andamento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_atributo_andamento ON public.atributo_andamento USING btree (id_origem, nome);
 
 
 --
--- Name: i02_base_conhecimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_base_conhecimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_base_conhecimento ON public.base_conhecimento USING btree (id_unidade, sta_estado);
 
 
 --
--- Name: i02_bloco; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_bloco; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_bloco ON public.bloco USING btree (descricao, id_bloco, id_unidade, sta_estado, sta_tipo);
 
 
 --
--- Name: i02_controle_prazo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_controle_prazo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_controle_prazo ON public.controle_prazo USING btree (id_unidade, dta_prazo);
 
 
 --
--- Name: i02_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_documento ON public.documento USING btree (id_documento, id_documento_edoc);
 
 
 --
--- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_infra_auditoria ON public.infra_auditoria USING btree (dth_acesso);
 
 
 --
--- Name: i02_monitoramento_servico; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_monitoramento_servico; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_monitoramento_servico ON public.monitoramento_servico USING btree (operacao);
 
 
 --
--- Name: i02_orgao_historico; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_orgao_historico; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX i02_orgao_historico ON public.orgao_historico USING btree (dta_inicio, dta_fim, id_orgao);
 
 
 --
--- Name: i02_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_protocolo ON public.protocolo USING btree (dta_geracao, id_protocolo, id_unidade_geradora, sta_protocolo);
 
 
 --
--- Name: i02_protocolo_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_protocolo_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_protocolo_federacao ON public.protocolo_federacao USING btree (protocolo_formatado_pesquisa);
 
 
 --
--- Name: i02_publicacao_legado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_publicacao_legado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_publicacao_legado ON public.publicacao_legado USING btree (id_orgao, id_unidade);
 
 
 --
--- Name: i02_servico; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_servico; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_servico ON public.servico USING btree (crc);
 
 
 --
--- Name: i02_tipo_procedimento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_tipo_procedimento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_tipo_procedimento ON public.tipo_procedimento USING btree (sin_ativo, sin_interno, sin_ouvidoria);
 
 
 --
--- Name: i02_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_unidade ON public.unidade USING btree (sigla, sin_ativo);
 
 
 --
--- Name: i02_unidade_historico; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_unidade_historico; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE UNIQUE INDEX i02_unidade_historico ON public.unidade_historico USING btree (dta_inicio, dta_fim, id_unidade);
 
 
 --
--- Name: i02_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_usuario; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i02_usuario ON public.usuario USING btree (id_contato, sta_tipo);
 
 
 --
--- Name: i03_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_acesso; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_acesso ON public.acesso USING btree (id_protocolo, id_unidade, id_usuario);
 
 
 --
--- Name: i03_acesso_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_acesso_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_acesso_federacao ON public.acesso_federacao USING btree (id_procedimento_federacao, id_instalacao_federacao_dest);
 
 
 --
--- Name: i03_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_atividade ON public.atividade USING btree (dth_conclusao, id_unidade, sin_inicial);
 
 
 --
--- Name: i03_controle_prazo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_controle_prazo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_controle_prazo ON public.controle_prazo USING btree (id_unidade, dta_conclusao);
 
 
 --
--- Name: i03_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_documento ON public.documento USING btree (id_documento, id_serie, id_tipo_formulario, sta_documento);
 
 
 --
--- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_infra_auditoria ON public.infra_auditoria USING btree (sigla_usuario);
 
 
 --
--- Name: i03_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_protocolo ON public.protocolo USING btree (id_protocolo, id_unidade_geradora, sta_estado, sta_nivel_acesso_global, sta_protocolo);
 
 
 --
--- Name: i03_protocolo_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_protocolo_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_protocolo_federacao ON public.protocolo_federacao USING btree (protocolo_formatado_pesq_inv);
 
 
 --
--- Name: i03_publicacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_publicacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_publicacao ON public.publicacao USING btree (dta_publicacao, id_unidade);
 
 
 --
--- Name: i03_publicacao_legado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_publicacao_legado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_publicacao_legado ON public.publicacao_legado USING btree (id_orgao, id_serie);
 
 
 --
--- Name: i03_rel_notificacao_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_rel_notificacao_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i03_rel_notificacao_documento ON public.rel_notificacao_documento USING btree (id_documento, sin_processada);
 
 
 --
--- Name: i04_acesso_externo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_acesso_externo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i04_acesso_externo ON public.acesso_externo USING btree (id_acesso_externo, id_atividade, id_documento, id_participante, sta_tipo);
 
 
 --
--- Name: i04_acesso_federacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_acesso_federacao; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i04_acesso_federacao ON public.acesso_federacao USING btree (id_documento_federacao, id_instalacao_federacao_rem, id_instalacao_federacao_dest);
 
 
 --
--- Name: i04_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i04_atividade ON public.atividade USING btree (dth_abertura, dth_conclusao, id_atividade, id_protocolo, id_tarefa, id_unidade);
 
 
 --
--- Name: i04_atributo_andamento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_atributo_andamento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i04_atributo_andamento ON public.atributo_andamento USING btree (id_atividade, id_atributo_andamento);
 
 
 --
--- Name: i04_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i04_documento ON public.documento USING btree (id_serie, numero);
 
 
 --
--- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i04_infra_auditoria ON public.infra_auditoria USING btree (sigla_unidade);
 
 
 --
--- Name: i05_acesso_externo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_acesso_externo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i05_acesso_externo ON public.acesso_externo USING btree (sta_tipo, sin_inclusao);
 
 
 --
--- Name: i05_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_infra_auditoria; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i05_infra_auditoria ON public.infra_auditoria USING btree (id_usuario);
 
 
 --
--- Name: i05_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i05_rel_bloco_unidade ON public.rel_bloco_unidade USING btree (id_bloco, id_unidade, id_usuario_atribuicao);
 
 
 --
--- Name: i06_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i06_atividade ON public.atividade USING btree (id_atividade, id_protocolo, id_unidade, id_unidade_origem);
 
 
 --
--- Name: i06_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i06_documento ON public.documento USING btree (id_documento, sin_arquivamento);
 
 
 --
--- Name: i06_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i06_protocolo ON public.protocolo USING btree (dta_geracao, id_protocolo, sta_protocolo);
 
 
 --
--- Name: i06_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i06_rel_bloco_unidade ON public.rel_bloco_unidade USING btree (id_bloco, id_unidade, sin_prioridade, sin_revisao, sin_comentario);
 
 
 --
--- Name: i06_retorno_programado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_retorno_programado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i06_retorno_programado ON public.retorno_programado USING btree (dta_programada);
 
 
 --
--- Name: i07_arquivamento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i07_arquivamento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i07_arquivamento ON public.arquivamento USING btree (id_localizador, sta_arquivamento);
 
 
 --
--- Name: i07_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i07_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i07_atividade ON public.atividade USING btree (id_atividade, id_protocolo, id_tarefa, id_unidade_origem);
 
 
 --
--- Name: i07_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i07_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i07_protocolo ON public.protocolo USING btree (dta_inclusao, id_unidade_geradora, sta_protocolo);
 
 
 --
--- Name: i07_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i07_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i07_rel_bloco_unidade ON public.rel_bloco_unidade USING btree (id_bloco, id_unidade, id_usuario_atribuicao, sin_prioridade, sin_revisao, sin_comentario);
 
 
 --
--- Name: i07_retorno_programado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i07_retorno_programado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i07_retorno_programado ON public.retorno_programado USING btree (id_unidade_envio, id_unidade_retorno, id_protocolo, id_atividade_retorno);
 
 
 --
--- Name: i08_retorno_programado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i08_retorno_programado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i08_retorno_programado ON public.retorno_programado USING btree (id_unidade_envio, id_unidade_retorno, dta_programada);
 
 
 --
--- Name: i09_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i09_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i09_atividade ON public.atividade USING btree (id_protocolo, id_unidade, id_usuario);
 
 
 --
--- Name: i09_retorno_programado; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i09_retorno_programado; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i09_retorno_programado ON public.retorno_programado USING btree (id_unidade_envio, id_unidade_retorno, id_protocolo);
 
 
 --
--- Name: i10_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i10_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i10_atividade ON public.atividade USING btree (dth_abertura, id_tarefa);
 
 
 --
--- Name: i10_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i10_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i10_protocolo ON public.protocolo USING btree (id_protocolo, protocolo_formatado_pesquisa, sta_nivel_acesso_global);
 
 
 --
--- Name: i11_contato; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i11_contato; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i11_contato ON public.contato USING btree (nome, sigla, sin_ativo);
 
 
 --
--- Name: i11_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i11_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i11_protocolo ON public.protocolo USING btree (id_protocolo, sta_nivel_acesso_global, sta_protocolo);
 
 
 --
--- Name: i12_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i12_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i12_protocolo ON public.protocolo USING btree (id_protocolo, sta_estado, sta_nivel_acesso_global, sta_protocolo);
 
 
 --
--- Name: i13_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i13_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i13_protocolo ON public.protocolo USING btree (dta_geracao, id_protocolo, id_unidade_geradora, id_usuario_gerador, sta_protocolo);
 
 
 --
--- Name: i14_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i14_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i14_protocolo ON public.protocolo USING btree (id_hipotese_legal, id_protocolo, id_unidade_geradora);
 
 
 --
--- Name: i15_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i15_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i15_protocolo ON public.protocolo USING btree (protocolo_formatado_pesquisa);
 
 
 --
--- Name: i16_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i16_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i16_atividade ON public.atividade USING btree (dth_conclusao, id_atividade, id_protocolo, id_unidade, id_usuario, id_usuario_atribuicao);
 
 
 --
--- Name: i16_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i16_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i16_protocolo ON public.protocolo USING btree (protocolo_formatado_pesq_inv);
 
 
 --
--- Name: i17_atividade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i17_atividade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX i17_atividade ON public.atividade USING btree (id_protocolo, id_tarefa, id_unidade, id_unidade_origem);
 
 
 --
--- Name: ie1_bloco; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ie1_bloco; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX ie1_bloco ON public.bloco USING btree (id_bloco, id_unidade, id_usuario, sta_estado, sta_tipo);
 
 
 --
--- Name: ie1_cargo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ie1_cargo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX ie1_cargo ON public.cargo USING btree (id_cargo, sin_ativo);
 
 
 --
--- Name: ie1_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ie1_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX ie1_protocolo ON public.protocolo USING btree (dta_geracao, id_protocolo, id_unidade_geradora, sta_estado, sta_protocolo);
 
 
 --
--- Name: ie1_tratamento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ie1_tratamento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX ie1_tratamento ON public.tratamento USING btree (id_tratamento, sin_ativo);
 
 
 --
--- Name: ie1_vocativo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ie1_vocativo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX ie1_vocativo ON public.vocativo USING btree (id_vocativo, sin_ativo);
 
 
 --
--- Name: if3_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: if3_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX if3_rel_bloco_unidade ON public.rel_bloco_unidade USING btree (id_bloco, sin_retornado);
 
 
 --
--- Name: if4_protocolo; Type: INDEX; Schema: public; Owner: postgres
+-- Name: if4_protocolo; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX if4_protocolo ON public.protocolo USING btree (id_protocolo_agrupador);
 
 
 --
--- Name: if4_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: if4_rel_bloco_unidade; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX if4_rel_bloco_unidade ON public.rel_bloco_unidade USING btree (id_unidade, sin_retornado);
 
 
 --
--- Name: if5_documento; Type: INDEX; Schema: public; Owner: postgres
+-- Name: if5_documento; Type: INDEX; Schema: public; Owner: sei_user
 --
 
 CREATE INDEX if5_documento ON public.documento USING btree (id_documento, id_procedimento, id_serie);
 
 
 --
--- Name: acesso fk_acesso_controle_interno; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso fk_acesso_controle_interno; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso
@@ -64940,7 +64941,7 @@ ALTER TABLE ONLY public.acesso
 
 
 --
--- Name: acesso_externo fk_acesso_externo_atividade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_externo fk_acesso_externo_atividade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_externo
@@ -64948,7 +64949,7 @@ ALTER TABLE ONLY public.acesso_externo
 
 
 --
--- Name: acesso_externo fk_acesso_externo_documento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_externo fk_acesso_externo_documento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_externo
@@ -64956,7 +64957,7 @@ ALTER TABLE ONLY public.acesso_externo
 
 
 --
--- Name: acesso_externo fk_acesso_externo_participante; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_externo fk_acesso_externo_participante; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_externo
@@ -64964,7 +64965,7 @@ ALTER TABLE ONLY public.acesso_externo
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_documento_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_documento_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -64972,7 +64973,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_instal_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_instal_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -64980,7 +64981,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_instal_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_instal_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -64988,7 +64989,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_orgao_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_orgao_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -64996,7 +64997,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_orgao_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_orgao_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -65004,7 +65005,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_procedimento_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_procedimento_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -65012,7 +65013,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_unidade_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_unidade_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -65020,7 +65021,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_unidade_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_unidade_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -65028,7 +65029,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_usuario_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_usuario_fed_dest; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -65036,7 +65037,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso_federacao fk_acesso_fed_usuario_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso_federacao fk_acesso_fed_usuario_fed_rem; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso_federacao
@@ -65044,7 +65045,7 @@ ALTER TABLE ONLY public.acesso_federacao
 
 
 --
--- Name: acesso fk_acesso_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso fk_acesso_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso
@@ -65052,7 +65053,7 @@ ALTER TABLE ONLY public.acesso
 
 
 --
--- Name: acesso fk_acesso_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso fk_acesso_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso
@@ -65060,7 +65061,7 @@ ALTER TABLE ONLY public.acesso
 
 
 --
--- Name: acesso fk_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acesso fk_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acesso
@@ -65068,7 +65069,7 @@ ALTER TABLE ONLY public.acesso
 
 
 --
--- Name: acompanhamento fk_acompanhamento_grupo_acompa; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acompanhamento fk_acompanhamento_grupo_acompa; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acompanhamento
@@ -65076,7 +65077,7 @@ ALTER TABLE ONLY public.acompanhamento
 
 
 --
--- Name: acompanhamento fk_acompanhamento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acompanhamento fk_acompanhamento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acompanhamento
@@ -65084,7 +65085,7 @@ ALTER TABLE ONLY public.acompanhamento
 
 
 --
--- Name: acompanhamento fk_acompanhamento_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acompanhamento fk_acompanhamento_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acompanhamento
@@ -65092,7 +65093,7 @@ ALTER TABLE ONLY public.acompanhamento
 
 
 --
--- Name: acompanhamento fk_acompanhamento_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: acompanhamento fk_acompanhamento_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.acompanhamento
@@ -65100,7 +65101,7 @@ ALTER TABLE ONLY public.acompanhamento
 
 
 --
--- Name: andamento_instalacao fk_and_inst_tarefa_inst; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_instalacao fk_and_inst_tarefa_inst; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_instalacao
@@ -65108,7 +65109,7 @@ ALTER TABLE ONLY public.andamento_instalacao
 
 
 --
--- Name: andamento_situacao fk_andam_situacao_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_situacao fk_andam_situacao_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_situacao
@@ -65116,7 +65117,7 @@ ALTER TABLE ONLY public.andamento_situacao
 
 
 --
--- Name: andamento_situacao fk_andam_situacao_situacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_situacao fk_andam_situacao_situacao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_situacao
@@ -65124,7 +65125,7 @@ ALTER TABLE ONLY public.andamento_situacao
 
 
 --
--- Name: andamento_instalacao fk_andamento_inst_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_instalacao fk_andamento_inst_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_instalacao
@@ -65132,7 +65133,7 @@ ALTER TABLE ONLY public.andamento_instalacao
 
 
 --
--- Name: andamento_instalacao fk_andamento_inst_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_instalacao fk_andamento_inst_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_instalacao
@@ -65140,7 +65141,7 @@ ALTER TABLE ONLY public.andamento_instalacao
 
 
 --
--- Name: andamento_instalacao fk_andamento_inst_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_instalacao fk_andamento_inst_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_instalacao
@@ -65148,7 +65149,7 @@ ALTER TABLE ONLY public.andamento_instalacao
 
 
 --
--- Name: andamento_marcador fk_andamento_marcador_marcador; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_marcador fk_andamento_marcador_marcador; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_marcador
@@ -65156,7 +65157,7 @@ ALTER TABLE ONLY public.andamento_marcador
 
 
 --
--- Name: andamento_marcador fk_andamento_marcador_proced; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_marcador fk_andamento_marcador_proced; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_marcador
@@ -65164,7 +65165,7 @@ ALTER TABLE ONLY public.andamento_marcador
 
 
 --
--- Name: andamento_marcador fk_andamento_marcador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_marcador fk_andamento_marcador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_marcador
@@ -65172,7 +65173,7 @@ ALTER TABLE ONLY public.andamento_marcador
 
 
 --
--- Name: andamento_marcador fk_andamento_marcador_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_marcador fk_andamento_marcador_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_marcador
@@ -65180,7 +65181,7 @@ ALTER TABLE ONLY public.andamento_marcador
 
 
 --
--- Name: andamento_situacao fk_andamento_situacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_situacao fk_andamento_situacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_situacao
@@ -65188,7 +65189,7 @@ ALTER TABLE ONLY public.andamento_situacao
 
 
 --
--- Name: andamento_situacao fk_andamento_situacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: andamento_situacao fk_andamento_situacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.andamento_situacao
@@ -65196,7 +65197,7 @@ ALTER TABLE ONLY public.andamento_situacao
 
 
 --
--- Name: anexo fk_anexo_base_conhecimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anexo fk_anexo_base_conhecimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anexo
@@ -65204,7 +65205,7 @@ ALTER TABLE ONLY public.anexo
 
 
 --
--- Name: anexo fk_anexo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anexo fk_anexo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anexo
@@ -65212,7 +65213,7 @@ ALTER TABLE ONLY public.anexo
 
 
 --
--- Name: anexo fk_anexo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anexo fk_anexo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anexo
@@ -65220,7 +65221,7 @@ ALTER TABLE ONLY public.anexo
 
 
 --
--- Name: anexo fk_anexo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anexo fk_anexo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anexo
@@ -65228,7 +65229,7 @@ ALTER TABLE ONLY public.anexo
 
 
 --
--- Name: anotacao fk_anotacao_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anotacao fk_anotacao_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anotacao
@@ -65236,7 +65237,7 @@ ALTER TABLE ONLY public.anotacao
 
 
 --
--- Name: anotacao fk_anotacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anotacao fk_anotacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anotacao
@@ -65244,7 +65245,7 @@ ALTER TABLE ONLY public.anotacao
 
 
 --
--- Name: anotacao fk_anotacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: anotacao fk_anotacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.anotacao
@@ -65252,7 +65253,7 @@ ALTER TABLE ONLY public.anotacao
 
 
 --
--- Name: arquivamento fk_arquiv_ativ_arquiv; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento fk_arquiv_ativ_arquiv; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -65260,7 +65261,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: arquivamento fk_arquiv_ativ_canc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento fk_arquiv_ativ_canc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -65268,7 +65269,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: arquivamento fk_arquiv_ativ_desarquiv; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento fk_arquiv_ativ_desarquiv; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -65276,7 +65277,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: arquivamento fk_arquiv_ativ_receb; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento fk_arquiv_ativ_receb; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -65284,7 +65285,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: arquivamento fk_arquiv_ativ_solic_desarq; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento fk_arquiv_ativ_solic_desarq; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -65292,7 +65293,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: arquivamento fk_arquivamento_localizador; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento fk_arquivamento_localizador; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -65300,7 +65301,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: arquivamento fk_arquivamento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: arquivamento fk_arquivamento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.arquivamento
@@ -65308,7 +65309,7 @@ ALTER TABLE ONLY public.arquivamento
 
 
 --
--- Name: assinante fk_assinante_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinante fk_assinante_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinante
@@ -65316,7 +65317,7 @@ ALTER TABLE ONLY public.assinante
 
 
 --
--- Name: assinatura fk_assinatura_atividade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinatura fk_assinatura_atividade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinatura
@@ -65324,7 +65325,7 @@ ALTER TABLE ONLY public.assinatura
 
 
 --
--- Name: assinatura fk_assinatura_documento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinatura fk_assinatura_documento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinatura
@@ -65332,7 +65333,7 @@ ALTER TABLE ONLY public.assinatura
 
 
 --
--- Name: assinatura fk_assinatura_tarja_assinatura; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinatura fk_assinatura_tarja_assinatura; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinatura
@@ -65340,7 +65341,7 @@ ALTER TABLE ONLY public.assinatura
 
 
 --
--- Name: assinatura fk_assinatura_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinatura fk_assinatura_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinatura
@@ -65348,7 +65349,7 @@ ALTER TABLE ONLY public.assinatura
 
 
 --
--- Name: assinatura fk_assinatura_usuario_autentic; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assinatura fk_assinatura_usuario_autentic; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assinatura
@@ -65356,7 +65357,7 @@ ALTER TABLE ONLY public.assinatura
 
 
 --
--- Name: mapeamento_assunto fk_assunto_map_assunto_destino; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mapeamento_assunto fk_assunto_map_assunto_destino; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.mapeamento_assunto
@@ -65364,7 +65365,7 @@ ALTER TABLE ONLY public.mapeamento_assunto
 
 
 --
--- Name: mapeamento_assunto fk_assunto_map_assunto_origem; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: mapeamento_assunto fk_assunto_map_assunto_origem; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.mapeamento_assunto
@@ -65372,7 +65373,7 @@ ALTER TABLE ONLY public.mapeamento_assunto
 
 
 --
--- Name: assunto_proxy fk_assunto_proxy_assunto; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assunto_proxy fk_assunto_proxy_assunto; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assunto_proxy
@@ -65380,7 +65381,7 @@ ALTER TABLE ONLY public.assunto_proxy
 
 
 --
--- Name: assunto fk_assunto_tabela_assuntos; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: assunto fk_assunto_tabela_assuntos; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.assunto
@@ -65388,7 +65389,7 @@ ALTER TABLE ONLY public.assunto
 
 
 --
--- Name: atividade fk_atividade_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65396,7 +65397,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_tarefa; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_tarefa; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65404,7 +65405,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65412,7 +65413,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_unidade_origem; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_unidade_origem; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65420,7 +65421,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65428,7 +65429,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_usuario_atribuica; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_usuario_atribuica; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65436,7 +65437,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_usuario_conclusao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_usuario_conclusao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65444,7 +65445,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_usuario_origem; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_usuario_origem; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65452,7 +65453,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atividade fk_atividade_usuario_visualiza; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atividade fk_atividade_usuario_visualiza; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atividade
@@ -65460,7 +65461,7 @@ ALTER TABLE ONLY public.atividade
 
 
 --
--- Name: atributo_andamento fk_atributo_andamento_atividad; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atributo_andamento fk_atributo_andamento_atividad; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atributo_andamento
@@ -65468,7 +65469,7 @@ ALTER TABLE ONLY public.atributo_andamento
 
 
 --
--- Name: atributo_instalacao fk_atributo_inst_andam_inst; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atributo_instalacao fk_atributo_inst_andam_inst; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atributo_instalacao
@@ -65476,7 +65477,7 @@ ALTER TABLE ONLY public.atributo_instalacao
 
 
 --
--- Name: atributo fk_atributo_tipo_formulario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: atributo fk_atributo_tipo_formulario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.atributo
@@ -65484,7 +65485,7 @@ ALTER TABLE ONLY public.atributo
 
 
 --
--- Name: base_conhecimento fk_base_conhec_conj_estilos; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: base_conhecimento fk_base_conhec_conj_estilos; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.base_conhecimento
@@ -65492,7 +65493,7 @@ ALTER TABLE ONLY public.base_conhecimento
 
 
 --
--- Name: base_conhecimento fk_base_conhec_usu_gerador; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: base_conhecimento fk_base_conhec_usu_gerador; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.base_conhecimento
@@ -65500,7 +65501,7 @@ ALTER TABLE ONLY public.base_conhecimento
 
 
 --
--- Name: base_conhecimento fk_base_conhec_usu_liberacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: base_conhecimento fk_base_conhec_usu_liberacao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.base_conhecimento
@@ -65508,7 +65509,7 @@ ALTER TABLE ONLY public.base_conhecimento
 
 
 --
--- Name: base_conhecimento fk_base_conhecimento_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: base_conhecimento fk_base_conhecimento_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.base_conhecimento
@@ -65516,7 +65517,7 @@ ALTER TABLE ONLY public.base_conhecimento
 
 
 --
--- Name: bloco fk_bloco_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: bloco fk_bloco_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.bloco
@@ -65524,7 +65525,7 @@ ALTER TABLE ONLY public.bloco
 
 
 --
--- Name: bloco fk_bloco_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: bloco fk_bloco_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.bloco
@@ -65532,7 +65533,7 @@ ALTER TABLE ONLY public.bloco
 
 
 --
--- Name: campo_pesquisa fk_campo_pesquisa_pesquisa; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: campo_pesquisa fk_campo_pesquisa_pesquisa; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.campo_pesquisa
@@ -65540,7 +65541,7 @@ ALTER TABLE ONLY public.campo_pesquisa
 
 
 --
--- Name: cargo_funcao fk_cargo_funcao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cargo_funcao fk_cargo_funcao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cargo_funcao
@@ -65548,7 +65549,7 @@ ALTER TABLE ONLY public.cargo_funcao
 
 
 --
--- Name: cargo fk_cargo_titulo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cargo fk_cargo_titulo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cargo
@@ -65556,7 +65557,7 @@ ALTER TABLE ONLY public.cargo
 
 
 --
--- Name: cargo fk_cargo_tratamento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cargo fk_cargo_tratamento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cargo
@@ -65564,7 +65565,7 @@ ALTER TABLE ONLY public.cargo
 
 
 --
--- Name: cargo fk_cargo_vocativo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cargo fk_cargo_vocativo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cargo
@@ -65572,7 +65573,7 @@ ALTER TABLE ONLY public.cargo
 
 
 --
--- Name: cidade fk_cidade_pais; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cidade fk_cidade_pais; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cidade
@@ -65580,7 +65581,7 @@ ALTER TABLE ONLY public.cidade
 
 
 --
--- Name: cidade fk_cidade_uf; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: cidade fk_cidade_uf; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.cidade
@@ -65588,7 +65589,7 @@ ALTER TABLE ONLY public.cidade
 
 
 --
--- Name: comentario fk_comentario_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: comentario fk_comentario_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.comentario
@@ -65596,7 +65597,7 @@ ALTER TABLE ONLY public.comentario
 
 
 --
--- Name: comentario fk_comentario_rel_prot_prot; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: comentario fk_comentario_rel_prot_prot; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.comentario
@@ -65604,7 +65605,7 @@ ALTER TABLE ONLY public.comentario
 
 
 --
--- Name: comentario fk_comentario_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: comentario fk_comentario_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.comentario
@@ -65612,7 +65613,7 @@ ALTER TABLE ONLY public.comentario
 
 
 --
--- Name: comentario fk_comentario_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: comentario fk_comentario_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.comentario
@@ -65620,7 +65621,7 @@ ALTER TABLE ONLY public.comentario
 
 
 --
--- Name: conjunto_estilos_item fk_conj_est_item_conj_est; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: conjunto_estilos_item fk_conj_est_item_conj_est; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.conjunto_estilos_item
@@ -65628,7 +65629,7 @@ ALTER TABLE ONLY public.conjunto_estilos_item
 
 
 --
--- Name: contato fk_contato_cargo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_cargo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65636,7 +65637,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_categoria; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_categoria; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65644,7 +65645,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_cidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_cidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65652,7 +65653,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_pais; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_pais; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65660,7 +65661,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_pais_passaporte; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_pais_passaporte; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65668,7 +65669,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_tipo_contato; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_tipo_contato; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65676,7 +65677,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_titulo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_titulo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65684,7 +65685,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_uf; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_uf; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65692,7 +65693,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_unidade_cadastro; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_unidade_cadastro; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65700,7 +65701,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: contato fk_contato_usuario_cadastro; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: contato fk_contato_usuario_cadastro; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.contato
@@ -65708,7 +65709,7 @@ ALTER TABLE ONLY public.contato
 
 
 --
--- Name: controle_prazo fk_controle_prazo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: controle_prazo fk_controle_prazo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.controle_prazo
@@ -65716,7 +65717,7 @@ ALTER TABLE ONLY public.controle_prazo
 
 
 --
--- Name: controle_prazo fk_controle_prazo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: controle_prazo fk_controle_prazo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.controle_prazo
@@ -65724,7 +65725,7 @@ ALTER TABLE ONLY public.controle_prazo
 
 
 --
--- Name: controle_prazo fk_controle_prazo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: controle_prazo fk_controle_prazo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.controle_prazo
@@ -65732,7 +65733,7 @@ ALTER TABLE ONLY public.controle_prazo
 
 
 --
--- Name: documento_conteudo fk_doc_conteudo_documento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento_conteudo fk_doc_conteudo_documento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento_conteudo
@@ -65740,7 +65741,7 @@ ALTER TABLE ONLY public.documento_conteudo
 
 
 --
--- Name: documento fk_documento_conjunto_estilos; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento fk_documento_conjunto_estilos; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -65748,7 +65749,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: documento fk_documento_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento fk_documento_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -65756,7 +65757,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: documento fk_documento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento fk_documento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -65764,7 +65765,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: documento fk_documento_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento fk_documento_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -65772,7 +65773,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: documento fk_documento_tipo_conferencia; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento fk_documento_tipo_conferencia; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -65780,7 +65781,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: documento fk_documento_tipo_formulario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento fk_documento_tipo_formulario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -65788,7 +65789,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: documento fk_documento_unidade_responsav; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: documento fk_documento_unidade_responsav; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.documento
@@ -65796,7 +65797,7 @@ ALTER TABLE ONLY public.documento
 
 
 --
--- Name: dominio fk_dominio_atributo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: dominio fk_dominio_atributo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.dominio
@@ -65804,7 +65805,7 @@ ALTER TABLE ONLY public.dominio
 
 
 --
--- Name: email_grupo_email fk_email_grupo_email_grupo_em; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_grupo_email fk_email_grupo_email_grupo_em; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.email_grupo_email
@@ -65812,7 +65813,7 @@ ALTER TABLE ONLY public.email_grupo_email
 
 
 --
--- Name: email_unidade fk_email_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_unidade fk_email_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.email_unidade
@@ -65820,7 +65821,7 @@ ALTER TABLE ONLY public.email_unidade
 
 
 --
--- Name: email_utilizado fk_email_utilizado_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_utilizado fk_email_utilizado_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.email_utilizado
@@ -65828,7 +65829,7 @@ ALTER TABLE ONLY public.email_utilizado
 
 
 --
--- Name: feriado fk_feriado_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: feriado fk_feriado_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.feriado
@@ -65836,7 +65837,7 @@ ALTER TABLE ONLY public.feriado
 
 
 --
--- Name: grupo_acompanhamento fk_grupo_acompanhamento_unidad; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_acompanhamento fk_grupo_acompanhamento_unidad; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_acompanhamento
@@ -65844,7 +65845,7 @@ ALTER TABLE ONLY public.grupo_acompanhamento
 
 
 --
--- Name: grupo_bloco fk_grupo_bloco_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_bloco fk_grupo_bloco_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_bloco
@@ -65852,7 +65853,7 @@ ALTER TABLE ONLY public.grupo_bloco
 
 
 --
--- Name: grupo_contato fk_grupo_contato_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_contato fk_grupo_contato_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_contato
@@ -65860,7 +65861,7 @@ ALTER TABLE ONLY public.grupo_contato
 
 
 --
--- Name: grupo_email fk_grupo_email_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_email fk_grupo_email_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_email
@@ -65868,7 +65869,7 @@ ALTER TABLE ONLY public.grupo_email
 
 
 --
--- Name: grupo_federacao fk_grupo_federacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_federacao fk_grupo_federacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_federacao
@@ -65876,7 +65877,7 @@ ALTER TABLE ONLY public.grupo_federacao
 
 
 --
--- Name: grupo_protocolo_modelo fk_grupo_protocolo_modelo_unid; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_protocolo_modelo fk_grupo_protocolo_modelo_unid; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_protocolo_modelo
@@ -65884,7 +65885,7 @@ ALTER TABLE ONLY public.grupo_protocolo_modelo
 
 
 --
--- Name: grupo_unidade fk_grupo_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: grupo_unidade fk_grupo_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.grupo_unidade
@@ -65892,7 +65893,7 @@ ALTER TABLE ONLY public.grupo_unidade
 
 
 --
--- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -65900,7 +65901,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: localizador fk_localizador_lugar_localizad; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: localizador fk_localizador_lugar_localizad; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.localizador
@@ -65908,7 +65909,7 @@ ALTER TABLE ONLY public.localizador
 
 
 --
--- Name: localizador fk_localizador_tipo_localizado; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: localizador fk_localizador_tipo_localizado; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.localizador
@@ -65916,7 +65917,7 @@ ALTER TABLE ONLY public.localizador
 
 
 --
--- Name: localizador fk_localizador_tipo_suporte; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: localizador fk_localizador_tipo_suporte; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.localizador
@@ -65924,7 +65925,7 @@ ALTER TABLE ONLY public.localizador
 
 
 --
--- Name: localizador fk_localizador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: localizador fk_localizador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.localizador
@@ -65932,7 +65933,7 @@ ALTER TABLE ONLY public.localizador
 
 
 --
--- Name: lugar_localizador fk_lugar_localizador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: lugar_localizador fk_lugar_localizador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.lugar_localizador
@@ -65940,7 +65941,7 @@ ALTER TABLE ONLY public.lugar_localizador
 
 
 --
--- Name: marcador fk_marcador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: marcador fk_marcador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.marcador
@@ -65948,7 +65949,7 @@ ALTER TABLE ONLY public.marcador
 
 
 --
--- Name: monitoramento_servico fk_monitoram_servico_servico; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: monitoramento_servico fk_monitoram_servico_servico; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.monitoramento_servico
@@ -65956,7 +65957,7 @@ ALTER TABLE ONLY public.monitoramento_servico
 
 
 --
--- Name: nivel_acesso_permitido fk_nivel_acesso_perm_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: nivel_acesso_permitido fk_nivel_acesso_perm_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.nivel_acesso_permitido
@@ -65964,7 +65965,7 @@ ALTER TABLE ONLY public.nivel_acesso_permitido
 
 
 --
--- Name: notificacao fk_notificacao_atividade_confi; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: notificacao fk_notificacao_atividade_confi; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.notificacao
@@ -65972,7 +65973,7 @@ ALTER TABLE ONLY public.notificacao
 
 
 --
--- Name: notificacao fk_notificacao_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: notificacao fk_notificacao_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.notificacao
@@ -65980,7 +65981,7 @@ ALTER TABLE ONLY public.notificacao
 
 
 --
--- Name: notificacao fk_notificacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: notificacao fk_notificacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.notificacao
@@ -65988,7 +65989,7 @@ ALTER TABLE ONLY public.notificacao
 
 
 --
--- Name: notificacao fk_notificacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: notificacao fk_notificacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.notificacao
@@ -65996,7 +65997,7 @@ ALTER TABLE ONLY public.notificacao
 
 
 --
--- Name: novidade fk_novidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: novidade fk_novidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.novidade
@@ -66004,7 +66005,7 @@ ALTER TABLE ONLY public.novidade
 
 
 --
--- Name: numeracao fk_numeracao_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: numeracao fk_numeracao_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.numeracao
@@ -66012,7 +66013,7 @@ ALTER TABLE ONLY public.numeracao
 
 
 --
--- Name: numeracao fk_numeracao_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: numeracao fk_numeracao_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.numeracao
@@ -66020,7 +66021,7 @@ ALTER TABLE ONLY public.numeracao
 
 
 --
--- Name: numeracao fk_numeracao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: numeracao fk_numeracao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.numeracao
@@ -66028,7 +66029,7 @@ ALTER TABLE ONLY public.numeracao
 
 
 --
--- Name: observacao fk_observacao_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: observacao fk_observacao_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.observacao
@@ -66036,7 +66037,7 @@ ALTER TABLE ONLY public.observacao
 
 
 --
--- Name: observacao fk_observacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: observacao fk_observacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.observacao
@@ -66044,7 +66045,7 @@ ALTER TABLE ONLY public.observacao
 
 
 --
--- Name: operacao_servico fk_oper_serv_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: operacao_servico fk_oper_serv_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.operacao_servico
@@ -66052,7 +66053,7 @@ ALTER TABLE ONLY public.operacao_servico
 
 
 --
--- Name: operacao_servico fk_oper_serv_servico; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: operacao_servico fk_oper_serv_servico; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.operacao_servico
@@ -66060,7 +66061,7 @@ ALTER TABLE ONLY public.operacao_servico
 
 
 --
--- Name: operacao_servico fk_oper_serv_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: operacao_servico fk_oper_serv_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.operacao_servico
@@ -66068,7 +66069,7 @@ ALTER TABLE ONLY public.operacao_servico
 
 
 --
--- Name: operacao_servico fk_oper_serv_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: operacao_servico fk_oper_serv_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.operacao_servico
@@ -66076,7 +66077,7 @@ ALTER TABLE ONLY public.operacao_servico
 
 
 --
--- Name: ordenador_despesa fk_ordenador_despesa_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ordenador_despesa fk_ordenador_despesa_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.ordenador_despesa
@@ -66084,7 +66085,7 @@ ALTER TABLE ONLY public.ordenador_despesa
 
 
 --
--- Name: ordenador_despesa fk_ordenador_despesa_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ordenador_despesa fk_ordenador_despesa_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.ordenador_despesa
@@ -66092,7 +66093,7 @@ ALTER TABLE ONLY public.ordenador_despesa
 
 
 --
--- Name: ordenador_despesa fk_ordenador_despesa_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: ordenador_despesa fk_ordenador_despesa_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.ordenador_despesa
@@ -66100,7 +66101,7 @@ ALTER TABLE ONLY public.ordenador_despesa
 
 
 --
--- Name: orgao fk_orgao_contato; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao fk_orgao_contato; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao
@@ -66108,7 +66109,7 @@ ALTER TABLE ONLY public.orgao
 
 
 --
--- Name: orgao_federacao fk_orgao_fed_instalacao_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao_federacao fk_orgao_fed_instalacao_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao_federacao
@@ -66116,7 +66117,7 @@ ALTER TABLE ONLY public.orgao_federacao
 
 
 --
--- Name: orgao_historico fk_orgao_historico_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao_historico fk_orgao_historico_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao_historico
@@ -66124,7 +66125,7 @@ ALTER TABLE ONLY public.orgao_historico
 
 
 --
--- Name: orgao fk_orgao_orgao_federacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao fk_orgao_orgao_federacao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao
@@ -66132,7 +66133,7 @@ ALTER TABLE ONLY public.orgao
 
 
 --
--- Name: orgao fk_orgao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao fk_orgao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.orgao
@@ -66140,7 +66141,7 @@ ALTER TABLE ONLY public.orgao
 
 
 --
--- Name: parametro_acao_federacao fk_param_acao_fed_acao_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: parametro_acao_federacao fk_param_acao_fed_acao_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.parametro_acao_federacao
@@ -66148,7 +66149,7 @@ ALTER TABLE ONLY public.parametro_acao_federacao
 
 
 --
--- Name: participante fk_participante_contato; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: participante fk_participante_contato; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.participante
@@ -66156,7 +66157,7 @@ ALTER TABLE ONLY public.participante
 
 
 --
--- Name: participante fk_participante_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: participante fk_participante_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.participante
@@ -66164,7 +66165,7 @@ ALTER TABLE ONLY public.participante
 
 
 --
--- Name: participante fk_participante_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: participante fk_participante_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.participante
@@ -66172,7 +66173,7 @@ ALTER TABLE ONLY public.participante
 
 
 --
--- Name: pesquisa fk_pesquisa_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pesquisa fk_pesquisa_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.pesquisa
@@ -66180,7 +66181,7 @@ ALTER TABLE ONLY public.pesquisa
 
 
 --
--- Name: pesquisa fk_pesquisa_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: pesquisa fk_pesquisa_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.pesquisa
@@ -66188,7 +66189,7 @@ ALTER TABLE ONLY public.pesquisa
 
 
 --
--- Name: procedimento fk_procedimento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: procedimento fk_procedimento_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.procedimento
@@ -66196,7 +66197,7 @@ ALTER TABLE ONLY public.procedimento
 
 
 --
--- Name: procedimento fk_procedimento_tipo_procedime; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: procedimento fk_procedimento_tipo_procedime; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.procedimento
@@ -66204,7 +66205,7 @@ ALTER TABLE ONLY public.procedimento
 
 
 --
--- Name: protocolo_modelo fk_prot_mod_grupo_prot_mod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo_modelo fk_prot_mod_grupo_prot_mod; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo_modelo
@@ -66212,7 +66213,7 @@ ALTER TABLE ONLY public.protocolo_modelo
 
 
 --
--- Name: protocolo_federacao fk_protocolo_fed_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo_federacao fk_protocolo_fed_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo_federacao
@@ -66220,7 +66221,7 @@ ALTER TABLE ONLY public.protocolo_federacao
 
 
 --
--- Name: protocolo fk_protocolo_hipotese_legal; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo fk_protocolo_hipotese_legal; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo
@@ -66228,7 +66229,7 @@ ALTER TABLE ONLY public.protocolo
 
 
 --
--- Name: protocolo_modelo fk_protocolo_modelo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo_modelo fk_protocolo_modelo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo_modelo
@@ -66236,7 +66237,7 @@ ALTER TABLE ONLY public.protocolo_modelo
 
 
 --
--- Name: protocolo_modelo fk_protocolo_modelo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo_modelo fk_protocolo_modelo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo_modelo
@@ -66244,7 +66245,7 @@ ALTER TABLE ONLY public.protocolo_modelo
 
 
 --
--- Name: protocolo_modelo fk_protocolo_modelo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo_modelo fk_protocolo_modelo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo_modelo
@@ -66252,7 +66253,7 @@ ALTER TABLE ONLY public.protocolo_modelo
 
 
 --
--- Name: rel_protocolo_protocolo fk_protocolo_protocolo_1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_protocolo fk_protocolo_protocolo_1; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_protocolo
@@ -66260,7 +66261,7 @@ ALTER TABLE ONLY public.rel_protocolo_protocolo
 
 
 --
--- Name: rel_protocolo_protocolo fk_protocolo_protocolo_2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_protocolo fk_protocolo_protocolo_2; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_protocolo
@@ -66268,7 +66269,7 @@ ALTER TABLE ONLY public.rel_protocolo_protocolo
 
 
 --
--- Name: protocolo fk_protocolo_protocolo_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo fk_protocolo_protocolo_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo
@@ -66276,7 +66277,7 @@ ALTER TABLE ONLY public.protocolo
 
 
 --
--- Name: protocolo fk_protocolo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo fk_protocolo_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo
@@ -66284,7 +66285,7 @@ ALTER TABLE ONLY public.protocolo
 
 
 --
--- Name: protocolo fk_protocolo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: protocolo fk_protocolo_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.protocolo
@@ -66292,7 +66293,7 @@ ALTER TABLE ONLY public.protocolo
 
 
 --
--- Name: publicacao_legado fk_public_legado_secao_imp_nac; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao_legado fk_public_legado_secao_imp_nac; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao_legado
@@ -66300,7 +66301,7 @@ ALTER TABLE ONLY public.publicacao_legado
 
 
 --
--- Name: publicacao_legado fk_public_legado_veic_public; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao_legado fk_public_legado_veic_public; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao_legado
@@ -66308,7 +66309,7 @@ ALTER TABLE ONLY public.publicacao_legado
 
 
 --
--- Name: publicacao_legado fk_public_legado_veicu_imp_nac; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao_legado fk_public_legado_veicu_imp_nac; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao_legado
@@ -66316,7 +66317,7 @@ ALTER TABLE ONLY public.publicacao_legado
 
 
 --
--- Name: publicacao fk_publicacao_atividade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao fk_publicacao_atividade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -66324,7 +66325,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: publicacao fk_publicacao_documento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao fk_publicacao_documento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -66332,7 +66333,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: publicacao_legado fk_publicacao_legado_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao_legado fk_publicacao_legado_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao_legado
@@ -66340,7 +66341,7 @@ ALTER TABLE ONLY public.publicacao_legado
 
 
 --
--- Name: publicacao_legado fk_publicacao_legado_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao_legado fk_publicacao_legado_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao_legado
@@ -66348,7 +66349,7 @@ ALTER TABLE ONLY public.publicacao_legado
 
 
 --
--- Name: publicacao fk_publicacao_secao_in; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao fk_publicacao_secao_in; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -66356,7 +66357,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: publicacao fk_publicacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao fk_publicacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -66364,7 +66365,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: publicacao fk_publicacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao fk_publicacao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -66372,7 +66373,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: publicacao fk_publicacao_veiculo_in; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao fk_publicacao_veiculo_in; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -66380,7 +66381,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: publicacao fk_publicacao_veiculo_public; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: publicacao fk_publicacao_veiculo_public; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.publicacao
@@ -66388,7 +66389,7 @@ ALTER TABLE ONLY public.publicacao
 
 
 --
--- Name: rel_secao_mod_cj_estilos_item fk_re_secmod_cj_est_i_cj_est_i; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_secao_mod_cj_estilos_item fk_re_secmod_cj_est_i_cj_est_i; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_secao_mod_cj_estilos_item
@@ -66396,7 +66397,7 @@ ALTER TABLE ONLY public.rel_secao_mod_cj_estilos_item
 
 
 --
--- Name: rel_acesso_ext_protocolo fk_rel_aces_ext_prot_aces_ext; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_protocolo fk_rel_aces_ext_prot_aces_ext; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_acesso_ext_protocolo
@@ -66404,7 +66405,7 @@ ALTER TABLE ONLY public.rel_acesso_ext_protocolo
 
 
 --
--- Name: rel_acesso_ext_protocolo fk_rel_aces_ext_prot_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_protocolo fk_rel_aces_ext_prot_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_acesso_ext_protocolo
@@ -66412,7 +66413,7 @@ ALTER TABLE ONLY public.rel_acesso_ext_protocolo
 
 
 --
--- Name: rel_acesso_ext_serie fk_rel_aces_ext_serie_aces_ext; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_serie fk_rel_aces_ext_serie_aces_ext; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_acesso_ext_serie
@@ -66420,7 +66421,7 @@ ALTER TABLE ONLY public.rel_acesso_ext_serie
 
 
 --
--- Name: rel_acesso_ext_serie fk_rel_aces_ext_serie_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_acesso_ext_serie fk_rel_aces_ext_serie_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_acesso_ext_serie
@@ -66428,7 +66429,7 @@ ALTER TABLE ONLY public.rel_acesso_ext_serie
 
 
 --
--- Name: rel_assinante_unidade fk_rel_assinante_uni_assinante; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_assinante_unidade fk_rel_assinante_uni_assinante; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_assinante_unidade
@@ -66436,7 +66437,7 @@ ALTER TABLE ONLY public.rel_assinante_unidade
 
 
 --
--- Name: rel_assinante_unidade fk_rel_assinante_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_assinante_unidade fk_rel_assinante_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_assinante_unidade
@@ -66444,7 +66445,7 @@ ALTER TABLE ONLY public.rel_assinante_unidade
 
 
 --
--- Name: rel_base_conhec_tipo_proced fk_rel_bc_tp_base_conhecimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_base_conhec_tipo_proced fk_rel_bc_tp_base_conhecimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_base_conhec_tipo_proced
@@ -66452,7 +66453,7 @@ ALTER TABLE ONLY public.rel_base_conhec_tipo_proced
 
 
 --
--- Name: rel_base_conhec_tipo_proced fk_rel_bc_tp_tipo_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_base_conhec_tipo_proced fk_rel_bc_tp_tipo_procedimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_base_conhec_tipo_proced
@@ -66460,7 +66461,7 @@ ALTER TABLE ONLY public.rel_base_conhec_tipo_proced
 
 
 --
--- Name: rel_bloco_unidade fk_rel_blo_uni_grupo_bloco; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade fk_rel_blo_uni_grupo_bloco; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -66468,7 +66469,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_bloco_unidade fk_rel_blo_uni_usu_atribuicao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade fk_rel_blo_uni_usu_atribuicao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -66476,7 +66477,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_bloco_unidade fk_rel_blo_uni_usu_comentario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade fk_rel_blo_uni_usu_comentario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -66484,7 +66485,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_bloco_unidade fk_rel_blo_uni_usu_prioridade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade fk_rel_blo_uni_usu_prioridade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -66492,7 +66493,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_bloco_unidade fk_rel_blo_uni_usu_revisao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade fk_rel_blo_uni_usu_revisao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -66500,7 +66501,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_bloco_protocolo fk_rel_bloco_protocolo_bloco; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_protocolo fk_rel_bloco_protocolo_bloco; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_protocolo
@@ -66508,7 +66509,7 @@ ALTER TABLE ONLY public.rel_bloco_protocolo
 
 
 --
--- Name: rel_bloco_protocolo fk_rel_bloco_protocolo_protoco; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_protocolo fk_rel_bloco_protocolo_protoco; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_protocolo
@@ -66516,7 +66517,7 @@ ALTER TABLE ONLY public.rel_bloco_protocolo
 
 
 --
--- Name: rel_bloco_unidade fk_rel_bloco_unidade_bloco; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade fk_rel_bloco_unidade_bloco; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -66524,7 +66525,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_bloco_unidade fk_rel_bloco_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_bloco_unidade fk_rel_bloco_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_bloco_unidade
@@ -66532,7 +66533,7 @@ ALTER TABLE ONLY public.rel_bloco_unidade
 
 
 --
--- Name: rel_controle_interno_tipo_proc fk_rel_contr_int_t_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_tipo_proc fk_rel_contr_int_t_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_tipo_proc
@@ -66540,7 +66541,7 @@ ALTER TABLE ONLY public.rel_controle_interno_tipo_proc
 
 
 --
--- Name: rel_controle_interno_tipo_proc fk_rel_contr_int_tipo_proc_ci; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_tipo_proc fk_rel_contr_int_tipo_proc_ci; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_tipo_proc
@@ -66548,7 +66549,7 @@ ALTER TABLE ONLY public.rel_controle_interno_tipo_proc
 
 
 --
--- Name: rel_controle_interno_unidade fk_rel_controle_int_unid_ci; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_unidade fk_rel_controle_int_unid_ci; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_unidade
@@ -66556,7 +66557,7 @@ ALTER TABLE ONLY public.rel_controle_interno_unidade
 
 
 --
--- Name: rel_controle_interno_unidade fk_rel_controle_int_unid_unid; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_unidade fk_rel_controle_int_unid_unid; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_unidade
@@ -66564,7 +66565,7 @@ ALTER TABLE ONLY public.rel_controle_interno_unidade
 
 
 --
--- Name: rel_controle_interno_orgao fk_rel_controle_interno_org_id; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_orgao fk_rel_controle_interno_org_id; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_orgao
@@ -66572,7 +66573,7 @@ ALTER TABLE ONLY public.rel_controle_interno_orgao
 
 
 --
--- Name: rel_controle_interno_orgao fk_rel_controle_interno_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_orgao fk_rel_controle_interno_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_orgao
@@ -66580,7 +66581,7 @@ ALTER TABLE ONLY public.rel_controle_interno_orgao
 
 
 --
--- Name: rel_controle_interno_serie fk_rel_controle_interno_se_ci; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_serie fk_rel_controle_interno_se_ci; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_serie
@@ -66588,7 +66589,7 @@ ALTER TABLE ONLY public.rel_controle_interno_serie
 
 
 --
--- Name: rel_controle_interno_serie fk_rel_controle_interno_se_se; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_controle_interno_serie fk_rel_controle_interno_se_se; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_controle_interno_serie
@@ -66596,7 +66597,7 @@ ALTER TABLE ONLY public.rel_controle_interno_serie
 
 
 --
--- Name: rel_grupo_fed_orgao_fed fk_rel_grp_fed_org_fed_grp_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_fed_orgao_fed fk_rel_grp_fed_org_fed_grp_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_fed_orgao_fed
@@ -66604,7 +66605,7 @@ ALTER TABLE ONLY public.rel_grupo_fed_orgao_fed
 
 
 --
--- Name: rel_grupo_fed_orgao_fed fk_rel_grp_fed_org_fed_org_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_fed_orgao_fed fk_rel_grp_fed_org_fed_org_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_fed_orgao_fed
@@ -66612,7 +66613,7 @@ ALTER TABLE ONLY public.rel_grupo_fed_orgao_fed
 
 
 --
--- Name: rel_grupo_contato fk_rel_grupo_contato_contato; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_contato fk_rel_grupo_contato_contato; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_contato
@@ -66620,7 +66621,7 @@ ALTER TABLE ONLY public.rel_grupo_contato
 
 
 --
--- Name: rel_grupo_contato fk_rel_grupo_contato_grupo_con; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_contato fk_rel_grupo_contato_grupo_con; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_contato
@@ -66628,7 +66629,7 @@ ALTER TABLE ONLY public.rel_grupo_contato
 
 
 --
--- Name: rel_grupo_unidade_unidade fk_rel_grupo_unid_grupo_unid; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_unidade_unidade fk_rel_grupo_unid_grupo_unid; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_unidade_unidade
@@ -66636,7 +66637,7 @@ ALTER TABLE ONLY public.rel_grupo_unidade_unidade
 
 
 --
--- Name: rel_grupo_unidade_unidade fk_rel_grupo_unid_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_grupo_unidade_unidade fk_rel_grupo_unid_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_unidade_unidade
@@ -66644,7 +66645,7 @@ ALTER TABLE ONLY public.rel_grupo_unidade_unidade
 
 
 --
--- Name: rel_notificacao_documento fk_rel_notif_doc_documento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_notificacao_documento fk_rel_notif_doc_documento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_notificacao_documento
@@ -66652,7 +66653,7 @@ ALTER TABLE ONLY public.rel_notificacao_documento
 
 
 --
--- Name: rel_notificacao_documento fk_rel_notif_doc_notificacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_notificacao_documento fk_rel_notif_doc_notificacao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_notificacao_documento
@@ -66660,7 +66661,7 @@ ALTER TABLE ONLY public.rel_notificacao_documento
 
 
 --
--- Name: rel_protocolo_protocolo fk_rel_proc_doc_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_protocolo fk_rel_proc_doc_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_protocolo
@@ -66668,7 +66669,7 @@ ALTER TABLE ONLY public.rel_protocolo_protocolo
 
 
 --
--- Name: rel_protocolo_assunto fk_rel_prot_assunto_assunto; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_assunto fk_rel_prot_assunto_assunto; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_assunto
@@ -66676,7 +66677,7 @@ ALTER TABLE ONLY public.rel_protocolo_assunto
 
 
 --
--- Name: rel_protocolo_assunto fk_rel_prot_assunto_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_assunto fk_rel_prot_assunto_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_assunto
@@ -66684,7 +66685,7 @@ ALTER TABLE ONLY public.rel_protocolo_assunto
 
 
 --
--- Name: rel_protocolo_atributo fk_rel_prot_atributo_atributo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_atributo fk_rel_prot_atributo_atributo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_atributo
@@ -66692,7 +66693,7 @@ ALTER TABLE ONLY public.rel_protocolo_atributo
 
 
 --
--- Name: rel_protocolo_atributo fk_rel_prot_atributo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_atributo fk_rel_prot_atributo_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_atributo
@@ -66700,7 +66701,7 @@ ALTER TABLE ONLY public.rel_protocolo_atributo
 
 
 --
--- Name: rel_protocolo_assunto fk_rel_protocolo_assunto_uni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_assunto fk_rel_protocolo_assunto_uni; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_assunto
@@ -66708,7 +66709,7 @@ ALTER TABLE ONLY public.rel_protocolo_assunto
 
 
 --
--- Name: rel_protocolo_protocolo fk_rel_protocolo_protocolo_uni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_protocolo_protocolo fk_rel_protocolo_protocolo_uni; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_protocolo_protocolo
@@ -66716,7 +66717,7 @@ ALTER TABLE ONLY public.rel_protocolo_protocolo
 
 
 --
--- Name: rel_secao_modelo_estilo fk_rel_sec_mod_estilo_estilo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_secao_modelo_estilo fk_rel_sec_mod_estilo_estilo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_secao_modelo_estilo
@@ -66724,7 +66725,7 @@ ALTER TABLE ONLY public.rel_secao_modelo_estilo
 
 
 --
--- Name: rel_secao_modelo_estilo fk_rel_sec_mod_estilo_sec_mod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_secao_modelo_estilo fk_rel_sec_mod_estilo_sec_mod; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_secao_modelo_estilo
@@ -66732,7 +66733,7 @@ ALTER TABLE ONLY public.rel_secao_modelo_estilo
 
 
 --
--- Name: rel_secao_mod_cj_estilos_item fk_rel_secmod_cj_est_it_secmod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_secao_mod_cj_estilos_item fk_rel_secmod_cj_est_it_secmod; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_secao_mod_cj_estilos_item
@@ -66740,7 +66741,7 @@ ALTER TABLE ONLY public.rel_secao_mod_cj_estilos_item
 
 
 --
--- Name: rel_serie_assunto fk_rel_serie_assunto_assunto; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_serie_assunto fk_rel_serie_assunto_assunto; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_serie_assunto
@@ -66748,7 +66749,7 @@ ALTER TABLE ONLY public.rel_serie_assunto
 
 
 --
--- Name: rel_serie_assunto fk_rel_serie_assunto_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_serie_assunto fk_rel_serie_assunto_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_serie_assunto
@@ -66756,7 +66757,7 @@ ALTER TABLE ONLY public.rel_serie_assunto
 
 
 --
--- Name: rel_serie_veiculo_publicacao fk_rel_serie_veic_pub_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_serie_veiculo_publicacao fk_rel_serie_veic_pub_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_serie_veiculo_publicacao
@@ -66764,7 +66765,7 @@ ALTER TABLE ONLY public.rel_serie_veiculo_publicacao
 
 
 --
--- Name: rel_serie_veiculo_publicacao fk_rel_serie_veic_pub_veic_pub; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_serie_veiculo_publicacao fk_rel_serie_veic_pub_veic_pub; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_serie_veiculo_publicacao
@@ -66772,7 +66773,7 @@ ALTER TABLE ONLY public.rel_serie_veiculo_publicacao
 
 
 --
--- Name: rel_situacao_unidade fk_rel_situacao_unid_situacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_situacao_unidade fk_rel_situacao_unid_situacao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_situacao_unidade
@@ -66780,7 +66781,7 @@ ALTER TABLE ONLY public.rel_situacao_unidade
 
 
 --
--- Name: rel_situacao_unidade fk_rel_situacao_unid_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_situacao_unidade fk_rel_situacao_unid_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_situacao_unidade
@@ -66788,7 +66789,7 @@ ALTER TABLE ONLY public.rel_situacao_unidade
 
 
 --
--- Name: rel_tipo_procedimento_assunto fk_rel_tipo_proc_assu_assunto; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_tipo_procedimento_assunto fk_rel_tipo_proc_assu_assunto; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_tipo_procedimento_assunto
@@ -66796,7 +66797,7 @@ ALTER TABLE ONLY public.rel_tipo_procedimento_assunto
 
 
 --
--- Name: rel_tipo_procedimento_assunto fk_rel_tipo_proc_assu_tip_proc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_tipo_procedimento_assunto fk_rel_tipo_proc_assu_tip_proc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_tipo_procedimento_assunto
@@ -66804,7 +66805,7 @@ ALTER TABLE ONLY public.rel_tipo_procedimento_assunto
 
 
 --
--- Name: rel_unidade_tipo_contato fk_rel_unid_tip_cont_tip_cont; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_unidade_tipo_contato fk_rel_unid_tip_cont_tip_cont; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_unidade_tipo_contato
@@ -66812,7 +66813,7 @@ ALTER TABLE ONLY public.rel_unidade_tipo_contato
 
 
 --
--- Name: rel_unidade_tipo_contato fk_rel_unid_tip_cont_unid; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_unidade_tipo_contato fk_rel_unid_tip_cont_unid; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_unidade_tipo_contato
@@ -66820,7 +66821,7 @@ ALTER TABLE ONLY public.rel_unidade_tipo_contato
 
 
 --
--- Name: rel_usuario_grupo_acomp fk_rel_usu_grp_acomp_grp_acomp; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_acomp fk_rel_usu_grp_acomp_grp_acomp; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_grupo_acomp
@@ -66828,7 +66829,7 @@ ALTER TABLE ONLY public.rel_usuario_grupo_acomp
 
 
 --
--- Name: rel_usuario_grupo_acomp fk_rel_usu_grp_acomp_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_acomp fk_rel_usu_grp_acomp_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_grupo_acomp
@@ -66836,7 +66837,7 @@ ALTER TABLE ONLY public.rel_usuario_grupo_acomp
 
 
 --
--- Name: rel_usuario_grupo_bloco fk_rel_usu_grupo_bloco_grp_blo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_bloco fk_rel_usu_grupo_bloco_grp_blo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_grupo_bloco
@@ -66844,7 +66845,7 @@ ALTER TABLE ONLY public.rel_usuario_grupo_bloco
 
 
 --
--- Name: rel_usuario_grupo_bloco fk_rel_usu_grupo_bloco_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_grupo_bloco fk_rel_usu_grupo_bloco_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_grupo_bloco
@@ -66852,7 +66853,7 @@ ALTER TABLE ONLY public.rel_usuario_grupo_bloco
 
 
 --
--- Name: rel_usuario_tipo_proced fk_rel_usu_tipo_proced_tipo_pr; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_tipo_proced fk_rel_usu_tipo_proced_tipo_pr; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_tipo_proced
@@ -66860,7 +66861,7 @@ ALTER TABLE ONLY public.rel_usuario_tipo_proced
 
 
 --
--- Name: rel_usuario_tipo_proced fk_rel_usu_tipo_proced_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_tipo_proced fk_rel_usu_tipo_proced_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_tipo_proced
@@ -66868,7 +66869,7 @@ ALTER TABLE ONLY public.rel_usuario_tipo_proced
 
 
 --
--- Name: rel_usuario_tipo_proced fk_rel_usu_tipo_proced_usu; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_tipo_proced fk_rel_usu_tipo_proced_usu; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_tipo_proced
@@ -66876,7 +66877,7 @@ ALTER TABLE ONLY public.rel_usuario_tipo_proced
 
 
 --
--- Name: rel_usuario_usuario_unidade fk_rel_usu_usu_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_usuario_unidade fk_rel_usu_usu_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_usuario_unidade
@@ -66884,7 +66885,7 @@ ALTER TABLE ONLY public.rel_usuario_usuario_unidade
 
 
 --
--- Name: rel_usuario_usuario_unidade fk_rel_usu_usu_uni_usu_atrib; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_usuario_unidade fk_rel_usu_usu_uni_usu_atrib; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_usuario_unidade
@@ -66892,7 +66893,7 @@ ALTER TABLE ONLY public.rel_usuario_usuario_unidade
 
 
 --
--- Name: rel_usuario_usuario_unidade fk_rel_usu_usu_uni_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_usuario_unidade fk_rel_usu_usu_uni_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_usuario_unidade
@@ -66900,7 +66901,7 @@ ALTER TABLE ONLY public.rel_usuario_usuario_unidade
 
 
 --
--- Name: rel_usuario_marcador fk_rel_usuario_marcad_marcad; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_marcador fk_rel_usuario_marcad_marcad; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_marcador
@@ -66908,7 +66909,7 @@ ALTER TABLE ONLY public.rel_usuario_marcador
 
 
 --
--- Name: rel_usuario_marcador fk_rel_usuario_marcad_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_usuario_marcador fk_rel_usuario_marcad_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.rel_usuario_marcador
@@ -66916,7 +66917,7 @@ ALTER TABLE ONLY public.rel_usuario_marcador
 
 
 --
--- Name: replicacao_federacao fk_replicacao_fed_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: replicacao_federacao fk_replicacao_fed_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.replicacao_federacao
@@ -66924,7 +66925,7 @@ ALTER TABLE ONLY public.replicacao_federacao
 
 
 --
--- Name: replicacao_federacao fk_replicacao_fed_prot_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: replicacao_federacao fk_replicacao_fed_prot_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.replicacao_federacao
@@ -66932,7 +66933,7 @@ ALTER TABLE ONLY public.replicacao_federacao
 
 
 --
--- Name: retorno_programado fk_ret_prog_ativ_envio; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: retorno_programado fk_ret_prog_ativ_envio; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.retorno_programado
@@ -66940,7 +66941,7 @@ ALTER TABLE ONLY public.retorno_programado
 
 
 --
--- Name: retorno_programado fk_ret_prog_ativ_retorno; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: retorno_programado fk_ret_prog_ativ_retorno; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.retorno_programado
@@ -66948,7 +66949,7 @@ ALTER TABLE ONLY public.retorno_programado
 
 
 --
--- Name: retorno_programado fk_ret_programado_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: retorno_programado fk_ret_programado_protocolo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.retorno_programado
@@ -66956,7 +66957,7 @@ ALTER TABLE ONLY public.retorno_programado
 
 
 --
--- Name: retorno_programado fk_ret_programado_uni_envio; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: retorno_programado fk_ret_programado_uni_envio; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.retorno_programado
@@ -66964,7 +66965,7 @@ ALTER TABLE ONLY public.retorno_programado
 
 
 --
--- Name: retorno_programado fk_ret_programado_uni_retorno; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: retorno_programado fk_ret_programado_uni_retorno; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.retorno_programado
@@ -66972,7 +66973,7 @@ ALTER TABLE ONLY public.retorno_programado
 
 
 --
--- Name: retorno_programado fk_retorno_programado_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: retorno_programado fk_retorno_programado_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.retorno_programado
@@ -66980,7 +66981,7 @@ ALTER TABLE ONLY public.retorno_programado
 
 
 --
--- Name: secao_documento fk_secao_doc_base_conhecimento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_documento fk_secao_doc_base_conhecimento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_documento
@@ -66988,7 +66989,7 @@ ALTER TABLE ONLY public.secao_documento
 
 
 --
--- Name: secao_documento fk_secao_doc_secao_mod; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_documento fk_secao_doc_secao_mod; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_documento
@@ -66996,7 +66997,7 @@ ALTER TABLE ONLY public.secao_documento
 
 
 --
--- Name: secao_documento fk_secao_documento_documento; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_documento fk_secao_documento_documento; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_documento
@@ -67004,7 +67005,7 @@ ALTER TABLE ONLY public.secao_documento
 
 
 --
--- Name: secao_imprensa_nacional fk_secao_in_veiculo_in; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_imprensa_nacional fk_secao_in_veiculo_in; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_imprensa_nacional
@@ -67012,7 +67013,7 @@ ALTER TABLE ONLY public.secao_imprensa_nacional
 
 
 --
--- Name: secao_modelo fk_secao_modelo_modelo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: secao_modelo fk_secao_modelo_modelo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.secao_modelo
@@ -67020,7 +67021,7 @@ ALTER TABLE ONLY public.secao_modelo
 
 
 --
--- Name: serie_escolha fk_serie_escolha_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_escolha fk_serie_escolha_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_escolha
@@ -67028,7 +67029,7 @@ ALTER TABLE ONLY public.serie_escolha
 
 
 --
--- Name: serie_escolha fk_serie_escolha_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_escolha fk_serie_escolha_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_escolha
@@ -67036,7 +67037,7 @@ ALTER TABLE ONLY public.serie_escolha
 
 
 --
--- Name: serie fk_serie_grupo_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie fk_serie_grupo_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie
@@ -67044,7 +67045,7 @@ ALTER TABLE ONLY public.serie
 
 
 --
--- Name: serie fk_serie_modelo; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie fk_serie_modelo; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie
@@ -67052,7 +67053,7 @@ ALTER TABLE ONLY public.serie
 
 
 --
--- Name: serie_publicacao fk_serie_publicacao_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_publicacao fk_serie_publicacao_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_publicacao
@@ -67060,7 +67061,7 @@ ALTER TABLE ONLY public.serie_publicacao
 
 
 --
--- Name: serie_publicacao fk_serie_publicacao_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_publicacao fk_serie_publicacao_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_publicacao
@@ -67068,7 +67069,7 @@ ALTER TABLE ONLY public.serie_publicacao
 
 
 --
--- Name: serie_restricao fk_serie_restricao_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_restricao fk_serie_restricao_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_restricao
@@ -67076,7 +67077,7 @@ ALTER TABLE ONLY public.serie_restricao
 
 
 --
--- Name: serie_restricao fk_serie_restricao_serie; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_restricao fk_serie_restricao_serie; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_restricao
@@ -67084,7 +67085,7 @@ ALTER TABLE ONLY public.serie_restricao
 
 
 --
--- Name: serie_restricao fk_serie_restricao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie_restricao fk_serie_restricao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie_restricao
@@ -67092,7 +67093,7 @@ ALTER TABLE ONLY public.serie_restricao
 
 
 --
--- Name: serie fk_serie_tipo_formulario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: serie fk_serie_tipo_formulario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.serie
@@ -67100,7 +67101,7 @@ ALTER TABLE ONLY public.serie
 
 
 --
--- Name: servico fk_servico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: servico fk_servico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.servico
@@ -67108,7 +67109,7 @@ ALTER TABLE ONLY public.servico
 
 
 --
--- Name: sinalizacao_federacao fk_sinalizacao_fed_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sinalizacao_federacao fk_sinalizacao_fed_inst_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.sinalizacao_federacao
@@ -67116,7 +67117,7 @@ ALTER TABLE ONLY public.sinalizacao_federacao
 
 
 --
--- Name: sinalizacao_federacao fk_sinalizacao_fed_prot_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sinalizacao_federacao fk_sinalizacao_fed_prot_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.sinalizacao_federacao
@@ -67124,7 +67125,7 @@ ALTER TABLE ONLY public.sinalizacao_federacao
 
 
 --
--- Name: sinalizacao_federacao fk_sinalizacao_fed_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sinalizacao_federacao fk_sinalizacao_fed_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.sinalizacao_federacao
@@ -67132,7 +67133,7 @@ ALTER TABLE ONLY public.sinalizacao_federacao
 
 
 --
--- Name: texto_padrao_interno fk_texto_padrao_int_conj; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: texto_padrao_interno fk_texto_padrao_int_conj; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.texto_padrao_interno
@@ -67140,7 +67141,7 @@ ALTER TABLE ONLY public.texto_padrao_interno
 
 
 --
--- Name: texto_padrao_interno fk_texto_padrao_int_unid; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: texto_padrao_interno fk_texto_padrao_int_unid; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.texto_padrao_interno
@@ -67148,7 +67149,7 @@ ALTER TABLE ONLY public.texto_padrao_interno
 
 
 --
--- Name: tipo_localizador fk_tipo_localizador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_localizador fk_tipo_localizador_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_localizador
@@ -67156,7 +67157,7 @@ ALTER TABLE ONLY public.tipo_localizador
 
 
 --
--- Name: tipo_procedimento_escolha fk_tipo_proc_escolha_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_procedimento_escolha fk_tipo_proc_escolha_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_procedimento_escolha
@@ -67164,7 +67165,7 @@ ALTER TABLE ONLY public.tipo_procedimento_escolha
 
 
 --
--- Name: tipo_procedimento_escolha fk_tipo_proc_escolha_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_procedimento_escolha fk_tipo_proc_escolha_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_procedimento_escolha
@@ -67172,7 +67173,7 @@ ALTER TABLE ONLY public.tipo_procedimento_escolha
 
 
 --
--- Name: tipo_procedimento fk_tipo_proced_hipotese_legal; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_procedimento fk_tipo_proced_hipotese_legal; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_procedimento
@@ -67180,7 +67181,7 @@ ALTER TABLE ONLY public.tipo_procedimento
 
 
 --
--- Name: tipo_proced_restricao fk_tipo_proced_restr_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_proced_restricao fk_tipo_proced_restr_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_proced_restricao
@@ -67188,7 +67189,7 @@ ALTER TABLE ONLY public.tipo_proced_restricao
 
 
 --
--- Name: tipo_proced_restricao fk_tipo_proced_restr_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_proced_restricao fk_tipo_proced_restr_tipo_proc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_proced_restricao
@@ -67196,7 +67197,7 @@ ALTER TABLE ONLY public.tipo_proced_restricao
 
 
 --
--- Name: tipo_proced_restricao fk_tipo_proced_restr_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_proced_restricao fk_tipo_proced_restr_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.tipo_proced_restricao
@@ -67204,7 +67205,7 @@ ALTER TABLE ONLY public.tipo_proced_restricao
 
 
 --
--- Name: uf fk_uf_pais; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: uf fk_uf_pais; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.uf
@@ -67212,7 +67213,7 @@ ALTER TABLE ONLY public.uf
 
 
 --
--- Name: unidade fk_unidade_contato; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade fk_unidade_contato; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -67220,7 +67221,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: unidade_federacao fk_unidade_fed_instalacao_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade_federacao fk_unidade_fed_instalacao_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade_federacao
@@ -67228,7 +67229,7 @@ ALTER TABLE ONLY public.unidade_federacao
 
 
 --
--- Name: unidade_historico fk_unidade_historico_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade_historico fk_unidade_historico_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade_historico
@@ -67236,7 +67237,7 @@ ALTER TABLE ONLY public.unidade_historico
 
 
 --
--- Name: unidade_historico fk_unidade_historico_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade_historico fk_unidade_historico_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade_historico
@@ -67244,7 +67245,7 @@ ALTER TABLE ONLY public.unidade_historico
 
 
 --
--- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -67252,7 +67253,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: unidade_publicacao fk_unidade_publicacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade_publicacao fk_unidade_publicacao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade_publicacao
@@ -67260,7 +67261,7 @@ ALTER TABLE ONLY public.unidade_publicacao
 
 
 --
--- Name: unidade fk_unidade_unidade_federacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade fk_unidade_unidade_federacao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -67268,7 +67269,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: usuario fk_usuario_contato; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario fk_usuario_contato; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -67276,7 +67277,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- Name: usuario_federacao fk_usuario_fed_instalacao_fed; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_federacao fk_usuario_fed_instalacao_fed; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.usuario_federacao
@@ -67284,7 +67285,7 @@ ALTER TABLE ONLY public.usuario_federacao
 
 
 --
--- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -67292,7 +67293,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- Name: usuario fk_usuario_usuario_federacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario fk_usuario_usuario_federacao; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -67300,7 +67301,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- Name: velocidade_transferencia fk_velocidade_transf_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: velocidade_transferencia fk_velocidade_transf_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.velocidade_transferencia
@@ -67308,7 +67309,7 @@ ALTER TABLE ONLY public.velocidade_transferencia
 
 
 --
--- Name: velocidade_transferencia fk_velocidade_transf_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: velocidade_transferencia fk_velocidade_transf_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.velocidade_transferencia
@@ -67316,7 +67317,7 @@ ALTER TABLE ONLY public.velocidade_transferencia
 
 
 --
--- Name: versao_secao_documento fk_versao_sec_doc_sec_doc; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: versao_secao_documento fk_versao_sec_doc_sec_doc; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.versao_secao_documento
@@ -67324,7 +67325,7 @@ ALTER TABLE ONLY public.versao_secao_documento
 
 
 --
--- Name: versao_secao_documento fk_versao_secao_doc_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: versao_secao_documento fk_versao_secao_doc_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.versao_secao_documento
@@ -67332,7 +67333,7 @@ ALTER TABLE ONLY public.versao_secao_documento
 
 
 --
--- Name: versao_secao_documento fk_versao_secao_doc_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: versao_secao_documento fk_versao_secao_doc_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sei_user
 --
 
 ALTER TABLE ONLY public.versao_secao_documento
@@ -67344,1875 +67345,6 @@ ALTER TABLE ONLY public.versao_secao_documento
 --
 
 GRANT ALL ON SCHEMA public TO sei_user;
-
-
---
--- Name: TABLE acao_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.acao_federacao TO sei_user;
-
-
---
--- Name: TABLE acesso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.acesso TO sei_user;
-
-
---
--- Name: TABLE acesso_externo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.acesso_externo TO sei_user;
-
-
---
--- Name: TABLE acesso_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.acesso_federacao TO sei_user;
-
-
---
--- Name: TABLE acompanhamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.acompanhamento TO sei_user;
-
-
---
--- Name: TABLE andamento_instalacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.andamento_instalacao TO sei_user;
-
-
---
--- Name: TABLE andamento_marcador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.andamento_marcador TO sei_user;
-
-
---
--- Name: TABLE andamento_situacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.andamento_situacao TO sei_user;
-
-
---
--- Name: TABLE anexo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.anexo TO sei_user;
-
-
---
--- Name: TABLE anotacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.anotacao TO sei_user;
-
-
---
--- Name: TABLE arquivamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.arquivamento TO sei_user;
-
-
---
--- Name: TABLE arquivo_extensao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.arquivo_extensao TO sei_user;
-
-
---
--- Name: TABLE assinante; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.assinante TO sei_user;
-
-
---
--- Name: TABLE assinatura; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.assinatura TO sei_user;
-
-
---
--- Name: TABLE assunto; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.assunto TO sei_user;
-
-
---
--- Name: TABLE assunto_proxy; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.assunto_proxy TO sei_user;
-
-
---
--- Name: TABLE atividade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.atividade TO sei_user;
-
-
---
--- Name: TABLE atributo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.atributo TO sei_user;
-
-
---
--- Name: TABLE atributo_andamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.atributo_andamento TO sei_user;
-
-
---
--- Name: TABLE atributo_instalacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.atributo_instalacao TO sei_user;
-
-
---
--- Name: TABLE auditoria_protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.auditoria_protocolo TO sei_user;
-
-
---
--- Name: TABLE base_conhecimento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.base_conhecimento TO sei_user;
-
-
---
--- Name: TABLE bloco; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.bloco TO sei_user;
-
-
---
--- Name: TABLE campo_pesquisa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.campo_pesquisa TO sei_user;
-
-
---
--- Name: TABLE cargo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.cargo TO sei_user;
-
-
---
--- Name: TABLE cargo_funcao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.cargo_funcao TO sei_user;
-
-
---
--- Name: TABLE categoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.categoria TO sei_user;
-
-
---
--- Name: TABLE cidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.cidade TO sei_user;
-
-
---
--- Name: TABLE comentario; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.comentario TO sei_user;
-
-
---
--- Name: TABLE conjunto_estilos; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.conjunto_estilos TO sei_user;
-
-
---
--- Name: TABLE conjunto_estilos_item; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.conjunto_estilos_item TO sei_user;
-
-
---
--- Name: TABLE contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.contato TO sei_user;
-
-
---
--- Name: TABLE controle_interno; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.controle_interno TO sei_user;
-
-
---
--- Name: TABLE controle_prazo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.controle_prazo TO sei_user;
-
-
---
--- Name: TABLE controle_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.controle_unidade TO sei_user;
-
-
---
--- Name: TABLE documento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.documento TO sei_user;
-
-
---
--- Name: TABLE documento_conteudo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.documento_conteudo TO sei_user;
-
-
---
--- Name: TABLE dominio; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.dominio TO sei_user;
-
-
---
--- Name: TABLE email_grupo_email; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.email_grupo_email TO sei_user;
-
-
---
--- Name: TABLE email_sistema; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.email_sistema TO sei_user;
-
-
---
--- Name: TABLE email_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.email_unidade TO sei_user;
-
-
---
--- Name: TABLE email_utilizado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.email_utilizado TO sei_user;
-
-
---
--- Name: TABLE estatisticas; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.estatisticas TO sei_user;
-
-
---
--- Name: TABLE estilo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.estilo TO sei_user;
-
-
---
--- Name: TABLE feed; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.feed TO sei_user;
-
-
---
--- Name: TABLE feriado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.feriado TO sei_user;
-
-
---
--- Name: TABLE grupo_acompanhamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_acompanhamento TO sei_user;
-
-
---
--- Name: TABLE grupo_bloco; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_bloco TO sei_user;
-
-
---
--- Name: TABLE grupo_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_contato TO sei_user;
-
-
---
--- Name: TABLE grupo_email; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_email TO sei_user;
-
-
---
--- Name: TABLE grupo_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_federacao TO sei_user;
-
-
---
--- Name: TABLE grupo_protocolo_modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_protocolo_modelo TO sei_user;
-
-
---
--- Name: TABLE grupo_serie; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_serie TO sei_user;
-
-
---
--- Name: TABLE grupo_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.grupo_unidade TO sei_user;
-
-
---
--- Name: TABLE hipotese_legal; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.hipotese_legal TO sei_user;
-
-
---
--- Name: TABLE imagem_formato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.imagem_formato TO sei_user;
-
-
---
--- Name: TABLE infra_agendamento_tarefa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_agendamento_tarefa TO sei_user;
-
-
---
--- Name: TABLE infra_auditoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_auditoria TO sei_user;
-
-
---
--- Name: TABLE infra_dado_usuario; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_dado_usuario TO sei_user;
-
-
---
--- Name: TABLE infra_log; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_log TO sei_user;
-
-
---
--- Name: TABLE infra_navegador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_navegador TO sei_user;
-
-
---
--- Name: TABLE infra_parametro; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_parametro TO sei_user;
-
-
---
--- Name: TABLE infra_regra_auditoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_regra_auditoria TO sei_user;
-
-
---
--- Name: TABLE infra_regra_auditoria_recurso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_regra_auditoria_recurso TO sei_user;
-
-
---
--- Name: TABLE infra_sequencia; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.infra_sequencia TO sei_user;
-
-
---
--- Name: TABLE instalacao_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.instalacao_federacao TO sei_user;
-
-
---
--- Name: TABLE lembrete; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.lembrete TO sei_user;
-
-
---
--- Name: TABLE localizador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.localizador TO sei_user;
-
-
---
--- Name: TABLE lugar_localizador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.lugar_localizador TO sei_user;
-
-
---
--- Name: TABLE mapeamento_assunto; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.mapeamento_assunto TO sei_user;
-
-
---
--- Name: TABLE marcador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.marcador TO sei_user;
-
-
---
--- Name: TABLE modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.modelo TO sei_user;
-
-
---
--- Name: TABLE monitoramento_servico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.monitoramento_servico TO sei_user;
-
-
---
--- Name: TABLE nivel_acesso_permitido; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.nivel_acesso_permitido TO sei_user;
-
-
---
--- Name: TABLE notificacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.notificacao TO sei_user;
-
-
---
--- Name: TABLE novidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.novidade TO sei_user;
-
-
---
--- Name: TABLE numeracao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.numeracao TO sei_user;
-
-
---
--- Name: TABLE observacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.observacao TO sei_user;
-
-
---
--- Name: TABLE operacao_servico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.operacao_servico TO sei_user;
-
-
---
--- Name: TABLE ordenador_despesa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.ordenador_despesa TO sei_user;
-
-
---
--- Name: TABLE orgao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.orgao TO sei_user;
-
-
---
--- Name: TABLE orgao_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.orgao_federacao TO sei_user;
-
-
---
--- Name: TABLE orgao_historico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.orgao_historico TO sei_user;
-
-
---
--- Name: TABLE pais; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pais TO sei_user;
-
-
---
--- Name: TABLE parametro_acao_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.parametro_acao_federacao TO sei_user;
-
-
---
--- Name: TABLE participante; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.participante TO sei_user;
-
-
---
--- Name: TABLE pesquisa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.pesquisa TO sei_user;
-
-
---
--- Name: TABLE procedimento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.procedimento TO sei_user;
-
-
---
--- Name: TABLE protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.protocolo TO sei_user;
-
-
---
--- Name: TABLE protocolo_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.protocolo_federacao TO sei_user;
-
-
---
--- Name: TABLE protocolo_modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.protocolo_modelo TO sei_user;
-
-
---
--- Name: TABLE publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.publicacao TO sei_user;
-
-
---
--- Name: TABLE publicacao_legado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.publicacao_legado TO sei_user;
-
-
---
--- Name: TABLE rel_acesso_ext_protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_acesso_ext_protocolo TO sei_user;
-
-
---
--- Name: TABLE rel_acesso_ext_serie; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_acesso_ext_serie TO sei_user;
-
-
---
--- Name: TABLE rel_assinante_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_assinante_unidade TO sei_user;
-
-
---
--- Name: TABLE rel_base_conhec_tipo_proced; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_base_conhec_tipo_proced TO sei_user;
-
-
---
--- Name: TABLE rel_bloco_protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_bloco_protocolo TO sei_user;
-
-
---
--- Name: TABLE rel_bloco_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_bloco_unidade TO sei_user;
-
-
---
--- Name: TABLE rel_controle_interno_orgao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_controle_interno_orgao TO sei_user;
-
-
---
--- Name: TABLE rel_controle_interno_serie; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_controle_interno_serie TO sei_user;
-
-
---
--- Name: TABLE rel_controle_interno_tipo_proc; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_controle_interno_tipo_proc TO sei_user;
-
-
---
--- Name: TABLE rel_controle_interno_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_controle_interno_unidade TO sei_user;
-
-
---
--- Name: TABLE rel_grupo_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_grupo_contato TO sei_user;
-
-
---
--- Name: TABLE rel_grupo_fed_orgao_fed; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_grupo_fed_orgao_fed TO sei_user;
-
-
---
--- Name: TABLE rel_grupo_unidade_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_grupo_unidade_unidade TO sei_user;
-
-
---
--- Name: TABLE rel_notificacao_documento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_notificacao_documento TO sei_user;
-
-
---
--- Name: TABLE rel_protocolo_assunto; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_protocolo_assunto TO sei_user;
-
-
---
--- Name: TABLE rel_protocolo_atributo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_protocolo_atributo TO sei_user;
-
-
---
--- Name: TABLE rel_protocolo_protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_protocolo_protocolo TO sei_user;
-
-
---
--- Name: TABLE rel_secao_mod_cj_estilos_item; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_secao_mod_cj_estilos_item TO sei_user;
-
-
---
--- Name: TABLE rel_secao_modelo_estilo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_secao_modelo_estilo TO sei_user;
-
-
---
--- Name: TABLE rel_serie_assunto; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_serie_assunto TO sei_user;
-
-
---
--- Name: TABLE rel_serie_veiculo_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_serie_veiculo_publicacao TO sei_user;
-
-
---
--- Name: TABLE rel_situacao_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_situacao_unidade TO sei_user;
-
-
---
--- Name: TABLE rel_tipo_procedimento_assunto; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_tipo_procedimento_assunto TO sei_user;
-
-
---
--- Name: TABLE rel_unidade_tipo_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_unidade_tipo_contato TO sei_user;
-
-
---
--- Name: TABLE rel_usuario_grupo_acomp; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_usuario_grupo_acomp TO sei_user;
-
-
---
--- Name: TABLE rel_usuario_grupo_bloco; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_usuario_grupo_bloco TO sei_user;
-
-
---
--- Name: TABLE rel_usuario_marcador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_usuario_marcador TO sei_user;
-
-
---
--- Name: TABLE rel_usuario_tipo_proced; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_usuario_tipo_proced TO sei_user;
-
-
---
--- Name: TABLE rel_usuario_usuario_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.rel_usuario_usuario_unidade TO sei_user;
-
-
---
--- Name: TABLE replicacao_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.replicacao_federacao TO sei_user;
-
-
---
--- Name: TABLE retorno_programado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.retorno_programado TO sei_user;
-
-
---
--- Name: TABLE secao_documento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.secao_documento TO sei_user;
-
-
---
--- Name: TABLE secao_imprensa_nacional; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.secao_imprensa_nacional TO sei_user;
-
-
---
--- Name: TABLE secao_modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.secao_modelo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_acesso; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_acesso TO sei_user;
-
-
---
--- Name: SEQUENCE seq_acesso_externo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_acesso_externo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_acompanhamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_acompanhamento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_andamento_instalacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_andamento_instalacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_andamento_marcador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_andamento_marcador TO sei_user;
-
-
---
--- Name: SEQUENCE seq_andamento_situacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_andamento_situacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_anexo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_anexo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_anotacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_anotacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_arquivo_extensao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_arquivo_extensao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_assinante; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_assinante TO sei_user;
-
-
---
--- Name: SEQUENCE seq_assinatura; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_assinatura TO sei_user;
-
-
---
--- Name: SEQUENCE seq_assunto; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_assunto TO sei_user;
-
-
---
--- Name: SEQUENCE seq_assunto_proxy; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_assunto_proxy TO sei_user;
-
-
---
--- Name: SEQUENCE seq_atividade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_atividade TO sei_user;
-
-
---
--- Name: SEQUENCE seq_atributo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_atributo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_atributo_andamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_atributo_andamento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_atributo_andamento_situaca; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_atributo_andamento_situaca TO sei_user;
-
-
---
--- Name: SEQUENCE seq_atributo_instalacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_atributo_instalacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_auditoria_protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_auditoria_protocolo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_base_conhecimento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_base_conhecimento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_bloco; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_bloco TO sei_user;
-
-
---
--- Name: SEQUENCE seq_campo_pesquisa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_campo_pesquisa TO sei_user;
-
-
---
--- Name: SEQUENCE seq_cargo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_cargo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_categoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_categoria TO sei_user;
-
-
---
--- Name: SEQUENCE seq_cidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_cidade TO sei_user;
-
-
---
--- Name: SEQUENCE seq_comentario; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_comentario TO sei_user;
-
-
---
--- Name: SEQUENCE seq_conjunto_estilos; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_conjunto_estilos TO sei_user;
-
-
---
--- Name: SEQUENCE seq_conjunto_estilos_item; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_conjunto_estilos_item TO sei_user;
-
-
---
--- Name: SEQUENCE seq_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_contato TO sei_user;
-
-
---
--- Name: SEQUENCE seq_controle_interno; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_controle_interno TO sei_user;
-
-
---
--- Name: SEQUENCE seq_controle_prazo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_controle_prazo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_controle_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_controle_unidade TO sei_user;
-
-
---
--- Name: SEQUENCE seq_documento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_documento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_dominio; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_dominio TO sei_user;
-
-
---
--- Name: SEQUENCE seq_email_grupo_email; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_email_grupo_email TO sei_user;
-
-
---
--- Name: SEQUENCE seq_email_sistema; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_email_sistema TO sei_user;
-
-
---
--- Name: SEQUENCE seq_email_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_email_unidade TO sei_user;
-
-
---
--- Name: SEQUENCE seq_email_utilizado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_email_utilizado TO sei_user;
-
-
---
--- Name: SEQUENCE seq_estatisticas; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_estatisticas TO sei_user;
-
-
---
--- Name: SEQUENCE seq_estilo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_estilo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_feed; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_feed TO sei_user;
-
-
---
--- Name: SEQUENCE seq_feriado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_feriado TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_acompanhamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_acompanhamento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_bloco; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_bloco TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_contato TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_email; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_email TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_federacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_protocolo_modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_protocolo_modelo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_serie; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_serie TO sei_user;
-
-
---
--- Name: SEQUENCE seq_grupo_unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_grupo_unidade TO sei_user;
-
-
---
--- Name: SEQUENCE seq_hipotese_legal; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_hipotese_legal TO sei_user;
-
-
---
--- Name: SEQUENCE seq_imagem_formato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_imagem_formato TO sei_user;
-
-
---
--- Name: SEQUENCE seq_infra_auditoria; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_infra_auditoria TO sei_user;
-
-
---
--- Name: SEQUENCE seq_infra_log; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_infra_log TO sei_user;
-
-
---
--- Name: SEQUENCE seq_infra_navegador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_infra_navegador TO sei_user;
-
-
---
--- Name: SEQUENCE seq_lembrete; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_lembrete TO sei_user;
-
-
---
--- Name: SEQUENCE seq_localizador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_localizador TO sei_user;
-
-
---
--- Name: SEQUENCE seq_lugar_localizador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_lugar_localizador TO sei_user;
-
-
---
--- Name: SEQUENCE seq_marcador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_marcador TO sei_user;
-
-
---
--- Name: SEQUENCE seq_modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_modelo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_monitoramento_servico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_monitoramento_servico TO sei_user;
-
-
---
--- Name: SEQUENCE seq_nivel_acesso_permitido; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_nivel_acesso_permitido TO sei_user;
-
-
---
--- Name: SEQUENCE seq_novidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_novidade TO sei_user;
-
-
---
--- Name: SEQUENCE seq_numeracao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_numeracao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_observacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_observacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_operacao_servico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_operacao_servico TO sei_user;
-
-
---
--- Name: SEQUENCE seq_ordenador_despesa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_ordenador_despesa TO sei_user;
-
-
---
--- Name: SEQUENCE seq_orgao_historico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_orgao_historico TO sei_user;
-
-
---
--- Name: SEQUENCE seq_pais; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_pais TO sei_user;
-
-
---
--- Name: SEQUENCE seq_participante; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_participante TO sei_user;
-
-
---
--- Name: SEQUENCE seq_pesquisa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_pesquisa TO sei_user;
-
-
---
--- Name: SEQUENCE seq_protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_protocolo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_protocolo_modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_protocolo_modelo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_publicacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_rel_protocolo_protocolo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_rel_protocolo_protocolo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_rel_unidade_tipo_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_rel_unidade_tipo_contato TO sei_user;
-
-
---
--- Name: SEQUENCE seq_retorno_programado; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_retorno_programado TO sei_user;
-
-
---
--- Name: SEQUENCE seq_secao_documento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_secao_documento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_secao_imprensa_nacional; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_secao_imprensa_nacional TO sei_user;
-
-
---
--- Name: SEQUENCE seq_secao_modelo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_secao_modelo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_serie; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_serie TO sei_user;
-
-
---
--- Name: SEQUENCE seq_serie_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_serie_publicacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_serie_restricao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_serie_restricao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_servico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_servico TO sei_user;
-
-
---
--- Name: SEQUENCE seq_situacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_situacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tabela_assuntos; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tabela_assuntos TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tarefa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tarefa TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tarja_assinatura; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tarja_assinatura TO sei_user;
-
-
---
--- Name: SEQUENCE seq_texto_padrao_interno; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_texto_padrao_interno TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tipo_conferencia; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tipo_conferencia TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tipo_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tipo_contato TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tipo_formulario; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tipo_formulario TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tipo_localizador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tipo_localizador TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tipo_proced_restricao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tipo_proced_restricao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tipo_procedimento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tipo_procedimento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tipo_suporte; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tipo_suporte TO sei_user;
-
-
---
--- Name: SEQUENCE seq_titulo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_titulo TO sei_user;
-
-
---
--- Name: SEQUENCE seq_tratamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_tratamento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_uf; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_uf TO sei_user;
-
-
---
--- Name: SEQUENCE seq_unidade_historico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_unidade_historico TO sei_user;
-
-
---
--- Name: SEQUENCE seq_unidade_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_unidade_publicacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_upload; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_upload TO sei_user;
-
-
---
--- Name: SEQUENCE seq_veiculo_imprensa_nacional; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_veiculo_imprensa_nacional TO sei_user;
-
-
---
--- Name: SEQUENCE seq_veiculo_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_veiculo_publicacao TO sei_user;
-
-
---
--- Name: SEQUENCE seq_versao_secao_documento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_versao_secao_documento TO sei_user;
-
-
---
--- Name: SEQUENCE seq_vocativo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON SEQUENCE public.seq_vocativo TO sei_user;
-
-
---
--- Name: TABLE serie; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.serie TO sei_user;
-
-
---
--- Name: TABLE serie_escolha; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.serie_escolha TO sei_user;
-
-
---
--- Name: TABLE serie_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.serie_publicacao TO sei_user;
-
-
---
--- Name: TABLE serie_restricao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.serie_restricao TO sei_user;
-
-
---
--- Name: TABLE servico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.servico TO sei_user;
-
-
---
--- Name: TABLE sinalizacao_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.sinalizacao_federacao TO sei_user;
-
-
---
--- Name: TABLE situacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.situacao TO sei_user;
-
-
---
--- Name: TABLE tabela_assuntos; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tabela_assuntos TO sei_user;
-
-
---
--- Name: TABLE tarefa; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tarefa TO sei_user;
-
-
---
--- Name: TABLE tarefa_instalacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tarefa_instalacao TO sei_user;
-
-
---
--- Name: TABLE tarja_assinatura; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tarja_assinatura TO sei_user;
-
-
---
--- Name: TABLE texto_padrao_interno; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.texto_padrao_interno TO sei_user;
-
-
---
--- Name: TABLE tipo_conferencia; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_conferencia TO sei_user;
-
-
---
--- Name: TABLE tipo_contato; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_contato TO sei_user;
-
-
---
--- Name: TABLE tipo_formulario; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_formulario TO sei_user;
-
-
---
--- Name: TABLE tipo_localizador; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_localizador TO sei_user;
-
-
---
--- Name: TABLE tipo_proced_restricao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_proced_restricao TO sei_user;
-
-
---
--- Name: TABLE tipo_procedimento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_procedimento TO sei_user;
-
-
---
--- Name: TABLE tipo_procedimento_escolha; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_procedimento_escolha TO sei_user;
-
-
---
--- Name: TABLE tipo_suporte; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tipo_suporte TO sei_user;
-
-
---
--- Name: TABLE titulo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.titulo TO sei_user;
-
-
---
--- Name: TABLE tratamento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.tratamento TO sei_user;
-
-
---
--- Name: TABLE uf; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.uf TO sei_user;
-
-
---
--- Name: TABLE unidade; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.unidade TO sei_user;
-
-
---
--- Name: TABLE unidade_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.unidade_federacao TO sei_user;
-
-
---
--- Name: TABLE unidade_historico; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.unidade_historico TO sei_user;
-
-
---
--- Name: TABLE unidade_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.unidade_publicacao TO sei_user;
-
-
---
--- Name: TABLE usuario; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.usuario TO sei_user;
-
-
---
--- Name: TABLE usuario_federacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.usuario_federacao TO sei_user;
-
-
---
--- Name: TABLE veiculo_imprensa_nacional; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.veiculo_imprensa_nacional TO sei_user;
-
-
---
--- Name: TABLE veiculo_publicacao; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.veiculo_publicacao TO sei_user;
-
-
---
--- Name: TABLE velocidade_transferencia; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.velocidade_transferencia TO sei_user;
-
-
---
--- Name: TABLE versao_secao_documento; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.versao_secao_documento TO sei_user;
-
-
---
--- Name: TABLE vocativo; Type: ACL; Schema: public; Owner: postgres
---
-
-GRANT ALL ON TABLE public.vocativo TO sei_user;
 
 
 --
