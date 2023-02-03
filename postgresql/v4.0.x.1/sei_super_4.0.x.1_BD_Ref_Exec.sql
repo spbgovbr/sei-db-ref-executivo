@@ -39,7 +39,7 @@ CREATE TABLE public.acao_federacao (
 );
 
 
-ALTER TABLE public.acao_federacao OWNER TO postgres;
+ALTER TABLE public.acao_federacao OWNER TO sei_user;
 
 --
 -- Name: acesso; Type: TABLE; Schema: public; Owner: postgres
@@ -55,7 +55,7 @@ CREATE TABLE public.acesso (
 );
 
 
-ALTER TABLE public.acesso OWNER TO postgres;
+ALTER TABLE public.acesso OWNER TO sei_user;
 
 --
 -- Name: acesso_externo; Type: TABLE; Schema: public; Owner: postgres
@@ -78,7 +78,7 @@ CREATE TABLE public.acesso_externo (
 );
 
 
-ALTER TABLE public.acesso_externo OWNER TO postgres;
+ALTER TABLE public.acesso_externo OWNER TO sei_user;
 
 --
 -- Name: acesso_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -105,7 +105,7 @@ CREATE TABLE public.acesso_federacao (
 );
 
 
-ALTER TABLE public.acesso_federacao OWNER TO postgres;
+ALTER TABLE public.acesso_federacao OWNER TO sei_user;
 
 --
 -- Name: acompanhamento; Type: TABLE; Schema: public; Owner: postgres
@@ -124,7 +124,7 @@ CREATE TABLE public.acompanhamento (
 );
 
 
-ALTER TABLE public.acompanhamento OWNER TO postgres;
+ALTER TABLE public.acompanhamento OWNER TO sei_user;
 
 --
 -- Name: andamento_instalacao; Type: TABLE; Schema: public; Owner: postgres
@@ -141,7 +141,7 @@ CREATE TABLE public.andamento_instalacao (
 );
 
 
-ALTER TABLE public.andamento_instalacao OWNER TO postgres;
+ALTER TABLE public.andamento_instalacao OWNER TO sei_user;
 
 --
 -- Name: andamento_marcador; Type: TABLE; Schema: public; Owner: postgres
@@ -161,7 +161,7 @@ CREATE TABLE public.andamento_marcador (
 );
 
 
-ALTER TABLE public.andamento_marcador OWNER TO postgres;
+ALTER TABLE public.andamento_marcador OWNER TO sei_user;
 
 --
 -- Name: andamento_situacao; Type: TABLE; Schema: public; Owner: postgres
@@ -178,7 +178,7 @@ CREATE TABLE public.andamento_situacao (
 );
 
 
-ALTER TABLE public.andamento_situacao OWNER TO postgres;
+ALTER TABLE public.andamento_situacao OWNER TO sei_user;
 
 --
 -- Name: anexo; Type: TABLE; Schema: public; Owner: postgres
@@ -199,7 +199,7 @@ CREATE TABLE public.anexo (
 );
 
 
-ALTER TABLE public.anexo OWNER TO postgres;
+ALTER TABLE public.anexo OWNER TO sei_user;
 
 --
 -- Name: anotacao; Type: TABLE; Schema: public; Owner: postgres
@@ -217,7 +217,7 @@ CREATE TABLE public.anotacao (
 );
 
 
-ALTER TABLE public.anotacao OWNER TO postgres;
+ALTER TABLE public.anotacao OWNER TO sei_user;
 
 --
 -- Name: arquivamento; Type: TABLE; Schema: public; Owner: postgres
@@ -235,7 +235,7 @@ CREATE TABLE public.arquivamento (
 );
 
 
-ALTER TABLE public.arquivamento OWNER TO postgres;
+ALTER TABLE public.arquivamento OWNER TO sei_user;
 
 --
 -- Name: arquivo_extensao; Type: TABLE; Schema: public; Owner: postgres
@@ -252,7 +252,7 @@ CREATE TABLE public.arquivo_extensao (
 );
 
 
-ALTER TABLE public.arquivo_extensao OWNER TO postgres;
+ALTER TABLE public.arquivo_extensao OWNER TO sei_user;
 
 --
 -- Name: assinante; Type: TABLE; Schema: public; Owner: postgres
@@ -265,7 +265,7 @@ CREATE TABLE public.assinante (
 );
 
 
-ALTER TABLE public.assinante OWNER TO postgres;
+ALTER TABLE public.assinante OWNER TO sei_user;
 
 --
 -- Name: assinatura; Type: TABLE; Schema: public; Owner: postgres
@@ -289,7 +289,7 @@ CREATE TABLE public.assinatura (
 );
 
 
-ALTER TABLE public.assinatura OWNER TO postgres;
+ALTER TABLE public.assinatura OWNER TO sei_user;
 
 --
 -- Name: assunto; Type: TABLE; Schema: public; Owner: postgres
@@ -310,7 +310,7 @@ CREATE TABLE public.assunto (
 );
 
 
-ALTER TABLE public.assunto OWNER TO postgres;
+ALTER TABLE public.assunto OWNER TO sei_user;
 
 --
 -- Name: assunto_proxy; Type: TABLE; Schema: public; Owner: postgres
@@ -322,7 +322,7 @@ CREATE TABLE public.assunto_proxy (
 );
 
 
-ALTER TABLE public.assunto_proxy OWNER TO postgres;
+ALTER TABLE public.assunto_proxy OWNER TO sei_user;
 
 --
 -- Name: atividade; Type: TABLE; Schema: public; Owner: postgres
@@ -347,7 +347,7 @@ CREATE TABLE public.atividade (
 );
 
 
-ALTER TABLE public.atividade OWNER TO postgres;
+ALTER TABLE public.atividade OWNER TO sei_user;
 
 --
 -- Name: atributo; Type: TABLE; Schema: public; Owner: postgres
@@ -372,7 +372,7 @@ CREATE TABLE public.atributo (
 );
 
 
-ALTER TABLE public.atributo OWNER TO postgres;
+ALTER TABLE public.atributo OWNER TO sei_user;
 
 --
 -- Name: atributo_andamento; Type: TABLE; Schema: public; Owner: postgres
@@ -387,7 +387,7 @@ CREATE TABLE public.atributo_andamento (
 );
 
 
-ALTER TABLE public.atributo_andamento OWNER TO postgres;
+ALTER TABLE public.atributo_andamento OWNER TO sei_user;
 
 --
 -- Name: atributo_instalacao; Type: TABLE; Schema: public; Owner: postgres
@@ -402,7 +402,7 @@ CREATE TABLE public.atributo_instalacao (
 );
 
 
-ALTER TABLE public.atributo_instalacao OWNER TO postgres;
+ALTER TABLE public.atributo_instalacao OWNER TO sei_user;
 
 --
 -- Name: auditoria_protocolo; Type: TABLE; Schema: public; Owner: postgres
@@ -418,7 +418,7 @@ CREATE TABLE public.auditoria_protocolo (
 );
 
 
-ALTER TABLE public.auditoria_protocolo OWNER TO postgres;
+ALTER TABLE public.auditoria_protocolo OWNER TO sei_user;
 
 --
 -- Name: base_conhecimento; Type: TABLE; Schema: public; Owner: postgres
@@ -442,7 +442,7 @@ CREATE TABLE public.base_conhecimento (
 );
 
 
-ALTER TABLE public.base_conhecimento OWNER TO postgres;
+ALTER TABLE public.base_conhecimento OWNER TO sei_user;
 
 --
 -- Name: bloco; Type: TABLE; Schema: public; Owner: postgres
@@ -459,7 +459,7 @@ CREATE TABLE public.bloco (
 );
 
 
-ALTER TABLE public.bloco OWNER TO postgres;
+ALTER TABLE public.bloco OWNER TO sei_user;
 
 --
 -- Name: campo_pesquisa; Type: TABLE; Schema: public; Owner: postgres
@@ -473,7 +473,7 @@ CREATE TABLE public.campo_pesquisa (
 );
 
 
-ALTER TABLE public.campo_pesquisa OWNER TO postgres;
+ALTER TABLE public.campo_pesquisa OWNER TO sei_user;
 
 --
 -- Name: cargo; Type: TABLE; Schema: public; Owner: postgres
@@ -490,7 +490,7 @@ CREATE TABLE public.cargo (
 );
 
 
-ALTER TABLE public.cargo OWNER TO postgres;
+ALTER TABLE public.cargo OWNER TO sei_user;
 
 --
 -- Name: cargo_funcao; Type: TABLE; Schema: public; Owner: postgres
@@ -504,7 +504,7 @@ CREATE TABLE public.cargo_funcao (
 );
 
 
-ALTER TABLE public.cargo_funcao OWNER TO postgres;
+ALTER TABLE public.cargo_funcao OWNER TO sei_user;
 
 --
 -- Name: categoria; Type: TABLE; Schema: public; Owner: postgres
@@ -517,7 +517,7 @@ CREATE TABLE public.categoria (
 );
 
 
-ALTER TABLE public.categoria OWNER TO postgres;
+ALTER TABLE public.categoria OWNER TO sei_user;
 
 --
 -- Name: cidade; Type: TABLE; Schema: public; Owner: postgres
@@ -535,7 +535,7 @@ CREATE TABLE public.cidade (
 );
 
 
-ALTER TABLE public.cidade OWNER TO postgres;
+ALTER TABLE public.cidade OWNER TO sei_user;
 
 --
 -- Name: comentario; Type: TABLE; Schema: public; Owner: postgres
@@ -552,7 +552,7 @@ CREATE TABLE public.comentario (
 );
 
 
-ALTER TABLE public.comentario OWNER TO postgres;
+ALTER TABLE public.comentario OWNER TO sei_user;
 
 --
 -- Name: conjunto_estilos; Type: TABLE; Schema: public; Owner: postgres
@@ -564,7 +564,7 @@ CREATE TABLE public.conjunto_estilos (
 );
 
 
-ALTER TABLE public.conjunto_estilos OWNER TO postgres;
+ALTER TABLE public.conjunto_estilos OWNER TO sei_user;
 
 --
 -- Name: conjunto_estilos_item; Type: TABLE; Schema: public; Owner: postgres
@@ -578,7 +578,7 @@ CREATE TABLE public.conjunto_estilos_item (
 );
 
 
-ALTER TABLE public.conjunto_estilos_item OWNER TO postgres;
+ALTER TABLE public.conjunto_estilos_item OWNER TO sei_user;
 
 --
 -- Name: contato; Type: TABLE; Schema: public; Owner: postgres
@@ -630,7 +630,7 @@ CREATE TABLE public.contato (
 );
 
 
-ALTER TABLE public.contato OWNER TO postgres;
+ALTER TABLE public.contato OWNER TO sei_user;
 
 --
 -- Name: controle_interno; Type: TABLE; Schema: public; Owner: postgres
@@ -642,7 +642,7 @@ CREATE TABLE public.controle_interno (
 );
 
 
-ALTER TABLE public.controle_interno OWNER TO postgres;
+ALTER TABLE public.controle_interno OWNER TO sei_user;
 
 --
 -- Name: controle_prazo; Type: TABLE; Schema: public; Owner: postgres
@@ -658,7 +658,7 @@ CREATE TABLE public.controle_prazo (
 );
 
 
-ALTER TABLE public.controle_prazo OWNER TO postgres;
+ALTER TABLE public.controle_prazo OWNER TO sei_user;
 
 --
 -- Name: controle_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -674,7 +674,7 @@ CREATE TABLE public.controle_unidade (
 );
 
 
-ALTER TABLE public.controle_unidade OWNER TO postgres;
+ALTER TABLE public.controle_unidade OWNER TO sei_user;
 
 --
 -- Name: documento; Type: TABLE; Schema: public; Owner: postgres
@@ -697,7 +697,7 @@ CREATE TABLE public.documento (
 );
 
 
-ALTER TABLE public.documento OWNER TO postgres;
+ALTER TABLE public.documento OWNER TO sei_user;
 
 --
 -- Name: documento_conteudo; Type: TABLE; Schema: public; Owner: postgres
@@ -712,7 +712,7 @@ CREATE TABLE public.documento_conteudo (
 );
 
 
-ALTER TABLE public.documento_conteudo OWNER TO postgres;
+ALTER TABLE public.documento_conteudo OWNER TO sei_user;
 
 --
 -- Name: dominio; Type: TABLE; Schema: public; Owner: postgres
@@ -729,7 +729,7 @@ CREATE TABLE public.dominio (
 );
 
 
-ALTER TABLE public.dominio OWNER TO postgres;
+ALTER TABLE public.dominio OWNER TO sei_user;
 
 --
 -- Name: email_grupo_email; Type: TABLE; Schema: public; Owner: postgres
@@ -744,7 +744,7 @@ CREATE TABLE public.email_grupo_email (
 );
 
 
-ALTER TABLE public.email_grupo_email OWNER TO postgres;
+ALTER TABLE public.email_grupo_email OWNER TO sei_user;
 
 --
 -- Name: email_sistema; Type: TABLE; Schema: public; Owner: postgres
@@ -762,7 +762,7 @@ CREATE TABLE public.email_sistema (
 );
 
 
-ALTER TABLE public.email_sistema OWNER TO postgres;
+ALTER TABLE public.email_sistema OWNER TO sei_user;
 
 --
 -- Name: email_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -776,7 +776,7 @@ CREATE TABLE public.email_unidade (
 );
 
 
-ALTER TABLE public.email_unidade OWNER TO postgres;
+ALTER TABLE public.email_unidade OWNER TO sei_user;
 
 --
 -- Name: email_utilizado; Type: TABLE; Schema: public; Owner: postgres
@@ -789,7 +789,7 @@ CREATE TABLE public.email_utilizado (
 );
 
 
-ALTER TABLE public.email_utilizado OWNER TO postgres;
+ALTER TABLE public.email_utilizado OWNER TO sei_user;
 
 --
 -- Name: estatisticas; Type: TABLE; Schema: public; Owner: postgres
@@ -812,7 +812,7 @@ CREATE TABLE public.estatisticas (
 );
 
 
-ALTER TABLE public.estatisticas OWNER TO postgres;
+ALTER TABLE public.estatisticas OWNER TO sei_user;
 
 --
 -- Name: estilo; Type: TABLE; Schema: public; Owner: postgres
@@ -825,7 +825,7 @@ CREATE TABLE public.estilo (
 );
 
 
-ALTER TABLE public.estilo OWNER TO postgres;
+ALTER TABLE public.estilo OWNER TO sei_user;
 
 --
 -- Name: feed; Type: TABLE; Schema: public; Owner: postgres
@@ -837,7 +837,7 @@ CREATE TABLE public.feed (
 );
 
 
-ALTER TABLE public.feed OWNER TO postgres;
+ALTER TABLE public.feed OWNER TO sei_user;
 
 --
 -- Name: feriado; Type: TABLE; Schema: public; Owner: postgres
@@ -851,7 +851,7 @@ CREATE TABLE public.feriado (
 );
 
 
-ALTER TABLE public.feriado OWNER TO postgres;
+ALTER TABLE public.feriado OWNER TO sei_user;
 
 --
 -- Name: grupo_acompanhamento; Type: TABLE; Schema: public; Owner: postgres
@@ -864,7 +864,7 @@ CREATE TABLE public.grupo_acompanhamento (
 );
 
 
-ALTER TABLE public.grupo_acompanhamento OWNER TO postgres;
+ALTER TABLE public.grupo_acompanhamento OWNER TO sei_user;
 
 --
 -- Name: grupo_bloco; Type: TABLE; Schema: public; Owner: postgres
@@ -878,7 +878,7 @@ CREATE TABLE public.grupo_bloco (
 );
 
 
-ALTER TABLE public.grupo_bloco OWNER TO postgres;
+ALTER TABLE public.grupo_bloco OWNER TO sei_user;
 
 --
 -- Name: grupo_contato; Type: TABLE; Schema: public; Owner: postgres
@@ -894,7 +894,7 @@ CREATE TABLE public.grupo_contato (
 );
 
 
-ALTER TABLE public.grupo_contato OWNER TO postgres;
+ALTER TABLE public.grupo_contato OWNER TO sei_user;
 
 --
 -- Name: grupo_email; Type: TABLE; Schema: public; Owner: postgres
@@ -910,7 +910,7 @@ CREATE TABLE public.grupo_email (
 );
 
 
-ALTER TABLE public.grupo_email OWNER TO postgres;
+ALTER TABLE public.grupo_email OWNER TO sei_user;
 
 --
 -- Name: grupo_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -926,7 +926,7 @@ CREATE TABLE public.grupo_federacao (
 );
 
 
-ALTER TABLE public.grupo_federacao OWNER TO postgres;
+ALTER TABLE public.grupo_federacao OWNER TO sei_user;
 
 --
 -- Name: grupo_protocolo_modelo; Type: TABLE; Schema: public; Owner: postgres
@@ -939,7 +939,7 @@ CREATE TABLE public.grupo_protocolo_modelo (
 );
 
 
-ALTER TABLE public.grupo_protocolo_modelo OWNER TO postgres;
+ALTER TABLE public.grupo_protocolo_modelo OWNER TO sei_user;
 
 --
 -- Name: grupo_serie; Type: TABLE; Schema: public; Owner: postgres
@@ -953,7 +953,7 @@ CREATE TABLE public.grupo_serie (
 );
 
 
-ALTER TABLE public.grupo_serie OWNER TO postgres;
+ALTER TABLE public.grupo_serie OWNER TO sei_user;
 
 --
 -- Name: grupo_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -969,7 +969,7 @@ CREATE TABLE public.grupo_unidade (
 );
 
 
-ALTER TABLE public.grupo_unidade OWNER TO postgres;
+ALTER TABLE public.grupo_unidade OWNER TO sei_user;
 
 --
 -- Name: hipotese_legal; Type: TABLE; Schema: public; Owner: postgres
@@ -985,7 +985,7 @@ CREATE TABLE public.hipotese_legal (
 );
 
 
-ALTER TABLE public.hipotese_legal OWNER TO postgres;
+ALTER TABLE public.hipotese_legal OWNER TO sei_user;
 
 --
 -- Name: imagem_formato; Type: TABLE; Schema: public; Owner: postgres
@@ -999,7 +999,7 @@ CREATE TABLE public.imagem_formato (
 );
 
 
-ALTER TABLE public.imagem_formato OWNER TO postgres;
+ALTER TABLE public.imagem_formato OWNER TO sei_user;
 
 --
 -- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: postgres
@@ -1020,7 +1020,7 @@ CREATE TABLE public.infra_agendamento_tarefa (
 );
 
 
-ALTER TABLE public.infra_agendamento_tarefa OWNER TO postgres;
+ALTER TABLE public.infra_agendamento_tarefa OWNER TO sei_user;
 
 --
 -- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: postgres
@@ -1053,7 +1053,7 @@ CREATE TABLE public.infra_auditoria (
 );
 
 
-ALTER TABLE public.infra_auditoria OWNER TO postgres;
+ALTER TABLE public.infra_auditoria OWNER TO sei_user;
 
 --
 -- Name: infra_dado_usuario; Type: TABLE; Schema: public; Owner: postgres
@@ -1066,7 +1066,7 @@ CREATE TABLE public.infra_dado_usuario (
 );
 
 
-ALTER TABLE public.infra_dado_usuario OWNER TO postgres;
+ALTER TABLE public.infra_dado_usuario OWNER TO sei_user;
 
 --
 -- Name: infra_log; Type: TABLE; Schema: public; Owner: postgres
@@ -1081,7 +1081,7 @@ CREATE TABLE public.infra_log (
 );
 
 
-ALTER TABLE public.infra_log OWNER TO postgres;
+ALTER TABLE public.infra_log OWNER TO sei_user;
 
 --
 -- Name: infra_navegador; Type: TABLE; Schema: public; Owner: postgres
@@ -1097,7 +1097,7 @@ CREATE TABLE public.infra_navegador (
 );
 
 
-ALTER TABLE public.infra_navegador OWNER TO postgres;
+ALTER TABLE public.infra_navegador OWNER TO sei_user;
 
 --
 -- Name: infra_parametro; Type: TABLE; Schema: public; Owner: postgres
@@ -1109,7 +1109,7 @@ CREATE TABLE public.infra_parametro (
 );
 
 
-ALTER TABLE public.infra_parametro OWNER TO postgres;
+ALTER TABLE public.infra_parametro OWNER TO sei_user;
 
 --
 -- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
@@ -1122,7 +1122,7 @@ CREATE TABLE public.infra_regra_auditoria (
 );
 
 
-ALTER TABLE public.infra_regra_auditoria OWNER TO postgres;
+ALTER TABLE public.infra_regra_auditoria OWNER TO sei_user;
 
 --
 -- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
@@ -1134,7 +1134,7 @@ CREATE TABLE public.infra_regra_auditoria_recurso (
 );
 
 
-ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO postgres;
+ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO sei_user;
 
 --
 -- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: postgres
@@ -1148,7 +1148,7 @@ CREATE TABLE public.infra_sequencia (
 );
 
 
-ALTER TABLE public.infra_sequencia OWNER TO postgres;
+ALTER TABLE public.infra_sequencia OWNER TO sei_user;
 
 --
 -- Name: instalacao_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1170,7 +1170,7 @@ CREATE TABLE public.instalacao_federacao (
 );
 
 
-ALTER TABLE public.instalacao_federacao OWNER TO postgres;
+ALTER TABLE public.instalacao_federacao OWNER TO sei_user;
 
 --
 -- Name: lembrete; Type: TABLE; Schema: public; Owner: postgres
@@ -1191,7 +1191,7 @@ CREATE TABLE public.lembrete (
 );
 
 
-ALTER TABLE public.lembrete OWNER TO postgres;
+ALTER TABLE public.lembrete OWNER TO sei_user;
 
 --
 -- Name: localizador; Type: TABLE; Schema: public; Owner: postgres
@@ -1209,7 +1209,7 @@ CREATE TABLE public.localizador (
 );
 
 
-ALTER TABLE public.localizador OWNER TO postgres;
+ALTER TABLE public.localizador OWNER TO sei_user;
 
 --
 -- Name: lugar_localizador; Type: TABLE; Schema: public; Owner: postgres
@@ -1223,7 +1223,7 @@ CREATE TABLE public.lugar_localizador (
 );
 
 
-ALTER TABLE public.lugar_localizador OWNER TO postgres;
+ALTER TABLE public.lugar_localizador OWNER TO sei_user;
 
 --
 -- Name: mapeamento_assunto; Type: TABLE; Schema: public; Owner: postgres
@@ -1235,7 +1235,7 @@ CREATE TABLE public.mapeamento_assunto (
 );
 
 
-ALTER TABLE public.mapeamento_assunto OWNER TO postgres;
+ALTER TABLE public.mapeamento_assunto OWNER TO sei_user;
 
 --
 -- Name: marcador; Type: TABLE; Schema: public; Owner: postgres
@@ -1251,7 +1251,7 @@ CREATE TABLE public.marcador (
 );
 
 
-ALTER TABLE public.marcador OWNER TO postgres;
+ALTER TABLE public.marcador OWNER TO sei_user;
 
 --
 -- Name: modelo; Type: TABLE; Schema: public; Owner: postgres
@@ -1264,7 +1264,7 @@ CREATE TABLE public.modelo (
 );
 
 
-ALTER TABLE public.modelo OWNER TO postgres;
+ALTER TABLE public.modelo OWNER TO sei_user;
 
 --
 -- Name: monitoramento_servico; Type: TABLE; Schema: public; Owner: postgres
@@ -1282,7 +1282,7 @@ CREATE TABLE public.monitoramento_servico (
 );
 
 
-ALTER TABLE public.monitoramento_servico OWNER TO postgres;
+ALTER TABLE public.monitoramento_servico OWNER TO sei_user;
 
 --
 -- Name: nivel_acesso_permitido; Type: TABLE; Schema: public; Owner: postgres
@@ -1295,7 +1295,7 @@ CREATE TABLE public.nivel_acesso_permitido (
 );
 
 
-ALTER TABLE public.nivel_acesso_permitido OWNER TO postgres;
+ALTER TABLE public.nivel_acesso_permitido OWNER TO sei_user;
 
 --
 -- Name: notificacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1311,7 +1311,7 @@ CREATE TABLE public.notificacao (
 );
 
 
-ALTER TABLE public.notificacao OWNER TO postgres;
+ALTER TABLE public.notificacao OWNER TO sei_user;
 
 --
 -- Name: novidade; Type: TABLE; Schema: public; Owner: postgres
@@ -1326,7 +1326,7 @@ CREATE TABLE public.novidade (
 );
 
 
-ALTER TABLE public.novidade OWNER TO postgres;
+ALTER TABLE public.novidade OWNER TO sei_user;
 
 --
 -- Name: numeracao; Type: TABLE; Schema: public; Owner: postgres
@@ -1342,7 +1342,7 @@ CREATE TABLE public.numeracao (
 );
 
 
-ALTER TABLE public.numeracao OWNER TO postgres;
+ALTER TABLE public.numeracao OWNER TO sei_user;
 
 --
 -- Name: observacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1357,7 +1357,7 @@ CREATE TABLE public.observacao (
 );
 
 
-ALTER TABLE public.observacao OWNER TO postgres;
+ALTER TABLE public.observacao OWNER TO sei_user;
 
 --
 -- Name: operacao_servico; Type: TABLE; Schema: public; Owner: postgres
@@ -1373,7 +1373,7 @@ CREATE TABLE public.operacao_servico (
 );
 
 
-ALTER TABLE public.operacao_servico OWNER TO postgres;
+ALTER TABLE public.operacao_servico OWNER TO sei_user;
 
 --
 -- Name: ordenador_despesa; Type: TABLE; Schema: public; Owner: postgres
@@ -1388,7 +1388,7 @@ CREATE TABLE public.ordenador_despesa (
 );
 
 
-ALTER TABLE public.ordenador_despesa OWNER TO postgres;
+ALTER TABLE public.ordenador_despesa OWNER TO sei_user;
 
 --
 -- Name: orgao; Type: TABLE; Schema: public; Owner: postgres
@@ -1415,7 +1415,7 @@ CREATE TABLE public.orgao (
 );
 
 
-ALTER TABLE public.orgao OWNER TO postgres;
+ALTER TABLE public.orgao OWNER TO sei_user;
 
 --
 -- Name: orgao_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1429,7 +1429,7 @@ CREATE TABLE public.orgao_federacao (
 );
 
 
-ALTER TABLE public.orgao_federacao OWNER TO postgres;
+ALTER TABLE public.orgao_federacao OWNER TO sei_user;
 
 --
 -- Name: orgao_historico; Type: TABLE; Schema: public; Owner: postgres
@@ -1445,7 +1445,7 @@ CREATE TABLE public.orgao_historico (
 );
 
 
-ALTER TABLE public.orgao_historico OWNER TO postgres;
+ALTER TABLE public.orgao_historico OWNER TO sei_user;
 
 --
 -- Name: pais; Type: TABLE; Schema: public; Owner: postgres
@@ -1457,7 +1457,7 @@ CREATE TABLE public.pais (
 );
 
 
-ALTER TABLE public.pais OWNER TO postgres;
+ALTER TABLE public.pais OWNER TO sei_user;
 
 --
 -- Name: parametro_acao_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1470,7 +1470,7 @@ CREATE TABLE public.parametro_acao_federacao (
 );
 
 
-ALTER TABLE public.parametro_acao_federacao OWNER TO postgres;
+ALTER TABLE public.parametro_acao_federacao OWNER TO sei_user;
 
 --
 -- Name: participante; Type: TABLE; Schema: public; Owner: postgres
@@ -1486,7 +1486,7 @@ CREATE TABLE public.participante (
 );
 
 
-ALTER TABLE public.participante OWNER TO postgres;
+ALTER TABLE public.participante OWNER TO sei_user;
 
 --
 -- Name: pesquisa; Type: TABLE; Schema: public; Owner: postgres
@@ -1500,7 +1500,7 @@ CREATE TABLE public.pesquisa (
 );
 
 
-ALTER TABLE public.pesquisa OWNER TO postgres;
+ALTER TABLE public.pesquisa OWNER TO sei_user;
 
 --
 -- Name: procedimento; Type: TABLE; Schema: public; Owner: postgres
@@ -1514,7 +1514,7 @@ CREATE TABLE public.procedimento (
 );
 
 
-ALTER TABLE public.procedimento OWNER TO postgres;
+ALTER TABLE public.procedimento OWNER TO sei_user;
 
 --
 -- Name: protocolo; Type: TABLE; Schema: public; Owner: postgres
@@ -1543,7 +1543,7 @@ CREATE TABLE public.protocolo (
 );
 
 
-ALTER TABLE public.protocolo OWNER TO postgres;
+ALTER TABLE public.protocolo OWNER TO sei_user;
 
 --
 -- Name: protocolo_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1558,7 +1558,7 @@ CREATE TABLE public.protocolo_federacao (
 );
 
 
-ALTER TABLE public.protocolo_federacao OWNER TO postgres;
+ALTER TABLE public.protocolo_federacao OWNER TO sei_user;
 
 --
 -- Name: protocolo_modelo; Type: TABLE; Schema: public; Owner: postgres
@@ -1576,7 +1576,7 @@ CREATE TABLE public.protocolo_modelo (
 );
 
 
-ALTER TABLE public.protocolo_modelo OWNER TO postgres;
+ALTER TABLE public.protocolo_modelo OWNER TO sei_user;
 
 --
 -- Name: publicacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1602,7 +1602,7 @@ CREATE TABLE public.publicacao (
 );
 
 
-ALTER TABLE public.publicacao OWNER TO postgres;
+ALTER TABLE public.publicacao OWNER TO sei_user;
 
 --
 -- Name: publicacao_legado; Type: TABLE; Schema: public; Owner: postgres
@@ -1629,7 +1629,7 @@ CREATE TABLE public.publicacao_legado (
 );
 
 
-ALTER TABLE public.publicacao_legado OWNER TO postgres;
+ALTER TABLE public.publicacao_legado OWNER TO sei_user;
 
 --
 -- Name: rel_acesso_ext_protocolo; Type: TABLE; Schema: public; Owner: postgres
@@ -1641,7 +1641,7 @@ CREATE TABLE public.rel_acesso_ext_protocolo (
 );
 
 
-ALTER TABLE public.rel_acesso_ext_protocolo OWNER TO postgres;
+ALTER TABLE public.rel_acesso_ext_protocolo OWNER TO sei_user;
 
 --
 -- Name: rel_acesso_ext_serie; Type: TABLE; Schema: public; Owner: postgres
@@ -1653,7 +1653,7 @@ CREATE TABLE public.rel_acesso_ext_serie (
 );
 
 
-ALTER TABLE public.rel_acesso_ext_serie OWNER TO postgres;
+ALTER TABLE public.rel_acesso_ext_serie OWNER TO sei_user;
 
 --
 -- Name: rel_assinante_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -1665,7 +1665,7 @@ CREATE TABLE public.rel_assinante_unidade (
 );
 
 
-ALTER TABLE public.rel_assinante_unidade OWNER TO postgres;
+ALTER TABLE public.rel_assinante_unidade OWNER TO sei_user;
 
 --
 -- Name: rel_base_conhec_tipo_proced; Type: TABLE; Schema: public; Owner: postgres
@@ -1677,7 +1677,7 @@ CREATE TABLE public.rel_base_conhec_tipo_proced (
 );
 
 
-ALTER TABLE public.rel_base_conhec_tipo_proced OWNER TO postgres;
+ALTER TABLE public.rel_base_conhec_tipo_proced OWNER TO sei_user;
 
 --
 -- Name: rel_bloco_protocolo; Type: TABLE; Schema: public; Owner: postgres
@@ -1692,7 +1692,7 @@ CREATE TABLE public.rel_bloco_protocolo (
 );
 
 
-ALTER TABLE public.rel_bloco_protocolo OWNER TO postgres;
+ALTER TABLE public.rel_bloco_protocolo OWNER TO sei_user;
 
 --
 -- Name: rel_bloco_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -1717,7 +1717,7 @@ CREATE TABLE public.rel_bloco_unidade (
 );
 
 
-ALTER TABLE public.rel_bloco_unidade OWNER TO postgres;
+ALTER TABLE public.rel_bloco_unidade OWNER TO sei_user;
 
 --
 -- Name: rel_controle_interno_orgao; Type: TABLE; Schema: public; Owner: postgres
@@ -1729,7 +1729,7 @@ CREATE TABLE public.rel_controle_interno_orgao (
 );
 
 
-ALTER TABLE public.rel_controle_interno_orgao OWNER TO postgres;
+ALTER TABLE public.rel_controle_interno_orgao OWNER TO sei_user;
 
 --
 -- Name: rel_controle_interno_serie; Type: TABLE; Schema: public; Owner: postgres
@@ -1741,7 +1741,7 @@ CREATE TABLE public.rel_controle_interno_serie (
 );
 
 
-ALTER TABLE public.rel_controle_interno_serie OWNER TO postgres;
+ALTER TABLE public.rel_controle_interno_serie OWNER TO sei_user;
 
 --
 -- Name: rel_controle_interno_tipo_proc; Type: TABLE; Schema: public; Owner: postgres
@@ -1753,7 +1753,7 @@ CREATE TABLE public.rel_controle_interno_tipo_proc (
 );
 
 
-ALTER TABLE public.rel_controle_interno_tipo_proc OWNER TO postgres;
+ALTER TABLE public.rel_controle_interno_tipo_proc OWNER TO sei_user;
 
 --
 -- Name: rel_controle_interno_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -1765,7 +1765,7 @@ CREATE TABLE public.rel_controle_interno_unidade (
 );
 
 
-ALTER TABLE public.rel_controle_interno_unidade OWNER TO postgres;
+ALTER TABLE public.rel_controle_interno_unidade OWNER TO sei_user;
 
 --
 -- Name: rel_grupo_contato; Type: TABLE; Schema: public; Owner: postgres
@@ -1777,7 +1777,7 @@ CREATE TABLE public.rel_grupo_contato (
 );
 
 
-ALTER TABLE public.rel_grupo_contato OWNER TO postgres;
+ALTER TABLE public.rel_grupo_contato OWNER TO sei_user;
 
 --
 -- Name: rel_grupo_fed_orgao_fed; Type: TABLE; Schema: public; Owner: postgres
@@ -1789,7 +1789,7 @@ CREATE TABLE public.rel_grupo_fed_orgao_fed (
 );
 
 
-ALTER TABLE public.rel_grupo_fed_orgao_fed OWNER TO postgres;
+ALTER TABLE public.rel_grupo_fed_orgao_fed OWNER TO sei_user;
 
 --
 -- Name: rel_grupo_unidade_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -1801,7 +1801,7 @@ CREATE TABLE public.rel_grupo_unidade_unidade (
 );
 
 
-ALTER TABLE public.rel_grupo_unidade_unidade OWNER TO postgres;
+ALTER TABLE public.rel_grupo_unidade_unidade OWNER TO sei_user;
 
 --
 -- Name: rel_notificacao_documento; Type: TABLE; Schema: public; Owner: postgres
@@ -1814,7 +1814,7 @@ CREATE TABLE public.rel_notificacao_documento (
 );
 
 
-ALTER TABLE public.rel_notificacao_documento OWNER TO postgres;
+ALTER TABLE public.rel_notificacao_documento OWNER TO sei_user;
 
 --
 -- Name: rel_protocolo_assunto; Type: TABLE; Schema: public; Owner: postgres
@@ -1828,7 +1828,7 @@ CREATE TABLE public.rel_protocolo_assunto (
 );
 
 
-ALTER TABLE public.rel_protocolo_assunto OWNER TO postgres;
+ALTER TABLE public.rel_protocolo_assunto OWNER TO sei_user;
 
 --
 -- Name: rel_protocolo_atributo; Type: TABLE; Schema: public; Owner: postgres
@@ -1841,7 +1841,7 @@ CREATE TABLE public.rel_protocolo_atributo (
 );
 
 
-ALTER TABLE public.rel_protocolo_atributo OWNER TO postgres;
+ALTER TABLE public.rel_protocolo_atributo OWNER TO sei_user;
 
 --
 -- Name: rel_protocolo_protocolo; Type: TABLE; Schema: public; Owner: postgres
@@ -1860,7 +1860,7 @@ CREATE TABLE public.rel_protocolo_protocolo (
 );
 
 
-ALTER TABLE public.rel_protocolo_protocolo OWNER TO postgres;
+ALTER TABLE public.rel_protocolo_protocolo OWNER TO sei_user;
 
 --
 -- Name: rel_secao_mod_cj_estilos_item; Type: TABLE; Schema: public; Owner: postgres
@@ -1873,7 +1873,7 @@ CREATE TABLE public.rel_secao_mod_cj_estilos_item (
 );
 
 
-ALTER TABLE public.rel_secao_mod_cj_estilos_item OWNER TO postgres;
+ALTER TABLE public.rel_secao_mod_cj_estilos_item OWNER TO sei_user;
 
 --
 -- Name: rel_secao_modelo_estilo; Type: TABLE; Schema: public; Owner: postgres
@@ -1886,7 +1886,7 @@ CREATE TABLE public.rel_secao_modelo_estilo (
 );
 
 
-ALTER TABLE public.rel_secao_modelo_estilo OWNER TO postgres;
+ALTER TABLE public.rel_secao_modelo_estilo OWNER TO sei_user;
 
 --
 -- Name: rel_serie_assunto; Type: TABLE; Schema: public; Owner: postgres
@@ -1899,7 +1899,7 @@ CREATE TABLE public.rel_serie_assunto (
 );
 
 
-ALTER TABLE public.rel_serie_assunto OWNER TO postgres;
+ALTER TABLE public.rel_serie_assunto OWNER TO sei_user;
 
 --
 -- Name: rel_serie_veiculo_publicacao; Type: TABLE; Schema: public; Owner: postgres
@@ -1911,7 +1911,7 @@ CREATE TABLE public.rel_serie_veiculo_publicacao (
 );
 
 
-ALTER TABLE public.rel_serie_veiculo_publicacao OWNER TO postgres;
+ALTER TABLE public.rel_serie_veiculo_publicacao OWNER TO sei_user;
 
 --
 -- Name: rel_situacao_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -1923,7 +1923,7 @@ CREATE TABLE public.rel_situacao_unidade (
 );
 
 
-ALTER TABLE public.rel_situacao_unidade OWNER TO postgres;
+ALTER TABLE public.rel_situacao_unidade OWNER TO sei_user;
 
 --
 -- Name: rel_tipo_procedimento_assunto; Type: TABLE; Schema: public; Owner: postgres
@@ -1936,7 +1936,7 @@ CREATE TABLE public.rel_tipo_procedimento_assunto (
 );
 
 
-ALTER TABLE public.rel_tipo_procedimento_assunto OWNER TO postgres;
+ALTER TABLE public.rel_tipo_procedimento_assunto OWNER TO sei_user;
 
 --
 -- Name: rel_unidade_tipo_contato; Type: TABLE; Schema: public; Owner: postgres
@@ -1950,7 +1950,7 @@ CREATE TABLE public.rel_unidade_tipo_contato (
 );
 
 
-ALTER TABLE public.rel_unidade_tipo_contato OWNER TO postgres;
+ALTER TABLE public.rel_unidade_tipo_contato OWNER TO sei_user;
 
 --
 -- Name: rel_usuario_grupo_acomp; Type: TABLE; Schema: public; Owner: postgres
@@ -1962,7 +1962,7 @@ CREATE TABLE public.rel_usuario_grupo_acomp (
 );
 
 
-ALTER TABLE public.rel_usuario_grupo_acomp OWNER TO postgres;
+ALTER TABLE public.rel_usuario_grupo_acomp OWNER TO sei_user;
 
 --
 -- Name: rel_usuario_grupo_bloco; Type: TABLE; Schema: public; Owner: postgres
@@ -1974,7 +1974,7 @@ CREATE TABLE public.rel_usuario_grupo_bloco (
 );
 
 
-ALTER TABLE public.rel_usuario_grupo_bloco OWNER TO postgres;
+ALTER TABLE public.rel_usuario_grupo_bloco OWNER TO sei_user;
 
 --
 -- Name: rel_usuario_marcador; Type: TABLE; Schema: public; Owner: postgres
@@ -1986,7 +1986,7 @@ CREATE TABLE public.rel_usuario_marcador (
 );
 
 
-ALTER TABLE public.rel_usuario_marcador OWNER TO postgres;
+ALTER TABLE public.rel_usuario_marcador OWNER TO sei_user;
 
 --
 -- Name: rel_usuario_tipo_proced; Type: TABLE; Schema: public; Owner: postgres
@@ -1999,7 +1999,7 @@ CREATE TABLE public.rel_usuario_tipo_proced (
 );
 
 
-ALTER TABLE public.rel_usuario_tipo_proced OWNER TO postgres;
+ALTER TABLE public.rel_usuario_tipo_proced OWNER TO sei_user;
 
 --
 -- Name: rel_usuario_usuario_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -2012,7 +2012,7 @@ CREATE TABLE public.rel_usuario_usuario_unidade (
 );
 
 
-ALTER TABLE public.rel_usuario_usuario_unidade OWNER TO postgres;
+ALTER TABLE public.rel_usuario_usuario_unidade OWNER TO sei_user;
 
 --
 -- Name: replicacao_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -2031,7 +2031,7 @@ CREATE TABLE public.replicacao_federacao (
 );
 
 
-ALTER TABLE public.replicacao_federacao OWNER TO postgres;
+ALTER TABLE public.replicacao_federacao OWNER TO sei_user;
 
 --
 -- Name: retorno_programado; Type: TABLE; Schema: public; Owner: postgres
@@ -2050,7 +2050,7 @@ CREATE TABLE public.retorno_programado (
 );
 
 
-ALTER TABLE public.retorno_programado OWNER TO postgres;
+ALTER TABLE public.retorno_programado OWNER TO sei_user;
 
 --
 -- Name: secao_documento; Type: TABLE; Schema: public; Owner: postgres
@@ -2073,7 +2073,7 @@ CREATE TABLE public.secao_documento (
 );
 
 
-ALTER TABLE public.secao_documento OWNER TO postgres;
+ALTER TABLE public.secao_documento OWNER TO sei_user;
 
 --
 -- Name: secao_imprensa_nacional; Type: TABLE; Schema: public; Owner: postgres
@@ -2087,7 +2087,7 @@ CREATE TABLE public.secao_imprensa_nacional (
 );
 
 
-ALTER TABLE public.secao_imprensa_nacional OWNER TO postgres;
+ALTER TABLE public.secao_imprensa_nacional OWNER TO sei_user;
 
 --
 -- Name: secao_modelo; Type: TABLE; Schema: public; Owner: postgres
@@ -2110,7 +2110,7 @@ CREATE TABLE public.secao_modelo (
 );
 
 
-ALTER TABLE public.secao_modelo OWNER TO postgres;
+ALTER TABLE public.secao_modelo OWNER TO sei_user;
 
 --
 -- Name: seq_acesso; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2124,7 +2124,7 @@ CREATE SEQUENCE public.seq_acesso
     CACHE 1;
 
 
-ALTER TABLE public.seq_acesso OWNER TO postgres;
+ALTER TABLE public.seq_acesso OWNER TO sei_user;
 
 --
 -- Name: seq_acesso_externo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2138,7 +2138,7 @@ CREATE SEQUENCE public.seq_acesso_externo
     CACHE 1;
 
 
-ALTER TABLE public.seq_acesso_externo OWNER TO postgres;
+ALTER TABLE public.seq_acesso_externo OWNER TO sei_user;
 
 --
 -- Name: seq_acompanhamento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2152,7 +2152,7 @@ CREATE SEQUENCE public.seq_acompanhamento
     CACHE 1;
 
 
-ALTER TABLE public.seq_acompanhamento OWNER TO postgres;
+ALTER TABLE public.seq_acompanhamento OWNER TO sei_user;
 
 --
 -- Name: seq_andamento_instalacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2166,7 +2166,7 @@ CREATE SEQUENCE public.seq_andamento_instalacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_andamento_instalacao OWNER TO postgres;
+ALTER TABLE public.seq_andamento_instalacao OWNER TO sei_user;
 
 --
 -- Name: seq_andamento_marcador; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2180,7 +2180,7 @@ CREATE SEQUENCE public.seq_andamento_marcador
     CACHE 1;
 
 
-ALTER TABLE public.seq_andamento_marcador OWNER TO postgres;
+ALTER TABLE public.seq_andamento_marcador OWNER TO sei_user;
 
 --
 -- Name: seq_andamento_situacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2194,7 +2194,7 @@ CREATE SEQUENCE public.seq_andamento_situacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_andamento_situacao OWNER TO postgres;
+ALTER TABLE public.seq_andamento_situacao OWNER TO sei_user;
 
 --
 -- Name: seq_anexo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2208,7 +2208,7 @@ CREATE SEQUENCE public.seq_anexo
     CACHE 1;
 
 
-ALTER TABLE public.seq_anexo OWNER TO postgres;
+ALTER TABLE public.seq_anexo OWNER TO sei_user;
 
 --
 -- Name: seq_anotacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2222,7 +2222,7 @@ CREATE SEQUENCE public.seq_anotacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_anotacao OWNER TO postgres;
+ALTER TABLE public.seq_anotacao OWNER TO sei_user;
 
 --
 -- Name: seq_arquivo_extensao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2236,7 +2236,7 @@ CREATE SEQUENCE public.seq_arquivo_extensao
     CACHE 1;
 
 
-ALTER TABLE public.seq_arquivo_extensao OWNER TO postgres;
+ALTER TABLE public.seq_arquivo_extensao OWNER TO sei_user;
 
 --
 -- Name: seq_assinante; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2250,7 +2250,7 @@ CREATE SEQUENCE public.seq_assinante
     CACHE 1;
 
 
-ALTER TABLE public.seq_assinante OWNER TO postgres;
+ALTER TABLE public.seq_assinante OWNER TO sei_user;
 
 --
 -- Name: seq_assinatura; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2264,7 +2264,7 @@ CREATE SEQUENCE public.seq_assinatura
     CACHE 1;
 
 
-ALTER TABLE public.seq_assinatura OWNER TO postgres;
+ALTER TABLE public.seq_assinatura OWNER TO sei_user;
 
 --
 -- Name: seq_assunto; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2278,7 +2278,7 @@ CREATE SEQUENCE public.seq_assunto
     CACHE 1;
 
 
-ALTER TABLE public.seq_assunto OWNER TO postgres;
+ALTER TABLE public.seq_assunto OWNER TO sei_user;
 
 --
 -- Name: seq_assunto_proxy; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2292,7 +2292,7 @@ CREATE SEQUENCE public.seq_assunto_proxy
     CACHE 1;
 
 
-ALTER TABLE public.seq_assunto_proxy OWNER TO postgres;
+ALTER TABLE public.seq_assunto_proxy OWNER TO sei_user;
 
 --
 -- Name: seq_atividade; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2306,7 +2306,7 @@ CREATE SEQUENCE public.seq_atividade
     CACHE 1;
 
 
-ALTER TABLE public.seq_atividade OWNER TO postgres;
+ALTER TABLE public.seq_atividade OWNER TO sei_user;
 
 --
 -- Name: seq_atributo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2320,7 +2320,7 @@ CREATE SEQUENCE public.seq_atributo
     CACHE 1;
 
 
-ALTER TABLE public.seq_atributo OWNER TO postgres;
+ALTER TABLE public.seq_atributo OWNER TO sei_user;
 
 --
 -- Name: seq_atributo_andamento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2334,7 +2334,7 @@ CREATE SEQUENCE public.seq_atributo_andamento
     CACHE 1;
 
 
-ALTER TABLE public.seq_atributo_andamento OWNER TO postgres;
+ALTER TABLE public.seq_atributo_andamento OWNER TO sei_user;
 
 --
 -- Name: seq_atributo_andamento_situaca; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2348,7 +2348,7 @@ CREATE SEQUENCE public.seq_atributo_andamento_situaca
     CACHE 1;
 
 
-ALTER TABLE public.seq_atributo_andamento_situaca OWNER TO postgres;
+ALTER TABLE public.seq_atributo_andamento_situaca OWNER TO sei_user;
 
 --
 -- Name: seq_atributo_instalacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2362,7 +2362,7 @@ CREATE SEQUENCE public.seq_atributo_instalacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_atributo_instalacao OWNER TO postgres;
+ALTER TABLE public.seq_atributo_instalacao OWNER TO sei_user;
 
 --
 -- Name: seq_auditoria_protocolo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2376,7 +2376,7 @@ CREATE SEQUENCE public.seq_auditoria_protocolo
     CACHE 1;
 
 
-ALTER TABLE public.seq_auditoria_protocolo OWNER TO postgres;
+ALTER TABLE public.seq_auditoria_protocolo OWNER TO sei_user;
 
 --
 -- Name: seq_base_conhecimento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2390,7 +2390,7 @@ CREATE SEQUENCE public.seq_base_conhecimento
     CACHE 1;
 
 
-ALTER TABLE public.seq_base_conhecimento OWNER TO postgres;
+ALTER TABLE public.seq_base_conhecimento OWNER TO sei_user;
 
 --
 -- Name: seq_bloco; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2404,7 +2404,7 @@ CREATE SEQUENCE public.seq_bloco
     CACHE 1;
 
 
-ALTER TABLE public.seq_bloco OWNER TO postgres;
+ALTER TABLE public.seq_bloco OWNER TO sei_user;
 
 --
 -- Name: seq_campo_pesquisa; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2418,7 +2418,7 @@ CREATE SEQUENCE public.seq_campo_pesquisa
     CACHE 1;
 
 
-ALTER TABLE public.seq_campo_pesquisa OWNER TO postgres;
+ALTER TABLE public.seq_campo_pesquisa OWNER TO sei_user;
 
 --
 -- Name: seq_cargo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2432,7 +2432,7 @@ CREATE SEQUENCE public.seq_cargo
     CACHE 1;
 
 
-ALTER TABLE public.seq_cargo OWNER TO postgres;
+ALTER TABLE public.seq_cargo OWNER TO sei_user;
 
 --
 -- Name: seq_categoria; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2446,7 +2446,7 @@ CREATE SEQUENCE public.seq_categoria
     CACHE 1;
 
 
-ALTER TABLE public.seq_categoria OWNER TO postgres;
+ALTER TABLE public.seq_categoria OWNER TO sei_user;
 
 --
 -- Name: seq_cidade; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2460,7 +2460,7 @@ CREATE SEQUENCE public.seq_cidade
     CACHE 1;
 
 
-ALTER TABLE public.seq_cidade OWNER TO postgres;
+ALTER TABLE public.seq_cidade OWNER TO sei_user;
 
 --
 -- Name: seq_comentario; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2474,7 +2474,7 @@ CREATE SEQUENCE public.seq_comentario
     CACHE 1;
 
 
-ALTER TABLE public.seq_comentario OWNER TO postgres;
+ALTER TABLE public.seq_comentario OWNER TO sei_user;
 
 --
 -- Name: seq_conjunto_estilos; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2488,7 +2488,7 @@ CREATE SEQUENCE public.seq_conjunto_estilos
     CACHE 1;
 
 
-ALTER TABLE public.seq_conjunto_estilos OWNER TO postgres;
+ALTER TABLE public.seq_conjunto_estilos OWNER TO sei_user;
 
 --
 -- Name: seq_conjunto_estilos_item; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2502,7 +2502,7 @@ CREATE SEQUENCE public.seq_conjunto_estilos_item
     CACHE 1;
 
 
-ALTER TABLE public.seq_conjunto_estilos_item OWNER TO postgres;
+ALTER TABLE public.seq_conjunto_estilos_item OWNER TO sei_user;
 
 --
 -- Name: seq_contato; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2516,7 +2516,7 @@ CREATE SEQUENCE public.seq_contato
     CACHE 1;
 
 
-ALTER TABLE public.seq_contato OWNER TO postgres;
+ALTER TABLE public.seq_contato OWNER TO sei_user;
 
 --
 -- Name: seq_controle_interno; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2530,7 +2530,7 @@ CREATE SEQUENCE public.seq_controle_interno
     CACHE 1;
 
 
-ALTER TABLE public.seq_controle_interno OWNER TO postgres;
+ALTER TABLE public.seq_controle_interno OWNER TO sei_user;
 
 --
 -- Name: seq_controle_prazo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2544,7 +2544,7 @@ CREATE SEQUENCE public.seq_controle_prazo
     CACHE 1;
 
 
-ALTER TABLE public.seq_controle_prazo OWNER TO postgres;
+ALTER TABLE public.seq_controle_prazo OWNER TO sei_user;
 
 --
 -- Name: seq_controle_unidade; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2558,7 +2558,7 @@ CREATE SEQUENCE public.seq_controle_unidade
     CACHE 1;
 
 
-ALTER TABLE public.seq_controle_unidade OWNER TO postgres;
+ALTER TABLE public.seq_controle_unidade OWNER TO sei_user;
 
 --
 -- Name: seq_documento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2572,7 +2572,7 @@ CREATE SEQUENCE public.seq_documento
     CACHE 1;
 
 
-ALTER TABLE public.seq_documento OWNER TO postgres;
+ALTER TABLE public.seq_documento OWNER TO sei_user;
 
 --
 -- Name: seq_dominio; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2586,7 +2586,7 @@ CREATE SEQUENCE public.seq_dominio
     CACHE 1;
 
 
-ALTER TABLE public.seq_dominio OWNER TO postgres;
+ALTER TABLE public.seq_dominio OWNER TO sei_user;
 
 --
 -- Name: seq_email_grupo_email; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2600,7 +2600,7 @@ CREATE SEQUENCE public.seq_email_grupo_email
     CACHE 1;
 
 
-ALTER TABLE public.seq_email_grupo_email OWNER TO postgres;
+ALTER TABLE public.seq_email_grupo_email OWNER TO sei_user;
 
 --
 -- Name: seq_email_sistema; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2614,7 +2614,7 @@ CREATE SEQUENCE public.seq_email_sistema
     CACHE 1;
 
 
-ALTER TABLE public.seq_email_sistema OWNER TO postgres;
+ALTER TABLE public.seq_email_sistema OWNER TO sei_user;
 
 --
 -- Name: seq_email_unidade; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2628,7 +2628,7 @@ CREATE SEQUENCE public.seq_email_unidade
     CACHE 1;
 
 
-ALTER TABLE public.seq_email_unidade OWNER TO postgres;
+ALTER TABLE public.seq_email_unidade OWNER TO sei_user;
 
 --
 -- Name: seq_email_utilizado; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2642,7 +2642,7 @@ CREATE SEQUENCE public.seq_email_utilizado
     CACHE 1;
 
 
-ALTER TABLE public.seq_email_utilizado OWNER TO postgres;
+ALTER TABLE public.seq_email_utilizado OWNER TO sei_user;
 
 --
 -- Name: seq_estatisticas; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2656,7 +2656,7 @@ CREATE SEQUENCE public.seq_estatisticas
     CACHE 1;
 
 
-ALTER TABLE public.seq_estatisticas OWNER TO postgres;
+ALTER TABLE public.seq_estatisticas OWNER TO sei_user;
 
 --
 -- Name: seq_estilo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2670,7 +2670,7 @@ CREATE SEQUENCE public.seq_estilo
     CACHE 1;
 
 
-ALTER TABLE public.seq_estilo OWNER TO postgres;
+ALTER TABLE public.seq_estilo OWNER TO sei_user;
 
 --
 -- Name: seq_feed; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2684,7 +2684,7 @@ CREATE SEQUENCE public.seq_feed
     CACHE 1;
 
 
-ALTER TABLE public.seq_feed OWNER TO postgres;
+ALTER TABLE public.seq_feed OWNER TO sei_user;
 
 --
 -- Name: seq_feriado; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2698,7 +2698,7 @@ CREATE SEQUENCE public.seq_feriado
     CACHE 1;
 
 
-ALTER TABLE public.seq_feriado OWNER TO postgres;
+ALTER TABLE public.seq_feriado OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_acompanhamento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2712,7 +2712,7 @@ CREATE SEQUENCE public.seq_grupo_acompanhamento
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_acompanhamento OWNER TO postgres;
+ALTER TABLE public.seq_grupo_acompanhamento OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_bloco; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2726,7 +2726,7 @@ CREATE SEQUENCE public.seq_grupo_bloco
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_bloco OWNER TO postgres;
+ALTER TABLE public.seq_grupo_bloco OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_contato; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2740,7 +2740,7 @@ CREATE SEQUENCE public.seq_grupo_contato
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_contato OWNER TO postgres;
+ALTER TABLE public.seq_grupo_contato OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_email; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2754,7 +2754,7 @@ CREATE SEQUENCE public.seq_grupo_email
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_email OWNER TO postgres;
+ALTER TABLE public.seq_grupo_email OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_federacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2768,7 +2768,7 @@ CREATE SEQUENCE public.seq_grupo_federacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_federacao OWNER TO postgres;
+ALTER TABLE public.seq_grupo_federacao OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_protocolo_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2782,7 +2782,7 @@ CREATE SEQUENCE public.seq_grupo_protocolo_modelo
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_protocolo_modelo OWNER TO postgres;
+ALTER TABLE public.seq_grupo_protocolo_modelo OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_serie; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2796,7 +2796,7 @@ CREATE SEQUENCE public.seq_grupo_serie
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_serie OWNER TO postgres;
+ALTER TABLE public.seq_grupo_serie OWNER TO sei_user;
 
 --
 -- Name: seq_grupo_unidade; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2810,7 +2810,7 @@ CREATE SEQUENCE public.seq_grupo_unidade
     CACHE 1;
 
 
-ALTER TABLE public.seq_grupo_unidade OWNER TO postgres;
+ALTER TABLE public.seq_grupo_unidade OWNER TO sei_user;
 
 --
 -- Name: seq_hipotese_legal; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2824,7 +2824,7 @@ CREATE SEQUENCE public.seq_hipotese_legal
     CACHE 1;
 
 
-ALTER TABLE public.seq_hipotese_legal OWNER TO postgres;
+ALTER TABLE public.seq_hipotese_legal OWNER TO sei_user;
 
 --
 -- Name: seq_imagem_formato; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2838,7 +2838,7 @@ CREATE SEQUENCE public.seq_imagem_formato
     CACHE 1;
 
 
-ALTER TABLE public.seq_imagem_formato OWNER TO postgres;
+ALTER TABLE public.seq_imagem_formato OWNER TO sei_user;
 
 --
 -- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2852,7 +2852,7 @@ CREATE SEQUENCE public.seq_infra_auditoria
     CACHE 1;
 
 
-ALTER TABLE public.seq_infra_auditoria OWNER TO postgres;
+ALTER TABLE public.seq_infra_auditoria OWNER TO sei_user;
 
 --
 -- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2866,7 +2866,7 @@ CREATE SEQUENCE public.seq_infra_log
     CACHE 1;
 
 
-ALTER TABLE public.seq_infra_log OWNER TO postgres;
+ALTER TABLE public.seq_infra_log OWNER TO sei_user;
 
 --
 -- Name: seq_infra_navegador; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2880,7 +2880,7 @@ CREATE SEQUENCE public.seq_infra_navegador
     CACHE 1;
 
 
-ALTER TABLE public.seq_infra_navegador OWNER TO postgres;
+ALTER TABLE public.seq_infra_navegador OWNER TO sei_user;
 
 --
 -- Name: seq_lembrete; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2894,7 +2894,7 @@ CREATE SEQUENCE public.seq_lembrete
     CACHE 1;
 
 
-ALTER TABLE public.seq_lembrete OWNER TO postgres;
+ALTER TABLE public.seq_lembrete OWNER TO sei_user;
 
 --
 -- Name: seq_localizador; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2908,7 +2908,7 @@ CREATE SEQUENCE public.seq_localizador
     CACHE 1;
 
 
-ALTER TABLE public.seq_localizador OWNER TO postgres;
+ALTER TABLE public.seq_localizador OWNER TO sei_user;
 
 --
 -- Name: seq_lugar_localizador; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2922,7 +2922,7 @@ CREATE SEQUENCE public.seq_lugar_localizador
     CACHE 1;
 
 
-ALTER TABLE public.seq_lugar_localizador OWNER TO postgres;
+ALTER TABLE public.seq_lugar_localizador OWNER TO sei_user;
 
 --
 -- Name: seq_marcador; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2936,7 +2936,7 @@ CREATE SEQUENCE public.seq_marcador
     CACHE 1;
 
 
-ALTER TABLE public.seq_marcador OWNER TO postgres;
+ALTER TABLE public.seq_marcador OWNER TO sei_user;
 
 --
 -- Name: seq_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2950,7 +2950,7 @@ CREATE SEQUENCE public.seq_modelo
     CACHE 1;
 
 
-ALTER TABLE public.seq_modelo OWNER TO postgres;
+ALTER TABLE public.seq_modelo OWNER TO sei_user;
 
 --
 -- Name: seq_monitoramento_servico; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2964,7 +2964,7 @@ CREATE SEQUENCE public.seq_monitoramento_servico
     CACHE 1;
 
 
-ALTER TABLE public.seq_monitoramento_servico OWNER TO postgres;
+ALTER TABLE public.seq_monitoramento_servico OWNER TO sei_user;
 
 --
 -- Name: seq_nivel_acesso_permitido; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2978,7 +2978,7 @@ CREATE SEQUENCE public.seq_nivel_acesso_permitido
     CACHE 1;
 
 
-ALTER TABLE public.seq_nivel_acesso_permitido OWNER TO postgres;
+ALTER TABLE public.seq_nivel_acesso_permitido OWNER TO sei_user;
 
 --
 -- Name: seq_novidade; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -2992,7 +2992,7 @@ CREATE SEQUENCE public.seq_novidade
     CACHE 1;
 
 
-ALTER TABLE public.seq_novidade OWNER TO postgres;
+ALTER TABLE public.seq_novidade OWNER TO sei_user;
 
 --
 -- Name: seq_numeracao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3006,7 +3006,7 @@ CREATE SEQUENCE public.seq_numeracao
     CACHE 1;
 
 
-ALTER TABLE public.seq_numeracao OWNER TO postgres;
+ALTER TABLE public.seq_numeracao OWNER TO sei_user;
 
 --
 -- Name: seq_observacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3020,7 +3020,7 @@ CREATE SEQUENCE public.seq_observacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_observacao OWNER TO postgres;
+ALTER TABLE public.seq_observacao OWNER TO sei_user;
 
 --
 -- Name: seq_operacao_servico; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3034,7 +3034,7 @@ CREATE SEQUENCE public.seq_operacao_servico
     CACHE 1;
 
 
-ALTER TABLE public.seq_operacao_servico OWNER TO postgres;
+ALTER TABLE public.seq_operacao_servico OWNER TO sei_user;
 
 --
 -- Name: seq_ordenador_despesa; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3048,7 +3048,7 @@ CREATE SEQUENCE public.seq_ordenador_despesa
     CACHE 1;
 
 
-ALTER TABLE public.seq_ordenador_despesa OWNER TO postgres;
+ALTER TABLE public.seq_ordenador_despesa OWNER TO sei_user;
 
 --
 -- Name: seq_orgao_historico; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3062,7 +3062,7 @@ CREATE SEQUENCE public.seq_orgao_historico
     CACHE 1;
 
 
-ALTER TABLE public.seq_orgao_historico OWNER TO postgres;
+ALTER TABLE public.seq_orgao_historico OWNER TO sei_user;
 
 --
 -- Name: seq_pais; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3076,7 +3076,7 @@ CREATE SEQUENCE public.seq_pais
     CACHE 1;
 
 
-ALTER TABLE public.seq_pais OWNER TO postgres;
+ALTER TABLE public.seq_pais OWNER TO sei_user;
 
 --
 -- Name: seq_participante; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3090,7 +3090,7 @@ CREATE SEQUENCE public.seq_participante
     CACHE 1;
 
 
-ALTER TABLE public.seq_participante OWNER TO postgres;
+ALTER TABLE public.seq_participante OWNER TO sei_user;
 
 --
 -- Name: seq_pesquisa; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3104,7 +3104,7 @@ CREATE SEQUENCE public.seq_pesquisa
     CACHE 1;
 
 
-ALTER TABLE public.seq_pesquisa OWNER TO postgres;
+ALTER TABLE public.seq_pesquisa OWNER TO sei_user;
 
 --
 -- Name: seq_protocolo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3118,7 +3118,7 @@ CREATE SEQUENCE public.seq_protocolo
     CACHE 1;
 
 
-ALTER TABLE public.seq_protocolo OWNER TO postgres;
+ALTER TABLE public.seq_protocolo OWNER TO sei_user;
 
 --
 -- Name: seq_protocolo_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3132,7 +3132,7 @@ CREATE SEQUENCE public.seq_protocolo_modelo
     CACHE 1;
 
 
-ALTER TABLE public.seq_protocolo_modelo OWNER TO postgres;
+ALTER TABLE public.seq_protocolo_modelo OWNER TO sei_user;
 
 --
 -- Name: seq_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3146,7 +3146,7 @@ CREATE SEQUENCE public.seq_publicacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_publicacao OWNER TO postgres;
+ALTER TABLE public.seq_publicacao OWNER TO sei_user;
 
 --
 -- Name: seq_rel_protocolo_protocolo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3160,7 +3160,7 @@ CREATE SEQUENCE public.seq_rel_protocolo_protocolo
     CACHE 1;
 
 
-ALTER TABLE public.seq_rel_protocolo_protocolo OWNER TO postgres;
+ALTER TABLE public.seq_rel_protocolo_protocolo OWNER TO sei_user;
 
 --
 -- Name: seq_rel_unidade_tipo_contato; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3174,7 +3174,7 @@ CREATE SEQUENCE public.seq_rel_unidade_tipo_contato
     CACHE 1;
 
 
-ALTER TABLE public.seq_rel_unidade_tipo_contato OWNER TO postgres;
+ALTER TABLE public.seq_rel_unidade_tipo_contato OWNER TO sei_user;
 
 --
 -- Name: seq_retorno_programado; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3188,7 +3188,7 @@ CREATE SEQUENCE public.seq_retorno_programado
     CACHE 1;
 
 
-ALTER TABLE public.seq_retorno_programado OWNER TO postgres;
+ALTER TABLE public.seq_retorno_programado OWNER TO sei_user;
 
 --
 -- Name: seq_secao_documento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3202,7 +3202,7 @@ CREATE SEQUENCE public.seq_secao_documento
     CACHE 1;
 
 
-ALTER TABLE public.seq_secao_documento OWNER TO postgres;
+ALTER TABLE public.seq_secao_documento OWNER TO sei_user;
 
 --
 -- Name: seq_secao_imprensa_nacional; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3216,7 +3216,7 @@ CREATE SEQUENCE public.seq_secao_imprensa_nacional
     CACHE 1;
 
 
-ALTER TABLE public.seq_secao_imprensa_nacional OWNER TO postgres;
+ALTER TABLE public.seq_secao_imprensa_nacional OWNER TO sei_user;
 
 --
 -- Name: seq_secao_modelo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3230,7 +3230,7 @@ CREATE SEQUENCE public.seq_secao_modelo
     CACHE 1;
 
 
-ALTER TABLE public.seq_secao_modelo OWNER TO postgres;
+ALTER TABLE public.seq_secao_modelo OWNER TO sei_user;
 
 --
 -- Name: seq_serie; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3244,7 +3244,7 @@ CREATE SEQUENCE public.seq_serie
     CACHE 1;
 
 
-ALTER TABLE public.seq_serie OWNER TO postgres;
+ALTER TABLE public.seq_serie OWNER TO sei_user;
 
 --
 -- Name: seq_serie_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3258,7 +3258,7 @@ CREATE SEQUENCE public.seq_serie_publicacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_serie_publicacao OWNER TO postgres;
+ALTER TABLE public.seq_serie_publicacao OWNER TO sei_user;
 
 --
 -- Name: seq_serie_restricao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3272,7 +3272,7 @@ CREATE SEQUENCE public.seq_serie_restricao
     CACHE 1;
 
 
-ALTER TABLE public.seq_serie_restricao OWNER TO postgres;
+ALTER TABLE public.seq_serie_restricao OWNER TO sei_user;
 
 --
 -- Name: seq_servico; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3286,7 +3286,7 @@ CREATE SEQUENCE public.seq_servico
     CACHE 1;
 
 
-ALTER TABLE public.seq_servico OWNER TO postgres;
+ALTER TABLE public.seq_servico OWNER TO sei_user;
 
 --
 -- Name: seq_situacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3300,7 +3300,7 @@ CREATE SEQUENCE public.seq_situacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_situacao OWNER TO postgres;
+ALTER TABLE public.seq_situacao OWNER TO sei_user;
 
 --
 -- Name: seq_tabela_assuntos; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3314,7 +3314,7 @@ CREATE SEQUENCE public.seq_tabela_assuntos
     CACHE 1;
 
 
-ALTER TABLE public.seq_tabela_assuntos OWNER TO postgres;
+ALTER TABLE public.seq_tabela_assuntos OWNER TO sei_user;
 
 --
 -- Name: seq_tarefa; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3328,7 +3328,7 @@ CREATE SEQUENCE public.seq_tarefa
     CACHE 1;
 
 
-ALTER TABLE public.seq_tarefa OWNER TO postgres;
+ALTER TABLE public.seq_tarefa OWNER TO sei_user;
 
 --
 -- Name: seq_tarja_assinatura; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3342,7 +3342,7 @@ CREATE SEQUENCE public.seq_tarja_assinatura
     CACHE 1;
 
 
-ALTER TABLE public.seq_tarja_assinatura OWNER TO postgres;
+ALTER TABLE public.seq_tarja_assinatura OWNER TO sei_user;
 
 --
 -- Name: seq_texto_padrao_interno; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3356,7 +3356,7 @@ CREATE SEQUENCE public.seq_texto_padrao_interno
     CACHE 1;
 
 
-ALTER TABLE public.seq_texto_padrao_interno OWNER TO postgres;
+ALTER TABLE public.seq_texto_padrao_interno OWNER TO sei_user;
 
 --
 -- Name: seq_tipo_conferencia; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3370,7 +3370,7 @@ CREATE SEQUENCE public.seq_tipo_conferencia
     CACHE 1;
 
 
-ALTER TABLE public.seq_tipo_conferencia OWNER TO postgres;
+ALTER TABLE public.seq_tipo_conferencia OWNER TO sei_user;
 
 --
 -- Name: seq_tipo_contato; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3384,7 +3384,7 @@ CREATE SEQUENCE public.seq_tipo_contato
     CACHE 1;
 
 
-ALTER TABLE public.seq_tipo_contato OWNER TO postgres;
+ALTER TABLE public.seq_tipo_contato OWNER TO sei_user;
 
 --
 -- Name: seq_tipo_formulario; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3398,7 +3398,7 @@ CREATE SEQUENCE public.seq_tipo_formulario
     CACHE 1;
 
 
-ALTER TABLE public.seq_tipo_formulario OWNER TO postgres;
+ALTER TABLE public.seq_tipo_formulario OWNER TO sei_user;
 
 --
 -- Name: seq_tipo_localizador; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3412,7 +3412,7 @@ CREATE SEQUENCE public.seq_tipo_localizador
     CACHE 1;
 
 
-ALTER TABLE public.seq_tipo_localizador OWNER TO postgres;
+ALTER TABLE public.seq_tipo_localizador OWNER TO sei_user;
 
 --
 -- Name: seq_tipo_proced_restricao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3426,7 +3426,7 @@ CREATE SEQUENCE public.seq_tipo_proced_restricao
     CACHE 1;
 
 
-ALTER TABLE public.seq_tipo_proced_restricao OWNER TO postgres;
+ALTER TABLE public.seq_tipo_proced_restricao OWNER TO sei_user;
 
 --
 -- Name: seq_tipo_procedimento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3440,7 +3440,7 @@ CREATE SEQUENCE public.seq_tipo_procedimento
     CACHE 1;
 
 
-ALTER TABLE public.seq_tipo_procedimento OWNER TO postgres;
+ALTER TABLE public.seq_tipo_procedimento OWNER TO sei_user;
 
 --
 -- Name: seq_tipo_suporte; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3454,7 +3454,7 @@ CREATE SEQUENCE public.seq_tipo_suporte
     CACHE 1;
 
 
-ALTER TABLE public.seq_tipo_suporte OWNER TO postgres;
+ALTER TABLE public.seq_tipo_suporte OWNER TO sei_user;
 
 --
 -- Name: seq_titulo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3468,7 +3468,7 @@ CREATE SEQUENCE public.seq_titulo
     CACHE 1;
 
 
-ALTER TABLE public.seq_titulo OWNER TO postgres;
+ALTER TABLE public.seq_titulo OWNER TO sei_user;
 
 --
 -- Name: seq_tratamento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3482,7 +3482,7 @@ CREATE SEQUENCE public.seq_tratamento
     CACHE 1;
 
 
-ALTER TABLE public.seq_tratamento OWNER TO postgres;
+ALTER TABLE public.seq_tratamento OWNER TO sei_user;
 
 --
 -- Name: seq_uf; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3496,7 +3496,7 @@ CREATE SEQUENCE public.seq_uf
     CACHE 1;
 
 
-ALTER TABLE public.seq_uf OWNER TO postgres;
+ALTER TABLE public.seq_uf OWNER TO sei_user;
 
 --
 -- Name: seq_unidade_historico; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3510,7 +3510,7 @@ CREATE SEQUENCE public.seq_unidade_historico
     CACHE 1;
 
 
-ALTER TABLE public.seq_unidade_historico OWNER TO postgres;
+ALTER TABLE public.seq_unidade_historico OWNER TO sei_user;
 
 --
 -- Name: seq_unidade_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3524,7 +3524,7 @@ CREATE SEQUENCE public.seq_unidade_publicacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_unidade_publicacao OWNER TO postgres;
+ALTER TABLE public.seq_unidade_publicacao OWNER TO sei_user;
 
 --
 -- Name: seq_upload; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3538,7 +3538,7 @@ CREATE SEQUENCE public.seq_upload
     CACHE 1;
 
 
-ALTER TABLE public.seq_upload OWNER TO postgres;
+ALTER TABLE public.seq_upload OWNER TO sei_user;
 
 --
 -- Name: seq_veiculo_imprensa_nacional; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3552,7 +3552,7 @@ CREATE SEQUENCE public.seq_veiculo_imprensa_nacional
     CACHE 1;
 
 
-ALTER TABLE public.seq_veiculo_imprensa_nacional OWNER TO postgres;
+ALTER TABLE public.seq_veiculo_imprensa_nacional OWNER TO sei_user;
 
 --
 -- Name: seq_veiculo_publicacao; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3566,7 +3566,7 @@ CREATE SEQUENCE public.seq_veiculo_publicacao
     CACHE 1;
 
 
-ALTER TABLE public.seq_veiculo_publicacao OWNER TO postgres;
+ALTER TABLE public.seq_veiculo_publicacao OWNER TO sei_user;
 
 --
 -- Name: seq_versao_secao_documento; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3580,7 +3580,7 @@ CREATE SEQUENCE public.seq_versao_secao_documento
     CACHE 1;
 
 
-ALTER TABLE public.seq_versao_secao_documento OWNER TO postgres;
+ALTER TABLE public.seq_versao_secao_documento OWNER TO sei_user;
 
 --
 -- Name: seq_vocativo; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -3594,7 +3594,7 @@ CREATE SEQUENCE public.seq_vocativo
     CACHE 1;
 
 
-ALTER TABLE public.seq_vocativo OWNER TO postgres;
+ALTER TABLE public.seq_vocativo OWNER TO sei_user;
 
 --
 -- Name: serie; Type: TABLE; Schema: public; Owner: postgres
@@ -3619,7 +3619,7 @@ CREATE TABLE public.serie (
 );
 
 
-ALTER TABLE public.serie OWNER TO postgres;
+ALTER TABLE public.serie OWNER TO sei_user;
 
 --
 -- Name: serie_escolha; Type: TABLE; Schema: public; Owner: postgres
@@ -3631,7 +3631,7 @@ CREATE TABLE public.serie_escolha (
 );
 
 
-ALTER TABLE public.serie_escolha OWNER TO postgres;
+ALTER TABLE public.serie_escolha OWNER TO sei_user;
 
 --
 -- Name: serie_publicacao; Type: TABLE; Schema: public; Owner: postgres
@@ -3644,7 +3644,7 @@ CREATE TABLE public.serie_publicacao (
 );
 
 
-ALTER TABLE public.serie_publicacao OWNER TO postgres;
+ALTER TABLE public.serie_publicacao OWNER TO sei_user;
 
 --
 -- Name: serie_restricao; Type: TABLE; Schema: public; Owner: postgres
@@ -3658,7 +3658,7 @@ CREATE TABLE public.serie_restricao (
 );
 
 
-ALTER TABLE public.serie_restricao OWNER TO postgres;
+ALTER TABLE public.serie_restricao OWNER TO sei_user;
 
 --
 -- Name: servico; Type: TABLE; Schema: public; Owner: postgres
@@ -3679,7 +3679,7 @@ CREATE TABLE public.servico (
 );
 
 
-ALTER TABLE public.servico OWNER TO postgres;
+ALTER TABLE public.servico OWNER TO sei_user;
 
 --
 -- Name: sinalizacao_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -3694,7 +3694,7 @@ CREATE TABLE public.sinalizacao_federacao (
 );
 
 
-ALTER TABLE public.sinalizacao_federacao OWNER TO postgres;
+ALTER TABLE public.sinalizacao_federacao OWNER TO sei_user;
 
 --
 -- Name: situacao; Type: TABLE; Schema: public; Owner: postgres
@@ -3708,7 +3708,7 @@ CREATE TABLE public.situacao (
 );
 
 
-ALTER TABLE public.situacao OWNER TO postgres;
+ALTER TABLE public.situacao OWNER TO sei_user;
 
 --
 -- Name: tabela_assuntos; Type: TABLE; Schema: public; Owner: postgres
@@ -3722,7 +3722,7 @@ CREATE TABLE public.tabela_assuntos (
 );
 
 
-ALTER TABLE public.tabela_assuntos OWNER TO postgres;
+ALTER TABLE public.tabela_assuntos OWNER TO sei_user;
 
 --
 -- Name: tarefa; Type: TABLE; Schema: public; Owner: postgres
@@ -3740,7 +3740,7 @@ CREATE TABLE public.tarefa (
 );
 
 
-ALTER TABLE public.tarefa OWNER TO postgres;
+ALTER TABLE public.tarefa OWNER TO sei_user;
 
 --
 -- Name: tarefa_instalacao; Type: TABLE; Schema: public; Owner: postgres
@@ -3752,7 +3752,7 @@ CREATE TABLE public.tarefa_instalacao (
 );
 
 
-ALTER TABLE public.tarefa_instalacao OWNER TO postgres;
+ALTER TABLE public.tarefa_instalacao OWNER TO sei_user;
 
 --
 -- Name: tarja_assinatura; Type: TABLE; Schema: public; Owner: postgres
@@ -3767,7 +3767,7 @@ CREATE TABLE public.tarja_assinatura (
 );
 
 
-ALTER TABLE public.tarja_assinatura OWNER TO postgres;
+ALTER TABLE public.tarja_assinatura OWNER TO sei_user;
 
 --
 -- Name: texto_padrao_interno; Type: TABLE; Schema: public; Owner: postgres
@@ -3783,7 +3783,7 @@ CREATE TABLE public.texto_padrao_interno (
 );
 
 
-ALTER TABLE public.texto_padrao_interno OWNER TO postgres;
+ALTER TABLE public.texto_padrao_interno OWNER TO sei_user;
 
 --
 -- Name: tipo_conferencia; Type: TABLE; Schema: public; Owner: postgres
@@ -3796,7 +3796,7 @@ CREATE TABLE public.tipo_conferencia (
 );
 
 
-ALTER TABLE public.tipo_conferencia OWNER TO postgres;
+ALTER TABLE public.tipo_conferencia OWNER TO sei_user;
 
 --
 -- Name: tipo_contato; Type: TABLE; Schema: public; Owner: postgres
@@ -3812,7 +3812,7 @@ CREATE TABLE public.tipo_contato (
 );
 
 
-ALTER TABLE public.tipo_contato OWNER TO postgres;
+ALTER TABLE public.tipo_contato OWNER TO sei_user;
 
 --
 -- Name: tipo_formulario; Type: TABLE; Schema: public; Owner: postgres
@@ -3826,7 +3826,7 @@ CREATE TABLE public.tipo_formulario (
 );
 
 
-ALTER TABLE public.tipo_formulario OWNER TO postgres;
+ALTER TABLE public.tipo_formulario OWNER TO sei_user;
 
 --
 -- Name: tipo_localizador; Type: TABLE; Schema: public; Owner: postgres
@@ -3842,7 +3842,7 @@ CREATE TABLE public.tipo_localizador (
 );
 
 
-ALTER TABLE public.tipo_localizador OWNER TO postgres;
+ALTER TABLE public.tipo_localizador OWNER TO sei_user;
 
 --
 -- Name: tipo_proced_restricao; Type: TABLE; Schema: public; Owner: postgres
@@ -3856,7 +3856,7 @@ CREATE TABLE public.tipo_proced_restricao (
 );
 
 
-ALTER TABLE public.tipo_proced_restricao OWNER TO postgres;
+ALTER TABLE public.tipo_proced_restricao OWNER TO sei_user;
 
 --
 -- Name: tipo_procedimento; Type: TABLE; Schema: public; Owner: postgres
@@ -3876,7 +3876,7 @@ CREATE TABLE public.tipo_procedimento (
 );
 
 
-ALTER TABLE public.tipo_procedimento OWNER TO postgres;
+ALTER TABLE public.tipo_procedimento OWNER TO sei_user;
 
 --
 -- Name: tipo_procedimento_escolha; Type: TABLE; Schema: public; Owner: postgres
@@ -3888,7 +3888,7 @@ CREATE TABLE public.tipo_procedimento_escolha (
 );
 
 
-ALTER TABLE public.tipo_procedimento_escolha OWNER TO postgres;
+ALTER TABLE public.tipo_procedimento_escolha OWNER TO sei_user;
 
 --
 -- Name: tipo_suporte; Type: TABLE; Schema: public; Owner: postgres
@@ -3901,7 +3901,7 @@ CREATE TABLE public.tipo_suporte (
 );
 
 
-ALTER TABLE public.tipo_suporte OWNER TO postgres;
+ALTER TABLE public.tipo_suporte OWNER TO sei_user;
 
 --
 -- Name: titulo; Type: TABLE; Schema: public; Owner: postgres
@@ -3915,7 +3915,7 @@ CREATE TABLE public.titulo (
 );
 
 
-ALTER TABLE public.titulo OWNER TO postgres;
+ALTER TABLE public.titulo OWNER TO sei_user;
 
 --
 -- Name: tratamento; Type: TABLE; Schema: public; Owner: postgres
@@ -3928,7 +3928,7 @@ CREATE TABLE public.tratamento (
 );
 
 
-ALTER TABLE public.tratamento OWNER TO postgres;
+ALTER TABLE public.tratamento OWNER TO sei_user;
 
 --
 -- Name: uf; Type: TABLE; Schema: public; Owner: postgres
@@ -3943,7 +3943,7 @@ CREATE TABLE public.uf (
 );
 
 
-ALTER TABLE public.uf OWNER TO postgres;
+ALTER TABLE public.uf OWNER TO sei_user;
 
 --
 -- Name: unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -3968,7 +3968,7 @@ CREATE TABLE public.unidade (
 );
 
 
-ALTER TABLE public.unidade OWNER TO postgres;
+ALTER TABLE public.unidade OWNER TO sei_user;
 
 --
 -- Name: unidade_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -3982,7 +3982,7 @@ CREATE TABLE public.unidade_federacao (
 );
 
 
-ALTER TABLE public.unidade_federacao OWNER TO postgres;
+ALTER TABLE public.unidade_federacao OWNER TO sei_user;
 
 --
 -- Name: unidade_historico; Type: TABLE; Schema: public; Owner: postgres
@@ -3999,7 +3999,7 @@ CREATE TABLE public.unidade_historico (
 );
 
 
-ALTER TABLE public.unidade_historico OWNER TO postgres;
+ALTER TABLE public.unidade_historico OWNER TO sei_user;
 
 --
 -- Name: unidade_publicacao; Type: TABLE; Schema: public; Owner: postgres
@@ -4011,7 +4011,7 @@ CREATE TABLE public.unidade_publicacao (
 );
 
 
-ALTER TABLE public.unidade_publicacao OWNER TO postgres;
+ALTER TABLE public.unidade_publicacao OWNER TO sei_user;
 
 --
 -- Name: usuario; Type: TABLE; Schema: public; Owner: postgres
@@ -4035,7 +4035,7 @@ CREATE TABLE public.usuario (
 );
 
 
-ALTER TABLE public.usuario OWNER TO postgres;
+ALTER TABLE public.usuario OWNER TO sei_user;
 
 --
 -- Name: usuario_federacao; Type: TABLE; Schema: public; Owner: postgres
@@ -4049,7 +4049,7 @@ CREATE TABLE public.usuario_federacao (
 );
 
 
-ALTER TABLE public.usuario_federacao OWNER TO postgres;
+ALTER TABLE public.usuario_federacao OWNER TO sei_user;
 
 --
 -- Name: veiculo_imprensa_nacional; Type: TABLE; Schema: public; Owner: postgres
@@ -4062,7 +4062,7 @@ CREATE TABLE public.veiculo_imprensa_nacional (
 );
 
 
-ALTER TABLE public.veiculo_imprensa_nacional OWNER TO postgres;
+ALTER TABLE public.veiculo_imprensa_nacional OWNER TO sei_user;
 
 --
 -- Name: veiculo_publicacao; Type: TABLE; Schema: public; Owner: postgres
@@ -4081,7 +4081,7 @@ CREATE TABLE public.veiculo_publicacao (
 );
 
 
-ALTER TABLE public.veiculo_publicacao OWNER TO postgres;
+ALTER TABLE public.veiculo_publicacao OWNER TO sei_user;
 
 --
 -- Name: velocidade_transferencia; Type: TABLE; Schema: public; Owner: postgres
@@ -4094,7 +4094,7 @@ CREATE TABLE public.velocidade_transferencia (
 );
 
 
-ALTER TABLE public.velocidade_transferencia OWNER TO postgres;
+ALTER TABLE public.velocidade_transferencia OWNER TO sei_user;
 
 --
 -- Name: versao_secao_documento; Type: TABLE; Schema: public; Owner: postgres
@@ -4112,7 +4112,7 @@ CREATE TABLE public.versao_secao_documento (
 );
 
 
-ALTER TABLE public.versao_secao_documento OWNER TO postgres;
+ALTER TABLE public.versao_secao_documento OWNER TO sei_user;
 
 --
 -- Name: vocativo; Type: TABLE; Schema: public; Owner: postgres
@@ -4125,7 +4125,7 @@ CREATE TABLE public.vocativo (
 );
 
 
-ALTER TABLE public.vocativo OWNER TO postgres;
+ALTER TABLE public.vocativo OWNER TO sei_user;
 
 --
 -- Data for Name: acao_federacao; Type: TABLE DATA; Schema: public; Owner: postgres

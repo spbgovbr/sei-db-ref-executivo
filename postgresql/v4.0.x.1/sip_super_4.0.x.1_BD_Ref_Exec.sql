@@ -30,7 +30,7 @@ CREATE TABLE public.administrador_sistema (
 );
 
 
-ALTER TABLE public.administrador_sistema OWNER TO postgres;
+ALTER TABLE public.administrador_sistema OWNER TO sip_user;
 
 --
 -- Name: codigo_acesso; Type: TABLE; Schema: public; Owner: postgres
@@ -55,7 +55,7 @@ CREATE TABLE public.codigo_acesso (
 );
 
 
-ALTER TABLE public.codigo_acesso OWNER TO postgres;
+ALTER TABLE public.codigo_acesso OWNER TO sip_user;
 
 --
 -- Name: codigo_bloqueio; Type: TABLE; Schema: public; Owner: postgres
@@ -71,7 +71,7 @@ CREATE TABLE public.codigo_bloqueio (
 );
 
 
-ALTER TABLE public.codigo_bloqueio OWNER TO postgres;
+ALTER TABLE public.codigo_bloqueio OWNER TO sip_user;
 
 --
 -- Name: coordenador_perfil; Type: TABLE; Schema: public; Owner: postgres
@@ -84,7 +84,7 @@ CREATE TABLE public.coordenador_perfil (
 );
 
 
-ALTER TABLE public.coordenador_perfil OWNER TO postgres;
+ALTER TABLE public.coordenador_perfil OWNER TO sip_user;
 
 --
 -- Name: coordenador_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -97,7 +97,7 @@ CREATE TABLE public.coordenador_unidade (
 );
 
 
-ALTER TABLE public.coordenador_unidade OWNER TO postgres;
+ALTER TABLE public.coordenador_unidade OWNER TO sip_user;
 
 --
 -- Name: dispositivo_acesso; Type: TABLE; Schema: public; Owner: postgres
@@ -116,7 +116,7 @@ CREATE TABLE public.dispositivo_acesso (
 );
 
 
-ALTER TABLE public.dispositivo_acesso OWNER TO postgres;
+ALTER TABLE public.dispositivo_acesso OWNER TO sip_user;
 
 --
 -- Name: email_sistema; Type: TABLE; Schema: public; Owner: postgres
@@ -134,7 +134,7 @@ CREATE TABLE public.email_sistema (
 );
 
 
-ALTER TABLE public.email_sistema OWNER TO postgres;
+ALTER TABLE public.email_sistema OWNER TO sip_user;
 
 --
 -- Name: hierarquia; Type: TABLE; Schema: public; Owner: postgres
@@ -150,7 +150,7 @@ CREATE TABLE public.hierarquia (
 );
 
 
-ALTER TABLE public.hierarquia OWNER TO postgres;
+ALTER TABLE public.hierarquia OWNER TO sip_user;
 
 --
 -- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: postgres
@@ -171,7 +171,7 @@ CREATE TABLE public.infra_agendamento_tarefa (
 );
 
 
-ALTER TABLE public.infra_agendamento_tarefa OWNER TO postgres;
+ALTER TABLE public.infra_agendamento_tarefa OWNER TO sip_user;
 
 --
 -- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: postgres
@@ -204,7 +204,7 @@ CREATE TABLE public.infra_auditoria (
 );
 
 
-ALTER TABLE public.infra_auditoria OWNER TO postgres;
+ALTER TABLE public.infra_auditoria OWNER TO sip_user;
 
 --
 -- Name: infra_log; Type: TABLE; Schema: public; Owner: postgres
@@ -219,7 +219,7 @@ CREATE TABLE public.infra_log (
 );
 
 
-ALTER TABLE public.infra_log OWNER TO postgres;
+ALTER TABLE public.infra_log OWNER TO sip_user;
 
 --
 -- Name: infra_parametro; Type: TABLE; Schema: public; Owner: postgres
@@ -231,7 +231,7 @@ CREATE TABLE public.infra_parametro (
 );
 
 
-ALTER TABLE public.infra_parametro OWNER TO postgres;
+ALTER TABLE public.infra_parametro OWNER TO sip_user;
 
 --
 -- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
@@ -244,7 +244,7 @@ CREATE TABLE public.infra_regra_auditoria (
 );
 
 
-ALTER TABLE public.infra_regra_auditoria OWNER TO postgres;
+ALTER TABLE public.infra_regra_auditoria OWNER TO sip_user;
 
 --
 -- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
@@ -256,7 +256,7 @@ CREATE TABLE public.infra_regra_auditoria_recurso (
 );
 
 
-ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO postgres;
+ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO sip_user;
 
 --
 -- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: postgres
@@ -270,7 +270,7 @@ CREATE TABLE public.infra_sequencia (
 );
 
 
-ALTER TABLE public.infra_sequencia OWNER TO postgres;
+ALTER TABLE public.infra_sequencia OWNER TO sip_user;
 
 --
 -- Name: item_menu; Type: TABLE; Schema: public; Owner: postgres
@@ -292,7 +292,7 @@ CREATE TABLE public.item_menu (
 );
 
 
-ALTER TABLE public.item_menu OWNER TO postgres;
+ALTER TABLE public.item_menu OWNER TO sip_user;
 
 --
 -- Name: login; Type: TABLE; Schema: public; Owner: postgres
@@ -317,7 +317,7 @@ CREATE TABLE public.login (
 );
 
 
-ALTER TABLE public.login OWNER TO postgres;
+ALTER TABLE public.login OWNER TO sip_user;
 
 --
 -- Name: menu; Type: TABLE; Schema: public; Owner: postgres
@@ -332,7 +332,7 @@ CREATE TABLE public.menu (
 );
 
 
-ALTER TABLE public.menu OWNER TO postgres;
+ALTER TABLE public.menu OWNER TO sip_user;
 
 --
 -- Name: orgao; Type: TABLE; Schema: public; Owner: postgres
@@ -348,7 +348,7 @@ CREATE TABLE public.orgao (
 );
 
 
-ALTER TABLE public.orgao OWNER TO postgres;
+ALTER TABLE public.orgao OWNER TO sip_user;
 
 --
 -- Name: perfil; Type: TABLE; Schema: public; Owner: postgres
@@ -364,7 +364,7 @@ CREATE TABLE public.perfil (
 );
 
 
-ALTER TABLE public.perfil OWNER TO postgres;
+ALTER TABLE public.perfil OWNER TO sip_user;
 
 --
 -- Name: permissao; Type: TABLE; Schema: public; Owner: postgres
@@ -382,7 +382,7 @@ CREATE TABLE public.permissao (
 );
 
 
-ALTER TABLE public.permissao OWNER TO postgres;
+ALTER TABLE public.permissao OWNER TO sip_user;
 
 --
 -- Name: recurso; Type: TABLE; Schema: public; Owner: postgres
@@ -398,7 +398,7 @@ CREATE TABLE public.recurso (
 );
 
 
-ALTER TABLE public.recurso OWNER TO postgres;
+ALTER TABLE public.recurso OWNER TO sip_user;
 
 --
 -- Name: recurso_vinculado; Type: TABLE; Schema: public; Owner: postgres
@@ -413,7 +413,7 @@ CREATE TABLE public.recurso_vinculado (
 );
 
 
-ALTER TABLE public.recurso_vinculado OWNER TO postgres;
+ALTER TABLE public.recurso_vinculado OWNER TO sip_user;
 
 --
 -- Name: regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
@@ -427,7 +427,7 @@ CREATE TABLE public.regra_auditoria (
 );
 
 
-ALTER TABLE public.regra_auditoria OWNER TO postgres;
+ALTER TABLE public.regra_auditoria OWNER TO sip_user;
 
 --
 -- Name: rel_hierarquia_unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -444,7 +444,7 @@ CREATE TABLE public.rel_hierarquia_unidade (
 );
 
 
-ALTER TABLE public.rel_hierarquia_unidade OWNER TO postgres;
+ALTER TABLE public.rel_hierarquia_unidade OWNER TO sip_user;
 
 --
 -- Name: rel_orgao_autenticacao; Type: TABLE; Schema: public; Owner: postgres
@@ -457,7 +457,7 @@ CREATE TABLE public.rel_orgao_autenticacao (
 );
 
 
-ALTER TABLE public.rel_orgao_autenticacao OWNER TO postgres;
+ALTER TABLE public.rel_orgao_autenticacao OWNER TO sip_user;
 
 --
 -- Name: rel_perfil_item_menu; Type: TABLE; Schema: public; Owner: postgres
@@ -472,7 +472,7 @@ CREATE TABLE public.rel_perfil_item_menu (
 );
 
 
-ALTER TABLE public.rel_perfil_item_menu OWNER TO postgres;
+ALTER TABLE public.rel_perfil_item_menu OWNER TO sip_user;
 
 --
 -- Name: rel_perfil_recurso; Type: TABLE; Schema: public; Owner: postgres
@@ -485,7 +485,7 @@ CREATE TABLE public.rel_perfil_recurso (
 );
 
 
-ALTER TABLE public.rel_perfil_recurso OWNER TO postgres;
+ALTER TABLE public.rel_perfil_recurso OWNER TO sip_user;
 
 --
 -- Name: rel_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
@@ -498,7 +498,7 @@ CREATE TABLE public.rel_regra_auditoria_recurso (
 );
 
 
-ALTER TABLE public.rel_regra_auditoria_recurso OWNER TO postgres;
+ALTER TABLE public.rel_regra_auditoria_recurso OWNER TO sip_user;
 
 --
 -- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -512,7 +512,7 @@ CREATE SEQUENCE public.seq_infra_auditoria
     CACHE 1;
 
 
-ALTER TABLE public.seq_infra_auditoria OWNER TO postgres;
+ALTER TABLE public.seq_infra_auditoria OWNER TO sip_user;
 
 --
 -- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -526,7 +526,7 @@ CREATE SEQUENCE public.seq_infra_log
     CACHE 1;
 
 
-ALTER TABLE public.seq_infra_log OWNER TO postgres;
+ALTER TABLE public.seq_infra_log OWNER TO sip_user;
 
 --
 -- Name: seq_usuario_historico; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -540,7 +540,7 @@ CREATE SEQUENCE public.seq_usuario_historico
     CACHE 1;
 
 
-ALTER TABLE public.seq_usuario_historico OWNER TO postgres;
+ALTER TABLE public.seq_usuario_historico OWNER TO sip_user;
 
 --
 -- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: postgres
@@ -562,7 +562,7 @@ CREATE TABLE public.servidor_autenticacao (
 );
 
 
-ALTER TABLE public.servidor_autenticacao OWNER TO postgres;
+ALTER TABLE public.servidor_autenticacao OWNER TO sip_user;
 
 --
 -- Name: sistema; Type: TABLE; Schema: public; Owner: postgres
@@ -586,7 +586,7 @@ CREATE TABLE public.sistema (
 );
 
 
-ALTER TABLE public.sistema OWNER TO postgres;
+ALTER TABLE public.sistema OWNER TO sip_user;
 
 --
 -- Name: tipo_permissao; Type: TABLE; Schema: public; Owner: postgres
@@ -598,7 +598,7 @@ CREATE TABLE public.tipo_permissao (
 );
 
 
-ALTER TABLE public.tipo_permissao OWNER TO postgres;
+ALTER TABLE public.tipo_permissao OWNER TO sip_user;
 
 --
 -- Name: unidade; Type: TABLE; Schema: public; Owner: postgres
@@ -615,7 +615,7 @@ CREATE TABLE public.unidade (
 );
 
 
-ALTER TABLE public.unidade OWNER TO postgres;
+ALTER TABLE public.unidade OWNER TO sip_user;
 
 --
 -- Name: usuario; Type: TABLE; Schema: public; Owner: postgres
@@ -636,7 +636,7 @@ CREATE TABLE public.usuario (
 );
 
 
-ALTER TABLE public.usuario OWNER TO postgres;
+ALTER TABLE public.usuario OWNER TO sip_user;
 
 --
 -- Name: usuario_historico; Type: TABLE; Schema: public; Owner: postgres
@@ -653,7 +653,7 @@ CREATE TABLE public.usuario_historico (
 );
 
 
-ALTER TABLE public.usuario_historico OWNER TO postgres;
+ALTER TABLE public.usuario_historico OWNER TO sip_user;
 
 --
 -- Data for Name: administrador_sistema; Type: TABLE DATA; Schema: public; Owner: postgres
