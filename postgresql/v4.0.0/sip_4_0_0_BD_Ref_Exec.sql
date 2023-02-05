@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: administrador_sistema; Type: TABLE; Schema: public; Owner: postgres
+-- Name: administrador_sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.administrador_sistema (
@@ -30,10 +30,10 @@ CREATE TABLE public.administrador_sistema (
 );
 
 
-ALTER TABLE public.administrador_sistema OWNER TO postgres;
+ALTER TABLE public.administrador_sistema OWNER TO sip_user;
 
 --
--- Name: codigo_acesso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: codigo_acesso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.codigo_acesso (
@@ -55,10 +55,10 @@ CREATE TABLE public.codigo_acesso (
 );
 
 
-ALTER TABLE public.codigo_acesso OWNER TO postgres;
+ALTER TABLE public.codigo_acesso OWNER TO sip_user;
 
 --
--- Name: codigo_bloqueio; Type: TABLE; Schema: public; Owner: postgres
+-- Name: codigo_bloqueio; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.codigo_bloqueio (
@@ -71,10 +71,10 @@ CREATE TABLE public.codigo_bloqueio (
 );
 
 
-ALTER TABLE public.codigo_bloqueio OWNER TO postgres;
+ALTER TABLE public.codigo_bloqueio OWNER TO sip_user;
 
 --
--- Name: coordenador_perfil; Type: TABLE; Schema: public; Owner: postgres
+-- Name: coordenador_perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.coordenador_perfil (
@@ -84,10 +84,10 @@ CREATE TABLE public.coordenador_perfil (
 );
 
 
-ALTER TABLE public.coordenador_perfil OWNER TO postgres;
+ALTER TABLE public.coordenador_perfil OWNER TO sip_user;
 
 --
--- Name: coordenador_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: coordenador_unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.coordenador_unidade (
@@ -97,10 +97,10 @@ CREATE TABLE public.coordenador_unidade (
 );
 
 
-ALTER TABLE public.coordenador_unidade OWNER TO postgres;
+ALTER TABLE public.coordenador_unidade OWNER TO sip_user;
 
 --
--- Name: dispositivo_acesso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: dispositivo_acesso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.dispositivo_acesso (
@@ -116,10 +116,10 @@ CREATE TABLE public.dispositivo_acesso (
 );
 
 
-ALTER TABLE public.dispositivo_acesso OWNER TO postgres;
+ALTER TABLE public.dispositivo_acesso OWNER TO sip_user;
 
 --
--- Name: email_sistema; Type: TABLE; Schema: public; Owner: postgres
+-- Name: email_sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.email_sistema (
@@ -134,10 +134,10 @@ CREATE TABLE public.email_sistema (
 );
 
 
-ALTER TABLE public.email_sistema OWNER TO postgres;
+ALTER TABLE public.email_sistema OWNER TO sip_user;
 
 --
--- Name: hierarquia; Type: TABLE; Schema: public; Owner: postgres
+-- Name: hierarquia; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.hierarquia (
@@ -150,10 +150,10 @@ CREATE TABLE public.hierarquia (
 );
 
 
-ALTER TABLE public.hierarquia OWNER TO postgres;
+ALTER TABLE public.hierarquia OWNER TO sip_user;
 
 --
--- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_agendamento_tarefa (
@@ -171,10 +171,10 @@ CREATE TABLE public.infra_agendamento_tarefa (
 );
 
 
-ALTER TABLE public.infra_agendamento_tarefa OWNER TO postgres;
+ALTER TABLE public.infra_agendamento_tarefa OWNER TO sip_user;
 
 --
--- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_auditoria (
@@ -204,10 +204,10 @@ CREATE TABLE public.infra_auditoria (
 );
 
 
-ALTER TABLE public.infra_auditoria OWNER TO postgres;
+ALTER TABLE public.infra_auditoria OWNER TO sip_user;
 
 --
--- Name: infra_log; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_log; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_log (
@@ -219,10 +219,10 @@ CREATE TABLE public.infra_log (
 );
 
 
-ALTER TABLE public.infra_log OWNER TO postgres;
+ALTER TABLE public.infra_log OWNER TO sip_user;
 
 --
--- Name: infra_parametro; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_parametro; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_parametro (
@@ -231,10 +231,10 @@ CREATE TABLE public.infra_parametro (
 );
 
 
-ALTER TABLE public.infra_parametro OWNER TO postgres;
+ALTER TABLE public.infra_parametro OWNER TO sip_user;
 
 --
--- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_regra_auditoria (
@@ -244,10 +244,10 @@ CREATE TABLE public.infra_regra_auditoria (
 );
 
 
-ALTER TABLE public.infra_regra_auditoria OWNER TO postgres;
+ALTER TABLE public.infra_regra_auditoria OWNER TO sip_user;
 
 --
--- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_regra_auditoria_recurso (
@@ -256,10 +256,10 @@ CREATE TABLE public.infra_regra_auditoria_recurso (
 );
 
 
-ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO postgres;
+ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO sip_user;
 
 --
--- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: postgres
+-- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_sequencia (
@@ -270,10 +270,10 @@ CREATE TABLE public.infra_sequencia (
 );
 
 
-ALTER TABLE public.infra_sequencia OWNER TO postgres;
+ALTER TABLE public.infra_sequencia OWNER TO sip_user;
 
 --
--- Name: item_menu; Type: TABLE; Schema: public; Owner: postgres
+-- Name: item_menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.item_menu (
@@ -292,10 +292,10 @@ CREATE TABLE public.item_menu (
 );
 
 
-ALTER TABLE public.item_menu OWNER TO postgres;
+ALTER TABLE public.item_menu OWNER TO sip_user;
 
 --
--- Name: login; Type: TABLE; Schema: public; Owner: postgres
+-- Name: login; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.login (
@@ -317,10 +317,10 @@ CREATE TABLE public.login (
 );
 
 
-ALTER TABLE public.login OWNER TO postgres;
+ALTER TABLE public.login OWNER TO sip_user;
 
 --
--- Name: menu; Type: TABLE; Schema: public; Owner: postgres
+-- Name: menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.menu (
@@ -332,10 +332,10 @@ CREATE TABLE public.menu (
 );
 
 
-ALTER TABLE public.menu OWNER TO postgres;
+ALTER TABLE public.menu OWNER TO sip_user;
 
 --
--- Name: orgao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: orgao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.orgao (
@@ -348,10 +348,10 @@ CREATE TABLE public.orgao (
 );
 
 
-ALTER TABLE public.orgao OWNER TO postgres;
+ALTER TABLE public.orgao OWNER TO sip_user;
 
 --
--- Name: perfil; Type: TABLE; Schema: public; Owner: postgres
+-- Name: perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.perfil (
@@ -364,10 +364,10 @@ CREATE TABLE public.perfil (
 );
 
 
-ALTER TABLE public.perfil OWNER TO postgres;
+ALTER TABLE public.perfil OWNER TO sip_user;
 
 --
--- Name: permissao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: permissao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.permissao (
@@ -382,10 +382,10 @@ CREATE TABLE public.permissao (
 );
 
 
-ALTER TABLE public.permissao OWNER TO postgres;
+ALTER TABLE public.permissao OWNER TO sip_user;
 
 --
--- Name: recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.recurso (
@@ -398,10 +398,10 @@ CREATE TABLE public.recurso (
 );
 
 
-ALTER TABLE public.recurso OWNER TO postgres;
+ALTER TABLE public.recurso OWNER TO sip_user;
 
 --
--- Name: recurso_vinculado; Type: TABLE; Schema: public; Owner: postgres
+-- Name: recurso_vinculado; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.recurso_vinculado (
@@ -413,10 +413,10 @@ CREATE TABLE public.recurso_vinculado (
 );
 
 
-ALTER TABLE public.recurso_vinculado OWNER TO postgres;
+ALTER TABLE public.recurso_vinculado OWNER TO sip_user;
 
 --
--- Name: regra_auditoria; Type: TABLE; Schema: public; Owner: postgres
+-- Name: regra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.regra_auditoria (
@@ -427,10 +427,10 @@ CREATE TABLE public.regra_auditoria (
 );
 
 
-ALTER TABLE public.regra_auditoria OWNER TO postgres;
+ALTER TABLE public.regra_auditoria OWNER TO sip_user;
 
 --
--- Name: rel_hierarquia_unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_hierarquia_unidade (
@@ -444,10 +444,10 @@ CREATE TABLE public.rel_hierarquia_unidade (
 );
 
 
-ALTER TABLE public.rel_hierarquia_unidade OWNER TO postgres;
+ALTER TABLE public.rel_hierarquia_unidade OWNER TO sip_user;
 
 --
--- Name: rel_orgao_autenticacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_orgao_autenticacao (
@@ -457,10 +457,10 @@ CREATE TABLE public.rel_orgao_autenticacao (
 );
 
 
-ALTER TABLE public.rel_orgao_autenticacao OWNER TO postgres;
+ALTER TABLE public.rel_orgao_autenticacao OWNER TO sip_user;
 
 --
--- Name: rel_perfil_item_menu; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_perfil_item_menu (
@@ -472,10 +472,10 @@ CREATE TABLE public.rel_perfil_item_menu (
 );
 
 
-ALTER TABLE public.rel_perfil_item_menu OWNER TO postgres;
+ALTER TABLE public.rel_perfil_item_menu OWNER TO sip_user;
 
 --
--- Name: rel_perfil_recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_perfil_recurso (
@@ -485,10 +485,10 @@ CREATE TABLE public.rel_perfil_recurso (
 );
 
 
-ALTER TABLE public.rel_perfil_recurso OWNER TO postgres;
+ALTER TABLE public.rel_perfil_recurso OWNER TO sip_user;
 
 --
--- Name: rel_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_regra_auditoria_recurso (
@@ -498,10 +498,10 @@ CREATE TABLE public.rel_regra_auditoria_recurso (
 );
 
 
-ALTER TABLE public.rel_regra_auditoria_recurso OWNER TO postgres;
+ALTER TABLE public.rel_regra_auditoria_recurso OWNER TO sip_user;
 
 --
--- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: sip_user
 --
 
 CREATE SEQUENCE public.seq_infra_auditoria
@@ -512,10 +512,10 @@ CREATE SEQUENCE public.seq_infra_auditoria
     CACHE 1;
 
 
-ALTER TABLE public.seq_infra_auditoria OWNER TO postgres;
+ALTER TABLE public.seq_infra_auditoria OWNER TO sip_user;
 
 --
--- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: sip_user
 --
 
 CREATE SEQUENCE public.seq_infra_log
@@ -526,10 +526,10 @@ CREATE SEQUENCE public.seq_infra_log
     CACHE 1;
 
 
-ALTER TABLE public.seq_infra_log OWNER TO postgres;
+ALTER TABLE public.seq_infra_log OWNER TO sip_user;
 
 --
--- Name: seq_usuario_historico; Type: SEQUENCE; Schema: public; Owner: postgres
+-- Name: seq_usuario_historico; Type: SEQUENCE; Schema: public; Owner: sip_user
 --
 
 CREATE SEQUENCE public.seq_usuario_historico
@@ -540,10 +540,10 @@ CREATE SEQUENCE public.seq_usuario_historico
     CACHE 1;
 
 
-ALTER TABLE public.seq_usuario_historico OWNER TO postgres;
+ALTER TABLE public.seq_usuario_historico OWNER TO sip_user;
 
 --
--- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.servidor_autenticacao (
@@ -562,10 +562,10 @@ CREATE TABLE public.servidor_autenticacao (
 );
 
 
-ALTER TABLE public.servidor_autenticacao OWNER TO postgres;
+ALTER TABLE public.servidor_autenticacao OWNER TO sip_user;
 
 --
--- Name: sistema; Type: TABLE; Schema: public; Owner: postgres
+-- Name: sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.sistema (
@@ -586,10 +586,10 @@ CREATE TABLE public.sistema (
 );
 
 
-ALTER TABLE public.sistema OWNER TO postgres;
+ALTER TABLE public.sistema OWNER TO sip_user;
 
 --
--- Name: tipo_permissao; Type: TABLE; Schema: public; Owner: postgres
+-- Name: tipo_permissao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.tipo_permissao (
@@ -598,10 +598,10 @@ CREATE TABLE public.tipo_permissao (
 );
 
 
-ALTER TABLE public.tipo_permissao OWNER TO postgres;
+ALTER TABLE public.tipo_permissao OWNER TO sip_user;
 
 --
--- Name: unidade; Type: TABLE; Schema: public; Owner: postgres
+-- Name: unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.unidade (
@@ -615,10 +615,10 @@ CREATE TABLE public.unidade (
 );
 
 
-ALTER TABLE public.unidade OWNER TO postgres;
+ALTER TABLE public.unidade OWNER TO sip_user;
 
 --
--- Name: usuario; Type: TABLE; Schema: public; Owner: postgres
+-- Name: usuario; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.usuario (
@@ -636,10 +636,10 @@ CREATE TABLE public.usuario (
 );
 
 
-ALTER TABLE public.usuario OWNER TO postgres;
+ALTER TABLE public.usuario OWNER TO sip_user;
 
 --
--- Name: usuario_historico; Type: TABLE; Schema: public; Owner: postgres
+-- Name: usuario_historico; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.usuario_historico (
@@ -653,10 +653,10 @@ CREATE TABLE public.usuario_historico (
 );
 
 
-ALTER TABLE public.usuario_historico OWNER TO postgres;
+ALTER TABLE public.usuario_historico OWNER TO sip_user;
 
 --
--- Data for Name: administrador_sistema; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: administrador_sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.administrador_sistema (id_usuario, id_sistema) FROM stdin;
@@ -666,7 +666,7 @@ COPY public.administrador_sistema (id_usuario, id_sistema) FROM stdin;
 
 
 --
--- Data for Name: codigo_acesso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: codigo_acesso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.codigo_acesso (id_codigo_acesso, id_usuario, id_usuario_desativacao, id_sistema, chave_geracao, dth_geracao, chave_ativacao, dth_envio_ativacao, dth_ativacao, chave_desativacao, dth_envio_desativacao, dth_desativacao, dth_acesso, email, sin_ativo) FROM stdin;
@@ -674,7 +674,7 @@ COPY public.codigo_acesso (id_codigo_acesso, id_usuario, id_usuario_desativacao,
 
 
 --
--- Data for Name: codigo_bloqueio; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: codigo_bloqueio; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.codigo_bloqueio (id_codigo_bloqueio, id_codigo_acesso, chave_bloqueio, dth_envio, dth_bloqueio, sin_ativo) FROM stdin;
@@ -682,7 +682,7 @@ COPY public.codigo_bloqueio (id_codigo_bloqueio, id_codigo_acesso, chave_bloquei
 
 
 --
--- Data for Name: coordenador_perfil; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: coordenador_perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.coordenador_perfil (id_perfil, id_usuario, id_sistema) FROM stdin;
@@ -690,7 +690,7 @@ COPY public.coordenador_perfil (id_perfil, id_usuario, id_sistema) FROM stdin;
 
 
 --
--- Data for Name: coordenador_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: coordenador_unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.coordenador_unidade (id_sistema, id_usuario, id_unidade) FROM stdin;
@@ -698,7 +698,7 @@ COPY public.coordenador_unidade (id_sistema, id_usuario, id_unidade) FROM stdin;
 
 
 --
--- Data for Name: dispositivo_acesso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: dispositivo_acesso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.dispositivo_acesso (id_dispositivo_acesso, id_codigo_acesso, chave_dispositivo, chave_acesso, dth_liberacao, user_agent, dth_acesso, ip_acesso, sin_ativo) FROM stdin;
@@ -706,7 +706,7 @@ COPY public.dispositivo_acesso (id_dispositivo_acesso, id_codigo_acesso, chave_d
 
 
 --
--- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, de, para, assunto, conteudo, descricao, sin_ativo) FROM stdin;
@@ -718,7 +718,7 @@ COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, de, para, 
 
 
 --
--- Data for Name: hierarquia; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: hierarquia; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.hierarquia (id_hierarquia, nome, descricao, dta_inicio, dta_fim, sin_ativo) FROM stdin;
@@ -727,7 +727,7 @@ COPY public.hierarquia (id_hierarquia, nome, descricao, dta_inicio, dta_fim, sin
 
 
 --
--- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_agendamento_tarefa (id_infra_agendamento_tarefa, descricao, comando, sta_periodicidade_execucao, periodicidade_complemento, dth_ultima_execucao, dth_ultima_conclusao, sin_sucesso, parametro, email_erro, sin_ativo) FROM stdin;
@@ -740,7 +740,7 @@ COPY public.infra_agendamento_tarefa (id_infra_agendamento_tarefa, descricao, co
 
 
 --
--- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, id_usuario_emulador, id_orgao_usuario_emulador, id_unidade, id_orgao_unidade, recurso, dth_acesso, ip, sigla_usuario, nome_usuario, sigla_orgao_usuario, sigla_usuario_emulador, nome_usuario_emulador, sigla_orgao_usuario_emulador, sigla_unidade, descricao_unidade, sigla_orgao_unidade, servidor, user_agent, requisicao, operacao) FROM stdin;
@@ -748,7 +748,7 @@ COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, i
 
 
 --
--- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdin;
@@ -756,7 +756,7 @@ COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdi
 
 
 --
--- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_parametro (nome, valor) FROM stdin;
@@ -784,7 +784,7 @@ SIP_VERSAO	3.0.0.1
 
 
 --
--- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativo) FROM stdin;
@@ -793,7 +793,7 @@ COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativ
 
 
 --
--- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FROM stdin;
@@ -882,7 +882,7 @@ COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FR
 
 
 --
--- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_sequencia (nome_tabela, qtd_incremento, num_atual, num_maximo) FROM stdin;
@@ -905,7 +905,7 @@ usuario	1	100000001	199999999
 
 
 --
--- Data for Name: item_menu; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: item_menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.item_menu (id_menu, id_item_menu, id_sistema, id_menu_pai, id_item_menu_pai, id_recurso, rotulo, descricao, sequencia, sin_ativo, sin_nova_janela, icone) FROM stdin;
@@ -1173,7 +1173,7 @@ COPY public.item_menu (id_menu, id_item_menu, id_sistema, id_menu_pai, id_item_m
 
 
 --
--- Data for Name: login; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: login; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.login (id_login, id_sistema, id_usuario, id_usuario_emulador, dth_login, hash_interno, hash_usuario, hash_agente, http_client_ip, remote_addr, http_x_forwarded_for, sta_login, user_agent, id_dispositivo_acesso, id_codigo_acesso) FROM stdin;
@@ -1183,7 +1183,7 @@ COPY public.login (id_login, id_sistema, id_usuario, id_usuario_emulador, dth_lo
 
 
 --
--- Data for Name: menu; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.menu (id_menu, id_sistema, nome, descricao, sin_ativo) FROM stdin;
@@ -1193,7 +1193,7 @@ COPY public.menu (id_menu, id_sistema, nome, descricao, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.orgao (id_orgao, sigla, descricao, sin_ativo, sin_autenticar, ordem) FROM stdin;
@@ -1202,7 +1202,7 @@ COPY public.orgao (id_orgao, sigla, descricao, sin_ativo, sin_autenticar, ordem)
 
 
 --
--- Data for Name: perfil; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.perfil (id_perfil, id_sistema, nome, descricao, sin_coordenado, sin_ativo) FROM stdin;
@@ -1225,7 +1225,7 @@ COPY public.perfil (id_perfil, id_sistema, nome, descricao, sin_coordenado, sin_
 
 
 --
--- Data for Name: permissao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: permissao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.permissao (id_perfil, id_sistema, id_usuario, id_unidade, id_tipo_permissao, dta_inicio, dta_fim, sin_subunidades) FROM stdin;
@@ -1241,7 +1241,7 @@ COPY public.permissao (id_perfil, id_sistema, id_usuario, id_unidade, id_tipo_pe
 
 
 --
--- Data for Name: recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo) FROM stdin;
@@ -2611,7 +2611,7 @@ COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo
 
 
 --
--- Data for Name: recurso_vinculado; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: recurso_vinculado; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.recurso_vinculado (id_sistema, id_recurso, id_sistema_vinculado, id_recurso_vinculado, tipo_vinculo) FROM stdin;
@@ -2619,7 +2619,7 @@ COPY public.recurso_vinculado (id_sistema, id_recurso, id_sistema_vinculado, id_
 
 
 --
--- Data for Name: regra_auditoria; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: regra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.regra_auditoria (id_regra_auditoria, id_sistema, descricao, sin_ativo) FROM stdin;
@@ -2632,7 +2632,7 @@ COPY public.regra_auditoria (id_regra_auditoria, id_sistema, descricao, sin_ativ
 
 
 --
--- Data for Name: rel_hierarquia_unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_hierarquia_unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_hierarquia_unidade (id_unidade, id_hierarquia, id_hierarquia_pai, id_unidade_pai, dta_inicio, dta_fim, sin_ativo) FROM stdin;
@@ -2643,7 +2643,7 @@ COPY public.rel_hierarquia_unidade (id_unidade, id_hierarquia, id_hierarquia_pai
 
 
 --
--- Data for Name: rel_orgao_autenticacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_orgao_autenticacao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_orgao_autenticacao (id_orgao, id_servidor_autenticacao, sequencia) FROM stdin;
@@ -2652,7 +2652,7 @@ COPY public.rel_orgao_autenticacao (id_orgao, id_servidor_autenticacao, sequenci
 
 
 --
--- Data for Name: rel_perfil_item_menu; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_perfil_item_menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, id_recurso) FROM stdin;
@@ -2927,7 +2927,7 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 
 
 --
--- Data for Name: rel_perfil_recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_perfil_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
@@ -5398,7 +5398,7 @@ COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
 
 
 --
--- Data for Name: rel_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: rel_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_regra_auditoria_recurso (id_recurso, id_sistema, id_regra_auditoria) FROM stdin;
@@ -5845,7 +5845,7 @@ COPY public.rel_regra_auditoria_recurso (id_recurso, id_sistema, id_regra_audito
 
 
 --
--- Data for Name: servidor_autenticacao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: servidor_autenticacao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.servidor_autenticacao (id_servidor_autenticacao, nome, sta_tipo, endereco, porta, sufixo, usuario_pesquisa, senha_pesquisa, contexto_pesquisa, atributo_filtro_pesquisa, atributo_retorno_pesquisa, versao) FROM stdin;
@@ -5855,7 +5855,7 @@ COPY public.servidor_autenticacao (id_servidor_autenticacao, nome, sta_tipo, end
 
 
 --
--- Data for Name: sistema; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.sistema (id_sistema, id_orgao, id_hierarquia, sigla, descricao, pagina_inicial, sin_ativo, web_service, logo, sta_2_fatores, esquema_login, servicos_liberados, chave_acesso, crc) FROM stdin;
@@ -5865,7 +5865,7 @@ COPY public.sistema (id_sistema, id_orgao, id_hierarquia, sigla, descricao, pagi
 
 
 --
--- Data for Name: tipo_permissao; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: tipo_permissao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.tipo_permissao (id_tipo_permissao, descricao) FROM stdin;
@@ -5876,7 +5876,7 @@ COPY public.tipo_permissao (id_tipo_permissao, descricao) FROM stdin;
 
 
 --
--- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.unidade (id_unidade, id_orgao, id_origem, sigla, descricao, sin_ativo, sin_global) FROM stdin;
@@ -5888,7 +5888,7 @@ COPY public.unidade (id_unidade, id_orgao, id_origem, sigla, descricao, sin_ativ
 
 
 --
--- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.usuario (id_usuario, id_orgao, id_origem, sigla, nome, sin_ativo, cpf, nome_registro_civil, nome_social, email, sin_bloqueado) FROM stdin;
@@ -5898,7 +5898,7 @@ COPY public.usuario (id_usuario, id_orgao, id_origem, sigla, nome, sin_ativo, cp
 
 
 --
--- Data for Name: usuario_historico; Type: TABLE DATA; Schema: public; Owner: postgres
+-- Data for Name: usuario_historico; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.usuario_historico (id_usuario_historico, id_codigo_acesso, id_usuario, id_usuario_operacao, dth_operacao, sta_operacao, motivo) FROM stdin;
@@ -5906,28 +5906,28 @@ COPY public.usuario_historico (id_usuario_historico, id_codigo_acesso, id_usuari
 
 
 --
--- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
 SELECT pg_catalog.setval('public.seq_infra_auditoria', 6, true);
 
 
 --
--- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
 SELECT pg_catalog.setval('public.seq_infra_log', 1, false);
 
 
 --
--- Name: seq_usuario_historico; Type: SEQUENCE SET; Schema: public; Owner: postgres
+-- Name: seq_usuario_historico; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
 SELECT pg_catalog.setval('public.seq_usuario_historico', 1, false);
 
 
 --
--- Name: administrador_sistema pk_administrador_sistema; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: administrador_sistema pk_administrador_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -5935,7 +5935,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: codigo_acesso pk_codigo_acesso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso pk_codigo_acesso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -5943,7 +5943,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_bloqueio pk_codigo_bloqueio; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_bloqueio pk_codigo_bloqueio; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_bloqueio
@@ -5951,7 +5951,7 @@ ALTER TABLE ONLY public.codigo_bloqueio
 
 
 --
--- Name: coordenador_perfil pk_coordenador_perfil; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_perfil pk_coordenador_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -5959,7 +5959,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_unidade pk_coordenador_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade pk_coordenador_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -5967,7 +5967,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: dispositivo_acesso pk_dispositivo_acesso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: dispositivo_acesso pk_dispositivo_acesso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.dispositivo_acesso
@@ -5975,7 +5975,7 @@ ALTER TABLE ONLY public.dispositivo_acesso
 
 
 --
--- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.email_sistema
@@ -5983,7 +5983,7 @@ ALTER TABLE ONLY public.email_sistema
 
 
 --
--- Name: hierarquia pk_hierarquia; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: hierarquia pk_hierarquia; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.hierarquia
@@ -5991,7 +5991,7 @@ ALTER TABLE ONLY public.hierarquia
 
 
 --
--- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_agendamento_tarefa
@@ -5999,7 +5999,7 @@ ALTER TABLE ONLY public.infra_agendamento_tarefa
 
 
 --
--- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_auditoria
@@ -6007,7 +6007,7 @@ ALTER TABLE ONLY public.infra_auditoria
 
 
 --
--- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_log
@@ -6015,7 +6015,7 @@ ALTER TABLE ONLY public.infra_log
 
 
 --
--- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_parametro
@@ -6023,7 +6023,7 @@ ALTER TABLE ONLY public.infra_parametro
 
 
 --
--- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria
@@ -6031,7 +6031,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria
 
 
 --
--- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -6039,7 +6039,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_sequencia
@@ -6047,7 +6047,7 @@ ALTER TABLE ONLY public.infra_sequencia
 
 
 --
--- Name: item_menu pk_item_menu; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu pk_item_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6055,7 +6055,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: login pk_login; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login pk_login; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6063,7 +6063,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: menu pk_menu; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: menu pk_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.menu
@@ -6071,7 +6071,7 @@ ALTER TABLE ONLY public.menu
 
 
 --
--- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.orgao
@@ -6079,7 +6079,7 @@ ALTER TABLE ONLY public.orgao
 
 
 --
--- Name: perfil pk_perfil; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: perfil pk_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.perfil
@@ -6087,7 +6087,7 @@ ALTER TABLE ONLY public.perfil
 
 
 --
--- Name: permissao pk_permissao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao pk_permissao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -6095,7 +6095,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: recurso pk_recurso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso pk_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso
@@ -6103,7 +6103,7 @@ ALTER TABLE ONLY public.recurso
 
 
 --
--- Name: recurso_vinculado pk_recurso_vinculado; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso_vinculado pk_recurso_vinculado; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -6111,7 +6111,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: regra_auditoria pk_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: regra_auditoria pk_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.regra_auditoria
@@ -6119,7 +6119,7 @@ ALTER TABLE ONLY public.regra_auditoria
 
 
 --
--- Name: rel_hierarquia_unidade pk_rel_hierarquia_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade pk_rel_hierarquia_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -6127,7 +6127,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_orgao_autenticacao pk_rel_orgao_autenticacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao pk_rel_orgao_autenticacao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -6135,7 +6135,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_perfil_item_menu pk_rel_perfil_item_menu; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu pk_rel_perfil_item_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -6143,7 +6143,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_recurso pk_rel_perfil_recurso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso pk_rel_perfil_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -6151,7 +6151,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: rel_regra_auditoria_recurso pk_rel_regra_auditoria_recurso; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso pk_rel_regra_auditoria_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -6159,7 +6159,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: servidor_autenticacao pk_servidor_autenticacao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: servidor_autenticacao pk_servidor_autenticacao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.servidor_autenticacao
@@ -6167,7 +6167,7 @@ ALTER TABLE ONLY public.servidor_autenticacao
 
 
 --
--- Name: sistema pk_sistema; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sistema pk_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -6175,7 +6175,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: tipo_permissao pk_tipo_permissao; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: tipo_permissao pk_tipo_permissao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.tipo_permissao
@@ -6183,7 +6183,7 @@ ALTER TABLE ONLY public.tipo_permissao
 
 
 --
--- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -6191,7 +6191,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -6199,7 +6199,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- Name: usuario_historico pk_usuario_historico; Type: CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico pk_usuario_historico; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -6207,602 +6207,602 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: ak_orgao_sigla; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_orgao_sigla; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_orgao_sigla ON public.orgao USING btree (sigla);
 
 
 --
--- Name: ak_perfil_nome; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_perfil_nome; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_perfil_nome ON public.perfil USING btree (id_sistema, nome);
 
 
 --
--- Name: ak_recurso_nome; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_recurso_nome; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_recurso_nome ON public.recurso USING btree (id_sistema, nome);
 
 
 --
--- Name: ak_sistema_sigla_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_sistema_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_sistema_sigla_orgao ON public.sistema USING btree (id_orgao, sigla);
 
 
 --
--- Name: ak_unidade_sigla_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_unidade_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_unidade_sigla_orgao ON public.unidade USING btree (id_orgao, sigla, sin_ativo);
 
 
 --
--- Name: ak_usuario_sigla_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: ak_usuario_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_usuario_sigla_orgao ON public.usuario USING btree (id_orgao, sigla, sin_ativo);
 
 
 --
--- Name: fk_admin_sistema_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_admin_sistema_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_admin_sistema_sistema ON public.administrador_sistema USING btree (id_sistema);
 
 
 --
--- Name: fk_admin_sistema_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_admin_sistema_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_admin_sistema_usuario ON public.administrador_sistema USING btree (id_usuario);
 
 
 --
--- Name: fk_auditoria_recurso_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_auditoria_recurso_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_auditoria_recurso_recurso ON public.rel_regra_auditoria_recurso USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_auditoria_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_auditoria_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_auditoria_sistema ON public.regra_auditoria USING btree (id_sistema);
 
 
 --
--- Name: fk_cod_acesso_usu_desativacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cod_acesso_usu_desativacao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_cod_acesso_usu_desativacao ON public.codigo_acesso USING btree (id_usuario_desativacao);
 
 
 --
--- Name: fk_cod_bloqueio_cod_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_cod_bloqueio_cod_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_cod_bloqueio_cod_acesso ON public.codigo_bloqueio USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_codigo_acesso_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_codigo_acesso_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_codigo_acesso_sistema ON public.codigo_acesso USING btree (id_sistema);
 
 
 --
--- Name: fk_codigo_acesso_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_codigo_acesso_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_codigo_acesso_usuario ON public.codigo_acesso USING btree (id_usuario);
 
 
 --
--- Name: fk_coordenador_perfil_perfil; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_perfil_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_perfil_perfil ON public.coordenador_perfil USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_coordenador_perfil_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_perfil_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_perfil_usuario ON public.coordenador_perfil USING btree (id_usuario);
 
 
 --
--- Name: fk_coordenador_unidade_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_unidade_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_sistema ON public.coordenador_unidade USING btree (id_sistema);
 
 
 --
--- Name: fk_coordenador_unidade_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_unidade_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_unidade ON public.coordenador_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_coordenador_unidade_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_coordenador_unidade_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_usuario ON public.coordenador_unidade USING btree (id_usuario);
 
 
 --
--- Name: fk_disp_acesso_cod_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_disp_acesso_cod_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_disp_acesso_cod_acesso ON public.dispositivo_acesso USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_inf_reg_aud_rec_inf_reg_aud ON public.infra_regra_auditoria_recurso USING btree (id_infra_regra_auditoria);
 
 
 --
--- Name: fk_item_menu_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_item_menu_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_item_menu ON public.item_menu USING btree (id_item_menu_pai, id_menu_pai);
 
 
 --
--- Name: fk_item_menu_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_item_menu_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_menu ON public.item_menu USING btree (id_menu);
 
 
 --
--- Name: fk_item_menu_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_item_menu_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_recurso ON public.item_menu USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_login_codigo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_codigo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_codigo_acesso ON public.login USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_login_dispositivo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_dispositivo_acesso ON public.login USING btree (id_dispositivo_acesso);
 
 
 --
--- Name: fk_login_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_sistema ON public.login USING btree (id_sistema);
 
 
 --
--- Name: fk_login_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_usuario ON public.login USING btree (id_usuario);
 
 
 --
--- Name: fk_login_usuario_emulador; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_login_usuario_emulador; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_usuario_emulador ON public.login USING btree (id_usuario_emulador);
 
 
 --
--- Name: fk_menu_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_menu_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_menu_sistema ON public.menu USING btree (id_sistema);
 
 
 --
--- Name: fk_perfil_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_perfil_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_perfil_sistema ON public.perfil USING btree (id_sistema);
 
 
 --
--- Name: fk_permissao_perfil; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_perfil ON public.permissao USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_permissao_tipo_permissao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_tipo_permissao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_tipo_permissao ON public.permissao USING btree (id_tipo_permissao);
 
 
 --
--- Name: fk_permissao_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_unidade ON public.permissao USING btree (id_unidade);
 
 
 --
--- Name: fk_permissao_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_permissao_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_usuario ON public.permissao USING btree (id_usuario);
 
 
 --
--- Name: fk_recurso_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_recurso_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_sistema ON public.recurso USING btree (id_sistema);
 
 
 --
--- Name: fk_recurso_vinculado_recurso_1; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_recurso_vinculado_recurso_1; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_vinculado_recurso_1 ON public.recurso_vinculado USING btree (id_recurso_vinculado, id_sistema_vinculado);
 
 
 --
--- Name: fk_recurso_vinculado_recurso_2; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_recurso_vinculado_recurso_2; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_vinculado_recurso_2 ON public.recurso_vinculado USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_rel_auditoria_recurso_audit; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_auditoria_recurso_audit; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_auditoria_recurso_audit ON public.rel_regra_auditoria_recurso USING btree (id_regra_auditoria);
 
 
 --
--- Name: fk_rel_hie_uni_hierarquia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_hie_uni_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_hierarquia ON public.rel_hierarquia_unidade USING btree (id_hierarquia);
 
 
 --
--- Name: fk_rel_hie_uni_rel_hie_uni; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_hie_uni_rel_hie_uni; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_rel_hie_uni ON public.rel_hierarquia_unidade USING btree (id_hierarquia_pai, id_unidade_pai);
 
 
 --
--- Name: fk_rel_hie_uni_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_hie_uni_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_unidade ON public.rel_hierarquia_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_orgao_aut_autenticacao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_orgao_aut_autenticacao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_orgao_aut_autenticacao ON public.rel_orgao_autenticacao USING btree (id_servidor_autenticacao);
 
 
 --
--- Name: fk_rel_orgao_aut_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_orgao_aut_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_orgao_aut_orgao ON public.rel_orgao_autenticacao USING btree (id_orgao);
 
 
 --
--- Name: fk_rel_per_ite_men_rel_per_rec; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_per_ite_men_rel_per_rec; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_per_ite_men_rel_per_rec ON public.rel_perfil_item_menu USING btree (id_perfil, id_recurso, id_sistema);
 
 
 --
--- Name: fk_rel_perfil_item_menu_it_men; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_perfil_item_menu_it_men; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_item_menu_it_men ON public.rel_perfil_item_menu USING btree (id_item_menu, id_menu);
 
 
 --
--- Name: fk_rel_perfil_recurso_perfil; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_perfil_recurso_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_recurso_perfil ON public.rel_perfil_recurso USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_rel_perfil_recurso_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_rel_perfil_recurso_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_recurso_recurso ON public.rel_perfil_recurso USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_sistema_hierarquia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_sistema_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_sistema_hierarquia ON public.sistema USING btree (id_hierarquia);
 
 
 --
--- Name: fk_sistema_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_sistema_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_sistema_orgao ON public.sistema USING btree (id_orgao);
 
 
 --
--- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_unidade_orgao ON public.unidade USING btree (id_orgao);
 
 
 --
--- Name: fk_usuario_historico_cod_acess; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_historico_cod_acess; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_cod_acess ON public.usuario_historico USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_usuario_historico_usu_oper; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_historico_usu_oper; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_usu_oper ON public.usuario_historico USING btree (id_usuario_operacao);
 
 
 --
--- Name: fk_usuario_historico_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_historico_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_usuario ON public.usuario_historico USING btree (id_usuario);
 
 
 --
--- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_orgao ON public.usuario USING btree (id_orgao);
 
 
 --
--- Name: i01_codigo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_codigo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_codigo_acesso ON public.codigo_acesso USING btree (dth_ativacao);
 
 
 --
--- Name: i01_codigo_bloqueio; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_codigo_bloqueio; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_codigo_bloqueio ON public.codigo_bloqueio USING btree (dth_envio);
 
 
 --
--- Name: i01_dispositivo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_dispositivo_acesso ON public.dispositivo_acesso USING btree (dth_acesso);
 
 
 --
--- Name: i01_hierarquia; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i01_hierarquia ON public.hierarquia USING btree (id_hierarquia, sin_ativo);
 
 
 --
--- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_infra_auditoria ON public.infra_auditoria USING btree (recurso);
 
 
 --
--- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_infra_log ON public.infra_log USING btree (dth_log, sta_tipo);
 
 
 --
--- Name: i01_orgao; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i01_orgao ON public.orgao USING btree (id_orgao, sin_ativo);
 
 
 --
--- Name: i01_rel_perfil_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i01_rel_perfil_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_rel_perfil_item_menu ON public.rel_perfil_item_menu USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: i02_dispositivo_acesso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i02_dispositivo_acesso ON public.dispositivo_acesso USING btree (dth_liberacao);
 
 
 --
--- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i02_infra_auditoria ON public.infra_auditoria USING btree (dth_acesso);
 
 
 --
--- Name: i02_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_menu ON public.menu USING btree (id_menu, sin_ativo);
 
 
 --
--- Name: i02_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_recurso ON public.recurso USING btree (id_recurso, id_sistema, sin_ativo);
 
 
 --
--- Name: i02_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_unidade ON public.unidade USING btree (id_unidade, sin_ativo);
 
 
 --
--- Name: i02_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i02_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_usuario ON public.usuario USING btree (id_usuario, sin_ativo);
 
 
 --
--- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_infra_auditoria ON public.infra_auditoria USING btree (sigla_usuario);
 
 
 --
--- Name: i03_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_recurso ON public.recurso USING btree (id_recurso, id_sistema, nome, sin_ativo);
 
 
 --
--- Name: i03_sistema; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i03_sistema ON public.sistema USING btree (id_sistema, sin_ativo);
 
 
 --
--- Name: i03_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i03_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_usuario ON public.usuario USING btree (id_origem);
 
 
 --
--- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_infra_auditoria ON public.infra_auditoria USING btree (sigla_unidade);
 
 
 --
--- Name: i04_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i04_item_menu ON public.item_menu USING btree (id_item_menu, id_menu, sin_ativo);
 
 
 --
--- Name: i04_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_login ON public.login USING btree (id_login, id_sistema, id_usuario, sta_login);
 
 
 --
--- Name: i04_recurso; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_recurso ON public.recurso USING btree (id_recurso, sin_ativo);
 
 
 --
--- Name: i04_rel_hierarquia_unidade; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_rel_hierarquia_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i04_rel_hierarquia_unidade ON public.rel_hierarquia_unidade USING btree (id_hierarquia, id_unidade, sin_ativo);
 
 
 --
--- Name: i04_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i04_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_usuario ON public.usuario USING btree (cpf);
 
 
 --
--- Name: i05_item_menu; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_item_menu ON public.item_menu USING btree (id_recurso);
 
 
 --
--- Name: i05_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_login ON public.login USING btree (id_login, id_sistema, id_usuario, dth_login);
 
 
 --
--- Name: i05_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i05_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_usuario ON public.usuario USING btree (id_usuario, id_orgao, id_origem);
 
 
 --
--- Name: i06_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i06_login ON public.login USING btree (hash_usuario, dth_login, sta_login);
 
 
 --
--- Name: i06_usuario; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i06_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i06_usuario ON public.usuario USING btree (id_usuario, id_orgao, cpf);
 
 
 --
--- Name: i07_login; Type: INDEX; Schema: public; Owner: postgres
+-- Name: i07_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i07_login ON public.login USING btree (dth_login);
 
 
 --
--- Name: administrador_sistema fk_admin_sistema_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: administrador_sistema fk_admin_sistema_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -6810,7 +6810,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: administrador_sistema fk_admin_sistema_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: administrador_sistema fk_admin_sistema_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -6818,7 +6818,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: rel_regra_auditoria_recurso fk_auditoria_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso fk_auditoria_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -6826,7 +6826,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: regra_auditoria fk_auditoria_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: regra_auditoria fk_auditoria_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.regra_auditoria
@@ -6834,7 +6834,7 @@ ALTER TABLE ONLY public.regra_auditoria
 
 
 --
--- Name: codigo_acesso fk_cod_acesso_usu_desativacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso fk_cod_acesso_usu_desativacao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -6842,7 +6842,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_bloqueio fk_cod_bloqueio_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_bloqueio fk_cod_bloqueio_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_bloqueio
@@ -6850,7 +6850,7 @@ ALTER TABLE ONLY public.codigo_bloqueio
 
 
 --
--- Name: codigo_acesso fk_codigo_acesso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso fk_codigo_acesso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -6858,7 +6858,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_acesso fk_codigo_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: codigo_acesso fk_codigo_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -6866,7 +6866,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: coordenador_perfil fk_coordenador_perfil_perfil; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_perfil fk_coordenador_perfil_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -6874,7 +6874,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_perfil fk_coordenador_perfil_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_perfil fk_coordenador_perfil_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -6882,7 +6882,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade fk_coordenador_unidade_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -6890,7 +6890,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade fk_coordenador_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -6898,7 +6898,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: coordenador_unidade fk_coordenador_unidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -6906,7 +6906,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: dispositivo_acesso fk_disp_acesso_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: dispositivo_acesso fk_disp_acesso_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.dispositivo_acesso
@@ -6914,7 +6914,7 @@ ALTER TABLE ONLY public.dispositivo_acesso
 
 
 --
--- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -6922,7 +6922,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: item_menu fk_item_menu_item_menu; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu fk_item_menu_item_menu; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6930,7 +6930,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: item_menu fk_item_menu_menu; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu fk_item_menu_menu; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6938,7 +6938,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: item_menu fk_item_menu_recurso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: item_menu fk_item_menu_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6946,7 +6946,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: login fk_login_codigo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_codigo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6954,7 +6954,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_dispositivo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_dispositivo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6962,7 +6962,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6970,7 +6970,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6978,7 +6978,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_usuario_emulador; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: login fk_login_usuario_emulador; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6986,7 +6986,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: menu fk_menu_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: menu fk_menu_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.menu
@@ -6994,7 +6994,7 @@ ALTER TABLE ONLY public.menu
 
 
 --
--- Name: perfil fk_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: perfil fk_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.perfil
@@ -7002,7 +7002,7 @@ ALTER TABLE ONLY public.perfil
 
 
 --
--- Name: permissao fk_permissao_perfil; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7010,7 +7010,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_tipo_permissao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_tipo_permissao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7018,7 +7018,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7026,7 +7026,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: permissao fk_permissao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7034,7 +7034,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: recurso fk_recurso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso fk_recurso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso
@@ -7042,7 +7042,7 @@ ALTER TABLE ONLY public.recurso
 
 
 --
--- Name: recurso_vinculado fk_recurso_vinculado_recurso_1; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso_vinculado fk_recurso_vinculado_recurso_1; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -7050,7 +7050,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: recurso_vinculado fk_recurso_vinculado_recurso_2; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: recurso_vinculado fk_recurso_vinculado_recurso_2; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -7058,7 +7058,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: rel_regra_auditoria_recurso fk_rel_auditoria_recurso_audit; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_regra_auditoria_recurso fk_rel_auditoria_recurso_audit; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -7066,7 +7066,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7074,7 +7074,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_rel_hie_uni; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_rel_hie_uni; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7082,7 +7082,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7090,7 +7090,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_orgao_autenticacao fk_rel_orgao_aut_autenticacao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao fk_rel_orgao_aut_autenticacao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -7098,7 +7098,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_orgao_autenticacao fk_rel_orgao_aut_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_orgao_autenticacao fk_rel_orgao_aut_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -7106,7 +7106,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_perfil_item_menu fk_rel_per_ite_men_rel_per_rec; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu fk_rel_per_ite_men_rel_per_rec; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -7114,7 +7114,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_item_menu fk_rel_perfil_item_menu_it_men; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_item_menu fk_rel_perfil_item_menu_it_men; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -7122,7 +7122,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_recurso fk_rel_perfil_recurso_perfil; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso fk_rel_perfil_recurso_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -7130,7 +7130,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: rel_perfil_recurso fk_rel_perfil_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: rel_perfil_recurso fk_rel_perfil_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -7138,7 +7138,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: sistema fk_sistema_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sistema fk_sistema_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -7146,7 +7146,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: sistema fk_sistema_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: sistema fk_sistema_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -7154,7 +7154,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -7162,7 +7162,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: usuario_historico fk_usuario_historico_cod_acess; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico fk_usuario_historico_cod_acess; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7170,7 +7170,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario_historico fk_usuario_historico_usu_oper; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico fk_usuario_historico_usu_oper; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7178,7 +7178,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario_historico fk_usuario_historico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario_historico fk_usuario_historico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7186,7 +7186,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: postgres
+-- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -7201,266 +7201,266 @@ GRANT ALL ON SCHEMA public TO sip_user;
 
 
 --
--- Name: TABLE administrador_sistema; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE administrador_sistema; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.administrador_sistema TO sip_user;
 
 
 --
--- Name: TABLE codigo_acesso; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE codigo_acesso; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.codigo_acesso TO sip_user;
 
 
 --
--- Name: TABLE codigo_bloqueio; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE codigo_bloqueio; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.codigo_bloqueio TO sip_user;
 
 
 --
--- Name: TABLE coordenador_perfil; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE coordenador_perfil; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.coordenador_perfil TO sip_user;
 
 
 --
--- Name: TABLE coordenador_unidade; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE coordenador_unidade; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.coordenador_unidade TO sip_user;
 
 
 --
--- Name: TABLE dispositivo_acesso; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE dispositivo_acesso; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.dispositivo_acesso TO sip_user;
 
 
 --
--- Name: TABLE email_sistema; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE email_sistema; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.email_sistema TO sip_user;
 
 
 --
--- Name: TABLE hierarquia; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE hierarquia; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.hierarquia TO sip_user;
 
 
 --
--- Name: TABLE infra_agendamento_tarefa; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE infra_agendamento_tarefa; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.infra_agendamento_tarefa TO sip_user;
 
 
 --
--- Name: TABLE infra_auditoria; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE infra_auditoria; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.infra_auditoria TO sip_user;
 
 
 --
--- Name: TABLE infra_log; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE infra_log; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.infra_log TO sip_user;
 
 
 --
--- Name: TABLE infra_parametro; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE infra_parametro; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.infra_parametro TO sip_user;
 
 
 --
--- Name: TABLE infra_regra_auditoria; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE infra_regra_auditoria; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.infra_regra_auditoria TO sip_user;
 
 
 --
--- Name: TABLE infra_regra_auditoria_recurso; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE infra_regra_auditoria_recurso; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.infra_regra_auditoria_recurso TO sip_user;
 
 
 --
--- Name: TABLE infra_sequencia; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE infra_sequencia; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.infra_sequencia TO sip_user;
 
 
 --
--- Name: TABLE item_menu; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE item_menu; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.item_menu TO sip_user;
 
 
 --
--- Name: TABLE login; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE login; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.login TO sip_user;
 
 
 --
--- Name: TABLE menu; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE menu; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.menu TO sip_user;
 
 
 --
--- Name: TABLE orgao; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE orgao; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.orgao TO sip_user;
 
 
 --
--- Name: TABLE perfil; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE perfil; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.perfil TO sip_user;
 
 
 --
--- Name: TABLE permissao; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE permissao; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.permissao TO sip_user;
 
 
 --
--- Name: TABLE recurso; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE recurso; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.recurso TO sip_user;
 
 
 --
--- Name: TABLE recurso_vinculado; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE recurso_vinculado; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.recurso_vinculado TO sip_user;
 
 
 --
--- Name: TABLE regra_auditoria; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE regra_auditoria; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.regra_auditoria TO sip_user;
 
 
 --
--- Name: TABLE rel_hierarquia_unidade; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE rel_hierarquia_unidade; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.rel_hierarquia_unidade TO sip_user;
 
 
 --
--- Name: TABLE rel_orgao_autenticacao; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE rel_orgao_autenticacao; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.rel_orgao_autenticacao TO sip_user;
 
 
 --
--- Name: TABLE rel_perfil_item_menu; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE rel_perfil_item_menu; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.rel_perfil_item_menu TO sip_user;
 
 
 --
--- Name: TABLE rel_perfil_recurso; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE rel_perfil_recurso; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.rel_perfil_recurso TO sip_user;
 
 
 --
--- Name: TABLE rel_regra_auditoria_recurso; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE rel_regra_auditoria_recurso; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.rel_regra_auditoria_recurso TO sip_user;
 
 
 --
--- Name: SEQUENCE seq_infra_auditoria; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE seq_infra_auditoria; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON SEQUENCE public.seq_infra_auditoria TO sip_user;
 
 
 --
--- Name: SEQUENCE seq_infra_log; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE seq_infra_log; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON SEQUENCE public.seq_infra_log TO sip_user;
 
 
 --
--- Name: SEQUENCE seq_usuario_historico; Type: ACL; Schema: public; Owner: postgres
+-- Name: SEQUENCE seq_usuario_historico; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON SEQUENCE public.seq_usuario_historico TO sip_user;
 
 
 --
--- Name: TABLE servidor_autenticacao; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE servidor_autenticacao; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.servidor_autenticacao TO sip_user;
 
 
 --
--- Name: TABLE sistema; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE sistema; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.sistema TO sip_user;
 
 
 --
--- Name: TABLE tipo_permissao; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE tipo_permissao; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.tipo_permissao TO sip_user;
 
 
 --
--- Name: TABLE unidade; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE unidade; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.unidade TO sip_user;
 
 
 --
--- Name: TABLE usuario; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE usuario; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.usuario TO sip_user;
 
 
 --
--- Name: TABLE usuario_historico; Type: ACL; Schema: public; Owner: postgres
+-- Name: TABLE usuario_historico; Type: ACL; Schema: public; Owner: sip_user
 --
 
 GRANT ALL ON TABLE public.usuario_historico TO sip_user;
