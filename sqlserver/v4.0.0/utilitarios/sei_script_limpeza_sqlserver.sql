@@ -222,18 +222,7 @@ delete from rel_usuario_usuario_unidade;
 
 delete from replicacao_federacao;
 
-delete from serie_restricao;
-delete from seq_serie_restricao;
-
 delete from sinalizacao_federacao;
-
-delete from tipo_formulario;
-delete from seq_tipo_formulario;
-
-delete from tipo_localizador;
-
-delete from tipo_proced_restricao;
-delete from seq_tipo_proced_restricao;
 
 delete from unidade_federacao;
 

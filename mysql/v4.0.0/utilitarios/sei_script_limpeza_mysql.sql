@@ -218,18 +218,7 @@ truncate table rel_usuario_usuario_unidade;
 
 truncate table replicacao_federacao;
 
-truncate table serie_restricao;
-truncate table seq_serie_restricao;
-
 truncate table sinalizacao_federacao;
-
-truncate table tipo_formulario;
-truncate table seq_tipo_formulario;
-
-truncate table tipo_localizador;
-
-truncate table tipo_proced_restricao;
-truncate table seq_tipo_proced_restricao;
 
 truncate table unidade_federacao;
 

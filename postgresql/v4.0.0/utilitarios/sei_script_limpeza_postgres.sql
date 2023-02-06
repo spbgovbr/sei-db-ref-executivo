@@ -243,18 +243,7 @@ delete from rel_usuario_usuario_unidade;
 
 delete from replicacao_federacao;
 
-delete from serie_restricao;
-select setval('seq_serie_restricao',1);
-
 delete from sinalizacao_federacao;
-
-delete from tipo_formulario;
-select setval('seq_tipo_formulario',1);
-
-delete from tipo_localizador;
-
-delete from tipo_proced_restricao;
-select setval('seq_tipo_proced_restricao',1);
 
 delete from unidade_federacao;
 

@@ -256,18 +256,7 @@ truncate table rel_usuario_usuario_unidade;
 
 truncate table replicacao_federacao;
 
-truncate table serie_restricao;
-exec reset_seq('sei_esquema.seq_serie_restricao');
-
 truncate table sinalizacao_federacao;
-
-truncate table tipo_formulario;
-exec reset_seq('sei_esquema.seq_tipo_formulario');
-
-truncate table tipo_localizador;
-
-truncate table tipo_proced_restricao;
-exec reset_seq('sei_esquema.seq_tipo_proced_restricao');
 
 truncate table unidade_federacao;
 
