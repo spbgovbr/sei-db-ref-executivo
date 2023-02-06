@@ -225,9 +225,6 @@ delete from replicacao_federacao;
 
 delete from sinalizacao_federacao;
 
-delete from tipo_proced_restricao;
-delete from seq_tipo_proced_restricao;
-
 delete from unidade_federacao;
 
 delete from usuario_federacao;

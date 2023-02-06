@@ -222,10 +222,6 @@ truncate table replicacao_federacao;
 
 truncate table sinalizacao_federacao;
 
-truncate table tipo_proced_restricao;
-
-truncate table seq_tipo_proced_restricao;
-
 truncate table unidade_federacao;
 
 truncate table usuario_federacao;

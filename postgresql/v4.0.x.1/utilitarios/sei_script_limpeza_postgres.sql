@@ -247,9 +247,6 @@ delete from replicacao_federacao;
 
 delete from sinalizacao_federacao;
 
-delete from tipo_proced_restricao;
-select setval('seq_tipo_proced_restricao',1);
-
 delete from unidade_federacao;
 
 delete from usuario_federacao;
