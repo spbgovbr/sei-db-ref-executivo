@@ -1,6 +1,6 @@
-# Base de Dados de Referência do SEI-SUPER para uso no Poder Executivo Federal
+# Base de Dados de Referência do SEI para uso no Poder Executivo Federal
 
-Este projeto consiste em bases de dados do sistema SEI-SUPER pré-configuradas para agilizar o processo de implantação e configuração em instituições do Poder Executivo Federal.
+Este projeto consiste em bases de dados do sistema SEI pré-configuradas para agilizar o processo de implantação e configuração em instituições do Poder Executivo Federal.
 
 ## CONFIGURAÇÕES
 
@@ -35,15 +35,15 @@ Logo após efetuar o primeiro login como Administrador do SIP:
 ## DOWNLOAD
 
 O download das bases de dados pode ser encontrado na seção Releases deste projeto no GitHub.
-Acesse o link https://github.com/supergovbr/sei-db-ref-executivo/releases
+Acesse o link https://github.com/pengovbr/sei-db-ref-executivo/releases
 
-**[DOWNLOAD PACOTE DE INSTALAÇÃO/ATUALIZAÇÃO](https://github.com/supergovbr/sei-db-ref-executivo/releases)**
+**[DOWNLOAD PACOTE DE INSTALAÇÃO/ATUALIZAÇÃO](https://github.com/pengovbr/sei-db-ref-executivo/releases)**
 
 
 ## PROJETOS RELACIONADOS
 
-O projeto sei-db-ref-executivo trata-se de pré-configurações nas bases de dados do SEI-SUPER (SEI-SUPER) para agilizar o processo de implantação e configuração do sistema no contexto do Poder Executivo Federal.
-Para a sua utilização, é necessário que a instituição possua o sistema SEI-SUPER.
+O projeto sei-db-ref-executivo trata-se de pré-configurações nas bases de dados do SEI para agilizar o processo de implantação e configuração do sistema no contexto do Poder Executivo Federal.
+Para a sua utilização, é necessário que a instituição possua o sistema SEI.
 
 Para informações sobre como aderir ao SEI, acesse:
 http://processoeletronico.gov.br/index.php/assuntos/produtos/sistema-eletronico-de-informacoes
@@ -53,9 +53,9 @@ http://processoeletronico.gov.br/index.php/assuntos/produtos/sistema-eletronico-
 
 Existem diversas formas de colaborar neste projeto:
 
-* Enviar registros de erros ou solicitação de melhorias ([Issues](https://github.com/supergovbr/sei-db-ref-executivo/issues))
-* Revisar a documentação do projeto e enviar qualquer tipo de contribuição via [Pull Request](https://github.com/supergovbr/sei-db-ref-executivo/pulls)
-* Ajudar na correção de erros ou melhoria da base de código. Para isto, faça um fork do projeto no GitHub e posteriormente nos envie um [Pull Request](https://github.com/supergovbr/sei-db-ref-executivo/pulls)
+* Enviar registros de erros ou solicitação de melhorias ([Issues](https://github.com/pengovbr/sei-db-ref-executivo/issues))
+* Revisar a documentação do projeto e enviar qualquer tipo de contribuição via [Pull Request](https://github.com/pengovbr/sei-db-ref-executivo/pulls)
+* Ajudar na correção de erros ou melhoria da base de código. Para isto, faça um fork do projeto no GitHub e posteriormente nos envie um [Pull Request](https://github.com/pengovbr/sei-db-ref-executivo/pulls)
 
 
 ## DÚVIDAS E SUPORTE 
