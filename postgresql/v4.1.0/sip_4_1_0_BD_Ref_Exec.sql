@@ -577,6 +577,34 @@ CREATE TABLE public.rel_regra_auditoria_recurso (
 ALTER TABLE public.rel_regra_auditoria_recurso OWNER TO sip_user;
 
 --
+-- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: sip_user
+--
+
+CREATE SEQUENCE public.seq_infra_auditoria
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.seq_infra_auditoria OWNER TO sip_user;
+
+--
+-- Name: seq_infra_log; Type: SEQUENCE; Schema: public; Owner: sip_user
+--
+
+CREATE SEQUENCE public.seq_infra_log
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.seq_infra_log OWNER TO sip_user;
+
+--
 -- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
@@ -6472,6 +6500,20 @@ COPY public.usuario (id_usuario, id_orgao, id_origem, sigla, nome, sin_ativo, cp
 
 COPY public.usuario_historico (id_usuario_historico, id_codigo_acesso, id_usuario, id_usuario_operacao, dth_operacao, sta_operacao, motivo, dth_pausa_2fa) FROM stdin;
 \.
+
+
+--
+-- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: sip_user
+--
+
+SELECT pg_catalog.setval('public.seq_infra_auditoria', 226, true);
+
+
+--
+-- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: sip_user
+--
+
+SELECT pg_catalog.setval('public.seq_infra_log', 1, false);
 
 
 --
