@@ -6,15 +6,17 @@ Este projeto consiste em bases de dados do sistema SEI pré-configuradas para ag
 
 Entre as configurações presentes nesta base, estão:
 
-* Plano de Classificação, Temporalidade e Destinação de Documentos de Arquivo Relativos às Atividades-Meio da Administração Pública, conforme Portaria Nº 47, de fevereiro de 2020 do Arquivo Nacional.
-* Tipos de Processos comuns das Atividades-Meio.
-* Máscara para o Número Único de Protocolo (NUP).
-* Modelos e Tipos de Documentos comuns das Atividades-Meio, inclusive da nova IN04, conforme o Manual da Presidência da República e documentos considerados de uso comuns por todos os órgãos. Ainda, os modelos de documentos possuem estilos com numeração e renumeração automática de parágrafos.
-* Hipóteses Legais de restrição de acesso mais comuns configuradas.
-* Boletim de Serviço Eletrônico configurado e com os tipos de documentos que exigem publicação oficial já parametrizados, além dos feriados federais.
-* Extensões de Arquivos Permitidas em conformidade com o e-PING.
-* Listas de Municípios e de Países revisadas.
-* Tarjas de Assinatura e Autenticação de documentos atualizada com menção aos respectivos normativos.
+* Máscara para o Número Único de Protocolo (NUP) no padrão para o Poder Executivo Federal.
+* Plano de Classificação, Temporalidade e Destinação de Documentos de Arquivo Relativos às Atividades-Meio da Administração Pública, conforme Portaria nº 47, de fevereiro de 2020, do Arquivo Nacional.
+* 39 Estilos, com estaque para estilos com numeração e renumeração automática de itens e de parágrafos.
+* 318 Tipos de Processos comuns das Atividades-Meio.
+* 254 Tipos de Documentos comuns das Atividades-Meio, considerados de uso comum por todos os órgãos. Ainda, os Modelos de vários Tipos de Documentos utilizam os Estilos com numeração e renumeração automática de itens e de parágrafos.
+* 23 Hipóteses Legais de restrição de acesso de uso comum por todos os órgãos.
+* 20 Extensões de Arquivos Permitidas em conformidade com o e-PING.
+* 6 Tipos de Prioridade previstas em Lei.
+* Boletim de Serviço Eletrônico configurado e com os tipos de documentos que exigem publicação oficial já parametrizados, além dos feriados federais (precisa atualizar os Feriados depois que instalar).
+* Listas de Municípios e de Países atualizada.
+* Tarjas de Assinatura e de Autenticação de documentos atualizadas com citação aos respectivos normativos.
 
 
 ## Chaves de Acesso
@@ -42,7 +44,7 @@ Acesse o link https://github.com/spbgovbr/sei-db-ref-executivo/releases
 
 ## PROJETOS RELACIONADOS
 
-O projeto sei-db-ref-executivo trata-se de pre-configurações nas bases de dados do Sistema Eletrônico de Informações (SEI) para agilizar o processo de implantação e configuração do sistema no contexto do Poder Executivo Federal.
+O projeto sei-db-ref-executivo trata-se de pré-configurações nas bases de dados do SEI para agilizar o processo de implantação e configuração do sistema no contexto do Poder Executivo Federal.
 Para a sua utilização, é necessário que a instituição possua o sistema SEI.
 
 Para informações sobre como aderir ao SEI, acesse:
@@ -60,7 +62,7 @@ Existem diversas formas de colaborar neste projeto:
 
 ## DÚVIDAS E SUPORTE 
 
-Em caso de dúvidas ou problemas durante o procedimento de atualização, favor acionar a Central de Atendimento do Processo Eletrônico Nacional por meio dos seguintes canais:
+Em caso de dúvidas ou problemas durante o procedimento de atualização, favor acionar a Central de Atendimento do Processo Eletrônico Nacional por meio dos seguintes canais:
 
 - Portal de Atendimento (PEN): Canal de Atendimento - Módulo do Barramento
 - Telefone: 0800 978 9005
