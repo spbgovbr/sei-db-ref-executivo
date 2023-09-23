@@ -10,14 +10,14 @@ Entre as configurações presentes nesta base, estão:
 * Plano de Classificação, Temporalidade e Destinação de Documentos de Arquivo Relativos às Atividades-Meio da Administração Pública, conforme Portaria nº 47, de fevereiro de 2020, do Arquivo Nacional.
 * 39 Estilos, com estaque para estilos com numeração e renumeração automática de itens e de parágrafos.
 * 318 Tipos de Processos comuns das Atividades-Meio.
-* 254 Tipos de Documentos comuns das Atividades-Meio, considerados de uso comum por todos os órgãos. Ainda, os Modelos de vários Tipos de Documentos utilizam os Estilos com numeração e renumeração automática de itens e de parágrafos.
-* 23 Hipóteses Legais de restrição de acesso de uso comum por todos os órgãos.
-* 20 Extensões de Arquivos Permitidas em conformidade com o e-PING.
-* 6 Tipos de Prioridade previstas em Lei.
+* 254 Tipos de Documentos comuns das Atividades-Meio, considerados de uso comum por todos os órgãos. Os Modelos de vários Tipos de Documentos utilizam os Estilos com numeração e renumeração automática de itens e de parágrafos. Ainda, os Tipos de Documentos de aplicabilidade Externa segue a lista de espécies documentais utilizada no Tramita.gov.br - Fonte: https://docs.google.com/spreadsheets/d/1XpLC2iFLqB1HPZoE6mc3ul__rvxXQuWHJVncnjCYxRc/pubhtml
+* 23 Hipóteses Legais de restrição de acesso de uso comum por todos os órgãos - Fonte: https://docs.google.com/spreadsheets/d/1bj8OZ-W9ScHMQpwIFlJ2aqg_dzemqT3QWduNIIpZfQU/pubhtml
+* 20 Extensões de Arquivos Permitidas em conformidade com o ePING - Fonte: https://www.gov.br/governodigital/pt-br/governanca-de-dados/padroes-de-interoperabilidade
+* 6 Tipos de Prioridade previstas em Lei - Fonte: https://docs.google.com/spreadsheets/d/e/2PACX-1vQXuRH3fCKJp2MV1V_0AwlP972u3LA0WIIX1sfADGj54v1tcyfK71ZG0khliyCbggBnpDWrlUO_bb-l/pubhtml
 * Boletim de Serviço Eletrônico configurado e com os tipos de documentos que exigem publicação oficial já parametrizados, além dos feriados federais (precisa atualizar os Feriados depois que instalar).
 * Listas de Municípios e de Países atualizada.
 * Tarjas de Assinatura e de Autenticação de documentos atualizadas com citação aos respectivos normativos.
-
+* Listas de Cargos, Tratamentos e Vocativos - Fonte: https://docs.google.com/spreadsheets/d/1nJoD_tJHes75ROGcAMNpCFdhsFBsYqxCC7qcaA1TyGA/pubhtml
 
 ## Chaves de Acesso
 
