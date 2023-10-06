@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 15.4 (Debian 15.4-1.pgdg120+1)
--- Dumped by pg_dump version 15.4 (Debian 15.4-1.pgdg120+1)
+-- Dumped from database version 15.4 (Debian 15.4-2.pgdg120+1)
+-- Dumped by pg_dump version 15.4 (Debian 15.4-2.pgdg120+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: administrador_sistema; Type: TABLE; Schema: public; Owner: -
+-- Name: administrador_sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.administrador_sistema (
@@ -30,8 +30,10 @@ CREATE TABLE public.administrador_sistema (
 );
 
 
+ALTER TABLE public.administrador_sistema OWNER TO sip_user;
+
 --
--- Name: codigo_acesso; Type: TABLE; Schema: public; Owner: -
+-- Name: codigo_acesso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.codigo_acesso (
@@ -53,8 +55,10 @@ CREATE TABLE public.codigo_acesso (
 );
 
 
+ALTER TABLE public.codigo_acesso OWNER TO sip_user;
+
 --
--- Name: codigo_bloqueio; Type: TABLE; Schema: public; Owner: -
+-- Name: codigo_bloqueio; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.codigo_bloqueio (
@@ -67,8 +71,10 @@ CREATE TABLE public.codigo_bloqueio (
 );
 
 
+ALTER TABLE public.codigo_bloqueio OWNER TO sip_user;
+
 --
--- Name: coordenador_perfil; Type: TABLE; Schema: public; Owner: -
+-- Name: coordenador_perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.coordenador_perfil (
@@ -78,8 +84,10 @@ CREATE TABLE public.coordenador_perfil (
 );
 
 
+ALTER TABLE public.coordenador_perfil OWNER TO sip_user;
+
 --
--- Name: coordenador_unidade; Type: TABLE; Schema: public; Owner: -
+-- Name: coordenador_unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.coordenador_unidade (
@@ -89,8 +97,10 @@ CREATE TABLE public.coordenador_unidade (
 );
 
 
+ALTER TABLE public.coordenador_unidade OWNER TO sip_user;
+
 --
--- Name: dispositivo_acesso; Type: TABLE; Schema: public; Owner: -
+-- Name: dispositivo_acesso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.dispositivo_acesso (
@@ -106,8 +116,10 @@ CREATE TABLE public.dispositivo_acesso (
 );
 
 
+ALTER TABLE public.dispositivo_acesso OWNER TO sip_user;
+
 --
--- Name: email_sistema; Type: TABLE; Schema: public; Owner: -
+-- Name: email_sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.email_sistema (
@@ -122,8 +134,10 @@ CREATE TABLE public.email_sistema (
 );
 
 
+ALTER TABLE public.email_sistema OWNER TO sip_user;
+
 --
--- Name: grupo_perfil; Type: TABLE; Schema: public; Owner: -
+-- Name: grupo_perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.grupo_perfil (
@@ -134,8 +148,10 @@ CREATE TABLE public.grupo_perfil (
 );
 
 
+ALTER TABLE public.grupo_perfil OWNER TO sip_user;
+
 --
--- Name: hierarquia; Type: TABLE; Schema: public; Owner: -
+-- Name: hierarquia; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.hierarquia (
@@ -148,8 +164,10 @@ CREATE TABLE public.hierarquia (
 );
 
 
+ALTER TABLE public.hierarquia OWNER TO sip_user;
+
 --
--- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_agendamento_tarefa; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_agendamento_tarefa (
@@ -167,8 +185,10 @@ CREATE TABLE public.infra_agendamento_tarefa (
 );
 
 
+ALTER TABLE public.infra_agendamento_tarefa OWNER TO sip_user;
+
 --
--- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_auditoria (
@@ -198,8 +218,10 @@ CREATE TABLE public.infra_auditoria (
 );
 
 
+ALTER TABLE public.infra_auditoria OWNER TO sip_user;
+
 --
--- Name: infra_captcha; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_captcha; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_captcha (
@@ -212,8 +234,10 @@ CREATE TABLE public.infra_captcha (
 );
 
 
+ALTER TABLE public.infra_captcha OWNER TO sip_user;
+
 --
--- Name: infra_captcha_tentativa; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_captcha_tentativa; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_captcha_tentativa (
@@ -226,8 +250,10 @@ CREATE TABLE public.infra_captcha_tentativa (
 );
 
 
+ALTER TABLE public.infra_captcha_tentativa OWNER TO sip_user;
+
 --
--- Name: infra_erro_php; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_erro_php; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_erro_php (
@@ -240,8 +266,10 @@ CREATE TABLE public.infra_erro_php (
 );
 
 
+ALTER TABLE public.infra_erro_php OWNER TO sip_user;
+
 --
--- Name: infra_log; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_log; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_log (
@@ -253,8 +281,10 @@ CREATE TABLE public.infra_log (
 );
 
 
+ALTER TABLE public.infra_log OWNER TO sip_user;
+
 --
--- Name: infra_parametro; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_parametro; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_parametro (
@@ -263,8 +293,10 @@ CREATE TABLE public.infra_parametro (
 );
 
 
+ALTER TABLE public.infra_parametro OWNER TO sip_user;
+
 --
--- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_regra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_regra_auditoria (
@@ -274,8 +306,10 @@ CREATE TABLE public.infra_regra_auditoria (
 );
 
 
+ALTER TABLE public.infra_regra_auditoria OWNER TO sip_user;
+
 --
--- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_regra_auditoria_recurso (
@@ -284,8 +318,10 @@ CREATE TABLE public.infra_regra_auditoria_recurso (
 );
 
 
+ALTER TABLE public.infra_regra_auditoria_recurso OWNER TO sip_user;
+
 --
--- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: -
+-- Name: infra_sequencia; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.infra_sequencia (
@@ -296,8 +332,10 @@ CREATE TABLE public.infra_sequencia (
 );
 
 
+ALTER TABLE public.infra_sequencia OWNER TO sip_user;
+
 --
--- Name: item_menu; Type: TABLE; Schema: public; Owner: -
+-- Name: item_menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.item_menu (
@@ -316,8 +354,10 @@ CREATE TABLE public.item_menu (
 );
 
 
+ALTER TABLE public.item_menu OWNER TO sip_user;
+
 --
--- Name: login; Type: TABLE; Schema: public; Owner: -
+-- Name: login; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.login (
@@ -339,8 +379,10 @@ CREATE TABLE public.login (
 );
 
 
+ALTER TABLE public.login OWNER TO sip_user;
+
 --
--- Name: menu; Type: TABLE; Schema: public; Owner: -
+-- Name: menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.menu (
@@ -352,8 +394,10 @@ CREATE TABLE public.menu (
 );
 
 
+ALTER TABLE public.menu OWNER TO sip_user;
+
 --
--- Name: orgao; Type: TABLE; Schema: public; Owner: -
+-- Name: orgao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.orgao (
@@ -366,8 +410,10 @@ CREATE TABLE public.orgao (
 );
 
 
+ALTER TABLE public.orgao OWNER TO sip_user;
+
 --
--- Name: perfil; Type: TABLE; Schema: public; Owner: -
+-- Name: perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.perfil (
@@ -381,8 +427,10 @@ CREATE TABLE public.perfil (
 );
 
 
+ALTER TABLE public.perfil OWNER TO sip_user;
+
 --
--- Name: permissao; Type: TABLE; Schema: public; Owner: -
+-- Name: permissao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.permissao (
@@ -397,8 +445,10 @@ CREATE TABLE public.permissao (
 );
 
 
+ALTER TABLE public.permissao OWNER TO sip_user;
+
 --
--- Name: recurso; Type: TABLE; Schema: public; Owner: -
+-- Name: recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.recurso (
@@ -411,8 +461,10 @@ CREATE TABLE public.recurso (
 );
 
 
+ALTER TABLE public.recurso OWNER TO sip_user;
+
 --
--- Name: recurso_vinculado; Type: TABLE; Schema: public; Owner: -
+-- Name: recurso_vinculado; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.recurso_vinculado (
@@ -424,8 +476,10 @@ CREATE TABLE public.recurso_vinculado (
 );
 
 
+ALTER TABLE public.recurso_vinculado OWNER TO sip_user;
+
 --
--- Name: regra_auditoria; Type: TABLE; Schema: public; Owner: -
+-- Name: regra_auditoria; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.regra_auditoria (
@@ -436,8 +490,10 @@ CREATE TABLE public.regra_auditoria (
 );
 
 
+ALTER TABLE public.regra_auditoria OWNER TO sip_user;
+
 --
--- Name: rel_grupo_perfil_perfil; Type: TABLE; Schema: public; Owner: -
+-- Name: rel_grupo_perfil_perfil; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_grupo_perfil_perfil (
@@ -447,8 +503,10 @@ CREATE TABLE public.rel_grupo_perfil_perfil (
 );
 
 
+ALTER TABLE public.rel_grupo_perfil_perfil OWNER TO sip_user;
+
 --
--- Name: rel_hierarquia_unidade; Type: TABLE; Schema: public; Owner: -
+-- Name: rel_hierarquia_unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_hierarquia_unidade (
@@ -462,8 +520,10 @@ CREATE TABLE public.rel_hierarquia_unidade (
 );
 
 
+ALTER TABLE public.rel_hierarquia_unidade OWNER TO sip_user;
+
 --
--- Name: rel_orgao_autenticacao; Type: TABLE; Schema: public; Owner: -
+-- Name: rel_orgao_autenticacao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_orgao_autenticacao (
@@ -473,8 +533,10 @@ CREATE TABLE public.rel_orgao_autenticacao (
 );
 
 
+ALTER TABLE public.rel_orgao_autenticacao OWNER TO sip_user;
+
 --
--- Name: rel_perfil_item_menu; Type: TABLE; Schema: public; Owner: -
+-- Name: rel_perfil_item_menu; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_perfil_item_menu (
@@ -486,8 +548,10 @@ CREATE TABLE public.rel_perfil_item_menu (
 );
 
 
+ALTER TABLE public.rel_perfil_item_menu OWNER TO sip_user;
+
 --
--- Name: rel_perfil_recurso; Type: TABLE; Schema: public; Owner: -
+-- Name: rel_perfil_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_perfil_recurso (
@@ -497,8 +561,10 @@ CREATE TABLE public.rel_perfil_recurso (
 );
 
 
+ALTER TABLE public.rel_perfil_recurso OWNER TO sip_user;
+
 --
--- Name: rel_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: -
+-- Name: rel_regra_auditoria_recurso; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.rel_regra_auditoria_recurso (
@@ -507,6 +573,8 @@ CREATE TABLE public.rel_regra_auditoria_recurso (
     id_regra_auditoria integer NOT NULL
 );
 
+
+ALTER TABLE public.rel_regra_auditoria_recurso OWNER TO sip_user;
 
 --
 -- Name: seq_infra_auditoria; Type: SEQUENCE; Schema: public; Owner: sip_user
@@ -534,8 +602,10 @@ CREATE SEQUENCE public.seq_infra_log
     CACHE 1;
 
 
+ALTER TABLE public.seq_infra_log OWNER TO sip_user;
+
 --
--- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: -
+-- Name: servidor_autenticacao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.servidor_autenticacao (
@@ -554,8 +624,10 @@ CREATE TABLE public.servidor_autenticacao (
 );
 
 
+ALTER TABLE public.servidor_autenticacao OWNER TO sip_user;
+
 --
--- Name: sistema; Type: TABLE; Schema: public; Owner: -
+-- Name: sistema; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.sistema (
@@ -576,8 +648,10 @@ CREATE TABLE public.sistema (
 );
 
 
+ALTER TABLE public.sistema OWNER TO sip_user;
+
 --
--- Name: tipo_permissao; Type: TABLE; Schema: public; Owner: -
+-- Name: tipo_permissao; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.tipo_permissao (
@@ -586,8 +660,10 @@ CREATE TABLE public.tipo_permissao (
 );
 
 
+ALTER TABLE public.tipo_permissao OWNER TO sip_user;
+
 --
--- Name: unidade; Type: TABLE; Schema: public; Owner: -
+-- Name: unidade; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.unidade (
@@ -601,8 +677,10 @@ CREATE TABLE public.unidade (
 );
 
 
+ALTER TABLE public.unidade OWNER TO sip_user;
+
 --
--- Name: usuario; Type: TABLE; Schema: public; Owner: -
+-- Name: usuario; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.usuario (
@@ -621,8 +699,10 @@ CREATE TABLE public.usuario (
 );
 
 
+ALTER TABLE public.usuario OWNER TO sip_user;
+
 --
--- Name: usuario_historico; Type: TABLE; Schema: public; Owner: -
+-- Name: usuario_historico; Type: TABLE; Schema: public; Owner: sip_user
 --
 
 CREATE TABLE public.usuario_historico (
@@ -637,8 +717,10 @@ CREATE TABLE public.usuario_historico (
 );
 
 
+ALTER TABLE public.usuario_historico OWNER TO sip_user;
+
 --
--- Data for Name: administrador_sistema; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: administrador_sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.administrador_sistema (id_usuario, id_sistema) FROM stdin;
@@ -648,7 +730,7 @@ COPY public.administrador_sistema (id_usuario, id_sistema) FROM stdin;
 
 
 --
--- Data for Name: codigo_acesso; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: codigo_acesso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.codigo_acesso (id_codigo_acesso, id_usuario, id_usuario_desativacao, id_sistema, chave_geracao, dth_geracao, chave_ativacao, dth_envio_ativacao, dth_ativacao, chave_desativacao, dth_envio_desativacao, dth_desativacao, dth_acesso, email, sin_ativo) FROM stdin;
@@ -656,7 +738,7 @@ COPY public.codigo_acesso (id_codigo_acesso, id_usuario, id_usuario_desativacao,
 
 
 --
--- Data for Name: codigo_bloqueio; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: codigo_bloqueio; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.codigo_bloqueio (id_codigo_bloqueio, id_codigo_acesso, chave_bloqueio, dth_envio, dth_bloqueio, sin_ativo) FROM stdin;
@@ -664,7 +746,7 @@ COPY public.codigo_bloqueio (id_codigo_bloqueio, id_codigo_acesso, chave_bloquei
 
 
 --
--- Data for Name: coordenador_perfil; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: coordenador_perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.coordenador_perfil (id_perfil, id_usuario, id_sistema) FROM stdin;
@@ -672,7 +754,7 @@ COPY public.coordenador_perfil (id_perfil, id_usuario, id_sistema) FROM stdin;
 
 
 --
--- Data for Name: coordenador_unidade; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: coordenador_unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.coordenador_unidade (id_sistema, id_usuario, id_unidade) FROM stdin;
@@ -680,7 +762,7 @@ COPY public.coordenador_unidade (id_sistema, id_usuario, id_unidade) FROM stdin;
 
 
 --
--- Data for Name: dispositivo_acesso; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: dispositivo_acesso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.dispositivo_acesso (id_dispositivo_acesso, id_codigo_acesso, chave_dispositivo, chave_acesso, dth_liberacao, user_agent, dth_acesso, ip_acesso, sin_ativo) FROM stdin;
@@ -688,7 +770,7 @@ COPY public.dispositivo_acesso (id_dispositivo_acesso, id_codigo_acesso, chave_d
 
 
 --
--- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: email_sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, de, para, assunto, conteudo, descricao, sin_ativo) FROM stdin;
@@ -700,7 +782,7 @@ COPY public.email_sistema (id_email_sistema, id_email_sistema_modulo, de, para, 
 
 
 --
--- Data for Name: grupo_perfil; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: grupo_perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.grupo_perfil (id_grupo_perfil, id_sistema, nome, sin_ativo) FROM stdin;
@@ -708,7 +790,7 @@ COPY public.grupo_perfil (id_grupo_perfil, id_sistema, nome, sin_ativo) FROM std
 
 
 --
--- Data for Name: hierarquia; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: hierarquia; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.hierarquia (id_hierarquia, nome, descricao, dta_inicio, dta_fim, sin_ativo) FROM stdin;
@@ -717,20 +799,20 @@ COPY public.hierarquia (id_hierarquia, nome, descricao, dta_inicio, dta_fim, sin
 
 
 --
--- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_agendamento_tarefa; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_agendamento_tarefa (id_infra_agendamento_tarefa, descricao, comando, sta_periodicidade_execucao, periodicidade_complemento, dth_ultima_execucao, dth_ultima_conclusao, sin_sucesso, parametro, email_erro, sin_ativo) FROM stdin;
 1	Remover dados temporários de login	AgendamentoRN::removerDadosLogin	D	1	2014-11-14 08:05:06	2014-11-14 08:05:06	S	\N	\N	S
-2	Teste de agendamento SIP	AgendamentoRN::testarAgendamento	N	0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55	2014-11-14 08:05:03	2014-11-14 08:05:04	S	\N	\N	S
 3	Replicar todos os usuários para o SEI	AgendamentoRN::replicarTodosUsuariosSEI	D	6	\N	\N	N	\N	\N	N
 4	Replicar todas as unidades da hierarquia para o SEI	AgendamentoRN::replicarUnidadesHierarquiaSEI	D	5	\N	\N	N	\N	\N	N
 5	Replica regras de auditoria para o SEI.	AgendamentoRN::replicarRegrasAuditoriaSEI	D	7	\N	\N	N	\N	\N	S
+2	Teste de agendamento SIP	AgendamentoRN::testarAgendamento	N	0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55	2023-10-04 18:30:01	2014-11-14 08:05:04	N	\N	\N	S
 \.
 
 
 --
--- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, id_usuario_emulador, id_orgao_usuario_emulador, id_unidade, id_orgao_unidade, recurso, dth_acesso, ip, sigla_usuario, nome_usuario, sigla_orgao_usuario, sigla_usuario_emulador, nome_usuario_emulador, sigla_orgao_usuario_emulador, sigla_unidade, descricao_unidade, sigla_orgao_unidade, servidor, user_agent, requisicao, operacao) FROM stdin;
@@ -738,7 +820,7 @@ COPY public.infra_auditoria (id_infra_auditoria, id_usuario, id_orgao_usuario, i
 
 
 --
--- Data for Name: infra_captcha; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_captcha; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_captcha (identificacao, dia, mes, ano, acertos, erros) FROM stdin;
@@ -746,7 +828,7 @@ COPY public.infra_captcha (identificacao, dia, mes, ano, acertos, erros) FROM st
 
 
 --
--- Data for Name: infra_captcha_tentativa; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_captcha_tentativa; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_captcha_tentativa (identificacao, id_usuario_origem, tentativas, dth_tentativa, user_agent, ip) FROM stdin;
@@ -754,7 +836,7 @@ COPY public.infra_captcha_tentativa (identificacao, id_usuario_origem, tentativa
 
 
 --
--- Data for Name: infra_erro_php; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_erro_php; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_erro_php (id_infra_erro_php, sta_tipo, arquivo, linha, erro, dth_cadastro) FROM stdin;
@@ -762,7 +844,7 @@ COPY public.infra_erro_php (id_infra_erro_php, sta_tipo, arquivo, linha, erro, d
 
 
 --
--- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_log; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdin;
@@ -770,7 +852,7 @@ COPY public.infra_log (id_infra_log, dth_log, texto_log, ip, sta_tipo) FROM stdi
 
 
 --
--- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_parametro; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_parametro (nome, valor) FROM stdin;
@@ -802,7 +884,7 @@ SEI_VERSAO	4.1.0
 
 
 --
--- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_regra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativo) FROM stdin;
@@ -811,7 +893,7 @@ COPY public.infra_regra_auditoria (id_infra_regra_auditoria, descricao, sin_ativ
 
 
 --
--- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FROM stdin;
@@ -906,7 +988,7 @@ COPY public.infra_regra_auditoria_recurso (id_infra_regra_auditoria, recurso) FR
 
 
 --
--- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: infra_sequencia; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.infra_sequencia (nome_tabela, qtd_incremento, num_atual, num_maximo) FROM stdin;
@@ -923,7 +1005,7 @@ unidade	1	110000003	199999999
 usuario	1	100000001	199999999
 usuario_historico	1	1	999999999
 grupo_perfil	1	0	999999999
-perfil	1	100000950	199999999
+perfil	1	100000951	199999999
 item_menu	1	100005718	199999999
 recurso	1	100015986	199999999
 regra_auditoria	1	6	999999999
@@ -931,7 +1013,7 @@ regra_auditoria	1	6	999999999
 
 
 --
--- Data for Name: item_menu; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: item_menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.item_menu (id_menu, id_item_menu, id_sistema, id_menu_pai, id_item_menu_pai, id_recurso, rotulo, descricao, sequencia, sin_ativo, sin_nova_janela, icone) FROM stdin;
@@ -1219,17 +1301,15 @@ COPY public.item_menu (id_menu, id_item_menu, id_sistema, id_menu_pai, id_item_m
 
 
 --
--- Data for Name: login; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: login; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.login (id_login, id_sistema, id_usuario, id_usuario_emulador, dth_login, hash_interno, hash_usuario, hash_agente, http_client_ip, remote_addr, http_x_forwarded_for, sta_login, user_agent, id_dispositivo_acesso, id_codigo_acesso) FROM stdin;
-38b57c31f2691b82589928e8303768ca9ef23539dcd40bad9987c92d9e3018cb14509beca0974d465489f28335f3ee734c3b1eae50f6fa3e5b2f6f06c10b4de9	100000099	100000001	\N	2023-02-02 14:53:32	2c40f0efa6cb154b315321d67af0d33f9e0f5ded9737a546ea65671444909e9ca2954ffdcf9379096937db1fb97e3296eb2a4808920e1a4ae46e1f19e34d1fd9	404900e20275fc80cbaf43ecef6f921e7e4e70ad97557f64d21f6775ed3f0a99b43a3ef25eb1960c67f3c1d9278ad542e94ffff924fe0c1e36cacce390d54da7	16885a45924814c6611625cdc7cb37ff989e8012b465d12fc7da657c00232b6023525bcc666e67a81ee6d053150a6fb6b78f60fd104c748c8f7ff46bd37d4f82	\N	172.26.0.1	\N	R	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36	\N	\N
-4b1653e6ac75969a1c7f6f70777a849bcbaadb634c0ccdb1c981589920ae16a41685126d0b8e2988a77374e9cd43a5ac4b0491739d715460dd8ed55fd7eb927b	100000100	100000001	\N	2023-02-02 14:54:19	739d2b48b41e9903e02c7410353dc4f229449aeac0216762b7d1db98ea3c5a75303c534e7d3d000c252137366348c60b493dcf913ddd8cc40c5b821f4628cb48	b1c4e9144d147e093e15db62499ffad750309cf3bb8da5731d991fbc64352f875eb05356b9f0290c3c0cfcc61a75694dea4e20ccb16a48ae3b0857cc1f3d42c7	16885a45924814c6611625cdc7cb37ff989e8012b465d12fc7da657c00232b6023525bcc666e67a81ee6d053150a6fb6b78f60fd104c748c8f7ff46bd37d4f82	\N	172.26.0.1	\N	R	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36	\N	\N
 \.
 
 
 --
--- Data for Name: menu; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.menu (id_menu, id_sistema, nome, descricao, sin_ativo) FROM stdin;
@@ -1239,16 +1319,16 @@ COPY public.menu (id_menu, id_sistema, nome, descricao, sin_ativo) FROM stdin;
 
 
 --
--- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: orgao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.orgao (id_orgao, sigla, descricao, sin_ativo, sin_autenticar, ordem) FROM stdin;
-0	ABC	Nome Completo do Órgão	S	N	0
+0	ABC	Orgao Processo Eletronico - Postgres	S	N	0
 \.
 
 
 --
--- Data for Name: perfil; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.perfil (id_perfil, id_sistema, nome, descricao, sin_coordenado, sin_ativo, sin_2_fatores) FROM stdin;
@@ -1265,14 +1345,14 @@ COPY public.perfil (id_perfil, id_sistema, nome, descricao, sin_coordenado, sin_
 100000944	100000100	Ouvidoria	Acesso aos recursos específicos para quem trabalha na Ouvidoria do órgão.	N	S	N
 100000945	100000100	Inspeção	Acesso aos recursos específicos para quem trabalha com inspeção administrativa no órgão.	N	S	N
 100000946	100000099	Coordenador de Unidade	\N	N	S	N
-100000947	100000100	Colaborador (Básico sem Assinatura)	Acesso aos recursos básicos para qualquer usuário no SEI, porém, sem permissão para assinatura de documentos.	N	S	N
 100000949	100000100	Acervo de Sigilosos da Unidade	\N	N	S	N
 100000950	100000100	CPAD	Comissão Permanente de Avaliação de Documentos	N	S	N
+100000951	100000100	Colaborador (Básico sem Assinatura)	Acesso aos recursos básicos para qualquer usuário no SEI. Pode ser combinado com outros perfis, mas sempre tem que ser concedido para qualquer outro perfil funcionar corretamente.	N	S	N
 \.
 
 
 --
--- Data for Name: permissao; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: permissao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.permissao (id_perfil, id_sistema, id_usuario, id_unidade, id_tipo_permissao, dta_inicio, dta_fim, sin_subunidades) FROM stdin;
@@ -1288,7 +1368,7 @@ COPY public.permissao (id_perfil, id_sistema, id_usuario, id_unidade, id_tipo_pe
 
 
 --
--- Data for Name: recurso; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo) FROM stdin;
@@ -2428,6 +2508,7 @@ COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo
 100000100	100015553	anexo_download	\N	controlador.php?acao=anexo_download	S
 100000100	100015584	acompanhamento_gerenciar	\N	controlador.php?acao=acompanhamento_gerenciar	S
 100000100	100015585	acompanhamento_selecionar	\N	controlador.php?acao=acompanhamento_selecionar	S
+100000100	100015657	bloco_navegar	\N	controlador.php?acao=bloco_navegar	S
 100000100	100015586	acompanhamento_alterar_grupo	\N	controlador.php?acao=acompanhamento_alterar_grupo	S
 100000100	100015587	andamento_marcador_alterar	\N	controlador.php?acao=andamento_marcador_alterar	S
 100000100	100015588	andamento_marcador_cadastrar	\N	controlador.php?acao=andamento_marcador_cadastrar	S
@@ -2499,7 +2580,6 @@ COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo
 100000100	100015654	categoria_reativar	\N	controlador.php?acao=categoria_reativar	S
 100000100	100015655	procedimento_credencial_renovar	\N	controlador.php?acao=procedimento_credencial_renovar	S
 100000100	100015656	protocolo_modelo_gerenciar	\N	controlador.php?acao=protocolo_modelo_gerenciar	S
-100000100	100015657	bloco_navegar	\N	controlador.php?acao=bloco_navegar	S
 100000100	100015658	bloco_priorizar	\N	controlador.php?acao=bloco_priorizar	S
 100000100	100015659	bloco_revisar	\N	controlador.php?acao=bloco_revisar	S
 100000100	100015660	bloco_atribuir	\N	controlador.php?acao=bloco_atribuir	S
@@ -2635,6 +2715,7 @@ COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo
 100000100	100015790	replicacao_federacao_listar	\N	controlador.php?acao=replicacao_federacao_listar	S
 100000100	100015791	replicacao_federacao_desativar	\N	controlador.php?acao=replicacao_federacao_desativar	S
 100000100	100015792	replicacao_federacao_reativar	\N	controlador.php?acao=replicacao_federacao_reativar	S
+100000100	100015867	item_etapa_excluir	\N	controlador.php?acao=item_etapa_excluir	S
 100000100	100015793	procedimento_acervo_sigilosos_global	\N	controlador.php?acao=procedimento_acervo_sigilosos_global	S
 100000100	100015794	pesquisa_cadastrar	\N	controlador.php?acao=pesquisa_cadastrar	S
 100000100	100015795	pesquisa_alterar	\N	controlador.php?acao=pesquisa_alterar	S
@@ -2709,7 +2790,6 @@ COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo
 100000100	100015864	item_etapa_alterar	\N	controlador.php?acao=item_etapa_alterar	S
 100000100	100015865	item_etapa_cadastrar	\N	controlador.php?acao=item_etapa_cadastrar	S
 100000100	100015866	item_etapa_consultar	\N	controlador.php?acao=item_etapa_consultar	S
-100000100	100015867	item_etapa_excluir	\N	controlador.php?acao=item_etapa_excluir	S
 100000100	100015868	item_etapa_listar	\N	controlador.php?acao=item_etapa_listar	S
 100000100	100015869	item_etapa_selecionar	\N	controlador.php?acao=item_etapa_selecionar	S
 100000100	100015870	item_etapa_desativar	\N	controlador.php?acao=item_etapa_desativar	S
@@ -2833,7 +2913,7 @@ COPY public.recurso (id_sistema, id_recurso, nome, descricao, caminho, sin_ativo
 
 
 --
--- Data for Name: recurso_vinculado; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: recurso_vinculado; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.recurso_vinculado (id_sistema, id_recurso, id_sistema_vinculado, id_recurso_vinculado, tipo_vinculo) FROM stdin;
@@ -2841,7 +2921,7 @@ COPY public.recurso_vinculado (id_sistema, id_recurso, id_sistema_vinculado, id_
 
 
 --
--- Data for Name: regra_auditoria; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: regra_auditoria; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.regra_auditoria (id_regra_auditoria, id_sistema, descricao, sin_ativo) FROM stdin;
@@ -2855,7 +2935,7 @@ COPY public.regra_auditoria (id_regra_auditoria, id_sistema, descricao, sin_ativ
 
 
 --
--- Data for Name: rel_grupo_perfil_perfil; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: rel_grupo_perfil_perfil; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_grupo_perfil_perfil (id_grupo_perfil, id_sistema, id_perfil) FROM stdin;
@@ -2863,7 +2943,7 @@ COPY public.rel_grupo_perfil_perfil (id_grupo_perfil, id_sistema, id_perfil) FRO
 
 
 --
--- Data for Name: rel_hierarquia_unidade; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: rel_hierarquia_unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_hierarquia_unidade (id_unidade, id_hierarquia, id_hierarquia_pai, id_unidade_pai, dta_inicio, dta_fim, sin_ativo) FROM stdin;
@@ -2874,7 +2954,7 @@ COPY public.rel_hierarquia_unidade (id_unidade, id_hierarquia, id_hierarquia_pai
 
 
 --
--- Data for Name: rel_orgao_autenticacao; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: rel_orgao_autenticacao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_orgao_autenticacao (id_orgao, id_servidor_autenticacao, sequencia) FROM stdin;
@@ -2883,7 +2963,7 @@ COPY public.rel_orgao_autenticacao (id_orgao, id_servidor_autenticacao, sequenci
 
 
 --
--- Data for Name: rel_perfil_item_menu; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: rel_perfil_item_menu; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, id_recurso) FROM stdin;
@@ -2983,37 +3063,26 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 100000931	100000099	100000078	100005675	100015563
 100000931	100000099	100000078	100005676	100015568
 100000938	100000100	100000079	100005462	100014783
-100000947	100000100	100000079	100005462	100014783
 100000939	100000100	100000079	100005463	100015529
 100000940	100000100	100000079	100005465	100014561
 100000941	100000100	100000079	100005467	100014925
 100000938	100000100	100000079	100005472	100014815
-100000947	100000100	100000079	100005472	100014815
 100000941	100000100	100000079	100005474	100014926
 100000938	100000100	100000079	100005476	100014749
-100000947	100000100	100000079	100005476	100014749
 100000938	100000100	100000079	100005477	100014820
-100000947	100000100	100000079	100005477	100014820
 100000938	100000100	100000079	100005478	100014898
-100000947	100000100	100000079	100005478	100014898
 100000940	100000100	100000079	100005480	100014746
 100000940	100000100	100000079	100005481	100014755
 100000938	100000100	100000079	100005484	100014914
-100000947	100000100	100000079	100005484	100014914
 100000938	100000100	100000079	100005485	100014812
-100000947	100000100	100000079	100005485	100014812
 100000941	100000100	100000079	100005487	100014623
 100000938	100000100	100000079	100005488	100014751
-100000947	100000100	100000079	100005488	100014751
 100000938	100000100	100000079	100005489	100014862
 100000940	100000100	100000079	100005489	100014862
-100000947	100000100	100000079	100005489	100014862
 100000938	100000100	100000079	100005491	100014947
-100000947	100000100	100000079	100005491	100014947
 100000941	100000100	100000079	100005492	100014626
 100000939	100000100	100000079	100005493	100014799
 100000938	100000100	100000079	100005495	100014934
-100000947	100000100	100000079	100005495	100014934
 100000944	100000100	100000079	100005499	100014907
 100000939	100000100	100000079	100005501	100014857
 100000939	100000100	100000079	100005502	100014489
@@ -3065,7 +3134,6 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 100000939	100000100	100000079	100005572	100015039
 100000939	100000100	100000079	100005573	100015042
 100000938	100000100	100000079	100005574	100014955
-100000947	100000100	100000079	100005574	100014955
 100000939	100000100	100000079	100005577	100015043
 100000939	100000100	100000079	100005578	100015047
 100000939	100000100	100000079	100005579	100015050
@@ -3086,10 +3154,8 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 100000939	100000100	100000079	100005599	100015137
 100000945	100000100	100000079	100005599	100015137
 100000938	100000100	100000079	100005600	100015159
-100000947	100000100	100000079	100005600	100015159
 100000940	100000100	100000079	100005601	100015160
 100000938	100000100	100000079	100005602	100015166
-100000947	100000100	100000079	100005602	100015166
 100000940	100000100	100000079	100005604	100015169
 100000939	100000100	100000079	100005605	100015172
 100000940	100000100	100000079	100005612	100015235
@@ -3106,7 +3172,6 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 100000939	100000100	100000079	100005630	100015348
 100000939	100000100	100000079	100005631	100015351
 100000938	100000100	100000079	100005632	100015352
-100000947	100000100	100000079	100005632	100015352
 100000939	100000100	100000079	100005634	100015355
 100000939	100000100	100000079	100005635	100015359
 100000939	100000100	100000079	100005636	100015362
@@ -3114,13 +3179,11 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 100000939	100000100	100000079	100005641	100015382
 100000939	100000100	100000079	100005642	100015386
 100000938	100000100	100000079	100005643	100015405
-100000947	100000100	100000079	100005643	100015405
 100000939	100000100	100000079	100005645	100015409
 100000939	100000100	100000079	100005646	100015411
 100000939	100000100	100000079	100005647	100015416
 100000939	100000100	100000079	100005648	100015426
 100000938	100000100	100000079	100005649	100015450
-100000947	100000100	100000079	100005649	100015450
 100000949	100000100	100000079	100005652	100015455
 100000940	100000100	100000079	100005653	100015456
 100000940	100000100	100000079	100005654	100015459
@@ -3128,7 +3191,6 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 100000939	100000100	100000079	100005657	100015474
 100000939	100000100	100000079	100005658	100015478
 100000938	100000100	100000079	100005661	100014511
-100000947	100000100	100000079	100005661	100014511
 100000939	100000100	100000079	100005662	100014539
 100000939	100000100	100000079	100005663	100015486
 100000939	100000100	100000079	100005664	100015489
@@ -3172,11 +3234,38 @@ COPY public.rel_perfil_item_menu (id_perfil, id_sistema, id_menu, id_item_menu, 
 100000939	100000100	100000079	100005716	100015975
 100000939	100000100	100000079	100005717	100015977
 100000939	100000100	100000079	100005718	100015981
+100000951	100000100	100000079	100005472	100014815
+100000951	100000100	100000079	100005476	100014749
+100000951	100000100	100000079	100005477	100014820
+100000951	100000100	100000079	100005478	100014898
+100000951	100000100	100000079	100005488	100014751
+100000951	100000100	100000079	100005489	100014862
+100000951	100000100	100000079	100005491	100014947
+100000951	100000100	100000079	100005495	100014934
+100000951	100000100	100000079	100005503	100014539
+100000951	100000100	100000079	100005574	100014955
+100000951	100000100	100000079	100005602	100015166
+100000951	100000100	100000079	100005632	100015352
+100000951	100000100	100000079	100005643	100015405
+100000951	100000100	100000079	100005649	100015450
+100000951	100000100	100000079	100005661	100014511
+100000951	100000100	100000079	100005668	100015502
+100000951	100000100	100000079	100005678	100015592
+100000951	100000100	100000079	100005683	100015641
+100000951	100000100	100000079	100005689	100015760
+100000951	100000100	100000079	100005705	100015906
+100000951	100000100	100000079	100005714	100015973
+100000951	100000100	100000079	100005600	100015159
+100000951	100000100	100000079	100005462	100014783
+100000951	100000100	100000079	100005485	100014812
+100000951	100000100	100000079	100005484	100014914
+100000939	100000100	100000079	100005549	100014467
+100000939	100000100	100000079	100005555	100014471
 \.
 
 
 --
--- Data for Name: rel_perfil_recurso; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: rel_perfil_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
@@ -4307,14 +4396,6 @@ COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
 100000939	100000100	100014453
 100000939	100000100	100014454
 100000939	100000100	100014455
-100000939	100000100	100014464
-100000939	100000100	100014465
-100000939	100000100	100014466
-100000939	100000100	100014467
-100000939	100000100	100014468
-100000939	100000100	100014469
-100000939	100000100	100014470
-100000939	100000100	100014471
 100000939	100000100	100014472
 100000939	100000100	100014473
 100000939	100000100	100014474
@@ -4858,780 +4939,6 @@ COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
 100000946	100000099	100014388
 100000946	100000099	100014412
 100000946	100000099	100015558
-100000947	100000100	100014435
-100000947	100000100	100014436
-100000947	100000100	100014437
-100000947	100000100	100014438
-100000947	100000100	100014439
-100000947	100000100	100014440
-100000947	100000100	100014443
-100000947	100000100	100014444
-100000947	100000100	100014445
-100000947	100000100	100014450
-100000947	100000100	100014451
-100000947	100000100	100014452
-100000947	100000100	100014466
-100000947	100000100	100014467
-100000947	100000100	100014468
-100000947	100000100	100014474
-100000947	100000100	100014475
-100000947	100000100	100014476
-100000947	100000100	100014483
-100000947	100000100	100014484
-100000947	100000100	100014485
-100000947	100000100	100014491
-100000947	100000100	100014492
-100000947	100000100	100014493
-100000947	100000100	100014497
-100000947	100000100	100014498
-100000947	100000100	100014499
-100000947	100000100	100014508
-100000947	100000100	100014509
-100000947	100000100	100014510
-100000947	100000100	100014511
-100000947	100000100	100014512
-100000947	100000100	100014513
-100000947	100000100	100014514
-100000947	100000100	100014515
-100000947	100000100	100014518
-100000947	100000100	100014519
-100000947	100000100	100014520
-100000947	100000100	100014524
-100000947	100000100	100014525
-100000947	100000100	100014526
-100000947	100000100	100014530
-100000947	100000100	100014531
-100000947	100000100	100014532
-100000947	100000100	100014533
-100000947	100000100	100014534
-100000947	100000100	100014535
-100000947	100000100	100014536
-100000947	100000100	100014537
-100000947	100000100	100014538
-100000947	100000100	100014539
-100000947	100000100	100014540
-100000947	100000100	100014541
-100000947	100000100	100014544
-100000947	100000100	100014545
-100000947	100000100	100014546
-100000947	100000100	100014550
-100000947	100000100	100014551
-100000947	100000100	100014552
-100000947	100000100	100014553
-100000947	100000100	100014554
-100000947	100000100	100014555
-100000947	100000100	100014556
-100000947	100000100	100014557
-100000947	100000100	100014559
-100000947	100000100	100014563
-100000947	100000100	100014566
-100000947	100000100	100014567
-100000947	100000100	100014568
-100000947	100000100	100014569
-100000947	100000100	100014570
-100000947	100000100	100014571
-100000947	100000100	100014572
-100000947	100000100	100014573
-100000947	100000100	100014574
-100000947	100000100	100014575
-100000947	100000100	100014580
-100000947	100000100	100014581
-100000947	100000100	100014582
-100000947	100000100	100014588
-100000947	100000100	100014589
-100000947	100000100	100014590
-100000947	100000100	100014596
-100000947	100000100	100014597
-100000947	100000100	100014598
-100000947	100000100	100014604
-100000947	100000100	100014605
-100000947	100000100	100014606
-100000947	100000100	100014612
-100000947	100000100	100014613
-100000947	100000100	100014614
-100000947	100000100	100014618
-100000947	100000100	100014619
-100000947	100000100	100014620
-100000947	100000100	100014621
-100000947	100000100	100014622
-100000947	100000100	100014625
-100000947	100000100	100014626
-100000947	100000100	100014627
-100000947	100000100	100014629
-100000947	100000100	100014630
-100000947	100000100	100014631
-100000947	100000100	100014632
-100000947	100000100	100014633
-100000947	100000100	100014634
-100000947	100000100	100014635
-100000947	100000100	100014636
-100000947	100000100	100014637
-100000947	100000100	100014638
-100000947	100000100	100014639
-100000947	100000100	100014640
-100000947	100000100	100014641
-100000947	100000100	100014642
-100000947	100000100	100014643
-100000947	100000100	100014644
-100000947	100000100	100014648
-100000947	100000100	100014649
-100000947	100000100	100014650
-100000947	100000100	100014657
-100000947	100000100	100014659
-100000947	100000100	100014660
-100000947	100000100	100014669
-100000947	100000100	100014670
-100000947	100000100	100014671
-100000947	100000100	100014672
-100000947	100000100	100014673
-100000947	100000100	100014674
-100000947	100000100	100014675
-100000947	100000100	100014676
-100000947	100000100	100014677
-100000947	100000100	100014681
-100000947	100000100	100014682
-100000947	100000100	100014683
-100000947	100000100	100014684
-100000947	100000100	100014688
-100000947	100000100	100014693
-100000947	100000100	100014696
-100000947	100000100	100014698
-100000947	100000100	100014699
-100000947	100000100	100014700
-100000947	100000100	100014701
-100000947	100000100	100014702
-100000947	100000100	100014703
-100000947	100000100	100014704
-100000947	100000100	100014705
-100000947	100000100	100014706
-100000947	100000100	100014707
-100000947	100000100	100014708
-100000947	100000100	100014709
-100000947	100000100	100014710
-100000947	100000100	100014711
-100000947	100000100	100014712
-100000947	100000100	100014713
-100000947	100000100	100014719
-100000947	100000100	100014722
-100000947	100000100	100014725
-100000947	100000100	100014726
-100000947	100000100	100014727
-100000947	100000100	100014732
-100000947	100000100	100014738
-100000947	100000100	100014740
-100000947	100000100	100014741
-100000947	100000100	100014742
-100000947	100000100	100014745
-100000947	100000100	100014746
-100000947	100000100	100014747
-100000947	100000100	100014749
-100000947	100000100	100014750
-100000947	100000100	100014751
-100000947	100000100	100014754
-100000947	100000100	100014755
-100000947	100000100	100014757
-100000947	100000100	100014759
-100000947	100000100	100014767
-100000947	100000100	100014768
-100000947	100000100	100014769
-100000947	100000100	100014773
-100000947	100000100	100014774
-100000947	100000100	100014775
-100000947	100000100	100014776
-100000947	100000100	100014777
-100000947	100000100	100014778
-100000947	100000100	100014779
-100000947	100000100	100014780
-100000947	100000100	100014781
-100000947	100000100	100014782
-100000947	100000100	100014783
-100000947	100000100	100014784
-100000947	100000100	100014785
-100000947	100000100	100014786
-100000947	100000100	100014787
-100000947	100000100	100014788
-100000947	100000100	100014789
-100000947	100000100	100014790
-100000947	100000100	100014794
-100000947	100000100	100014795
-100000947	100000100	100014798
-100000947	100000100	100014799
-100000947	100000100	100014802
-100000947	100000100	100014803
-100000947	100000100	100014804
-100000947	100000100	100014805
-100000947	100000100	100014806
-100000947	100000100	100014807
-100000947	100000100	100014808
-100000947	100000100	100014809
-100000947	100000100	100014810
-100000947	100000100	100014811
-100000947	100000100	100014812
-100000947	100000100	100014813
-100000947	100000100	100014814
-100000947	100000100	100014815
-100000947	100000100	100014816
-100000947	100000100	100014817
-100000947	100000100	100014818
-100000947	100000100	100014819
-100000947	100000100	100014820
-100000947	100000100	100014821
-100000947	100000100	100014822
-100000947	100000100	100014824
-100000947	100000100	100014825
-100000947	100000100	100014826
-100000947	100000100	100014827
-100000947	100000100	100014828
-100000947	100000100	100014833
-100000947	100000100	100014834
-100000947	100000100	100014836
-100000947	100000100	100014837
-100000947	100000100	100014838
-100000947	100000100	100014839
-100000947	100000100	100014840
-100000947	100000100	100014841
-100000947	100000100	100014843
-100000947	100000100	100014845
-100000947	100000100	100014847
-100000947	100000100	100014848
-100000947	100000100	100014849
-100000947	100000100	100014850
-100000947	100000100	100014851
-100000947	100000100	100014852
-100000947	100000100	100014853
-100000947	100000100	100014856
-100000947	100000100	100014857
-100000947	100000100	100014861
-100000947	100000100	100014862
-100000947	100000100	100014864
-100000947	100000100	100014865
-100000947	100000100	100014866
-100000947	100000100	100014867
-100000947	100000100	100014868
-100000947	100000100	100014869
-100000947	100000100	100014870
-100000947	100000100	100014871
-100000947	100000100	100014873
-100000947	100000100	100014874
-100000947	100000100	100014875
-100000947	100000100	100014876
-100000947	100000100	100014877
-100000947	100000100	100014878
-100000947	100000100	100014879
-100000947	100000100	100014880
-100000947	100000100	100014881
-100000947	100000100	100014886
-100000947	100000100	100014887
-100000947	100000100	100014888
-100000947	100000100	100014892
-100000947	100000100	100014893
-100000947	100000100	100014895
-100000947	100000100	100014896
-100000947	100000100	100014897
-100000947	100000100	100014898
-100000947	100000100	100014899
-100000947	100000100	100014905
-100000947	100000100	100014906
-100000947	100000100	100014909
-100000947	100000100	100014911
-100000947	100000100	100014912
-100000947	100000100	100014913
-100000947	100000100	100014914
-100000947	100000100	100014915
-100000947	100000100	100014916
-100000947	100000100	100014917
-100000947	100000100	100014918
-100000947	100000100	100014923
-100000947	100000100	100014925
-100000947	100000100	100014927
-100000947	100000100	100014928
-100000947	100000100	100014929
-100000947	100000100	100014930
-100000947	100000100	100014931
-100000947	100000100	100014932
-100000947	100000100	100014933
-100000947	100000100	100014934
-100000947	100000100	100014935
-100000947	100000100	100014936
-100000947	100000100	100014937
-100000947	100000100	100014938
-100000947	100000100	100014939
-100000947	100000100	100014940
-100000947	100000100	100014941
-100000947	100000100	100014942
-100000947	100000100	100014947
-100000947	100000100	100014948
-100000947	100000100	100014952
-100000947	100000100	100014953
-100000947	100000100	100014954
-100000947	100000100	100014955
-100000947	100000100	100014956
-100000947	100000100	100014957
-100000947	100000100	100014963
-100000947	100000100	100014966
-100000947	100000100	100014967
-100000947	100000100	100014970
-100000947	100000100	100014973
-100000947	100000100	100014976
-100000947	100000100	100014978
-100000947	100000100	100014979
-100000947	100000100	100014980
-100000947	100000100	100014981
-100000947	100000100	100014982
-100000947	100000100	100014985
-100000947	100000100	100014987
-100000947	100000100	100014988
-100000947	100000100	100014989
-100000947	100000100	100014991
-100000947	100000100	100014992
-100000947	100000100	100014993
-100000947	100000100	100014994
-100000947	100000100	100014995
-100000947	100000100	100014996
-100000947	100000100	100014997
-100000947	100000100	100014998
-100000947	100000100	100014999
-100000947	100000100	100015000
-100000947	100000100	100015001
-100000947	100000100	100015007
-100000947	100000100	100015008
-100000947	100000100	100015009
-100000947	100000100	100015010
-100000947	100000100	100015011
-100000947	100000100	100015012
-100000947	100000100	100015014
-100000947	100000100	100015015
-100000947	100000100	100015016
-100000947	100000100	100015017
-100000947	100000100	100015018
-100000947	100000100	100015019
-100000947	100000100	100015020
-100000947	100000100	100015021
-100000947	100000100	100015022
-100000947	100000100	100015023
-100000947	100000100	100015045
-100000947	100000100	100015046
-100000947	100000100	100015047
-100000947	100000100	100015054
-100000947	100000100	100015055
-100000947	100000100	100015056
-100000947	100000100	100015060
-100000947	100000100	100015061
-100000947	100000100	100015062
-100000947	100000100	100015066
-100000947	100000100	100015067
-100000947	100000100	100015068
-100000947	100000100	100015070
-100000947	100000100	100015071
-100000947	100000100	100015072
-100000947	100000100	100015073
-100000947	100000100	100015074
-100000947	100000100	100015075
-100000947	100000100	100015076
-100000947	100000100	100015077
-100000947	100000100	100015078
-100000947	100000100	100015079
-100000947	100000100	100015080
-100000947	100000100	100015081
-100000947	100000100	100015084
-100000947	100000100	100015087
-100000947	100000100	100015088
-100000947	100000100	100015091
-100000947	100000100	100015092
-100000947	100000100	100015098
-100000947	100000100	100015099
-100000947	100000100	100015100
-100000947	100000100	100015104
-100000947	100000100	100015105
-100000947	100000100	100015106
-100000947	100000100	100015110
-100000947	100000100	100015111
-100000947	100000100	100015112
-100000947	100000100	100015113
-100000947	100000100	100015121
-100000947	100000100	100015122
-100000947	100000100	100015126
-100000947	100000100	100015127
-100000947	100000100	100015128
-100000947	100000100	100015132
-100000947	100000100	100015136
-100000947	100000100	100015141
-100000947	100000100	100015142
-100000947	100000100	100015143
-100000947	100000100	100015144
-100000947	100000100	100015145
-100000947	100000100	100015146
-100000947	100000100	100015147
-100000947	100000100	100015148
-100000947	100000100	100015149
-100000947	100000100	100015150
-100000947	100000100	100015151
-100000947	100000100	100015152
-100000947	100000100	100015153
-100000947	100000100	100015154
-100000947	100000100	100015155
-100000947	100000100	100015156
-100000947	100000100	100015157
-100000947	100000100	100015158
-100000947	100000100	100015159
-100000947	100000100	100015161
-100000947	100000100	100015162
-100000947	100000100	100015163
-100000947	100000100	100015164
-100000947	100000100	100015165
-100000947	100000100	100015166
-100000947	100000100	100015170
-100000947	100000100	100015172
-100000947	100000100	100015218
-100000947	100000100	100015219
-100000947	100000100	100015222
-100000947	100000100	100015223
-100000947	100000100	100015228
-100000947	100000100	100015230
-100000947	100000100	100015231
-100000947	100000100	100015232
-100000947	100000100	100015233
-100000947	100000100	100015234
-100000947	100000100	100015248
-100000947	100000100	100015249
-100000947	100000100	100015252
-100000947	100000100	100015253
-100000947	100000100	100015254
-100000947	100000100	100015267
-100000947	100000100	100015268
-100000947	100000100	100015269
-100000947	100000100	100015271
-100000947	100000100	100015276
-100000947	100000100	100015277
-100000947	100000100	100015278
-100000947	100000100	100015279
-100000947	100000100	100015280
-100000947	100000100	100015281
-100000947	100000100	100015282
-100000947	100000100	100015288
-100000947	100000100	100015289
-100000947	100000100	100015291
-100000947	100000100	100015296
-100000947	100000100	100015297
-100000947	100000100	100015301
-100000947	100000100	100015302
-100000947	100000100	100015303
-100000947	100000100	100015307
-100000947	100000100	100015308
-100000947	100000100	100015309
-100000947	100000100	100015318
-100000947	100000100	100015319
-100000947	100000100	100015320
-100000947	100000100	100015321
-100000947	100000100	100015322
-100000947	100000100	100015323
-100000947	100000100	100015324
-100000947	100000100	100015325
-100000947	100000100	100015326
-100000947	100000100	100015327
-100000947	100000100	100015328
-100000947	100000100	100015330
-100000947	100000100	100015331
-100000947	100000100	100015332
-100000947	100000100	100015333
-100000947	100000100	100015334
-100000947	100000100	100015335
-100000947	100000100	100015336
-100000947	100000100	100015339
-100000947	100000100	100015340
-100000947	100000100	100015341
-100000947	100000100	100015344
-100000947	100000100	100015347
-100000947	100000100	100015348
-100000947	100000100	100015352
-100000947	100000100	100015357
-100000947	100000100	100015358
-100000947	100000100	100015359
-100000947	100000100	100015377
-100000947	100000100	100015378
-100000947	100000100	100015379
-100000947	100000100	100015381
-100000947	100000100	100015382
-100000947	100000100	100015390
-100000947	100000100	100015391
-100000947	100000100	100015394
-100000947	100000100	100015395
-100000947	100000100	100015396
-100000947	100000100	100015397
-100000947	100000100	100015400
-100000947	100000100	100015401
-100000947	100000100	100015402
-100000947	100000100	100015403
-100000947	100000100	100015404
-100000947	100000100	100015405
-100000947	100000100	100015406
-100000947	100000100	100015407
-100000947	100000100	100015408
-100000947	100000100	100015410
-100000947	100000100	100015411
-100000947	100000100	100015412
-100000947	100000100	100015417
-100000947	100000100	100015418
-100000947	100000100	100015419
-100000947	100000100	100015420
-100000947	100000100	100015421
-100000947	100000100	100015422
-100000947	100000100	100015425
-100000947	100000100	100015426
-100000947	100000100	100015430
-100000947	100000100	100015431
-100000947	100000100	100015432
-100000947	100000100	100015433
-100000947	100000100	100015443
-100000947	100000100	100015444
-100000947	100000100	100015446
-100000947	100000100	100015447
-100000947	100000100	100015448
-100000947	100000100	100015449
-100000947	100000100	100015450
-100000947	100000100	100015460
-100000947	100000100	100015461
-100000947	100000100	100015462
-100000947	100000100	100015463
-100000947	100000100	100015464
-100000947	100000100	100015465
-100000947	100000100	100015466
-100000947	100000100	100015467
-100000947	100000100	100015468
-100000947	100000100	100015469
-100000947	100000100	100015470
-100000947	100000100	100015471
-100000947	100000100	100015472
-100000947	100000100	100015473
-100000947	100000100	100015481
-100000947	100000100	100015482
-100000947	100000100	100015483
-100000947	100000100	100015484
-100000947	100000100	100015490
-100000947	100000100	100015491
-100000947	100000100	100015492
-100000947	100000100	100015495
-100000947	100000100	100015496
-100000947	100000100	100015497
-100000947	100000100	100015498
-100000947	100000100	100015499
-100000947	100000100	100015500
-100000947	100000100	100015501
-100000947	100000100	100015502
-100000947	100000100	100015503
-100000947	100000100	100015504
-100000947	100000100	100015505
-100000947	100000100	100015506
-100000947	100000100	100015507
-100000947	100000100	100015508
-100000947	100000100	100015509
-100000947	100000100	100015510
-100000947	100000100	100015512
-100000947	100000100	100015513
-100000947	100000100	100015516
-100000947	100000100	100015517
-100000947	100000100	100015522
-100000947	100000100	100015523
-100000947	100000100	100015528
-100000947	100000100	100015529
-100000947	100000100	100015530
-100000947	100000100	100015531
-100000947	100000100	100015532
-100000947	100000100	100015533
-100000947	100000100	100015534
-100000947	100000100	100015538
-100000947	100000100	100015539
-100000947	100000100	100015541
-100000947	100000100	100015544
-100000947	100000100	100015545
-100000947	100000100	100015546
-100000947	100000100	100015584
-100000947	100000100	100015585
-100000947	100000100	100015586
-100000947	100000100	100015587
-100000947	100000100	100015588
-100000947	100000100	100015589
-100000947	100000100	100015590
-100000947	100000100	100015591
-100000947	100000100	100015592
-100000947	100000100	100015593
-100000947	100000100	100015594
-100000947	100000100	100015595
-100000947	100000100	100015596
-100000947	100000100	100015597
-100000947	100000100	100015598
-100000947	100000100	100015599
-100000947	100000100	100015600
-100000947	100000100	100015601
-100000947	100000100	100015602
-100000947	100000100	100015603
-100000947	100000100	100015604
-100000947	100000100	100015605
-100000947	100000100	100015606
-100000947	100000100	100015607
-100000947	100000100	100015608
-100000947	100000100	100015609
-100000947	100000100	100015610
-100000947	100000100	100015611
-100000947	100000100	100015612
-100000947	100000100	100015613
-100000947	100000100	100015621
-100000947	100000100	100015622
-100000947	100000100	100015623
-100000947	100000100	100015624
-100000947	100000100	100015625
-100000947	100000100	100015626
-100000947	100000100	100015632
-100000947	100000100	100015633
-100000947	100000100	100015635
-100000947	100000100	100015636
-100000947	100000100	100015637
-100000947	100000100	100015638
-100000947	100000100	100015639
-100000947	100000100	100015640
-100000947	100000100	100015641
-100000947	100000100	100015642
-100000947	100000100	100015643
-100000947	100000100	100015644
-100000947	100000100	100015645
-100000947	100000100	100015646
-100000947	100000100	100015647
-100000947	100000100	100015648
-100000947	100000100	100015649
-100000947	100000100	100015655
-100000947	100000100	100015656
-100000947	100000100	100015657
-100000947	100000100	100015658
-100000947	100000100	100015659
-100000947	100000100	100015660
-100000947	100000100	100015661
-100000947	100000100	100015662
-100000947	100000100	100015663
-100000947	100000100	100015664
-100000947	100000100	100015665
-100000947	100000100	100015666
-100000947	100000100	100015667
-100000947	100000100	100015668
-100000947	100000100	100015669
-100000947	100000100	100015670
-100000947	100000100	100015671
-100000947	100000100	100015672
-100000947	100000100	100015673
-100000947	100000100	100015674
-100000947	100000100	100015675
-100000947	100000100	100015676
-100000947	100000100	100015677
-100000947	100000100	100015678
-100000947	100000100	100015679
-100000947	100000100	100015680
-100000947	100000100	100015682
-100000947	100000100	100015683
-100000947	100000100	100015684
-100000947	100000100	100015685
-100000947	100000100	100015691
-100000947	100000100	100015695
-100000947	100000100	100015696
-100000947	100000100	100015697
-100000947	100000100	100015698
-100000947	100000100	100015699
-100000947	100000100	100015700
-100000947	100000100	100015701
-100000947	100000100	100015702
-100000947	100000100	100015703
-100000947	100000100	100015705
-100000947	100000100	100015706
-100000947	100000100	100015707
-100000947	100000100	100015708
-100000947	100000100	100015710
-100000947	100000100	100015711
-100000947	100000100	100015713
-100000947	100000100	100015714
-100000947	100000100	100015715
-100000947	100000100	100015716
-100000947	100000100	100015717
-100000947	100000100	100015718
-100000947	100000100	100015719
-100000947	100000100	100015720
-100000947	100000100	100015721
-100000947	100000100	100015722
-100000947	100000100	100015723
-100000947	100000100	100015724
-100000947	100000100	100015725
-100000947	100000100	100015726
-100000947	100000100	100015727
-100000947	100000100	100015728
-100000947	100000100	100015729
-100000947	100000100	100015730
-100000947	100000100	100015731
-100000947	100000100	100015732
-100000947	100000100	100015733
-100000947	100000100	100015734
-100000947	100000100	100015735
-100000947	100000100	100015736
-100000947	100000100	100015737
-100000947	100000100	100015738
-100000947	100000100	100015739
-100000947	100000100	100015740
-100000947	100000100	100015741
-100000947	100000100	100015742
-100000947	100000100	100015743
-100000947	100000100	100015744
-100000947	100000100	100015745
-100000947	100000100	100015746
-100000947	100000100	100015747
-100000947	100000100	100015748
-100000947	100000100	100015749
-100000947	100000100	100015750
-100000947	100000100	100015751
-100000947	100000100	100015752
-100000947	100000100	100015753
-100000947	100000100	100015754
-100000947	100000100	100015755
-100000947	100000100	100015756
-100000947	100000100	100015757
-100000947	100000100	100015758
-100000947	100000100	100015759
-100000947	100000100	100015760
-100000947	100000100	100015761
-100000947	100000100	100015764
-100000947	100000100	100015766
-100000947	100000100	100015769
-100000947	100000100	100015770
-100000947	100000100	100015771
-100000947	100000100	100015772
-100000947	100000100	100015773
-100000947	100000100	100015774
-100000947	100000100	100015775
-100000947	100000100	100015776
-100000947	100000100	100015777
-100000947	100000100	100015778
-100000947	100000100	100015779
-100000947	100000100	100015780
-100000947	100000100	100015781
-100000947	100000100	100015782
-100000947	100000100	100015783
-100000947	100000100	100015784
-100000947	100000100	100015785
-100000947	100000100	100015786
-100000947	100000100	100015787
-100000947	100000100	100015788
-100000947	100000100	100015789
-100000947	100000100	100015790
-100000947	100000100	100015791
-100000947	100000100	100015792
-100000947	100000100	100015794
-100000947	100000100	100015795
-100000947	100000100	100015796
-100000947	100000100	100015797
-100000947	100000100	100015798
-100000947	100000100	100015799
-100000947	100000100	100015800
-100000947	100000100	100015801
-100000947	100000100	100015802
-100000947	100000100	100015803
-100000947	100000100	100015804
-100000947	100000100	100015805
-100000947	100000100	100015806
 100000949	100000100	100015453
 100000949	100000100	100015454
 100000949	100000100	100015455
@@ -5847,11 +5154,872 @@ COPY public.rel_perfil_recurso (id_perfil, id_sistema, id_recurso) FROM stdin;
 100000938	100000100	100015984
 100000938	100000100	100015985
 100000938	100000100	100015986
+100000951	100000100	100014435
+100000951	100000100	100014436
+100000951	100000100	100014437
+100000951	100000100	100014438
+100000951	100000100	100014439
+100000951	100000100	100014440
+100000951	100000100	100014443
+100000951	100000100	100014444
+100000951	100000100	100014445
+100000951	100000100	100014450
+100000951	100000100	100014451
+100000951	100000100	100014452
+100000951	100000100	100014466
+100000951	100000100	100014467
+100000951	100000100	100014468
+100000951	100000100	100014474
+100000951	100000100	100014475
+100000951	100000100	100014476
+100000951	100000100	100014483
+100000951	100000100	100014484
+100000951	100000100	100014485
+100000951	100000100	100014491
+100000951	100000100	100014492
+100000951	100000100	100014493
+100000951	100000100	100014497
+100000951	100000100	100014498
+100000951	100000100	100014499
+100000951	100000100	100014508
+100000951	100000100	100014509
+100000951	100000100	100014510
+100000951	100000100	100014511
+100000951	100000100	100014512
+100000951	100000100	100014513
+100000951	100000100	100014514
+100000951	100000100	100014515
+100000951	100000100	100014518
+100000951	100000100	100014519
+100000951	100000100	100014520
+100000951	100000100	100014524
+100000951	100000100	100014525
+100000951	100000100	100014526
+100000951	100000100	100014530
+100000951	100000100	100014531
+100000951	100000100	100014532
+100000951	100000100	100014533
+100000951	100000100	100014534
+100000951	100000100	100014535
+100000951	100000100	100014536
+100000951	100000100	100014537
+100000951	100000100	100014538
+100000951	100000100	100014539
+100000951	100000100	100014540
+100000951	100000100	100014541
+100000951	100000100	100014544
+100000951	100000100	100014545
+100000951	100000100	100014546
+100000951	100000100	100014556
+100000951	100000100	100014557
+100000951	100000100	100014559
+100000951	100000100	100014563
+100000951	100000100	100014566
+100000951	100000100	100014567
+100000951	100000100	100014568
+100000951	100000100	100014569
+100000951	100000100	100014570
+100000951	100000100	100014571
+100000951	100000100	100014580
+100000951	100000100	100014581
+100000951	100000100	100014582
+100000951	100000100	100014588
+100000951	100000100	100014589
+100000951	100000100	100014590
+100000951	100000100	100014596
+100000951	100000100	100014597
+100000951	100000100	100014598
+100000951	100000100	100014604
+100000951	100000100	100014605
+100000951	100000100	100014606
+100000951	100000100	100014612
+100000951	100000100	100014613
+100000951	100000100	100014614
+100000951	100000100	100014625
+100000951	100000100	100014626
+100000951	100000100	100014627
+100000951	100000100	100014629
+100000951	100000100	100014630
+100000951	100000100	100014631
+100000951	100000100	100014632
+100000951	100000100	100014633
+100000951	100000100	100014634
+100000951	100000100	100014635
+100000951	100000100	100014636
+100000951	100000100	100014637
+100000951	100000100	100014638
+100000951	100000100	100014639
+100000951	100000100	100014640
+100000951	100000100	100014641
+100000951	100000100	100014642
+100000951	100000100	100014643
+100000951	100000100	100014644
+100000951	100000100	100014648
+100000951	100000100	100014649
+100000951	100000100	100014650
+100000951	100000100	100014657
+100000951	100000100	100014659
+100000951	100000100	100014660
+100000951	100000100	100014688
+100000951	100000100	100014693
+100000951	100000100	100014698
+100000951	100000100	100014705
+100000951	100000100	100014706
+100000951	100000100	100014707
+100000951	100000100	100014708
+100000951	100000100	100014709
+100000951	100000100	100014710
+100000951	100000100	100014711
+100000951	100000100	100014712
+100000951	100000100	100014713
+100000951	100000100	100014719
+100000951	100000100	100014722
+100000951	100000100	100014725
+100000951	100000100	100014726
+100000951	100000100	100014727
+100000951	100000100	100014740
+100000951	100000100	100014745
+100000951	100000100	100014746
+100000951	100000100	100014747
+100000951	100000100	100014749
+100000951	100000100	100014750
+100000951	100000100	100014751
+100000951	100000100	100014754
+100000951	100000100	100014755
+100000951	100000100	100014757
+100000951	100000100	100014759
+100000951	100000100	100014767
+100000951	100000100	100014768
+100000951	100000100	100014769
+100000951	100000100	100014774
+100000951	100000100	100014775
+100000951	100000100	100014776
+100000951	100000100	100014777
+100000951	100000100	100014778
+100000951	100000100	100014779
+100000951	100000100	100014780
+100000951	100000100	100014784
+100000951	100000100	100014785
+100000951	100000100	100014794
+100000951	100000100	100014795
+100000951	100000100	100014798
+100000951	100000100	100014799
+100000951	100000100	100014806
+100000951	100000100	100014807
+100000951	100000100	100014808
+100000951	100000100	100014809
+100000951	100000100	100014814
+100000951	100000100	100014815
+100000951	100000100	100014816
+100000951	100000100	100014817
+100000951	100000100	100014818
+100000951	100000100	100014819
+100000951	100000100	100014820
+100000951	100000100	100014821
+100000951	100000100	100014822
+100000951	100000100	100014824
+100000951	100000100	100014825
+100000951	100000100	100014826
+100000951	100000100	100014827
+100000951	100000100	100014833
+100000951	100000100	100014834
+100000951	100000100	100014836
+100000951	100000100	100014838
+100000951	100000100	100014839
+100000951	100000100	100014841
+100000951	100000100	100014843
+100000951	100000100	100014845
+100000951	100000100	100014847
+100000951	100000100	100014848
+100000951	100000100	100014849
+100000951	100000100	100014850
+100000951	100000100	100014851
+100000951	100000100	100014852
+100000951	100000100	100014853
+100000951	100000100	100014856
+100000951	100000100	100014857
+100000951	100000100	100014861
+100000951	100000100	100014862
+100000951	100000100	100014864
+100000951	100000100	100014865
+100000951	100000100	100014866
+100000951	100000100	100014867
+100000951	100000100	100014868
+100000951	100000100	100014869
+100000951	100000100	100014870
+100000951	100000100	100014871
+100000951	100000100	100014873
+100000951	100000100	100014874
+100000951	100000100	100014893
+100000951	100000100	100014895
+100000951	100000100	100014896
+100000951	100000100	100014897
+100000951	100000100	100014898
+100000951	100000100	100014899
+100000951	100000100	100014905
+100000951	100000100	100014906
+100000951	100000100	100014909
+100000951	100000100	100014923
+100000951	100000100	100014925
+100000951	100000100	100014927
+100000951	100000100	100014928
+100000951	100000100	100014929
+100000951	100000100	100014931
+100000951	100000100	100014932
+100000951	100000100	100014933
+100000951	100000100	100014934
+100000951	100000100	100014935
+100000951	100000100	100014936
+100000951	100000100	100014937
+100000951	100000100	100014938
+100000951	100000100	100014939
+100000951	100000100	100014940
+100000951	100000100	100014941
+100000951	100000100	100014942
+100000951	100000100	100014947
+100000951	100000100	100014948
+100000951	100000100	100014952
+100000951	100000100	100014953
+100000951	100000100	100014954
+100000951	100000100	100014955
+100000951	100000100	100014956
+100000951	100000100	100014957
+100000951	100000100	100014963
+100000951	100000100	100014966
+100000951	100000100	100014967
+100000951	100000100	100014970
+100000951	100000100	100014973
+100000951	100000100	100014976
+100000951	100000100	100014978
+100000951	100000100	100014979
+100000951	100000100	100014980
+100000951	100000100	100014981
+100000951	100000100	100014982
+100000951	100000100	100014985
+100000951	100000100	100014987
+100000951	100000100	100014988
+100000951	100000100	100014989
+100000951	100000100	100014991
+100000951	100000100	100014992
+100000951	100000100	100014993
+100000951	100000100	100015007
+100000951	100000100	100015008
+100000951	100000100	100015009
+100000951	100000100	100015010
+100000951	100000100	100015017
+100000951	100000100	100015018
+100000951	100000100	100015019
+100000951	100000100	100015020
+100000951	100000100	100015021
+100000951	100000100	100015022
+100000951	100000100	100015023
+100000951	100000100	100015045
+100000951	100000100	100015046
+100000951	100000100	100015047
+100000951	100000100	100015054
+100000951	100000100	100015055
+100000951	100000100	100015056
+100000951	100000100	100015080
+100000951	100000100	100015081
+100000951	100000100	100015088
+100000951	100000100	100015091
+100000951	100000100	100015092
+100000951	100000100	100015098
+100000951	100000100	100015099
+100000951	100000100	100015100
+100000951	100000100	100015104
+100000951	100000100	100015105
+100000951	100000100	100015106
+100000951	100000100	100015110
+100000951	100000100	100015111
+100000951	100000100	100015112
+100000951	100000100	100015113
+100000951	100000100	100015121
+100000951	100000100	100015122
+100000951	100000100	100015126
+100000951	100000100	100015127
+100000951	100000100	100015128
+100000951	100000100	100015132
+100000951	100000100	100015136
+100000951	100000100	100015141
+100000951	100000100	100015142
+100000951	100000100	100015143
+100000951	100000100	100015144
+100000951	100000100	100015145
+100000951	100000100	100015146
+100000951	100000100	100015161
+100000951	100000100	100015162
+100000951	100000100	100015163
+100000951	100000100	100015164
+100000951	100000100	100015165
+100000951	100000100	100015166
+100000951	100000100	100015170
+100000951	100000100	100015172
+100000951	100000100	100015218
+100000951	100000100	100015219
+100000951	100000100	100015222
+100000951	100000100	100015223
+100000951	100000100	100015228
+100000951	100000100	100015234
+100000951	100000100	100015248
+100000951	100000100	100015249
+100000951	100000100	100015252
+100000951	100000100	100015253
+100000951	100000100	100015254
+100000951	100000100	100015267
+100000951	100000100	100015268
+100000951	100000100	100015269
+100000951	100000100	100015271
+100000951	100000100	100015276
+100000951	100000100	100015277
+100000951	100000100	100015278
+100000951	100000100	100015279
+100000951	100000100	100015280
+100000951	100000100	100015281
+100000951	100000100	100015282
+100000951	100000100	100015288
+100000951	100000100	100015289
+100000951	100000100	100015291
+100000951	100000100	100015296
+100000951	100000100	100015297
+100000951	100000100	100015301
+100000951	100000100	100015302
+100000951	100000100	100015303
+100000951	100000100	100015318
+100000951	100000100	100015319
+100000951	100000100	100015322
+100000951	100000100	100015323
+100000951	100000100	100015324
+100000951	100000100	100015325
+100000951	100000100	100015326
+100000951	100000100	100015327
+100000951	100000100	100015328
+100000951	100000100	100015330
+100000951	100000100	100015331
+100000951	100000100	100015333
+100000951	100000100	100015334
+100000951	100000100	100015335
+100000951	100000100	100015339
+100000951	100000100	100015340
+100000951	100000100	100015341
+100000951	100000100	100015344
+100000951	100000100	100015347
+100000951	100000100	100015348
+100000951	100000100	100015352
+100000951	100000100	100015357
+100000951	100000100	100015358
+100000951	100000100	100015359
+100000951	100000100	100015378
+100000951	100000100	100015379
+100000951	100000100	100015381
+100000951	100000100	100015382
+100000951	100000100	100015394
+100000951	100000100	100015395
+100000951	100000100	100015396
+100000951	100000100	100015397
+100000951	100000100	100015400
+100000951	100000100	100015401
+100000951	100000100	100015402
+100000951	100000100	100015403
+100000951	100000100	100015404
+100000951	100000100	100015405
+100000951	100000100	100015406
+100000951	100000100	100015407
+100000951	100000100	100015408
+100000951	100000100	100015410
+100000951	100000100	100015411
+100000951	100000100	100015412
+100000951	100000100	100015417
+100000951	100000100	100015418
+100000951	100000100	100015419
+100000951	100000100	100015420
+100000951	100000100	100015421
+100000951	100000100	100015425
+100000951	100000100	100015426
+100000951	100000100	100015430
+100000951	100000100	100015431
+100000951	100000100	100015432
+100000951	100000100	100015433
+100000951	100000100	100015443
+100000951	100000100	100015444
+100000951	100000100	100015446
+100000951	100000100	100015447
+100000951	100000100	100015448
+100000951	100000100	100015449
+100000951	100000100	100015450
+100000951	100000100	100015460
+100000951	100000100	100015461
+100000951	100000100	100015462
+100000951	100000100	100015463
+100000951	100000100	100015464
+100000951	100000100	100015465
+100000951	100000100	100015472
+100000951	100000100	100015473
+100000951	100000100	100015484
+100000951	100000100	100015490
+100000951	100000100	100015491
+100000951	100000100	100015492
+100000951	100000100	100015495
+100000951	100000100	100015496
+100000951	100000100	100015497
+100000951	100000100	100015498
+100000951	100000100	100015499
+100000951	100000100	100015500
+100000951	100000100	100015501
+100000951	100000100	100015502
+100000951	100000100	100015503
+100000951	100000100	100015504
+100000951	100000100	100015505
+100000951	100000100	100015506
+100000951	100000100	100015507
+100000951	100000100	100015508
+100000951	100000100	100015509
+100000951	100000100	100015510
+100000951	100000100	100015512
+100000951	100000100	100015513
+100000951	100000100	100015516
+100000951	100000100	100015517
+100000951	100000100	100015522
+100000951	100000100	100015523
+100000951	100000100	100015528
+100000951	100000100	100015529
+100000951	100000100	100015530
+100000951	100000100	100015531
+100000951	100000100	100015532
+100000951	100000100	100015533
+100000951	100000100	100015534
+100000951	100000100	100015538
+100000951	100000100	100015539
+100000951	100000100	100015541
+100000951	100000100	100015553
+100000951	100000100	100015584
+100000951	100000100	100015585
+100000951	100000100	100015586
+100000951	100000100	100015587
+100000951	100000100	100015588
+100000951	100000100	100015589
+100000951	100000100	100015590
+100000951	100000100	100015591
+100000951	100000100	100015592
+100000951	100000100	100015593
+100000951	100000100	100015594
+100000951	100000100	100015595
+100000951	100000100	100015596
+100000951	100000100	100015597
+100000951	100000100	100015598
+100000951	100000100	100015599
+100000951	100000100	100015600
+100000951	100000100	100015601
+100000951	100000100	100015602
+100000951	100000100	100015603
+100000951	100000100	100015604
+100000951	100000100	100015605
+100000951	100000100	100015606
+100000951	100000100	100015607
+100000951	100000100	100015608
+100000951	100000100	100015609
+100000951	100000100	100015610
+100000951	100000100	100015611
+100000951	100000100	100015612
+100000951	100000100	100015613
+100000951	100000100	100015621
+100000951	100000100	100015622
+100000951	100000100	100015623
+100000951	100000100	100015624
+100000951	100000100	100015625
+100000951	100000100	100015626
+100000951	100000100	100015632
+100000951	100000100	100015633
+100000951	100000100	100015635
+100000951	100000100	100015636
+100000951	100000100	100015637
+100000951	100000100	100015638
+100000951	100000100	100015639
+100000951	100000100	100015640
+100000951	100000100	100015641
+100000951	100000100	100015642
+100000951	100000100	100015643
+100000951	100000100	100015644
+100000951	100000100	100015645
+100000951	100000100	100015646
+100000951	100000100	100015647
+100000951	100000100	100015648
+100000951	100000100	100015649
+100000951	100000100	100015655
+100000951	100000100	100015657
+100000951	100000100	100015658
+100000951	100000100	100015659
+100000951	100000100	100015660
+100000951	100000100	100015661
+100000951	100000100	100015662
+100000951	100000100	100015663
+100000951	100000100	100015664
+100000951	100000100	100015665
+100000951	100000100	100015666
+100000951	100000100	100015667
+100000951	100000100	100015668
+100000951	100000100	100015669
+100000951	100000100	100015670
+100000951	100000100	100015671
+100000951	100000100	100015672
+100000951	100000100	100015673
+100000951	100000100	100015674
+100000951	100000100	100015675
+100000951	100000100	100015676
+100000951	100000100	100015677
+100000951	100000100	100015678
+100000951	100000100	100015679
+100000951	100000100	100015680
+100000951	100000100	100015682
+100000951	100000100	100015683
+100000951	100000100	100015684
+100000951	100000100	100015685
+100000951	100000100	100015691
+100000951	100000100	100015695
+100000951	100000100	100015696
+100000951	100000100	100015697
+100000951	100000100	100015698
+100000951	100000100	100015699
+100000951	100000100	100015700
+100000951	100000100	100015701
+100000951	100000100	100015702
+100000951	100000100	100015703
+100000951	100000100	100015705
+100000951	100000100	100015706
+100000951	100000100	100015707
+100000951	100000100	100015708
+100000951	100000100	100015710
+100000951	100000100	100015711
+100000951	100000100	100015713
+100000951	100000100	100015714
+100000951	100000100	100015715
+100000951	100000100	100015716
+100000951	100000100	100015717
+100000951	100000100	100015718
+100000951	100000100	100015719
+100000951	100000100	100015720
+100000951	100000100	100015721
+100000951	100000100	100015722
+100000951	100000100	100015723
+100000951	100000100	100015724
+100000951	100000100	100015725
+100000951	100000100	100015726
+100000951	100000100	100015727
+100000951	100000100	100015728
+100000951	100000100	100015729
+100000951	100000100	100015730
+100000951	100000100	100015731
+100000951	100000100	100015732
+100000951	100000100	100015733
+100000951	100000100	100015734
+100000951	100000100	100015735
+100000951	100000100	100015736
+100000951	100000100	100015743
+100000951	100000100	100015744
+100000951	100000100	100015745
+100000951	100000100	100015746
+100000951	100000100	100015747
+100000951	100000100	100015748
+100000951	100000100	100015749
+100000951	100000100	100015750
+100000951	100000100	100015751
+100000951	100000100	100015752
+100000951	100000100	100015753
+100000951	100000100	100015755
+100000951	100000100	100015756
+100000951	100000100	100015757
+100000951	100000100	100015758
+100000951	100000100	100015759
+100000951	100000100	100015760
+100000951	100000100	100015761
+100000951	100000100	100015764
+100000951	100000100	100015766
+100000951	100000100	100015769
+100000951	100000100	100015770
+100000951	100000100	100015771
+100000951	100000100	100015772
+100000951	100000100	100015773
+100000951	100000100	100015774
+100000951	100000100	100015775
+100000951	100000100	100015776
+100000951	100000100	100015777
+100000951	100000100	100015778
+100000951	100000100	100015779
+100000951	100000100	100015780
+100000951	100000100	100015781
+100000951	100000100	100015782
+100000951	100000100	100015783
+100000951	100000100	100015784
+100000951	100000100	100015785
+100000951	100000100	100015786
+100000951	100000100	100015787
+100000951	100000100	100015788
+100000951	100000100	100015789
+100000951	100000100	100015790
+100000951	100000100	100015791
+100000951	100000100	100015792
+100000951	100000100	100015794
+100000951	100000100	100015795
+100000951	100000100	100015796
+100000951	100000100	100015797
+100000951	100000100	100015798
+100000951	100000100	100015799
+100000951	100000100	100015800
+100000951	100000100	100015801
+100000951	100000100	100015802
+100000951	100000100	100015803
+100000951	100000100	100015804
+100000951	100000100	100015805
+100000951	100000100	100015806
+100000951	100000100	100015825
+100000951	100000100	100015826
+100000951	100000100	100015827
+100000951	100000100	100015832
+100000951	100000100	100015835
+100000951	100000100	100015838
+100000951	100000100	100015839
+100000951	100000100	100015843
+100000951	100000100	100015845
+100000951	100000100	100015846
+100000951	100000100	100015850
+100000951	100000100	100015853
+100000951	100000100	100015854
+100000951	100000100	100015855
+100000951	100000100	100015858
+100000951	100000100	100015860
+100000951	100000100	100015861
+100000951	100000100	100015866
+100000951	100000100	100015868
+100000951	100000100	100015869
+100000951	100000100	100015873
+100000951	100000100	100015875
+100000951	100000100	100015877
+100000951	100000100	100015879
+100000951	100000100	100015880
+100000951	100000100	100015881
+100000951	100000100	100015883
+100000951	100000100	100015884
+100000951	100000100	100015890
+100000951	100000100	100015891
+100000951	100000100	100015892
+100000951	100000100	100015893
+100000951	100000100	100015894
+100000951	100000100	100015895
+100000951	100000100	100015896
+100000951	100000100	100015897
+100000951	100000100	100015900
+100000951	100000100	100015901
+100000951	100000100	100015902
+100000951	100000100	100015903
+100000951	100000100	100015904
+100000951	100000100	100015905
+100000951	100000100	100015906
+100000951	100000100	100015913
+100000951	100000100	100015914
+100000951	100000100	100015919
+100000951	100000100	100015920
+100000951	100000100	100015926
+100000951	100000100	100015927
+100000951	100000100	100015933
+100000951	100000100	100015934
+100000951	100000100	100015940
+100000951	100000100	100015943
+100000951	100000100	100015949
+100000951	100000100	100015954
+100000951	100000100	100015956
+100000951	100000100	100015959
+100000951	100000100	100015961
+100000951	100000100	100015964
+100000951	100000100	100015965
+100000951	100000100	100015970
+100000951	100000100	100015971
+100000951	100000100	100015972
+100000951	100000100	100015973
+100000951	100000100	100015974
+100000951	100000100	100015975
+100000951	100000100	100015976
+100000951	100000100	100015982
+100000951	100000100	100015983
+100000951	100000100	100015984
+100000951	100000100	100015985
+100000951	100000100	100015986
+100000951	100000100	100015467
+100000951	100000100	100015466
+100000951	100000100	100015230
+100000951	100000100	100015231
+100000951	100000100	100015233
+100000951	100000100	100015232
+100000951	100000100	100015149
+100000951	100000100	100015150
+100000951	100000100	100015151
+100000951	100000100	100015152
+100000951	100000100	100015153
+100000951	100000100	100014995
+100000951	100000100	100014994
+100000951	100000100	100014997
+100000951	100000100	100014996
+100000951	100000100	100014732
+100000951	100000100	100014551
+100000951	100000100	100015012
+100000951	100000100	100014552
+100000951	100000100	100014555
+100000951	100000100	100015738
+100000951	100000100	100015737
+100000951	100000100	100015740
+100000951	100000100	100015739
+100000951	100000100	100015741
+100000951	100000100	100015742
+100000951	100000100	100014550
+100000951	100000100	100014553
+100000951	100000100	100015154
+100000951	100000100	100015155
+100000951	100000100	100015156
+100000951	100000100	100015157
+100000951	100000100	100015656
+100000951	100000100	100015159
+100000951	100000100	100014783
+100000951	100000100	100014786
+100000951	100000100	100014554
+100000951	100000100	100015332
+100000951	100000100	100015468
+100000951	100000100	100015469
+100000951	100000100	100015471
+100000951	100000100	100015470
+100000951	100000100	100014840
+100000951	100000100	100014781
+100000951	100000100	100014803
+100000951	100000100	100014805
+100000951	100000100	100014804
+100000951	100000100	100014738
+100000951	100000100	100014572
+100000951	100000100	100014573
+100000951	100000100	100014575
+100000951	100000100	100014574
+100000951	100000100	100015481
+100000951	100000100	100014886
+100000951	100000100	100014888
+100000951	100000100	100014887
+100000951	100000100	100014618
+100000951	100000100	100014619
+100000951	100000100	100014622
+100000951	100000100	100014620
+100000951	100000100	100014621
+100000951	100000100	100015321
+100000951	100000100	100014681
+100000951	100000100	100014682
+100000951	100000100	100014684
+100000951	100000100	100014683
+100000951	100000100	100014699
+100000951	100000100	100014701
+100000951	100000100	100014700
+100000951	100000100	100014788
+100000951	100000100	100014787
+100000951	100000100	100014789
+100000951	100000100	100015377
+100000951	100000100	100014790
+100000951	100000100	100014837
+100000951	100000100	100014811
+100000951	100000100	100014812
+100000951	100000100	100014813
+100000951	100000100	100015015
+100000951	100000100	100015014
+100000951	100000100	100015016
+100000951	100000100	100015084
+100000951	100000100	100015087
+100000951	100000100	100015336
+100000951	100000100	100014877
+100000951	100000100	100014876
+100000951	100000100	100014878
+100000951	100000100	100014911
+100000951	100000100	100014880
+100000951	100000100	100014912
+100000951	100000100	100014879
+100000951	100000100	100014930
+100000951	100000100	100014913
+100000951	100000100	100014914
+100000951	100000100	100014881
+100000951	100000100	100014915
+100000951	100000100	100014916
+100000951	100000100	100014917
+100000951	100000100	100014918
+100000951	100000100	100014999
+100000951	100000100	100014998
+100000951	100000100	100015001
+100000951	100000100	100015000
+100000951	100000100	100014782
+100000951	100000100	100014670
+100000951	100000100	100014703
+100000951	100000100	100015011
+100000951	100000100	100015754
+100000951	100000100	100014671
+100000951	100000100	100014704
+100000951	100000100	100014675
+100000951	100000100	100015483
+100000951	100000100	100014696
+100000951	100000100	100014773
+100000951	100000100	100015908
+100000951	100000100	100015907
+100000951	100000100	100015910
+100000951	100000100	100015909
+100000951	100000100	100015911
+100000951	100000100	100014741
+100000951	100000100	100014669
+100000951	100000100	100015482
+100000951	100000100	100015422
+100000951	100000100	100014892
+100000951	100000100	100014828
+100000951	100000100	100014672
+100000951	100000100	100015158
+100000951	100000100	100015320
+100000951	100000100	100014810
+100000951	100000100	100014702
+100000951	100000100	100014742
+100000951	100000100	100014677
+100000951	100000100	100014673
+100000951	100000100	100014676
+100000951	100000100	100015545
+100000951	100000100	100015147
+100000951	100000100	100015148
+100000951	100000100	100014802
+100000951	100000100	100015882
+100000951	100000100	100015885
+100000951	100000100	100015886
+100000951	100000100	100015887
+100000951	100000100	100015888
+100000951	100000100	100015889
+100000951	100000100	100015546
+100000951	100000100	100015390
+100000951	100000100	100015391
+100000951	100000100	100015066
+100000951	100000100	100015068
+100000951	100000100	100015067
+100000951	100000100	100015071
+100000951	100000100	100015070
+100000951	100000100	100015072
+100000951	100000100	100015073
+100000951	100000100	100015307
+100000951	100000100	100015308
+100000951	100000100	100015309
+100000951	100000100	100015060
+100000951	100000100	100015062
+100000951	100000100	100015061
+100000951	100000100	100015076
+100000951	100000100	100015075
+100000951	100000100	100015077
+100000951	100000100	100015078
+100000939	100000100	100014465
+100000939	100000100	100014464
+100000939	100000100	100014466
+100000939	100000100	100014470
+100000939	100000100	100014469
+100000939	100000100	100014467
+100000939	100000100	100014471
+100000939	100000100	100014468
 \.
 
 
 --
--- Data for Name: rel_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: rel_regra_auditoria_recurso; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.rel_regra_auditoria_recurso (id_recurso, id_sistema, id_regra_auditoria) FROM stdin;
@@ -6360,7 +6528,7 @@ COPY public.rel_regra_auditoria_recurso (id_recurso, id_sistema, id_regra_audito
 
 
 --
--- Data for Name: servidor_autenticacao; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: servidor_autenticacao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.servidor_autenticacao (id_servidor_autenticacao, nome, sta_tipo, endereco, porta, sufixo, usuario_pesquisa, senha_pesquisa, contexto_pesquisa, atributo_filtro_pesquisa, atributo_retorno_pesquisa, versao) FROM stdin;
@@ -6370,17 +6538,17 @@ COPY public.servidor_autenticacao (id_servidor_autenticacao, nome, sta_tipo, end
 
 
 --
--- Data for Name: sistema; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: sistema; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.sistema (id_sistema, id_orgao, id_hierarquia, sigla, descricao, pagina_inicial, sin_ativo, web_service, logo, sta_2_fatores, esquema_login, servicos_liberados, chave_acesso, crc) FROM stdin;
-100000099	0	100000018	SIP	Sistema de Permissões	http://localhost:8000/sip	S	\N	iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAYAAAAKhRhlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MkNDRTkzMEY0RjJFMjExOEZDREM0OEY5REVERTIyMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozOTM0MUE4N0YzMTExMUUyODIyNUE2M0UxNkU5MEY4MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozOTM0MUE4NkYzMTExMUUyODIyNUE2M0UxNkU5MEY4MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJGM0EzNkE5RkNGMkUyMTE5MzEwQzJEQTM3N0RGMkFCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjYyQ0NFOTMwRjRGMkUyMTE4RkNEQzQ4RjlERURFMjIyIi8+IDwvcmRmOkRlc2NyaXB0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	P	dsgov	\N	$2a$12$VGlzUNkiuuSRRarooGKzzOOvZnMKz/bNIz.721dwe/dq75CGyfj6S	d27791b8
-100000100	0	100000018	SEI	Sistema Eletrônico de Informações	http://localhost:8000/sei/inicializar.php	S	http://localhost:8000/sei/controlador_ws.php?servico=sip	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	P	dsgov	1,2,3,4,5,6	$2a$12$U1UYoWD3Yer2fedJEGOti.YN.cCBByAqI21tsrQ5Qi9.VcTfn4thS	7babf862
+100000099	0	100000018	SIP	Sistema de Permissões	https://localhost/sip	S	\N	iVBORw0KGgoAAAANSUhEUgAAAJYAAADICAYAAAAKhRhlAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo2MkNDRTkzMEY0RjJFMjExOEZDREM0OEY5REVERTIyMiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozOTM0MUE4N0YzMTExMUUyODIyNUE2M0UxNkU5MEY4MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozOTM0MUE4NkYzMTExMUUyODIyNUE2M0UxNkU5MEY4MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjJGM0EzNkE5RkNGMkUyMTE5MzEwQzJEQTM3N0RGMkFCIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjYyQ0NFOTMwRjRGMkUyMTE4RkNEQzQ4RjlERURFMjIyIi8+IDwvcmRmOkRlc2NyaXB0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	P	dsgov	\N	$2a$12$VGlzUNkiuuSRRarooGKzzOOvZnMKz/bNIz.721dwe/dq75CGyfj6S	d27791b8
+100000100	0	100000018	SEI	Sistema Eletrônico de Informações	https://localhost/sei/inicializar.php	S	https://localhost/sei/controlador_ws.php?servico=sip	iVBORw0KGgoAAAANSUhEUgAAAH0AAABQCAYAAAA0snrNAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAOJgAADiYBou8l/AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAA/ZSURBVHic7Z17dFRVlsa/faoqVbdCJEDABg0IlYCPRdMivlEbVGzbtXyNukad1qEdRSDhYetiZtppq1udpmFGMVUFKzp2jzPto3FGbXucNS20sW211YHxrUBVBRWlVaSBYOpWkrrnmz8SIo88qs69VYma3x9kUXX32V+yq+49d5999hUMMSDcs+648VDtV4A4mcAY0aCIfOxAXhpW0f7w9ads/aRX26cnvwDhaSZ+RfNCMZc9hAlr18L38fDaqFa4UYCqHg+ibBefbqifnVohAh78ttugKxPDIcz4RdNRoe0jah6jwq29BhwAhOOoZXlsfe2/r10Ln9c6hoJeQlpygYRALsz3eAJXfzxy8gqvdQwFvUTE1tWcB+CaQu0ILrjntxGjU3lvDAW9RGhR8wH4CzYkQhC50UstQ0EvAcvXTRouwJnmI8isaNO3C//A9MJQ0EtA2Ke/RXKEqb0IjjisbdtRXukZCnoJ0DpQ4caegKiAHueVnqGglwAtZZ+6sRfAsTp00is9Q0EvAeXDQ68KsM14AMGmG857/2Ov9AwFvQTMm7Gxg8B64wGIdT1l5kwZCnqJYE6tgmBvwXbgp+3Kv8pLLUNBLxFLzt/8hlDdDkAXYJajRvTms99930stQ0EvIYvO3bwSgjsBtPV7MJEh8PdLz0ut8VrHUNBLzOJzkj9SVFdA5EWgx+u0BtgEyIVLzk2uLIYGz7I8Q+RP/ZzNTwJ4Mv672jM1fTPB3FjQp0X4J8fHpiWzUy8X0/9Q0AeQurOTzwF4rtR+h07vX0OGgv415Gtzei9LbDlGwTddkccSqCYwWohKCHwi2EPILpK7RLiJGq9aZerVXfMiewZadzFwF/SGZNCCb5oIp1NxIsgjhGo0hWWAKAB7INgDjRYqfizEW1T69ez82q0Q8SzD1CNRquDo1Dk+4i8JuQDEGIDd02Xp/gcgAYCd/6VABMh2UFvx9PMCPKK0/o/PF9XucCPHiiUvp8g5JraKfCpTX/ukG//7U3jQ799UEcr4rhDIJRCcDehQ198MgIDdseQXPwTY97JoBSuR3iux9B+p+Bsq339l5098z+0v0s1d2ywr0H4DJF0PSsTFJ0sBPJPAmY6SVVYsda9SvjtbF040zIGrUwW8wcxWPgFQ+qBbazYfAcf/d7B5LQTDXPqtoHAOiDniODErntpIQUN2R9sjiB7XbjpoKJG+Wtj2UwDVLvUdTBkEdZp6biiW+mn28MhyXCGOxz5KRv8TuejbZeFYMgrHlwK4EHAd8J44QYgHrFHB93D/poLXnsOxTeNC8dRTQv4S3gd8P1gugjusT9NPhxvfG1s8P8Wlz6AHE6kaqyq4gSK3AQgVXY1gL647uqBFCasheQrh3yDAd4slqwdmsz23sSy29egS+vSMXoNuJdIzFfEKgKmlkyPrCjk6HE9eBCVNEJT+WycY6xPnd8F70rUl9+2SHoNuJdIzQfwPAOO6LhMEOu+gW4nkZYQ8ilKcgXpnnPJxfUXj5t43LgxCDgl6KN48AeRjAMtLrCUXDKhn8zkw1NB8Bii/BBAorqS8GN+R8/0byC/NFrEDgx6lEuiHAIweAC0v55MMse5JjxelHwcQLIGmvBDi/HC8ed5A68iXA4IeHp26EYCnuynyhZLH9Tza5IePDwEY5dLdDgBNEHlUBOsBuC5SoHD5YXdtG+l2nFLwxX36Xdss6rZbMUAnKdHst4bMGl29GMTphi5sgP+qoVa11UW2HPxm8J50rVKYD+ECmJ1FhncE25YBWGaor2R0f9NDgexVbmbBArwDYpnS6lv+gDParqsRu9xnqZz6BrU6U4QLATwCoKdy4D32zm19riFbDckjQUQN5aUV5WS7rnZBTwEHgLbFkaRdH7kJ0GcB2G7khagPxzZ5Vp9eLLq/6SIy13AMkvgHu2z3Csyb0XHAO3MnZluBLIBPAPwBwGpEqUKj02cp4loCVwIoA/AsorNyfTkRn4qSNEgMyWtlyj97z4IJu/I52q6b/LLVkDwZSv4XwDcKdGZp5b8OwO0FyywhCgC6rkWnmAwgxB3Z+po7Dwl4b0RFZxfWNGXqav4aPmcSgH+m4Im+TIKrm6eQvNZA3g5CLs434PuwF9V+SOJqAAWnWoW4drDP5P0AkAtmTwfFZPP7zkxZeLmpc3v+lI8A3NzfcaL1Uhjt+JT52fpJRpO0bH3NM1Yi/TDIvyrQNBKKbZ2Z7TyzDUoUAJDqWDNzeRHzxmW8FHQwlXdvrRTgewamz9v1kf9041tprEDPxYt9Isq51I3fYtMZdOFRJsYC7WqNOR+yAeciAOFC7RR5h1vfrfWRNwFsLNxSXGxLLj4KAIQ8zMhaZLynanpyAVxiYPZR6+E15tuIDvDP/zYwm4aGpNnftAR03bKJUa0cibOsRKp4S5krXy8HMKdwQz7q1Xq3pvzewMxX7pMBSXLlQ+fpHWgxtA8IeT+ib5d5qKkbKzzsPABWoXZCNHmlQfzOZhM7DRznlQav6Tq9w3jvMyHnhkeFflOe2FroPW3/aM4yMQv4yjybOds3Tt6OzlxDYVAmeqXBa7omcvoVN4NQOEfTeSMUS16HaJN3FbYK0wysdhR6X94nnQWcnxdqRuEkzzR4jB8Asp999KJVVb0L7tbPR4vIv1hV1bcglv6JvfODtf1l2fqEFCTSJgUce0INaaOq077EFGohxOAOOqKzcognHwBkiQdjToHwQauqejliqYZQmdxnUj9uNTRXw4dKA/81olhQBU6RGLQrbt2zdsK3CibXrt6phmBlWwc/sOKpFYUuREiglGVaRaHURSh50x30bN2k9wX4J68dEDgMwC0U/9ZQLHVvvhM+TQ5EIYeXWIhyUG4bO0BUJrD7JwD+WCRfZSK4XlOnwrFktL/bPNEyvEg6SoWg/I2CbzdLwYGfxHkzOuBzLocHlSS9w3KK3GaNDr4UbEhGej1K8GUPOg7zjRw0JV37c8jpx54/5SMNmQM3LbDygTheKdkQjiV77IosMEwNDyJagi3Gu3WKSY/XnLa6yBZongbgzSL7r6TI46FY+pACDsrgnQjljd/uv7fMANDrRMNeVPuhHQifIuAviq1BhPdZifSV+78olKIu2ZaAjrwLS0pM37PLeeMymbra7wt4MYAPiqjDB/KBcEPy+H0vCHTBWbDBhXw40Ap6I69bikxd7a9tu/VYikTFfHGmPwJU8gAakkEAIKXgRnuDCrKYXxJX5J8nv2Vaaxb4cUX83bgjgaUkboT7+vODmWqJLLaBFSJoMdlbTuBtpWBST+cpTo67B1pDbxS8OLK37pidAG5F4/Z/DOcy3yNxE4DJnikSLELjhrudDrVVFdRccZ+5hDMLIgbVLl8fzFfE5o3LZIBGRHmfVZW+CJBlAE/2QNMRVm7EZXD4gtlzingkGpJBLKodlDNnj3hIhGZJNB/S7pdBo6Jt4HGQT1jx1GUQ9TOAbteSv2svmvSIlWhuNdhIGQiLmpoBNrjUMGhZPGdLwo29d7lhEdr1tY/a9udTQTzsaizyrM51bG4yMlfweGn1q4X3CwK3TGu162uuAhBzMUr1sDWpMQCeNbImr+z/oK8vRVsFsj/bdhOA/3MxxBgtfNrQ9pvBePO5Lnx/pSle88DorBwTqZgQRhm9HDmqLex/zmp1bBgURyo4K9G44cTBmhXzGmtN6hLRvBhUYynYC0FStcvdrUsmHfKg3qKu92qH5rV3ORXA3IlZCH5rNoBMszqGD+qNhF4QTiRvC8dTe+DgMVKuIXguyEuhuUz79Z/CseTGsvu2HLO/TVGDHvD5/2xqq/zcBQCaarW5AlkWjqU9fXrhoCHa5LdiW14mJdpVqNITQpHpvja8Hlqd6k5YFbeyw+Hhpqbayf0ZANoWTlxvOosHAApXhxOpO9C4YTD0p/EMq2r88xB1Un5Hq4A4/Hl4dep8YL+gBxuSkfJE6jteCtOizzM0/Tx7+JTO3LUIRVzdCQiJH4Y6Kl+1EumZLsbpkdDqLZOseHpJUer+e8GKb7ml4ESYiKLDBxGl6p7IKR8u1MRdVjz1AoSr7B0fPuGmhHnYmtQYx+l/G3LPAvHq/tuSMv4994U7KusIHNOXWd9D4jiQz1nx1Auk/Dyrso9i4XEFr+RZiVQ1NE6DwqkgZkNjKkBo6A8APGaqrzDkb83MZER4ZPrHX8zetZzd1W/mdFBOt6qqP0Q89SuhPJKpm7SxkK7NwYZkxHHwGAy7VInmMwe8MG9GhxNvXqygTW/huocGMFOEMy0G1yCeekvAN0h5h+AuAVrEpzJ0dFiUVJKwBBxFIAJKBIIaEFUQHLqBWesTUYKgV9z93qk55IzLq+lTl3cGvXFDAB2HPPX3SAA/oPAHViL9CWKpZ0TkDyTfsMk3saj2gCXWivi7ozT9M6jU5SSvhnlTPzpaPXjwi211k9ZZ8dRaAFcYjnswQQAnEHICBJCuTzw1AZHu7Q3c13mpn94SomSGR7r6pD3gXOZqIkY93g8AVnvlSRD01Yj3cAiuJHglBLBEgHgqC2IXBDkAlTmgovMb4LKNO/Fc2+JIj3vrbM3rw0qmujnNFwsSM0BKsfvYK8FYl89iDHbtZZOzDYxDXd2oqoE+PzCF8sNe31lU26KZuwDATg/9eUVlsKG5pthOBHD7tIkO1TWQSdC9R/Aru77mhb4OydYfvZXkZUDhj7AsNkrhxOJ74WturIVsUWjcHvZoHdwtqWC7L69ESra+9llFOR2m/d6KheiiBz2zY9v9II1Ty1TqeVXe3noGBr7P6meKcunupRPzLjFqrY+8qQVnkXirmMIKowSTueisXFeHbgPEYbv/ZqWV2cNkPOQTRZnd1dSnINoW1qSyZbund923DoaNBdM93Z/fC3ZF1TUQFnx5E6XvzS6d0KxAzC6GsLwgfg9HTjIJeDfzZnTYdZGficJpIEz6w3iIMFQ14Yiiu5k7Yrcf8h1C8t5lLKLXZxbULgAA1dWtsdTPH9sNwc32zshse3HEk1LhzIKajXZ9zbchcgaIp2DQ7dGQDgDPEHKdbXWMzdaZNSsslL0La16kU/ZNQFJ9H8mchm9VZuHk7voCAYDhq98f0a47/gbg9wEp5nNJdgNsDLSHVrTcVG28ApcPw9akxmiHlxPyF+hsgerVDtJ2gK+B8gqUNNmOXn9woqonrFj6LgiXmjgU4vZMfc2Peh179ZarQLVQwCnUEobQEchOiDRlKrgM19Qc0IT5kDyT1dB8kijnAkLOB3ACXK7ECdBC4FkQD9nDfL/G3IleNj7Ij8YNAatt5PHw6ZNA1AKYAMgEgCPRmWPY94GwAeQAtADyGaB3CPCppjSLMCkayQzwzpe90rbv5GLi7WEhBqaLyAmkTEFnImaCdPamsdC5jqvR2YhnrwCfE2wGpFnALVDyUqYq8tqX+RlmX0X+H1gDzFihXYRQAAAAAElFTkSuQmCC	P	dsgov	1,2,3,4,5,6	$2a$12$U1UYoWD3Yer2fedJEGOti.YN.cCBByAqI21tsrQ5Qi9.VcTfn4thS	7babf862
 \.
 
 
 --
--- Data for Name: tipo_permissao; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: tipo_permissao; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.tipo_permissao (id_tipo_permissao, descricao) FROM stdin;
@@ -6391,7 +6559,7 @@ COPY public.tipo_permissao (id_tipo_permissao, descricao) FROM stdin;
 
 
 --
--- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: unidade; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.unidade (id_unidade, id_orgao, id_origem, sigla, descricao, sin_ativo, sin_global) FROM stdin;
@@ -6403,7 +6571,7 @@ COPY public.unidade (id_unidade, id_orgao, id_origem, sigla, descricao, sin_ativ
 
 
 --
--- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.usuario (id_usuario, id_orgao, id_origem, sigla, nome, sin_ativo, cpf, nome_registro_civil, nome_social, email, sin_bloqueado, dth_pausa_2fa) FROM stdin;
@@ -6413,7 +6581,7 @@ COPY public.usuario (id_usuario, id_orgao, id_origem, sigla, nome, sin_ativo, cp
 
 
 --
--- Data for Name: usuario_historico; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: usuario_historico; Type: TABLE DATA; Schema: public; Owner: sip_user
 --
 
 COPY public.usuario_historico (id_usuario_historico, id_codigo_acesso, id_usuario, id_usuario_operacao, dth_operacao, sta_operacao, motivo, dth_pausa_2fa) FROM stdin;
@@ -6424,18 +6592,18 @@ COPY public.usuario_historico (id_usuario_historico, id_codigo_acesso, id_usuari
 -- Name: seq_infra_auditoria; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
-SELECT pg_catalog.setval('public.seq_infra_auditoria', 226, true);
+SELECT pg_catalog.setval('public.seq_infra_auditoria', 1, true);
 
 
 --
 -- Name: seq_infra_log; Type: SEQUENCE SET; Schema: public; Owner: sip_user
 --
 
-SELECT pg_catalog.setval('public.seq_infra_log', 1, false);
+SELECT pg_catalog.setval('public.seq_infra_log', 1, true);
 
 
 --
--- Name: administrador_sistema pk_administrador_sistema; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: administrador_sistema pk_administrador_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -6443,7 +6611,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: codigo_acesso pk_codigo_acesso; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: codigo_acesso pk_codigo_acesso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -6451,7 +6619,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_bloqueio pk_codigo_bloqueio; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: codigo_bloqueio pk_codigo_bloqueio; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_bloqueio
@@ -6459,7 +6627,7 @@ ALTER TABLE ONLY public.codigo_bloqueio
 
 
 --
--- Name: coordenador_perfil pk_coordenador_perfil; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: coordenador_perfil pk_coordenador_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -6467,7 +6635,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_unidade pk_coordenador_unidade; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: coordenador_unidade pk_coordenador_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -6475,7 +6643,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: dispositivo_acesso pk_dispositivo_acesso; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: dispositivo_acesso pk_dispositivo_acesso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.dispositivo_acesso
@@ -6483,7 +6651,7 @@ ALTER TABLE ONLY public.dispositivo_acesso
 
 
 --
--- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: email_sistema pk_email_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.email_sistema
@@ -6491,7 +6659,7 @@ ALTER TABLE ONLY public.email_sistema
 
 
 --
--- Name: grupo_perfil pk_grupo_perfil; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: grupo_perfil pk_grupo_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.grupo_perfil
@@ -6499,7 +6667,7 @@ ALTER TABLE ONLY public.grupo_perfil
 
 
 --
--- Name: hierarquia pk_hierarquia; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: hierarquia pk_hierarquia; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.hierarquia
@@ -6507,7 +6675,7 @@ ALTER TABLE ONLY public.hierarquia
 
 
 --
--- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_agendamento_tarefa pk_infra_agendamento_tarefa; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_agendamento_tarefa
@@ -6515,7 +6683,7 @@ ALTER TABLE ONLY public.infra_agendamento_tarefa
 
 
 --
--- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_auditoria pk_infra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_auditoria
@@ -6523,7 +6691,7 @@ ALTER TABLE ONLY public.infra_auditoria
 
 
 --
--- Name: infra_captcha pk_infra_captcha; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_captcha pk_infra_captcha; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_captcha
@@ -6531,7 +6699,7 @@ ALTER TABLE ONLY public.infra_captcha
 
 
 --
--- Name: infra_captcha_tentativa pk_infra_captcha_tentativa; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_captcha_tentativa pk_infra_captcha_tentativa; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_captcha_tentativa
@@ -6539,7 +6707,7 @@ ALTER TABLE ONLY public.infra_captcha_tentativa
 
 
 --
--- Name: infra_erro_php pk_infra_erro_php; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_erro_php pk_infra_erro_php; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_erro_php
@@ -6547,7 +6715,7 @@ ALTER TABLE ONLY public.infra_erro_php
 
 
 --
--- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_log pk_infra_log; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_log
@@ -6555,7 +6723,7 @@ ALTER TABLE ONLY public.infra_log
 
 
 --
--- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_parametro pk_infra_parametro; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_parametro
@@ -6563,7 +6731,7 @@ ALTER TABLE ONLY public.infra_parametro
 
 
 --
--- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_regra_auditoria pk_infra_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria
@@ -6571,7 +6739,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria
 
 
 --
--- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_regra_auditoria_recurso pk_infra_regra_auditoria_rec; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -6579,7 +6747,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_sequencia pk_infra_sequencia; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_sequencia
@@ -6587,7 +6755,7 @@ ALTER TABLE ONLY public.infra_sequencia
 
 
 --
--- Name: item_menu pk_item_menu; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: item_menu pk_item_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -6595,7 +6763,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: login pk_login; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: login pk_login; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -6603,7 +6771,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: menu pk_menu; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: menu pk_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.menu
@@ -6611,7 +6779,7 @@ ALTER TABLE ONLY public.menu
 
 
 --
--- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: orgao pk_orgao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.orgao
@@ -6619,7 +6787,7 @@ ALTER TABLE ONLY public.orgao
 
 
 --
--- Name: perfil pk_perfil; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: perfil pk_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.perfil
@@ -6627,7 +6795,7 @@ ALTER TABLE ONLY public.perfil
 
 
 --
--- Name: permissao pk_permissao; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: permissao pk_permissao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -6635,7 +6803,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: recurso pk_recurso; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recurso pk_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso
@@ -6643,7 +6811,7 @@ ALTER TABLE ONLY public.recurso
 
 
 --
--- Name: recurso_vinculado pk_recurso_vinculado; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: recurso_vinculado pk_recurso_vinculado; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -6651,7 +6819,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: regra_auditoria pk_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: regra_auditoria pk_regra_auditoria; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.regra_auditoria
@@ -6659,7 +6827,7 @@ ALTER TABLE ONLY public.regra_auditoria
 
 
 --
--- Name: rel_grupo_perfil_perfil pk_rel_grupo_perfil_perfil; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_grupo_perfil_perfil pk_rel_grupo_perfil_perfil; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_perfil_perfil
@@ -6667,7 +6835,7 @@ ALTER TABLE ONLY public.rel_grupo_perfil_perfil
 
 
 --
--- Name: rel_hierarquia_unidade pk_rel_hierarquia_unidade; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_hierarquia_unidade pk_rel_hierarquia_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -6675,7 +6843,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_orgao_autenticacao pk_rel_orgao_autenticacao; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_orgao_autenticacao pk_rel_orgao_autenticacao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -6683,7 +6851,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_perfil_item_menu pk_rel_perfil_item_menu; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_perfil_item_menu pk_rel_perfil_item_menu; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -6691,7 +6859,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_recurso pk_rel_perfil_recurso; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_perfil_recurso pk_rel_perfil_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -6699,7 +6867,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: rel_regra_auditoria_recurso pk_rel_regra_auditoria_recurso; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_regra_auditoria_recurso pk_rel_regra_auditoria_recurso; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -6707,7 +6875,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: servidor_autenticacao pk_servidor_autenticacao; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: servidor_autenticacao pk_servidor_autenticacao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.servidor_autenticacao
@@ -6715,7 +6883,7 @@ ALTER TABLE ONLY public.servidor_autenticacao
 
 
 --
--- Name: sistema pk_sistema; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: sistema pk_sistema; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -6723,7 +6891,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: tipo_permissao pk_tipo_permissao; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: tipo_permissao pk_tipo_permissao; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.tipo_permissao
@@ -6731,7 +6899,7 @@ ALTER TABLE ONLY public.tipo_permissao
 
 
 --
--- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: unidade pk_unidade; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -6739,7 +6907,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: usuario pk_usuario; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario
@@ -6747,7 +6915,7 @@ ALTER TABLE ONLY public.usuario
 
 
 --
--- Name: usuario_historico pk_usuario_historico; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: usuario_historico pk_usuario_historico; Type: CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -6755,637 +6923,637 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: ak_orgao_sigla; Type: INDEX; Schema: public; Owner: -
+-- Name: ak_orgao_sigla; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_orgao_sigla ON public.orgao USING btree (sigla);
 
 
 --
--- Name: ak_perfil_nome; Type: INDEX; Schema: public; Owner: -
+-- Name: ak_perfil_nome; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_perfil_nome ON public.perfil USING btree (id_sistema, nome);
 
 
 --
--- Name: ak_recurso_nome; Type: INDEX; Schema: public; Owner: -
+-- Name: ak_recurso_nome; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_recurso_nome ON public.recurso USING btree (id_sistema, nome);
 
 
 --
--- Name: ak_sistema_sigla_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: ak_sistema_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_sistema_sigla_orgao ON public.sistema USING btree (id_orgao, sigla);
 
 
 --
--- Name: ak_unidade_sigla_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: ak_unidade_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_unidade_sigla_orgao ON public.unidade USING btree (id_orgao, sigla, sin_ativo);
 
 
 --
--- Name: ak_usuario_sigla_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: ak_usuario_sigla_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX ak_usuario_sigla_orgao ON public.usuario USING btree (id_orgao, sigla, sin_ativo);
 
 
 --
--- Name: fk_admin_sistema_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_admin_sistema_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_admin_sistema_sistema ON public.administrador_sistema USING btree (id_sistema);
 
 
 --
--- Name: fk_admin_sistema_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_admin_sistema_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_admin_sistema_usuario ON public.administrador_sistema USING btree (id_usuario);
 
 
 --
--- Name: fk_auditoria_recurso_recurso; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_auditoria_recurso_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_auditoria_recurso_recurso ON public.rel_regra_auditoria_recurso USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_auditoria_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_auditoria_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_auditoria_sistema ON public.regra_auditoria USING btree (id_sistema);
 
 
 --
--- Name: fk_cod_acesso_usu_desativacao; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_cod_acesso_usu_desativacao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_cod_acesso_usu_desativacao ON public.codigo_acesso USING btree (id_usuario_desativacao);
 
 
 --
--- Name: fk_cod_bloqueio_cod_acesso; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_cod_bloqueio_cod_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_cod_bloqueio_cod_acesso ON public.codigo_bloqueio USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_codigo_acesso_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_codigo_acesso_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_codigo_acesso_sistema ON public.codigo_acesso USING btree (id_sistema);
 
 
 --
--- Name: fk_codigo_acesso_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_codigo_acesso_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_codigo_acesso_usuario ON public.codigo_acesso USING btree (id_usuario);
 
 
 --
--- Name: fk_coordenador_perfil_perfil; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_coordenador_perfil_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_perfil_perfil ON public.coordenador_perfil USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_coordenador_perfil_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_coordenador_perfil_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_perfil_usuario ON public.coordenador_perfil USING btree (id_usuario);
 
 
 --
--- Name: fk_coordenador_unidade_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_coordenador_unidade_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_sistema ON public.coordenador_unidade USING btree (id_sistema);
 
 
 --
--- Name: fk_coordenador_unidade_unidade; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_coordenador_unidade_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_unidade ON public.coordenador_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_coordenador_unidade_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_coordenador_unidade_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_coordenador_unidade_usuario ON public.coordenador_unidade USING btree (id_usuario);
 
 
 --
--- Name: fk_disp_acesso_cod_acesso; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_disp_acesso_cod_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_disp_acesso_cod_acesso ON public.dispositivo_acesso USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_grupo_perfil_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_grupo_perfil_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_grupo_perfil_sistema ON public.grupo_perfil USING btree (id_sistema);
 
 
 --
--- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_inf_reg_aud_rec_inf_reg_aud; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_inf_reg_aud_rec_inf_reg_aud ON public.infra_regra_auditoria_recurso USING btree (id_infra_regra_auditoria);
 
 
 --
--- Name: fk_item_menu_item_menu; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_item_menu_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_item_menu ON public.item_menu USING btree (id_item_menu_pai, id_menu_pai);
 
 
 --
--- Name: fk_item_menu_menu; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_item_menu_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_menu ON public.item_menu USING btree (id_menu);
 
 
 --
--- Name: fk_item_menu_recurso; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_item_menu_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_item_menu_recurso ON public.item_menu USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_login_codigo_acesso; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_login_codigo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_codigo_acesso ON public.login USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_login_dispositivo_acesso; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_login_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_dispositivo_acesso ON public.login USING btree (id_dispositivo_acesso);
 
 
 --
--- Name: fk_login_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_login_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_sistema ON public.login USING btree (id_sistema);
 
 
 --
--- Name: fk_login_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_login_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_usuario ON public.login USING btree (id_usuario);
 
 
 --
--- Name: fk_login_usuario_emulador; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_login_usuario_emulador; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_login_usuario_emulador ON public.login USING btree (id_usuario_emulador);
 
 
 --
--- Name: fk_menu_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_menu_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_menu_sistema ON public.menu USING btree (id_sistema);
 
 
 --
--- Name: fk_perfil_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_perfil_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_perfil_sistema ON public.perfil USING btree (id_sistema);
 
 
 --
--- Name: fk_permissao_perfil; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_permissao_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_perfil ON public.permissao USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_permissao_tipo_permissao; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_permissao_tipo_permissao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_tipo_permissao ON public.permissao USING btree (id_tipo_permissao);
 
 
 --
--- Name: fk_permissao_unidade; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_permissao_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_unidade ON public.permissao USING btree (id_unidade);
 
 
 --
--- Name: fk_permissao_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_permissao_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_permissao_usuario ON public.permissao USING btree (id_usuario);
 
 
 --
--- Name: fk_recurso_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_recurso_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_sistema ON public.recurso USING btree (id_sistema);
 
 
 --
--- Name: fk_recurso_vinculado_recurso_1; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_recurso_vinculado_recurso_1; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_vinculado_recurso_1 ON public.recurso_vinculado USING btree (id_recurso_vinculado, id_sistema_vinculado);
 
 
 --
--- Name: fk_recurso_vinculado_recurso_2; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_recurso_vinculado_recurso_2; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_recurso_vinculado_recurso_2 ON public.recurso_vinculado USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_rel_auditoria_recurso_audit; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_auditoria_recurso_audit; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_auditoria_recurso_audit ON public.rel_regra_auditoria_recurso USING btree (id_regra_auditoria);
 
 
 --
--- Name: fk_rel_grupo_perf_perf_grupo; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_grupo_perf_perf_grupo; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_grupo_perf_perf_grupo ON public.rel_grupo_perfil_perfil USING btree (id_grupo_perfil, id_sistema);
 
 
 --
--- Name: fk_rel_grupo_perf_perf_perfil; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_grupo_perf_perf_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_grupo_perf_perf_perfil ON public.rel_grupo_perfil_perfil USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_rel_hie_uni_hierarquia; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_hie_uni_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_hierarquia ON public.rel_hierarquia_unidade USING btree (id_hierarquia);
 
 
 --
--- Name: fk_rel_hie_uni_rel_hie_uni; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_hie_uni_rel_hie_uni; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_rel_hie_uni ON public.rel_hierarquia_unidade USING btree (id_hierarquia_pai, id_unidade_pai);
 
 
 --
--- Name: fk_rel_hie_uni_unidade; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_hie_uni_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_hie_uni_unidade ON public.rel_hierarquia_unidade USING btree (id_unidade);
 
 
 --
--- Name: fk_rel_orgao_aut_autenticacao; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_orgao_aut_autenticacao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_orgao_aut_autenticacao ON public.rel_orgao_autenticacao USING btree (id_servidor_autenticacao);
 
 
 --
--- Name: fk_rel_orgao_aut_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_orgao_aut_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_orgao_aut_orgao ON public.rel_orgao_autenticacao USING btree (id_orgao);
 
 
 --
--- Name: fk_rel_per_ite_men_rel_per_rec; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_per_ite_men_rel_per_rec; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_per_ite_men_rel_per_rec ON public.rel_perfil_item_menu USING btree (id_perfil, id_recurso, id_sistema);
 
 
 --
--- Name: fk_rel_perfil_item_menu_it_men; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_perfil_item_menu_it_men; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_item_menu_it_men ON public.rel_perfil_item_menu USING btree (id_item_menu, id_menu);
 
 
 --
--- Name: fk_rel_perfil_recurso_perfil; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_perfil_recurso_perfil; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_recurso_perfil ON public.rel_perfil_recurso USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: fk_rel_perfil_recurso_recurso; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_rel_perfil_recurso_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_rel_perfil_recurso_recurso ON public.rel_perfil_recurso USING btree (id_recurso, id_sistema);
 
 
 --
--- Name: fk_sistema_hierarquia; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_sistema_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_sistema_hierarquia ON public.sistema USING btree (id_hierarquia);
 
 
 --
--- Name: fk_sistema_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_sistema_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_sistema_orgao ON public.sistema USING btree (id_orgao);
 
 
 --
--- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_unidade_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_unidade_orgao ON public.unidade USING btree (id_orgao);
 
 
 --
--- Name: fk_usuario_historico_cod_acess; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_usuario_historico_cod_acess; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_cod_acess ON public.usuario_historico USING btree (id_codigo_acesso);
 
 
 --
--- Name: fk_usuario_historico_usu_oper; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_usuario_historico_usu_oper; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_usu_oper ON public.usuario_historico USING btree (id_usuario_operacao);
 
 
 --
--- Name: fk_usuario_historico_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_usuario_historico_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_historico_usuario ON public.usuario_historico USING btree (id_usuario);
 
 
 --
--- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: fk_usuario_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX fk_usuario_orgao ON public.usuario USING btree (id_orgao);
 
 
 --
--- Name: i01_codigo_acesso; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_codigo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_codigo_acesso ON public.codigo_acesso USING btree (dth_ativacao);
 
 
 --
--- Name: i01_codigo_bloqueio; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_codigo_bloqueio; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_codigo_bloqueio ON public.codigo_bloqueio USING btree (dth_envio);
 
 
 --
--- Name: i01_dispositivo_acesso; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_dispositivo_acesso ON public.dispositivo_acesso USING btree (dth_acesso);
 
 
 --
--- Name: i01_hierarquia; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_hierarquia; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i01_hierarquia ON public.hierarquia USING btree (id_hierarquia, sin_ativo);
 
 
 --
--- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_infra_auditoria ON public.infra_auditoria USING btree (recurso);
 
 
 --
--- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_infra_log; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_infra_log ON public.infra_log USING btree (dth_log, sta_tipo);
 
 
 --
--- Name: i01_orgao; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_orgao; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i01_orgao ON public.orgao USING btree (id_orgao, sin_ativo);
 
 
 --
--- Name: i01_rel_perfil_item_menu; Type: INDEX; Schema: public; Owner: -
+-- Name: i01_rel_perfil_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i01_rel_perfil_item_menu ON public.rel_perfil_item_menu USING btree (id_perfil, id_sistema);
 
 
 --
--- Name: i02_dispositivo_acesso; Type: INDEX; Schema: public; Owner: -
+-- Name: i02_dispositivo_acesso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i02_dispositivo_acesso ON public.dispositivo_acesso USING btree (dth_liberacao);
 
 
 --
--- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: -
+-- Name: i02_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i02_infra_auditoria ON public.infra_auditoria USING btree (dth_acesso);
 
 
 --
--- Name: i02_menu; Type: INDEX; Schema: public; Owner: -
+-- Name: i02_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_menu ON public.menu USING btree (id_menu, sin_ativo);
 
 
 --
--- Name: i02_recurso; Type: INDEX; Schema: public; Owner: -
+-- Name: i02_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_recurso ON public.recurso USING btree (id_recurso, id_sistema, sin_ativo);
 
 
 --
--- Name: i02_unidade; Type: INDEX; Schema: public; Owner: -
+-- Name: i02_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_unidade ON public.unidade USING btree (id_unidade, sin_ativo);
 
 
 --
--- Name: i02_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: i02_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i02_usuario ON public.usuario USING btree (id_usuario, sin_ativo);
 
 
 --
--- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: -
+-- Name: i03_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_infra_auditoria ON public.infra_auditoria USING btree (sigla_usuario);
 
 
 --
--- Name: i03_recurso; Type: INDEX; Schema: public; Owner: -
+-- Name: i03_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_recurso ON public.recurso USING btree (id_recurso, id_sistema, nome, sin_ativo);
 
 
 --
--- Name: i03_sistema; Type: INDEX; Schema: public; Owner: -
+-- Name: i03_sistema; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i03_sistema ON public.sistema USING btree (id_sistema, sin_ativo);
 
 
 --
--- Name: i03_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: i03_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i03_usuario ON public.usuario USING btree (id_origem);
 
 
 --
--- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: -
+-- Name: i04_infra_auditoria; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_infra_auditoria ON public.infra_auditoria USING btree (sigla_unidade);
 
 
 --
--- Name: i04_item_menu; Type: INDEX; Schema: public; Owner: -
+-- Name: i04_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i04_item_menu ON public.item_menu USING btree (id_item_menu, id_menu, sin_ativo);
 
 
 --
--- Name: i04_login; Type: INDEX; Schema: public; Owner: -
+-- Name: i04_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_login ON public.login USING btree (id_login, id_sistema, id_usuario, sta_login);
 
 
 --
--- Name: i04_recurso; Type: INDEX; Schema: public; Owner: -
+-- Name: i04_recurso; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_recurso ON public.recurso USING btree (id_recurso, sin_ativo);
 
 
 --
--- Name: i04_rel_hierarquia_unidade; Type: INDEX; Schema: public; Owner: -
+-- Name: i04_rel_hierarquia_unidade; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE UNIQUE INDEX i04_rel_hierarquia_unidade ON public.rel_hierarquia_unidade USING btree (id_hierarquia, id_unidade, sin_ativo);
 
 
 --
--- Name: i04_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: i04_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i04_usuario ON public.usuario USING btree (cpf);
 
 
 --
--- Name: i05_item_menu; Type: INDEX; Schema: public; Owner: -
+-- Name: i05_item_menu; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_item_menu ON public.item_menu USING btree (id_recurso);
 
 
 --
--- Name: i05_login; Type: INDEX; Schema: public; Owner: -
+-- Name: i05_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_login ON public.login USING btree (id_login, id_sistema, id_usuario, dth_login);
 
 
 --
--- Name: i05_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: i05_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i05_usuario ON public.usuario USING btree (id_usuario, id_orgao, id_origem);
 
 
 --
--- Name: i06_login; Type: INDEX; Schema: public; Owner: -
+-- Name: i06_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i06_login ON public.login USING btree (hash_usuario, dth_login, sta_login);
 
 
 --
--- Name: i06_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: i06_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i06_usuario ON public.usuario USING btree (id_usuario, id_orgao, cpf);
 
 
 --
--- Name: i07_login; Type: INDEX; Schema: public; Owner: -
+-- Name: i07_login; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i07_login ON public.login USING btree (dth_login);
 
 
 --
--- Name: i07_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: i07_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i07_usuario ON public.usuario USING btree (sin_bloqueado);
 
 
 --
--- Name: i08_usuario; Type: INDEX; Schema: public; Owner: -
+-- Name: i08_usuario; Type: INDEX; Schema: public; Owner: sip_user
 --
 
 CREATE INDEX i08_usuario ON public.usuario USING btree (dth_pausa_2fa);
 
 
 --
--- Name: administrador_sistema fk_admin_sistema_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: administrador_sistema fk_admin_sistema_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -7393,7 +7561,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: administrador_sistema fk_admin_sistema_usuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: administrador_sistema fk_admin_sistema_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.administrador_sistema
@@ -7401,7 +7569,7 @@ ALTER TABLE ONLY public.administrador_sistema
 
 
 --
--- Name: rel_regra_auditoria_recurso fk_auditoria_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_regra_auditoria_recurso fk_auditoria_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -7409,7 +7577,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: regra_auditoria fk_auditoria_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: regra_auditoria fk_auditoria_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.regra_auditoria
@@ -7417,7 +7585,7 @@ ALTER TABLE ONLY public.regra_auditoria
 
 
 --
--- Name: codigo_acesso fk_cod_acesso_usu_desativacao; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: codigo_acesso fk_cod_acesso_usu_desativacao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -7425,7 +7593,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_bloqueio fk_cod_bloqueio_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: codigo_bloqueio fk_cod_bloqueio_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_bloqueio
@@ -7433,7 +7601,7 @@ ALTER TABLE ONLY public.codigo_bloqueio
 
 
 --
--- Name: codigo_acesso fk_codigo_acesso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: codigo_acesso fk_codigo_acesso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -7441,7 +7609,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: codigo_acesso fk_codigo_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: codigo_acesso fk_codigo_acesso_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.codigo_acesso
@@ -7449,7 +7617,7 @@ ALTER TABLE ONLY public.codigo_acesso
 
 
 --
--- Name: coordenador_perfil fk_coordenador_perfil_perfil; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: coordenador_perfil fk_coordenador_perfil_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -7457,7 +7625,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_perfil fk_coordenador_perfil_usuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: coordenador_perfil fk_coordenador_perfil_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_perfil
@@ -7465,7 +7633,7 @@ ALTER TABLE ONLY public.coordenador_perfil
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: coordenador_unidade fk_coordenador_unidade_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -7473,7 +7641,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: coordenador_unidade fk_coordenador_unidade_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -7481,7 +7649,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: coordenador_unidade fk_coordenador_unidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: coordenador_unidade fk_coordenador_unidade_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.coordenador_unidade
@@ -7489,7 +7657,7 @@ ALTER TABLE ONLY public.coordenador_unidade
 
 
 --
--- Name: dispositivo_acesso fk_disp_acesso_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: dispositivo_acesso fk_disp_acesso_cod_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.dispositivo_acesso
@@ -7497,7 +7665,7 @@ ALTER TABLE ONLY public.dispositivo_acesso
 
 
 --
--- Name: grupo_perfil fk_grupo_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: grupo_perfil fk_grupo_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.grupo_perfil
@@ -7505,7 +7673,7 @@ ALTER TABLE ONLY public.grupo_perfil
 
 
 --
--- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: infra_regra_auditoria_recurso fk_inf_reg_aud_rec_inf_reg_aud; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.infra_regra_auditoria_recurso
@@ -7513,7 +7681,7 @@ ALTER TABLE ONLY public.infra_regra_auditoria_recurso
 
 
 --
--- Name: item_menu fk_item_menu_item_menu; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: item_menu fk_item_menu_item_menu; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -7521,7 +7689,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: item_menu fk_item_menu_menu; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: item_menu fk_item_menu_menu; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -7529,7 +7697,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: item_menu fk_item_menu_recurso; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: item_menu fk_item_menu_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.item_menu
@@ -7537,7 +7705,7 @@ ALTER TABLE ONLY public.item_menu
 
 
 --
--- Name: login fk_login_codigo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: login fk_login_codigo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -7545,7 +7713,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_dispositivo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: login fk_login_dispositivo_acesso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -7553,7 +7721,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: login fk_login_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -7561,7 +7729,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_usuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: login fk_login_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -7569,7 +7737,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: login fk_login_usuario_emulador; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: login fk_login_usuario_emulador; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.login
@@ -7577,7 +7745,7 @@ ALTER TABLE ONLY public.login
 
 
 --
--- Name: menu fk_menu_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: menu fk_menu_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.menu
@@ -7585,7 +7753,7 @@ ALTER TABLE ONLY public.menu
 
 
 --
--- Name: perfil fk_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: perfil fk_perfil_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.perfil
@@ -7593,7 +7761,7 @@ ALTER TABLE ONLY public.perfil
 
 
 --
--- Name: permissao fk_permissao_perfil; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: permissao fk_permissao_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7601,7 +7769,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_tipo_permissao; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: permissao fk_permissao_tipo_permissao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7609,7 +7777,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: permissao fk_permissao_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7617,7 +7785,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: permissao fk_permissao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: permissao fk_permissao_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.permissao
@@ -7625,7 +7793,7 @@ ALTER TABLE ONLY public.permissao
 
 
 --
--- Name: recurso fk_recurso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: recurso fk_recurso_sistema; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso
@@ -7633,7 +7801,7 @@ ALTER TABLE ONLY public.recurso
 
 
 --
--- Name: recurso_vinculado fk_recurso_vinculado_recurso_1; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: recurso_vinculado fk_recurso_vinculado_recurso_1; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -7641,7 +7809,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: recurso_vinculado fk_recurso_vinculado_recurso_2; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: recurso_vinculado fk_recurso_vinculado_recurso_2; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.recurso_vinculado
@@ -7649,7 +7817,7 @@ ALTER TABLE ONLY public.recurso_vinculado
 
 
 --
--- Name: rel_regra_auditoria_recurso fk_rel_auditoria_recurso_audit; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_regra_auditoria_recurso fk_rel_auditoria_recurso_audit; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_regra_auditoria_recurso
@@ -7657,7 +7825,7 @@ ALTER TABLE ONLY public.rel_regra_auditoria_recurso
 
 
 --
--- Name: rel_grupo_perfil_perfil fk_rel_grupo_perf_perf_grupo; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_grupo_perfil_perfil fk_rel_grupo_perf_perf_grupo; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_perfil_perfil
@@ -7665,7 +7833,7 @@ ALTER TABLE ONLY public.rel_grupo_perfil_perfil
 
 
 --
--- Name: rel_grupo_perfil_perfil fk_rel_grupo_perf_perf_perfil; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_grupo_perfil_perfil fk_rel_grupo_perf_perf_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_grupo_perfil_perfil
@@ -7673,7 +7841,7 @@ ALTER TABLE ONLY public.rel_grupo_perfil_perfil
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7681,7 +7849,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_rel_hie_uni; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_rel_hie_uni; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7689,7 +7857,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_hierarquia_unidade fk_rel_hie_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_hierarquia_unidade fk_rel_hie_uni_unidade; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_hierarquia_unidade
@@ -7697,7 +7865,7 @@ ALTER TABLE ONLY public.rel_hierarquia_unidade
 
 
 --
--- Name: rel_orgao_autenticacao fk_rel_orgao_aut_autenticacao; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_orgao_autenticacao fk_rel_orgao_aut_autenticacao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -7705,7 +7873,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_orgao_autenticacao fk_rel_orgao_aut_orgao; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_orgao_autenticacao fk_rel_orgao_aut_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_orgao_autenticacao
@@ -7713,7 +7881,7 @@ ALTER TABLE ONLY public.rel_orgao_autenticacao
 
 
 --
--- Name: rel_perfil_item_menu fk_rel_per_ite_men_rel_per_rec; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_perfil_item_menu fk_rel_per_ite_men_rel_per_rec; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -7721,7 +7889,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_item_menu fk_rel_perfil_item_menu_it_men; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_perfil_item_menu fk_rel_perfil_item_menu_it_men; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_item_menu
@@ -7729,7 +7897,7 @@ ALTER TABLE ONLY public.rel_perfil_item_menu
 
 
 --
--- Name: rel_perfil_recurso fk_rel_perfil_recurso_perfil; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_perfil_recurso fk_rel_perfil_recurso_perfil; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -7737,7 +7905,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: rel_perfil_recurso fk_rel_perfil_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: rel_perfil_recurso fk_rel_perfil_recurso_recurso; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.rel_perfil_recurso
@@ -7745,7 +7913,7 @@ ALTER TABLE ONLY public.rel_perfil_recurso
 
 
 --
--- Name: sistema fk_sistema_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: sistema fk_sistema_hierarquia; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -7753,7 +7921,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: sistema fk_sistema_orgao; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: sistema fk_sistema_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.sistema
@@ -7761,7 +7929,7 @@ ALTER TABLE ONLY public.sistema
 
 
 --
--- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: unidade fk_unidade_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.unidade
@@ -7769,7 +7937,7 @@ ALTER TABLE ONLY public.unidade
 
 
 --
--- Name: usuario_historico fk_usuario_historico_cod_acess; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: usuario_historico fk_usuario_historico_cod_acess; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7777,7 +7945,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario_historico fk_usuario_historico_usu_oper; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: usuario_historico fk_usuario_historico_usu_oper; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7785,7 +7953,7 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario_historico fk_usuario_historico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: usuario_historico fk_usuario_historico_usuario; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario_historico
@@ -7793,11 +7961,18 @@ ALTER TABLE ONLY public.usuario_historico
 
 
 --
--- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: usuario fk_usuario_orgao; Type: FK CONSTRAINT; Schema: public; Owner: sip_user
 --
 
 ALTER TABLE ONLY public.usuario
     ADD CONSTRAINT fk_usuario_orgao FOREIGN KEY (id_orgao) REFERENCES public.orgao(id_orgao);
+
+
+--
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: pg_database_owner
+--
+
+GRANT ALL ON SCHEMA public TO sip_user;
 
 
 --
